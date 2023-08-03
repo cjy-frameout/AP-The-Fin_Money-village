@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- [S] chart -->
+<script src="https://plugin-dev.coocon.co.kr/highchart/highcharts.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/exporting.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/export-data.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/accessibility.js"></script>
+<!-- [E] chart -->
+</head>
+<body>
+<div class="test_view">
+<!-- 퍼블 화면 확인용 -->
+<style>
+body{background-color:#444;}
+.test_view{display:flex;flex-wrap:wrap;}
+.view_section{position:relative;border:1px dotted #ddd;}
+.view_section .type_no{padding:5px 0;text-align:center;font-size:12px;font-weight:300;color:#fff;}
+.layer_bottomsheet, .layer_popup{display:block;position:relative;width:360px;height:100%;margin-bottom:10px;margin-left:0px;}
+.layer_bottomsheet .layer_inner{overflow:inherit;position:relative;max-height:auto;transform: translate(0, 0);}
+</style>
+<!-- //퍼블 화면 확인용 -->
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">bottomsheet TC1 _1BS 종부세·재산세 툴팁</h3>
+<!-- bottomsheet TC1 _1BS 종부세·재산세 툴팁 -->
+<div id="layer_TC1 _1BS" class="layer_bottomsheet">
+    <div class="layer_inner">
+        <div class="layer_tit type2"> 
+            <strong class="tit"><span>종합부동산세·재산세 간편계산 기준</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont layer_tax" style="max-height: 879px;">
+            <div class="info_box type_notice">
+                <h3 class="tit">안내</h3>
+                <p class="tx">
+                    종합부동산세는 과세기준일(매년 6월 1일)에 보유한 주택(부속토지 포함), 
+                    종합합산토지 및 별도합산토지를 대상으로 인별 합산한 금액이 일정금액을 초과하는 경우 부과 되는 세금입니다.
+                </p>
+            </div>
+            <div class="msg_box">
+                <ul class="notice_list">
+                    <li class="list">
+                        <span class="tx">
+                            간편계산기에는 세부담상한을 반영하지 않았으며, 지방자치단체 조례 등으로 인한 재산세 변동 등 사유로 실제 부과세액과 차이가 날 수 있습니다.
+                        </span>
+                    </li>
+                    <li class="list">
+                        <span class="tx">
+                            간편계산기는 자산별로 공시가격과 조정대상지역 여부 등 일정 정보를 입력 시 당해연도 종합부동산세 예상 고지세액을 조회할 수 있으나, 공시가격의 변동, 조정대상지역 지정 및 재산세 감면 등 사유로 실제 부과되는 종합부동산세와는 차이가 있을 수 있습니다.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // bottomsheet TC1 _1BS 종부세·재산세 툴팁 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">bottomsheet TC2_1BS 양도소득세-툴팁</h3>
+<!-- bottomsheet TC2_1BS 양도소득세-툴팁 -->
+<div id="layer_TC2_1BS" class="layer_bottomsheet">
+    <div class="layer_inner">
+        <div class="layer_tit type2"> 
+            <strong class="tit"><span>양도소득세 간편계산 서비스 범위</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont layer_tax" style="max-height: 879px;">
+            <div class="info_box type_notice">
+                <h3 class="tit">안내</h3>
+                <p class="tx">
+                    양도소득세는 토지나 건물과 같은 부동산이나 분양권, 골프회원권, 주식 등을 팔 때 발생하는 소득에 대하여 과세하는 세금입니다.
+                </p>
+            </div>
+            <div class="msg_box">
+                <ul class="notice_list">
+                    <li class="list">
+                        <span class="tx">
+                            양도소득세 계산기는 자산별로 다양한 양도소득세 세액 계산방식 중 가장 빈번하게 이루어지는 일반적 거래유형에 대하여 서비스를 제공하고 있습니다.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // bottomsheet TC2_1BS 양도소득세-툴팁 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">bottomsheet TC5_2BS  직계존속 선택</h3>
+<!-- bottomsheet TC5_2BS  직계존속 선택  -->
+<div id="layer_TC5_2BS" class="layer_bottomsheet" role="dialog" tabindex="-1" aria-hidden="true">
+    <div class="layer_inner">
+        <div class="layer_tit">
+            <strong class="tit"><span>직계존속 선택</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont">
+            <!-- 페이지 스타일 -->
+            <div class="type_page">
+                <ul class="layer_sel_opt type_date">
+                    <li><button type="button" class="btn_sel_opt on" title="선택됨"><span> 부</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+                    <li><button type="button" class="btn_sel_opt"><span>모</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>양부</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>양모</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>조부</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>조모</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>증조부</span></button></li>
+                </ul>
+            </div>
+            <!-- //페이지 스타일 -->
+        </div>
+        
+    </div>
+</div>
+<!-- // bottomsheet TC5_2BS  직계존속 선택 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">bottomsheet TC5_3BS  직계비속 선택</h3>
+<!-- bottomsheet TC5_3BS  직계비속 선택  -->
+<div id="layer_TC5_3BS" class="layer_bottomsheet" role="dialog" tabindex="-1" aria-hidden="true">
+    <div class="layer_inner">
+        <div class="layer_tit">
+            <strong class="tit"><span>직계비속 선택</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont">
+            <!-- 페이지 스타일 -->
+            <div class="type_page">
+                <ul class="layer_sel_opt type_date">
+                    <li><button type="button" class="btn_sel_opt on" title="선택됨"><span> 자</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+                    <li><button type="button" class="btn_sel_opt"><span>손</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>증손</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>고손</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>외손</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>외증손</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>양자</span></button></li>
+                </ul>
+            </div>
+            <!-- //페이지 스타일 -->
+        </div>
+        
+    </div>
+</div>
+<!-- // bottomsheet TC5_3BS  직계비속 선택 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">bottomsheet TC5_5BS  증여재산공제 미대상</h3>
+<!-- bottomsheet TC5_5BS  증여재산공제 미대상  -->
+<div id="layer_TC5_5BS" class="layer_bottomsheet" role="dialog" tabindex="-1" aria-hidden="true">
+    <div class="layer_inner">
+        <div class="layer_tit">
+            <strong class="tit"><span>증여재산공제 미대상 선택</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont">
+            <!-- 페이지 스타일 -->
+            <div class="type_page">
+                <ul class="layer_sel_opt type_date">
+                    <li><button type="button" class="btn_sel_opt on" title="선택됨"><span> 본인</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+                    <li><button type="button" class="btn_sel_opt"><span>법인공동사업</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>당숙모</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>서모</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>서조모</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>친척</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>동거인</span></button></li>
+                </ul>
+            </div>
+            <!-- //페이지 스타일 -->
+        </div>
+        
+    </div>
+</div>
+<!-- // bottomsheet TC5_5BS  증여재산공제 미대상 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">layer_popup TC4_2FP 상속세 알럿</h3>
+
+<!-- layer_popup TC4_2FP 상속세 알럿  -->
+<div id="PP1_2_6_1_3FP_1BS_1LP" class="layer_popup type2">
+	<div class="layer_position">
+		<div class="layer_inner">
+			<div class="layer_cont">
+				<div class="msg_box">
+					<p class="msg_alert">
+                        상속공제적용한도액은<br>
+                        0원 이상이 되어야합니다.<br>
+                        금액을 다시 입력하거나<br>
+                        초기화 버튼을 눌러 다시 계산해주세요.
+                    </p>
+				</div>
+				<div class="btn_layer_wrap">
+					<button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // layer_popup TC4_2FP 상속세 알럿 -->
+
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">bottomsheet TC2_2BS  거주한 기간 선택</h3>
+<!-- bottomsheet TC2_2BS  거주한 기간 선택  -->
+<div id="layer_TC5_5BS" class="layer_bottomsheet" role="dialog" tabindex="-1" aria-hidden="true">
+    <div class="layer_inner">
+        <div class="layer_tit">
+            <strong class="tit"><span>거주한 기간 선택</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont">
+            <!-- 페이지 스타일 -->
+            <div class="type_page">
+                <ul class="layer_sel_opt type_date">
+                    <li><button type="button" class="btn_sel_opt on" title="선택됨"><span> 2년 이상 3년 미만</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+                    <li><button type="button" class="btn_sel_opt"><span>3년 이상 4년 미만</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>4년 이상 5년 미만</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>5년 이상 6년 미만</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>6년 이상 7년 미만</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>7년 이상 8년 미만</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>8년 이상 9년 미만</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>9년 이상 10년 미만</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>10년 이상</span></button></li>
+                </ul>
+            </div>
+            <!-- //페이지 스타일 -->
+        </div>
+        
+    </div>
+</div>
+<!-- // bottomsheet TC2_2BS  거주한 기간 선택 -->
+<!-- 퍼블확인용 --></div>
+
+</div><!-- test_view -->
+<script>
+
+// [S] 월간내역 메모 textarea 자동 높이조절, 글자수 체크, textarea val값 초기화
+function testAreaHeight1() {
+	var textEle = $('.layer_memo_wrap .js_textarea1');
+	textEle[0].style.height = 'auto';
+	var textEleHeight = textEle.prop('scrollHeight');
+	textEle.css('height', textEleHeight);
+};
+var textEle = $('.layer_memo_wrap .js_textarea1');
+var btnMemoValReset = $('.layer_memo_wrap .btn_val_reset');
+btnMemoValReset.hide();
+textEle.on('keyup', function() {
+	//자동높이
+	testAreaHeight1();
+	$('#js_textarea1_cnt').html("<span class='pointColor'>"+$(this).val().length+"</span> / 60");
+	//val값 초기화
+	if(textEle.val().length === 0){
+		btnMemoValReset.hide();
+	}else if($(this).val().length > 60) {
+		$(this).val($(this).val().substring(0, 60));
+		$('#js_textarea1_cnt').html("<span class='pointColor'>60</span> / 60");
+	}else{
+		btnMemoValReset.show();
+	}
+});
+function memoValReset() {
+	textEle.val('').css('height','inherit').focus();
+	btnMemoValReset.hide();
+	$('#js_textarea1_cnt').html("<span class='pointColor'>"+textEle.val().length+"</span> / 60");
+}
+// [E] 월간내역 메모 textarea 자동 높이조절, 글자수 체크, textarea val값 초기화
+
+$(document).ready(function(){
+
+	// [S] 캘린더 탭
+	$(".tabInter").tabs({
+		wrapClass:".tabInter",
+		clickClass:".js_tabclickDp1",
+		showClass:".tab_cntDp1",
+		animate:false,
+		contentWidthFull:false,//effect when animate:true
+		animateBorder:["false",".tabs_header"],//show border in class .
+		fade:false,
+		speed:500
+	});
+	// [E] 캘린더 탭
+
+});
+</script>
+</body>
+</html>

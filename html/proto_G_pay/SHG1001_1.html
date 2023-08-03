@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- [S] chart -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<!-- [E] chart -->
+</head>
+<body>
+<div class="test_view">
+<!-- 퍼블 화면 확인용 -->
+<style>
+body{background-color:#444;}
+.test_view{display:flex;flex-wrap:wrap;}
+.view_section{position:relative;border:1px dotted #ddd;height:100%;max-height:100%;}
+.view_section .type_no{padding:5px 0;text-align:center;font-size:12px;font-weight:300;color:#fff;}
+.layer_bottomsheet, .layer_popup, .layer_fullsheet {display:block;position:relative;width:360px;height:100%;margin-bottom:10px;margin-left:0px;}
+.layer_bottomsheet .layer_inner,
+.layer_fullsheet .layer_inner {overflow:inherit;position:relative;max-height:auto;transform: translate(0, 0);}
+</style>
+<!-- //퍼블 화면 확인용 -->
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">SHG1110 전자금융권면 상세_거래내역</h3>
+<!-- [S] SHG1110 전자금융권면 상세_거래내역 팝업 -->
+<div id="SHG1110" class="layer_fullsheet">
+    <div class="layer_inner">
+
+        <div class="layer_tit">
+			<strong class="tit">거래내역 상세</strong>
+			<button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+		</div>
+        
+        <div class="layer_cont">
+            <div class="accSetting acc_type2">
+				<div class="tAccount">
+					<h3 class="tAccTit">쿠팡</h3>
+                    <div class="accInfo">
+                        <span class="infoTit">거래 금액</span>
+                        <span class="infoNum"><em class="num">40,950,000</em>원</span>
+                    </div>
+				</div>
+                <hr class="hr_div thin_div"></hr>
+				<ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">거래 유형</span>
+						<span class="itemData">결제</span>
+					</li>
+                    <li>
+						<span class="itemTit">가맹점 명</span>
+						<span class="itemData">쿠팡</span>
+					</li>
+                    <li>
+						<span class="itemTit">상품명</span>
+						<span class="itemData">서산 활 수꽃게 1kg</span>
+					</li>
+                    <li>
+						<span class="itemTit">거래 내용</span>
+						<span class="itemData">수산물 대전</span>
+					</li>
+                    <li>
+						<span class="itemTit">결제 방법</span>
+						<span class="itemData">온라인</span>
+					</li>
+                    <li>
+						<span class="itemTit">잔액</span>
+						<span class="itemData"><em class="num">3,000,000</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">거래 일시</span>
+						<span class="itemData"><em class="num">2022.09.28 11:23</em></span>
+					</li>
+				</ul>
+			</div>
+        </div>
+    </div>
+</div>
+<!-- [E] SHG1110 전자금융권면 상세_거래내역 팝업 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">SHG1110_1 전자금융권면 상세_거래내역_미동의</h3>
+<!-- [S] SHG1110_1 전자금융권면 상세_거래내역_미동의 팝업 -->
+<div id="SHG1110_1" class="layer_fullsheet">
+    <div class="layer_inner">
+
+        <div class="layer_tit">
+			<strong class="tit">거래내역 상세</strong>
+			<button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+		</div>
+        
+        <div class="layer_cont">
+            <div class="accSetting acc_type2">
+				<div class="tAccount">
+					<h3 class="tAccTit">결제</h3>
+                    <div class="accInfo">
+                        <span class="infoTit">거래 금액</span>
+                        <span class="infoNum"><em class="num">40,950,000</em>원</span>
+                    </div>
+				</div>
+                <hr class="hr_div thin_div"></hr>
+				<ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">거래 유형</span>
+						<span class="itemData">결제</span>
+					</li>
+                    <li>
+						<span class="itemTit">상품명</span>
+						<span class="itemData">서산 활 수꽃게 1kg</span>
+					</li>
+                    <li>
+						<span class="itemTit">결제 방법</span>
+						<span class="itemData">온라인</span>
+					</li>
+                    <li>
+						<span class="itemTit">잔액</span>
+						<span class="itemData"><em class="num">4,000,000</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">거래 일시</span>
+						<span class="itemData"><em class="num">2022.09.28 11:23</em></span>
+					</li>
+				</ul>
+			</div>
+        </div>
+    </div>
+</div>
+<!-- [E] SHG1110_1 전자금융권면 상세_거래내역_미동의 팝업 -->
+<!-- 퍼블확인용 --></div>
+
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">SHG1310 선불카드 상세_결제내역</h3>
+<!-- [S] SHG1310 선불카드 상세_결제내역 팝업 -->
+<div id="SHG1310" class="layer_fullsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+			<strong class="tit">거래내역 상세</strong>
+			<button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+		</div>
+        
+        <div class="layer_cont">
+            <div class="accSetting acc_type2">
+				<div class="tAccount">
+					<h3 class="tAccTit">스타벅스코리아</h3>
+                    <div class="accInfo">
+                        <span class="infoTit">거래 금액</span>
+                        <span class="infoNum"><em class="num">40,950,000</em>원</span>
+                    </div>
+				</div>
+                <hr class="hr_div thin_div"></hr>
+				<ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">거래 유형</span>
+						<span class="itemData">결제</span>
+					</li>
+                    <li>
+						<span class="itemTit">상품명</span>
+						<span class="itemData">스타벅스코리아</span>
+					</li>
+                    <li>
+						<span class="itemTit">결제 방법</span>
+						<span class="itemData">3개월 할부</span>
+					</li>
+                    <li>
+						<span class="itemTit">잔액</span>
+						<span class="itemData"><em class="num">3,000,000</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">거래 일시</span>
+						<span class="itemData"><em class="num">2022.09.28 11:23</em></span>
+					</li>
+				</ul>
+			</div>
+        </div>
+    </div>
+</div>
+<!-- [E] SHG1310 선불카드 상세_결제내역 팝업 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">SHG1310_1 선불카드 상세_결제내역_미동의</h3>
+<!-- [S] SHG1310_1 선불카드 상세_결제내역_미동의 팝업 -->
+<div id="SHG1310_1" class="layer_fullsheet">
+    <div class="layer_inner">
+
+        <div class="layer_tit">
+			<strong class="tit">거래내역 상세</strong>
+			<button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+		</div>
+        
+        <div class="layer_cont">
+            <div class="accSetting acc_type2">
+				<div class="tAccount">
+					<h3 class="tAccTit">결제</h3>
+                    <div class="accInfo">
+                        <span class="infoTit">거래 금액</span>
+                        <span class="infoNum"><em class="num">40,950,000</em>원</span>
+                    </div>
+				</div>
+                <hr class="hr_div thin_div"></hr>
+				<ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">거래 유형</span>
+						<span class="itemData">결제</span>
+					</li>
+                    <li>
+						<span class="itemTit">결제 방법</span>
+						<span class="itemData">3개월 할부</span>
+					</li>
+                    <li>
+						<span class="itemTit">잔액</span>
+						<span class="itemData"><em class="num">4,000,000</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">거래 일시</span>
+						<span class="itemData"><em class="num">2022.09.28 11:23</em></span>
+					</li>
+				</ul>
+			</div>
+        </div>
+    </div>
+</div>
+<!-- [E] SHG1110_1 선불카드 상세_결제내역_미동의 팝업 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">SHG1320 선불카드 상세_결제내역(충전)</h3>
+<!-- [S] SHG1320 선불카드 상세_결제내역(충전) 팝업 -->
+<div id="SHG1320" class="layer_fullsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+			<strong class="tit">거래내역 상세</strong>
+			<button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+		</div>
+        
+        <div class="layer_cont">
+            <div class="accSetting acc_type2">
+				<div class="tAccount">
+					<h3 class="tAccTit">우리은행</h3>
+                    <div class="accInfo">
+                        <span class="infoTit">거래 금액</span>
+                        <span class="infoNum"><em class="num">40,950,000</em>원</span>
+                    </div>
+				</div>
+                <hr class="hr_div thin_div"></hr>
+				<ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">거래 유형</span>
+						<span class="itemData">충전</span> <!-- 22.11.10 결제 -> 충전 으로 변경 -->
+					</li>
+                    <li>
+						<span class="itemTit">거래수단</span>
+						<span class="itemData">부산<br> <em>123456789012</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">거래 후 잔액</span>
+						<span class="itemData"><em class="num">3,000,000</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">거래 일시</span>
+						<span class="itemData"><em class="num">2022.09.28 11:23</em></span>
+					</li>
+				</ul>
+			</div>
+        </div>
+    </div>
+</div>
+<!-- [E] SHG1320 선불카드 상세_결제내역(충전) 팝업 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">SHG1320_1 선불카드 상세_결제내역(충전)_가맹점미동의</h3>
+<!-- [S] SHG1320_1 선불카드 상세_결제내역(충전)_가맹점미동의 팝업 -->
+<div id="SHG1320_1" class="layer_fullsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+			<strong class="tit">거래내역 상세</strong>
+			<button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+		</div>
+        
+        <div class="layer_cont">
+            <div class="accSetting acc_type2">
+				<div class="tAccount">
+					<h3 class="tAccTit">충전</h3>
+                    <div class="accInfo">
+                        <span class="infoTit">거래 금액</span>
+                        <span class="infoNum"><em class="num">40,950,000</em>원</span>
+                    </div>
+				</div>
+                <hr class="hr_div thin_div"></hr>
+				<ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">거래 유형</span>
+						<span class="itemData">충전</span>
+					</li>
+                    <li>
+						<span class="itemTit">거래수단</span>
+						<span class="itemData">부산<br> <em>123456789012</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">거래 후 잔액</span>
+						<span class="itemData"><em class="num">3,000,000</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">거래 일시</span>
+						<span class="itemData"><em class="num">2022.09.28 11:23</em></span>
+					</li>
+				</ul>
+			</div>
+        </div>
+    </div>
+</div>
+<!-- [E] SHG1320_1 선불카드 상세_결제내역(충전)_가맹점미동의 팝업 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">SHG1190 전자금융권면_관리</h3>
+<!-- [S] SHG1190 전자금융권면_관리 팝업 -->
+<div id="SHG1190" class="layer_fullsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+			<strong class="tit">더보기</strong>
+			<button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+		</div>
+
+        <div class="layer_cont">
+            <div class="accSetting acc_type2">
+				<div class="tAccount">
+					<h3 class="tAccTit">
+                        <div class="im">
+                            <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                        </div>
+                        쿠페이 머니
+                    </h3>
+                    <div class="accInfo">
+                        <span class="infoTit">잔액</span>
+                        <span class="infoNum"><em class="num">40,950,000</em>원</span>
+                    </div>
+				</div>
+                <hr class="hr_div thin_div"></hr> <!-- 22.11.09 텍스트 수정-->
+                <ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">종류</span>
+						<span class="itemData">권면</span>
+					</li>
+                    <li>
+						<span class="itemTit">권면한도</span>
+						<span class="itemData"><em class="num">2,000,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">가입일</span>
+						<span class="itemData"><em class="num">2017.05.01</em></span>
+					</li>
+				</ul>
+                <ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">총 잔액</span>
+						<span class="itemData"><em class="num">1,000,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">충전포인트 잔액</span>
+						<span class="itemData"><em class="num">1,000,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">적입포인트 잔액</span>
+						<span class="itemData"><em class="num">1,000,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">적립 예정</span>
+						<span class="itemData"><em class="num">1,000,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">소멸 예정</span>
+						<span class="itemData"><em class="num">1,000,000</em>원</span>
+					</li>
+				</ul>
+                <ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">자동충전 <em>1</em></span>
+						<span class="itemData">부산은행<br> <em class="num">12345678901234</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">방식</span>
+						<span class="itemData">월정액 자동충전</span>
+					</li>
+                    <li>
+						<span class="itemTit">충전 금액</span>
+						<span class="itemData"><em class="num">19,000,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">충전일</span>
+						<span class="itemData">매달<em class="num">125</em>일</span>
+					</li>
+				</ul>
+                <ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">자동충전 <em>2</em></span>
+						<span class="itemData">하나카드<br> <em class="num">123456****1234</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">방식</span>
+						<span class="itemData">기준하한 자동충전</span>
+					</li>
+                    <li>
+						<span class="itemTit">하한 금액</span>
+						<span class="itemData"><em class="num">2030.01.01</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">충전 금액</span>
+						<span class="itemData"><em class="num">19,000,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">충전일</span>
+						<span class="itemData">매달<em class="num">125</em>일</span>
+					</li>
+				</ul>
+                <ul class="accDetailList sub_detailList">
+					<li>
+                        <span class="itemTit switch_tit">목록에서 숨기기</span>
+                        <label class="btn_switch">
+                            <input type="checkbox" ><span class="round"></span>
+                        </label>
+					</li>
+				</ul>
+			</div>
+        </div>
+    </div>
+</div>	
+<!-- [E] SHG1190 전자금융권면_관리 팝업 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">SHG1390 선불카드_관리</h3>
+<!-- [S] SHG1390 선불카드_관리 팝업 -->
+<div id="SHG1390" class="layer_fullsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+			<strong class="tit">더보기</strong>
+			<button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+		</div>
+
+        <div class="layer_cont">
+            <div class="accSetting acc_type2">
+				<div class="tAccount">
+					<h3 class="tAccTit">
+                        <div class="im card">
+                            <img src="../../img/card/card_logo_001.png" alt="bnk">
+                        </div>
+                        Pre i 선불카드
+                    </h3>
+                    <div class="accInfo">
+                        <span class="infoTit">잔액</span>
+                        <span class="infoNum"><em class="num">40,950,000</em>원</span>
+                    </div>
+				</div>
+                <hr class="hr_div thin_div"></hr> <!-- 22.11.09 텍스트 수정 -->
+                <ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">종류</span>
+						<span class="itemData">권면</span>
+					</li>
+                    <li>
+						<span class="itemTit">최대 충전한도</span>
+						<span class="itemData"><em class="num">2,000,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">총 잔액</span>
+						<span class="itemData"><em class="num">1,000,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">충전포인트 잔액</span>
+						<span class="itemData"><em class="num">1,000,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">적입포인트 잔액</span>
+						<span class="itemData"><em class="num">1,000,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">적립 예정</span>
+						<span class="itemData"><em class="num">1,000,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">소멸 예정</span>
+						<span class="itemData"><em class="num">1,000,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">발급일</span>
+						<span class="itemData"><em class="num">2022.09.03</em></span>
+					</li>
+				</ul>
+              
+                <ul class="accDetailList sub_detailList">
+					<li>
+                        <span class="itemTit switch_tit">목록에서 숨기기</span>
+                        <label class="btn_switch">
+                            <input type="checkbox" ><span class="round"></span>
+                        </label>
+					</li>
+				</ul>
+			</div>
+        </div>
+    </div>
+</div>	
+<!-- [E] SHG1390 선불카드_관리 팝업 -->
+<!-- 퍼블확인용 --></div>
+
+</div><!-- test_view -->
+<script>
+
+// [S] 월간내역 메모 textarea 자동 높이조절, 글자수 체크, textarea val값 초기화
+function testAreaHeight1() {
+	var textEle = $('.layer_memo_wrap .js_textarea1');
+	textEle[0].style.height = 'auto';
+	var textEleHeight = textEle.prop('scrollHeight');
+	textEle.css('height', textEleHeight);
+};
+var textEle = $('.layer_memo_wrap .js_textarea1');
+var btnMemoValReset = $('.layer_memo_wrap .btn_val_reset');
+btnMemoValReset.hide();
+textEle.on('keyup', function() {
+	//자동높이
+	testAreaHeight1();
+	$('#js_textarea1_cnt').html("<span class='pointColor'>"+$(this).val().length+"</span> / 60");
+	//val값 초기화
+	if(textEle.val().length === 0){
+		btnMemoValReset.hide();
+	}else if($(this).val().length > 60) {
+		$(this).val($(this).val().substring(0, 60));
+		$('#js_textarea1_cnt').html("<span class='pointColor'>60</span> / 60");
+	}else{
+		btnMemoValReset.show();
+	}
+});
+function memoValReset() {
+	textEle.val('').css('height','inherit').focus();
+	btnMemoValReset.hide();
+	$('#js_textarea1_cnt').html("<span class='pointColor'>"+textEle.val().length+"</span> / 60");
+}
+// [E] 월간내역 메모 textarea 자동 높이조절, 글자수 체크, textarea val값 초기화
+
+$(document).ready(function(){
+
+	// [S] 캘린더 탭
+	$(".tabInter").tabs({
+		wrapClass:".tabInter",
+		clickClass:".js_tabclickDp1",
+		showClass:".tab_cntDp1",
+		animate:false,
+		contentWidthFull:false,//effect when animate:true
+		animateBorder:["false",".tabs_header"],//show border in class .
+		fade:false,
+		speed:500
+	});
+	// [E] 캘린더 탭
+
+});
+</script>
+</body>
+</html>

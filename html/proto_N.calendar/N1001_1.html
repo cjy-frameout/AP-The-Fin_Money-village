@@ -1,0 +1,1717 @@
+﻿<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- [S] chart -->
+<script src="https://plugin-dev.coocon.co.kr/highchart/highcharts.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/exporting.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/export-data.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/accessibility.js"></script>
+<!-- [E] chart -->
+</head>
+<body>
+<div class="test_view">
+<!-- 퍼블 화면 확인용 -->
+<style>
+body{background-color:#444;}
+.test_view{display:flex;flex-wrap:wrap;}
+.view_section{position:relative;border:1px dotted #ddd;}
+.view_section .type_no{padding:5px 0;text-align:center;font-size:12px;font-weight:300;color:#fff;}
+.layer_bottomsheet, .layer_popup{display:block;position:relative;width:360px;height:100%;margin-bottom:10px;margin-left:0px;}
+.layer_bottomsheet .layer_inner{overflow:inherit;position:relative;max-height:auto;transform: translate(0, 0);}
+</style>
+<!-- //퍼블 화면 확인용 -->
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">N1001_1_1_1(통장/출금)</h3>
+
+
+<!-- bottomsheet N1001_1_1_1(통장/출금) -->
+<div id="layer_N1001_1_1_1" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>상세내역</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<div class="line_div">
+					<div class="layer_detail only_detail"> <!-- 리스트 없이 history_box 만 있을 시 only_detail 클래스 추가-->
+						<p class="today">
+                            <span class="num">2022.09.24</span> <span>수요일</span>
+                            <!-- <span class="num">2022</span>.<span class="num">09</span>.<span class="num">24</span> <span>수요일</span> -->
+						</p>
+						<div class="history_box">
+							<div class="cal_cate_history">
+								<div class="left">
+									<p class="name">에이피더핀은행 입출금 통장</p>
+									<p class="balance">계좌번호 <span class="num">123456789012</span></p>
+								</div>
+							</div>
+							<div class="trans_info">
+								<p class="tit">출금</p>
+								<div class="price">
+									<p><span class="num">-100,000</span>원</p>
+									<p class="balance">잔액 <span class="num">1,780,000</span>원</p>
+								</div>
+							</div>
+						</div>
+					</div>
+                    
+				</div>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+	</div>
+</div>
+<!-- // N1001_1_1_1(통장/출금) -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">N1001_1_1_2(통장/입금)</h3>
+
+
+<!-- N1001_1_1_2(통장/입금) -->
+<div id="layer_N1001_1_1_2" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>상세내역</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<div class="line_div">
+					<div class="layer_detail only_detail"> <!-- 리스트 없이 history_box 만 있을 시 only_detail 클래스 추가-->
+						<p class="today">
+                            <span class="num">2022.09.24</span> <span>수요일</span>
+                            <!-- <span class="num">2022</span>.<span class="num">09</span>.<span class="num">24</span> <span>수요일</span> -->
+						</p>
+						<div class="history_box">
+							<div class="cal_cate_history">
+								<div class="left">
+									<p class="name">에이피더핀은행 입출금 통장</p>
+									<p class="balance">계좌번호 <span class="num">123456789012</span></p>
+								</div>
+							</div>
+							<div class="trans_info">
+								<p class="tit">입금</p>
+								<div class="price">
+									<p><span class="num">100,000</span>원</p>
+									<p class="balance">잔액 <span class="num">1,980,000</span>원</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+	</div>
+</div>
+<!-- // N1001_1_1_2(통장/입금) -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">N1001_1_2_1 (예적금/출금)</h3>
+<!-- N1001_1_2_1 (예적금/출금) -->
+<div id="layer_N1001_1_2_1" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>상세내역</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<div class="line_div">
+					<div class="layer_detail only_detail"> <!-- 리스트 없이 history_box 만 있을 시 only_detail 클래스 추가-->
+						<p class="today">
+                            <span class="num">2022.09.24</span> <span>수요일</span>
+                            <!-- <span class="num">2022</span>.<span class="num">09</span>.<span class="num">24</span> <span>수요일</span> -->
+						</p>
+						<div class="history_box">
+							<div class="cal_cate_history">
+								<div class="left">
+									<p class="name">에이피더핀은행 다모아 예적금</p>
+									<p class="balance">계좌번호 <span class="num">12346789012</span></p>
+								</div>
+							</div>
+							<div class="trans_info">
+								<p class="tit">출금</p>
+								<div class="price">
+									<p><span class="num">-140,000</span>원</p>
+									<p class="balance">잔액 <span class="num">1,980,000</span>원</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+	</div>
+</div>
+<!-- // N1001_1_2_1 (예적금/출금) -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">N1001_1_2_2 (예적금/입금/회차)</h3>
+
+
+<!-- N1001_1_2_2 (예적금/입금/회차) -->
+<div id="layer_N1001_1_2_1" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>상세내역</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<div class="line_div">
+					<div class="layer_detail only_detail"> <!-- 리스트 없이 history_box 만 있을 시 only_detail 클래스 추가-->
+						<p class="today">
+                            <span class="num">2022.09.24</span> <span>수요일</span>
+                            <!-- <span class="num">2022</span>.<span class="num">09</span>.<span class="num">24</span> <span>수요일</span> -->
+						</p>
+						<div class="history_box">
+							<div class="cal_cate_history">
+								<div class="left">
+									<p class="name">에이피더핀은행 다모아 적금(N)회차</p>
+									<p class="balance">계좌번호 <span class="num">123456789012</span></p>
+								</div>
+							</div>
+							<div class="trans_info">
+								<p class="tit">입금</p>
+								<div class="price">
+									<p><span class="num">100,000</span>원</p>
+									<p class="balance">잔액 <span class="num">1,980,000</span>원</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+	</div>
+</div>
+<!-- // N1001_1_2_2 (예적금/입금/회차) -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">N1001_2_1_1(카드사용내역)</h3>
+
+<!-- N1001_2_1_1(카드사용내역) -->
+<div id="layer_N1001_2_1_1" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>상세내역</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<div class="line_div">
+					<div class="layer_detail">
+						<p class="today">
+							<span class="num">2022.09.24</span> <span>수요일</span>
+						</p>
+						<div class="history_box">
+							<div class="cal_cate_history">
+								<div class="left">
+									<p class="name">스타벅스 코리아</p>
+									<p class="balance">카드정보 <span class="info">Real? Real! 2 카드</span></p>
+								</div>
+							</div>
+							<div class="trans_info">
+								<p class="tit">승인</p>
+								<div class="price">
+									<p><span class="num">100,000</span>원</p>
+									<!-- <p class="balance">잔액 <span class="num">1,780,000</span>원</p> -->
+									<a href="#layer_N1001_2_1_1_1" class="btn_open_bottom_sheet" role="button"><span class="cate_name pointColor">카페/디저트</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="line_div">
+					<ul class="accDetailList type_layer">
+						<li>
+							<span class="itemTit">승인상태</span>
+							<span class="itemData"><strong>승인</strong></span>
+						</li>
+						<li>
+							<span class="itemTit">결제방법</span>
+							<span class="itemData"><strong>일시불</strong></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+	</div>
+</div>
+<!-- // N1001_2_1_1(카드사용내역) -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">N1001_2_1_1(카드사용내역)</h3>
+
+<!-- N1001_2_1_1(카드사용내역) -->
+<div id="layer_N1001_2_1_1" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>상세내역</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<div class="line_div">
+					<div class="layer_detail">
+						<p class="today">
+							<span class="num">2022.09.24</span> <span>수요일</span>
+						</p>
+						<div class="history_box">
+							<div class="cal_cate_history">
+								<div class="left">
+									<p class="name">오토 주차장</p>
+								</div>
+							</div>
+							<div class="trans_info">
+								<p class="tit">카드의 정석</p>
+								<div class="price">
+									<p><span class="num">30,000</span>원</p>
+									<a href="#layer_N1001_2_1_1_1" class="btn_open_bottom_sheet" role="button"><span class="cate_name pointColor">기타</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="line_div">
+					<ul class="accDetailList type_layer">
+						<li>
+							<span class="itemTit">승인상태</span>
+							<span class="itemData"><strong>승인</strong></span>
+						</li>
+						<li>
+							<span class="itemTit">결제방법</span>
+							<span class="itemData"><strong>일시불</strong></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+	</div>
+</div>
+<!-- // N1001_2_1_1(카드사용내역) -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">N1001_3_4_1(은행대출상환 / 요약)</h3>
+
+<!-- N1001_3_4_1(은행대출상환) -->
+<div id="layer_N1001_3_4_1" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>상세내역</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<div class="line_div">
+					<div class="layer_detail">
+						<p class="today">
+                            <span class="num">2022.09.24</span> <span>수요일</span>
+						</p>
+						<div class="history_box">
+							<div class="cal_cate_history">
+								<div class="left">
+									<p class="name">에이피더핀은행 입출금 통장</p>
+									<p class="balance">계좌번호 <span class="num">1234-5678-9012</span></p>
+								</div>
+							</div>
+							<div class="trans_info">
+								<p class="tit">입금</p>
+								<div class="price">
+									<p><span class="num">800,000</span>원</p>
+									<p class="balance">잔액 <span class="num">1,780,000</span>원</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+                <!-- 22.11.14 hr 삭제 -->
+				<div class="line_div">
+					<!-- 요약, 상환내역 탭 -->
+					<div class="tabs_wrap tabInter tab_cal_detail">
+						<div class="tabs_header type2">
+							<ul class="cboth">
+								<li class="js_tabclickDp1 on"><a href="#none"><span>요약</span></a></li><!-- 선택시 title="선택됨" 추가 -->
+								<li class="js_tabclickDp1"><a href="#none"><span>상환내역</span></a></li>
+							</ul>
+						</div>
+						<div class="tabs_body_wrap">
+							<div class="tabs_body cboth">
+								<!-- 요약 -->
+								<div class="tab_cntDp1" style="display: block;">
+									<ul class="accDetailList type_layer">
+										<li>
+											<span class="itemTit">대출이자</span>
+											<span class="itemData"><em class="num">3.14%</em></span>
+										</li>
+										<li>
+											<span class="itemTit">다음이자결제일</span>
+											<span class="itemData"><em class="num">2021.09.03</em></span>
+										</li>
+										<li>
+											<span class="itemTit">대출원금</span>
+											<span class="itemData"><em class="num">150,000,000</em>원</span>
+										</li>
+										<li class="mgt50">
+											<span class="itemTit">대출상품</span>
+											<span class="itemData">전세자금대출</span>
+										</li>
+										<li>
+											<span class="itemTit">대출형태</span>
+											<span class="itemData">원리금균등분할상환</span>
+										</li>
+										<li class="mgt50">
+											<span class="itemTit">대출실행일</span>
+											<span class="itemData"><em class="num">2019.12.20</em></span>
+										</li>
+										<li>
+											<span class="itemTit">만기일</span>
+											<span class="itemData"><em class="num">2022.01.20</em></span>
+										</li>
+									</ul>
+								</div>
+								<!-- //요약 -->
+
+								<!-- 상환내역 -->
+								<div class="tab_cntDp1" style="display: none;">
+									<div class="cal_acc_history">
+										<div class="accHistory type_layer">
+											<div class="historyList">
+												<div class="wrap_date">
+													<span class="date"><span class="num">2022.09.21. 10:28</span></span>
+													<ul>
+														<li>
+															<div class="left">
+																<span class="category">7회 차 상환금액</span>
+																<span class="balance">상환계좌</span>
+															</div>
+															<div class="right">
+																<span class="amount"><em class="num">1,990,000</em>원</span>
+																<span class="balance"><em class="num">123-45678-9011</em><br> 부산은행</span>
+															</div>
+														</li>
+														<li>
+															<div class="left">
+																<span class="category">7회 차 상환금액</span>
+																<span class="balance">상환계좌</span>
+															</div>
+															<div class="right">
+																<span class="amount"><em class="num">1,990,000</em>원</span>
+																<span class="balance"><em class="num">123-45678-9011</em><br> 부산은행</span>
+															</div>
+														</li>
+													</ul>
+												</div>
+												<div class="wrap_date">
+													<span class="date"><span class="num">2022.09.23. 10:28</span></span>
+													<ul>
+														<li>
+															<div class="left">
+																<span class="category">7회 차 상환금액</span>
+																<span class="balance">상환계좌</span>
+															</div>
+															<div class="right">
+																<span class="amount"><em class="num">1,990,000</em>원</span>
+																<span class="balance"><em class="num">123-45678-9011</em><br> 부산은행</span>
+															</div>
+														</li>
+														<li>
+															<div class="left">
+																<span class="category">7회 차 상환금액</span>
+																<span class="balance">상환계좌</span>
+															</div>
+															<div class="right">
+																<span class="amount"><em class="num">1,990,000</em>원</span>
+																<span class="balance"><em class="num">123-45678-9011</em><br> 부산은행</span>
+															</div>
+														</li>
+													</ul>
+												</div>
+												<div class="upLoading circleBar">
+													<div class="loader"></div>
+													<p>업데이트 중입니다</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //상환내역 -->
+							</div>
+						</div>
+					</div>
+					<!-- //요약, 상환내역 탭 -->
+				</div>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+	</div>
+</div>
+<!-- // N1001_3_4_1(은행대출상환) -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">N1001_3_4_2 (카드결제예정)</h3>
+
+
+<!-- N1001_3_4_2 (카드결제예정) -->
+<div id="layer_N1001_3_4_2" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>상세내역</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<div class="line_div">
+					<div class="layer_detail only_detail"> <!-- 리스트 없이 history_box 만 있을 시 only_detail 클래스 추가-->
+						<p class="today">
+							<span class="num">2022.09.24</span> <span>수요일</span>
+						</p>
+						<div class="history_box">
+							<div class="cal_cate_history">
+								<div class="left">
+									<p class="name">하나카드 결제</p>
+								</div>
+							</div>
+							<div class="trans_info">
+								<p class="tit">결제예정</p>
+								<div class="price">
+									<p><span class="num">140,000</span>원</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+	</div>
+</div>
+<!-- // N1001_3_4_2 (카드결제예정) -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">N1001_3_4_2_1(카드결제에정 일반)</h3>
+
+
+<!-- N1001_3_4_2_1(카드결제에정 일반) -->
+<div id="layer_N1001_3_4_2_1" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>상세내역</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<div class="line_div no_time"> <!-- 거래시간이 없을경우 no_time 클래스 추가 -->
+					<div class="layer_detail">
+						<p class="today">
+							<span class="num">2022.09.24</span> <span>수요일</span>
+						</p>
+						<div class="history_box">
+							<div class="cal_cate_history">
+								<div class="left">
+									<p class="name">하나카드 결제</p>
+								</div>
+							</div>
+							<div class="trans_info">
+								<p class="tit">청구금액</p>
+								<div class="price">
+									<p><span class="num">140,000</span>원</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="line_div">
+					<ul class="accDetailList type_layer">
+						<li>
+							<span class="itemTit">할부</span>
+							<span class="itemData"><em class="num">9,800,000</em>원</span>
+						</li>
+						<li>
+							<span class="itemTit">사용기간</span>
+							<span class="itemData"><em class="num">20.08.17~21.09.16</em></span>
+						</li>
+						<li>
+							<span class="itemTit">실제 결제일</span>
+							<span class="itemData"><em class="num">2021.09.16</em></span>
+						</li>
+						<li>
+							<span class="itemTit">결제일</span>
+							<span class="itemData">매달 <em class="num">25</em>일</span>
+						</li>
+						<li>
+							<span class="itemTit">사용카드</span>
+							<span class="itemData">삼성카드 taptap O taptap DRIVE</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+	</div>
+</div>
+<!-- // N1001_3_4_2-1(카드결제에정 일반) -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">N1001_3_4 3(카드단기대출)</h3>
+
+
+<!-- N1001_3_4 3(카드단기대출) -->
+<div id="layer_N1001_3_4_3" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>상세내역</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<div class="line_div no_time">
+					<div class="layer_detail">
+						<p class="today">
+							<span class="num">2020</span>년 <span class="num">12</span>월 <span class="num">22</span>일 <span>일요일</span>
+						</p>
+						<div class="history_box">
+							<div class="cal_cate_history">
+								<div class="left">
+									<p class="name">하나카드 단기대출 상환</p>
+								</div>
+							</div>
+							<div class="trans_info">
+								<p class="tit">대출원금</p>
+								<div class="price">
+									<p><span class="num">140,000</span>원</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="line_div">
+					<ul class="accDetailList type_layer">
+						<li>
+							<span class="itemTit">대출이자</span>
+							<span class="itemData"><em class="num">3.14%</em></span>
+						</li>
+						<li>
+							<span class="itemTit">기준일</span>
+							<span class="itemData"><em class="num">2021.09.01</em></span>
+						</li>
+						<li>
+							<span class="itemTit">대출원금</span>
+							<span class="itemData">-</span>
+						</li>
+						<li class="mgt50">
+							<span class="itemTit">대출상품</span>
+							<span class="itemData">OO카드 단기대출</span>
+						</li>
+						<li>
+							<span class="itemTit">대출형태</span>
+							<span class="itemData">-</span>
+						</li>
+						<li class="mgt50">
+							<span class="itemTit">대출실행일</span>
+							<span class="itemData"><em class="num">2021.12.20</em></span>
+						</li>
+						<li>
+							<span class="itemTit">만기일</span>
+							<span class="itemData">-</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+	</div>
+</div>
+<!-- // N1001_3_4 3(카드단기대출) -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">N1001_3_4_5(금융 대출 상환 예정)</h3>
+
+<!-- N1001_3_4_5(금융 대출 상환 예정) -->
+<div id="layer_N1001_3_4_5" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>상세내역</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<div class="line_div">
+					<div class="layer_detail">
+						<p class="today">
+							<span class="num">2022.09.24</span> <span>수요일</span>
+						</p>
+						<div class="history_box">
+							<div class="cal_cate_history">
+								<div class="left">
+									<p class="name">현대캐피탈 대출 상환</p>
+									<p class="balance">계좌번호 <span class="num">1234-5678-9012</span></p>
+								</div>
+							</div>
+							<div class="trans_info">
+								<p class="tit">대출잔액</p>
+								<div class="price">
+									<p><span class="num">9,000,000</span>원</p>
+								</div>
+							</div>
+						</div>
+					</div>
+                   
+				</div>
+               <!-- 22.11.14 hr 삭제 -->
+				<div class="line_div">
+					<!-- 요약, 상환내역 탭 -->
+					<div class="tabs_wrap tabInter tab_cal_detail">
+						<div class="tabs_header type2">
+							<ul class="cboth">
+								<li class="js_tabclickDp1 on"><a href="#none"><span>요약</span></a></li><!-- 선택시 title="선택됨" 추가 -->
+								<li class="js_tabclickDp1"><a href="#none"><span>상환내역</span></a></li>
+							</ul>
+						</div>
+						<div class="tabs_body_wrap">
+							<div class="tabs_body cboth">
+								<!-- 요약 -->
+								<div class="tab_cntDp1" style="display: block;">
+									<ul class="accDetailList type_layer">
+										<li>
+											<span class="itemTit">대출이자</span>
+											<span class="itemData"><em class="num">3.14%</em></span>
+										</li>
+										<li>
+											<span class="itemTit">기준일</span>
+											<span class="itemData"><em class="num">2021.09.03</em></span>
+										</li>
+										<li>
+											<span class="itemTit">대출원금</span>
+											<span class="itemData"><em class="num">150,000,000</em>원</span>
+										</li>
+										<li class="mgt50">
+											<span class="itemTit">대출상품</span>
+											<span class="itemData">캐피탈대출</span>
+										</li>
+										<li>
+											<span class="itemTit">대출형태</span>
+											<span class="itemData">원리금균등분할상환</span>
+										</li>
+										<li class="mgt50">
+											<span class="itemTit">대출실행일</span>
+											<span class="itemData"><em class="num">2019.12.20</em></span>
+										</li>
+										<li>
+											<span class="itemTit">만기일</span>
+											<span class="itemData"><em class="num">2022.01.20</em></span>
+										</li>
+									</ul>
+								</div>
+								<!-- //요약 -->
+
+								<!-- 상환내역 -->
+								<div class="tab_cntDp1" style="display: none;">
+									<div class="cal_acc_history">
+										<div class="accHistory type_layer">
+											<div class="historyList">
+												<div class="wrap_date">
+													<span class="date"><span class="num">2021.7.21. 10:28</span></span>
+													<ul>
+														<li>
+															<div class="left">
+																<span class="category">6회 차 상환금액</span>
+																<span class="balance">상환계좌</span>
+															</div>
+															<div class="right">
+																<span class="amount"><em class="num">1,990,000</em>원</span>
+																<span class="balance"><em class="num">123-45678-9011</em><br> 부산은행</span>
+															</div>
+														</li>
+													</ul>
+												</div>
+												<div class="wrap_date">
+													<span class="date"><span class="num">2021.6.21. 10:28</span></span>
+													<ul>
+														<li>
+															<div class="left">
+																<span class="category">5회 차 상환금액</span>
+																<span class="balance">상환계좌</span>
+															</div>
+															<div class="right">
+																<span class="amount"><em class="num">1,990,000</em>원</span>
+																<span class="balance"><em class="num">123-45678-9011</em><br> 부산은행</span>
+															</div>
+														</li>
+														<li>
+															<div class="left">
+																<span class="category">4회 차 상환금액</span>
+																<span class="balance">상환계좌</span>
+															</div>
+															<div class="right">
+																<span class="amount"><em class="num">1,990,000</em>원</span>
+																<span class="balance"><em class="num">123-45678-9011</em><br> 부산은행</span>
+															</div>
+														</li>
+													</ul>
+												</div>
+												<div class="wrap_date">
+													<span class="date"><span class="num">2021.5.21. 10:28</span></span>
+													<ul>
+														<li>
+															<div class="left">
+																<span class="category">3회 차 상환금액</span>
+																<span class="balance">상환계좌</span>
+															</div>
+															<div class="right">
+																<span class="amount"><em class="num">1,990,000</em>원</span>
+																<span class="balance"><em class="num">123-45678-9011</em><br> 부산은행</span>
+															</div>
+														</li>
+													</ul>
+												</div>
+												<div class="upLoading circleBar">
+													<div class="loader"></div>
+													<p>업데이트 중입니다</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //상환내역 -->
+							</div>
+						</div>
+					</div>
+					<!-- //요약, 상환내역 탭 -->
+				</div>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+	</div>
+</div>
+<!-- // N1001_3_4_5(금융 대출 상환 예정) -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">N1001_3_4_6(리스 대출 상환 예정)</h3>
+
+<!-- N1001_3_4_6(리스 대출 상환 예정) -->
+<div id="layer_N1001_3_4_6" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>상세내역</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<div class="line_div">
+					<div class="layer_detail">
+						<p class="today">
+                            <span class="num">2022.09.24</span> <span>수요일</span>
+						</p>
+						<div class="history_box">
+							<div class="cal_cate_history">
+								<div class="left">
+									<p class="name">현대캐피탈 대출 상환</p>
+									<p class="balance">계좌번호 <span class="num">1234-5678-9012</span></p>
+								</div>
+							</div>
+							<div class="trans_info">
+								<p class="tit">상환금액</p>
+								<div class="price">
+									<p><span class="num">-800,000</span>원</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+                 <!-- 22.11.14 hr 삭제 -->
+				<div class="line_div">
+					<!-- 요약, 상환내역 탭 -->
+					<div class="tabs_wrap tabInter tab_cal_detail">
+						<div class="tabs_header type2">
+							<ul class="cboth">
+								<li class="js_tabclickDp1 on"><a href="#none"><span>요약</span></a></li><!-- 선택시 title="선택됨" 추가 -->
+								<li class="js_tabclickDp1"><a href="#none"><span>상환내역</span></a></li>
+							</ul>
+						</div>
+						<div class="tabs_body_wrap">
+							<div class="tabs_body cboth">
+								<!-- 요약 -->
+								<div class="tab_cntDp1" style="display: block;">
+									<ul class="accDetailList type_layer">
+										<li>
+											<span class="itemTit">대출이자</span>
+											<span class="itemData"><em class="num">3.14%</em></span>
+										</li>
+										<li>
+											<span class="itemTit">기준일</span>
+											<span class="itemData"><em class="num">2021.09.03</em></span>
+										</li>
+										<li>
+											<span class="itemTit">대출원금</span>
+											<span class="itemData"><em class="num">150,000,000</em>원</span>
+										</li>
+										<li class="mgt50">
+											<span class="itemTit">대출상품</span>
+											<span class="itemData">리스대출</span>
+										</li>
+										<li>
+											<span class="itemTit">대출형태</span>
+											<span class="itemData">원리금균등분할상환</span>
+										</li>
+										<li class="mgt50">
+											<span class="itemTit">대출실행일</span>
+											<span class="itemData"><em class="num">2019.12.20</em></span>
+										</li>
+										<li>
+											<span class="itemTit">만기일</span>
+											<span class="itemData"><em class="num">2022.01.20</em></span>
+										</li>
+									</ul>
+								</div>
+								<!-- //요약 -->
+
+								<!-- 상환내역 -->
+								<div class="tab_cntDp1" style="display: none;">
+									<div class="cal_acc_history">
+										<div class="accHistory type_layer">
+											<div class="historyList">
+												<div class="wrap_date">
+													<span class="date"><span class="num">2021.7.21. 10:28</span></span>
+													<ul>
+														<li>
+															<div class="left">
+																<span class="category">6회 차 상환금액</span>
+																<span class="balance">상환계좌</span>
+															</div>
+															<div class="right">
+																<span class="amount"><em class="num">1,990,000</em>원</span>
+																<span class="balance"><em class="num">123-45678-9011</em><br> 부산은행</span>
+															</div>
+														</li>
+													</ul>
+												</div>
+												<div class="wrap_date">
+													<span class="date"><span class="num">2021.6.21. 10:28</span></span>
+													<ul>
+														<li>
+															<div class="left">
+																<span class="category">5회 차 상환금액</span>
+																<span class="balance">상환계좌</span>
+															</div>
+															<div class="right">
+																<span class="amount"><em class="num">1,990,000</em>원</span>
+																<span class="balance"><em class="num">123-45678-9011</em><br> 부산은행</span>
+															</div>
+														</li>
+														<li>
+															<div class="left">
+																<span class="category">3회 차 상환금액</span>
+																<span class="balance">상환계좌</span>
+															</div>
+															<div class="right">
+																<span class="amount"><em class="num">1,990,000</em>원</span>
+																<span class="balance"><em class="num">123-45678-9011</em><br> 부산은행</span>
+															</div>
+														</li>
+													</ul>
+												</div>
+												<div class="wrap_date">
+													<span class="date"><span class="num">2021.5.21. 10:28</span></span>
+													<ul>
+														<li>
+															<div class="left">
+																<span class="category">3회 차 상환금액</span>
+																<span class="balance">상환계좌</span>
+															</div>
+															<div class="right">
+																<span class="amount"><em class="num">1,990,000</em>원</span>
+																<span class="balance"><em class="num">123-45678-9011</em><br> 부산은행</span>
+															</div>
+														</li>
+													</ul>
+												</div>
+												<div class="upLoading circleBar">
+													<div class="loader"></div>
+													<p>업데이트 중입니다</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //상환내역 -->
+							</div>
+						</div>
+					</div>
+					<!-- //요약, 상환내역 탭 -->
+				</div>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+	</div>
+</div>
+<!-- // N1001_3_4_6(리스 대출 상환 예정) -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">N1001_3_5_1(은행대출 만기)</h3>
+
+<!-- N1001_3_5_1(은행대출 만기) -->
+<div id="layer_N1001_3_5_1" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>상세내역</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<div class="line_div">
+					<div class="layer_detail">
+						<p class="today">
+							<span class="num">2022.09.24</span> <span>수요일</span>
+						</p>
+						<div class="history_box">
+							<div class="cal_cate_history">
+								<div class="left">
+									<p class="name">현대카드 단기대출 상환</p>
+								</div>
+							</div>
+							<div class="trans_info">
+								<p class="tit">대출원금</p>
+								<div class="price">
+									<p><span class="num">-800,000</span>원</p>
+									<p class="balance">잔액 <span class="num">1,980,000</span>원</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="line_div">
+					<!-- 요약, 상환내역 탭 -->
+					<div class="tabs_wrap tabInter tab_cal_detail">
+						<div class="tabs_header type2">
+							<ul class="cboth">
+								<li class="js_tabclickDp1 on"><a href="#none"><span>요약</span></a></li><!-- 선택시 title="선택됨" 추가 -->
+								<li class="js_tabclickDp1"><a href="#none"><span>상환내역</span></a></li>
+							</ul>
+						</div>
+						<div class="tabs_body_wrap">
+							<div class="tabs_body cboth">
+								<!-- 요약 -->
+								<div class="tab_cntDp1" style="display: block;">
+									<ul class="accDetailList type_layer">
+										<li>
+											<span class="itemTit">대출이자</span>
+											<span class="itemData"><em class="num">3.14%</em></span>
+										</li>
+										<li>
+											<span class="itemTit">기준일</span>
+											<span class="itemData"><em class="num">2021.09.03</em></span>
+										</li>
+										<li>
+											<span class="itemTit">대출원금</span>
+											<span class="itemData"><em class="num">150,000,000</em>원</span>
+										</li>
+										<li class="mgt50">
+											<span class="itemTit">대출상품</span>
+											<span class="itemData">전세자금대출</span>
+										</li>
+										<li>
+											<span class="itemTit">대출형태</span>
+											<span class="itemData">원리금균등분할상환</span>
+										</li>
+										<li class="mgt50">
+											<span class="itemTit">대출실행일</span>
+											<span class="itemData"><em class="num">2019.12.20</em></span>
+										</li>
+										<li>
+											<span class="itemTit">만기일</span>
+											<span class="itemData"><em class="num">2022.01.20</em></span>
+										</li>
+									</ul>
+								</div>
+								<!-- //요약 -->
+
+								<!-- 상환내역 -->
+								<div class="tab_cntDp1" style="display: none;">
+									<div class="cal_acc_history">
+										<div class="accHistory type_layer">
+											<div class="historyList">
+												<div class="wrap_date">
+													<span class="date"><span class="num">2021.7.21. 10:28</span></span>
+													<ul>
+														<li>
+															<div class="left">
+																<span class="category">6회 차 상환금액</span>
+																<span class="balance">상환계좌</span>
+															</div>
+															<div class="right">
+																<span class="amount"><em class="num">1,990,000</em>원</span>
+																<span class="balance"><em class="num">123-45678-9011</em><br> 부산은행</span>
+															</div>
+														</li>
+													</ul>
+												</div>
+												<div class="wrap_date">
+													<span class="date"><span class="num">2021.6.21. 10:28</span></span>
+													<ul>
+														<li>
+															<div class="left">
+																<span class="category">5회 차 상환금액</span>
+																<span class="balance">상환계좌</span>
+															</div>
+															<div class="right">
+																<span class="amount"><em class="num">1,990,000</em>원</span>
+																<span class="balance"><em class="num">123-45678-9011</em><br> 부산은행</span>
+															</div>
+														</li>
+														<li>
+															<div class="left">
+																<span class="category">3회 차 상환금액</span>
+																<span class="balance">상환계좌</span>
+															</div>
+															<div class="right">
+																<span class="amount"><em class="num">1,990,000</em>원</span>
+																<span class="balance"><em class="num">123-45678-9011</em><br> 부산은행</span>
+															</div>
+														</li>
+													</ul>
+												</div>
+												<div class="wrap_date">
+													<span class="date"><span class="num">2021.5.21. 10:28</span></span>
+													<ul>
+														<li>
+															<div class="left">
+																<span class="category">3회 차 상환금액</span>
+																<span class="balance">상환계좌</span>
+															</div>
+															<div class="right">
+																<span class="amount"><em class="num">1,990,000</em>원</span>
+																<span class="balance"><em class="num">123-45678-9011</em><br> 부산은행</span>
+															</div>
+														</li>
+													</ul>
+												</div>
+												<div class="upLoading circleBar">
+													<div class="loader"></div>
+													<p>업데이트 중입니다</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //상환내역 -->
+							</div>
+						</div>
+					</div>
+					<!-- //요약, 상환내역 탭 -->
+				</div>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+	</div>
+</div>
+<!-- // N1001_3_5_1(은행대출 만기) -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">N1001_3_5_2(은행적금 만기) 케이스1</h3>
+
+
+<!-- N1001_3_5_2(은행적금 만기) 케이스1 -->
+<div id="layer_N1001_3_5_2" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>상세내역</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<div class="line_div">
+					<div class="layer_detail only_detail"> <!-- 리스트 없이 history_box 만 있을 시 only_detail 클래스 추가-->
+						<p class="today">
+							<span class="num">2022.09.24</span> <span>수요일</span>
+						</p>
+						<div class="history_box">
+							<div class="cal_cate_history">
+								<div class="left">
+									<p class="name">OO은행 다모아 예적금 만기</p>
+									<p class="balance">계좌번호 <span class="num">1234-5678-9012</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+	</div>
+</div>
+<!-- // N1001_3_5_2(은행적금 만기) 케이스1 -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">N1001_3_5_2(은행적금 만기)_2줄 케이스2</h3>
+
+
+<!-- N1001_3_5_2(은행적금 만기)_2줄 케이스2 -->
+<div id="layer_N1001_3_5_2" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>상세내역</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<div class="line_div">
+					<div class="layer_detail only_detail"> <!-- 리스트 없이 history_box 만 있을 시 only_detail 클래스 추가-->
+						<p class="today">
+							<span class="num">2022.09.24</span> <span>수요일</span>
+						</p>
+						<div class="history_box">
+							<div class="cal_cate_history">
+								<div class="left">
+									<p class="name">에이피더핀은행 다모아다모아 예적금 만기에이피더핀은행 다모아다모아 예적금 만기</p>
+									<p class="balance">계좌번호 <span class="num">1234-5678-9012</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+	</div>
+</div>
+<!-- // N1001_3_5_2(은행적금 만기)_2줄 케이스2 -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">N1001_3_5_2(은행적금 만기) 케이스3</h3>
+
+
+<!-- N1001_3_5_2(은행적금 만기) 케이스3 -->
+<div id="layer_N1001_3_5_2" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>상세내역</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<div class="line_div">
+					<div class="layer_detail only_detail"> <!-- 리스트 없이 history_box 만 있을 시 only_detail 클래스 추가-->
+						<p class="today">
+							<span class="num">2022.09.24</span> <span>수요일</span>
+						</p>
+						<div class="history_box">
+							<div class="cal_cate_history">
+								<div class="left">
+									<p class="name">부산카드 신용대출 만기</p>
+								</div>
+							</div>
+							<div class="trans_info">
+								<p class="tit">대출원금</p>
+								<div class="price">
+									<p><span class="num">140,000</span>원</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+	</div>
+</div>
+<!-- // N1001_3_5_2(은행적금 만기) 케이스3 -->
+
+
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">N001_edit_memo 메모</h3>
+
+
+
+<!-- bottomsheet N001_edit_memo  메모 -->
+<div id="layer_N001_edit_memo" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>메모란</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<div class="line_div">
+					<div class="layer_memo_wrap">
+						<textarea class="tx_area js_textarea1" name="textfield1" cols="45" rows="1" maxlength="60" placeholder="메모를 남겨주세요" title="메모를 남겨주세요, 최대 60자까지 가능합니다"></textarea>
+						<button type="button" class="btn_val_reset" onclick="memoValReset();"><span class="ico_del"><em class="blind">메모 텍스트 비우기</em></span></button>
+					</div>
+					<div id="js_textarea1_cnt" class="txtarea_cnt" title="입력한 글자수 / 최대 글자수"><span class="pointColor">0</span> / 60</div>
+				</div>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+        <div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>저장</span></button>
+		</div>
+	</div>
+</div>
+<!-- // bottomsheet N001_edit_memo  메모 -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">N001_select_m 월선택</h3>
+
+
+<!-- bottomsheet N001_select_m 월선택  -->
+<div id="layer_N001_select_m" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>월 선택</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<ul class="layer_sel_opt type_date">
+					<li><button type="button" class="btn_sel_opt on" title="선택됨"><span><em class="num">2021</em>년 <em class="num">11</em>월</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+					<li><button type="button" class="btn_sel_opt"><span><em class="num">2021</em>년 <em class="num">10</em>월</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span><em class="num">2021</em>년 <em class="num">9</em>월</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span><em class="num">2021</em>년 <em class="num">8</em>월</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span><em class="num">2021</em>년 <em class="num">7</em>월</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span><em class="num">2021</em>년 <em class="num">6</em>월</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span><em class="num">2021</em>년 <em class="num">5</em>월</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span><em class="num">2021</em>년 <em class="num">4</em>월</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span><em class="num">2021</em>년 <em class="num">3</em>월</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span><em class="num">2021</em>년 <em class="num">2</em>월</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span><em class="num">2021</em>년 <em class="num">1</em>월</span></button></li>
+				</ul>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+        <div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>저장</span></button>
+		</div>
+	</div>
+</div>
+<!-- // bottomsheet N001_select_m 월선택 -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">layer_N001_select_m_category 카테고리 선택</h3>
+
+
+<!-- bottomsheet N001_select_m 월별 카테고리 선택 -->
+<div id="layer_N001_select_m_category" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>카테고리</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<ul class="layer_sel_opt">
+					<li><button type="button" class="btn_sel_opt on" title="선택됨"><span>입출금</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+					<li><button type="button" class="btn_sel_opt"><span>카드</span></button></li>
+				</ul>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+        <div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>저장</span></button>
+		</div>
+	</div>
+</div>
+<!-- // bottomsheet N001_select_m 월별 카테고리 선택 -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">N001_select_m_sort 내역, 정렬 선택</h3>
+
+
+<!-- bottomsheet N001_select_m 내역, 정렬 선택 -->
+<div id="layer_N001_select_m_sort" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>정렬</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<ul class="layer_sel_opt"> <!-- 22.11.14 최근순 -> 최신순  -->
+					<li><button type="button" class="btn_sel_opt on" title="선택됨"><span>최신순</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+					<li><button type="button" class="btn_sel_opt"><span>과거순</span></button></li>
+				</ul>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+        <div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>저장</span></button>
+		</div>
+	</div>
+</div>
+<!-- // bottomsheet N001_select_m 내역, 정렬 선택 -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">layer_popup 예산설정 완료</h3>
+
+
+<!-- layer_popup 예산설정 완료  -->
+<div id="layer2_1" class="layer_popup type2">
+	<div class="layer_position">
+		<div class="layer_inner">
+			<div class="layer_cont">
+				<div class="msg_box">
+                    <!-- 22.10 클래스 추가 -->
+					<p class="msg_alert type2">예산설정 완료</p>
+					<p class="msg_txt">예산설정이 저장되었습니다.</p>
+				</div>
+				<div class="btn_layer_wrap">
+					<button type="button" class="js_pop_close btn_confirm"><span>닫기</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // layer_popup 예산설정 완료 -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">layer_popup 예산설정 저장 확인</h3>
+
+
+<!-- layer_popup 예산설정 저장 확인  -->
+<div id="layer2_1" class="layer_popup type2">
+	<div class="layer_position">
+		<div class="layer_inner">
+			<div class="layer_cont">
+				<div class="msg_box">
+					<p class="msg_alert type2">예산설정 저장 확인</p>
+					<p class="msg_txt">설정하신 예산을 저장하지 않고<br>나가시겠습니까?</p>
+				</div>
+				<div class="btn_layer_wrap">
+					<button type="button" class="js_pop_close btn_cancel"><span>아니오</span></button>
+					<button type="button" class="js_pop_close btn_confirm"><span>네</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // layer_popup 예산설정 저장 확인 -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">layer_popup 예산설정 오류</h3>
+
+
+<!-- layer_popup 예산설정 오류  -->
+<div id="layer2_1" class="layer_popup type2">
+	<div class="layer_position">
+		<div class="layer_inner">
+			<div class="layer_cont">
+				<div class="msg_box">
+					<p class="msg_alert type2">예산설정 오류</p>
+					<p class="msg_txt">설정하신 총 예산과 상세예산이<br>맞지 않습니다.</p>
+				</div>
+				<div class="btn_layer_wrap">
+					<button type="button" class="js_pop_close btn_confirm"><span>닫기</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // layer_popup 예산설정 오류 -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">layer_popup 예산설정 오류</h3>
+
+
+<!-- layer_popup 오류코드  -->
+<div id="layer2_1" class="layer_popup type2">
+	<div class="layer_position">
+		<div class="layer_inner">
+			<div class="layer_cont">
+				<div class="msg_box">
+					<p class="msg_alert type2">오류!</p>
+					<p class="msg_txt">
+						오류코드 0000x00<br>
+						요청하신 페이지 처리 중 오류가 발생<br>
+						했습니다. 서비스 이용에 불편을 드려<br>
+						죄송합니다.<br>
+                        다시 시도 부탁드립니다.
+					</p>
+					<p class="msg_customer">
+						문의 1588-0000<br>
+						월~금 09:00~18:00(토/일/공휴일 휴무)
+					</p>
+				</div>
+				<div class="btn_layer_wrap">
+					<button type="button" class="js_pop_close btn_cancel"><span>아니오</span></button>
+					<button type="button" class="js_pop_close btn_confirm"><span>네</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // layer_popup 오류코드 -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">layer_popup 네트워크 오류</h3>
+
+
+<!-- layer_popup 네트워크 오류  -->
+<div id="layer2_1" class="layer_popup type2">
+	<div class="layer_position">
+		<div class="layer_inner">
+			<div class="layer_cont">
+				<div class="msg_box">
+					<p class="msg_alert type2">네트워크 오류</p>
+					<p class="msg_txt">현재 네트워크가 원활하지 않습니다. <br>잠시 후 다시 접속해주세요.</p>
+				</div>
+				<div class="btn_layer_wrap">
+					<button type="button" class="js_pop_close btn_confirm"><span>닫기</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // layer_popup 네트워크 오류 -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">N001_icon_p_01 (레이어팝업, 월간캘린더 안내 팝업)</h3>
+
+
+<!-- layer_popup 월간 캘린더 안내 알럿팝업 type3 N001_icon_p_01 -->
+<div id="N001_icon_p_01" class="layer_popup type3">
+	<div class="layer_position">
+		<div class="layer_inner">
+			<div class="layer_cont">
+				<div class="msg_box">
+					<strong class="msg_alert">
+						<ul class="cal_exp_box">
+							<li class="list">
+								<p class="exp_ico"><span class="date" aria-hidden="true">23</span></p>
+								<p class="exp_txt">오늘날짜</p>
+							</li>
+							<li class="list">
+								<p class="exp_ico"><span class="blit_1"></span></p>
+								<p class="exp_txt">개설,발급,만기 등 이벤트</p>
+							</li>
+							<li class="list">
+								<p class="exp_ico"><span class="blit_2"></span></p>
+								<p class="exp_txt">결제,상환 등 알림</p>
+							</li>
+                            <!-- 22.10 html 추가 -->
+                            <li class="list">
+								<p class="exp_ico"><span class="blit_3"></span></p>
+								<p class="exp_txt">입출금, 카드 승인 내역 정보</p>
+							</li>
+							<li class="list">
+                                <!-- 22.10 html 순서변경, br 삭제 -->
+								<p class="exp_ico"><span class="star_on"></span><span class="star_off"></span></p>
+								<p class="exp_txt">별표를 Tap하면 해당 일에 표기설정</p>
+							</li>
+						</ul>
+					</strong>
+				</div>
+				<div class="btn_layer_wrap">
+					<button type="button" class="js_pop_close btn_confirm"><span>닫기</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // layer_popup N001_icon_p_01  월간 캘린더 안내 알럿팝업 type3  -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 -->
+<div class="view_section"><h3 class="type_no">선택된기관 bottomsheet XC1100</h3>
+
+
+<!-- 22.10 선택된기관 삭제 -->
+<!-- [S] 선택된기관 bottomsheet XC1100 -->
+<div id="layer_bs_1" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit">선택된 기관</strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<div class="bank_list">
+				<p class="bank_box has_delete">
+					<span class="name">BNK부산은행</span>
+					<button type="button" class="btn_del"><span class="blind">삭제</span></button>
+				</p>
+				<p class="bank_box has_delete">
+					<span class="name">우리은행</span>
+					<button type="button" class="btn_del"><span class="blind">삭제</span></button>
+				</p>
+				<p class="bank_box has_delete">
+					<span class="name">에이피더핀은행</span>
+					<button type="button" class="btn_del"><span class="blind">삭제</span></button>
+				</p>
+				<p class="bank_box has_delete">
+					<span class="name">국민은행</span>
+					<button type="button" class="btn_del"><span class="blind">삭제</span></button>
+				</p>
+				<p class="bank_box has_delete">
+					<span class="name">제일은행</span>
+					<button type="button" class="btn_del"><span class="blind">삭제</span></button>
+				</p>
+				<p class="bank_box has_delete">
+					<span class="name">카카오</span>
+					<button type="button" class="btn_del"><span class="blind">삭제</span></button>
+				</p>
+				<p class="bank_box has_delete">
+					<span class="name">토스</span>
+					<button type="button" class="btn_del"><span class="blind">삭제</span></button>
+				</p>
+				<p class="bank_box has_delete">
+					<span class="name">기업은행</span>
+					<button type="button" class="btn_del"><span class="blind">삭제</span></button>
+				</p>
+			</div>
+		</div>
+	</div>
+</div> 
+<!-- [E] 선택된기관 bottomsheet XC1100 -->
+
+
+<!-- 퍼블확인용 --></div>
+</div><!-- test_view -->
+<script>
+$(document).ready(function(){
+
+    // [S] 캘린더 탭
+    $(".tabInter").tabs({
+        wrapClass:".tabInter",
+        clickClass:".js_tabclickDp1",
+        showClass:".tab_cntDp1",
+        animate:false,
+        contentWidthFull:false,//effect when animate:true
+        animateBorder:["false",".tabs_header"],//show border in class .
+        fade:false,
+        speed:500
+    });
+    // [E] 캘린더 탭
+
+    selOptOn(); //월선택, 카테고리선택, 정렬선택
+
+
+});
+
+function selOptOn() {
+    $('.layer_sel_opt .btn_sel_opt').each(function(){
+        var $this = $(this);
+        $this.on('click',function(){
+            $this.closest('.layer_sel_opt li').siblings('.layer_sel_opt li').children('.layer_sel_opt .btn_sel_opt').removeClass('on').find('.layer_sel_opt .btn_sel_opt').removeAttr('title');
+            $this.closest('.layer_sel_opt li').children('.layer_sel_opt .btn_sel_opt').addClass('on').find('.layer_sel_opt .btn_sel_opt').attr('title','선택됨');
+        })
+    });
+}
+
+
+// [S] 월간내역 메모 textarea 자동 높이조절, 글자수 체크, textarea val값 초기화
+function testAreaHeight1() {
+	var textEle = $('.layer_memo_wrap .js_textarea1');
+	textEle[0].style.height = 'auto';
+	var textEleHeight = textEle.prop('scrollHeight');
+	textEle.css('height', textEleHeight);
+};
+var textEle = $('.layer_memo_wrap .js_textarea1');
+var btnMemoValReset = $('.layer_memo_wrap .btn_val_reset');
+btnMemoValReset.hide();
+textEle.on('keyup', function() {
+	//자동높이
+	testAreaHeight1();
+	$('#js_textarea1_cnt').html("<span class='pointColor'>"+$(this).val().length+"</span> / 60");
+	//val값 초기화
+	if(textEle.val().length === 0){
+		btnMemoValReset.hide();
+	}else if($(this).val().length > 60) {
+		$(this).val($(this).val().substring(0, 60));
+		$('#js_textarea1_cnt').html("<span class='pointColor'>60</span> / 60");
+	}else{
+		btnMemoValReset.show();
+	}
+});
+function memoValReset() {
+	textEle.val('').css('height','inherit').focus();
+	btnMemoValReset.hide();
+	$('#js_textarea1_cnt').html("<span class='pointColor'>"+textEle.val().length+"</span> / 60");
+}
+// [E] 월간내역 메모 textarea 자동 높이조절, 글자수 체크, textarea val값 초기화
+
+
+</script>
+</body>
+</html>

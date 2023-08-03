@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- [S] chart -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<!-- [E] chart -->
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+
+	<!-- header -->
+	<div class="header">
+		<div class="header_inn">
+			<div class="left">
+				<a href="#none" class="btnBack"><span class="blind">Back</span></a>
+			</div>
+			<div class="center">
+				<h2 class="tit_h2">세제 한도 조회</h2>
+			</div>
+			<!-- <div class="right">
+				<a href="#none" class="btnMenu"><span class="blind">menu</span></a>
+			</div> -->
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="content taxContent">
+			
+			<!-- [S] 절세 타이틀 -->
+            <div class="tBalance taxMain">
+				<h3 class="tBaltit">세테크의 시작<br>절세자산부터 챙겨 보세요</h3>
+			</div>
+			<!-- [E] 절세 타이틀 -->
+			
+            <!-- [S] 한도 조회하기  -->
+            <h3 class="smallTit">세제상품 잔여 한도<a href="#layer_TBC1_2_1BS" class="btn_open_bottom_sheet btn_more_ask" role="button"><span class="ico_ask type_white2"><em class="blind">더보기</em></span></a></h3>
+            <div class="taxBox">
+
+                <!--[S] 미연동 케이스 -->
+                <div class="boxArea beforeStart"> <!-- 미연동일때 beforeStart 클래스 추가  -->
+                    <div class="taxInfo">
+                        <a href="#" class="btnAdd">
+                            <span class="infoTit"><span class="pointLine3">IRP/연금저축</span></span>
+                            <span class="link">연결하기</span>
+                        </a> 
+                    </div>
+                    <div class="taxGraph">
+                        <div class="taxAmount">
+                            자산 연결하고 세액공제 한도 확인하기
+                        </div>
+                    </div>
+                </div>
+                <div class="boxArea beforeStart"> <!-- 미연동일때 beforeStart 클래스 추가  --> 
+                    <div class="taxInfo">
+                        <a href="#" class="btnAdd">
+                            <span class="infoTit"><span class="pointLine3">ISA</span></span>
+                            <span class="link">연결하기</span>
+                        </a> 
+                    </div>
+                    <div class="taxGraph">
+                        <div class="taxAmount">
+                            자산 연결하고 납입한도 확인하기
+                        </div>
+                    </div>
+                </div>
+                <div class="boxArea beforeStart"> <!-- 미연동일때 beforeStart 클래스 추가  --> 
+                    <div class="taxInfo">
+                        <a href="#" class="btnAdd">
+                            <span class="infoTit"><span class="pointLine3">저축성 보험 (월 적립식)</span></span>
+                            <span class="link">연결하기</span>
+                        </a> 
+                    </div>
+                    <div class="taxGraph">
+                        <div class="taxAmount">
+                            자산 연결하고 비과세 적용한도 확인하기
+                        </div>
+                    </div>
+                </div>
+                <div class="boxArea beforeStart"> <!-- 미연동일때 beforeStart 클래스 추가  --> 
+                    <div class="taxInfo">
+                        <a href="#" class="btnAdd">
+                            <span class="infoTit"><span class="pointLine3">저축성 보험 (월 적립식 외)</span></span>
+                            <span class="link">연결하기</span>
+                        </a>
+                    </div>
+                    <div class="taxGraph">
+                        <div class="taxAmount">
+                            자산 연결하고 비과세 적용한도 확인하기
+                        </div>
+                    </div>
+                </div>
+                <!--[E] 미연동 케이스 -->
+
+                <!--[S] 연동 케이스 -->
+                <div class="boxArea"> 
+                    <div class="taxInfo">
+                        <a href="#" class="btnAdd">
+                            <span class="infoTit"><span class="pointLine3">IRP/연금저축</span></span>
+                        </a>
+                    </div>
+                    <div class="taxGraph">
+                        <div class="taxAmount">
+                            세액공제 한도 900만원 중 내 잔여한도는?
+                        </div>
+                    </div>
+                </div>
+                <div class="boxArea"> 
+                    <div class="taxInfo">
+                        <a href="#" class="btnAdd">
+                            <span class="infoTit"><span class="pointLine3">ISA</span></span>
+                        </a>
+                    </div>
+                    <div class="taxGraph">
+                        <div class="taxAmount">
+                            납입한도 2,000만원 중 얼마나 사용했을까?
+                        </div>
+                    </div>
+                </div>
+                <div class="boxArea"> 
+                    <div class="taxInfo">
+                        <a href="#" class="btnAdd">
+                            <span class="infoTit"><span class="pointLine3">저축성 보험 (월 적립식)</span></span>
+                        </a>
+                    </div>
+                    <div class="taxGraph">
+                        <div class="taxAmount">
+                            비과세 적용한도 1,800만원 중 내 잔여한도는?
+                        </div>
+                    </div>
+                </div>
+                <div class="boxArea"> 
+                    <div class="taxInfo">
+                        <a href="#" class="btnAdd">
+                            <span class="infoTit"><span class="pointLine3">저축성 보험 (월 적립식 외)</span></span>
+                        </a>
+                    </div>
+                    <div class="taxGraph">
+                        <div class="taxAmount">
+                            비과세 적용한도 1억원 중 얼마나 사용했을까?
+                        </div>
+                    </div>
+                </div>
+                <!--[E] 연동 케이스 -->
+
+                <!--[s] 이건어때요  -->
+                <!-- [S] 슬라이드 배너 타입 등록후 메인 -->
+                <h3 class="m_tit">이건 어때요?</h3>
+                <div class="banner outLink">
+                    <a href="#none" class="link_type1">
+                        <span class="logo"><em class="blind">에이피더핀은행</em></span>
+                        <h3 class="banner_tit">
+                            장기 플랜을 위한<br>
+                            <span class="titPoint">저축성 보험</span> 알아보기
+                        </h3>
+                        <span class="noti">*본 서비스는 에이피더핀은행에서 제공합니다.</span>
+                    </a>
+                </div>
+                <!-- [E] 슬라이드 배너 타입 등록후 메인 -->
+                <!--[E] 이건어때요  -->
+
+            </div>
+            <!-- [E] 한도 조회하기  -->
+		</div>
+	</div>
+	<!-- //container -->
+</div>
+<!-- //wrap -->
+<!-- bottomsheet layer_TBC1_2_1BS 세제한도조회 메인 툴팁 -->
+<div id="layer_TBC1_2_1BS" class="layer_bottomsheet">
+    <div class="layer_inner">
+        <div class="layer_tit type2"> 
+            <strong class="tit"><span>한도 조회하기</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont" style="max-height: 879px;">
+            <div class="msg_box">
+                <p class="msg_notice">
+                    각 상품별 한도금액 - 각 상품별 연간 납입금액
+                </p>
+                <ul class="notice_list">
+                    <li class="list">
+                        <span class="tx">
+                            제공기관 및 조회시점에 따라 계산이 정확하지 않을 수 있습니다. 정확한 잔여 한도 금액은 연말정산 시 한번 더 확인해주세요.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // layerTBC1_2_1BS 세제한도조회 메인 툴팁 -->
+
+<!-- bottomsheet TBC1_LPBS  한도조회 기간 선택  -->
+<div id="layer_TBC1_LPBS" class="layer_bottomsheet" role="dialog" tabindex="-1" aria-hidden="true">
+    <div class="layer_inner">
+        <div class="layer_tit">
+            <strong class="tit"><span>한도조회 기간 선택</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont">
+            <!-- 페이지 스타일 -->
+            <div class="type_page">
+                <ul class="layer_sel_opt type_date">
+                    <li><button type="button" class="btn_sel_opt on" title="선택됨"><span>2023</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+                    <li><button type="button" class="btn_sel_opt"><span>2022</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>2021</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>2020</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>2019</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>2018</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>2017</span></button></li>
+                </ul>
+            </div>
+            <!-- //페이지 스타일 -->
+        </div>
+        <div class="layer_footer">
+            <button type="button" class="js_pop_close btn_confirm"><span>저장</span></button>
+        </div>
+    </div>
+</div>
+<!-- // bottomsheet TBC1_LPBS  한도조회 기간 선택 -->
+
+<script>
+$(document).ready(function(){
+
+	/* [S] 슬라이드 배너형 */
+    var $sliderBanner= $('.wrap_slider.type_banner .slider_container');
+    $sliderBanner.slick({
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2500
+    });
+    /* 재생, 멈춤 */
+    var html_control = '<div class="slider_control">';
+    html_control += '<button type="button" class="btn_control play" tabindex="0"><span class="blind">배너 자동재생</span></button>';
+    html_control += '<button type="button" class="btn_control stop" tabindex="0"><span class="blind">배너 일시정지</span></button>';
+    html_control += '</div>'
+    $(".slick-dots").before(html_control);
+
+    var btnSliderPlay = $('.wrap_slider.type_banner .btn_control.play');
+    var btnSliderStop = $('.wrap_slider.type_banner .btn_control.stop');
+    $(btnSliderPlay).click(function(){
+        $sliderBanner.slick('slickPlay');
+        $(btnSliderPlay).hide();
+        $(btnSliderStop).show().focus();// 20210901 접근성 .focus() 추가
+    });
+    $(btnSliderStop).click(function(){
+        $sliderBanner.slick('slickPause');
+        $(btnSliderStop).hide();
+        $(btnSliderPlay).show().focus();// 20210901 접근성 .focus() 추가
+    });
+    /* [E] 슬라이드 배너형 */
+
+});
+// [S] 바텀시트
+$(document).on("click", ".btn_open_bottom_sheet", function(e){
+    e.preventDefault();
+
+    var $href = $(this).attr('href');
+    layer_bottomsheet($href);
+    $('html').addClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+
+    // [S] multi layer 2021-08-02 추가
+    var dimIdx = $('.dim').index();
+    eval('$focusReturn' + [dimIdx] + '= $(this)');
+});
+function layer_bottomsheet(el){
+    var $el = $(el);
+    $el.append("<div class=\"dim\"></div>");
+    isDim ? $('.layer_bottomsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
+    setTimeout(function() {
+        $el.find('.layer_inner').addClass('on');
+    }, 50);
+
+    var isDim;
+    var dimIdx = $('.dim').index();
+    var thisDim = $el.find('.dim');
+    var thisLyZindex = dimIdx + 4000;
+    $('.dim').css('opacity','0');
+    thisDim.css('opacity','.7');
+    thisDim.closest('.layer_bottomsheet, .layer_popup').css('z-index', thisLyZindex);
+    // [E] multi layer 2021-08-02 추가
+
+    $el.find('.js_pop_close').click(function(){
+
+        $el.find('.layer_inner').removeClass('on');
+        setTimeout(function() {
+            isDim ? $('.layer_bottomsheet').hide() : $el.hide();
+            $('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+            $el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
+            // [S] multi layer 2021-08-02 추가
+            if($('.dim').length == '2'){
+                $('.dim:eq(1)').css('opacity','.7');
+            }else if($('.dim').length == '1'){
+                $('.dim').css('opacity','.7');
+            }
+            // [E] multi layer 2021-08-02 추가
+        }, 200);
+
+        // [S] multi layer 2021-08-02 추가
+        eval('$focusReturn'+ [dimIdx]).focus();
+
+        return false;
+    });
+}
+</script>
+</body>
+</html>

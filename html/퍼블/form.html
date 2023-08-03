@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+    <div id="header"></div>
+
+	<div class="wrap_content">
+        <!-- [S] contents ------------------------------------------------------------------------------>
+        <div class="content">
+            <!------------------------------------------------------------------->
+            <p class="guide_stit mgt10">약관동의</p>
+            <div class="agChkLst">
+                <div class="agChkItem all">
+                    <label for="chkAll">
+                        <input type="checkbox" id="chkAll" checked=""><i></i><span id="">개인(신용)정보 제3자 제공 동의</span>
+                    </label>
+                    <a href="#none" class="btnFolding show" data-target="#folding" aria-expanded="true"><span class="blind">닫힘</span></a>
+                </div>
+                <ul class="agChkSubList" id="folding">
+                    <li class="agChkItem">
+                        <label for="subChk1">
+                            <input type="checkbox" id="subChk1" checked=""><i></i><span id="">개인(신용)정보 제3자 제공 동의</span>
+                        </label>
+                        <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <br><br>
+            <p class="guide_stit mgt10">항목 선택</p>
+            <div class="org_list_certi bg_box">
+                <div class="org_name_wrap agChkItem">
+                    <label>
+                        <div class="org_name">
+                            <p class="im"><img src="../../img/bank/D1AAEV0000.png" alt="에이피더핀"></p>
+                            <p class="name">에이피더핀은행</p>
+                        </div>
+                        <input type="checkbox" checked=""><i></i><span class="blind">기관 전체 선택</span>
+                    </label>
+                </div>
+                <div class="box_prd">
+                    <div class="prd_list">
+                        <label class="prdChkItem">
+                            <div class="tx">
+                                <p><span class="prd_name type1">입출금통장</span></p>
+                                <p class="acc_info"><span class="acc_name">에이피더핀</span><em class="acc_num">12345678902212</em></p>
+                                <input type="checkbox" checked=""><i></i>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="prd_list">
+                        <label class="prdChkItem">
+                            <div class="tx">
+                                <p><span class="prd_name type1">입출금통장</span></p>
+                                <p class="acc_info"><span class="acc_name">에이피더핀</span><em class="acc_num">12345678902212</em></p>
+                                <input type="checkbox" checked=""><i></i>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+            <p class="guide_stit mgt10">radio box -xxc9200 약관동의 </p>
+            <div class="servTerm">
+                <div class="wrap_rdo_tab">
+                    <div class="agree_item optional">
+                        <ul class="radio_list">
+                            <li>
+                                <label for="agr_pr_1">
+                                    <input type="radio" name="agrItem_pr_1" id="agr_pr_1">
+                                    <i></i>
+                                    <span>미동의</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="agr_pr_2">
+                                    <input type="radio" name="agrItem_pr_1" id="agr_pr_2" checked>
+                                    <i></i>
+                                    <span>동의</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <p class="guide_stit mgt10" style="margin-bottom:15px;">select box - border + on / placeholder </p>
+            <div class="confirm_info">
+                <div class="filterItem">
+                    <p class="filterTit confirm_dot">연령대 (필수)</p>
+                    <div class="sel_form type_border on"> <!-- 선택시 on 클래스 추가 -->
+                        <a href="#none" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>20대 (20 ~ 29세)</span></a>
+                    </div>
+                </div>
+
+                <div class="filterItem">
+                    <p class="filterTit">가구 총소득 (선택)</p>
+                    <div class="sel_form type_border"> <!-- 선택시 on 클래스 추가 -->
+                        <a href="#" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span class="sel_txt">대략적인 소득을 입력해주세요</span></a> <!-- select 안내메세지 일경우 sel_txt 추가 -->
+                    </div>
+                </div>
+            </div>
+            <br>
+            <p class="guide_stit mgt10">radio box - filterPopup </p>
+            <div class="filterItem">
+                <p class="filterTit">large</p>
+                <ul class="radioTab">
+                    <li class="radioLg">
+                        <input type="radio" id="radio1" name="radioTab1" class="blind" checked="">
+                        <label for="radio1">남</label>
+                    </li>
+                    <li class="radioLg">
+                        <input type="radio" id="radio2" name="radioTab1" class="blind">
+                        <label for="radio2">여</label>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="filterItem mgt10">
+                <p class="filterTit">mid</p>
+				<ul class="radioTab">
+					<li class="radioMid">
+						<input type="radio" id="radio1" name="radioTab2" class="blind" checked="">
+						<label for="radio1">전체</label>
+					</li>
+					<li class="radioMid">
+						<input type="radio" id="radio2" name="radioTab2" class="blind">
+						<label for="radio2">입금</label>
+					</li>
+					<li class="radioMid">
+						<input type="radio" id="radio3" name="radioTab2" class="blind">
+						<label for="radio3">출금</label>
+					</li>
+				</ul>
+                <br>
+                <p class="filterTit">small</p>
+                <ul class="radioTab mgt10">
+					<li>
+						<input type="radio" id="radio4" name="radioTab1" class="blind">
+						<label for="radio4">1개월</label>
+					</li>
+					<li>
+						<input type="radio" id="radio5" name="radioTab1" class="blind">
+						<label for="radio5">3개월</label>
+					</li>
+					<li>
+						<input type="radio" id="radio6" name="radioTab1" class="blind">
+						<label for="radio6">6개월</label>
+					</li>
+					<li>
+						<input type="radio" id="radio7" name="radioTab1" class="blind" checked="">
+						<label for="radio7">직접입력</label>
+					</li>
+				</ul>
+
+                <ul class="radioTab mgt10">
+					<li class="radioMid">
+						<input type="radio" id="radio8" name="radioTab3" class="blind" checked="">
+						<label for="radio8">최신순</label>
+					</li>
+					<li class="radioMid">
+						<input type="radio" id="radio9" name="radioTab3" class="blind">
+						<label for="radio9">과거순</label>
+					</li>
+				</ul>
+			</div>
+
+            <br><br>
+            <p class="guide_stit mgt10">label + input_txt</p>
+            <div class="accSetting">
+				<div class="editName">
+                    <label for="name" class="itemTit">이름 입력</label>
+					<input type="text" id="name" title="이름" required="required" placeholder="이름을 입력해주세요">
+				</div>
+
+                <div class="editName mgt25">
+                    <label for="email" class="itemTit">이메일 주소 입력</label>
+					<input type="text" id="email" required="required" value="coocon@coocon.net" placeholder="OOO@checkpay.com" title="이메일">
+				</div>
+			</div>
+
+
+            <div class="confirm_mail">
+                <p class="guide_stit mgt10">input + time + msg </p>
+				<div class="certi_num">
+					<p class="inp_line">
+						<input type="tel" class="certi_num_inp" maxlength="8" placeholder="8자리 인증번호를 입력해주세요" title="8자리 인증번호를 입력해주세요">
+					</p>
+					<p class="inp_time"><span class="time pointColor">10:00</span></p>
+					<p class="inp_err_msg">인증번호가 일치하지 않습니다 (1/5)</p>
+				</div>
+			</div>
+
+            
+            <br><br>
+            <p class="guide_stit mgt10">스위치</p>
+            <div class="ins2Link_wrap setting">
+                <ul class="ins2LinkLst">
+                    <li class="on">
+                        <label class="btn_switch">
+                            <input type="checkbox" checked=""><span class="round"></span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="titSwitch"> 
+                <span class="switch_name pointColor">
+                    <span class="tooltip2 top">
+                        <button type="button" class="btn_tool_close"><span class="blind">닫기</span></button>
+                        <span>
+                            "합산에서 제외하기"를 설정한 자산은 자산메인<br> 총 금액에서 제외됩니다.
+                        </span>
+                    </span>
+                    <a href="#" class="btn_open_toolTip btn_more_ask" role="button"><span class="ico_ask type_white2"><em class="blind">더보기</em></span></a>
+                    합산에서 제외하기
+                </span> <!-- 제외하기 했을때 pointColor 클래스 추가 -->
+                <label class="btn_switch">
+                    <input type="checkbox" checked=""><span class="round"></span>
+                </label>
+            </div>
+
+            <!------------------------------------------------------------------->
+           <p class="guide_stit mgt10">메모</p>
+           <br>
+            <div class="layer_memo_wrap">
+                <textarea class="tx_area js_textarea1" name="textfield1" cols="45" rows="1" maxlength="60" placeholder="메모를 남겨주세요" title="메모를 남겨주세요, 최대 60자 까지 가능합니다"></textarea>
+                <button type="button" class="btn_val_reset" onclick="memoValReset();"><span class="ico_del"><em class="blind">메모 텍스트 비우기</em></span></button>
+            </div>
+            <div id="js_textarea1_cnt" class="txtarea_cnt" title="입력한 글자수 / 최대 글자수"><span class="pointColor">0</span> / 60</div>
+
+        <script>
+            // [S] 월간내역 메모 textarea 자동 높이조절, 글자수 체크, textarea val값 초기화
+            function testAreaHeight1() {
+                var textEle = $('.layer_memo_wrap .js_textarea1');
+                textEle[0].style.height = 'auto';
+                var textEleHeight = textEle.prop('scrollHeight');
+                textEle.css('height', textEleHeight);
+            };
+            function memoValReset() {
+                textEle.val('').css('height','inherit').focus();
+                btnMemoValReset.hide();
+                $('#js_textarea1_cnt').html("<span class='pointColor'>"+textEle.val().length+"</span> / 60");
+            }
+            var textEle = $('.layer_memo_wrap .js_textarea1');
+            var btnMemoValReset = $('.layer_memo_wrap .btn_val_reset');
+            btnMemoValReset.hide();
+            textEle.on('keyup', function() {
+                //자동높이
+                testAreaHeight1();
+                $('#js_textarea1_cnt').html("<span class='pointColor'>"+$(this).val().length+"</span> / 60");
+                //val값 초기화
+                if(textEle.val().length === 0){
+                    btnMemoValReset.hide();
+                }else if($(this).val().length > 60) {
+                    $(this).val($(this).val().substring(0, 60));
+                    $('#js_textarea1_cnt').html("<span class='pointColor'>60</span> / 60");
+                }else{
+                    btnMemoValReset.show();
+                }
+            });
+            // [E] 월간내역 메모 textarea 자동 높이조절, 글자수 체크, textarea val값 초기화
+        
+            // 스위치 토글시 글씨 색상변경
+            var checkBox = $('.btn_switch input[type=checkbox]');
+
+            checkBox.on('change', function() {
+                if(this.checked) {
+                    $(this).parent('.btn_switch').siblings('.switch_name').addClass('pointColor');
+                } else {
+                    $(this).parent('.btn_switch').siblings('.switch_name').removeClass('pointColor');
+                }
+            });
+        </script>
+
+            <!------------------------------------------------------------------->
+        </div>
+        <!-- [E] contents ------------------------------------------------------------------------------>
+	</div>
+</div>
+<!-- //wrap -->
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- [S] chart -->
+<script src="https://plugin-dev.coocon.co.kr/highchart/highcharts.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/exporting.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/export-data.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/accessibility.js"></script>
+<!-- [E] chart -->
+</head>
+<body>
+<div class="test_view">
+<!-- 퍼블 화면 확인용 -->
+<style>
+body{background-color:#444;}
+.test_view{display:flex;flex-wrap:wrap;}
+.view_section{position:relative;border:1px dotted #ddd;height:100%;max-height:100%;}
+.view_section .type_no{padding:5px 0;text-align:center;font-size:12px;font-weight:300;color:#fff;}
+.layer_bottomsheet, .layer_popup, .layer_fullsheet {display:block;position:relative;width:360px;height:100%;margin-bottom:10px;margin-left:0px;}
+.layer_bottomsheet .layer_inner,
+.layer_fullsheet .layer_inner {overflow:inherit;position:relative;max-height:auto;transform: translate(0, 0);}
+</style>
+<!-- //퍼블 화면 확인용 -->
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">HM1_2_2_1FP 비교그룹 찾기</h3>
+<!-- HM1_2_2_1FP 비교그룹 찾기 -->
+<div id="HM1_2_2_1FP" class="layer_fullsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+            <strong class="tit">비교그룹 찾기</strong>
+            <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+        </div>
+        
+        <div class="layer_cont myGoalHouse">
+            <div class="cont_tit_wrap">
+                <h2 class="cont_tit">
+                비교하고 싶은 그룹을 설정해 보세요
+                </h2>
+                <p class="tx">
+                        나의 자산·소비 현황과<br> 비교해볼 수 있어요.
+                </p>
+            </div>
+
+            <div class="confirm_info">
+                <div class="filterItem">
+                    <p class="filterTit">성별 (선택)</p>
+                    <ul class="radioTab">
+                        <li class="radioLg">
+                            <input type="radio" id="radio1" name="radioTab1" class="blind">
+                            <label for="radio1">남</label>
+                        </li>
+                        <li class="radioLg">
+                            <input type="radio" id="radio2" name="radioTab1" class="blind" checked="">
+                            <label for="radio2">여</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filterItem">
+                    <p class="filterTit confirm_dot">연령대 (필수)</p>
+                    <div class="sel_form type_border"> <!-- 선택시 on 클래스 추가 -->
+                        <a href="#HM1_2_2_1FP_1BS" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>20대 (20 ~ 29세)</span></a>
+                    </div>
+                </div>
+                <div class="filterItem">
+                    <p class="filterTit">결혼 (선택)</p>
+                    <ul class="radioTab">
+                        <li class="radioLg">
+                            <input type="radio" id="radio3" name="radioTab2" class="blind">
+                            <label for="radio3">미혼</label>
+                        </li>
+                        <li class="radioLg">
+                            <input type="radio" id="radio4" name="radioTab2" class="blind" checked="">
+                            <label for="radio4">기혼</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filterItem">
+                    <p class="filterTit">자녀 (선택)</p>
+                    <div class="sel_form type_border"> <!-- 선택시 on 클래스 추가 -->
+                        <a href="#HM1_2_2_1FP_2BS" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>대략적인 자녀 구성을 선택해주세요</span></a>
+                    </div>
+                </div>
+
+                <div class="filterItem">
+                    <p class="filterTit">월 소득 (선택)</p>
+                    <div class="sel_form type_border"> <!-- 선택시 on 클래스 추가 -->
+                        <a href="#HM1_2_2_1FP_1BS" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>대략적인 소득을 선택해주세요</span></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+		<!-- fix btn_wrap -->
+		<div class="fix_bottom not_dock">
+			<div class="btn_wrap">
+				<div class="btnGroup taxBtn">
+					<p><a href="#none" class="btnBl1" role="button">등록</a></p>
+                    <p><a href="#none" role="button" class="btnBl1 btnRef2">초기화</a></p>
+				</div>
+			</div>
+		</div>
+		<!--// fix btn_wrap -->
+    </div>
+</div>
+<!-- [E] HM1_2_2_1FP 비교그룹 찾기 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">HM1_2_2_1FP_1BS 연령대 팝업</h3>
+<!-- [S] 연령대 팝업 -->
+<div id="HM1_2_2_1FP_3BS" class="layer_bottomsheet" role="dialog" tabindex="-1" aria-hidden="true">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>연령대</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<ul class="layer_sel_opt type_date">
+					<li><button type="button" class="btn_sel_opt on" title="선택됨"><span>20대 (20 ~ 29세)</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+					<li><button type="button" class="btn_sel_opt"><span>30대 (30 ~ 39세)</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span>40대 ( 40 ~ 49세)</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span>50대 ( 50 ~ 59세)</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span>60대 ( 60세 이상)</span></button></li>
+                </ul>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+		<div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>저장</span></button>
+		</div>
+	</div>
+</div>
+<!-- [E] 연령대 팝업 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">HM1_2_2_1FP_3BS 월 소득 팝업</h3>
+<!-- [S] 월 소득 팝업 -->
+<div id="HM1_2_2_1FP_3BS" class="layer_bottomsheet" role="dialog" tabindex="-1" aria-hidden="true">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>월 소득</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<ul class="layer_sel_opt type_date">
+					<li><button type="button" class="btn_sel_opt on" title="선택됨"><span>100만원 이상</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+					<li><button type="button" class="btn_sel_opt"><span>200만원 이상</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span>300만원 이상</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span>400만원 이상</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span>500만원 이상</span></button></li>
+                </ul>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+		<div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>저장</span></button>
+		</div>
+	</div>
+</div>
+<!-- [E] 월 소득 팝업 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">HM1_2_2_1FP_2BS 자녀 팝업</h3>
+<!-- [S] 자녀 팝업 -->
+<div id="HM1_2_2_1FP_2BS" class="layer_bottomsheet" role="dialog" tabindex="-1" aria-hidden="true">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>자녀 선택</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<ul class="layer_sel_opt type_date">
+					<li><button type="button" class="btn_sel_opt on" title="선택됨"><span> 없음</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+					<li><button type="button" class="btn_sel_opt"><span>초등생 이하 자녀</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span>중고등 자녀</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span>중고등/대학생 자녀</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span>학업완료 성인자녀</span></button></li>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+		<div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>선택</span></button>
+		</div>
+	</div>
+</div>
+<!-- [E] 자녀 팝업 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">bottomsheet layer_HM1_2_2_1BS (자산비교 툴팁)</h3>
+<!-- bottomsheet layer_HM1_2_2_1BS (자산비교 툴팁) -->
+<div id="layer_HM1_2_2_1BS" class="layer_bottomsheet">
+    <div class="layer_inner">
+        <div class="layer_tit type2"> 
+            <strong class="tit"><span>금융자산 비교</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont" style="max-height: 879px;">
+            <div class="msg_box">
+                <ul class="notice_list">
+                    <li class="list">
+                        <span class="tx">비교그룹의 금융자산 금액은 신한은행에서 제공합니다.</span>
+                    </li>
+                    <li class="list">
+                        <span class="tx">마이데이터 서비스 이용을 위해 등록한 자산 중 '예금·페이, 투자, 연금, 대출' 자산에 대하여 비교 할 수 있습니다.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // layer_HM1_2_2_1BS(자산비교 툴팁) -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">bottomsheet layer_HM1_2_3_1BS(소비 비교 툴팁)</h3>
+<!-- bottomsheet layer_HM1_2_3_1BS(소비 비교 툴팁) -->
+<div id="layer_HM1_2_3_1BS" class="layer_bottomsheet">
+    <div class="layer_inner">
+        <div class="layer_tit type2"> 
+            <strong class="tit"><span>소비 비교</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont" style="max-height: 879px;">
+            <div class="msg_box">
+                <ul class="notice_list">
+                    <li class="list">
+                        <span class="tx">비교그룹의 소비 금액은 신한은행에서 제공합니다.</span>
+                    </li>
+                    <li class="list">
+                        <span class="tx">마이데이터 서비스 이용을 위해 등록한 자산 중 '카드' 자산에 대하여 비교 할 수 있으며, 이전 달 사용금액을 기준으로 조회할 수 있습니다.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // layer_HM1_2_3_1BS(소비 비교 툴팁) -->
+<!-- 퍼블확인용 --></div>
+
+
+<script>
+
+$(document).ready(function(){
+	// [S]  탭 선택
+	$(".tabInter").tabs({
+		wrapClass:".tabInter",
+		clickClass:".js_tabclickDp1",
+		showClass:".tab_cntDp1",
+		animate:false,
+		contentWidthFull:false,//effect when animate:true
+		animateBorder:["false",".tabs_header"],//show border in class .
+		fade:false,
+		speed:500
+	});
+	// [E] 캘린더 탭
+
+});
+</script>
+</body>
+</html>

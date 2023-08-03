@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- [S] chart -->
+<script src="https://plugin-dev.coocon.co.kr/highchart/highcharts.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/exporting.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/export-data.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/accessibility.js"></script>
+<!-- [E] chart -->
+</head>
+<body>
+<div class="test_view">
+<!-- 퍼블 화면 확인용 -->
+<style>
+body{background-color:#444;}
+.test_view{display:flex;flex-wrap:wrap;}
+.view_section{position:relative;border:1px dotted #ddd;}
+.view_section .type_no{padding:5px 0;text-align:center;font-size:12px;font-weight:300;color:#fff;}
+.layer_bottomsheet, .layer_popup{display:block;position:relative;width:360px;height:100%;margin-bottom:10px;margin-left:0px;}
+.layer_bottomsheet .layer_inner{overflow:inherit;position:relative;max-height:auto;transform: translate(0, 0);}
+</style>
+<!-- //퍼블 화면 확인용 -->
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">PP1_2_11BS   자산연동만료 알럿</h3>
+<!-- PP1_2_11BS   자산연동만료 알럿 -->
+<div id="PP1_2_11BS" class="layer_popup type2">
+	<div class="layer_position">
+		<div class="layer_inner">
+			<div class="layer_cont">
+				<div class="msg_box">
+                    <p class="msg_alert type_tit type_tit2">우리은행 외 5개</p>
+					<p class="msg_txt">
+                        금융기관 연동이 만료 되었습니다.<br>
+                        정확한 자산 정보 확인을 위해<br>
+                        기관 재연동을 해주세요.
+					</p>
+				</div>
+				<div class="btn_layer_wrap">
+					<button type="button" class="js_pop_close btn_cancel"><span>닫기</span></button>
+					<button type="button" class="js_pop_close btn_confirm"><span>재연동</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // PP1_2_11BS   자산연동만료 알럿 -->
+<!-- 퍼블확인용 --></div>
+
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">PP1_2_9_1P 편집저장</h3>
+<!-- PP1_2_9_1P 편집저장  -->
+<div id="PP1_2_9_1P" class="layer_popup type2">
+	<div class="layer_position">
+		<div class="layer_inner">
+			<div class="layer_cont">
+				<div class="msg_box">
+                    <div class="msg_box">
+                        <p class="msg_alert">
+                           변경된 내용으로<br>
+                           저장할까요?
+                        </p>
+                    </div>
+				</div>
+				<div class="btn_layer_wrap">
+					<button type="button" class="js_pop_close btn_cancel"><span>아니요</span></button>
+					<button type="button" class="js_pop_close btn_confirm"><span>네</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // PP1_2_9_1P 편집저장 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">PP1_2_9_2P 편집저장_은행(마통)</h3>
+<!-- PP1_2_9_2P 편집저장_은행(마통) -->
+<div id="SHZ3000_1" class="layer_popup type2">
+	<div class="layer_position">
+		<div class="layer_inner">
+			<div class="layer_cont">
+				<div class="msg_box">
+                    <div class="msg_box">
+                        <p class="msg_alert">
+                            변경된 내용으로<br>
+                            저장할까요?
+                        </p>
+                        <p class="msg_customer mgt10">
+                            마이너스 통장의 목록 설정(숨기기,순서)은<br>
+                            입출금과 대출에 동일하게 적용됩니다.
+                        </p>
+                    </div>
+				</div>
+				<div class="btn_layer_wrap">
+					<button type="button" class="js_pop_close btn_cancel"><span>아니요</span></button>
+					<button type="button" class="js_pop_close btn_confirm"><span>네</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // PP1_2_9_2P 편집저장_은행(마통) -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">PP1_2_9_3P 뒤로가기</h3>
+<!-- PP1_2_9_3P 뒤로가기  -->
+<div id="PP1_2_9_3P" class="layer_popup type2">
+	<div class="layer_position">
+		<div class="layer_inner">
+			<div class="layer_cont">
+				<div class="msg_box">
+                    <div class="msg_box">
+                        <p class="msg_alert">
+                            저장하지 않고<br> 
+                            나갈까요?
+                        </p>
+                    </div>
+				</div>
+				<div class="btn_layer_wrap">
+					<button type="button" class="js_pop_close btn_cancel"><span>아니요</span></button>
+					<button type="button" class="js_pop_close btn_confirm"><span>네</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // PP1_2_9_3P 뒤로가기 -->
+<!-- 퍼블확인용 --></div>
+
+
+</div><!-- test_view -->
+
+</body>
+</html>

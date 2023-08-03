@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+
+			<!-- [S] 완료 -->
+			<div class="wrap_complete">
+				<div class="inner">
+					<p class="ico_ckmark"></p>
+					<p class="confirm_txt">자산 등록을 완료하였습니다</p>
+				</div>
+			</div>
+			<!-- [E] 완료 -->
+
+			<!-- [S] 완료 + 정보 -->
+            <div class="wrap_err_info">
+				<div class="box_gray">
+					<h4 class="h4_tit">
+						<a role="button" class="btnFolding" data-target="#detail" aria-expanded="false">자세히 보기<span class="blind">펼침</span></a><!-- 디폴트 닫힘 class="btnFolding show" 클래스 'show' 제거 -->
+					</h4>
+					<div class="asset_sync_wrap" id="detail" style="display:none;"><!-- 디폴트 닫힘 style="display:none;" 추가 -->
+						<div class="asset_sync">
+							<p class="tit_sync pointColor">연결 완료</p>
+							<p class="li_sync">
+								신한은행, 국민은행, 신한은행, 국민은행, 신한은행, 국민은행, 신한은행, 국민은행, 신한은행, 국민은행
+							</p>
+						</div>
+						<div class="asset_sync">
+							<p class="tit_sync pointColor">연결 실패</p>
+							<p class="li_sync">
+								<span class="li">신한은행 : 자산없음</span>
+								<span class="li">카카오뱅크 : 자산없음</span>
+								<span class="li">신한은행 : 인증서 오류</span>
+								<span class="li">국민은행 : 응답없음</span>
+							</p>
+						</div>
+						<div class="guide_info">
+							<p class="li">자산없음 - 해당 자산을 보유하고 있지 않음</p>
+							<p class="li">인증서 오류 - 인증서를 변경/삭제 후 재연결 권장</p>
+							<p class="li">응답없음 - 해당 자산 연동 중 오류 발생, 재연결<br> 권장</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- [E] 완료 + 정보 -->
+
+			<!-- [S] 하단 고정 영역 -->
+			<div class="fix_bottom">
+				<!-- btn_wrap -->
+				<div class="btn_wrap">
+					<div class="btnGroup type2">
+						<p><a href="#none" class="btnBl1" role="button">확인</a></p><!-- 비활성시 'disable' 추가 -->
+					</div>
+				</div>
+			</div>
+			<!-- [E] 하단 고정 영역 -->
+
+		</div>
+	</div>
+	<!-- //container -->
+</div>
+<!-- //wrap -->
+</body>
+</html>

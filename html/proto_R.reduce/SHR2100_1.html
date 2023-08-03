@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- [S] chart -->
+<script src="https://plugin-dev.coocon.co.kr/highchart/highcharts.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/exporting.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/export-data.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/accessibility.js"></script>
+<!-- [E] chart -->
+</head>
+<body>
+<div class="test_view">
+<!-- 퍼블 화면 확인용 -->
+<style>
+body{background-color:#444;}
+.test_view{display:flex;flex-wrap:wrap;}
+.view_section{position:relative;border:1px dotted #ddd;}
+.view_section .type_no{padding:5px 0;text-align:center;font-size:12px;font-weight:300;color:#fff;}
+.layer_bottomsheet, .layer_popup{display:block;position:relative;width:360px;height:100%;margin-bottom:10px;margin-left:0px;}
+.layer_bottomsheet .layer_inner{overflow:inherit;position:relative;max-height:auto;transform: translate(0, 0);}
+</style>
+<!-- //퍼블 화면 확인용 -->
+
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">layer_popup SHR5120 초기화 확인</h3>
+<!-- SHR5120 초기화 확인  -->
+<div id="SHR5120" class="layer_popup type2">
+	<div class="layer_position">
+		<div class="layer_inner">
+			<div class="layer_cont">
+				<div class="msg_box">
+                    <div class="msg_box">
+                        <p class="msg_alert">
+                            입력한 예산이 0원으로 초기화 됩니다.<br>
+                            계속 진행할까요?
+                        </p>
+                    </div>
+				</div>
+				<div class="btn_layer_wrap">
+					<button type="button" class="js_pop_close btn_cancel"><span>아니요</span></button>
+					<button type="button" class="js_pop_close btn_confirm"><span>네</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // SHR5120 초기화 확인 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">layer_popup SHR5130 카드등록이동</h3>
+<!-- SHR5130 카드등록이동  -->
+<div id="SHR5130" class="layer_popup type2">
+	<div class="layer_position">
+		<div class="layer_inner">
+			<div class="layer_cont">
+				<div class="msg_box">
+                    <div class="msg_box">
+                        <p class="msg_alert">
+                            연결된 카드가 없어요.<br>
+                            카드를 등록하러 이동할까요?
+                        </p>
+                    </div>
+				</div>
+				<div class="btn_layer_wrap">
+					<button type="button" class="js_pop_close btn_cancel"><span>아니요</span></button>
+					<button type="button" class="js_pop_close btn_confirm"><span>네</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // SHR5130 카드등록이동 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">layer_popup SHR5140 지난달 소비금액 불러오기</h3>
+<!-- SHR5140 지난달 소비금액 불러오기  -->
+<div id="SHR5140" class="layer_popup type2">
+	<div class="layer_position">
+		<div class="layer_inner">
+			<div class="layer_cont">
+				<div class="msg_box">
+                    <div class="msg_box">
+                        <p class="msg_alert">
+                            입력한 예산정보가<br>
+                            지난달 카드소비 금액으로 변경됩니다.<br>
+                            계속 진행할까요?
+                        </p>
+                    </div>
+				</div>
+				<div class="btn_layer_wrap">
+					<button type="button" class="js_pop_close btn_cancel"><span>아니요</span></button>
+					<button type="button" class="js_pop_close btn_confirm"><span>네</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // SHR5140 지난달 소비금액 불러오기 -->
+<!-- 퍼블확인용 --></div>
+
+</div><!-- test_view -->
+
+</body>
+</html>

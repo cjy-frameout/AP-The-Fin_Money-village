@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- suhyup sub main swiper -->
+<script type="text/javascript" src="../js/swiper.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+<!-- //suhyup sub main swiper -->
+
+<!-- [S] chart -->
+<script src="https://plugin-dev.coocon.co.kr/highchart/highcharts.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/exporting.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/export-data.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/accessibility.js"></script>
+<!-- [E] chart -->
+<style>
+.wrap_chart .highcharts-figure {
+    height: auto;
+}
+.highcharts-yaxis .highcharts-axis-line {
+  stroke-width: 1px;stroke: #e6e6e6;border-style: solid;
+}
+.highcharts-grid.highcharts-xaxis-grid .highcharts-grid-line:last-child{opacity:0;}
+</style>
+</head>
+<body>
+
+<!-- wrap -->
+<div class="wrap">
+	<!-- header -->
+	<div class="header">
+		<div class="header_inn">
+			<div class="left">
+				<a href="#none" class="btnBack"><span class="blind">Back</span></a>
+			</div>
+			<div class="center">
+				<h2 class="tit_h2">목표</h2>
+			</div>
+			<div class="right">
+                <a href="#none" class="btnMenu"><span class="blind">menu</span></a>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+			<div class="asset_contents tabs_wrap tab_certi terms_wrap">
+
+				<div class="tabs_header type3 has_sel_all"> <!-- 절세 type3 -->
+					<ul class="cboth">
+						<li class="btn_sel_org tab1"><a href="#none"><span>내 자산 비교</span></a></li><!-- 선택시 title="선택됨" 추가 -->
+						<li class="btn_sel_org tab2 on"><a href="#none"><span>돈 모으기</span></a></li>
+						<li class="btn_sel_org tab3"><a href="#none"><span>절세 준비하기</span></a></li>
+					</ul>
+				</div>
+
+                <div class="swiper-container">
+                    <div class="terms-slider tabs_body_wrap swiper-wrapper"> 
+                        <div class="org_wrap  swiper-slide"> 
+                            <p class="stit">{내 자산 비교}</p>
+                        </div>
+                        <div class="org_wrap swiper-slide" >
+
+                            <div class="tabInter tabs_budget">
+                                <div class="budget_header">
+                                    <ul class="cboth">
+                                        <li class="js_tabclickDp1"><a href="#none"><span>목돈 만들기</span></a></li><!-- 선택시 title="선택됨" 추가 -->
+                                        <li class="js_tabclickDp1 on"><a href="#none"><span>절약하기</span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="budget_body_wrap">
+                                    <!-- // [S] 목돈 만들기 -->
+                                    <div class="tab_cntDp1" style="display: none;">
+                                    </div>
+                                    <!-- // [E] 목돈 만들기 -->
+
+                                    <!-- [S] 절약하기 -->
+                                    <div class="tab_cntDp1" style="display: block;">
+            
+                                        <div class="wrap_set_box">
+                                            <div class="wrap_chart type_line">
+                                                (단위 : 만원)
+                                                <!-- [S] 차트 라인 타입 -->
+                                                <figure class="highcharts-figure" aria-hidden="true">
+                                                    <div id="line_con" class="line_con"></div>
+                                                </figure>
+                                                <!-- [E] 차트 라인 타입 -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- // [E] 절약하기 -->
+                                </div>
+                            </div>
+                        
+                        </div>
+                        <div class="org_wrap swiper-slide">
+                            <p class="stit">{절세 준비하기}</p>
+                        </div>
+                       
+                    </div>
+                </div>
+               
+			</div>
+   
+		</div> 
+	</div>
+	<!-- //container -->
+
+</div>
+<!-- //wrap -->
+
+<script>
+$(document).ready(function(){
+    
+    // tab
+    $(".tabInter").tabs({
+		wrapClass:".tabInter",
+		clickClass:".js_tabclickDp1",
+		showClass:".tab_cntDp1",
+		animate:false,
+		contentWidthFull:false,//effect when animate:true
+		animateBorder:["false",".tabs_header"],//show border in class .
+		fade:false,
+		speed:500
+	});
+
+	// Swiper point
+    var swiperPoint = new Swiper('.swiper-container', {
+        initialSlide: 1, //슬라이드 시작위치
+        slidesPerView:1,
+        observer: true,
+        centeredSlides:false ,
+        observeParents: true,
+        observeParents: true,
+        autoHeight : true,
+        on: {
+            slideChangeTransitionEnd: function(){
+                var slideIdx = this.activeIndex;
+                var $orgNth = slideIdx + 1;
+                $('.btn_sel_org').removeClass('on');
+                $('.tab' + $orgNth).addClass('on');
+               
+            }
+        }
+    });     
+     
+    // 메뉴랑 스와이프 연동, 메뉴 중앙정렬
+    $('.terms-slider .org_wrap').each(function (index, item) {
+        $(item).addClass('org_nth_' + (index + 1));
+        var $orgNth = index + 1;
+        $(document).on("click", ".tabs_wrap .btn_sel_org:nth-child(" + $orgNth + ") a", function () {
+            swiperPoint.slideTo(($orgNth - 1));
+
+            $('.btn_sel_org').removeClass('on');
+            $('.tab' + $orgNth).addClass('on');
+         
+        });
+    });
+
+    // 하단 버튼 동적으로 위치
+    var windowHeight = $(window).innerHeight();
+    $('.swiper-container').css('min-height','calc(100vh - 230px)');
+
+    //input focus 스타일
+    $('.set_num_inp').on("focus change keyup paste", function() {
+        $('.editNum').css({
+                "border" : "1px solid #74ACE8"
+         });
+    });
+    $('.set_num_inp').on("blur", function() {
+        var inputValue = $('.set_num_inp').val();
+        if(inputValue == '') {
+            $('.editNum').css({
+                "border" : "1px solid #ccc"
+            });
+        } else {
+            $('.editNum').css({
+                "border" : "1px solid #222"
+            });
+        }
+    });
+    loadLineChart();
+  
+});
+
+
+// [S] 차트 선 타입
+function loadLineChart(){
+    //차트 색상 지정
+    Highcharts.setOptions({
+  	    colors: ['#E34D48','#F57F59']
+    });
+
+    Highcharts.chart('line_con', {
+        title: {text: ''},// 타이틀 숨김
+		exporting: { enabled: false },// 우측상단 햄버거메뉴 숨김
+   		credits: {enabled: false},// highchart 워터마크 숨김
+		tooltip:  { enabled: false },// 툴팁 숨김
+       
+        chart: {
+            type: 'areaspline',
+            inverted: false,
+            marginBottom :100, //legend랑 간격 조정
+        },
+        // minTickInterval:1,
+        xAxis: {
+            title: {text: ''},// 타이틀 숨김
+            gridLineWidth: 1,
+            gridLineDashStyle: 'dash',
+            categories: [['‘19.10'], ['‘20.05'], ['‘20.12'], ['‘21.07'], ['‘22.02'], ['‘22.09'], ['‘22.10']], //x축 표시값
+            labels: {
+                align:'left',
+                x: 3,
+                style: {
+                    color: '#999',
+                    fontSize: '10px',
+                    fontFamily : 'Lato'
+                }
+            },
+            //showFirstLabel: false,
+            showLastLabel: false
+        },
+        yAxis: {
+            title: {text: ''},// 타이틀 숨김
+            labels: {
+                format: '{value} 억',
+                style: {
+                    color: '#999',
+                    fontSize: '10px',
+                    fontFamily : 'Lato'
+                }
+            },
+            max:25, //y축 범위 설정
+            min:0
+        },
+        legend: {
+            align: 'center',
+            verticalAlign: 'bottom',
+            floating: true,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+        },
+        tooltip: {
+            enabled: false //툴팁 사용안함
+        },
+        plotOptions: {
+            areaspline: {
+                fillOpacity: 0 //영역 채우기 없음
+            }
+        },
+        series: [{
+            name: '매매',
+            data: [14,17,20,22,23,22,22]
+        }, {
+            name: '전세',
+            marker: {
+                symbol: 'dot'
+            },
+            data: [12,13,14,15,16,17,17]
+        }]    
+    });
+}
+// [E] 차트 라인 타입 */
+
+
+</script>
+</body>
+</html>

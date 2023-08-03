@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- [S] chart -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<!-- [E] chart -->
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+
+	<!-- header -->
+	<div class="header">
+		<div class="header_inn">
+			<!-- <div class="left">
+				<a href="#none" class="btnBack"><span class="blind">Back</span></a>
+			</div> -->
+			<div class="center">
+				<h2 class="tit_h2">자산</h2>
+			</div>
+			<div class="right">
+				<a href="#none" class="btnMenu"><span class="blind">menu</span></a>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+			
+			<!-- [S] 자산 타이틀 -->
+			<div class="tBalance tAssets">
+				<div class="homeBox">
+					<h3 class="tit">내 자산</h3>
+                    <div class="homeInfo type_home02">
+                        <h3 class="sub_tit">
+                            <span class="pointLine3">흩어진 자산을</span> 모아<br>
+                            한눈에 확인하세요!
+                        </h3>
+                    </div>
+				</div>
+			</div>
+			<!-- [E] 자산 타이틀 -->
+			
+			<!-- [S] 막대그래프 -->
+            <div class="boxArea lineType">
+				<div class="tabInter">
+					<div class="asset_tab_header">
+						<ul class="cboth">
+							<li class="js_tabclickDp1 on"><a href="#none" title="선택됨"><span>자산 통계</span></a></li><!-- 선택시 title="선택됨" 추가 -->
+							<li class="js_tabclickDp1"><a href="#none"><span>자산 비교</span></a></li>
+						</ul>
+					</div>
+					<div class="asset_tab_body">
+						<div class="tab_cntDp1" style="display: block;">
+							<div class="asGroup assets_chart">
+								<div class="chart_info">내 금융자산의<br><span class="pointColor">통계</span>가 궁금하다면?</div>
+								<div class="asList">
+                                    <img class="img" src="../../img/theme/apthefin/im_chart_01.png" alt="자산연결전">
+								</div>
+							</div>
+						</div>
+						<div class="tab_cntDp1" style="display: none;">
+							<div class="asGroup assets_chart">
+								<div class="chart_info">40대 평균에 비해<br><span class="pointColor">내 자산 현황</span> 이 궁금하다면?</div>
+								<div class="asList">
+                                    <img class="img" src="../../img/theme/apthefin/im_chart_02.png" alt="자산연결전">
+								</div>
+                                <div class="wrapBarGraph beforeLink"> <!-- 자산 연결전 beforeLink 클래스-->
+                                    <div class="wrapBar_detail">
+                                        <span class="bar_rate blue">내 자산</span>
+                                        <span class="bar_rate gray">40대 평균자산</span>
+                                    </div>
+                                </div>
+							</div>
+						</div>
+						<div class="btn_wrap">
+                            <div class="btnGroup">
+                                <p><a href="#none" class="btnBl1 btnPlus" role="button" tabindex="0"><span class="tx">자산 연결</span></a></p>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+			<!-- [E] 막대그래프 -->
+
+            <!-- [S] 자산별 현황  -->
+            <h3 class="smallTit">자산별 현황</h3>
+            <div class="astBox beforeLink"><!-- 자산 연결 전 beforeLink 클래스 추가 -->
+                <div class="boxArea"> 
+                    <div class="expectPay">
+                        <div class="expectInfo">
+                            <span class="infoTit">예금·페이</span>
+                            <a href="#" class="infoNum">연결하기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxArea"> 
+                    <div class="expectPay">
+                        <div class="expectInfo">
+                            <span class="infoTit">투자</span>
+                            <a href="#" class="infoNum">연결하기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxArea"> 
+                    <div class="expectPay">
+                        <div class="expectInfo">
+                            <span class="infoTit">연금</span>
+                            <a href="#" class="infoNum">연결하기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxArea"> 
+                    <div class="expectPay">
+                        <div class="expectInfo">
+                            <span class="infoTit">보험</span>
+                            <a href="#" class="infoNum">연결하기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxArea"> 
+                    <div class="expectPay">
+                        <div class="expectInfo">
+                            <span class="infoTit">자동차</span>
+                            <a href="#" class="infoNum">연결하기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxArea"> 
+                    <div class="expectPay">
+                        <div class="expectInfo">
+                            <span class="infoTit">대출</span>
+                            <a href="#" class="infoNum">연결하기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_wrap">
+                    <div class="btnGroup">
+                        <p><a href="#none" class="btnBl1 btnPlus" role="button" tabindex="0"><span class="tx">자산 연결</span></a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- [E] 자산별 현황  -->
+
+            <!-- [S] 잔여한도 배너 -->
+            <div class="banner inLink type2">
+                <a href="#none" class="link_type4">
+                    <h3 class="banner_tit">
+                        <span class="titPoint">세금우대상품 한도 조회</span><br>
+                        우대한도 확인하고 절세혜택 챙기세요.
+                    </h3>
+                </a>
+            </div>
+			<!-- [E] 잔여한도 배너 -->
+
+			<!-- [S] 슬라이드 배너 타입 -->
+			<div class="wrap_slider type_skin">
+				<div class="slider_container">
+					<div class="slider">
+						<a href="#none">
+							<span class="logo"><em class="blind">에이피더핀은행</em></span>
+							<img src="../../img/theme/apthefin/@thum.jpg">
+							<span class="noti">*본 서비스는 에이피더핀에서 제공합니다.</span>
+						</a>
+					</div>
+					<div class="slider">
+						<a href="#none">
+							<span class="logo"><em class="blind">에이피더핀은행</em></span>
+							<img src="../../img/theme/apthefin/@thum.jpg">
+							<span class="noti">*본 서비스는 에이피더핀에서 제공합니다.</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- [E] 슬라이드 배너 타입 -->
+			
+			<!-- [S] 하단 고정 영역 -->
+			<div class="fix_bottom">
+                <!-- dock_bar -->
+				<div class="dock_bar">
+                    <ul>
+                        <li>
+                            <a href="#none" class="btn dock_brand"><img src="../../img/theme/apthefin/ic_dock_ci.png" alt="bnk"><span class="tx">에이피더핀</span></a>
+                        </li>
+						<li><a href="#none" class="btn icon_menu ic_home"><span class="tx">홈</span></a></li>
+                        <li><a href="#none" class="btn icon_menu ic_asset on"><span class="tx">자산</span></a></li> 
+                        <li><a href="#none" class="btn icon_menu ic_consume"><span class="tx">소비</span></a></li><!-- 메뉴 선택시 on 클래스 추가 -->
+                        <li><a href="#none" class="btn icon_menu ic_tar"><span class="tx">목표</span></a></li>
+                    </ul>
+                </div>
+			</div>
+			<!-- [E] 하단 고정 영역 -->
+		</div>
+	</div>
+	<!-- //container -->
+</div>
+<!-- //wrap -->
+
+<script>
+$(document).ready(function(){
+	//선택 탭
+	$(".tabInter").tabs({
+		wrapClass:".tabInter",
+		clickClass:".js_tabclickDp1",
+		showClass:".tab_cntDp1",
+		animate:false,
+		contentWidthFull:false,//effect when animate:true
+		animateBorder:["false",".tabs_header"],//show border in class .
+		fade:false,
+		speed:500
+	});
+
+	/* [S] 슬라이드 배너형 */
+    var $sliderBanner= $('.wrap_slider.type_skin .slider_container');
+    $sliderBanner.slick({
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2500
+    });
+    /* 재생, 멈춤 */
+    var html_control = '<div class="slider_control">';
+    html_control += '<button type="button" class="btn_control play" tabindex="0"><span class="blind">배너 자동재생</span></button>';
+    html_control += '<button type="button" class="btn_control stop" tabindex="0"><span class="blind">배너 일시정지</span></button>';
+    html_control += '</div>'
+    $(".slick-dots").before(html_control);
+
+    var btnSliderPlay = $('.wrap_slider.type_skin .btn_control.play');
+    var btnSliderStop = $('.wrap_slider.type_skin .btn_control.stop');
+    $(btnSliderPlay).click(function(){
+        $sliderBanner.slick('slickPlay');
+        $(btnSliderPlay).hide();
+        $(btnSliderStop).show().focus();// 20210901 접근성 .focus() 추가
+    });
+    $(btnSliderStop).click(function(){
+        $sliderBanner.slick('slickPause');
+        $(btnSliderStop).hide();
+        $(btnSliderPlay).show().focus();// 20210901 접근성 .focus() 추가
+    });
+    /* [E] 슬라이드 배너형 */
+
+
+	// 스위치 토글시 자산 숨기기
+    var checkBox = $('.btn_switch input[type=checkbox]');
+    var changTxt = $('.tBalAmount');
+
+    checkBox.on('change', function() {
+        if(this.checked) {
+           changTxt.addClass('on');
+        } else {
+            changTxt.removeClass('on');
+        }
+    });
+});
+</script>
+</body>
+</html>

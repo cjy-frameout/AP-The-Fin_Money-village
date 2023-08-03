@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../css/scroll.css" />
+<script type="text/javascript" src="../js/scroll.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+	<!-- header -->
+	<div class="header">
+		<div class="header_inn">
+			<div class="left">
+				<a href="#none" class="btnBack"><span class="blind">Back</span></a>
+			</div>
+			<div class="center">
+				<h2 class="tit_h2">종부세·재산세 계산기</h2>
+			</div>
+			<!-- <div class="right">
+                <a href="#none" class="btnMenu"><span class="blind">menu</span></a>
+			</div> -->
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+            <!-- [S] 종부세 재산세 계산기 -->
+            <div class="taxGroup">
+                <div class="cont_tit_wrap">
+                    <div class="txt_year">2022년 귀속분</div>
+                    <h2 class="cont_tit">종합 부동산세·재산세<a href="#layer_T01_BS" class="btn_open_bottom_sheet btn_more_ask" role="button"><span class="ico_ask type_white2"><em class="blind">더보기</em></span></a></h2>
+                    <p class="tx">
+                        개인(종중 등 기타단체 포함)의 <br>
+                        주택과 주택 부속토지에 대한 종합부동산세 계산기
+                    </p>
+                </div>
+
+                <div class="info_box type_notice">
+                    <h3 class="tit">안내</h3>
+                    <p class="tx">
+                        다수의 주택을 보유한 경우 주택별로 공시가격,
+                        조정대상지역 여부 및 재산세 감면 여부 등 정보를
+                        사전에 확인 후  각각 정확하게 입력해주세요.
+                        (다가구주택은 1개 동 단위로 입력)
+                    </p>
+                </div>
+
+                <div class="filterItem mgt50">
+                    <p class="filterTit">
+                        <span class="tit">공시가격을 입력해주세요.</span>
+                        <a href="#" class="btnAdd"> <span class="bank_link">조회하기</span></a>
+                    </p>
+                    <div class="set_detail">
+                        <p class="inp_box inp_price">
+                            <input type="number" required="required" class="set_inp js_tx_val" placeholder="0" title="공시가격을 입력해주세요">
+                            <button type="button" class="btn_val_reset js_bt_val_reset"><span class="blind">검색어 삭제</span></button>
+                        </p>
+                        <p class="inp_txt"><span class="price">원</span></p>
+                    </div>
+                    <!-- <p class="inp_err_msg">에러 문구</p> -->
+                </div>
+
+                <div class="filterItem">
+                    <p class="filterTit">
+                        <span class="tit">조정대상 지역인가요?</span>
+                    </p>
+                    <ul class="radioTab">
+                        <li class="radioMid">
+                            <input type="radio" id="radio1" name="radioTab1" class="blind">
+                            <label for="radio1">네</label>
+                        </li>
+                        <li class="radioMid">
+                            <input type="radio" id="radio2" name="radioTab1" class="blind">
+                            <label for="radio2">아니요</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="filterItem">
+                    <p class="filterTit">
+                        <span class="tit">재산세 감면대상인가요?</span>
+                    </p>
+                    <ul class="radioTab">
+                        <li class="radioMid">
+                            <input type="radio" id="radio3" name="radioTab2" class="blind">
+                            <label for="radio3">네</label>
+                        </li>
+                        <li class="radioMid">
+                            <input type="radio" id="radio4" name="radioTab2" class="blind">
+                            <label for="radio4">아니요</label>
+                        </li>
+                    </ul>
+
+                    <div class="inputPrice type_per">
+                        <input type="text" required="required" id="noti1" class="schTxt" placeholder="감면율을 입력하세요">
+                        <span class="price">%</span>
+                    </div>
+                </div>
+
+                <div class="info_box type_txt">
+                    <ul>
+                        <li>
+                            1) 재산세 감면여부는 주택분 재산세 고지서 상 “법 또는 조례감면” 금액이 0원보다 큰 경우에 해당사항이 있습니다.
+                        </li>
+                        <li>
+                            2) 재산세 감면율은 관할 지자체를 통해 확인 할 수 있습니다.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="filterItem mgt35">
+                    <p class="filterTit">
+                        <span class="tit">1세대 1주택 (부부 공동명의 포함) 인가요?</span>
+                    </p>
+                    <ul class="radioTab">
+                        <li class="radioMid">
+                            <input type="radio" id="radio5" name="radioTab3" class="blind">
+                            <label for="radio5">네</label>
+                        </li>
+                        <li class="radioMid">
+                            <input type="radio" id="radio6" name="radioTab3" class="blind">
+                            <label for="radio6">아니요</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filterItem">
+                    <p class="filterTit">
+                        <span class="tit">부부 공동명의 인가요?</span>
+                    </p>
+                    <ul class="radioTab">
+                        <li class="radioMid">
+                            <input type="radio" id="radio7" name="radioTab4" class="blind">
+                            <label for="radio7">네</label>
+                        </li>
+                        <li class="radioMid">
+                            <input type="radio" id="radio8" name="radioTab4" class="blind">
+                            <label for="radio8">아니요</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="info_box type_txt">
+                    <h3 class="tit">부부공동명의 1주택자 특례 입력시 유의사항</h3>
+                    <p class="tx">
+                        부부 공동명의 1주택자 특례 신청 시 지분율이 높은 사람 (지분율이 같은 경우에는 합의에 따라 선택)을 납세의무자로 지정합니다.
+                        납세의무자의 생년월일 및 취득일자를 입력해 주시기 바랍니다.
+                    </p>
+                </div>
+
+                <div class="filterItem">
+                    <p class="filterTit">
+                        <span class="tit">생년월일을 입력해주세요.</span>
+                    </p>
+                    <div class="selPeriod datepickerArea">
+                        <div data-role="fieldcontain" class="dateItem datepicker3">
+                            <input type="text" name="test_default" class="real">
+                            <span class="ui-datepicker-trigger">달력열기</span>
+                        </div>
+                        <input type="text" name="" class="virual">
+                    </div>
+                    <p class="dateNum">만 <em class="num pointColor">1</em>세</p>
+                </div>
+
+                <div class="filterItem">
+                    <p class="filterTit">
+                        <span class="tit">취득일자를 입력해주세요.</span>
+                    </p>
+                    <div class="selPeriod datepickerArea">
+                        <div data-role="fieldcontain" class="dateItem datepicker3">
+                            <input type="text" name="test_default" class="real">
+                            <span class="ui-datepicker-trigger">달력열기</span>
+                        </div>
+                        <input type="text" name="" class="virual">
+                    </div>
+                    <p class="dateNum">보유기간 <em class="num pointColor">0</em>년</p>
+                </div>
+
+                <div class="info_box type_txt">
+                    <ul>
+                        <li>
+                            1) 세대원 중 1인이 주택1호를 단독으로 보유하고 있는 다른 주택의 부속토지만 보유한 경우에는 1세대 1주택에 해당합니다.
+                        </li>
+                        <li>
+                            2) 다만, 이 경우 다른 주택의 부속토지분에 대한 산출세액(주택의 공시가격 합계액으로 안분하여 계산한 금액)은 세액공제대상에서 제외되므로 실제 부과되는 세액과는 다를 수 있습니다.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="filterItem type_hold">
+                    <p class="filterTit">
+                        <span class="tit">보유지분을 입력해주세요.</span>
+                    </p>
+                    
+                    <div class="holdPer type_hold">
+                        <div class="holdBox">
+                            <span>본인</span>
+                            <div class="inputPrice type_per">
+                                <input type="text" required="required" id="txt4" class="schTxt" placeholder="0" maxlength="10">
+                                <span class="price">%</span>
+                            </div>
+                        </div>
+                        <div class="holdBox">
+                            <span>배우자</span>
+                            <div class="inputPrice type_per">
+                                <input type="text" required="required" id="txt5" class="schTxt" placeholder="0">
+                                <span class="price">%</span>
+                            </div>
+                        </div>
+                        <!-- <p class="dateNum">납세 의무자는 <em class="num pointColor">본인</em> 입니다.</p> -->
+                    </div>
+                </div>
+
+                <div class="filterItem type_hold">
+                    <p class="filterTit">
+                        <span class="tit">납세의무자를 선택해주세요</span>
+                    </p>
+                    <ul class="radioTab">
+                        <li class="radioMid">
+                            <input type="radio" id="radio9" name="radioTab5" class="blind">
+                            <label for="radio9">본인</label>
+                        </li>
+                        <li class="radioMid">
+                            <input type="radio" id="radio10" name="radioTab5" class="blind">
+                            <label for="radio10">배우자</label>
+                        </li>
+                    </ul>
+                    <p class="dateNum">납세 의무자는 <em class="num pointColor">본인</em> 입니다.</p>
+                </div>
+
+                <div class="info_box type_txt">
+                    <ul>
+                        <li>
+                            1) 세액공제 : 최대 80%까지 적용 가능 (연령별 + 보유기간별)
+                            <ul class="depth_list demical">
+                                <li>① 연령: 만 60세 이상(20%), 만 65세 이상(30%), 만 70세 이상(40%)</li>
+                                <li>② 보유기간 : 5년 이상(20%), 10년 이상(40%), 15년 이상(50%)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            2) 세대원 중 1인이 주택 1호를 단독으로 보유하고 있고, 다른 주택의 부속토지만 보유한 경우에는 1세대 1주택에 해당합니다. 다만, 이 경우 다른 주택의 부속토지분에 대한 산출세액 (주택의 공시가격 합계액으로 안분하여 계산한 금액)은 세액공제대상에서 제외되므로 실제 부과되는 세액과 다를 수 있습니다.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- [E] 종부세 재산세 계산기 -->
+		</div>
+        
+        <!-- [S] 하단 고정 영역 -->
+        <div class="fix_bottom">
+            <!-- btn_wrap -->
+            <div class="btn_wrap">
+                <div class="btnGroup taxBtn">
+                    <p><a href="#none" role="button" class="btnBl1">간이세액 계산하기</a></p>
+                    <p><a href="#none" role="button" class="btnBl1 btnRef2">초기화</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- [E] 하단 고정 영역 -->
+	</div>
+	<!-- //container -->
+</div>
+<!-- //wrap -->
+
+<!-- bottomsheet layer_T01_BS(툴팁) -->
+<div id="layer_T01_BS" class="layer_bottomsheet">
+    <div class="layer_inner">
+        <div class="layer_tit type2"> 
+            <strong class="tit"><span>종합부동산세·재산세 간편계산 기준</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont layer_tax" style="max-height: 879px;">
+            <div class="info_box type_notice">
+                <h3 class="tit">안내</h3>
+                <p class="tx">
+                    종합부동산세는 과세기준일(매년 6월 1일)에 보유한 주택(부속토지 포함), 
+                    종합합산토지 및 별도합산토지를 대상으로 인별 합산한 금액이 일정금액을 초과하는 경우 부과 되는 세금입니다.
+                </p>
+            </div>
+            <div class="msg_box">
+                <ul class="notice_list">
+                    <li class="list">
+                        <span class="tx">
+                            간편계산기에는 세부담상한을 반영하지 않았으며, 지방자치단체 조례 등으로 인한 재산세 변동 등 사유로 실제 부과세액과 차이가 날 수 있습니다.
+                        </span>
+                    </li>
+                    <li class="list">
+                        <span class="tx">
+                            간편계산기는 자산별로 공시가격과 조정대상지역 여부 등 일정 정보를 입력 시 당해연도 종합부동산세 예상 고지세액을 조회할 수 있으나, 공시가격의 변동, 조정대상지역 지정 및 재산세 감면 등 사유로 실제 부과되는 종합부동산세와는 차이가 있을 수 있습니다.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // layer_T01_BS(툴팁) -->
+
+<script>
+$(document).ready(function(){
+    // 안내문구
+    $('.filterItem').on('click', function(){
+        $(this).next().fadeIn();
+    });
+    // [E] 안내문구
+
+    // 상단이동
+    $('.btnRef2').on('click', function(){
+        $('body,html').animate({
+            scrollTop: 0
+        }, 400);
+        return false;
+    });
+
+    // [S] mcroll
+    var now = new Date();
+    var year=now.getFullYear();//연도
+    var month=now.getMonth()+1;//월
+    var date=now.getDate();//일
+    month = month >=10 ? month : "0" + month;  
+	date = date >= 10 ? date : "0" + date;
+    
+    $(".virual").val(year +'.' + month +'.' + date);
+
+    $(".datepicker3 input").scroller().date({
+        theme: 'default',
+        mode: 'scroller',
+        display: 'bottom',
+        lang: 'date',
+        dateFormat: "yy.mm.dd",
+        dateOrder: "yymmdd",
+        endYear : year,
+        endMonth :month - 1,
+        endDate : date,
+        startYear : 2017,
+        startMonth : 0,
+        startDate : 1
+    });
+
+    // 날짜 제어
+	$('.datepickerArea .virual').on('input change', function(e) {
+		let _date = '';
+		if ($(this).val() != undefined && $(this).val() != '') {
+			_date = $(this).val().replace(/[^0-9]/g,"");
+		}
+
+        let now = new Date();
+        let year = now.getFullYear();//연도
+        let month = now.getMonth()+1;//월
+        let date = now.getDate();//일
+        month = month >=10 ? month : "0" + month;
+        date = date >= 10 ? date : "0" + date;
+
+        $(this).closest('.datepickerArea').find('.datepicker3 input').val(_date.substr(0, 4) + '.' + _date.substr(4, 2) + '.' + _date.substr(6, 2));
+        $(this).closest('.datepickerArea').find('.datepicker3 input').scroller().date({
+            theme: 'default',
+            mode: 'scroller',
+            display: 'bottom',
+            lang: 'date',
+            dateFormat: "yy.mm.dd",
+            dateOrder: "yymmdd",
+            endYear : year,
+            endMonth :month - 1,
+            endDate : date,
+            startYear : 2017,
+            startMonth :0,
+            startDate : 1
+        });
+
+        //$(this).val(_date.substr(0, 4) + '.' + _date.substr(4, 2) + '.' + _date.substr(6, 2));
+    });
+    // [E] mscroll
+});
+// [S] 바텀시트
+$(document).on("click", ".btn_open_bottom_sheet", function(e){
+    e.preventDefault();
+
+    var $href = $(this).attr('href');
+    layer_bottomsheet($href);
+    $('html').addClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+
+    // [S] multi layer 2021-08-02 추가
+    var dimIdx = $('.dim').index();
+    eval('$focusReturn' + [dimIdx] + '= $(this)');
+   
+
+});
+function layer_bottomsheet(el){
+    var $el = $(el);
+    $el.append("<div class=\"dim\"></div>");
+    isDim ? $('.layer_bottomsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
+    setTimeout(function() {
+        $el.find('.layer_inner').addClass('on');
+    }, 50);
+
+    var isDim;
+    var dimIdx = $('.dim').index();
+    var thisDim = $el.find('.dim');
+    var thisLyZindex = dimIdx + 4000;
+    $('.dim').css('opacity','0');
+    thisDim.css('opacity','.7');
+    thisDim.closest('.layer_bottomsheet, .layer_popup').css('z-index', thisLyZindex);
+    // [E] multi layer 2021-08-02 추가
+
+    $el.find('.js_pop_close').click(function(){
+
+        $el.find('.layer_inner').removeClass('on');
+        setTimeout(function() {
+            isDim ? $('.layer_bottomsheet').hide() : $el.hide();
+            $('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+            $el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
+            // [S] multi layer 2021-08-02 추가
+            if($('.dim').length == '2'){
+                $('.dim:eq(1)').css('opacity','.7');
+            }else if($('.dim').length == '1'){
+                $('.dim').css('opacity','.7');
+            }
+            // [E] multi layer 2021-08-02 추가
+        }, 200);
+
+        // [S] multi layer 2021-08-02 추가
+        eval('$focusReturn'+ [dimIdx]).focus();
+
+        return false;
+    });
+}
+</script>
+</body>
+</html>

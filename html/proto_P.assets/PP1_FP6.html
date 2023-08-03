@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- [S] chart -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<!-- [E] chart -->
+</head>
+<body>
+<div class="test_view">
+<!-- 퍼블 화면 확인용 -->
+<style>
+body{background-color:#444;}
+.test_view{display:flex;flex-wrap:wrap;}
+.view_section{position:relative;border:1px dotted #ddd;;height:100%;}
+.view_section .type_no{padding:5px 0;text-align:center;font-size:12px;font-weight:300;color:#fff;}
+.layer_bottomsheet, .layer_popup, .layer_fullsheet {display:block;position:relative;width:360px;height:100%;margin-bottom:10px;margin-left:0px;}
+.layer_bottomsheet .layer_inner,
+.layer_fullsheet .layer_inner {overflow:inherit;position:relative;max-height:auto;transform: translate(0, 0);}
+</style>
+<!-- //퍼블 화면 확인용 -->
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no"> PP1_2_5_1_2_1_2T_1FP 특약상세</h3>
+<!-- [S] PP1_2_5_1_2_1_2T_1FP 특약상세 팝업 -->
+<div id="PP1_2_5_1_2_1_2T_1FP" class="layer_fullsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+			<strong class="tit">특약 상세</strong>
+			<button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+		</div>
+        <div class="layer_cont">
+            <div class="accSetting">
+				<div class="tAccount">
+					<h3 class="tAccTit">
+                       상해 후 장애
+                    </h3>
+                    <div class="accInfo">
+                        <span class="infoTit">특약 금액</span>
+                        <span class="infoNum"><em class="num">40,950,000</em>원</span>
+                    </div>
+				</div>
+                <hr class="hr_div"></hr>
+				<ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">특약 상태</span>
+						<span class="itemData">정상</span>
+					</li>
+                    <li>
+						<span class="itemTit">특약 유형</span>
+						<span class="itemData">필수</span>
+					</li>
+                    <li>
+                        <span class="itemTit">특약 만기일</span>
+                        <span class="itemData"><em class="num">2029.09.09</em></span>
+                    </li>
+				</ul>
+			</div>
+        </div>
+    </div>
+</div>
+<!-- [E] PP1_2_5_1_2_1_2T_1FP 특약상세 팝업 -->
+<!-- 퍼블확인용 --></div>
+
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">PP1_2_5_1_2_1_3T_1FP 보장상세</h3>
+<!-- [S] PP1_2_5_1_2_1_3T_1FP 보장상세 팝업 -->
+<div id="PP1_2_5_1_2_1_3T_1FP" class="layer_fullsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+			<strong class="tit">보장 상세</strong>
+			<button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+		</div>
+        <div class="layer_cont">
+            <div class="accSetting">
+				<div class="tAccount">
+					<h3 class="tAccTit">특정질병휴우장애</h3>
+                    <div class="accInfo">
+                        <span class="infoTit">보장 금액</span>
+                        <span class="infoNum"><em class="num">40,950,000</em>원</span>
+                    </div>
+				</div>
+                <hr class="hr_div thin_div"></hr>
+				<ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">보장명</span>
+						<span class="itemData">암진단비II</span>
+					</li>
+                    <li>
+						<span class="itemTit">보장 특성</span>
+						<span class="itemData">외래진료비</span>
+					</li>
+                    <li>
+						<span class="itemTit">보장 상태</span>
+						<span class="itemData">정상</span>
+					</li>
+                    <li>
+						<span class="itemTit">보장 시작일</span>
+						<span class="itemData"><em class="num">2020.01.01</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">보장 만기일</span>
+						<span class="itemData"><em class="num">2029.09.09</em></span>
+					</li>
+                   
+				</ul>
+			</div>
+        </div>
+    </div>
+</div>
+<!-- [S] PP1_2_5_1_2_1_3T_1FP 보장상세 팝업 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">PP1_2_5_1_2_1_1FP 저축성/보장성 더보기</h3>
+<!-- [S] PP1_2_5_1_2_1_1FP 저축성/보장성 더보기 팝업 -->
+<div id="PP1_2_5_1_2_1_1FP" class="layer_fullsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+			<strong class="tit">더보기</strong>
+			<button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+		</div>
+        <div class="layer_cont">
+            <div class="accSetting">
+				<div class="tAccount">
+                   
+					<h3 class="tAccTit">
+                        <div class="im">
+                            <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                        </div>
+                       우리아이 100세 안심보장
+                    </h3>
+                    <div class="accInfo">
+                        <span class="infoTit">이번 달 보험료</span>
+                        <span class="infoNum"><em class="num">40,950,000</em>원</span>
+                    </div>
+				</div>
+                <hr class="hr_div"></hr>
+				<ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">보험 종류</span>
+						<span class="itemData">보장보험</span>
+					</li>
+                    <li>
+						<span class="itemTit">피보험자</span>
+						<span class="itemData">김*수 외 <em>N</em>명</span>
+					</li>
+                    <li>
+						<span class="itemTit">갱신형</span>
+						<span class="itemData">O</span>
+					</li>
+                    <li>
+						<span class="itemTit">가입 금액</span>
+						<span class="itemData"><em class="num">150,000,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">가입일</span>
+						<span class="itemData"><em class="num">2020.01.01</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">만기일</span>
+						<span class="itemData"><em class="num">2025.01.01</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">납입일</span>
+						<span class="itemData"><em class="num">15</em>일</span>
+					</li>
+				</ul>
+                <ul class="accDetailList sub_detailList">
+					<li>
+                        <span class="itemTit switch_tit">목록에서 숨기기</span>
+                        <label class="btn_switch">
+                            <input type="checkbox" checked=""><span class="round"></span>
+                        </label>
+					</li>
+				</ul>
+			</div>
+       </div>
+    </div>
+</div>
+<!-- [E] PP1_2_5_1_2_1_1FP 저축성/보장성 더보기 팝업 -->
+<!-- 퍼블확인용 --></div>
+
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no"> PP1_2_5_3_2_1_1FP 자동차보험 더보기</h3>
+<!-- [S]  PP1_2_5_3_2_1_1FP 자동차보험 더보기  팝업 -->
+<div id="PP1_2_5_3_2_1_1FP" class="layer_fullsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+			<strong class="tit">더보기</strong>
+			<button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+		</div>
+        <div class="layer_cont">
+            <div class="accSetting">
+				<div class="tAccount">
+                   
+					<h3 class="tAccTit">
+                        <div class="im">
+                            <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                        </div>
+                       다이렉트 자동차보험
+                    </h3>
+				</div>
+                <hr class="hr_div"></hr>
+				<ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">보험 종류</span>
+						<span class="itemData">자동차보험</span>
+					</li>
+                    <li>
+						<span class="itemTit">차량명</span>
+						<span class="itemData">그랜저IG</span>
+					</li>
+                    <li>
+                        <span class="itemTit">차량번호</span>
+                        <p class="itemData">12가3456</p>
+					</li>
+                    <li>
+						<span class="itemTit">가입 금액</span>
+						<span class="itemData"><em class="num">150,000,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">가입일</span>
+						<span class="itemData"><em class="num">2020.01.01</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">만기일</span>
+						<span class="itemData"><em class="num">2025.01.01</em></span>
+					</li>
+				</ul>
+                <ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">자기차량 손해 여부</span>
+						<span class="itemData"><em>Y</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">자기부담금 비율</span>
+						<span class="itemData"><em>20%</em></span>
+					</li>
+                    <li>
+                        <span class="itemTit">자기부담 금액</span>
+                        <p class="itemData"><em class="num">5,000,000</em>원</p>
+					</li>
+				</ul>
+                <ul class="accDetailList sub_detailList">
+					<li>
+                        <span class="itemTit switch_tit">목록에서 숨기기</span>
+                        <label class="btn_switch">
+                            <input type="checkbox" checked=""><span class="round"></span>
+                        </label>
+					</li>
+				</ul>
+			</div>
+       </div>
+    </div>
+</div>
+<!-- [E]  PP1_2_5_3_2_1_1FP 자동차보험 더보기 팝업 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no"> PP1_2_5_4_2_1_1FP 보증보험 더보기</h3>
+<!-- [S] PP1_2_5_4_2_1_1FP 보증보험 더보기 팝업 -->
+<div id="PP1_2_5_4_2_1_1FP" class="layer_fullsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+			<strong class="tit">더보기</strong>
+			<button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+		</div>
+        <div class="layer_cont">
+            <div class="accSetting">
+				<div class="tAccount">
+                   
+					<h3 class="tAccTit">
+                        <div class="im">
+                            <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                        </div>
+                        hug 전세보증보험
+                    </h3>
+				</div>
+                <hr class="hr_div"></hr>
+				<ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">보험 종류</span>
+						<span class="itemData">보증보험</span>
+					</li>
+                    <li>
+						<span class="itemTit">피보험자</span>
+						<span class="itemData">김*수</span>
+					</li>
+                    <li>
+						<span class="itemTit">가입 금액</span>
+						<span class="itemData"><em class="num">150,000,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">납입 보험료</span>
+						<span class="itemData"><em class="num">150,000,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">가입일</span>
+						<span class="itemData"><em class="num">2020.01.01</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">만기일</span>
+						<span class="itemData"><em class="num">2025.01.01</em></span>
+					</li>
+				</ul>
+                <ul class="accDetailList sub_detailList">
+					<li>
+                        <span class="itemTit switch_tit">목록에서 숨기기</span>
+                        <label class="btn_switch">
+                            <input type="checkbox" checked=""><span class="round"></span>
+                        </label>
+					</li>
+				</ul>
+			</div>
+       </div>
+    </div>
+</div>
+<!-- [S] PP1_2_5_4_2_1_1FP 보증보험 더보기 팝업 -->
+<!-- 퍼블확인용 --></div>
+
+</div><!-- test_view -->
+<script>
+
+// [S] 월간내역 메모 textarea 자동 높이조절, 글자수 체크, textarea val값 초기화
+function testAreaHeight1() {
+	var textEle = $('.layer_memo_wrap .js_textarea1');
+	textEle[0].style.height = 'auto';
+	var textEleHeight = textEle.prop('scrollHeight');
+	textEle.css('height', textEleHeight);
+};
+var textEle = $('.layer_memo_wrap .js_textarea1');
+var btnMemoValReset = $('.layer_memo_wrap .btn_val_reset');
+btnMemoValReset.hide();
+textEle.on('keyup', function() {
+	//자동높이
+	testAreaHeight1();
+	$('#js_textarea1_cnt').html("<span class='pointColor'>"+$(this).val().length+"</span> / 60");
+	//val값 초기화
+	if(textEle.val().length === 0){
+		btnMemoValReset.hide();
+	}else if($(this).val().length > 60) {
+		$(this).val($(this).val().substring(0, 60));
+		$('#js_textarea1_cnt').html("<span class='pointColor'>60</span> / 60");
+	}else{
+		btnMemoValReset.show();
+	}
+});
+function memoValReset() {
+	textEle.val('').css('height','inherit').focus();
+	btnMemoValReset.hide();
+	$('#js_textarea1_cnt').html("<span class='pointColor'>"+textEle.val().length+"</span> / 60");
+}
+// [E] 월간내역 메모 textarea 자동 높이조절, 글자수 체크, textarea val값 초기화
+
+$(document).ready(function(){
+
+	// [S] 캘린더 탭
+	$(".tabInter").tabs({
+		wrapClass:".tabInter",
+		clickClass:".js_tabclickDp1",
+		showClass:".tab_cntDp1",
+		animate:false,
+		contentWidthFull:false,//effect when animate:true
+		animateBorder:["false",".tabs_header"],//show border in class .
+		fade:false,
+		speed:500
+	});
+	// [E] 캘린더 탭
+
+});
+</script>
+</body>
+</html>

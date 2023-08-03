@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+<script>
+
+
+</script>
+</head>
+
+<body>
+
+<!-- wrap -->
+<div class="wrap">
+
+	<!-- header -->
+	<div class="header">
+		<div class="header_inn">
+			<div class="left">
+				<a href="#none" class="btnBack"><span class="blind">Back</span></a>
+			</div>
+			<div class="center">
+				<h2 class="tit_h2">자산 편집</h2>
+			</div>
+			<!-- <div class="right">
+				<a href="#none" class="btnClose"><span class="blind">close</span></a>
+			</div> -->
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="content mgt10">
+			<div class="asGroup editList2 sortListBox">
+                <p class="guide_stit">편집 + 삭제버튼 x</p>
+				<div class="listTit">
+					<h3>은행 <em class="pointColor">3</em></h3>
+
+                    <div class="titSwitch">
+                        <span class="switch_name">
+                            <span class="tooltip2 top"> <!-- 22.11.08 툴팁 추가 -->
+                                <button type="button" class="btn_tool_close"><span class="blind">닫기</span></button>
+								<span>
+                                    "합산에서 제외하기"를 설정한 자산은 자산메인<br> 총 금액에서 제외됩니다.
+                                </span>
+							</span>
+                            <a href="#" class="btn_open_toolTip btn_more_ask" role="button"><span class="ico_ask type_white2"><em class="blind">더보기</em></span></a>
+                            합산에서 제외하기
+                        </span>
+                        <label class="btn_switch">
+                            <input type="checkbox"><span class="round"></span>
+                        </label>
+                    </div>
+
+				</div>
+				<div class="asList">
+                  
+                    <div class="wrap_slider">
+                        <div class="accItem hidden"> <!-- 숨기기 버튼 클릭시 hidden 클래스 추가, 목록 선택 시 itemSelect 클래스 추가-->
+                            <a href="#none">
+                                <div class="im">
+                                    <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                </div>
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">모바일입출금통장</span></p>
+                                    <p class="amount"><em>120,000,000</em>원</p>
+                                </div>
+                            </a>
+                            <div class="ctrl">
+                                <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                            </div>
+                        </div>
+                        <div class="accItem hidden">   <!-- 숨기기 버튼 클릭시 hidden 클래스 추가, 목록 선택 시 itemSelect 클래스 추가-->
+                            <a href="#none">
+                                <div class="im">
+                                    <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                </div>
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">신한cash통장</span></p>
+                                    <p class="amount"><em>120,000,000</em>원</p>
+                                </div>
+                            </a>
+                            <div class="ctrl">
+                                <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                            </div>
+                        </div>
+                        <div class="accItem hidden itemDisabled">  <!-- 숨기기 버튼 클릭시 hidden 클래스 추가-->
+                            <a href="#none">
+                                <div class="im">
+                                    <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                </div>
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">더와이드(TheWide)외화적금</span></p>
+                                    <p class="amount"><em>120,000,000</em>원</p>
+                                </div>
+                            </a>
+                            <div class="ctrl">
+                                <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                            </div>
+                        </div>
+                        <div class="accItem hidden"> 
+                            <a href="#none">
+                                <div class="im">
+                                    <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                </div>
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">모바일입출금통장</span></p>
+                                    <p class="amount"><em>120,000,000</em>원</p>
+                                </div>
+                            </a>
+                            <div class="ctrl">
+                                <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                            </div>
+                        </div>
+                        <div class="accItem hidden"> 
+                            <a href="#none">
+                                <div class="im">
+                                    <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                </div>
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">모바일입출금통장</span></p>
+                                    <p class="amount"><em>120,000,000</em>원</p>
+                                </div>
+                            </a>
+                            <div class="ctrl">
+                                <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                            </div>
+                        </div>
+                        <div class="accItem hidden">
+                            <a href="#none">
+                                <div class="im">
+                                    <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                </div>
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">모바일입출금통장</span></p>
+                                    <p class="amount"><em>120,000,000</em>원</p>
+                                </div>
+                            </a>
+                            <div class="ctrl">
+                                <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                            </div>
+                        </div>
+                        <div class="accItem hidden">
+                            <a href="#none">
+                                <div class="im">
+                                    <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                </div>
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">모바일입출금통장</span></p>
+                                    <p class="amount"><em>120,000,000</em>원</p>
+                                </div>
+                            </a>
+                            <div class="ctrl">
+                                <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                            </div>
+                        </div>        
+                        <div class="accItem hidden"> 
+                            <a href="#none">
+                                <div class="im">
+                                    <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                </div>
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">모바일입출금통장</span></p>
+                                    <p class="amount"><em>120,000,000</em>원</p>
+                                </div>
+                            </a>
+                            <div class="ctrl">
+                                <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                            </div>
+                        </div>
+                        <div class="accItem hidden"> 
+                            <a href="#none">
+                                <div class="im">
+                                    <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                </div>
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">모바일입출금통장</span></p>
+                                    <p class="amount"><em>120,000,000</em>원</p>
+                                </div>
+                            </a>
+                            <div class="ctrl">
+                                <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                            </div>
+                        </div>
+                        <div class="accItem hidden"> 
+                            <a href="#none">
+                                <div class="im">
+                                    <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                </div>
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">모바일입출금통장</span></p>
+                                    <p class="amount"><em>120,000,000</em>원</p>
+                                </div>
+                            </a>
+                            <div class="ctrl">
+                                <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                            </div>
+                        </div>
+                        <div class="accItem hidden"> 
+                            <a href="#none">
+                                <div class="im">
+                                    <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                </div>
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">모바일입출금통장</span></p>
+                                    <p class="amount"><em>120,000,000</em>원</p>
+                                </div>
+                            </a>
+                            <div class="ctrl">
+                                <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                            </div>
+                        </div>
+                        <div class="accItem hidden">
+                            <a href="#none">
+                                <div class="im">
+                                    <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                </div>
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">모바일입출금통장</span></p>
+                                    <p class="amount"><em>120,000,000</em>원</p>
+                                </div>
+                            </a>
+                            <div class="ctrl">
+                                <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                            </div>
+                        </div>
+                        <div class="accItem hidden">
+                            <a href="#none">
+                                <div class="im">
+                                    <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                </div>
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">모바일입출금통장</span></p>
+                                    <p class="amount"><em>120,000,000</em>원</p>
+                                </div>
+                            </a>
+                            <div class="ctrl">
+                                <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                            </div>
+                        </div>
+                        <div class="accItem hidden"> 
+                            <a href="#none">
+                                <div class="im">
+                                    <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                </div>
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">모바일입출금통장</span></p>
+                                    <p class="amount"><em>120,000,000</em>원</p>
+                                </div>
+                            </a>
+                            <div class="ctrl">
+                                <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                            </div>
+                        </div>
+                        <div class="accItem hidden">
+                            <a href="#none">
+                                <div class="im">
+                                    <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                </div>
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">모바일입출금통장</span></p>
+                                    <p class="amount"><em>120,000,000</em>원</p>
+                                </div>
+                            </a>
+                            <div class="ctrl">
+                                <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                            </div>
+                        </div>
+                        <div class="accItem hidden"> 
+                            <a href="#none">
+                                <div class="im">
+                                    <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                </div>
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">모바일입출금통장</span></p>
+                                    <p class="amount"><em>120,000,000</em>원</p>
+                                </div>
+                            </a>
+                            <div class="ctrl">
+                                <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                            </div>
+                        </div>
+                    </div>
+					
+				</div>
+			</div>
+
+            <div class="asGroup editList3 sortListBox">
+                <p class="guide_stit">편집 + 삭제버튼 o</p>
+                <div class="listTit"> <!-- 22.11.10 타이틀 영역, 합산에서 제외기, 툴팁 추가 -->
+					<h3>자동차 <em class="pointColor">4</em></h3>
+
+                    <div class="titSwitch"> 
+                        <span class="switch_name pointColor">
+                            <span class="tooltip2 top">
+                                <button type="button" class="btn_tool_close"><span class="blind">닫기</span></button>
+								<span>
+                                    "합산에서 제외하기"를 설정한 자산은 자산메인<br> 총 금액에서 제외됩니다.
+                                </span>
+							</span>
+                            <a href="#" class="btn_open_toolTip btn_more_ask" role="button"><span class="ico_ask type_white2"><em class="blind">더보기</em></span></a>
+                            합산에서 제외하기
+                        </span> <!-- 제외하기 했을때 pointColor 클래스 추가 -->
+                        <label class="btn_switch">
+                            <input type="checkbox" checked=""><span class="round"></span>
+                        </label>
+                    </div>
+				</div>
+				<div class="asList">
+                    <div class="wrap_slider">
+                        <div class="accItem hidden"> <!-- 숨기기 버튼 클릭시 hidden 클래스 추가, 목록 선택 시 itemSelect 클래스 추가-->
+                            <a href="#SHJ2510" class="accItem_del btn_open_layer_pop"><span class="blind">삭제하기</span></a>
+                            <a href="#">
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">볼보 2020XC40</span></p>
+                                    <p class="amount">
+                                        <em>12가3456</em><em class="num_year">2016</em>년형
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="ctrl">
+                                <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                            </div>
+                        </div>
+                        <div class="accItem">   <!-- 숨기기 버튼 클릭시 hidden 클래스 추가, 목록 선택 시 itemSelect 클래스 추가-->
+                            <a href="#SHJ2510" class="accItem_del btn_open_layer_pop"><span class="blind">삭제하기</span></a>
+                            <a href="#none">
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">폭스바겐 비틀 카브리올레</span></p>
+                                    <p class="amount">
+                                        <em>12가3456</em><em class="num_year">2016</em>년형
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="ctrl">
+                                <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                            </div>
+                        </div>
+                        <div class="accItem hidden">  <!-- 숨기기 버튼 클릭시 hidden 클래스 추가-->
+                            <a href="#SHJ2510" class="accItem_del btn_open_layer_pop"><span class="blind">삭제하기</span></a>
+                            <a href="#none">
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">볼보 2020XC40</span></p>
+                                    <p class="amount">
+                                        <em>12가3456</em><em class="num_year">2016</em>년형
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="ctrl">
+                                <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                            </div>
+                        </div>
+                        <div class="accItem hidden">   <!-- 숨기기 버튼 클릭시 hidden 클래스 추가, 목록 선택 시 itemSelect 클래스 추가-->
+                            <a href="#SHJ2510" class="accItem_del btn_open_layer_pop"><span class="blind">삭제하기</span></a>
+                            <a href="#none">
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">폭스바겐 비틀 카브리올레</span></p>
+                                    <p class="amount">
+                                        <em>12가3456</em><em class="num_year">2016</em>년형
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="ctrl">
+                                <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                            </div>
+                        </div>
+                    </div>
+					
+				</div>
+			</div>
+			<div class="btn_wrap">
+                <div class="btnGroup sub_btnGroup">
+                    <p><a href="#SHZ3001" class="btnBl2 btn_open_layer_pop" role="button" onclick="">취소</a></p>
+                    <p><a href="#SHZ3000" class="btnBl1 btn_open_layer_pop " role="button" onclick="">저장</a></p>
+                </div>
+            </div>
+		</div>
+	</div>
+	<!-- //container -->
+
+</div>
+<!-- //wrap -->
+<!-- SHZ3000 공통_편집저장  -->
+<div id="SHZ3000" class="layer_popup type2">
+	<div class="layer_position">
+		<div class="layer_inner">
+			<div class="layer_cont">
+				<div class="msg_box">
+                    <div class="msg_box">
+                        <p class="msg_alert">
+                            <span class="accNum">변경된 내용으로<br> 저장하시겠습니까?</span>
+                        </p>
+                    </div>
+				</div>
+				<div class="btn_layer_wrap">
+					<button type="button" class="js_pop_close btn_cancel"><span>아니요</span></button>
+					<button type="button" class="js_pop_close btn_confirm"><span>네</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // SHZ3000 공통_편집저장 -->
+
+<!-- SHZ3001 공통_뒤로가기  -->
+<div id="SHZ3001" class="layer_popup type2">
+	<div class="layer_position">
+		<div class="layer_inner">
+			<div class="layer_cont">
+				<div class="msg_box">
+                    <div class="msg_box">
+                        <p class="msg_alert">
+                            <span class="accNum">저장하지 않고<br> 나가시겠습니까?</span>
+                        </p>
+                    </div>
+				</div>
+				<div class="btn_layer_wrap">
+					<button type="button" class="js_pop_close btn_cancel"><span>아니요</span></button>
+					<button type="button" class="js_pop_close btn_confirm"><span>네</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // SHZ3001 공통_뒤로가기 -->
+<script>
+ $(document).ready(function(){
+    //합산에서 제외하기 툴팁
+    $('.btn_open_toolTip').click(function(){
+        $(this).siblings('.tooltip2').fadeIn();        
+    })
+    $('.btn_tool_close').click(function(){
+        $(this).closest('.tooltip2').fadeOut();        
+    })
+    dragSortList();
+});
+//목록편집
+function dragSortList() {
+    $( ".wrap_slider" ).sortable({
+        axis: 'y',
+        handle: ".btnHandle"
+        // scroll: false
+    });
+}
+
+    $('.btnHide').click(function(){
+        var $this = $(this);
+        if($('.accItem').hasClass('hidden')=== true){
+            $this.closest('.accItem').toggleClass('hidden')
+        }
+    })
+
+
+    // 스위치 토글시 글씨 색상변경
+	var checkBox = $('.btn_switch input[type=checkbox]');
+
+	checkBox.on('change', function() {
+		if(this.checked) {
+			$(this).parent('.btn_switch').siblings('.switch_name').addClass('pointColor');
+		} else {
+			$(this).parent('.btn_switch').siblings('.switch_name').removeClass('pointColor');
+		}
+	});
+
+
+
+    </script>
+</body>
+</html>

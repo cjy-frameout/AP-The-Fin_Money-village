@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+</head>
+
+<body>
+
+<!-- wrap -->
+<div class="wrap">
+
+	<!-- header -->
+	<div class="header setup"><!-- 2021-10-07 마이페이지 클래스 'setup' 추가 -->
+		<div class="header_inn">
+			<div class="left">
+				<a href="#none" class="btnBack"><span class="blind">Back</span></a>
+			</div>
+			<div class="center">
+				<h2 class="tit_h2">연결관리</h2> <!-- [이은숙#220610] 연결관리 -->
+			</div>
+			<div class="right">
+				<!--<a href="#none" class="btnClose"><span class="blind">close</span></a>-->
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+			<div class="servTerm">
+				<h3 class="termTit">연동해제에 대한 안내</h3>
+				<p class="comName">국민은행</p>
+				<ul class="indList">
+					<li>* 연동해제 후에는 해당 금융기관에서 개인신용정보를 더 이상 가져오지 않습니다.</li>
+					<li>* 그간 수집된 정보의 삭제를 원하신다면 "기존정보유지"를 기존정보 삭제를 원하시면 "기존정보삭제"를 선택 하시기를 바랍니다.<br>삭제시 기존에 수집된 고객의 정보가 모두 또는 일부 삭제되며 정상적인 서비스 제공이 어려울 수 있습니다.</li>
+				</ul>
+				<ul class="radioList">
+					<li>
+						<div class="custom_radio">
+							<input type="radio" id="radio1" name="radio" checked>
+							<label for="radio1">기존정보유지
+							</label>
+						</div>
+					</li>
+					<li>
+						<div class="custom_radio">
+							<input type="radio" id="radio2" name="radio">
+							<label for="radio2">기존정보삭제
+							</label>
+						</div>
+					</li>
+				</ul>
+				<ul class="indList">
+                    <li>* 수집한 개인신용정보 목록 및 수집 기간<br>
+						2021.08.01 ~ 2021.12.01</li>
+					<li>* 수집한 개인신용정보 보유기간<br>
+						2021.08.01 ~ 2026.08.01</li>
+				</ul>
+			</div>
+			<!-- [S] 하단 고정 영역 -->
+			<div class="fix_bottom">
+				<!-- btn_wrap -->
+				<div class="btn_wrap">
+					<div class="btnGroup type2">
+						<p><a href="#cancelConnet" class="btnBl1 btn_open_layer_pop">연동해제</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- [E] 하단 고정 영역 -->
+		</div>
+	</div>
+	<!-- //container -->
+</div>
+<!-- //wrap -->
+<!-- 기관 철회 팝업 -->
+<div id="cancelConnet" class="layer_popup type2">
+	<div class="layer_position">
+		<div class="layer_inner">
+			<div class="layer_cont">
+				<div class="msg_box">
+					<div class="msg_tit">국민은행</div>
+					<p class="msg_alert">
+						자산 연동을 해제 하시겠습니까?
+					</p>
+				</div>
+				<div class="btn_layer_wrap">
+					<button type="button" class="js_pop_close btn_cancel"><span>아니오</span></button>
+					<button type="button" class="js_pop_close btn_confirm"><span>네</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 기관 철회 팝업  -->
+</body>
+</html>

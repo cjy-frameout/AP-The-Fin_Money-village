@@ -1,0 +1,2370 @@
+﻿<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/content.css">
+<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../js/slide_slick.js"></script>
+<script type="text/javascript" src="../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../js/cmd.js"></script>
+<style>
+.red { color: #ff0000;}
+#nav {overflow-y:scroll;position:sticky;top:0;display:flex;width:100%;background-color:#fff;z-index:2;}
+#nav li{flex:1;}
+#nav li  + li{border-left:1px solid #aaa;}
+#nav li a{display:flex;justify-content:center;align-items:center;width:100%;min-width:60px;height:30px;font-size:14px;text-align:center;border-bottom:1px solid #bbb;}
+#nav li a.on{color:#fff;font-weight:400;background-color:#666;}
+
+.guide_stit{position:relative;margin:0 -20px 10px -20px;padding:2px 0 3px 20px;font-size:13px;font-weight:bold;border-top:1px solid #ccc;border-bottom:1px solid #ccc;background-color:#ddd;}
+.guide_stit:before{content:'·';position:absolute;left:10px;top:3px;}
+
+.page_tit{display:flex;align-items:center;width:100%;height:50px;padding-left:20px;font-size:15px;font-weight:400;color:#fff;background-color:#2e81f8;}
+.wrap_list .tbl_list{border-bottom:1px solid #e0e0e0;border-collapse:collapse;}
+.wrap_list .tbl_list thead{position:sticky;top:-1px;z-index:2;}
+.wrap_list .tbl_list th span{display:block;padding:4px 10px;height:27px;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0 !important;border-left:1px solid #e0e0e0;background-color:#f3f6f8;}
+.wrap_list .tbl_list td{padding:4px 10px;height:30px;border-top:1px solid #e0e0e0;border-left:1px solid #e0e0e0;}
+.wrap_list .tbl_list tr:first-child td{border-top:0;}
+.wrap_list .tbl_list th:first-child,.wrap_list .tbl_list td:first-child{border-left:0;}
+.wrap_list .tbl_list td:nth-child(2){border-top:0;}
+.wrap_list .tbl_list td:nth-child(2).ca_first{border-top:1px solid #e0e0e0;}
+.wrap_list .tbl_list tr:hover{font-weight:bold;background-color:#f3f6f8;}
+
+.wrap_list .tbl_list colgroup col:nth-child(1){width:60px;}/*번호*/
+.wrap_list .tbl_list colgroup col:nth-child(2){width:180px;}/*구분*/
+.wrap_list .tbl_list colgroup col:nth-child(3){width:150px;}/*화면id*/
+.wrap_list .tbl_list colgroup col:nth-child(4){width:auto;}/*화면명*/
+.wrap_list .tbl_list colgroup col:nth-child(5){width:150px;}/*비고*/
+.wrap_list .tbl_list colgroup col:nth-child(6){width:60px;}/*완료여부*/
+.wrap_list .tbl_list .list_num{text-align:center;}
+.wrap_list .tbl_list .list_category{font-size:14px;font-weight:500;color:#000;background-color:#f3f6f8;}
+.wrap_list .tbl_list .list_id{text-align:left;font-size:15px;}
+.wrap_list .tbl_list .list_name{font-size:14px;}
+.wrap_list .tbl_list .list_confirm{text-align:center;}
+.wrap_list .tbl_list .list_id a{position:relative;display:inline-block;color:#2e81f8;}
+.wrap_list .tbl_list .list_id a:after{position:absolute;left:0;bottom:0;width:100%;height:1px;background-color:#2e81f8;opacity:.3;}
+.wrap_list .tbl_list .list_id a:hover{font-weight:bold;}
+.wrap_list .tbl_list .category2{position:relative;display:inline-block;margin-left:10px;padding-left:5px;font-size:12px;color:#666;}
+.wrap_list .tbl_list .category2:before{content:'-';position:absolute;left:-5px;top:0;}
+.top_btn_wrap{position:absolute;right:10px;top:15px;}
+.btn_guide_list{margin-right:10px;font-size:14px;color:#fff !important;text-decoration:underline !important;}
+@media all and (max-width:850px) {
+    .wrap_list .tbl_list th{line-height:1;padding:0px;height:auto;vertical-align:middle;}
+    .wrap_list .tbl_list th span{line-height:1;height:auto;}
+    .wrap_list .tbl_list td{padding:2px 2px;height:25px;}
+    .wrap_list .tbl_list *{font-size:12px !important;font-weight:400;}
+    .wrap_list .tbl_list colgroup col:nth-child(1){width:30px;}/*번호*/
+    .wrap_list .tbl_list colgroup col:nth-child(2){width:100px;}/*구분*/
+    .wrap_list .tbl_list colgroup col:nth-child(5){width:80px;}/*비고*/
+}
+@media all and (max-width:470px) {
+    .page_tit{height:auto;padding-top:4px;padding-bottom:4px;font-size:12px;}
+    .top_btn_wrap{display:block;position:relative;top:inherit;right:inherit;margin-left:10px;}
+    .top_btn_wrap a{display:block;}
+    .wrap_list .tbl_list th span{display:block;height:25px;line-height:25px;padding:0px;}
+    .wrap_list .tbl_list *{font-size:11px !important;}
+    .wrap_list .tbl_list colgroup col:nth-child(2){width:35px;}/*구분*/
+    .wrap_list .tbl_list colgroup col:nth-child(3){width:80px;}/*화면id*/
+    .wrap_list .tbl_list colgroup col:nth-child(4){width:150px;}/*화면명*/
+    .wrap_list .tbl_list colgroup col:nth-child(5){width:0;}/*비고*/
+    .wrap_list .tbl_list colgroup col:nth-child(6){width:0;}/*여부*/
+}
+</style>
+</head>
+
+<body>
+<!-- wrap -->
+<div class="wrap">
+	<div class="page_tit">
+        APTHEFIN 마이데이터 퍼블리싱
+        <!-- <div class="top_btn_wrap">
+            <a href="퍼블/inq_list.html" class="btn_guide_list" target="_blank">퍼블 작업용 가이드 바로가기</a>
+            <a href="퍼블/page1.html" class="btn_guide_list" target="_blank">샘플페이지 바로가기</a>
+        </div> -->
+    </div>
+	<div class="wrap_content">
+    <!-- [S] contents ------------------------------------------------------------------------------>
+        <div class="wrap_list">
+            <table class="tbl_list">
+                <caption>마이데이터 퍼블리싱 화면 리스트</caption>
+                <colgroup>
+                    <col/><col/><col/><col/><col/><col/>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th id="thead_num"><span>N</span></th>
+                        <th id="thead_category"><span>구분</span></th>
+                        <th id="thead_id"><span>화면id</span></th>
+                        <th id="thead_name"><span>화면명</span></th>
+                        <th id="thead_etc"><span>비고</span></th>
+                        <th id="thead_confirm"><span>상태</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 홈 ----------------------------------------------------------------------->
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category">홈</td>
+                        <td class="list_id"><a href="proto_M.main/HM1_1.html" target="_blank">HM1_1</a></td>
+                        <td class="list_name">홈_메인 미연동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_M.main/HM1_2.html" target="_blank">HM1_2</a></td>
+                        <td class="list_name">홈_메인 연동 (툴팁 HM1_2_1BS 포함)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_M.main/HM1_3.html" target="_blank">HM1_3</a></td>
+                        <td class="list_name">skeleton</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_M.main/HM1_1_1FP.html" target="_blank">HM1_1_1FP</a></td>
+                        <td class="list_name">홈_메뉴</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <!-- 공통 ----------------------------------------------------------------------->
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category ca_first">공통</td>
+                        <td class="list_id"><a href="proto_M.main/SHZ1000.html" target="_blank">SHZ1000</a></td>
+                        <td class="list_name">공통_팝업모음 (금융일정,필터,팝업)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_M.main/CMMN6.html" target="_blank">CMMN6</a></td>
+                        <td class="list_name">공통_오류,내역없음</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_M.main/CMMN7.html" target="_blank">CMMN7</a></td>
+                        <td class="list_name">공통_업데이트중</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_M.main/CMMN8.html" target="_blank">CMMN8</a></td>
+                        <td class="list_name">공통_새로고침,업데이트 </td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_M.main/complete.html" target="_blank">complete</a></td>
+                        <td class="list_name">공통_완료 </td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_M.main/fail.html" target="_blank">fail</a></td>
+                        <td class="list_name">공통_실패 </td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_M.main/loding.html" target="_blank">loding</a></td>
+                        <td class="list_name">공통_로딩중</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <!-- <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_M.main/SHZ2000.html" target="_blank">SHZ2000</a></td>
+                        <td class="list_name">공통_자산편집</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr> -->
+                    <!-- <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_M.main/SHZ2000_1.html" target="_blank">SHZ2000_1</a></td>
+                        <td class="list_name">공통_자산편집2</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr> -->
+
+                    <!-- 금융일정 ----------------------------------------------------------------------->
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category ca_first">금융일정</td>
+                        <td class="list_id"><a href="proto_N.calendar/CL1.html" target="_blank">CL1</a></td>
+                        <td class="list_name">금융일정_즐겨찾기</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_N.calendar/CL1_LP.html" target="_blank">CL1_LP</a></td>
+                        <td class="list_name">금융일정_팝업 모음</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <!-- 세금계산기 ----------------------------------------------------------------------->
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category ca_first">세금계산기</td>
+                        <td class="list_id"><a href="proto_T.taxcalculator/TC0.html" target="_blank">TC0</a></td>
+                        <td class="list_name">세금계산기 리스트</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_T.taxcalculator/TC1.html" target="_blank">TC1</a></td>
+                        <td class="list_name">종부세 재산세 계산기</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <!-- <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_T.taxcalculator/TC1_2.html" target="_blank">TC1_2</a></td>
+                        <td class="list_name">종부세 재산세 - 단독명의 (툴팁포함) </td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr> -->
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_T.taxcalculator/TC2.html" target="_blank">TC2</a></td>
+                        <td class="list_name">양도소득세 계산기</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_T.taxcalculator/TC3.html" target="_blank">TC3</a></td>
+                        <td class="list_name">취득세(부동산) 계산기</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_T.taxcalculator/TC4.html" target="_blank">TC4</a></td>
+                        <td class="list_name">상속세 계산기</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_T.taxcalculator/TC5.html" target="_blank">TC5</a></td>
+                        <td class="list_name">증여세 - 종부세 재산세 계산기</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_T.taxcalculator/TC_FP.html" target="_blank">TC_FP</a></td>
+                        <td class="list_name">세금계산기 - 풀팝업 </td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_T.taxcalculator/TC_LP.html" target="_blank">TC_LP</a></td>
+                        <td class="list_name">세금계산기 - 레이어팝업 </td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <!-- 한도조회 ----------------------------------------------------------------------->
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category ca_first">한도조회</td>
+                        <td class="list_id"><a href="proto_T.taxcalculator/TBC1_1.html" target="_blank">TBC1_1</a></td>
+                        <td class="list_name">메인-미연동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_T.taxcalculator/TBC1_2.html" target="_blank">TBC1_2</a></td>
+                        <td class="list_name">메인 - TBC1_2_1BS 툴팁 포함</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_T.taxcalculator/TBC1_2_2.html" target="_blank">TBC1_2_2</a></td>
+                        <td class="list_name">IRP/연금저축 상세</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_T.taxcalculator/TBC1_2_3_1.html" target="_blank">TBC1_2_3_1</a></td>
+                        <td class="list_name">ISA 상세 - 조회전</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_T.taxcalculator/TBC1_2_3_2.html" target="_blank">TBC1_2_3_2</a></td>
+                        <td class="list_name">ISA 상세 - 조회후</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_T.taxcalculator/TBC1_2_4_1.html" target="_blank">TBC1_2_4_1</a></td>
+                        <td class="list_name">저축성보험(월적립식) - 조회전</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_T.taxcalculator/TBC1_2_4_2.html" target="_blank">TBC1_2_4_2</a></td>
+                        <td class="list_name">저축성보험(월적립식) - 조회후</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_T.taxcalculator/TBC1_2_5_1.html" target="_blank">TBC1_2_5_1</a></td>
+                        <td class="list_name">저축성보험(월적립식외) - 조회전</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_T.taxcalculator/TBC1_2_5_2.html" target="_blank">TBC1_2_5_2</a></td>
+                        <td class="list_name">저축성보험(월적립식외) - 조회후</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_T.taxcalculator/TBC1_2_6.html" target="_blank">TBC1_2_6</a></td>
+                        <td class="list_name">세제한도조회 데이터 조회 중</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_T.taxcalculator/TBC1_LPBS.html" target="_blank">TBC1_LPBS</a></td>
+                        <td class="list_name">세제한도조회 팝업모음(레이어, 바텀)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <!-- 자산 ----------------------------------------------------------------------->
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category ca_first">자산</td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_1.html" target="_blank">PP1_1</a></td>
+                        <td class="list_name">자산 메인 - 연동 전</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2.html" target="_blank">PP1_2</a></td>
+                        <td class="list_name">자산 메인 - 연동 후 (툴팁 , PP1_2_10BS 자산 등록 팝업 포함)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_3.html" target="_blank">PP1_3</a></td>
+                        <td class="list_name">자산 메인 - 0원</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_9.html" target="_blank">PP1_2_9</a></td>
+                        <td class="list_name">자산 목록편집</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_9_1P.html" target="_blank">PP1_2_9_1P</a></td>
+                        <td class="list_name">자산 목록편집 - 레이어 팝업모음</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/HM1_2_2.html" target="_blank">HM1_2_2</a></td>
+                        <td class="list_name">금융자산 비교</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/HM1_2_3.html" target="_blank">HM1_2_3</a></td>
+                        <td class="list_name">소비자산 비교</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <!-- <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/HM1_2_2_2P.html" target="_blank">HM1_2_2_2P</a></td>
+                        <td class="list_name">광고알럿</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr> -->
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/HM1_2_2_1FP.html" target="_blank">HM1_2_2_1FP</a></td>
+                        <td class="list_name">비교그룹 찾기</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_2_1_1.html" target="_blank">PP1_2_2_1_1</a></td>
+                        <td class="list_name">입출금 미연동 (PP1_2_2_1_1_1BS 입출금 툴팁)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_2_1_2.html" target="_blank">PP1_2_2_1_2</a></td>
+                        <td class="list_name">입출금 연동 (PP1_2_2_1_1_1BS 입출금 툴팁)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_2_1_2_2.html" target="_blank">PP1_2_2_1_2_2</a></td>
+                        <td class="list_name">입출금/마이너스 상세</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_FP.html" target="_blank">PP1_FP</a></td>
+                        <td class="list_name">입출금 ) 풀시트 팝업모음</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_2_2_1.html" target="_blank">PP1_2_2_2_1</a></td>
+                        <td class="list_name">예적금 미연동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_2_2_2.html" target="_blank">PP1_2_2_2_2</a></td>
+                        <td class="list_name">예적금 연동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_2_2_2_2.html" target="_blank">PP1_2_2_2_2_2</a></td>
+                        <td class="list_name">예적금 상세</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_FP2.html" target="_blank">PP1_FP2</a></td>
+                        <td class="list_name">예적금 ) 풀시트 팝업모음</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_2_3_1.html" target="_blank">PP1_2_2_3_1</a></td>
+                        <td class="list_name">선불페이 미연동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_2_3_2.html" target="_blank">PP1_2_2_3_2</a></td>
+                        <td class="list_name">선불페이 연동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_2_3_2_2.html" target="_blank">PP1_2_2_3_2_2</a></td>
+                        <td class="list_name">선불카드 상세</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_2_3_2_3.html" target="_blank">PP1_2_2_3_2_3</a></td>
+                        <td class="list_name">페이(권면) 상세</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_FP3.html" target="_blank">PP1_FP3</a></td>
+                        <td class="list_name">선불카드,페이권면 ) 풀시트 팝업모음</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_3_1.html" target="_blank">PP1_2_3_1</a></td>
+                        <td class="list_name">투자 미연동 (PP1_2_3_1_1BS 투자 툴팁)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_3_2.html" target="_blank">PP1_2_3_2</a></td>
+                        <td class="list_name">투자 연동 (PP1_2_3_1_1BS 투자 툴팁)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_3_1_2.html" target="_blank">PP1_2_3_1_2</a></td>
+                        <td class="list_name">투자 은행 상세</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_3_2_3_3T.html" target="_blank">PP1_2_3_2_3_3T</a></td>
+                        <td class="list_name">투자 증권 상세_투자종목 (PP1_2_3_2_3_4T 투자 증권 상세_거래내역)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_FP4.html" target="_blank">PP1_FP4</a></td>
+                        <td class="list_name">투자 ) 풀시트 팝업모음</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_4_1.html" target="_blank">PP1_2_4_1</a></td>
+                        <td class="list_name">연금 미연동 (PP1_2_4_1_1BS 연금 툴팁)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_4_2.html" target="_blank">PP1_2_4_2</a></td>
+                        <td class="list_name">연금 연동 (PP1_2_4_1_1BS 연금 툴팁)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_4_2_2_2T.html" target="_blank">PP1_2_4_2_2_2T</a></td>
+                        <td class="list_name">연금 개인형IRP_운용상품 (PP1_2_4_2_2_3T 연금 개인형IRP_거래내역)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_4_2_3_2T.html" target="_blank">PP1_2_4_2_3_2T</a></td>
+                        <td class="list_name">연금 증권_운용상품 (PP1_2_4_2_3_3T 연금 증권_거래내역)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_FP5.html" target="_blank">PP1_FP5</a></td>
+                        <td class="list_name">연금 ) 풀시트 팝업모음</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_5_1_1.html" target="_blank">PP1_2_5_1_1</a></td>
+                        <td class="list_name">저축성 보험 미연동 (PP1_2_5_1_1_1BS 저축성 툴팁)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_5_1_2.html" target="_blank">PP1_2_5_1_2</a></td>
+                        <td class="list_name">저축성 보험 연동 (PP1_2_5_1_1_1BS 저축성 툴팁)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_5_1_2_1_2T.html" target="_blank">PP1_2_5_1_2_1_2T</a></td>
+                        <td class="list_name">저축성/보장성_가입정보 (PP1_2_5_1_2_1_3T, PP1_2_5_1_2_1_4T 저축성 보장정보, 거래내역)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_5_2_1.html" target="_blank">PP1_2_5_2_1</a></td>
+                        <td class="list_name">보장성 보험 미연동 (PP1_2_5_2_1_1BS 저축성 툴팁)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_5_2_2.html" target="_blank">PP1_2_5_2_2</a></td>
+                        <td class="list_name">보장성 보험 연동 (PP1_2_5_2_1_1BS 저축성 툴팁)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_5_3_1.html" target="_blank">PP1_2_5_3_1</a></td>
+                        <td class="list_name">자동차 보험 미연동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_5_3_2.html" target="_blank">PP1_2_5_3_2</a></td>
+                        <td class="list_name">자동차 보험 연동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_5_3_2_1_2T.html" target="_blank">PP1_2_5_3_2_1_2T</a></td>
+                        <td class="list_name">자동차_가입정보 (PP1_2_5_3_2_1_3T 자동차보험 거래내역)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_5_4_1.html" target="_blank">PP1_2_5_4_1</a></td>
+                        <td class="list_name">기타 보험 미연동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_5_4_2.html" target="_blank">PP1_2_5_4_2</a></td>
+                        <td class="list_name">기타 보험 연동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_5_4_2_1_2T.html" target="_blank">PP1_2_5_4_2_1_2T</a></td>
+                        <td class="list_name">보증보험_가입정보 (PP1_2_5_4_2_1_3T 보증보험 거래내역)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_FP6.html" target="_blank">PP1_FP6</a></td>
+                        <td class="list_name">보험 ) 풀시트 팝업모음</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_7_1.html" target="_blank">PP1_2_7_1</a></td>
+                        <td class="list_name">대출 미연동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_7_2.html" target="_blank">PP1_2_7_2</a></td>
+                        <td class="list_name">대출 연동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_7_2_2_1.html" target="_blank">PP1_2_7_2_2_1</a></td>
+                        <td class="list_name">대출 은행(마이너스 제외)/캐피탈 상세 (PP1_2_7_2_2_1_1FP 더보기 팝업)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_7_2_2_2.html" target="_blank">PP1_2_7_2_2_2</a></td>
+                        <td class="list_name">대출 은행(마이너스)상세</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_7_2_3_1.html" target="_blank">PP1_2_7_2_3_1</a></td>
+                        <td class="list_name">대출 카드단기 상세</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_7_2_3_2.html" target="_blank">PP1_2_7_2_3_2</a></td>
+                        <td class="list_name">대출 카드장기 상세</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_7_2_4.html" target="_blank">PP1_2_7_2_4</a></td>
+                        <td class="list_name">대출 증권 상세</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_7_2_5.html" target="_blank">PP1_2_7_2_5</a></td>
+                        <td class="list_name">대출 보험 상세(PP1_2_7_2_5_1FP 더보기 팝업)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_FP7.html" target="_blank">PP1_FP7</a></td>
+                        <td class="list_name">대출 ) 풀시트 팝업모음</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_6_1_1.html" target="_blank">PP1_2_6_1_1</a></td>
+                        <td class="list_name">자동차 미연동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_6_1_2.html" target="_blank">PP1_2_6_1_2</a></td>
+                        <td class="list_name">자동차 연동 (내 차 만들기 목표설정 전, 후 / 자동차 등록 전, 후 / 연동 후 데이터 없음) </td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_6_1_4.html" target="_blank">PP1_2_6_1_4</a></td>
+                        <td class="list_name">자동차보험 연동전 </td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_6_1_4(2).html" target="_blank">PP1_2_6_1_4(2)</a></td>
+                        <td class="list_name">자동차보험 연동후 </td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_6_1_3FP_1BS_3_1FP.html" target="_blank">PP1_2_6_1_3FP_1BS_3_1FP</a></td>
+                        <td class="list_name">자동차 차량정보 등록완료</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_6_1_3FP_1BS_3_2FP.html" target="_blank">PP1_2_6_1_3FP_1BS_3_2FP</a></td>
+                        <td class="list_name">자동차 차량정보 등록실패</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_LPBS1.html" target="_blank">PP1_LPBS1</a></td>
+                        <td class="list_name">자동차 ) 팝업모음(레이어, 바텀)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_FP8.html" target="_blank">PP1_FP8</a></td>
+                        <td class="list_name">자동차 ) 풀시트 팝업 모음</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_6_2T_1.html" target="_blank">PP1_2_6_2T_1</a></td>
+                        <td class="list_name">부동산 미연동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_6_2T_2.html" target="_blank">PP1_2_6_2T_2</a></td>
+                        <td class="list_name">부동산 연동_내집만들기</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_6_2T_3.html" target="_blank">PP1_2_6_2T_3</a></td>
+                        <td class="list_name">부동산 등록</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_6_2T_5.html" target="_blank">PP1_2_6_2T_5</a></td>
+                        <td class="list_name">부동산 상세 - 배너</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_6_2T_5_2.html" target="_blank">PP1_2_6_2T_5_2</a></td>
+                        <td class="list_name">부동산 상세 - 목표계좌 연결 버튼</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_6_2T_5_3.html" target="_blank">PP1_2_6_2T_5_3</a></td>
+                        <td class="list_name">부동산 상세 - 매매시세 그래프</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_6_2T_FP.html" target="_blank">PP1_2_6_2T_FP</a></td>
+                        <td class="list_name">부동산 풀시트 팝업 모음</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_P.assets/PP1_2_6_2T_LPBS.html" target="_blank">PP1_2_6_2T_LPBS</a></td>
+                        <td class="list_name">부동산 팝업모음(레이어, 바텀)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+
+                    
+                    <!-- 부동산 ----------------------------------------------------------------------->
+                    <!-- <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category ca_first">부동산(삭제예정)</td>
+                        <td class="list_id"><a href="proto_K.estate/SHK1000.html" target="_blank">SHK1000</a></td>
+                        <td class="list_name">부동산 메인_연동전</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_K.estate/SHK2000.html" target="_blank">SHK2000</a></td>
+                        <td class="list_name">부동산 메인_연동후_목돈만들기 연동전</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_K.estate/SHK2100.html" target="_blank">SHK2100</a></td>
+                        <td class="list_name">부동산 메인_연동후_목돈만들기 연동후</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr> -->
+
+                    <!-- 소비 ----------------------------------------------------------------------->
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category ca_first">소비</td>
+                        <td class="list_id"><a href="proto_C.consumption/CT1_1.html" target="_blank">CT1_1</a></td>
+                        <td class="list_name">소비메인_미연동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_C.consumption/CT1_2.html" target="_blank">CT1_2</a></td>
+                        <td class="list_name">소비메인_연동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_C.consumption/CT1_2_1.html" target="_blank">CT1_2_1</a></td>
+                        <td class="list_name">소비메인_미연동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_C.consumption/CT1_2_5.html" target="_blank">CT1_2_5</a></td>
+                        <td class="list_name">카드편집</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_C.consumption/CT1_3.html" target="_blank">CT1_3</a></td>
+                        <td class="list_name">이용내역</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_C.consumption/CT1_3_FP.html" target="_blank">CT1_3_FP</a></td>
+                        <td class="list_name">이용내역_풀팝업</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_C.consumption/CT1_4.html" target="_blank">CT1_4</a></td>
+                        <td class="list_name">청구목록</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_C.consumption/CT1_4_2_3.html" target="_blank">CT1_4_2_3</a></td>
+                        <td class="list_name">청구상세</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_C.consumption/CT1_4_FP.html" target="_blank">CT1_4_FP</a></td>
+                        <td class="list_name">청구목록_풀팝업</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_C.consumption/CT1_4_LP.html" target="_blank">CT1_4_LP</a></td>
+                        <td class="list_name">청구목록_레이어팝업</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_C.consumption/CT1_5.html" target="_blank">CT1_5</a></td>
+                        <td class="list_name">통신비_메인</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_C.consumption/CT1_5_1_2.html" target="_blank">CT1_5_1_2</a></td>
+                        <td class="list_name">통신비_청구상세</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_C.consumption/CT1_5_FP.html" target="_blank">CT1_5_FP</a></td>
+                        <td class="list_name">통신비_풀팝업</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_C.consumption/CT1_5_LP.html" target="_blank">CT1_5_LP</a></td>
+                        <td class="list_name">통신비_레이어팝업</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_C.consumption/CT1_5_4.html" target="_blank">CT1_5_4</a></td>
+                        <td class="list_name">통신비_편집</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_C.consumption/CT1_6.html" target="_blank">CT1_6</a></td>
+                        <td class="list_name">월간리포트</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_C.consumption/CT1_6_1.html" target="_blank">CT1_6_1</a></td>
+                        <td class="list_name">월간 소비 상세</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <!-- <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_C.consumption/.html" target="_blank"></a></td>
+                        <td class="list_name">소비비교</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr> -->
+                    <!-- 목표 ----------------------------------------------------------------------->
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category ca_first">목표</td>
+                        <td class="list_id"><a href="proto_G.goal/GO1_1.html" target="_blank">GO1_1</a></td>
+                        <td class="list_name">목표메인_미연동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_G.goal/GO1_2.html" target="_blank">GO1_2</a></td>
+                        <td class="list_name">목표메인_연동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_G.goal/GO_FP.html" target="_blank">GO_FP</a></td>
+                        <td class="list_name">나의목표, 갖고싶어_상세_케이스 6개 - 풀팝업</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_G.goal/GO_LP.html" target="_blank">GO_LP</a></td>
+                        <td class="list_name">목돈 만들기 레이어팝업</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <!-- 목표 ----------------------------------------------------------------------->
+                    <!-- <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_R.reduce/SHR2100.html" target="_blank">SHR2100</a></td>
+                        <td class="list_name">예산설정</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category "></td>
+                        <td class="list_id"><a href="proto_R.reduce/SHR2300.html" target="_blank">SHR2300</a></td>
+                        <td class="list_name">절약하기_정상</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category "></td>
+                        <td class="list_id"><a href="proto_R.reduce/SHR2300_1.html" target="_blank">SHR2300_1</a></td>
+                        <td class="list_name">절약하기_정상_가맹정 미동의</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category "></td>
+                        <td class="list_id"><a href="proto_R.reduce/SHR2400.html" target="_blank">SHR2400</a></td>
+                        <td class="list_name">절약하기_초과</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category "></td>
+                        <td class="list_id"><a href="proto_R.reduce/SHR2100_1.html" target="_blank">SHR2100_1</a></td>
+                        <td class="list_name">레이어팝업 모음</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_R.reduce/SHR2531.html" target="_blank">SHR2531</a></td>
+                        <td class="list_name">목돈만들기_등록_목표세우기</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr> -->
+                    <!-- 브릿지/회원가입 ----------------------------------------------------------------------->
+                    <!-- [S] 2022-05 알고하는동의 -->
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category ca_first">브릿지/회원가입<!--<p class="category2">2022-05 알고하는동의</p>--></td>
+                        <td class="list_id"><a href="proto_J.bridge/JJ1001-01.html" target="_blank">JJ1001-01</a></td>
+                        <td class="list_name">약관동의_비회원( JJ1001-02, JJ1001-03 )</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_J.bridge/JJ1002-01.html" target="_blank">JJ1002-01</a></td>
+                        <td class="list_name">약관동의_회원( JJ1002-02, JJ1002-03 )</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_J.bridge/JJ1003.html" target="_blank">JJ1003</a></td>
+                        <td class="list_name">약관동의_자산관리기회원</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <!-- <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_J.bridge/JJ1004.html" target="_blank">JJ1004</a></td>
+                        <td class="list_name">체크페이 휴면해지안내</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr> -->
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_J.bridge/JJ1005.html" target="_blank">JJ1005</a></td>
+                        <td class="list_name">일시정지 안내</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_J.bridge/JJ1006.html" target="_blank">JJ1006</a></td>
+                        <td class="list_name">성인안내</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_J.bridge/JJ1007.html" target="_blank">JJ1007</a></td>
+                        <td class="list_name">서버점검안내</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_J.bridge/JJ1010.html" target="_blank">JJ1010</a></td>
+                        <td class="list_name">웹뷰</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_J.bridge/JJ1100.html" target="_blank">JJ1100</a></td>
+                        <td class="list_name">브릿지로딩</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_J.bridge/JJ9000.html" target="_blank">JJ9000</a></td>
+                        <td class="list_name">잘못된접근</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_J.bridge/YY2000.html" target="_blank">YY2000</a></td>
+                        <td class="list_name">정책상세_통합</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_J.bridge/YY2000_1.html" target="_blank">YY2000_1</a></td>
+                        <td class="list_name">정책상세_통합</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_J.bridge/YY2001.html" target="_blank">YY2001</a></td>
+                        <td class="list_name">정책상세_단일</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                
+                    <!-- [E] 2022-05 알고하는동의 -->
+
+                    <!-- 통합인증/개별인증 ----------------------------------------------------------------------->
+                    <!-- [S] 2022-05 알고하는동의 -->
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category ca_first">통합인증/개별인증<!--<p class="category2">2022-05 알고하는동의</p>--></td>
+                        <td class="list_id"><a href="proto_X.certi/XX1100.html" target="_blank">XX1100</a></td>
+                        <td class="list_name">[자산선택]_금융기관 선택</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XX1101.html" target="_blank">XX1101</a></td>
+                        <td class="list_name">[자산선택]_50개 이상 선택시 알럿</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XX1110.html" target="_blank">XX1110</a></td>
+                        <td class="list_name">[자산선택]_인증방식 선택</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XX1200.html" target="_blank">XX1200</a></td>
+                        <td class="list_name">금융기관 자동선택 팝업</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XX1300.html" target="_blank">XX1300</a></td>
+                        <td class="list_name">[자산선택]_금융기관 자동선택 팝업</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XX3000.html" target="_blank">XX3000</a></td>
+                        <td class="list_name">[인증]_세부 전송요구 </td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XX3001.html" target="_blank">XX3001</a></td>
+                        <td class="list_name">[인증]_세부 전송요구 </td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XX3002.html" target="_blank">XX3002</a></td>
+                        <td class="list_name">[인증]_세부 전송요구 </td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XX3003.html" target="_blank">XX3003</a></td>
+                        <td class="list_name">[인증]_세부 전송요구 실패</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXC1210.html" target="_blank">XXC1210</a></td>
+                        <td class="list_name">[통합인증1차]_네이버인증웹뷰-1</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXC1300.html" target="_blank">XXC1300</a></td>
+                        <td class="list_name">[통합인증1차]_목록 전송요구 검색 (visual)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXC1301.html" target="_blank">XXC1301</a></td>
+                        <td class="list_name">[통합인증1차]_목록 전송요구 등록 (visual)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXC1400.html" target="_blank">XXC1400</a></td>
+                        <td class="list_name">[통합인증2차]_세부항목 선택( XXC1401 )</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXC9000.html" target="_blank">XXC9000</a></td>
+                        <td class="list_name">[통합인증1차]_인증동의_수집이용동의</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXC9100.html" target="_blank">XXC9100</a></td>
+                        <td class="list_name">[통합인증1차]_인증동의_통합인증약관( XXC9100-1 )</td>
+                        <td class="list_etc">공동인증서 삭제</td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXC9110.html" target="_blank">XXC9110</a></td>
+                        <td class="list_name">[통합인증1차]_인증동의_통합인증약관웹뷰</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXC9111.html" target="_blank">XXC9111</a></td>
+                        <td class="list_name">[통합인증1차]_인증동의_통합인증약관1</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXC9112.html" target="_blank">XXC9112</a></td>
+                        <td class="list_name">[통합인증1차]_인증동의_통합인증약관2</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXC9113.html" target="_blank">XXC9113</a></td>
+                        <td class="list_name">[통합인증1차]_인증동의_통합인증약관3</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXC9120.html" target="_blank">XXC9120</a></td>
+                        <td class="list_name">[통합인증1차]_인증동의_닫기돌아가기</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXC9200.html" target="_blank">XXC9200</a></td>
+                        <td class="list_name">[통합인증2차]_통합인증동의_수집이용동의( XXC9201, XXC9202 )</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXC9211.html" target="_blank">XXC9211</a></td>
+                        <td class="list_name">[통합인증2차]_동의여부재확인_적요거래메모</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXC9212.html" target="_blank">XXC9212</a></td>
+                        <td class="list_name">[통합인증2차]_동의여부재확인_상품구매정보</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXC9213.html" target="_blank">XXC9213</a></td>
+                        <td class="list_name">[통합인증2차]_동의여부재확인_가맹점명</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXC9214.html" target="_blank">XXC9214</a></td>
+                        <td class="list_name">[통합인증2차]_동의여부재확인_정기적전송</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXC9220.html" target="_blank">XXC9220</a></td>
+                        <td class="list_name">[통합인증2차]_네이버인증 웹뷰 - 1</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXI1000.html" target="_blank">XXI1000</a></td>
+                        <td class="list_name">[개별인증]_기관이동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm"></td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXI1100.html" target="_blank">XXI1100</a></td>
+                        <td class="list_name">[개별인증]_기관페이지</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXI1110.html" target="_blank">XXI1110</a></td>
+                        <td class="list_name">[개별인증]_기관페이지닫기</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXI1200.html" target="_blank">XXI1200</a></td>
+                        <td class="list_name">[개별인증]_개별인증_실패</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXI9040.html" target="_blank">XXI9040</a></td>
+                        <td class="list_name">[개별인증]_인증동의_수집이용동의서</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_X.certi/XXI9100_SH.html" target="_blank">XXI9100_SH</a></td>
+                        <td class="list_name">[개별인증]_인증동의_개별제3자_SH</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <!-- [E] 2022-05 알고하는동의 -->
+
+                    <!-- 마이페이지 ----------------------------------------------------------------------->
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category ca_first">마이페이지</td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001.html" target="_blank">Y2001</a></td>
+                        <td class="list_name">정책상세_단일</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                   
+                    <!-- 
+                        개발팀 요청 : 타 제휴사 3자제공동의서 index에서 안보이게 해달라고 함
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_2_1.html" target="_blank">Y2001_2_1</a></td>
+                        <td class="list_name">개인(신용)정보 제3자 제공 동의서1</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_2_2.html" target="_blank">Y2001_2_2</a></td>
+                        <td class="list_name">개인(신용)정보 제3자 제공 동의서2</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_2_3.html" target="_blank">Y2001_2_3</a></td>
+                        <td class="list_name">개인(신용)정보 제3자 제공 동의서3</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_2_4.html" target="_blank">Y2001_2_4</a></td>
+                        <td class="list_name">개인(신용)정보 제3자 제공 동의서4</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_2_6.html" target="_blank">Y2001_2_6</a></td>
+                        <td class="list_name">개인(신용)정보 제3자 제공 동의서6</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_2_7.html" target="_blank">Y2001_2_7</a></td>
+                        <td class="list_name">개인(신용)정보 제3자 제공 동의서7</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_2_8.html" target="_blank">Y2001_2_8</a></td>
+                        <td class="list_name">개인(신용)정보 제3자 제공 동의서8</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_2_9.html" target="_blank">Y2001_2_9</a></td>
+                        <td class="list_name">개인(신용)정보 제3자 제공 동의서9</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_2_10.html" target="_blank">Y2001_2_10</a></td>
+                        <td class="list_name">개인(신용)정보 제3자 제공 동의서10</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_2_11.html" target="_blank">Y2001_2_11</a></td>
+                        <td class="list_name">개인(신용)정보 제3자 제공 동의서11</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_2_12.html" target="_blank">Y2001_2_12</a></td>
+                        <td class="list_name">개인(신용)정보 제3자 제공 동의서12</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr> -->
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_3.html" target="_blank">Y2001_3</a></td>
+                        <td class="list_name">개인(신용)정보 수집·이용 동의</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_4.html" target="_blank">Y2001_4</a></td>
+                        <td class="list_name">개인(신용)정보 수집.이용동의_자동차시세조회</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_2_5.html" target="_blank">Y2001_5</a></td>
+                        <td class="list_name">개인(신용)정보 수집.이용동의_부동산시세조회</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_2_13.html" target="_blank">Y2001_2_13</a></td>
+                        <td class="list_name">개인(신용)정보 제3자 제공 동의서_에이피더핀은행</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_2_14.html" target="_blank">Y2001_2_14</a></td>
+                        <td class="list_name">개인(신용)정보 제3자 제공 동의서_에이피더핀중앙회</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_2_15.html" target="_blank">Y2001_2_15</a></td>
+                        <td class="list_name">개인(신용)정보 제3자 제공 동의서_오토비긴즈</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_2_16.html" target="_blank">Y2001_2_16</a></td>
+                        <td class="list_name">개인(신용)정보 제3자 제공 동의서_자동차시세조회_에이피더핀은행</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_2_17.html" target="_blank">Y2001_2_17</a></td>
+                        <td class="list_name">개인(신용)정보 제3자 제공 동의서_자동차시세조회_에이피더핀중앙회</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_2_18.html" target="_blank">Y2001_2_18</a></td>
+                        <td class="list_name">개인(신용)정보 제3자 제공 동의서_부동산시세조회_에이피더핀은행</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_2_19.html" target="_blank">Y2001_2_19</a></td>
+                        <td class="list_name">개인(신용)정보 제3자 제공 동의서_부동산시세조회_에이피더핀중앙회</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_3_1.html" target="_blank">Y2001_3_1</a></td>
+                        <td class="list_name">인증 동의</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/Y2001_3_1_2.html" target="_blank">Y2001_3_1_2</a></td>
+                        <td class="list_name">인증 동의</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1000.html" target="_blank">YY1000</a></td>
+                        <td class="list_name">마이페이지</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1100.html" target="_blank">YY1100</a></td>
+                        <td class="list_name">내정보</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1110.html" target="_blank">YY1110</a></td>
+                        <td class="list_name">이름변경</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1120.html" target="_blank">YY1120</a></td>
+                        <td class="list_name">이메일변경</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1200.html" target="_blank">YY1200</a></td>
+                        <td class="list_name">연결관리</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1201.html" target="_blank">YY1201</a></td>
+                        <td class="list_name">연결관리_내역없음</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1210.html" target="_blank">YY1210</a></td>
+                        <td class="list_name">연결관리_연동자산</td>
+                        <td class="list_etc">22.09 btntType2 클래스 추가</td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1211.html" target="_blank">YY1211</a></td>
+                        <td class="list_name">연결관리_만료</td>
+                        <td class="list_etc">22.09 btntType2 클래스 추가</td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1212.html" target="_blank">YY1212</a></td>
+                        <td class="list_name">연결관리_오류_업데이트중</td>
+                        <td class="list_etc">22.09 btntType2 클래스 추가</td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1213.html" target="_blank">YY1213</a></td>
+                        <td class="list_name">연동자산_점검</td>
+                        <td class="list_etc">22.09 btntType2 클래스 추가</td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1220.html" target="_blank">YY1220</a></td>
+                        <td class="list_name">연동정보</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1221.html" target="_blank">YY1221</a></td>
+                        <td class="list_name">연동정보_미동의</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1222.html" target="_blank">YY1222</a></td>
+                        <td class="list_name">연동정보_만료</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1223.html" target="_blank">YY1223</a></td>
+                        <td class="list_name">연동정보_점검중</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1224.html" target="_blank">YY1224</a></td>
+                        <td class="list_name">기관철회</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1225.html" target="_blank">YY1225</a></td>
+                        <td class="list_name">연동정보_연동오류</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1230.html" target="_blank">YY1230</a></td>
+                        <td class="list_name">개별기관_자산연동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1231.html" target="_blank">YY1231</a></td>
+                        <td class="list_name">추가자산연동</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1232.html" target="_blank">YY1232</a></td>
+                        <td class="list_name">추가자산없음</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1233.html" target="_blank">YY1233</a></td>
+                        <td class="list_name">자산숨기기</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1234.html" target="_blank">YY1234</a></td>
+                        <td class="list_name">연동정보_인증방식선택</td>
+                        <td class="list_etc">YY1214</td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1236.html" target="_blank">YY1236</a></td>
+                        <td class="list_name">점검중 팝업</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1240.html" target="_blank">YY1240</a></td>
+                        <td class="list_name">전송요구_기관별연장</td>
+                        <td class="list_etc">공동인증서 삭제</td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1241.html" target="_blank">YY1241</a></td>
+                        <td class="list_name">전송요구_정기적전송</td>
+                        <td class="list_etc">공동인증서 삭제</td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1242.html" target="_blank">YY1242</a></td>
+                        <td class="list_name">전송요구_선택항목</td>
+                        <td class="list_etc">공동인증서삭제</td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1250.html" target="_blank">YY1250</a></td>
+                        <td class="list_name">전송요구_정기적동의_On</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1251.html" target="_blank">YY1251</a></td>
+                        <td class="list_name">전송요구_정기적동의_Off</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1260.html" target="_blank">YY1260</a></td>
+                        <td class="list_name">전송요구_전송내역_연장</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1261.html" target="_blank">YY1261</a></td>
+                        <td class="list_name">전송요구_전송내역_연장_멘트변경(YY1262)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1263.html" target="_blank">YY1263</a></td>
+                        <td class="list_name">전송요구_변경</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1264.html" target="_blank">YY1264</a></td>
+                        <td class="list_name">전송요구_변경실패</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1270.html" target="_blank">YY1270</a></td>
+                        <td class="list_name">전송요구_한번에연장</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1271.html" target="_blank">YY1271</a></td>
+                        <td class="list_name">전송요구_한번에수정</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1272.html" target="_blank">YY1272</a></td>
+                        <td class="list_name">전송요구_한번에연장_인증방식선택</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1273.html" target="_blank">YY1273</a></td>
+                        <td class="list_name">전송요구_한번에수정_인증방식선택</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1274.html" target="_blank">YY1274</a></td>
+                        <td class="list_name">다수전송기간_통합인증약관_열기</td>
+                        <td class="list_etc">공동인증서 삭제</td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1275.html" target="_blank">YY1275</a></td>
+                        <td class="list_name">다수전송기간_통합인증약관_닫기</td>
+                        <td class="list_etc">공동인증서 삭제</td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1300.html" target="_blank">YY1300</a></td>
+                        <td class="list_name">내 자산 내려받기</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1310.html" target="_blank">YY1310</a></td>
+                        <td class="list_name">내려받기_기관선택(YY1320)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1311.html" target="_blank">YY1311</a></td>
+                        <td class="list_name">내려받기_기관선택_없음</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1330.html" target="_blank">YY1330</a></td>
+                        <td class="list_name">내려받기_전송</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1340.html" target="_blank">YY1340</a></td>
+                        <td class="list_name">내려받기_전송실패</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1400.html" target="_blank">YY1400</a></td>
+                        <td class="list_name">공지사항</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1410.html" target="_blank">YY1410</a></td>
+                        <td class="list_name">공지사항_상세</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1500.html" target="_blank">YY1500</a></td>
+                        <td class="list_name">약관 및 정책</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1510.html" target="_blank">YY1510</a></td>
+                        <td class="list_name">이용약관</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1520.html" target="_blank">YY1520</a></td>
+                        <td class="list_name">이메일인증</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1521.html" target="_blank">YY1521</a></td>
+                        <td class="list_name">인증번호입력 _실패</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1522.html" target="_blank">YY1522</a></td>
+                        <td class="list_name">인증실패</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1523.html" target="_blank">YY1523</a></td>
+                        <td class="list_name">간편비밀번호등록</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1524.html" target="_blank">YY1524</a></td>
+                        <td class="list_name">간편비밀번호재등록</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1525.html" target="_blank">YY1525</a></td>
+                        <td class="list_name">신용정보 이용 및 제공사실 통지_본인인증</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1526.html" target="_blank">YY1526</a></td>
+                        <td class="list_name">인증번호재발송</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1527.html" target="_blank">YY1527</a></td>
+                        <td class="list_name">이메일인증제한</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1528.html" target="_blank">YY1528</a></td>
+                        <td class="list_name">재발송제한</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1529.html" target="_blank">YY1529</a></td>
+                        <td class="list_name">진입실패</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1530.html" target="_blank">YY1530</a></td>
+                        <td class="list_name">신용정보 이용 및 제공사실 통지</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1531.html" target="_blank">YY1531</a></td>
+                        <td class="list_name">신용정보 이용 및 제공사실 통지_정기전송_저장</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1532.html" target="_blank">YY1532</a></td>
+                        <td class="list_name">신용정보 이용 및 제공사실 통지_정기전송_저장실패</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1540.html" target="_blank">YY1540</a></td>
+                        <td class="list_name">이용자의 권리 및 유의사항</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1600.html" target="_blank">YY1600</a></td>
+                        <td class="list_name">제3자정보제공동의내역</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1601.html" target="_blank">YY1601</a></td>
+                        <td class="list_name">제3자정보제공동의내역_없음</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <!-- <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1613.html" target="_blank">YY1613</a></td>
+                        <td class="list_name">제3자정보제공동의철회_체크페이안내</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr> -->
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1620.html" target="_blank">YY1620</a></td>
+                        <td class="list_name">제3자정보제공동의철회_재동의</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1700.html" target="_blank">YY1700</a></td>
+                        <td class="list_name">고객센터(YY1701, YY1710, YY1711)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1720.html" target="_blank">YY1720</a></td>
+                        <td class="list_name">FAQ검색(YY1721, YY1722, YY1723)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1800.html" target="_blank">YY1800</a></td>
+                        <td class="list_name">이용해지</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1810.html" target="_blank">YY1810</a></td>
+                        <td class="list_name">서비스 이용해지_타제휴사용(YY1811)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1820.html" target="_blank">YY1820</a></td>
+                        <td class="list_name">서비스 이용해지_타제휴없음</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1830.html" target="_blank">YY1830</a></td>
+                        <td class="list_name">회원탈퇴_일괄해지_타제휴사용(YY1831)</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                    <tr>
+                        <td class="list_num"></td>
+                        <td class="list_category"></td>
+                        <td class="list_id"><a href="proto_Y.setting/YY1840.html" target="_blank">YY1840</a></td>
+                        <td class="list_name">회원탈퇴_일괄해지_타제휴없음</td>
+                        <td class="list_etc"></td>
+                        <td class="list_confirm">완료</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    <!-- [E] contents ------------------------------------------------------------------------------>
+    </div>
+</div>
+<!-- //wrap -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+    var listNum = $('.wrap_list .tbl_list .list_num');
+    listNum.each(function(index, item){
+        $(item).text(index + 1);
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- [S] chart -->
+<script src="https://plugin-dev.coocon.co.kr/highchart/highcharts.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/exporting.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/export-data.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/accessibility.js"></script>
+<!-- [E] chart -->
+</head>
+<body>
+<div class="test_view">
+<!-- 퍼블 화면 확인용 -->
+<style>
+body{background-color:#444;}
+.test_view{display:flex;flex-wrap:wrap;}
+.view_section{position:relative;border:1px dotted #ddd;}
+.view_section .type_no{padding:5px 0;text-align:center;font-size:12px;font-weight:300;color:#fff;}
+.layer_bottomsheet, .layer_popup{display:block;position:relative;width:360px;height:100%;margin-bottom:10px;margin-left:0px;}
+.layer_bottomsheet .layer_inner{overflow:inherit;position:relative;max-height:auto;transform: translate(0, 0);}
+</style>
+<!-- //퍼블 화면 확인용 -->
+
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">PP1_2_6_2T_3_1IN_1IN_1LP-대출계좌 등록 이동</h3>
+
+<!-- PP1_2_6_2T_3_1IN_1IN_1LP-대출계좌 등록 이동  -->
+<div id="PP1_2_6_2T_3_1IN_1IN_1LP" class="layer_popup type2"> 
+	<div class="layer_position">
+		<div class="layer_inner">
+			<div class="layer_cont">
+				<div class="msg_box">
+					<p class="msg_alert">입력하신 내용을 저장하고<br>대출계좌 등록화면으로 이동합니다.</p>
+					<p class="msg_customer mgt10">계속 진행할까요?</p>
+				</div>
+				<div class="btn_layer_wrap">
+					<button type="button" class="js_pop_close btn_cancel"><span>아니요</span></button>
+					<button type="button" class="js_pop_close btn_confirm"><span>네</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // PP1_2_6_2T_3_1IN_1IN_1LP-대출계좌 등록 이동 -->
+
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">PP1_2_6_2T_2_4BS-삭제확인</h3>
+
+<!-- PP1_2_6_2T_2_4BS-삭제확인  -->
+<div id="PP1_2_6_2T_2_4BS" class="layer_popup type2"> 
+	<div class="layer_position">
+		<div class="layer_inner">
+			<div class="layer_cont">
+				<div class="msg_box">
+					<p class="msg_alert"> 
+                        <span class="pointColor">{단지명}</span>를<br>
+                        삭제할까요?
+                    </p>
+				</div>
+				<div class="btn_layer_wrap">
+					<button type="button" class="js_pop_close btn_cancel"><span>아니요</span></button>
+					<button type="button" class="js_pop_close btn_confirm"><span>네</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // PP1_2_6_2T_2_4BS-삭제확인 -->
+
+<!-- 퍼블확인용 --></div>
+
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">PP1_2_6_2T_3_1IN_2IN_1BS-연결 대출 선택</h3>
+<!-- bottomsheet PP1_2_6_2T_3_1IN_2IN_1BS-연결 대출 선택 -->
+<div id="layer_PP1_2_6_2T_3_1IN_2IN_1BS" class="layer_bottomsheet" style="display:block"> 
+    <div class="layer_inner">
+        <div class="layer_tit">
+            <strong class="tit"><span>대출 계좌 선택</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont" style="max-height: 879px;">
+            <div class="cdChkLst">
+                <div class="cdChkItem all">
+                    <label for="chkAll">
+                        <span id="">은행</span>
+                    </label>
+                </div>
+                <ul class="cdChkSubList bankChk">
+                    <li class="cdChkItem"> 
+                        <label for="subChk1">
+                            <input type="radio" name="bankchk" id="subChk1">
+                            <i></i><img src="../../img/bank/bank_logo_021.png" alt="bnk" class="im"><span class="chkName">Sh취업이룸통장</span>
+                            <span class="cdChkTxt"><em>10,000,000</em>원</span>
+                        </label>
+                    </li>
+                    <li class="cdChkItem"> 
+                        <label for="subChk2">
+                            <input type="radio" name="bankchk" id="subChk2">
+                            <i></i><img src="../../img/bank/bank_logo_021.png" alt="bnk" class="im"><span class="chkName">Sh취업이룸통장</span>
+                            <span class="cdChkTxt"><em>10,000,000</em>원</span>
+                        </label>
+                    </li>
+                    <li class="cdChkItem"> 
+                        <label for="subChk3">
+                            <input type="radio" name="bankchk" id="subChk3">
+                            <i></i><img src="../../img/bank/bank_logo_021.png" alt="bnk" class="im"><span class="chkName">Sh취업이룸통장</span>
+                            <span class="cdChkTxt"><em>10,000,000</em>원</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>계좌 선택</span></button>
+		</div>
+    </div>
+</div>
+<!-- //  bottomsheet PP1_2_6_2T_3_1IN_2IN_1BS-연결 대출 선택 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">bottomsheet layer_PP1_2_6_2T_2_3BS  내 부동산 자산_툴팁</h3>
+<!-- bottomsheet layer_PP1_2_6_2T_2_3BS  내 부동산 자산_툴팁 -->
+<div id="layer_PP1_2_6_2T_2_3BS" class="layer_bottomsheet">
+    <div class="layer_inner">
+        <div class="layer_tit type2"> 
+            <strong class="tit"><span>내 부동산 자산 합산 기준</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont" style="max-height: 879px;">
+            <div class="msg_box">
+                <p class="msg_notice">
+                    자가합계 + 전/월세 합계
+                </p>
+                <ul class="notice_list">
+                    <li class="list">
+                        <span class="tx">
+                            자가합계 = 현재시세 - 대출금액 - 세입자 보증금
+                        </span>
+                    </li>
+					<li class="list">
+                        <span class="tx">
+                            전/월세 합계 = 보증금 - 대출금액
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // layer_PP1_2_6_2T_2_3BS  내 부동산 자산_툴팁 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">PP1_2_6_2T_3_1IN_1IN_2LP  등록 확인</h3>
+
+<!-- layer_popup PP1_2_6_2T_3_1IN_1IN_2LP  등록 확인 -->
+<div id="PP1_2_6_2T_3_1IN_1IN_2LP" class="layer_popup type2">
+	<div class="layer_position">
+		<div class="layer_inner">
+			<div class="layer_cont">
+				<div class="msg_box">
+                    <p class="msg_alert tx_bold">
+                        <span class="pointColor">{단지명}</span>의 정보를<br>
+                        등록할까요?
+                    </p>
+                    <ul class="state_box">
+                        <li class="list">
+                            <p class="list_tit">면적</p>
+                            <p class="list_detail"><em>138㎡/113.67㎡</em></p>
+                        </li>
+                        <li class="list">
+                            <p class="list_tit">주거유형</p>
+                            <p class="list_detail">자가</p>
+                        </li>
+                       
+                    </ul>
+				</div>
+				<div class="btn_layer_wrap">
+					<button type="button" class="js_pop_close btn_cancel"><span>아니요</span></button>
+					<button type="button" class="js_pop_close btn_confirm"><span>네</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // layer_popup PP1_2_6_2T_3_1IN_1IN_2LP  등록 확인  -->
+
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">PP1_2_6_2T_3_1IN_1IN_3BS  부동산 등록 약관 확인</h3>
+
+<!-- bottomsheet PP1_2_6_2T_3_1IN_1IN_3BS  부동산 등록 약관 확인 -->
+<div id="PP1_2_6_1_3FP_1BS" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<div class="agChkItem all">
+                <label for="chkAll">
+                    <input type="checkbox" id="chkAll"><i></i><span id="">약관 전체 동의</span>
+                </label>
+            </div>
+		</div>
+		<div class="layer_cont">
+			<ul class="agChkSubList" id=""><!-- 디폴트 닫힘 style="display:none;" 추가 -->
+                <li class="agChkItem">
+                    <label for="subChk1">
+                        <input type="checkbox" id="subChk1"><i></i>
+                        <span id="">개인(신용)정보 수집 · 이용 동의_부동산<br>
+                            시세조회 서비스 (필수)</span>
+                    </label>
+                    <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+                </li>
+                <li class="agChkItem">
+                    <label for="subChk2">
+                        <input type="checkbox" id="subChk2"><i></i><span id="">개인(신용)정보 제3자 제공 동의_부동산<br>
+                            시세정보 제공 (선택)</span>
+                    </label>
+                    <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+                </li>
+            </ul>
+		</div>
+        <div class="layer_footer">
+            <button type="button" class="js_pop_close btn_cancel"><span>취소</span></button>
+			<button type="button" class="js_pop_close btn_confirm"><span>동의</span></button>
+		</div>
+	</div>
+</div>
+<!-- // PP1_2_6_2T_3_1IN_1IN_3BS  부동산 등록 약관 확인 -->
+
+<!-- 퍼블확인용 --></div>
+
+
+</div><!-- test_view -->
+<script>
+
+// [S] 월간내역 메모 textarea 자동 높이조절, 글자수 체크, textarea val값 초기화
+function testAreaHeight1() {
+	var textEle = $('.layer_memo_wrap .js_textarea1');
+	textEle[0].style.height = 'auto';
+	var textEleHeight = textEle.prop('scrollHeight');
+	textEle.css('height', textEleHeight);
+};
+var textEle = $('.layer_memo_wrap .js_textarea1');
+var btnMemoValReset = $('.layer_memo_wrap .btn_val_reset');
+btnMemoValReset.hide();
+textEle.on('keyup', function() {
+	//자동높이
+	testAreaHeight1();
+	$('#js_textarea1_cnt').html("<span class='pointColor'>"+$(this).val().length+"</span> / 60");
+	//val값 초기화
+	if(textEle.val().length === 0){
+		btnMemoValReset.hide();
+	}else if($(this).val().length > 60) {
+		$(this).val($(this).val().substring(0, 60));
+		$('#js_textarea1_cnt').html("<span class='pointColor'>60</span> / 60");
+	}else{
+		btnMemoValReset.show();
+	}
+});
+function memoValReset() {
+	textEle.val('').css('height','inherit').focus();
+	btnMemoValReset.hide();
+	$('#js_textarea1_cnt').html("<span class='pointColor'>"+textEle.val().length+"</span> / 60");
+}
+// [E] 월간내역 메모 textarea 자동 높이조절, 글자수 체크, textarea val값 초기화
+
+$(document).ready(function(){
+
+	// [S] 캘린더 탭
+	$(".tabInter").tabs({
+		wrapClass:".tabInter",
+		clickClass:".js_tabclickDp1",
+		showClass:".tab_cntDp1",
+		animate:false,
+		contentWidthFull:false,//effect when animate:true
+		animateBorder:["false",".tabs_header"],//show border in class .
+		fade:false,
+		speed:500
+	});
+	// [E] 캘린더 탭
+
+});
+</script>
+</body>
+</html>

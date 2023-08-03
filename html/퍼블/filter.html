@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- [S] chart -->
+<script src="https://plugin-dev.coocon.co.kr/highchart/highcharts.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/exporting.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/export-data.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/accessibility.js"></script>
+<!-- [E] chart -->
+</head>
+<body>
+<div class="test_view">
+<!-- 퍼블 화면 확인용 -->
+<style>
+body{background-color:#444;}
+.test_view{display:flex;flex-wrap:wrap;}
+.view_section{position:relative;border:1px dotted #ddd;}
+.view_section .type_no{padding:5px 0;text-align:center;font-size:12px;font-weight:300;color:#fff;}
+.layer_bottomsheet, .layer_popup{display:block;position:relative;width:360px;height:100%;margin-bottom:10px;margin-left:0px;}
+.layer_bottomsheet .layer_inner{overflow:inherit;position:relative;max-height:auto;transform: translate(0, 0);}
+</style>
+<!-- //퍼블 화면 확인용 -->
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">조회구분 + 기간 + 기준</h3>
+<!-- bottomsheet layerFilter(조회필터) -->
+<div id="layerFilter" class="layer_bottomsheet" >
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit search_tit">조회필터</strong>
+            <a href="#" class="btnRef btn_popRef"><span class="blind">새로고침</span></a>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+            <div class="filterItem">
+				<p class="filterTit">조회 구분</p>
+				<ul class="radioTab">
+					<li class="radioMid">
+						<input type="radio" id="radio1" name="radioTab2" class="blind" checked>
+						<label for="radio1">전체</label>
+					</li>
+					<li class="radioMid">
+						<input type="radio" id="radio2" name="radioTab2" class="blind">
+						<label for="radio2">입금</label>
+					</li>
+					<li class="radioMid">
+						<input type="radio" id="radio3" name="radioTab2" class="blind">
+						<label for="radio3">출금</label>
+					</li>
+				</ul>
+			</div>
+           <div class="filterItem">
+			   <p class="filterTit">조회 기간</p>
+				<ul class="radioTab">
+					<li>
+						<input type="radio" id="radio4" name="radioTab1" class="blind">
+						<label for="radio4">1개월</label>
+					</li>
+					<li>
+						<input type="radio" id="radio5" name="radioTab1" class="blind">
+						<label for="radio5">3개월</label>
+					</li>
+					<li>
+						<input type="radio" id="radio6" name="radioTab1" class="blind">
+						<label for="radio6">6개월</label>
+					</li>
+					<li>
+						<input type="radio" id="radio7" name="radioTab1" class="blind" checked>
+						<label for="radio7">직접입력</label>
+					</li>
+				</ul>
+				<div class="selPeriod">
+					<!-- datepicker data-title 추가 -->
+					<!-- 21.08.31 수정 -->
+					<div class="dateItem">
+						<label for="startDate" class="blind">조회기간 시작일</label>
+						<input type="tel" required="required"  class="datepicker" id="startDate" autocomplete="off" data-title="시작일" placeholder="YYYY.MM.DD">
+                        <!---  datepicker 화살표 비활성화시  ui-datepicker-prevY,ui-datepicker-nextY,ui-datepicker-prev,ui-datepicker-next 에 disabled 클래스 추가  -->
+					</div>
+					<span class="unit"></span>
+					<div class="dateItem">
+						<label for="endDate" class="blind">조회기간 종료일</label> 
+						<input type="tel" required="required" id="endDate" class="datepicker" autocomplete="off" data-title="완료일" placeholder="YYYY.MM.DD"> <!-- 22.11.11 종료일 -> 완료일 변경 -->
+					</div>
+				</div>
+		   </div>
+
+			<div class="filterItem">
+				<p class="filterTit">정렬 기준</p>
+				<ul class="radioTab">
+					<li class="radioMid">
+						<input type="radio" id="radio8" name="radioTab3" class="blind" checked>
+						<label for="radio8">최신순</label>
+					</li>
+					<li class="radioMid">
+						<input type="radio" id="radio9" name="radioTab3" class="blind">
+						<label for="radio9">과거순</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
+		</div>
+	</div>
+</div>
+<!-- // 조회구분 + 기간 + 기준 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">기간 + 기준</h3>
+<!-- SHZ5001(대출(은행;마이너스 제외,캐피탈,보험)/투자(은행,증권,대출)/연금/선불페이/보험) -->
+<div id="layerFilter" class="layer_bottomsheet" >
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit search_tit">조회필터</strong>
+            <a href="#" class="btnRef btn_popRef"><span class="blind">새로고침</span></a>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+           <div class="filterItem">
+			   <p class="filterTit">조회 기간</p>
+				<ul class="radioTab">
+					<li>
+						<input type="radio" id="radio10" name="radioTab1" class="blind">
+						<label for="radio10">1개월</label>
+					</li>
+					<li>
+						<input type="radio" id="radio11" name="radioTab1" class="blind">
+						<label for="radio11">3개월</label>
+					</li>
+					<li>
+						<input type="radio" id="radio12" name="radioTab1" class="blind">
+						<label for="radio12">6개월</label>
+					</li>
+					<li>
+						<input type="radio" id="radio13" name="radioTab1" class="blind" checked>
+						<label for="radio13">직접입력</label>
+					</li>
+				</ul>
+				<div class="selPeriod">
+					<!-- datepicker data-title 추가 -->
+					<!-- 21.08.31 수정 -->
+					<div class="dateItem">
+						<label for="startDate" class="blind">조회기간 시작일</label>
+						<input type="tel" required="required"  class="datepicker" id="startDate" autocomplete="off" data-title="시작일" placeholder="YYYY.MM.DD">
+					</div>
+					<span class="unit"></span>
+					<div class="dateItem">
+						<label for="endDate" class="blind">조회기간 종료일</label>
+						<input type="tel" required="required" id="endDate" class="datepicker" autocomplete="off" data-title="완료일" placeholder="YYYY.MM.DD"> <!-- 22.11.11 종료일 -> 완료일 변경 -->
+					</div>
+				</div>
+		   </div>
+
+			<div class="filterItem">
+				<p class="filterTit">정렬 기준</p>
+				<ul class="radioTab">
+					<li class="radioMid">
+						<input type="radio" id="radio14" name="radioTab3" class="blind" checked>
+						<label for="radio14">최신순</label>
+					</li>
+					<li class="radioMid">
+						<input type="radio" id="radio15" name="radioTab3" class="blind">
+						<label for="radio15">과거순</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
+		</div>
+	</div>
+</div>
+<!-- // 기간 + 기준 -->
+
+
+<!-- 퍼블확인용 --></div>
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">기간 + 구분 + 내용 + 정렬순</h3>
+<!-- SHZ5002( 카드상세) -->
+<div id="layerFilter" class="layer_bottomsheet" >
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit search_tit">조회필터</strong>
+            <a href="#" class="btnRef btn_popRef"><span class="blind">새로고침</span></a>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+            <div class="filterItem">
+			   <p class="filterTit">조회 기간</p>
+				<ul class="radioTab">
+					<li>
+						<input type="radio" id="radio16" name="radioTab1" class="blind">
+						<label for="radio16">1개월</label>
+					</li>
+					<li>
+						<input type="radio" id="radio17" name="radioTab1" class="blind">
+						<label for="radio17">3개월</label>
+					</li>
+					<li>
+						<input type="radio" id="radio18" name="radioTab1" class="blind">
+						<label for="radio18">6개월</label>
+					</li>
+					<li>
+						<input type="radio" id="radio19" name="radioTab1" class="blind" checked>
+						<label for="radio19">직접입력</label>
+					</li>
+				</ul>
+				<div class="selPeriod">
+					<!-- datepicker data-title 추가 -->
+					<!-- 21.08.31 수정 -->
+					<div class="dateItem">
+						<label for="startDate" class="blind">조회기간 시작일</label>
+						<input type="tel" required="required"  class="datepicker" id="startDate" autocomplete="off" data-title="시작일" placeholder="YYYY.MM.DD">
+					</div>
+					<span class="unit"></span>
+					<div class="dateItem">
+						<label for="endDate" class="blind">조회기간 종료일</label>
+						<input type="tel" required="required" id="endDate" class="datepicker" autocomplete="off" data-title="완료일" placeholder="YYYY.MM.DD"> <!-- 22.11.11 종료일 -> 완료일 변경 -->
+					</div>
+				</div>
+		    </div>
+            <div class="filterItem">
+				<p class="filterTit">조회 구분</p><!-- 22.11.09 조회 내용 -> 조회 구분으로 변경 -->
+				<ul class="radioTab">
+					<li class="radioMid">
+						<input type="radio" id="radio20" name="radioTab2" class="blind" checked>
+						<label for="radio20">전체</label>
+					</li>
+					<li class="radioMid">
+						<input type="radio" id="radio21" name="radioTab2" class="blind">
+						<label for="radio21">입금</label>
+					</li>
+					<li class="radioMid">
+						<input type="radio" id="radio22" name="radioTab2" class="blind">
+						<label for="radio22">출금</label>
+					</li>
+				</ul>
+			</div>
+		    <div class="filterItem">
+                <p class="filterTit"><label for="search">검색내용</label></p>
+                <input type="text" required="required" id="search" class="schTxt" placeholder="이용 가맹점명을 입력하세요.">
+            </div>
+			<div class="filterItem">
+				<p class="filterTit">정렬순</p>
+				<ul class="radioTab">
+					<li class="radioMid">
+						<input type="radio" id="radio23" name="radioTab3" class="blind" checked>
+						<label for="radio23">최신순</label>
+					</li>
+					<li class="radioMid">
+						<input type="radio" id="radio24" name="radioTab3" class="blind">
+						<label for="radio24">과거순</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
+		</div>
+	</div>
+</div>
+<!-- // 기간 + 구분 + 내용 + 정렬순 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">기간 + 구분 + 정렬순</h3>
+<!-- SHZ5002_1(카드상세_가맹점 미동의) -->
+<div id="layerFilter" class="layer_bottomsheet" >
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit search_tit">조회필터</strong>
+            <a href="#" class="btnRef btn_popRef"><span class="blind">새로고침</span></a>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+            <div class="filterItem">
+			   <p class="filterTit">조회 기간</p>
+				<ul class="radioTab">
+					<li>
+						<input type="radio" id="radio25" name="radioTab1" class="blind">
+						<label for="radio25">1개월</label>
+					</li>
+					<li>
+						<input type="radio" id="radio26" name="radioTab1" class="blind">
+						<label for="radio26">3개월</label>
+					</li>
+					<li>
+						<input type="radio" id="radio27" name="radioTab1" class="blind">
+						<label for="radio27">6개월</label>
+					</li>
+					<li>
+						<input type="radio" id="radio28" name="radioTab1" class="blind" checked >
+						<label for="radio28">직접입력</label>
+					</li>
+				</ul>
+				<div class="selPeriod">
+					<!-- datepicker data-title 추가 -->
+					<!-- 21.08.31 수정 -->
+					<div class="dateItem">
+						<label for="startDate" class="blind">조회기간 시작일</label>
+						<input type="tel" required="required"  class="datepicker" id="startDate" autocomplete="off" data-title="시작일" placeholder="YYYY.MM.DD">
+					</div>
+					<span class="unit"></span>
+					<div class="dateItem">
+						<label for="endDate" class="blind">조회기간 종료일</label>
+						<input type="tel" required="required" id="endDate" class="datepicker" autocomplete="off" data-title="완료일" placeholder="YYYY.MM.DD"> <!-- 22.11.11 종료일 -> 완료일 변경 -->
+					</div>
+				</div>
+		    </div>
+            <div class="filterItem">
+				<p class="filterTit">조회 구분</p> <!-- 22.11.09 조회 내용 -> 조회 구분으로 변경 -->
+				<ul class="radioTab">
+					<li class="radioMid">
+						<input type="radio" id="radio29" name="radioTab2" class="blind" checked>
+						<label for="radio29">전체</label>
+					</li>
+					<li class="radioMid">
+						<input type="radio" id="radio30" name="radioTab2" class="blind">
+						<label for="radio30">입금</label>
+					</li>
+					<li class="radioMid">
+						<input type="radio" id="radio31" name="radioTab2" class="blind">
+						<label for="radio31">출금</label>
+					</li>
+				</ul>
+			</div>
+			<div class="filterItem">
+				<p class="filterTit">정렬순</p>
+				<ul class="radioTab">
+					<li class="radioMid">
+						<input type="radio" id="radio32" name="radioTab3" class="blind" checked>
+						<label for="radio32">최신순</label>
+					</li>
+					<li class="radioMid">
+						<input type="radio" id="radio33" name="radioTab3" class="blind">
+						<label for="radio33">과거순</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
+		</div>
+	</div>
+</div>
+<!-- // 기간 + 구분 + 정렬순 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">내용 + 구분 + 정렬순</h3>
+<!-- SHZ5003(청구상세) -->
+<div id="layerFilter" class="layer_bottomsheet" >
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit search_tit">조회필터</strong>
+            <a href="#" class="btnRef btn_popRef"><span class="blind">새로고침</span></a>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+		    <div class="filterItem">
+                <p class="filterTit"><label for="search">검색내용</label></p>
+                <input type="text" required="required" id="search" class="schTxt" placeholder="이용 가맹점명을 입력하세요.">
+            </div>
+            <div class="filterItem">
+				<p class="filterTit">조회 구분</p> <!-- 22.11.09 조회 구분영역 추가 -->
+				<ul class="radioTab">
+					<li class="radioMid">
+						<input type="radio" id="radio29" name="radioTab2" class="blind" checked>
+						<label for="radio29">전체</label>
+					</li>
+					<li class="radioMid">
+						<input type="radio" id="radio30" name="radioTab2" class="blind">
+						<label for="radio30">일시불</label>
+					</li>
+					<li class="radioMid">
+						<input type="radio" id="radio31" name="radioTab2" class="blind">
+						<label for="radio31">할부</label>
+					</li>
+				</ul>
+			</div>
+			<div class="filterItem">
+				<p class="filterTit">정렬순</p>
+				<ul class="radioTab">
+					<li class="radioMid">
+						<input type="radio" id="radio34" name="radioTab3" class="blind" checked>
+						<label for="radio34">최신순</label>
+					</li>
+					<li class="radioMid">
+						<input type="radio" id="radio35" name="radioTab3" class="blind">
+						<label for="radio35">과거순</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
+		</div>
+	</div>
+</div>
+<!-- // 내용 + 구분 + 정렬순 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">구분 + 정렬순</h3>
+<!-- SHZ5003_1(청구상세_가맹점 미동의) -->
+<div id="layerFilter" class="layer_bottomsheet" >
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit search_tit">조회필터</strong>
+            <a href="#" class="btnRef btn_popRef"><span class="blind">새로고침</span></a>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+            <div class="filterItem">
+				<p class="filterTit">조회 구분</p> <!-- 22.11.09 조회 구분영역 추가 -->
+				<ul class="radioTab">
+					<li class="radioMid">
+						<input type="radio" id="radio29" name="radioTab2" class="blind" checked>
+						<label for="radio29">전체</label>
+					</li>
+					<li class="radioMid">
+						<input type="radio" id="radio30" name="radioTab2" class="blind">
+						<label for="radio30">일시불</label>
+					</li>
+					<li class="radioMid">
+						<input type="radio" id="radio31" name="radioTab2" class="blind">
+						<label for="radio31">할부</label>
+					</li>
+				</ul>
+			</div>
+			<div class="filterItem">
+				<p class="filterTit">정렬순</p>
+				<ul class="radioTab">
+					<li class="radioMid">
+						<input type="radio" id="radio36" name="radioTab3" class="blind" checked>
+						<label for="radio36">최신순</label>
+					</li>
+					<li class="radioMid">
+						<input type="radio" id="radio37" name="radioTab3" class="blind">
+						<label for="radio37">과거순</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
+		</div>
+	</div>
+</div>
+<!-- // 구분 + 정렬순 -->
+<!-- 퍼블확인용 --></div>
+
+</div><!-- test_view -->
+<script>
+
+// [S] 월간내역 메모 textarea 자동 높이조절, 글자수 체크, textarea val값 초기화
+function testAreaHeight1() {
+	var textEle = $('.layer_memo_wrap .js_textarea1');
+	textEle[0].style.height = 'auto';
+	var textEleHeight = textEle.prop('scrollHeight');
+	textEle.css('height', textEleHeight);
+};
+var textEle = $('.layer_memo_wrap .js_textarea1');
+var btnMemoValReset = $('.layer_memo_wrap .btn_val_reset');
+btnMemoValReset.hide();
+textEle.on('keyup', function() {
+	//자동높이
+	testAreaHeight1();
+	$('#js_textarea1_cnt').html("<span class='pointColor'>"+$(this).val().length+"</span> / 60");
+	//val값 초기화
+	if(textEle.val().length === 0){
+		btnMemoValReset.hide();
+	}else if($(this).val().length > 60) {
+		$(this).val($(this).val().substring(0, 60));
+		$('#js_textarea1_cnt').html("<span class='pointColor'>60</span> / 60");
+	}else{
+		btnMemoValReset.show();
+	}
+});
+function memoValReset() {
+	textEle.val('').css('height','inherit').focus();
+	btnMemoValReset.hide();
+	$('#js_textarea1_cnt').html("<span class='pointColor'>"+textEle.val().length+"</span> / 60");
+}
+// [E] 월간내역 메모 textarea 자동 높이조절, 글자수 체크, textarea val값 초기화
+
+$(document).ready(function(){
+
+	// [S] 캘린더 탭
+	$(".tabInter").tabs({
+		wrapClass:".tabInter",
+		clickClass:".js_tabclickDp1",
+		showClass:".tab_cntDp1",
+		animate:false,
+		contentWidthFull:false,//effect when animate:true
+		animateBorder:["false",".tabs_header"],//show border in class .
+		fade:false,
+		speed:500
+	});
+	// [E] 캘린더 탭
+
+});
+</script>
+</body>
+</html>

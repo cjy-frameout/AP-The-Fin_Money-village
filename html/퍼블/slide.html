@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+
+	<div class="wrap_content">
+        <!-- [S] contents ------------------------------------------------------------------------------>
+        <div class="content">
+            <p class="guide_stit mgt10">슬라이드 약관</p>
+            <style>
+                .slick-slider{position:relative;display:block;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent;}
+                .slick-list{position:relative;display:block;height:100%;margin:0;padding:0;overflow:hidden;}
+                .slick-list:focus{outline:none;}
+                .slick-list.dragging{cursor:pointer;cursor:hand;}
+                .slick-slider .slick-track,
+                .slick-slider .slick-list{-webkit-transform:translate3d(0, 0, 0);-moz-transform:translate3d(0, 0, 0);-ms-transform:translate3d(0, 0, 0);-o-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0);}
+                .slick-track{position:relative;top:0;left:0;display:block;}
+                .slick-track:before,
+                .slick-track:after{display:table;content:'';}
+                .slick-track:after{clear:both;}
+                .slick-loading .slick-track{visibility:hidden;}
+                .slick-slide{display:none;float:left;height:100%;/*min-height:1px;*/}
+                .slick-initialized .slick-slide{display:block;}
+                .slick-loading .slick-slide{visibility:hidden;}
+                .slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent;}
+                .slick-arrow.slick-hidden{display:none;}
+                .slider{position:relative;top:0;left:0;display:block;width:100%;margin:0;padding:0;background-repeat:no-repeat;background-position:50% 50%;background-size:cover;cursor:default;}
+                .slider:focus{outline:none;}
+                .slider-for {margin-top:20px;}
+                .slick-prev, .slick-next {display:none}
+                .agrTxt {min-height:50vh;}
+            </style>
+            <!-- [S] 슬라이드 약관 타입 -->
+            <div class="terms_wrap">
+                <div class="terms-nav">
+                    <div class="nav-item">서비스 이용약관</div>
+                    <div class="nav-item">개인정보 처리방침</div>
+                    <div class="nav-item">전자금융거래 이용약관</div>
+                </div>
+                <div class="terms-slider">
+                    <div class="servTerm">
+                        <h3 class="">서비스 이용약관</h3>
+                    </div>
+                    <div class="servTerm">
+                        <h3 class="">개인정보 처리방침</h3>
+                    </div>
+                    <div class="servTerm">
+                        <h3 class="">전자금융거래 이용약관</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- [E] 슬라이드 약관 타입 -->
+        </div>
+        <!-- [E] contents ------------------------------------------------------------------------------>
+	</div>
+</div>
+<!-- //wrap -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+    /* [S] 슬라이드 약관 타입 */
+    $('.terms-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		asNavFor: '.terms-nav',
+		infinite: false,
+		adaptiveHeight: true
+		});
+
+		$('.terms-nav').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		asNavFor: '.terms-slider',
+		dots: false,
+		focusOnSelect: true,
+		infinite: false,
+		variableWidth: true
+	});
+    /* [E] 슬라이드 약관 타입 */
+
+});
+</script>
+</body>
+</html>

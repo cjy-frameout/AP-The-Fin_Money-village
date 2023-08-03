@@ -1,0 +1,990 @@
+﻿<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- [S] chart -->
+<script src="https://plugin-dev.coocon.co.kr/highchart/highcharts.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/exporting.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/export-data.js"></script>
+<script src="https://plugin-dev.coocon.co.kr/highchart/modules/accessibility.js"></script>
+<!-- [E] chart -->
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+
+	<!-- header -->
+	<div class="header">
+		<div class="header_inn">
+			<!-- <div class="left">
+				<a href="#none" class="btnBack"><span class="blind">Back</span></a>
+			</div> -->
+			<div class="center">
+				<h2 class="tit_h2">소비</h2>
+			</div>
+			<div class="right">
+                <a href="#none" class="btnMenu"><span class="blind">menu</span></a>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+            <!-- [S] 월 선택 -->
+            <div class="calendar_form mgt25">
+                <div class="sel_form type_month">
+                    <a href="#layer_N001_select_m" class="btn_open_bottom_sheet sel_box" role="button" title="월 선택"><span>2021년 10월</span></a>
+                </div>
+            </div>
+            <!-- [E] 월 선택 -->
+            <div class="wrap_chart_box">
+                <div class="wrap_ratio">
+                    <div class="cal_cate_history">
+                        <h3 class="tBanner_tit">
+                            <span class="pointColor2">홍길동</span>님의 소비 현황    
+                        </h3>
+                        <div class="left">
+                            <p class="name">이만큼 썼어요</p>
+                        </div>
+                        <div class="left">
+                            <p class="amount">
+                                <em class="num">32,250,000</em> 원
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="graph">
+                        <h4 class="tit_h4 blind">업종별 지출 비율</h4>
+                        <!-- width, 하단 js -->
+                        <p class="food"><span class="blind"></span></p>
+                        <p class="cafe"><span class="blind"></span></p>
+                        <p class="shopping"><span class="blind"></span></p>
+                        <p class="pleasure"><span class="blind"></span></p>
+                        <p class="beauty"><span class="blind"></span></p>
+                        <p class="others"><span class="blind"></span></p>
+
+                        <!-- <p class="shopping"><span class="blind"></span></p> 온라인쇼핑 -->
+                        <!-- <p class="food"><span class="blind"></span></p> 식비  -->
+                        <!-- <p class="cafe"><span class="blind"></span></p> 카페/디저트  -->
+                        <!-- <p class="pleasure"><span class="blind"></span></p> 술/유흥  -->
+                        <!-- <p class="life"><span class="blind"></span></p> 생활  -->
+                        <!-- <p class="fashion"><span class="blind"></span></p> 패션/쇼핑  -->
+                        <!-- <p class="beauty"><span class="blind"></span></p> 뷰티 -->
+                        <!-- <p class="traffic"><span class="blind"></span></p> 교통  -->
+                        <!-- <p class="car"><span class="blind"></span></p> 자동차  -->
+                        <!-- <p class="dwelling"><span class="blind"></span></p> 주거통신  -->
+                        <!-- <p class="health"><span class="blind"></span></p> 의료/건강  -->
+                        <!-- <p class="finance"><span class="blind"></span></p> 금융  -->
+                        <!-- <p class="culture"><span class="blind"></span></p> 문화/여가  -->
+                        <!-- <p class="travel"><span class="blind"></span></p> 여행/숙박  -->
+                        <!-- <p class="etc"><span class="blind"></span></p> 기타  -->
+                        <!-- <p class="learning"><span class="blind"></span></p> 교육/학습  -->
+                        <!-- <p class="child"><span class="blind"></span></p> 자녀/육아  -->
+                        <!-- <p class="pets"><span class="blind"></span></p> 애완동물  -->
+                        <!-- <p class="gift"><span class="blind"></span></p> 경조/선물  -->
+                    </div>
+                </div>
+            </div>
+
+           <ul class="chart_rate">
+                <li class="list">
+                    <a href="#N1003_1_1" class="btn_open_full_sheet" role="button">
+                        <div class="left">
+                            <p class="cate">
+                                <span class="ico_rate type_01"></span>
+                                식비 <span class="num mgl2">25</span>%
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="amount"><span class="num">1,000,000</span> 원</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#N1003_1_1" class="btn_open_full_sheet" role="button">
+                        <div class="left">
+                            <p class="cate">
+                                <span class="ico_rate type_02"></span>
+                                카페/디저트 <span class="num mgl2">25</span>%
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="amount"><span class="num">1,500,000</span> 원</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#N1003_1_1" class="btn_open_full_sheet" role="button">
+                        <div class="left">
+                            <p class="cate">
+                                <span class="ico_rate type_03"></span>
+                                술/유흥 <span class="num mgl2">25</span>%
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="amount"><span class="num">1,500,000</span> 원</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#N1003_1_1" class="btn_open_full_sheet" role="button">
+                        <div class="left">
+                            <p class="cate">
+                                <span class="ico_rate type_04"></span>
+                                생활 <span class="num mgl2">25</span>%
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="amount"><span class="num">5,000,000</span> 원</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#N1003_1_1" class="btn_open_full_sheet" role="button">
+                        <div class="left">
+                            <p class="cate">
+                                <span class="ico_rate type_05"></span>
+                                패션/쇼핑 <span class="num mgl2">25</span>%
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="amount"><span class="num">252,000</span> 원</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#N1003_1_1" class="btn_open_full_sheet" role="button">
+                        <div class="left">
+                            <p class="cate">
+                                <span class="ico_rate type_06"></span>
+                                뷰티 <span class="num mgl2">25</span>%
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="amount"><span class="num">300,000</span> 원</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#N1003_1_1" class="btn_open_full_sheet" role="button">
+                        <div class="left">
+                            <p class="cate">
+                                <span class="ico_rate type_07"></span>
+                                교통 <span class="num mgl2">25</span>%
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="amount"><span class="num">1,000,000</span> 원</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#N1003_1_1" class="btn_open_full_sheet" role="button">
+                        <div class="left">
+                            <p class="cate">
+                                <span class="ico_rate type_08"></span>
+                                자동차 <span class="num mgl2">25</span>%
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="amount"><span class="num">10,000</span> 원</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#N1003_1_1" class="btn_open_full_sheet" role="button">
+                        <div class="left">
+                            <p class="cate">
+                                <span class="ico_rate type_09"></span>
+                                주거/통신 <span class="num mgl2">25</span>%
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="amount"><span class="num">1,500,000</span> 원</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#N1003_1_1" class="btn_open_full_sheet" role="button">
+                        <div class="left">
+                            <p class="cate">
+                                <span class="ico_rate type_10"></span>
+                                의료/건강 <span class="num mgl2">25</span>%
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="amount"><span class="num">5,000,000</span> 원</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#N1003_1_1" class="btn_open_full_sheet" role="button">
+                        <div class="left">
+                            <p class="cate">
+                                <span class="ico_rate type_11"></span>
+                                금융 <span class="num mgl2">25</span>%
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="amount"><span class="num">252,000</span> 원</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#N1003_1_1" class="btn_open_full_sheet" role="button">
+                        <div class="left">
+                            <p class="cate">
+                                <span class="ico_rate type_12"></span>
+                                문화/여가 <span class="num mgl2">25</span>%
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="amount"><span class="num">300,000</span> 원</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#N1003_1_1" class="btn_open_full_sheet" role="button">
+                        <div class="left">
+                            <p class="cate">
+                                <span class="ico_rate type_13"></span>
+                                여행/숙박 <span class="num mgl2">25</span>%
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="amount"><span class="num">1,500,000</span> 원</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#N1003_1_1" class="btn_open_full_sheet" role="button">
+                        <div class="left">
+                            <p class="cate">
+                                <span class="ico_rate type_14"></span>
+                                온라인쇼핑 <span class="num mgl2">25</span>%
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="amount"><span class="num">1,500,000</span> 원</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#N1003_1_1" class="btn_open_full_sheet" role="button">
+                        <div class="left">
+                            <p class="cate">
+                                <span class="ico_rate type_15"></span>
+                                교육/학습 <span class="num mgl2">25</span>%
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="amount"><span class="num">1,500,000</span> 원</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#N1003_1_1" class="btn_open_full_sheet" role="button">
+                        <div class="left">
+                            <p class="cate">
+                                <span class="ico_rate type_16"></span>
+                                애완동물 <span class="num mgl2">25</span>%
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="amount"><span class="num">1,500,000</span> 원</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#N1003_1_1" class="btn_open_full_sheet" role="button">
+                        <div class="left">
+                            <p class="cate">
+                                <span class="ico_rate type_17"></span>
+                                자녀/육아 <span class="num mgl2">25</span>%
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="amount"><span class="num">1,500,000</span> 원</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#N1003_1_1" class="btn_open_full_sheet" role="button">
+                        <div class="left">
+                            <p class="cate">
+                                <span class="ico_rate type_18"></span>
+                                경조/선물 <span class="num mgl2">25</span>%
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="amount"><span class="num">1,500,000</span> 원</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#N1003_1_1" class="btn_open_full_sheet" role="button">
+                        <div class="left">
+                            <p class="cate">
+                                <span class="ico_rate type_19"></span>
+                                기타 <span class="num mgl2">25</span>%
+                            </p>
+                        </div>
+                        <div class="right">
+                            <p class="amount"><span class="num">5,000,000</span> 원</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <a href="#none" class="chartFolding show" aria-expanded="false">더보기</a> <!-- 22.11.10 더보기 버튼 추가 -->
+           
+           
+            <!-- btn_wrap -->
+            <div class="btn_wrap type_agree">
+                <div class="btnGroup">
+                    <p>
+                        <a href="#none" class="btnBl1" role="button">
+                            가맹점 정보에 추가 동의 하고, <br>
+                            더 상세한 리포트를 받아보세요
+                         <img src="../../img/theme/apthefin/ic_arw_white.png" class="ic_arrw">
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <!-- //btn_wrap -->
+
+            <hr class="hr_div type2"></hr>
+
+            <!-- 랭킹 중복 1,2,3위 가능, 노출항목은 3개 고정 -->
+            <!-- 22.11.10 리스트 타이틀 영역 수정 -->
+            <div class="chart_info rank">
+                <p class="tit">가장 <span class="titBold">자주 썼어요</span></p>
+                <div class="bd_box">
+                    <ul>
+                        <li class="list">
+                            <p class="no pointColor"><em class="num">1</em>위</p>
+                            <div class="name">
+                                <p>쿠팡(쿠페이)_KICC</p>
+                                <p class="info"><em class="num">13</em>회</p>
+                            </div>
+                        </li>
+                        <li class="list">
+                            <p class="no pointColor"><em class="num">2</em>위</p>
+                            <div class="name">
+                                <p>CU</p>
+                                <p class="info"><em class="num">10</em>회</p>
+                            </div>
+                        </li>
+                        <li class="list">
+                            <p class="no pointColor"><em class="num">3</em>위</p>
+                            <div class="name">
+                                <p>GS25</p>
+                                <p class="info"><em class="num">7</em>회</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 지출내역 노출항목 날짜별 3개 -->
+            <div class="chart_info exp">
+                <p class="tit">가장 <span class="titBold">많이 썼어요</span></p>
+                <div class="bd_box">
+                    <ul>
+                        <li class="list">
+                            <p class="no pointColor"><em class="num">1</em>위</p>
+                            <div class="name">
+                                <div class="item">
+                                    <p>CU</p>
+                                    <p class="info"><em class="num">130,000</em> 원</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list">
+                            <p class="no pointColor"><em class="num">2</em>위</p>
+                            <div class="name">
+                                <div class="item">
+                                    <p>11번가</p>
+                                    <p class="info"><em class="num">100,000</em> 원</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list">
+                            <p class="no pointColor"><em class="num">3</em>위</p>
+                            <div class="name">
+                                <div class="item">
+                                    <p>CU</p>
+                                    <p class="info"><em class="num">500,000</em> 원</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+             <!-- 지출예정내역 노출항목 날짜별 3개 -->
+             <div class="chart_info pre"> <!-- 22.12.05 exp -> pre 로 클래스변경 -->
+                <p class="tit">미리 <span class="titBold">준비하세요</span></p>
+                <div class="bd_box">
+                    <ul class="arr_type">
+                        <li class="list">
+                            <a href="#" class="link_detail">
+                                <p class="no pointColor"><em class="num">24</em>일</p>
+                                <div class="name">
+                                    <div class="item">
+                                        <p>OO대출 상환</p>
+                                        <p class="info"><em class="num">130,000</em> 원</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="#" class="link_detail">
+                                <p class="no pointColor"><em class="num">28</em>일</p>
+                                <div class="name">
+                                    <div class="item">
+                                        <p>OO카드 결제</p>
+                                        <p class="info"><em class="num">100,000</em> 원</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="#" class="link_detail">
+                                <p class="no pointColor"><em class="num">30</em>일</p>
+                                <div class="name">
+                                    <div class="item">
+                                        <p>OO리스 이자 상환</p>
+                                        <p class="info"><em class="num">500,000</em> 원</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- [S] 하단 고정 영역 -->
+            <!-- 22.11.15 dock bar a태그로 변경 -->
+			<div class="fix_bottom">
+                <!-- dock_bar -->
+				<div class="dock_bar">
+                    <ul>
+                        <li>
+                            <a href="#none" class="btn dock_brand"><img src="../../img/theme/apthefin/ic_dock_ci.png" alt="bnk"><span class="tx">에이피더핀</span></a>
+                        </li>
+                        <li><a href="#none" class="btn icon_menu ic_asset on"><span class="tx">자산</span></a></li> <!-- 메뉴 선택시 on 클래스 추가 -->
+                        <li><a href="#none" class="btn icon_menu ic_consume"><span class="tx">소비</span></a></li>
+                        <li><a href="#none" class="btn icon_menu ic_cal"><span class="tx">캘린더</span></a></li>
+                    </ul>
+                </div>
+			</div>
+			<!-- [E] 하단 고정 영역 -->
+
+		</div>
+	</div>
+	<!-- //container -->
+</div>
+<!-- //wrap -->
+
+
+<!-- [S] N1003_1_1 해당내역보기 팝업  -->
+<div id="N1003_1_1" class="layer_fullsheet">
+
+    <div class="layer_inner">
+        <div class="layer_tit">
+			<strong class="tit">기타 내역 보기</strong>
+			<button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+		</div>
+
+        <div class="layer_cont">
+            <div class="accSetting">
+                <div class="tAccount">
+                    <h3 class="tAccTit type2">2022년 11월</h3>
+                    <div class="accInfo">
+                        <span class="infoTit">지출 기타</span>
+                        <span class="infoNum"><em class="num">50,000</em>원</span>
+                    </div>
+                </div>
+            </div>
+			<div class="accHistory">
+                <div class="historyList arr_type mgt20">
+                    <span class="date"><span class="num">09.23</span> 금요일</span>
+                    <ul> 
+                        <li>
+                            <a href="#" class="link link_detail" role="button">
+                                <div class="left">
+                                    <span class="category">오토 주차장</span>
+                                    <span class="time">
+                                        20:28
+                                        <span class="tx t_dot">할부</span>
+                                    </span>
+                                </div>
+                                <div class="right">
+                                    <span class="amount"><em class="num">400,000</em>원</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="link link_detail" role="button">
+                                <div class="left">
+                                    <span class="category">오토 카센터</span>
+                                    <span class="time">
+                                        20:28
+                                        <span class="tx t_dot">일시불</span>
+                                    </span>
+                                </div>
+                                <div class="right">
+                                    <span class="amount"><em class="num">30,000</em>원</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <span class="date">09.22 목요일</span>
+                    <ul> 
+                        <li>
+                            <a href="#" class="link link_detail" role="button">
+                                <div class="left">
+                                    <span class="category">원퀵서비스</span>
+                                    <span class="time">
+                                        20:28
+                                        <span class="tx t_dot">일시불</span>
+                                    </span>
+                                </div>
+                                <div class="right">
+                                    <span class="amount"><em class="num">30,000</em>원</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+			</div>
+        </div>
+
+    </div>
+</div>
+<!-- [E] N1003_1_1 해당내역보기 팝업  -->
+
+<!-- [S] SHE1110 상세내역보기 팝업  -->
+<div id="SHE1110" class="layer_fullsheet">
+    <div class="layer_inner">
+
+        <div class="layer_tit">
+			<strong class="tit">거래내역 상세</strong>
+			<button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+		</div>
+        
+        <div class="layer_cont">
+            <div class="accSetting acc_type2">
+				<div class="tAccount">
+					<h3 class="tAccTit">wecafe</h3>
+                    <div class="accInfo">
+                        <span class="infoTit">승인 금액</span>
+                        <span class="infoNum"><em class="num">1,000</em>원</span>
+                    </div>
+				</div>
+                <hr class="hr_div thin_div"></hr>
+				<ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">승인 상태</span>
+						<span class="itemData">승인</span>
+					</li>
+                    <li>
+						<span class="itemTit">결제 일시</span>
+						<span class="itemData"><em class="num">2022.08.05 20:28</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">결제 방법</span>
+						<span class="itemData">일시불</span>
+					</li>
+                    <li>
+						<span class="itemTit">승인 번호</span>
+						<span class="itemData"><em class="num">76337642</em></span>
+					</li>
+				</ul>
+                <ul class="accDetailList sub_detailList">
+                    <li>
+						<a href="#layer_N1001_2_1_1_1" class="edit btn_open_bottom_sheet" title="더보기">
+							<span class="itemTit">카테고리</span>
+							<span class="itemData pointColor">카페/디저트</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+        </div>
+    </div>
+</div>
+<!-- [E]SHE1110 상세내역보기 팝업  -->
+
+
+<!-- bottomsheet N001_select_m 월선택 -->
+<div id="layer_N001_select_m" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>월 선택</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<ul class="layer_sel_opt type_date">
+					<li><button type="button" class="btn_sel_opt on" title="선택됨"><span><em class="num">2021</em>년 <em class="num">11</em>월</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+					<li><button type="button" class="btn_sel_opt"><span><em class="num">2021</em>년 <em class="num">10</em>월</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span><em class="num">2021</em>년 <em class="num">9</em>월</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span><em class="num">2021</em>년 <em class="num">8</em>월</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span><em class="num">2021</em>년 <em class="num">7</em>월</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span><em class="num">2021</em>년 <em class="num">6</em>월</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span><em class="num">2021</em>년 <em class="num">5</em>월</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span><em class="num">2021</em>년 <em class="num">4</em>월</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span><em class="num">2021</em>년 <em class="num">3</em>월</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span><em class="num">2021</em>년 <em class="num">2</em>월</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span><em class="num">2021</em>년 <em class="num">1</em>월</span></button></li>
+				</ul>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+        <div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>저장</span></button>
+		</div>
+	</div>
+</div>
+<!-- // bottomsheet N001_select_m 월선택 -->
+
+<!-- bottomsheet N001_select_m 월별 카테고리 선택 -->
+<div id="layer_N001_select_m_category" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>카테고리</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<ul class="layer_sel_opt">
+					<li><button type="button" class="btn_sel_opt on" title="선택됨"><span>입출금</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+					<li><button type="button" class="btn_sel_opt"><span>카드</span></button></li>
+				</ul>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+        <div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>저장</span></button>
+		</div>
+	</div>
+</div>
+<!-- // bottomsheet N001_select_m 월별 카테고리 선택 -->
+
+<!-- bottomsheet N001_select_m 내역, 정렬 선택 -->
+<div id="layer_N001_select_m_sort" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>정렬</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<ul class="layer_sel_opt">
+					<li><button type="button" class="btn_sel_opt on" title="선택됨"><span>최신순</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+					<li><button type="button" class="btn_sel_opt"><span>과거순</span></button></li>
+				</ul>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+        <div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>저장</span></button>
+		</div>
+	</div>
+</div>
+<!-- // bottomsheet N001_select_m 내역, 정렬 선택 -->
+
+<!-- layer_popup 월간 캘린더 안내 알럿팝업 type3 N001_icon_p_01 -->
+<div id="N001_icon_p_01" class="layer_popup type3">
+	<div class="layer_position">
+		<div class="layer_inner">
+			<div class="layer_cont">
+				<div class="msg_box">
+					<strong class="msg_alert">
+						<ul class="cal_exp_box">
+							<li class="list">
+								<p class="exp_ico"><span class="date" aria-hidden="true">23</span></p>
+								<p class="exp_txt">오늘날짜</p>
+							</li>
+							<li class="list">
+								<p class="exp_ico"><span class="blit_1"></span></p>
+								<p class="exp_txt">개설,발급,만기 등 이벤트</p>
+							</li>
+							<li class="list">
+								<p class="exp_ico"><span class="blit_2"></span></p>
+								<p class="exp_txt">결제,상환 등 알림</p>
+							</li>
+							<li class="list">
+								<p class="exp_ico"><span class="star_off"></span><span class="star_on"></span></p>
+								<p class="exp_txt">별표를 Tap하면<br>해당 일에 표기설정</p>
+							</li>
+						</ul>
+					</strong>
+				</div>
+				<div class="btn_layer_wrap">
+					<button type="button" class="js_pop_close btn_confirm"><span>닫기</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // layer_popup 월간 캘린더 안내 알럿팝업 type3 N001_icon_p_01 -->
+
+<!-- bottomsheet N001_edit_memo  메모 -->
+<div id="layer_N001_edit_memo" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>메모란</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<div class="line_div">
+					<div class="layer_memo_wrap">
+						<textarea class="tx_area js_textarea1" name="textfield1" cols="45" rows="1" maxlength="60" placeholder="메모를 남겨주세요" title="메모를 남겨주세요, 최대 60자 까지 가능합니다"></textarea>
+						<button type="button" class="btn_val_reset" onclick="memoValReset();"><span class="ico_del"><em class="blind">메모 텍스트 비우기</em></span></button>
+					</div>
+					<div id="js_textarea1_cnt" class="txtarea_cnt"><span class="pointColor" tabindex="0">0</span> / <em tabindex="0">60</em></div>
+				</div>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+        <div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>저장</span></button>
+		</div>
+	</div>
+</div>
+<!-- // bottomsheet N001_edit_memo  메모 -->
+
+<!-- bottomsheet N1001_2_1_1_1(카테고리설정) -->
+<div id="layer_N1001_2_1_1_1" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>카테고리분류</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<div class="line_div">
+					<div class="category_set">
+						<p class="ck_box"><a class="ck_name on" title="선택됨">식비</a></p><!-- 선택시 클래스 'on'추가 및 title="선택됨" 추가 -->
+						<p class="ck_box"><a class="ck_name">주거/통신</a></p>
+						<p class="ck_box"><a class="ck_name">카페/디저트</a></p>
+						<p class="ck_box"><a class="ck_name">의료/건간</a></p>
+						<p class="ck_box"><a class="ck_name">술/유흥</a></p>
+						<p class="ck_box"><a class="ck_name">금융</a></p>
+						<p class="ck_box"><a class="ck_name">생활</a></p>
+						<p class="ck_box"><a class="ck_name">문화/여가</a></p>
+						<p class="ck_box"><a class="ck_name">온라인쇼핑</a></p>
+						<p class="ck_box"><a class="ck_name">여행/숙박</a></p>
+						<p class="ck_box"><a class="ck_name">패션/쇼핑</a></p>
+						<p class="ck_box"><a class="ck_name">교육/학습</a></p>
+						<p class="ck_box"><a class="ck_name">뷰티</a></p>
+						<p class="ck_box"><a class="ck_name">자녀/육아</a></p>
+						<p class="ck_box"><a class="ck_name">교통</a></p>
+						<p class="ck_box"><a class="ck_name">애완동물</a></p>
+						<p class="ck_box"><a class="ck_name">자동차</a></p>
+						<p class="ck_box"><a class="ck_name">경조/선물</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+        <div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
+		</div>
+	</div>
+</div>
+<!-- // bottomsheet N1001_2_1_1_1(카테고리설정) -->
+
+<script>
+$(document).ready(function(){
+
+    // [S] 사용 소비 비율
+    if($('.wrap_ratio').length){
+
+        var length = $(".wrap_ratio .graph p").length;
+        for(var i = 1; i <= length; i++){
+            /* 카테고리 순서대로 animate딜레이 줌 */
+            $(".wrap_ratio .graph p").eq(i).delay(500*i)
+        }
+
+        $('.wrap_ratio .graph .shopping').animate({'width':'50%'});
+        $('.wrap_ratio .graph .food').animate({'width':'35%'});
+        $('.wrap_ratio .graph .beauty').animate({'width':'13%'});
+        $('.wrap_ratio .graph .others').animate({'width':'2%'});
+        //접근성
+        setTimeout(function() {
+            var shoppingWidth = document.querySelector('.wrap_ratio .graph .shopping').style.width;
+            var foodWidth = document.querySelector('.wrap_ratio .graph .food').style.width;
+            var beautyWidth = document.querySelector('.wrap_ratio .graph .beauty').style.width;
+            var pleasureWidth = document.querySelector('.wrap_ratio .graph .pleasure').style.width;
+            var othersWidth = document.querySelector('.wrap_ratio .graph .others').style.width;
+            
+            $('.wrap_ratio .graph .others').find('.blind').text('그 외 13개 비율'+othersWidth);
+        }, 1000);
+    }
+    // [E] 사용 소비 비율
+
+    
+    // [S] 항목 더보기,접기
+    var chartList = $('.chart_rate'),
+        animateTime = 500,
+        btnFold = $('.chartFolding');
+
+        btnFold.click(function(){
+            var $self = $(this);
+            if(chartList.height() === 200){
+                listHeightAct(chartList, animateTime);
+                $self.text('접기');
+                $self.addClass('fold');
+                $self.removeClass('show');
+            } else {
+                chartList.stop().animate({ height: '200' }, animateTime);
+                $self.text('더보기');
+                $self.addClass('show');
+                $self.removeClass('fold')
+            }
+        });
+        function listHeightAct(element, time){
+            var curHeight = element.height(), // Get Default Height
+            autoHeight = element.css('height', 'auto').height(); // Get Auto Height
+                element.height(curHeight); // Reset to Default Height
+                element.stop().animate({ height: autoHeight }, time); // Animate to Auto Height
+        }
+    // [E] 항목 더보기,접기 
+    
+});
+
+// [S] 풀페이지 팝업
+ $(document).on("click", ".btn_open_full_sheet", function(e){
+    e.preventDefault();
+	var $fullPop = $(this).attr('href');
+    layer_fullsheet($fullPop);
+
+    $('html').addClass('scroll_lock');
+	$focusReturn = $(this);
+});
+function layer_fullsheet(el){
+	var $el = $(el);
+	$el.append("<div class=\"dim\"></div>");
+	isDim ? $('.layer_fullsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
+	setTimeout(function() {
+		$el.find('.layer_inner').addClass('on');
+	}, 50);
+
+	var isDim = $el.siblings().hasClass('dim');
+
+	$el.find('.js_pop_close').click(function(){
+		$el.find('.layer_inner').removeClass('on');
+		setTimeout(function() {
+			isDim ? $('.layer_fullsheet').hide() : $el.hide();
+			$('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+			$el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
+		}, 200);
+		$focusReturn.focus();
+		return false;
+	});
+}
+// [E] 풀페이지 팝업
+
+// [S] 바텀시트
+$(document).on("click", ".btn_open_bottom_sheet", function(e){
+	e.preventDefault();
+
+	var $href = $(this).attr('href');
+	layer_bottomsheet($href);
+	$('html').addClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+
+	// [S] multi layer 2021-08-02 추가
+	var dimIdx = $('.dim').index();
+	eval('$focusReturn' + [dimIdx] + '= $(this)');
+	//$focusReturn = $(this); // multi layer 2021-08-02 삭제
+	// [E] multi layer 2021-08-02 추가
+
+});
+function layer_bottomsheet(el){
+	var $el = $(el);
+	$el.append("<div class=\"dim\"></div>");
+	isDim ? $('.layer_bottomsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
+	setTimeout(function() {
+		$el.find('.layer_inner').addClass('on');
+	}, 50);
+
+	// [S] multi layer 2021-08-02 추가
+	//var isDim = $el.siblings().hasClass('dim');
+	var isDim;
+	var dimIdx = $('.dim').index();
+	var thisDim = $el.find('.dim');
+	var thisLyZindex = dimIdx + 4000;
+	$('.dim').css('opacity','0');
+	thisDim.css('opacity','.7');
+	thisDim.closest('.layer_bottomsheet, .layer_popup').css('z-index', thisLyZindex);
+	// [E] multi layer 2021-08-02 추가
+
+	$el.find('.js_pop_close').click(function(){
+
+		$el.find('.layer_inner').removeClass('on');
+		setTimeout(function() {
+			isDim ? $('.layer_bottomsheet').hide() : $el.hide();
+			$('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+			$el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
+			// [S] multi layer 2021-08-02 추가
+			if($('.dim').length == '2'){
+				$('.dim:eq(1)').css('opacity','.7');
+			}else if($('.dim').length == '1'){
+				$('.dim').css('opacity','.7');
+			}
+			// [E] multi layer 2021-08-02 추가
+		}, 200);
+
+		// [S] multi layer 2021-08-02 추가
+		eval('$focusReturn'+ [dimIdx]).focus();
+		//$focusReturn.focus(); // multi layer 2021-08-02 삭제
+		// [E] multi layer 2021-08-02 추가
+
+		return false;
+	});
+}
+// [E] 바텀시트
+
+
+
+
+</script>
+</body>
+</html>

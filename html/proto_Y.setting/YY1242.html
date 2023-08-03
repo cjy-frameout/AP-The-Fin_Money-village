@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+	<!-- header -->
+	<div class="header setup"><!-- 2021-10-07 마이페이지 클래스 'setup' 추가 -->
+		<div class="header_inn">
+			<div class="left">
+				<a href="#none" class="btnBack"><span class="blind">Back</span></a>
+			</div>
+			<div class="center">
+				<h2 class="tit_h2">자산 연동하기</h2>
+			</div>
+			<div class="right">
+
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+
+			<div class="ag_wrap">
+				<div class="agTx">
+					<h3>국민은행 선택항목 수정을 위해<br />약관에 동의해주세요.</h3>
+				</div>
+
+				<div class="wrap_certi_way">
+					<div class="tab_certi js_tab_wrap">
+						<div class="tabs_header type2">
+							<ul class="cboth js_tab_menu">
+								<li class="js_item on"><a href="#none" class="js_bt" role="button"><span class="tx">네이버인증서</span></a></li>
+								<li class="js_item"><a href="#none" class="js_bt" role="button"><span class="tx">금융인증서</span></a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="agChkLst">
+						<div class="agChkItem all">
+							<label for="chkAll">
+								<input type="checkbox" id="chkAll" checked><i></i><span id="">통합인증 및 정보 제공 동의</span>
+							</label>
+							<a href="#none" class="btnFolding" data-target="#folding"><span class="blind">펼침</span></a><!-- 디폴트 닫힘 class="btnFolding show" 클래스 'show' 제거 -->
+						</div>
+						<ul class="agChkSubList" id="folding" style="display:none;"><!-- 디폴트 닫힘 style="display:none;" 추가 -->
+							<li id="agChkItem1" class="agChkItem">
+								<label for="subChk1">
+									<input type="checkbox" id="subChk1" checked><i></i><span>(필수)인증서 본인확인서비스 이용약관</span>
+								</label>
+								<a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+							</li>
+							<li id="agChkItem2" class="agChkItem">
+								<label for="subChk2">
+									<input type="checkbox" id="subChk2"><i></i><span>(필수)개인정보 처리 동의</span>
+								</label>
+								<a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+							</li>
+							<li id="agChkItem3" class="agChkItem">
+								<label for="subChk3">
+									<input type="checkbox" id="subChk3"><i></i><span>(필수)고유식별정보 수집 · 이용 및 위탁 동의</span>
+								</label>
+								<a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+							</li>
+							<li id="agChkItem4" class="agChkItem">
+								<label for="subChk4">
+									<input type="checkbox" id="subChk4"><i></i><span>(필수) 네이버_개인(신용)정보 제3자 제공 동의</span><!-- '제 3자' >> '제3자' 띄어쓰기 변경 -->
+								</label>
+								<a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- [S] 하단 고정 영역 -->
+			<div class="fix_bottom">
+				<!-- btn_wrap -->
+				<div class="btn_wrap">
+					<div class="btnGroup type_col">
+						<p><a href="#layer_bs_2" class="btnBl3" role="button">다음</a></p>
+					</div>
+				</div>
+				<!--//btn_wrap -->
+			</div>
+			<!-- [E] 하단 고정 영역 -->
+
+		</div>
+	</div>
+	<!-- //container -->
+</div>
+<!-- //wrap -->
+
+<script>
+$(document).ready(function(){
+
+	// 인증서 선택 예시 JS
+	$('.wrap_certi_way .js_item').each(function (index, item) {
+		var $jsBtNth = index + 1;
+		$(item).find('.js_bt').click(function () {
+			if($jsBtNth == 1){//네이버인증서
+				$(item).closest('.wrap_certi_way').find('#agChkItem4').show();
+			}else if($jsBtNth == 2){//금융인증서
+				$(item).closest('.wrap_certi_way').find('#agChkItem4').hide();
+			}else if($jsBtNth == 3){//KB인증서
+				$(item).closest('.wrap_certi_way').find('#agChkItem4').hide();
+			}else if($jsBtNth == 4){//공동인증서
+				$(item).closest('.wrap_certi_way').find('#agChkItem4').hide();
+			}
+		});
+	});
+
+});
+</script>
+</body>
+</html>

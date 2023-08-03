@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- suhyup sub main swiper -->
+<script type="text/javascript" src="../js/swiper.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+<!-- //suhyup sub main swiper -->
+
+<style>
+    h3{margin:30px 0 10px}
+</style>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+            <div class="wrap_slider type_banner">
+				<div class="slider_container">
+					<div class="slider">
+						<a href="#none">
+							<span class="slide_tit">MY자산 서비스</span>
+							<span class="slide_txt">OPEN FESTIVAL</span>
+						</a>
+					</div>
+					<div class="slider">
+						<a href="#none">
+							<span class="slide_tit">MY자산 서비스</span>
+							<span class="slide_txt">OPEN FESTIVAL</span>
+						</a>
+					</div>
+					
+				</div>
+			</div>
+
+            <div class="wrap_slider type_skin">
+				<div class="slider_container">
+					<div class="slider">
+						<a href="#none">
+							<span class="logo"><em class="blind">에이피더핀은행</em></span>
+							<img src="../../img/theme/apthefin/@thum.jpg">
+							<span class="noti">*본 서비스는 에이피더핀은행에서 제공합니다.</span>
+						</a>
+					</div>
+					<div class="slider">
+						<a href="#none">
+							<span class="logo"><em class="blind">에이피더핀은행</em></span>
+							<img src="../../img/theme/apthefin/@thum.jpg">
+							<span class="noti">*본 서비스는 에이피더핀은행에서 제공합니다.</span>
+						</a>
+					</div>
+				</div>
+			</div>
+            
+            <div class="mgt24"></div>
+
+            <div class="banner outLink">
+                <a href="#none" class="link_type1">
+                    <span class="logo"><em class="blind">에이피더핀은행</em></span>
+                    <h3 class="banner_tit">
+                        장기 플랜을 위한<br>
+                        <span class="titPoint">저축성 보험</span> 알아보기
+                    </h3>
+                    <span class="noti">*본 서비스는 에이피더핀은행에서 제공합니다.</span>
+                </a>
+            </div>
+        </div>
+	</div>
+	<!-- //container -->
+</div>
+<!-- //wrap -->
+<script>
+$(document).ready(function(){
+    /* [S] 슬라이드 배너형 */
+    var $sliderBanner= $('.wrap_slider.type_banner .slider_container');
+    $sliderBanner.slick({
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2500
+    });
+    /* 재생, 멈춤 */
+    var html_control = '<div class="slider_control">';
+    html_control += '<button type="button" class="btn_control play" tabindex="0"><span class="blind">배너 자동재생</span></button>';
+    html_control += '<button type="button" class="btn_control stop" tabindex="0"><span class="blind">배너 일시정지</span></button>';
+    html_control += '</div>'
+    $(".slick-dots").before(html_control);
+
+    var btnSliderPlay = $('.wrap_slider.type_banner .btn_control.play');
+    var btnSliderStop = $('.wrap_slider.type_banner .btn_control.stop');
+    $(btnSliderPlay).click(function(){
+        $sliderBanner.slick('slickPlay');
+        $(btnSliderPlay).hide();
+        $(btnSliderStop).show().focus();// 20210901 접근성 .focus() 추가
+    });
+    $(btnSliderStop).click(function(){
+        $sliderBanner.slick('slickPause');
+        $(btnSliderStop).hide();
+        $(btnSliderPlay).show().focus();// 20210901 접근성 .focus() 추가
+    });
+    /* [E] 슬라이드 배너형 */
+
+    /* [S] 슬라이드 배너형 */
+    var $sliderBanner= $('.wrap_slider.type_skin .slider_container');
+    $sliderBanner.slick({
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2500
+    });
+    /* 재생, 멈춤 */
+    var html_control = '<div class="slider_control">';
+    html_control += '<button type="button" class="btn_control play" tabindex="0"><span class="blind">배너 자동재생</span></button>';
+    html_control += '<button type="button" class="btn_control stop" tabindex="0"><span class="blind">배너 일시정지</span></button>';
+    html_control += '</div>'
+    $(".slick-dots").before(html_control);
+
+    var btnSliderPlay = $('.wrap_slider.type_skin .btn_control.play');
+    var btnSliderStop = $('.wrap_slider.type_skin .btn_control.stop');
+    $(btnSliderPlay).click(function(){
+        $sliderBanner.slick('slickPlay');
+        $(btnSliderPlay).hide();
+        $(btnSliderStop).show().focus();// 20210901 접근성 .focus() 추가
+    });
+    $(btnSliderStop).click(function(){
+        $sliderBanner.slick('slickPause');
+        $(btnSliderStop).hide();
+        $(btnSliderPlay).show().focus();// 20210901 접근성 .focus() 추가
+    });
+    /* [E] 슬라이드 배너형 */
+
+});
+</script>
+</body>
+</html>

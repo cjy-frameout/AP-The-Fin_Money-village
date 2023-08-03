@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- [S] chart -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<!-- [E] chart -->
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+
+	<!-- header -->
+	<div class="header">
+		<div class="header_inn">
+			<!-- <div class="left">
+				<a href="#none" class="btnBack"><span class="blind">Back</span></a>
+			</div> -->
+			<div class="center">
+				<h2 class="tit_h2">MY자산</h2>
+			</div>
+			<div class="right">
+				<a href="#none" class="btnMenu"><span class="blind">menu</span></a>
+                <!-- <a href="#none" class="btnClose"><span class="blind">Close</span></a> -->
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+              <!-- [S] 공지영역 -->
+              <div class="noti_box">
+                <div class="inner box_bg">
+                    <div class="tit pointColor">공지</div>
+                    <div class="cont">
+                        <div class="slider_container">
+                            <div class="slider"><a href="#none" class="tx ellipsis">네이버페이 서비스 점검으로 인한 공지사항 테스트입니다.</a></div>
+                            <div class="slider"><a href="#none" class="tx ellipsis">공지사항 테스트테스트테스트테스트</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- [E] 공지영역 -->
+
+            <!-- [S] 금융일정 영역 -->
+            <div class="scheBox">
+                <a href="#none" class="link_detail">
+                    <h3 class="scheTit">2월 금융 일정</h3>
+                    <p class="scheAmount">총 <em class="num">0</em>건</p>
+                </a>
+            </div>
+            <!-- [E] 금융일정 영역 -->
+
+            <!-- [S] 내자산 -->
+			<div class="boxArea">
+				<div class="homeBox">
+					<h3 class="tit">내 자산</h3>
+                    <div class="homeInfo type_home01">
+                        <h3 class="sub_tit">
+                            <span class="pointLine3">흩어진 자산을</span> 모아<br>
+                            한눈에 확인하세요!
+                        </h3>
+                    </div>
+				</div>
+                <div class="btnListMore"><a href="#none">자산 연결하기</a></div>
+			</div>
+			<!-- [E] 내자산 -->
+
+            <!-- [S] 금융자산 스와이프 -->
+            <div class="wrap_slider type_mainCard">
+                <div class="slider_container">
+					<div class="slider">
+						<div class="boxArea">
+                            <div class="homeBox">
+                                <h3 class="tit">금융 자산</h3>
+                                <div class="homeInfo img_01">
+                                    <h3 class="sub_tit">
+                                        <span class="pointColor">내 자산현황</span>이<br>
+                                        궁금하다면?
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="btn_wrap">
+                                <div class="btnGroup">
+                                    <p><a href="#none" class="btnBl2" role="button"><span class="tx">자산 연결하기</span></a></p>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+					<div class="slider">
+						<div class="boxArea">
+                            <div class="homeBox">
+                                <h3 class="tit">소비</h3>
+                                <div class="homeInfo img_01">
+                                    <h3 class="sub_tit">
+                                        <span class="pointColor">어디에 얼마나</span><br>
+                                        쓰고있을까?
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="btn_wrap">
+                                <div class="btnGroup">
+                                    <p><a href="#none" class="btnBl2" role="button"><span class="tx">카드 연결하기</span></a></p>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+					<div class="slider">
+						<div class="boxArea">
+                            <div class="homeBox">
+                                <h3 class="tit">자동차</h3>
+                                <div class="homeInfo img_02">
+                                    <h3 class="sub_tit">
+                                        <span class="pointColor">내 차 시세</span><br>
+                                        얼마나 될까?
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="btn_wrap">
+                                <div class="btnGroup">
+                                    <p><a href="#none" class="btnBl2" role="button"><span class="tx">자동차 연결하기</span></a></p>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+                    <div class="slider">
+						<div class="boxArea">
+                            <div class="homeBox">
+                                <h3 class="tit">부동산</h3>
+                                <div class="homeInfo img_03">
+                                    <h3 class="sub_tit">
+                                        <span class="pointColor">우리집 시세</span><br>
+                                        얼마나 될까?
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="btn_wrap">
+                                <div class="btnGroup">
+                                    <p><a href="#none" class="btnBl2" role="button"><span class="tx">부동산 연결하기</span></a></p>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+				</div>
+            </div>
+            <!-- [E] 금융자산 스와이프 -->
+
+             <!-- [S] 목돈만들기 -->
+			<div class="boxArea">
+				<div class="homeBox">
+					<h3 class="tit">목돈 만들기</h3>
+                    <div class="homeInfo type_home02">
+                        <h3 class="sub_tit">
+                            나만의 목표를 세우고<br>
+                            목돈을 모아보세요!
+                        </h3>
+                    </div>
+				</div>
+                <div class="btnListMore"><a href="#none">내 목표 세우기</a></div>
+			</div>
+			<!-- [E] 목돈만들기 -->
+         
+            <!-- [S] 비교 그룹 -->
+            <div class="boxGroup">
+                <a href="#" class="boxArea">
+                    <div class="homeBox">
+                        <h3 class="tit">
+                            내 자산은<br>
+                            <span class="pointColor">상위 몇 프로</span>일까?
+                            </h3>
+                        </div>
+                    <div class="btnListMore"><span class="tx">확인하기</span></div>
+                </a>
+                <a href="#" class="boxArea">
+                    <div class="homeBox">
+                        <h3 class="tit">
+                            내 소비는<br>
+                            <span class="pointColor2">많을까</span>? <span class="pointColor">적을까</span>?
+                            </h3>
+                        </div>
+                    <div class="btnListMore"><span class="tx">확인하기</span></div>
+                </a>
+            </div>
+			<!-- [E] 비교 그룹 -->
+			
+			<!-- [S] 슬라이드 배너 타입 -->
+			<div class="wrap_slider type_skin">
+				<div class="slider_container">
+					<div class="slider">
+						<a href="#none">
+							<span class="logo"><em class="blind">에이피더핀은행</em></span>
+							<img src="../../img/theme/apthefin/@thum.jpg">
+							<span class="noti">*본 서비스는 에이피더핀에서 제공합니다.</span>
+						</a>
+					</div>
+					<div class="slider">
+						<a href="#none">
+							<span class="logo"><em class="blind">에이피더핀은행</em></span>
+							<img src="../../img/theme/apthefin/@thum.jpg">
+							<span class="noti">*본 서비스는 에이피더핀에서 제공합니다.</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- [E] 슬라이드 배너 타입 -->
+			
+			<!-- [S] 하단 고정 영역 -->
+            
+            <div class="footer">
+                <button class="f-1">아파트한눈에</button>
+                <button class="f-2">핀스토어</button>
+                <button class="f-3"><span class="blind">FEED</span></button>
+                <button class="f-4">핀프로필</button>
+                <button class="f-5">드림네트워크</button>
+                <div class="footer-back"></div>
+            </div>
+		</div>
+	</div>
+	<!-- //container -->
+</div>
+<!-- //wrap -->
+
+<script>
+$(document).ready(function(){
+     /* [S] 슬라이드 공지 */
+     var $sliderNotice= $('.noti_box .slider_container');
+        $sliderNotice.slick({
+            vertical : true,
+            dots: false,
+            arrows : false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000
+    });
+    /* [E] 슬라이드 공지 */
+    /* [S] 슬라이드 목록형 */
+    var $sliderAccList= $('.wrap_slider.type_acc .slider_container');
+        $sliderAccList.slick({
+            dots: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: false
+     });
+    /* [E] 슬라이드 목록형 */
+
+    /* [S] 슬라이드 메인카드형 */
+    var $sliderBanner= $('.wrap_slider.type_mainCard .slider_container');
+    $sliderBanner.slick({
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2500
+    });
+    /* [E] 슬라이드 메인카드형 */
+
+    /* [S] 슬라이드 하단 배너형 */
+    var $sliderBanner= $('.wrap_slider.type_skin .slider_container');
+    $sliderBanner.slick({
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2500
+    });
+    /* [E] 슬라이드 하단 배너형 */
+
+	$('.btn_open_toolTip').click(function(){
+		$(this).siblings('.tooltip3').fadeIn();        
+	})
+	$('.btn_tool_close').click(function(){
+		$(this).closest('.tooltip3').fadeOut();        
+	})
+
+	//입출금 예적금 선불페이 선택 탭
+	$(".tabInter").tabs({
+		wrapClass:".tabInter",
+		clickClass:".js_tabclickDp1",
+		showClass:".tab_cntDp1",
+		animate:false,
+		contentWidthFull:false,//effect when animate:true
+		animateBorder:["false",".tabs_header"],//show border in class .
+		fade:false,
+		speed:500
+	});
+
+	/* [S] 슬라이드 배너형 */
+    var $sliderBanner= $('.wrap_slider.type_skin .slider_container');
+    $sliderBanner.slick({
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2500
+    });
+    /* [E] 슬라이드 배너형 */
+});
+</script>
+</body>
+</html>

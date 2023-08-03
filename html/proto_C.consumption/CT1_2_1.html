@@ -1,0 +1,898 @@
+﻿<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- [S] chart -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<!-- [E] chart -->
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+
+	<!-- header -->
+	<div class="header">
+		<div class="header_inn">
+			<!-- <div class="left">
+				<a href="#none" class="btnBack"><span class="blind">Back</span></a>
+			</div> -->
+			<div class="center">
+				<h2 class="tit_h2">소비</h2>
+			</div>
+			<div class="right">
+				<a href="#none" class="btnMenu"><span class="blind">menu</span></a>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+			<!-- [S] 동의안내 -->
+			<div class="topInfoPop">
+				<a href="#" class="tx">가맹점 정보 제공에 동의해야 리포트를 받아보세요</a>
+			</div>
+			<!-- [E] 동의안내 -->
+
+			<!-- [S] 내소비 타이틀 -->
+			<div class="tBalance tconsume">
+				<h3 class="tBaltit">내소비</h3>
+				<p class="tBalAmount">
+					<a href="#none" class="link"><em class="amount">13,000,000</em>원</a>
+					<span class="txt">금액이 숨겨졌어요</span>
+				</p>
+				<div class="tBalUpdate">
+					<a href="#" class="btnUpdate"><span class="blind">새로고침</span></a>업데이트 02.08 16:40
+					<label class="btn_switch">
+						<input type="checkbox"><span class="round"></span>
+					</label>
+				</div>
+			</div>
+			<!-- [E] 내소비 타이틀 -->
+			
+			<!-- [S] 막대그래프 -->
+            <div class="boxArea lineType">
+				<div class="tabInter">
+					<div class="asset_tab_header">
+						<ul class="cboth">
+							<li class="js_tabclickDp1 on"><a href="#none" title="선택됨"><span>일간</span></a></li><!-- 선택시 title="선택됨" 추가 -->
+							<li class="js_tabclickDp1"><a href="#none"><span>주간</span></a></li>
+							<li class="js_tabclickDp1"><a href="#none"><span>월간</span></a></li>
+						</ul>
+					</div>
+					<div class="asset_tab_body">
+						<div class="tab_cntDp1" style="display: block;">
+							<div class="asGroup consume_chart">
+								<div class="chart_info">오늘은 어제보다<br><span class="pointColor">8,000원 적게</span> 썼어요</div>
+								<div class="asList">
+									<!-- [S] 소비 일간 막대그래프 -->
+									<div class="wrapBarGraph">
+										<div class="wrapBar grap0">
+											<div class="gBarBox bar1">
+												<span class="gBarPrice">
+													<span class="inBox"><em class="price"></em>원</span>
+												</span>
+												<span class="gBar"></span>
+												<span class="gTx"><span class="gWeek">금</span></span>
+											</div>
+											<div class="gBarBox bar2">
+												<span class="gBarPrice">
+													<span class="inBox"><em class="price"></em>원</span>
+												</span>
+												<span class="gBar"></span>
+												<span class="gTx"><em class="gWeek">토</em></span>
+											</div>
+											<div class="gBarBox bar3">
+												<span class="gBarPrice">
+													<span class="inBox"><em class="price"></em>원</span>
+												</span>
+												<span class="gBar"></span>
+												<span class="gTx"><em class="gWeek">일</em></span>
+											</div>
+											<div class="gBarBox bar4">
+												<span class="gBarPrice">
+													<span class="inBox"><em class="price"></em>원</span>
+												</span>
+												<span class="gBar"></span>
+												<span class="gTx"><em class="gWeek">월</em></span>
+											</div>
+											<div class="gBarBox bar5">
+												<span class="gBarPrice">
+													<span class="inBox"><em class="price"></em>원</span>
+												</span>
+												<span class="gBar"></span>
+												<span class="gTx"><em class="gWeek">화</em></span>
+											</div>
+											<div class="gBarBox bar6">
+												<span class="gBarPrice">
+													<span class="inBox"><em class="price"></em>원</span>
+												</span>
+												<span class="gBar"></span>
+												<span class="gTx"><em class="gWeek">수</em></span>
+											</div>
+											<div class="gBarBox bar7 on">
+												<span class="gBarPrice">
+													<span class="inBox"><em class="price"></em>원</span>
+												</span>
+												<span class="gBar"></span>
+												<span class="gTx"><em class="gWeek">목</em></span>
+											</div>
+										</div>
+									</div>
+									<!-- [E] 소비 일간 막대그래프 -->
+								</div>
+							</div>
+						</div>
+						<div class="tab_cntDp1" style="display: none;">
+							<div class="asGroup consume_chart useAlot"><!-- [D] 많이 사용시 클래스 추가 useAlot -->
+								<div class="chart_info">지난주보다<br><span class="pointColor">30,000원 많이</span> 썼어요</div>
+								<div class="asList">
+									<!-- [S] 소비 주간 막대그래프 -->
+									<div class="wrapBarGraph">
+										<div class="wrapBar grap1">
+											<div class="gBarBox bar1">
+												<span class="gBarPrice">
+													<span class="inBox"><em class="price"></em>원</span>
+												</span>
+												<span class="gBar"></span>
+												<span class="gTx"><em class="gWeek">~1.27</em></span>
+											</div>
+											<div class="gBarBox bar2">
+												<span class="gBarPrice">
+													<span class="inBox"><em class="price"></em>원</span>
+												</span>
+												<span class="gBar"></span>
+												<span class="gTx"><em class="gWeek">~2.3</em></span>
+											</div>
+											<div class="gBarBox bar3">
+												<span class="gBarPrice">
+													<span class="inBox"><em class="price"></em>원</span>
+												</span>
+												<span class="gBar"></span>
+												<span class="gTx"><em class="gWeek">~2.10</em></span>
+											</div>
+											<div class="gBarBox bar4 on">
+												<span class="gBarPrice">
+													<span class="inBox"><em class="price"></em>원</span>
+												</span>
+												<span class="gBar"></span>
+												<span class="gTx"><em class="gWeek">이번주</em></span>
+											</div>
+										</div>
+									</div>
+									<!-- [E] 소비 주간 막대그래프 -->
+								</div>
+							</div>
+						</div>
+						<div class="tab_cntDp1" style="display: none;">
+							<div class="asGroup consume_chart">
+								<div class="chart_info">지난달보다<br><span class="pointColor">600,000원 적게</span> 썼어요</div>
+								<div class="asList">
+									<!-- [S] 소비 월간 막대그래프 -->
+									<div class="wrapBarGraph">
+										<div class="wrapBar grap2">
+											<div class="gBarBox bar1">
+												<span class="gBarPrice">
+													<span class="inBox"><em class="price"></em>원</span>
+												</span>
+												<span class="gBar"></span>
+												<span class="gTx"><em class="gWeek">10월</em></span>
+											</div>
+											<div class="gBarBox bar2">
+												<span class="gBarPrice">
+													<span class="inBox"><em class="price"></em>원</span>
+												</span>
+												<span class="gBar"></span>
+												<span class="gTx"><em class="gWeek">11월</em></span>
+											</div>
+											<div class="gBarBox bar3">
+												<span class="gBarPrice">
+													<span class="inBox"><em class="price"></em>원</span>
+												</span>
+												<span class="gBar"></span>
+												<span class="gTx"><em class="gWeek">12월</em></span>
+											</div>
+											<div class="gBarBox bar4">
+												<span class="gBarPrice">
+													<span class="inBox"><em class="price"></em>원</span>
+												</span>
+												<span class="gBar"></span>
+												<span class="gTx"><em class="gWeek">1월</em></span>
+											</div>
+											<div class="gBarBox bar5 on">
+												<span class="gBarPrice">
+													<span class="inBox"><em class="price"></em>원</span>
+												</span>
+												<span class="gBar"></span>
+												<span class="gTx"><em class="gWeek">2월</em></span>
+											</div>
+										</div>
+									</div>
+									<!-- [E] 소비 월간 막대그래프 -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- [E] 막대그래프 -->
+
+			<!-- [S] 소비 탭 -->
+			<div class="boxArea">
+				<div class="tabInter">
+					<div class="asset_tab_header consume_tab">
+						<ul class="cboth">
+							<li class="js_tabclickDp1 on"><a href="#none" title="선택됨"><span>카드별 소비</span></a></li><!-- 선택시 title="선택됨" 추가 -->
+							<li class="js_tabclickDp1"><a href="#none"><span>최근 소비</span></a></li>
+						</ul>
+					</div>
+					<div class="asset_tab_body">
+						<div class="tab_cntDp1" style="display: block;">
+							<ul class="consume_info_list">
+								<li class="consume_info_item">
+									<span class="tit">Real? Real! 2카드</span>
+									<a href="#" class="btnAdd"><em>100,000</em>원</a>
+								</li>
+								<li class="consume_info_item">
+									<span class="tit">찐카드(ZZIN CARD)</span>
+									<a href="#" class="btnAdd"><em>100,000</em>원</a>
+								</li>
+								<li class="consume_info_item">
+									<span class="tit">S1카드</span>
+									<a href="#" class="btnAdd"><em>100,000</em>원</a>
+								</li>
+								<li class="consume_info_item">
+									<span class="tit">Real? Real! 2카드</span>
+									<a href="#" class="btnAdd"><em>100,000</em>원</a>
+								</li>
+								<li class="consume_info_item">
+									<span class="tit">찐카드(ZZIN CARD)</span>
+									<a href="#" class="btnAdd"><em>100,000</em>원</a>
+								</li>
+							</ul>
+							<div class="btnListMore"><a href="#none">자세히보기</a></div>
+						</div>
+						<div class="tab_cntDp1" style="display: none;">
+							<dl class="consumeHistory">
+								<dt>09.23 금요일</dt>
+								<dd>
+									<ul>
+										<li>
+											<a href="#none">
+												<div class="consume_name">
+													<span class="itemTit">국수나무영등포점</span>
+													<span class="itemData"><em class="num">100,000</em>원</span>
+												</div>
+												<div class="consume_detail">
+													<span class="itemTit">Real? Real!2 카드</span>
+													<span class="itemData"><em class="num">18:20</em>일시불</span>
+												</div>
+											</a>
+										</li>
+										<li class="type_cancel">
+											<a href="#none">
+												<div class="consume_name">
+													<span class="itemTit">국수나무영등포점</span>
+													<span class="itemData"><em class="num">100,000</em>원</span>
+												</div>
+												<div class="consume_detail">
+													<span class="itemTit">Real? Real!2 카드</span>
+													<span class="itemData"><em class="num">18:20</em>일시불</span>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl class="consumeHistory">
+								<dt>09.23 금요일</dt>
+								<dd>
+									<ul>
+										<li>
+											<a href="#none">
+												<div class="consume_name">
+													<span class="itemTit">국수나무영등포점</span>
+													<span class="itemData"><em class="num">100,000</em>원</span>
+												</div>
+												<div class="consume_detail">
+													<span class="itemTit">Real? Real!2 카드</span>
+													<span class="itemData"><em class="num">18:20</em>일시불</span>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+							<div class="btnListMore"><a href="#none">자세히보기</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- [E] 소비 탭 -->
+
+			<!-- [S] 결제예정금액 -->
+			<h3 class="thisMonth mgt40">이번달 결제예정금액</h3>
+			<a href="#" class="boxArea bgBlue">
+				<div class="expectPay">
+					<div class="expectInfo link">
+                        <span class="infoTit">카드 청구서<em>3</em></span>
+                        <span class="infoNum"><em class="num">20,800,000</em>원</span>
+                    </div>
+					<div class="expectTxt">
+						<span>{카드사명}</span>를 가장 많이 사용했어요
+					</div>
+				</div>
+			</a>
+			<!-- [E] 결제예정금액 -->
+
+			<!-- [S] 이번달 통신비 -->
+			<a href="#" class="boxArea bgOrange">
+				<div class="expectPay">
+                    <div class="expectInfo link">
+                        <span class="infoTit">통신비 청구서<em>3</em></span>
+                        <span class="infoNum"><em class="num">20,800,000</em>원</span>
+                    </div>
+				</div>
+			</a>
+			<!-- [E] 이번달 통신비 -->
+
+			<div class="hr_div"></div> 
+			
+			<h3 class="thisMonth">이달의 소비 스타일</h3>
+			<div class="consumeStyle dimAgreement"><!-- [D] 미동의 dimAgreement -->
+				<div class="agreementLink">
+					가맹점 정보에 동의해야<br>리포트를 볼 수 있어요
+					<a href="#none">동의하러 가기</a>
+				</div>
+				<!-- [S] 이달의 소비 스타일 -->
+				<div class="boxArea conStyle">
+					<div class="chart_info_pie">2월은 <span class="fc_food">식비</span>에<br> 가장 많이 썼어요</div>
+					<div class="wrap_chart type_pie">
+						<figure class="highcharts-figure" aria-hidden="true">
+							<div id="chart_pie_calendar"></div>
+						</figure>
+						<!-- 접근성 -->
+						<div class="chart_disable blind">
+							<table class="info_tbl">
+								<caption>이달의 소비 통계 현황</caption>
+								<colgroup>
+									<col /><col />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">종목</th>
+										<th scope="col">비율</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row"><div>식비</div></th>
+										<td><div><span class="rate_01"></span></div></td>
+									</tr>
+									<tr>
+										<th scope="row"><div>주거 / 통신</div></th>
+										<td><div><span class="rate_02"></span></div></td>
+									</tr>
+									<tr>
+										<th scope="row"><div>온라인쇼핑</div></th>
+										<td><div><span class="rate_03"></span></div></td>
+									</tr>
+									<tr>
+										<th scope="row"><div>교육 / 학습</div></th>
+										<td><div><span class="rate_04"></span></div></td>
+									</tr>
+									<tr>
+										<th scope="row"><div>문화 / 여가</div></th>
+										<td><div><span class="rate_05"></span></div></td>
+									</tr>
+									<tr>
+										<th scope="row"><div>의료 / 건강</div></th>
+										<td><div><span class="rate_06"></span></div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="labelInfo">
+						<span class="rate"><span class="ico_rate type_01"></span>식비 <em>30%</em></span>
+						<span class="rate"><span class="ico_rate type_09"></span>주거 / 통신 <em>22%</em></span>
+						<span class="rate"><span class="ico_rate type_14"></span>온라인쇼핑 <em>18%</em></span>
+						<span class="rate"><span class="ico_rate type_15"></span>교육 / 학습 <em>10%</em></span>
+						<span class="rate"><span class="ico_rate type_12"></span>문화 / 여가 <em>10%</em></span>
+						<span class="rate"><span class="ico_rate type_10"></span>의료 / 건강 <em>10%</em></span>
+					</div>
+					<div class="btnListMore"><a href="#none">자세히보기</a></div>
+				</div>
+				<!-- [E] 이달의 소비 스타일 -->
+
+				<!-- [S] 썼어요 탭 -->
+				<div class="boxArea">
+					<div class="tabInter">
+						<div class="asset_tab_header consume_tab">
+							<ul class="cboth">
+								<li class="js_tabclickDp1 on"><a href="#none" title="선택됨"><span>많이 썼어요</span></a></li><!-- 선택시 title="선택됨" 추가 -->
+								<li class="js_tabclickDp1"><a href="#none"><span>자주 썼어요</span></a></li>
+							</ul>
+						</div>
+						<div class="asset_tab_body spentMoney">
+							<div class="tab_cntDp1" style="display: block;">
+								<ul class="consume_info_list">
+									<li class="consume_info_item">
+										<span class="tit"><span class="ico_cate shopping"></span>11번가</span>
+										<a href="#" class="btnAdd"><em>100,000</em>원</a>
+									</li>
+									<li class="consume_info_item">
+										<span class="tit"><span class="ico_cate shopping"></span>쿠팡(쿠페이)_KICC</span>
+										<a href="#" class="btnAdd"><em>130,000</em>원</a>
+									</li>
+									<li class="consume_info_item">
+										<span class="tit"><span class="ico_cate life"></span>CU</span>
+										<a href="#" class="btnAdd"><em>100,000</em>원</a>
+									</li>
+								</ul>
+							</div>
+							<div class="tab_cntDp1" style="display: none;">
+								<ul class="consume_info_list">
+									<li class="consume_info_item">
+										<span class="tit"><span class="ico_cate shopping"></span>12번가</span>
+										<a href="#" class="btnAdd"><em>100,000</em>회</a>
+									</li>
+									<li class="consume_info_item">
+										<span class="tit"><span class="ico_cate shopping"></span>쿠팡</span>
+										<a href="#" class="btnAdd"><em>130,000</em>회</a>
+									</li>
+									<li class="consume_info_item">
+										<span class="tit"><span class="ico_cate life"></span>CU</span>
+										<a href="#" class="btnAdd"><em>100,000</em>회</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- [E] 썼어요 탭 -->
+			</div>
+
+			<!-- [S] 소비비교 -->
+			<a href="#none" class="boxArea compare">
+				<div class="expectPay">
+					<h3 class="tit">소비비교</h3>
+					<p class="expectTxt">또래에 비해 내 씀씀이는?</p>
+					<div class="btnListMore">자세히보기</div>
+				</div>
+			</a>
+			<div class="btn_wrap">
+                <div class="btnGroup">
+                    <p><a href="#none" class="btnBl2 btnEdit" role="button" onclick="">카드 편집</a></p>
+                    <p><a href="#none" class="btnBl1 btnPlus" role="button" onclick="">카드 추가</a></p>
+                </div>
+            </div>
+			<!-- [E] 소비비교 -->
+
+			<!-- [S] 슬라이드 배너 타입 -->
+			<div class="wrap_slider type_banner">
+				<div class="slider_container">
+					<div class="slider">
+						<div class="im">
+							<a href="#none"><img src="../../img/theme/apthefin/im_banner_01.png" alt=""></a>
+						</div>
+					</div>
+					<div class="slider">
+						<div class="im">
+							<a href="#none"><img src="../../img/theme/apthefin/im_banner_01.png" alt=""></a>
+						</div>
+					</div>
+					<div class="slider">
+						<div class="im">
+							<a href="#none"><img src="../../img/theme/apthefin/im_banner_01.png" alt=""></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- [E] 슬라이드 배너 타입 -->
+			
+			<!-- [S] 하단 고정 영역 -->
+            <!-- 22.11.15 dock bar a태그로 변경 -->
+			<div class="fix_bottom">
+                <!-- dock_bar -->
+				<div class="dock_bar">
+                    <ul>
+                        <li>
+                            <a href="#none" class="btn dock_brand"><img src="../../img/theme/apthefin/ic_dock_ci.png" alt="bnk"><span class="tx">에이피더핀</span></a>
+                        </li>
+						<li><a href="#none" class="btn icon_menu ic_home"><span class="tx">홈</span></a></li>
+                        <li><a href="#none" class="btn icon_menu ic_asset"><span class="tx">자산</span></a></li> 
+                        <li><a href="#none" class="btn icon_menu ic_consume on"><span class="tx">소비</span></a></li><!-- 메뉴 선택시 on 클래스 추가 -->
+                        <li><a href="#none" class="btn icon_menu ic_tar"><span class="tx">목표</span></a></li>
+                    </ul>
+                </div>
+			</div>
+			<!-- [E] 하단 고정 영역 -->
+		</div>
+	</div>
+	<!-- //container -->
+</div>
+<!-- //wrap -->
+
+<script>
+$(document).ready(function(){
+	$('.btn_open_toolTip').click(function(){
+		$(this).siblings('.tooltip3').fadeIn();        
+	})
+	$('.btn_tool_close').click(function(){
+		$(this).closest('.tooltip3').fadeOut();        
+	})
+
+	//입출금 예적금 선불페이 선택 탭
+	$(".tabInter").tabs({
+		wrapClass:".tabInter",
+		clickClass:".js_tabclickDp1",
+		showClass:".tab_cntDp1",
+		animate:false,
+		contentWidthFull:false,//effect when animate:true
+		animateBorder:["false",".tabs_header"],//show border in class .
+		fade:false,
+		speed:500
+	});
+	
+	// [S] 막대 그래프
+	grap0();
+	$(".lineType .js_tabclickDp1").on('click', function(){
+		var idx = $(this).index();
+		if(idx == 0){grap0();barInit();}
+		if(idx == 1){grap1(idx);barInit();}
+		if(idx == 2){grap2();barInit();}
+	});
+	function grap0(){
+		var $this = $(this);
+		var $gMaxHeight = 100;//그래프 높이 최대값
+		var $consumeValArr = [52, 75, 100, 82, 20, 100, 20];//일간 소비값 설정
+		var $topConsume = Math.max(...$consumeValArr);
+
+		$.each($consumeValArr, function(index, value){
+			$index = index + 1;
+			$('.grap0 .gBarBox.bar'+$index+' .price').text(value);
+
+			window['$barH'+$index] = parseInt($consumeValArr[index] / $topConsume * $gMaxHeight);//소비값 / 소비최고값 * 그래프 최대 높이
+			
+			//막대그래프 상단 텍스트 모션
+			$('.grap0 .bar'+$index+' .gBarPrice').delay($index*150).animate({'height':window['$barH'+$index] + 25}, 600, 'swing');//
+			//막대그래프 모션
+			$('.grap0 .bar'+$index+' .gBar').delay($index*150).animate({'height':window['$barH'+$index]}, 600, 'swing');//
+		});
+	}
+	function grap1(idx){
+		var $gMaxHeight = 100;//그래프 높이 최대값
+		var $consumeValArr = [50, 100, 50, 20];//주간 소비값 설정
+		var $topConsume = Math.max(...$consumeValArr);
+
+		$.each($consumeValArr, function(index, value){
+			$index = index + 1;
+			$('.grap'+idx+' .gBarBox.bar'+$index+' .price').text(value);
+
+			window['$barH'+$index] = parseInt($consumeValArr[index] / $topConsume * $gMaxHeight);//소비값 / 소비최고값 * 그래프 최대 높이
+
+			//막대그래프 상단 텍스트 모션
+			$('.grap'+idx+' .bar'+$index+' .gBarPrice').delay($index*150).animate({'height':window['$barH'+$index] + 25}, 600, 'swing');//
+			//막대그래프 모션
+			$('.grap'+idx+' .bar'+$index+' .gBar').delay($index*150).animate({'height':window['$barH'+$index]}, 600, 'swing');//
+		});
+	}
+	function grap2(){
+		var $gMaxHeight = 100;//그래프 높이 최대값
+		var $consumeValArr = [20, 80, 40, 60, 20];//월간 소비값 설정
+		var $topConsume = Math.max(...$consumeValArr);
+
+		$.each($consumeValArr, function(index, value){
+			$index = index + 1;
+			$('.grap2 .gBarBox.bar'+$index+' .price').text(value);
+
+			window['$barH'+$index] = parseInt($consumeValArr[index] / $topConsume * $gMaxHeight);//소비값 / 소비최고값 * 그래프 최대 높이
+
+			//막대그래프 상단 텍스트 모션
+			$('.grap2 .bar'+$index+' .gBarPrice').delay($index*150).animate({'height':window['$barH'+$index] + 25}, 600, 'swing');//
+			//막대그래프 모션
+			$('.grap2 .bar'+$index+' .gBar').delay($index*150).animate({'height':window['$barH'+$index]}, 600, 'swing');//
+		});
+	}
+	$(".gBarBox").on('click', function(){
+		var $this = $(this);
+		$this.addClass('on');
+		$this.siblings().removeClass('on');
+	});
+	function barInit(){
+		$(".gBarBox").removeClass('on');
+		$(".gBarBox span").removeAttr('style');
+		$(".gBarBox:last-child").addClass('on');
+	}
+	// [E] 막대 그래프 */	
+
+	
+	// [S] 차트 파이 타입
+	Highcharts.chart('chart_pie_calendar', {
+		title: {text: ''},// 타이틀 숨김
+		exporting: { enabled: false },// 우측상단 햄버거메뉴 숨김
+   		credits: {enabled: false},// highchart 워터마크 숨김
+		tooltip:  { enabled: false },// 툴팁 숨김
+		chart: {
+			plotBackgroundColor: '#fff',
+			plotBorderWidth: null,
+			plotShadow: false,
+			type: 'pie',
+			backgroundColor: '#fff',
+			margin: 0,
+			height:275,
+			events: {
+				load: function () {
+					//전체 카테고리 말풍선 초기 비노출
+					$('.highcharts-data-label').hide();
+					//비중 첫번째로 큰 카테고리 말풍선만 노출
+					$('.highcharts-data-label-color-0').show().find('.highcharts-label-box').css({'stroke-width':'1px'});
+				},
+			},
+		},
+		plotOptions: {
+			pie: {
+				allowPointSelect: true, // 선택모션
+            	slicedOffset: 0, // 슬라이스간격
+				cursor: 'pointer',
+				colors: ['#FF8E69', '#388ACC', '#51D1D0', '#5F95A7', '#83BDB3', '#75C093'], // 색상지정 
+				colorByPoint: true, // 색상지정
+				margin: 0,
+				padding: 0,
+				borderWidth: 0,
+				point: {
+					events: {
+						click: function () {
+							$('.highcharts-data-label').css({'opacity':'1','transition':'all .5s ease'});//카테고리 말풍선 정보
+							$('.highcharts-data-label .highcharts-label-box').css({'stroke-width':'1px','transition':'all 1s ease'});//카테고리 말풍선 정보
+
+							/* 식비 : type_01, #FF8E69 */
+							if(this.name === '식비'){
+								$('.highcharts-data-label').hide();
+								$('.highcharts-data-label-color-0').show()
+                                                                
+								if( this.selected === false){
+									$('.highcharts-data-label-color-0 .highcharts-label-box').css({'stroke-width':'1px'});
+								}else{
+									//$('.highcharts-data-label').hide();
+								}
+							}
+							/* 주거 / 통신 : type_02, #388ACC */
+							else if(this.name === '주거 / 통신'){
+								$('.highcharts-data-label').hide();
+								$('.highcharts-data-label-color-1').show();
+								if( this.selected === false){
+									$('.highcharts-data-label-color-1 .highcharts-label-box').css({'stroke-width':'1px'});
+								}else{
+									//$('.highcharts-data-label').hide();
+								}
+							}
+							/* 온라인쇼핑 : type_03, #51D1D0 */
+							else if(this.name === '온라인쇼핑'){
+								$('.highcharts-data-label').hide();
+								$('.highcharts-data-label-color-2').show();
+								if( this.selected === false){
+									$('.highcharts-data-label-color-2 .highcharts-label-box').css({'stroke-width':'1px'});
+								}else{
+									//$('.highcharts-data-label').hide();
+								}
+							}
+							/* 교육 / 학습 : type_04, #5F95A7 */
+							else if(this.name === '교육 / 학습'){
+								$('.highcharts-data-label').hide();
+								$('.highcharts-data-label-color-3').show();
+								if( this.selected === false){
+									$('.highcharts-data-label-color-3 .highcharts-label-box').css({'stroke-width':'1px'});
+								}else{
+									//$('.highcharts-data-label').hide();
+								}
+							}
+							/* 문화 / 여가 : type_05, #83BDB3 */
+							else if(this.name === '문화 / 여가'){
+								$('.highcharts-data-label').hide();
+								$('.highcharts-data-label-color-4').show();
+								if( this.selected === false){
+									$('.highcharts-data-label-color-4 .highcharts-label-box').css({'stroke-width':'1px'});
+								}else{
+									//$('.highcharts-data-label').hide();
+								}
+							}
+							/* 의료 / 건강 : type_06, #75C093 */
+							else if(this.name === '의료 / 건강'){
+								$('.highcharts-data-label').hide();
+								$('.highcharts-data-label-color-5').show();
+								if( this.selected === false){
+									$('.highcharts-data-label-color-5 .highcharts-label-box').css({'stroke-width':'1px'});
+								}else{
+									//$('.highcharts-data-label').hide();
+								}
+							}
+						}// click
+					}// events
+				},// point
+			},// pie
+		},// plotOptions
+		series: [{
+            innerSize: '50%', //도넛모양
+			size: '60%',// 크기
+			startAngle: 0,// 각도 시작
+			endAngle: 360,// 각도 끝
+			center: ['50%', '45%'], //pie 위치
+			dataLabels: {
+				distance: '-1', //항목명과 그래프의 간격
+				align : 'center',
+				color: '#000',
+				backgroundColor: '#fff',
+				borderWidth: 0, //말풍선 라인
+				borderRadius: '100%',
+                connectorPadding: 0,
+				overflow: 'inherit',
+				crop: false,
+				size: "100%",
+				style : {
+         			fontFamily: 'notoSans',
+				 	fontSize: '17px',
+				 	fontWeight: '700',
+				},
+			},
+			data:
+			[
+				{
+					name: '식비',
+					y: 30,// 100퍼센트 비율
+					sliced: true,
+					selected: true,
+					dataLabels: {
+						useHTML: true,
+						format: '<p class="chart_label_box rate_01"><b>{point.name}</b><b style="color:#FF8E69;"> {point.percentage:1f}% </b></p>',
+						// borderColor: '#FF8E69',
+					},
+				},
+				{
+					name: '주거 / 통신',
+					y: 22,
+					sliced: false,
+					selected: false,
+					dataLabels: {
+						useHTML: true,
+						format: '<p class="chart_label_box rate_02"><b>{point.name}</b><b style="color:#388ACC;"> {point.percentage:1f}% </b>  </p>',
+						// borderColor: '#388ACC',
+					},
+				},
+				{
+					name: '온라인쇼핑',
+					y: 18,
+					sliced: false,
+					selected: false,
+					dataLabels: {
+						useHTML: true,
+						format: ' <p class="chart_label_box rate_03"><b>{point.name}</b><b style="color:#51D1D0;"> {point.percentage:1f}% </b></p>',
+						// borderColor: '#51D1D0',
+					},
+				},
+				{
+					name: '교육 / 학습',
+					y: 10,
+					sliced: false,
+					selected: false,
+					dataLabels: {
+						useHTML: true,
+						format: ' <p class="chart_label_box rate_04"><b>{point.name}</b><b style="color:#5F95A7;"> {point.percentage:1f}% </b></p>',
+						// borderColor: '#5F95A7',
+					},
+				},
+				{
+					name: '문화 / 여가',
+					y: 10,
+					sliced: false,
+					selected: false,
+					dataLabels: {
+						useHTML: true,
+						format: ' <p class="chart_label_box rate_05"><b>{point.name}</b><b style="color:#83BDB3;"> {point.percentage:1f}% </b></p>',
+						// borderColor: '#83BDB3',
+					},
+				},
+				{
+					name: '의료 / 건강',
+					y: 10,
+					sliced: false,
+					selected: false,
+					dataLabels: {
+						useHTML: true,
+						format: ' <p class="chart_label_box rate_05"><b>{point.name}</b><b style="color:#75C093;"> {point.percentage:1f}% </b></p>',
+						// borderColor: '#75C093',
+					},
+				}
+			]// data
+		}]// series
+	});
+	//접근성
+	$('.chart_disable .rate_01').text($('.chart_label_box.rate_01 b:last-child').html());
+	$('.chart_disable .rate_02').text($('.chart_label_box.rate_02 b:last-child').html());
+	$('.chart_disable .rate_03').text($('.chart_label_box.rate_03 b:last-child').html());
+	$('.chart_disable .rate_04').text($('.chart_label_box.rate_04 b:last-child').html());
+	$('.chart_disable .rate_05').text($('.chart_label_box.rate_05 b:last-child').html());
+	$('.chart_disable .rate_06').text($('.chart_label_box.rate_05 b:last-child').html());
+    // // [E] 차트 파이 타입 */
+
+	/* [S] 슬라이드 배너형 */
+    var $sliderBanner= $('.wrap_slider.type_banner .slider_container');
+    $sliderBanner.slick({
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2500
+    });
+    /* 재생, 멈춤 */
+    var html_control = '<div class="slider_control">';
+    html_control += '<button type="button" class="btn_control play" tabindex="0"><span class="blind">배너 자동재생</span></button>';
+    html_control += '<button type="button" class="btn_control stop" tabindex="0"><span class="blind">배너 일시정지</span></button>';
+    html_control += '</div>'
+    $(".slick-dots").before(html_control);
+
+    var btnSliderPlay = $('.wrap_slider.type_banner .btn_control.play');
+    var btnSliderStop = $('.wrap_slider.type_banner .btn_control.stop');
+    $(btnSliderPlay).click(function(){
+        $sliderBanner.slick('slickPlay');
+        $(btnSliderPlay).hide();
+        $(btnSliderStop).show().focus();// 20210901 접근성 .focus() 추가
+    });
+    $(btnSliderStop).click(function(){
+        $sliderBanner.slick('slickPause');
+        $(btnSliderStop).hide();
+        $(btnSliderPlay).show().focus();// 20210901 접근성 .focus() 추가
+    });
+    /* [E] 슬라이드 배너형 */
+
+	// 스위치 토글시 자산 숨기기
+    var checkBox = $('.btn_switch input[type=checkbox]');
+    var changTxt = $('.tBalAmount');
+    var astBox = $('.astBox');
+
+    checkBox.on('change', function() {
+        if(this.checked) {
+           changTxt.addClass('on');
+           astBox.addClass('on');
+        } else {
+            changTxt.removeClass('on');
+            astBox.removeClass('on');
+            changTxt.children('a').css('animation','fade-in 1s');
+        }
+    });
+});
+</script>
+</body>
+</html>

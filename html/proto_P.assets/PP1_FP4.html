@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- [S] chart -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<!-- [E] chart -->
+</head>
+<body>
+<div class="test_view">
+<!-- 퍼블 화면 확인용 -->
+<style>
+body{background-color:#444;}
+.test_view{display:flex;flex-wrap:wrap;}
+.view_section{position:relative;border:1px dotted #ddd;;height:100%;}
+.view_section .type_no{padding:5px 0;text-align:center;font-size:12px;font-weight:300;color:#fff;}
+.layer_bottomsheet, .layer_popup, .layer_fullsheet {display:block;position:relative;width:360px;height:100%;margin-bottom:10px;margin-left:0px;}
+.layer_bottomsheet .layer_inner,
+.layer_fullsheet .layer_inner {overflow:inherit;position:relative;max-height:auto;transform: translate(0, 0);}
+</style>
+<!-- //퍼블 화면 확인용 -->
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">PP1_2_3_2_2_1FP 투자 은행 더보기</h3>
+    <!-- [S] PP1_2_3_2_2_1FP 투자 은행 더보기 팝업 -->
+    <div id="PP1_2_3_2_2_1FP" class="layer_fullsheet">
+        <div class="layer_inner">
+            <div class="layer_tit">
+                <strong class="tit">더보기</strong>
+                <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+            </div>
+            <div class="layer_cont">
+                <div class="accSetting">
+                    <div class="tAccount">
+                        <h3 class="tAccTit">
+                            <div class="im">
+                                <img src="../../img/bank/bank_logo_021.png" alt="suhyup">
+                            </div>
+                            EMP 리얼리턴 증권투자신탁UH 
+                            (주식혼합-재간접형) Ce적
+                        </h3>
+                        <div class="accInfo">
+                            <span class="infoTit">평가 금액</span>
+                            <span class="infoNum"><em class="num">840,000</em>원</span>
+                        </div>
+                    </div>
+                    <hr class="hr_div"></hr>
+                    <ul class="accDetailList sub_detailList">
+                        <li>
+                            <span class="itemTit">계좌 번호</span>
+                            <span class="itemData"><em class="num"><span class="data_name">에이피더핀</span><br> 100000545133</em></span>
+                        </li>
+                        <li>
+                            <span class="itemTit">종류</span>
+                            <span class="itemData">수익증권</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">투자 원금</span>
+                            <span class="itemData"><em class="num">350,123,000</em>원</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">평가 금액</span>
+                            <span class="itemData"><em class="num">5,800,000</em>원</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">손익률(비용 미반영)</span>
+                            <span class="itemData"><em class="plus">3.21%</em></span>
+                        </li>
+                        <!-- <li>
+                            <span class="itemTit">손익률(비용 미반영)</span>
+                            <span class="itemData"><em class="minus">3.21%</em></span>
+                        </li> -->
+                    </ul>
+                    <ul class="accDetailList sub_detailList">
+                        <li>
+                            <span class="itemTit">납입 유형</span>
+                            <span class="itemData">임의식</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">개설일</span>
+                            <span class="itemData"><em class="num">2021.11.29</em></span>
+                        </li>
+                        <li>
+                            <span class="itemTit">만기일</span>
+                            <span class="itemData"><em class="num">2022.11.29</em></span>
+                        </li>
+                    </ul>
+                    <ul class="accDetailList sub_detailList">
+                        <li>
+                            <span class="itemTit switch_tit">목록에서 숨기기</span>
+                            <label class="btn_switch">
+                                <input type="checkbox" checked=""><span class="round"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [S] PP1_2_3_2_2_1FP 투자 은행 더보기 팝업 -->
+<!-- 퍼블확인용 --></div>
+<!-- [E] PP1_2_3_2_2_1FP 투자 은행 더보기 팝업 -->
+
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">PP1_2_3_2_3_3T_1FP 증권_투자종목_상세내역</h3>
+<!-- [S] PP1_2_3_2_3_3T_1FP 증권_투자종목_상세내역 팝업 -->
+<div id="PP1_2_3_2_3_3T_1FP" class="layer_fullsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+			<strong class="tit">종목 상세</strong>
+			<button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+		</div>
+        <div class="layer_cont">
+            <div class="accSetting">
+				<div class="tAccount">
+					<h3 class="tAccTit">쿠콘</h3>
+                    <div class="accInfo">
+                        <span class="infoTit">총 평가 금액</span>
+                        <span class="infoNum"><em class="num">40,950,000</em>원</span>
+                    </div>
+				</div>
+                <hr class="hr_div thin_div"></hr>
+				<ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">상품 종류</span>
+						<span class="itemData">국내주식</span>
+					</li>
+                    <li>
+						<span class="itemTit">보유수량</span>
+						<span class="itemData"><em class="num">10</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">1주당 평균 매입가</span>
+						<span class="itemData"><em class="num">90,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">총 매입 금액</span>
+						<span class="itemData"><em class="num">90,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">총 평가 금액</span>
+						<span class="itemData"><em class="num">90,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">손익률(비용 미반영)</span>
+						<span class="itemData"><em class="minus">5.21%</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">세제혜택 적용여부</span>
+						<span class="itemData">적용</span>
+					</li>
+				</ul>
+			</div>
+        </div>
+    </div>
+</div>
+<!-- [E] PP1_2_3_2_3_3T_1FP 증권_투자종목_상세내역 팝업 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no"> PP1_2_3_2_3_4T_1FP 증권_거래_상세내역</h3>
+<!-- [S]  PP1_2_3_2_3_4T_1FP 증권_거래_상세내역  팝업 -->
+<div id="PP1_2_3_2_3_4T_1FP" class="layer_fullsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+			<strong class="tit">거래내역 상세</strong>
+			<button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+		</div>
+        <div class="layer_cont">
+            <div class="accSetting">
+				<div class="tAccount">
+					<h3 class="tAccTit">매도</h3>
+                    <div class="accInfo">
+                        <span class="infoTit">정산 금액</span>
+                        <span class="infoNum"><em class="num">40,950,000</em>원</span>
+                    </div>
+				</div>
+                <hr class="hr_div thin_div"></hr>
+				<ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">종목명</span>
+						<span class="itemData">쿠콘</span>
+					</li>
+                    <li>
+						<span class="itemTit">거래수량</span>
+						<span class="itemData"><em class="num">30</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">거래 단가</span>
+						<span class="itemData"><em class="num">3,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">거래 금액</span>
+						<span class="itemData"><em class="num">4,000,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">정산 금액</span>
+						<span class="itemData"><em class="num">3,999,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">상품 종류</span>
+						<span class="itemData">국내주식</span>
+					</li>
+                    <li>
+						<span class="itemTit">거래 시간</span>
+						<span class="itemData"><em class="num">20.28 11:23</em></span>
+					</li>
+				</ul>
+			</div>
+        </div>
+    </div>
+</div>
+<!-- [E] PP1_2_3_2_3_4T_1FP 증권_거래_상세내역 팝업 -->
+<!-- 퍼블확인용 --></div>
+
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">PP1_2_3_2_3_1FP 투자 증권 더보기</h3>
+   <!-- [S] PP1_2_3_2_3_1FP 투자 증권 더보기 팝업 -->
+    <div id="PP1_2_3_2_3_1FP" class="layer_fullsheet">
+        <div class="layer_inner">
+            <div class="layer_tit">
+                <strong class="tit">더보기</strong>
+                <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+            </div>
+            <div class="layer_cont">
+                <div class="accSetting">
+                    <div class="tAccount">
+                        <h3 class="tAccTit">
+                            <div class="im">
+                                <img src="../../img/bank/bank_logo_021.png" alt="suhyup">
+                            </div>
+                            종합(평생혜택 비대면)
+                        </h3>
+                        <div class="accInfo">
+                            <span class="infoTit">자산 총합</span>
+                            <span class="infoNum"><em class="num">-5,840,000</em> 원</span>
+                        </div>
+                    </div>
+                    <hr class="hr_div"></hr>
+                    <ul class="accDetailList sub_detailList">
+                        <li>
+                            <span class="itemTit">계좌 번호</span>
+                            <span class="itemData"><em class="num"><span class="data_name">에이피더핀</span><br> 100000545133</em></span>
+                        </li>
+                        <li>
+                            <span class="itemTit">종류</span>
+                            <span class="itemData">종합매매</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">총 매입금액</span>
+                            <span class="itemData"><em class="num">5,000</em>원</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">예수금</span>
+                            <span class="itemData"><em class="num">800,000</em>원</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">평가 금액</span>
+                            <span class="itemData"><em class="num">-5,800,000</em>원</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">손익률(비용 미반영)</span>
+                            <span class="itemData"><em class="minus">3.21%</em></span>
+                        </li>
+                    </ul>
+                    <ul class="accDetailList sub_detailList">
+                        <li>
+                            <span class="itemTit">대출금</span>
+                            <span class="itemData"><em class="num">0</em>원</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">신용융자</span>
+                            <span class="itemData"><em class="num">0</em>원</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">세제혜택 적용여부</span>
+                            <span class="itemData">미적용</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">개설일</span>
+                            <span class="itemData"><em class="num">2022.11.29</em></span>
+                        </li>
+                    </ul>
+                    <ul class="accDetailList sub_detailList">
+                        <li>
+                            <span class="itemTit switch_tit">목록에서 숨기기</span>
+                            <label class="btn_switch">
+                                <input type="checkbox" checked=""><span class="round"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [S] PP1_2_3_2_3_1FP 투자 증권 더보기 팝업 -->
+<!-- 퍼블확인용 --></div>
+
+</div><!-- test_view -->
+<script>
+
+// [S] 월간내역 메모 textarea 자동 높이조절, 글자수 체크, textarea val값 초기화
+function testAreaHeight1() {
+	var textEle = $('.layer_memo_wrap .js_textarea1');
+	textEle[0].style.height = 'auto';
+	var textEleHeight = textEle.prop('scrollHeight');
+	textEle.css('height', textEleHeight);
+};
+var textEle = $('.layer_memo_wrap .js_textarea1');
+var btnMemoValReset = $('.layer_memo_wrap .btn_val_reset');
+btnMemoValReset.hide();
+textEle.on('keyup', function() {
+	//자동높이
+	testAreaHeight1();
+	$('#js_textarea1_cnt').html("<span class='pointColor'>"+$(this).val().length+"</span> / 60");
+	//val값 초기화
+	if(textEle.val().length === 0){
+		btnMemoValReset.hide();
+	}else if($(this).val().length > 60) {
+		$(this).val($(this).val().substring(0, 60));
+		$('#js_textarea1_cnt').html("<span class='pointColor'>60</span> / 60");
+	}else{
+		btnMemoValReset.show();
+	}
+});
+function memoValReset() {
+	textEle.val('').css('height','inherit').focus();
+	btnMemoValReset.hide();
+	$('#js_textarea1_cnt').html("<span class='pointColor'>"+textEle.val().length+"</span> / 60");
+}
+// [E] 월간내역 메모 textarea 자동 높이조절, 글자수 체크, textarea val값 초기화
+
+$(document).ready(function(){
+
+	// [S] 캘린더 탭
+	$(".tabInter").tabs({
+		wrapClass:".tabInter",
+		clickClass:".js_tabclickDp1",
+		showClass:".tab_cntDp1",
+		animate:false,
+		contentWidthFull:false,//effect when animate:true
+		animateBorder:["false",".tabs_header"],//show border in class .
+		fade:false,
+		speed:500
+	});
+	// [E] 캘린더 탭
+
+});
+</script>
+</body>
+</html>

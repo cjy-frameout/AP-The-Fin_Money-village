@@ -1,0 +1,341 @@
+﻿<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+<style>
+.red { color: #ff0000;}
+#nav {overflow-y:scroll;position:sticky;top:0;display:flex;width:100%;background-color:#fff;z-index:2;}
+#nav li{flex:1;}
+#nav li  + li{border-left:1px solid #aaa;}
+#nav li a{display:flex;justify-content:center;align-items:center;width:100%;min-width:60px;height:30px;font-size:14px;text-align:center;border-bottom:1px solid #bbb;}
+#nav li a.on{color:#fff;font-weight:400;background-color:#666;}
+
+.guide_stit{position:relative;margin:0 -20px 10px -20px;padding:2px 0 3px 20px;font-size:13px;font-weight:bold;border-top:1px solid #ccc;border-bottom:1px solid #ccc;background-color:#ddd;}
+.guide_stit:before{content:'·';position:absolute;left:10px;top:3px;}
+
+.page_tit{display:flex;align-items:center;width:100%;height:50px;padding-left:20px;font-size:15px;font-weight:400;color:#fff;background-color:#2e81f8;}
+.wrap_list .tbl_list{border-bottom:1px solid #e0e0e0;border-collapse:collapse;}
+.wrap_list .tbl_list thead{position:sticky;top:-1px;z-index:2;}
+.wrap_list .tbl_list th span{display:block;padding:4px 10px;height:27px;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0 !important;border-left:1px solid #e0e0e0;background-color:#f3f6f8;}
+.wrap_list .tbl_list td{padding:4px 10px;height:30px;border-top:1px solid #e0e0e0;border-left:1px solid #e0e0e0;}
+.wrap_list .tbl_list tr:first-child td{border-top:0;}
+.wrap_list .tbl_list th:first-child,.wrap_list .tbl_list td:first-child{border-left:0;}
+.wrap_list .tbl_list td:nth-child(2){border-top:0;}
+.wrap_list .tbl_list td:nth-child(2).ca_first{border-top:1px solid #e0e0e0;}
+.wrap_list .tbl_list tr:hover{font-weight:bold;background-color:#f3f6f8;}
+
+.wrap_list .tbl_list colgroup col:nth-child(1){width:60px;}/*번호*/
+.wrap_list .tbl_list colgroup col:nth-child(2){width:180px;}/*구분*/
+.wrap_list .tbl_list colgroup col:nth-child(3){width:120px;}/*화면id*/
+.wrap_list .tbl_list colgroup col:nth-child(4){width:auto;}/*화면명*/
+.wrap_list .tbl_list colgroup col:nth-child(5){width:150px;}/*비고*/
+.wrap_list .tbl_list colgroup col:nth-child(6){width:60px;}/*완료여부*/
+.wrap_list .tbl_list .list_num{text-align:center;}
+.wrap_list .tbl_list .list_category{font-size:14px;font-weight:500;color:#000;background-color:#f3f6f8;}
+.wrap_list .tbl_list .list_id{text-align:center;font-size:15px;}
+.wrap_list .tbl_list .list_name{font-size:14px;}
+.wrap_list .tbl_list .list_confirm{text-align:center;}
+.wrap_list .tbl_list .list_id a{position:relative;display:inline-block;color:#2e81f8;}
+.wrap_list .tbl_list .list_id a:after{position:absolute;left:0;bottom:0;width:100%;height:1px;background-color:#2e81f8;opacity:.3;}
+.wrap_list .tbl_list .list_id a:hover{font-weight:bold;}
+.wrap_list .tbl_list .category2{position:relative;display:inline-block;margin-left:10px;padding-left:5px;font-size:12px;color:#666;}
+.wrap_list .tbl_list .category2:before{content:'-';position:absolute;left:-5px;top:0;}
+.top_btn_wrap{position:absolute;right:10px;top:15px;}
+.btn_guide_list{margin-right:10px;font-size:14px;color:#fff !important;text-decoration:underline !important;}
+@media all and (max-width:850px) {
+    .wrap_list .tbl_list th{line-height:1;padding:0px;height:auto;vertical-align:middle;}
+    .wrap_list .tbl_list th span{line-height:1;height:auto;}
+    .wrap_list .tbl_list td{padding:2px 2px;height:25px;}
+    .wrap_list .tbl_list *{font-size:12px !important;font-weight:400;}
+    .wrap_list .tbl_list colgroup col:nth-child(1){width:30px;}/*번호*/
+    .wrap_list .tbl_list colgroup col:nth-child(2){width:100px;}/*구분*/
+    .wrap_list .tbl_list colgroup col:nth-child(5){width:80px;}/*비고*/
+}
+@media all and (max-width:470px) {
+    .page_tit{height:auto;padding-top:4px;padding-bottom:4px;font-size:12px;}
+    .top_btn_wrap{display:block;position:relative;top:inherit;right:inherit;margin-left:10px;}
+    .top_btn_wrap a{display:block;}
+    .wrap_list .tbl_list th span{display:block;height:25px;line-height:25px;padding:0px;}
+    .wrap_list .tbl_list *{font-size:11px !important;}
+    .wrap_list .tbl_list colgroup col:nth-child(2){width:35px;}/*구분*/
+    .wrap_list .tbl_list colgroup col:nth-child(3){width:80px;}/*화면id*/
+    .wrap_list .tbl_list colgroup col:nth-child(4){width:150px;}/*화면명*/
+    .wrap_list .tbl_list colgroup col:nth-child(5){width:0;}/*비고*/
+    .wrap_list .tbl_list colgroup col:nth-child(6){width:0;}/*완료여부*/
+}
+</style>
+</head>
+
+<body>
+<!-- wrap -->
+<div class="wrap">
+	<div class="page_tit">
+        마이데이터 퍼블리싱
+        <!-- <div class="top_btn_wrap">
+            <a href="퍼블/inq_list.html" class="btn_guide_list" target="_blank">퍼블 작업용 가이드 바로가기</a>
+            <a href="퍼블/page1.html" class="btn_guide_list" target="_blank">샘플페이지 바로가기</a>
+        </div> -->
+    </div>
+	<div class="wrap_content">
+<!-- [S] contents ------------------------------------------------------------------------------>
+<div class="wrap_list">
+    <table class="tbl_list">
+        <caption>마이데이터 퍼블리싱 화면 리스트</caption>
+        <colgroup>
+            <col/><col/><col/><col/><col/><col/>
+        </colgroup>
+         <thead>
+            <tr>
+                <th id="thead_num"><span>N</span></th>
+                <th id="thead_category"><span>구분</span></th>
+                <th id="thead_id"><span>화면id</span></th>
+                <th id="thead_name"><span>화면명</span></th>
+                <th id="thead_etc"><span>비고</span></th>
+                <th id="thead_confirm"><span>상태</span></th>
+            </tr>
+         </thead>
+         <tbody>
+            <!-- 브릿지/회원가입 ----------------------------------------------------------------------->
+            <!-- [S] 2022-05 알고하는동의 -->
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="banner.html" target="_blank">banner</a></td>
+                <td class="list_name">배너</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="cate_list.html" target="_blank">cate_list</a></td>
+                <td class="list_name">카테고리 리스트</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="main_card.html" target="_blank">main_card</a></td>
+                <td class="list_name">메인 자산연동,미연동, 자동차,부동산,자동차보험 미연동 케이스</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="page_sort.html" target="_blank">page_sort</a></td>
+                <td class="list_name">드래그앤드롭, 편집</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="tooltip.html" target="_blank">tooltip</a></td>
+                <td class="list_name">툴팁모음</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="subMain_list.html" target="_blank">subMain_list</a></td>
+                <td class="list_name">서브 메인 리스트 모음</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="filter.html" target="_blank">filter</a></td>
+                <td class="list_name">필터 팝업</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="color_icon.html" target="_blank">color_icon</a></td>
+                <td class="list_name">컬러칩 및 아이콘</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="bottomsheet.html" target="_blank">bottomsheet</a></td>
+                <td class="list_name">bottomsheet</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="button.html" target="_blank">button</a></td>
+                <td class="list_name">button</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="chart_main.html" target="_blank">chart_main</a></td>
+                <td class="list_name">chart,graph</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="complete.html" target="_blank">complete</a></td>
+                <td class="list_name">자산등록완료</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="complete2.html" target="_blank">complete2</a></td>
+                <td class="list_name">자산등록완료2</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="form.html" target="_blank">form</a></td>
+                <td class="list_name">form (check, radio, input, textarea)</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="loading.html" target="_blank">loading</a></td>
+                <td class="list_name">loading</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="page1.html" target="_blank">page1</a></td>
+                <td class="list_name">page type1 (하단 버튼 고정)</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="page2.html" target="_blank">page2</a></td>
+                <td class="list_name">page type2 (하단 버튼 고정X)</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="page3.html" target="_blank">page3</a></td>
+                <td class="list_name">page type3 (하단 버튼X)</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="alert_type.html" target="_blank">alert_type</a></td>
+                <td class="list_name">alert_type</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="slide.html" target="_blank">slide</a></td>
+                <td class="list_name">slide1</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="tab.html" target="_blank">tab</a></td>
+                <td class="list_name">tab</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="test_table.html" target="_blank">table</a></td>
+                <td class="list_name">table</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="text.html" target="_blank">text</a></td>
+                <td class="list_name">text</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="user_guide.html" target="_blank">user_guide</a></td>
+                <td class="list_name">user_guide 1</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+            <tr>
+                <td class="list_num"></td>
+                <td class="list_category"></td>
+                <td class="list_id"><a href="user_guide_scroll.html" target="_blank">user_guide_scroll</a></td>
+                <td class="list_name">user_guide 2</td>
+                <td class="list_etc"></td>
+                <td class="list_confirm"></td>
+            </tr>
+           
+
+        </tbody>
+    </table>
+</div>
+<!-- //wrap -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+    var listNum = $('.wrap_list .tbl_list .list_num');
+    listNum.each(function(index, item){
+        $(item).text(index + 1);
+    });
+});
+</script>
+</body>
+</html>

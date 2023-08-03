@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- [S] chart -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<!-- [E] chart -->
+</head>
+<body>
+<div class="test_view">
+<!-- 퍼블 화면 확인용 -->
+<style>
+body{background-color:#444;}
+.test_view{display:flex;flex-wrap:wrap;}
+.view_section{position:relative;border:1px dotted #ddd;;height:100%;}
+.view_section .type_no{padding:5px 0;text-align:center;font-size:12px;font-weight:300;color:#fff;}
+.layer_bottomsheet, .layer_popup, .layer_fullsheet {display:block;position:relative;width:360px;height:100%;margin-bottom:10px;margin-left:0px;}
+.layer_bottomsheet .layer_inner,
+.layer_fullsheet .layer_inner {overflow:inherit;position:relative;max-height:auto;transform: translate(0, 0);}
+</style>
+<!-- //퍼블 화면 확인용 -->
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">CT1_4_2_3_1 거래내역상세</h3>
+<!-- [S] CT1_4_2_3_1 거래내역상세 팝업 -->
+<div id="CT1_4_2_3_1" class="layer_fullsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+			<strong class="tit">거래내역 상세</strong>
+			<button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+		</div>
+        <div class="layer_cont">
+            <div class="accSetting">
+				<div class="tAccount">
+					<h3 class="tAccTit">wecafe</h3>
+                    <div class="accInfo">
+                        <span class="infoTit">거래 금액</span>
+                        <span class="infoNum"><em class="num">1,000</em>원</span>
+                    </div>
+				</div>
+                <hr class="hr_div thin_div"></hr>
+				<ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">사용 카드</span>
+						<span class="itemData">tap tap DRIVE</span>
+					</li>
+                    <li>
+						<span class="itemTit">결제 일시</span>
+						<span class="itemData"><em class="num">2022.05.05 20:28</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">결제 방법</span>
+						<span class="itemData"><em class="num">3</em>개월 할부 <em class="num">(2회차)</em></span>
+					</li>
+                    <li>
+						<span class="itemTit">결제 후 원금 잔액</span>
+						<span class="itemData"><em class="num">1,000</em>원</span>
+					</li>
+                    <li>
+						<span class="itemTit">수수료</span>
+						<span class="itemData"><em class="num">0</em>원</span>
+					</li>
+				</ul>
+			</div>
+        </div> 
+    </div> 
+</div> 
+<!-- [E] CT1_4_2_3_1 거래내역상세 팝업 -->
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">CT1_4_2_1 더보기</h3>
+<!-- [S] CT1_4_2_1 더보기 팝업 -->
+<div id="CT1_4_2_1" class="layer_fullsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+			<strong class="tit">더보기</strong>
+			<button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+		</div>
+        <div class="layer_cont">
+            <div class="accSetting">
+				<div class="tAccount">
+                    
+					<h3 class="tAccTit">
+                        <div class="im">
+                            <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                        </div>
+                        에이피더핀카드
+                    </h3>
+                    <div class="accInfo">
+                        <span class="infoTit">총 청구 금액</span>
+                        <span class="infoNum"><em class="num">40,950,000</em>원</span>
+                    </div>
+				</div>
+                <hr class="hr_div"></hr>
+				<ul class="accDetailList sub_detailList">
+                    <li>
+						<span class="itemTit">결제일</span>
+						<span class="itemData">매달<em class="num">25</em> 일</span>
+					</li>
+                    <li>
+						<span class="itemTit">실제 결제일</span>
+						<span class="itemData"><em class="num">2022.05.26</em></span>
+					</li>
+                    <li class="multiItem"> <!-- 항목 내에 여러개의 항목이 생길 경우 multiItem 클래스 추가 --->
+						<span class="itemTit">사용 카드</span>
+						<span class="itemData">
+                            Real? Real! 2 카드
+                        </span>
+                        <span class="itemData">
+                            찐카드(ZZIN CARD)
+                        </span>
+                        <span class="itemData">
+                            S1카드
+                        </span>
+					</li>
+				</ul>
+			</div>
+        </div>
+    </div>
+</div>
+<!-- [E] CT1_4_2_1 더보기 팝업 -->
+<!-- 퍼블확인용 --></div>
+
+</div><!-- test_view -->
+
+</body>
+</html>

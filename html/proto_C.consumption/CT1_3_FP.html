@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- [S] chart -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<!-- [E] chart -->
+</head>
+<body>
+<div class="test_view">
+<!-- 퍼블 화면 확인용 -->
+<style>
+body{background-color:#444;}
+.test_view{display:flex;flex-wrap:wrap;}
+.view_section{position:relative;border:1px dotted #ddd;;height:100%;}
+.view_section .type_no{padding:5px 0;text-align:center;font-size:12px;font-weight:300;color:#fff;}
+.layer_bottomsheet, .layer_popup, .layer_fullsheet {display:block;position:relative;width:360px;height:100%;margin-bottom:10px;margin-left:0px;}
+.layer_bottomsheet .layer_inner,
+.layer_fullsheet .layer_inner {overflow:inherit;position:relative;max-height:auto;transform: translate(0, 0);}
+</style>
+<!-- //퍼블 화면 확인용 -->
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">CT1_3_2_1FP_거래내역 상세(정상)</h3>
+    <!-- [S] CT1_3_2_1FP_거래내역 상세(정상) 팝업 -->
+    <div id="SHE1110" class="layer_fullsheet">
+        <div class="layer_inner">
+    
+            <div class="layer_tit">
+                <strong class="tit">거래내역 상세</strong>
+                <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+            </div>
+    
+            <div class="layer_cont">
+                <div class="accSetting acc_type2">
+                    <div class="tAccount">
+                        <h3 class="tAccTit">wecafe</h3>
+                        <div class="accInfo">
+                            <span class="infoTit">승인 금액</span>
+                            <span class="infoNum"><em class="num">1,000</em>원</span>
+                        </div>
+                    </div>
+                    <hr class="hr_div thin_div"></hr>
+                    <ul class="accDetailList sub_detailList">
+                        <li>
+                            <span class="itemTit">승인 상태</span>
+                            <span class="itemData">승인</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">결제 일시</span>
+                            <span class="itemData"><em class="num">2022.08.05 20:28</em></span>
+                        </li>
+                        <li>
+                            <span class="itemTit">결제 방법</span>
+                            <span class="itemData">일시불</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">승인 번호</span>
+                            <span class="itemData"><em class="num">76337642</em></span>
+                        </li>
+                    </ul>
+                    <ul class="accDetailList sub_detailList">
+                        <li>
+                            <span class="itemTit">카테고리</span>
+                            <span class="itemData">카페/디저트</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">CT1_3_2_2FP_거래내역 상세(취소)</h3>
+    <!-- [S] CT1_3_2_2FP_거래내역 상세(취소) 팝업 -->
+    <div id="SHE1110_1" class="layer_fullsheet">
+        <div class="layer_inner">
+            <div class="layer_tit">
+                <strong class="tit">거래내역 상세</strong>
+                <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+            </div>
+    
+            <div class="layer_cont">
+                <div class="accSetting acc_type2">
+                    <div class="tAccount">
+                        <h3 class="tAccTit">wecafe</h3>
+                        <div class="accInfo">
+                            <span class="infoTit">취소 금액</span>
+                            <span class="infoNum"><em class="num">1,000</em>원</span>
+                        </div>
+                    </div>
+                    <hr class="hr_div thin_div"></hr>
+                    <ul class="accDetailList sub_detailList">
+                        <li>
+                            <span class="itemTit">승인 상태</span>
+                            <span class="itemData">취소</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">취소 일시</span>
+                            <span class="itemData"><em class="num">2022.08.05 20:28</em></span>
+                        </li>
+                        <li>
+                            <span class="itemTit">원 결제 일시</span>
+                            <span class="itemData"><em class="num">2022.08.05 20:28</em></span>
+                        </li>
+                        <li>
+                            <span class="itemTit">결제 방법</span>
+                            <span class="itemData">일시불</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">승인 번호</span>
+                            <span class="itemData"><em class="num">76337642</em></span>
+                        </li>
+                    </ul>
+                    <ul class="accDetailList sub_detailList">
+                        <li>
+                            <span class="itemTit">카테고리</span>
+                            <span class="itemData">카페/디저트</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no">CT1_3_2_3FP_거래내역 상세(정정)</h3>
+    <!-- [S] CT1_3_2_3FP_거래내역 상세(정정) 팝업 -->
+    <div id="SHE1110_2" class="layer_fullsheet">
+        <div class="layer_inner">
+            <div class="layer_tit">
+                <strong class="tit">거래내역 상세</strong>
+                <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+            </div>
+    
+            <div class="layer_cont">
+                <div class="accSetting acc_type2">
+                    <div class="tAccount">
+                        <h3 class="tAccTit">wecafe</h3>
+                        <div class="accInfo">
+                            <span class="infoTit">승인 금액</span>
+                            <span class="infoNum"><em class="num">1,000</em>원</span>
+                        </div>
+                    </div>
+                    <hr class="hr_div thin_div"></hr>
+                    <ul class="accDetailList sub_detailList">
+                        <li>
+                            <span class="itemTit">승인 상태</span>
+                            <span class="itemData">정정</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">정정 일시</span>
+                            <span class="itemData"><em class="num">2022.08.05 20:28</em></span>
+                        </li>
+                        <li>
+                            <span class="itemTit">원 결제 일시</span>
+                            <span class="itemData"><em class="num">2022.08.05 20:28</em></span>
+                        </li>
+                        <li>
+                            <span class="itemTit">원 거래금액</span>
+                            <span class="itemData"><em class="num">1,000</em> 원</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">결제 방법</span>
+                            <span class="itemData">일시불</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">승인 번호</span>
+                            <span class="itemData"><em class="num">76337642</em></span>
+                        </li>
+                    </ul>
+                    <ul class="accDetailList sub_detailList">
+                        <li>
+                            <span class="itemTit">카테고리</span>
+                            <span class="itemData">카페/디저트</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- 퍼블확인용 --></div>
+
+<!-- 퍼블확인용 --><div class="view_section" style="display:none"><h3 class="type_no">CT1_3_1BS_카테고리 선택</h3>
+    <!-- [S] CT1_3_1BS_카테고리 선택 팝업 -->
+    <div id="layer_CT1_3_1BS" class="layer_bottomsheet">
+        <div class="layer_inner">
+            <div class="layer_tit">
+                <strong class="tit"><span>카테고리 선택</span></strong>
+                <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+            </div>
+            <div class="layer_cont">
+                <!-- 페이지 스타일 -->
+                <div class="type_page">
+                    <div class="line_div">
+                        <div class="category_set2">
+                            <div class="ck_box"><a class="ck_name" title="선택됨"><span class="ico_cate all"></span>전체</a></div><!-- 선택시 클래스 'on'추가 및 title="선택됨" 추가 -->
+                            <div class="ck_box"><a class="ck_name"><span class="ico_cate food"></span>식비</a></div>
+                            <div class="ck_box"><a class="ck_name"><span class="ico_cate dwelling"></span>주거/통신</a></div>
+                            <div class="ck_box"><a class="ck_name"><span class="ico_cate cafe"></span>카페/디저트</a></div>
+                            <div class="ck_box"><a class="ck_name"><span class="ico_cate health"></span>의료/건강</a></div>
+                            <div class="ck_box"><a class="ck_name"><span class="ico_cate pleasure"></span>술/유흥</a></div>
+                            <div class="ck_box"><a class="ck_name"><span class="ico_cate finance"></span>금융</a></div>
+                            <div class="ck_box"><a class="ck_name"><span class="ico_cate life"></span>생활</a></div>
+                            <div class="ck_box"><a class="ck_name"><span class="ico_cate culture"></span>문화/여가</a></div>
+                            <div class="ck_box"><a class="ck_name"><span class="ico_cate shopping"></span>온라인쇼핑</a></div>
+                            <div class="ck_box"><a class="ck_name"><span class="ico_cate travel"></span>여행/숙박</a></div>
+                            <div class="ck_box"><a class="ck_name"><span class="ico_cate fashion"></span>패션/쇼핑</a></div>
+                            <div class="ck_box"><a class="ck_name"><span class="ico_cate learning"></span>교육/학습</a></div>
+                            <div class="ck_box"><a class="ck_name"><span class="ico_cate beauty"></span>뷰티</a></div>
+                            <div class="ck_box"><a class="ck_name"><span class="ico_cate child"></span>자녀/육아</a></div>
+                            <div class="ck_box"><a class="ck_name"><span class="ico_cate traffic"></span>교통</a></div>
+                            <div class="ck_box"><a class="ck_name"><span class="ico_cate pets"></span>애완동물</a></div>
+                            <div class="ck_box"><a class="ck_name"><span class="ico_cate car"></span>자동차</a></div>
+                            <div class="ck_box"><a class="ck_name"><span class="ico_cate gift"></span>경조/선물</a></div>
+                            <div class="ck_box"><a class="ck_name"><span class="ico_cate etc"></span>기타</a></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //페이지 스타일 -->
+            </div>
+        </div>
+    </div>
+<!-- 퍼블확인용 --></div>
+
+
+</div><!-- test_view -->
+<script>
+
+// [S] 월간내역 메모 textarea 자동 높이조절, 글자수 체크, textarea val값 초기화
+function testAreaHeight1() {
+	var textEle = $('.layer_memo_wrap .js_textarea1');
+	textEle[0].style.height = 'auto';
+	var textEleHeight = textEle.prop('scrollHeight');
+	textEle.css('height', textEleHeight);
+};
+var textEle = $('.layer_memo_wrap .js_textarea1');
+var btnMemoValReset = $('.layer_memo_wrap .btn_val_reset');
+btnMemoValReset.hide();
+textEle.on('keyup', function() {
+	//자동높이
+	testAreaHeight1();
+	$('#js_textarea1_cnt').html("<span class='pointColor'>"+$(this).val().length+"</span> / 60");
+	//val값 초기화
+	if(textEle.val().length === 0){
+		btnMemoValReset.hide();
+	}else if($(this).val().length > 60) {
+		$(this).val($(this).val().substring(0, 60));
+		$('#js_textarea1_cnt').html("<span class='pointColor'>60</span> / 60");
+	}else{
+		btnMemoValReset.show();
+	}
+});
+function memoValReset() {
+	textEle.val('').css('height','inherit').focus();
+	btnMemoValReset.hide();
+	$('#js_textarea1_cnt').html("<span class='pointColor'>"+textEle.val().length+"</span> / 60");
+}
+// [E] 월간내역 메모 textarea 자동 높이조절, 글자수 체크, textarea val값 초기화
+
+$(document).ready(function(){
+
+	// [S] 캘린더 탭
+	$(".tabInter").tabs({
+		wrapClass:".tabInter",
+		clickClass:".js_tabclickDp1",
+		showClass:".tab_cntDp1",
+		animate:false,
+		contentWidthFull:false,//effect when animate:true
+		animateBorder:["false",".tabs_header"],//show border in class .
+		fade:false,
+		speed:500
+	});
+	// [E] 캘린더 탭
+
+});
+</script>
+</body>
+</html>

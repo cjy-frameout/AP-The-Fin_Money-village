@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- [S] chart -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<!-- [E] chart -->
+</head>
+<body>
+<div class="test_view">
+    <!-- 퍼블 화면 확인용 -->
+    <style>
+    body{background-color:#444;}
+    .test_view{display:flex;flex-wrap:wrap;}
+    .view_section{position:relative;border:1px dotted #ddd;;height:100%;}
+    .view_section .type_no{padding:5px 0;text-align:center;font-size:12px;font-weight:300;color:#fff;}
+    .layer_bottomsheet, .layer_popup, .layer_fullsheet {display:block;position:relative;width:360px;height:100%;margin-bottom:10px;margin-left:0px;}
+    .layer_bottomsheet .layer_inner,
+    .layer_fullsheet .layer_inner {overflow:inherit;position:relative;max-height:auto;transform: translate(0, 0);}
+    </style>
+    <!-- //퍼블 화면 확인용 -->
+
+    <!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no"> 목돈만들기 나의목표 상세 - 1 </h3>
+    <!-- [S] 목돈만들기 나의목표 상세 - 1 -->
+    <div id="SHR0001" class="layer_fullsheet" >
+        <div class="layer_inner">
+            <div class="layer_tit">
+                <strong class="tit">목표 상세</strong>
+                <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+            </div>
+            
+            <div class="layer_cont myGoal">
+                <div class="ic_group">
+                    <span class="lflag orange">D-120</span>
+                    <div class="ic_btnGroup">
+                        <button type="button" class="btn_edit"><span class="blind">수정하기</span></button>
+                    </div>
+                </div>
+
+                <div class="gaolTit">
+                    <h4>엄마 환갑파티</h4>
+                    <em class="date">2022.09.22 ~2022.11.10</em>
+                </div>
+                <div class="gaolState">
+                    <div class="gaolGraph">
+                        <div class="gaolAmount">목표 금액 <span><em>53,000,000</em>원</span></div>
+                        <div class="exp_bar">
+                            <div class="bar">
+                                <p class="exp_amount"></p>
+                                <div class="bar_total"> 
+                                    <span class="bar_on" style="width: 0%;"></span>
+                                </div>
+                            </div>
+                            <div class="exp_num"> 
+                                <p class="fluct_amount left"><em class="num">0</em> %</p>
+                                <p class="fluct_msg right"><em class="num">5,950,000</em>원 남았어요!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="goalDetail">
+                        <li>
+                            <span class="left dot_gaol">모은 금액</span>
+                            <span class="right"><em class="num">0</em> 원</span>
+                        </li>
+                        <li>
+                            <span class="left dot_gray">남은 금액</span>
+                            <span class="right"><em class="num">5,950,000</em> 원</span>
+                        </li>
+                    </ul>  
+                </div>
+               
+                <hr class="hr_div">
+
+                <div class="set_info">
+                    <p class="smallTit">연결 계좌</p>
+                    <p class="txt">
+                        계좌를 등록하고 목표화 연결해 주세요.
+                    </p>
+                </div>
+
+                <!-- btn_wrap -->
+                <div class="btn_wrap">
+                    <div class="btnGroup type_col">
+                        <p><a href="#none" class="btnBl2" role="button">계좌 등록</a></p><!-- 비활성시 'disable' 추가 -->
+                        <p><a href="#none" class="btnBl1" role="button">등록</a></p>
+                    </div>
+                </div>
+                <!--//btn_wrap -->
+            </div>
+        </div>
+    </div>
+    <!-- [E] 목돈만들기 나의목표 상세 - 1 -->
+    <!-- 퍼블확인용 --></div>
+
+    <!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no"> 목돈만들기 나의목표 상세 - 2 </h3>
+    <!-- [S] 목돈만들기 나의목표 상세 - 2 -->
+    <div id="SHR0001_1" class="layer_fullsheet" >
+        <div class="layer_inner">
+            <div class="layer_tit">
+                <strong class="tit">목표 상세</strong>
+                <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+            </div>
+            
+            <div class="layer_cont myGoal">
+                <div class="ic_group">
+                    <span class="lflag orange">D-120</span>
+                    <div class="ic_btnGroup">
+                        <button type="button" class="btn_edit"><span class="blind">수정하기</span></button>
+                    </div>
+                </div>
+
+                <div class="gaolTit">
+                    <h4>엄마 환갑파티</h4>
+                    <em class="date">2022.09.22 ~2022.11.10</em>
+                </div>
+                <div class="gaolState">
+                    <div class="gaolGraph">
+                        <div class="gaolAmount">목표 금액 <span><em>53,000,000</em>원</span></div>
+                        <div class="exp_bar">
+                            <div class="bar">
+                                <p class="exp_amount"></p>
+                                <div class="bar_total"> 
+                                    <span class="bar_on" style="width: 0%;"></span>
+                                </div>
+                            </div>
+                            <div class="exp_num"> 
+                                <p class="fluct_amount left"><em class="num">0</em> %</p>
+                                <p class="fluct_msg right"><em class="num">5,950,000</em>원 남았어요!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="goalDetail">
+                        <li>
+                            <span class="left dot_gaol">모은 금액</span>
+                            <span class="right"><em class="num">0</em> 원</span>
+                        </li>
+                        <li>
+                            <span class="left dot_gray">남은 금액</span>
+                            <span class="right"><em class="num">5,950,000</em> 원</span>
+                        </li>
+                    </ul>  
+                </div>
+               
+                <hr class="hr_div">
+
+                <div class="set_info">
+                    <p class="smallTit">연결 계좌</p>
+                    <!-- <p class="txt">
+                        계좌를 등록하고 목표화 연결해 주세요.
+                    </p> -->
+                    <div class="sel_form type_border"> <!-- 선택시 on 클래스 추가 -->
+                        <a href="#" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span class="sel_txt">연결 계좌 선택</span></a> <!-- select 안내메세지 일경우 sel_txt 추가 -->
+                    </div>
+                </div>
+
+                <!-- btn_wrap -->
+                <div class="btn_wrap">
+                    <div class="btnGroup type_col">
+                        <p><a href="#none" class="btnBl2" role="button">계좌 추가</a></p><!-- 비활성시 'disable' 추가 -->
+                        <p><a href="#none" class="btnBl1" role="button">등록</a></p>
+                    </div>
+                </div>
+                <!--//btn_wrap -->
+            </div>
+        </div>
+    </div>
+    <!-- [E] 목돈만들기 나의목표 상세 - 2 -->
+    <!-- 퍼블확인용 --></div>
+
+    <!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no"> 목돈만들기 나의목표 상세 - 3 </h3>
+    <!-- [S] 목돈만들기 나의목표 상세 - 3 -->
+    <div id="SHR0001_2" class="layer_fullsheet" >
+        <div class="layer_inner">
+            <div class="layer_tit">
+                <strong class="tit">목표 상세</strong>
+                <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+            </div>
+            
+            <div class="layer_cont myGoal">
+                <div class="ic_group">
+                    <span class="lflag orange">D-120</span>
+                    <div class="ic_btnGroup">
+                        <button type="button" class="btn_edit"><span class="blind">수정하기</span></button>
+                    </div>
+                </div>
+
+                <div class="gaolTit">
+                    <h4>엄마 환갑파티</h4>
+                    <em class="date">2022.09.22 ~2022.11.10</em>
+                </div>
+                <div class="gaolState">
+                    <div class="gaolGraph">
+                        <div class="gaolAmount">목표 금액 <span><em>53,000,000</em>원</span></div>
+                        <div class="exp_bar">
+                            <div class="bar">
+                                <p class="exp_amount"></p>
+                                <div class="bar_total"> 
+                                    <span class="bar_on" style="width: 70%;"></span>
+                                </div>
+                            </div>
+                            <div class="exp_num"> 
+                                <p class="fluct_amount left"><em class="num">70</em> %</p>
+                                <p class="fluct_msg right"><em class="num">950,000</em>원 남았어요!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="goalDetail">
+                        <li>
+                            <span class="left dot_gaol">모은 금액</span>
+                            <span class="right"><em class="num">5,000,000</em> 원</span>
+                        </li>
+                        <li>
+                            <span class="left dot_gray">남은 금액</span>
+                            <span class="right"><em class="num">950,000</em> 원</span>
+                        </li>
+                    </ul>  
+                </div>
+               
+                <hr class="hr_div">
+
+                <div class="set_info">
+                    <p class="smallTit">연결 계좌</p>
+                    <!-- <p class="txt">
+                        계좌를 등록하고 목표화 연결해 주세요.
+                    </p> -->
+                    <!-- <div class="sel_form type_border"> 
+                        <a href="#" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span class="sel_txt">연결 계좌 선택</span></a> 
+                    </div> -->
+                    <ul class="history_ic"> <!-- 아이콘 있을경우 history_ic 클래스 추가-->
+                        <li>
+                            <a href="#none" class="link link_detail" role="button">
+                                <div class="itemBox">
+                                    <div class="im"><img src="../../img/bank/bank_logo_021.png" alt="에이피더핀"></div>
+                                    <span class="itemTit">월급통장</span>
+                                    <span class="itemData"><em class="num">100,000</em>원</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="link link_detail" role="button">
+                                <div class="itemBox">
+                                    <div class="im"><img src="../../img/bank/bank_logo_021.png" alt="에이피더핀"></div>
+
+                                    <span class="itemTit">취업이룸통장</span>
+                                    <span class="itemData"><em class="num">50,000</em>원</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="link link_detail" role="button">
+                                <div class="itemBox">
+                                    <div class="im"><img src="../../img/bank/bank_logo_021.png" alt="에이피더핀"></div>
+
+                                    <span class="itemTit">SH취업이룸통장</span>
+                                    <span class="itemData"><em class="num">300,000</em>원</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- btn_wrap -->
+                <div class="btn_wrap">
+                    <div class="btnGroup type_col">
+                        <!-- <p><a href="#none" class="btnBl2" role="button">계좌 추가</a></p> -->
+                        <p><a href="#none" class="btnBl1" role="button">확인</a></p>
+                    </div>
+                </div>
+                <!--//btn_wrap -->
+            </div>
+        </div>
+    </div>
+    <!-- [E] 목돈만들기 나의목표 상세 - 3 -->
+    <!-- 퍼블확인용 --></div>
+
+    <!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no"> 목돈만들기 나의목표 상세 - 4 </h3>
+    <!-- [S] 목돈만들기 나의목표 상세 - 4 -->
+    <div id="SHR0001_3" class="layer_fullsheet" >
+        <div class="layer_inner">
+            <div class="layer_tit">
+                <strong class="tit">목표 상세</strong>
+                <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+            </div>
+            
+            <div class="layer_cont myGoal">
+                <div class="ic_group">
+                    <span class="lflag orange">D-120</span>
+                    <div class="ic_btnGroup">
+                        <button type="button" class="btn_edit"><span class="blind">수정하기</span></button>
+                    </div>
+                </div>
+
+                <div class="gaolTit">
+                    <h4>엄마 환갑파티</h4>
+                    <em class="date">2022.09.22 ~2022.11.10</em>
+                </div>
+                <div class="gaolState complete">
+                    <div class="gaolGraph">
+                        <div class="gaolAmount">목표 금액 <span><em>53,000,000</em>원</span></div>
+                        <div class="exp_bar">
+                            <div class="bar">
+                                <p class="exp_amount"></p>
+                                <div class="bar_total"> 
+                                    <span class="bar_on" style="width: 70%;"></span>
+                                </div>
+                            </div>
+                            <div class="exp_num"> 
+                                <p class="fluct_amount left"><em class="num">100</em> %</p>
+                                <p class="fluct_msg right">목표를 달성했어요!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="goalDetail">
+                        <li>
+                            <span class="left dot_gaol">모은 금액</span>
+                            <span class="right"><em class="num">5,000,000</em> 원</span>
+                        </li>
+                        <li>
+                            <span class="left dot_gray">남은 금액</span>
+                            <span class="right"><em class="num">950,000</em> 원</span>
+                        </li>
+                    </ul>  
+                </div>
+               
+                <hr class="hr_div">
+
+                <div class="set_info">
+                    <p class="smallTit">연결 계좌</p>
+                    <!-- <p class="txt">
+                        계좌를 등록하고 목표화 연결해 주세요.
+                    </p> -->
+                    <!-- <div class="sel_form type_border"> 
+                        <a href="#" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span class="sel_txt">연결 계좌 선택</span></a> 
+                    </div> -->
+                    <ul class="history_ic"> <!-- 아이콘 있을경우 history_ic 클래스 추가-->
+                        <li>
+                            <a href="#none" class="link link_detail" role="button">
+                                <div class="itemBox">
+                                    <div class="im"><img src="../../img/bank/bank_logo_021.png" alt="에이피더핀"></div>
+                                    <span class="itemTit">월급통장</span>
+                                    <span class="itemData"><em class="num">100,000</em>원</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="link link_detail" role="button">
+                                <div class="itemBox">
+                                    <div class="im"><img src="../../img/bank/bank_logo_021.png" alt="에이피더핀"></div>
+
+                                    <span class="itemTit">취업이룸통장</span>
+                                    <span class="itemData"><em class="num">50,000</em>원</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="link link_detail" role="button">
+                                <div class="itemBox">
+                                    <div class="im"><img src="../../img/bank/bank_logo_021.png" alt="에이피더핀"></div>
+
+                                    <span class="itemTit">SH취업이룸통장</span>
+                                    <span class="itemData"><em class="num">300,000</em>원</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- btn_wrap -->
+                <div class="btn_wrap">
+                    <div class="btnGroup type_col">
+                        <!-- <p><a href="#none" class="btnBl2" role="button">계좌 추가</a></p> -->
+                        <p><a href="#none" class="btnBl1" role="button">확인</a></p>
+                    </div>
+                </div>
+                <!--//btn_wrap -->
+            </div>
+        </div>
+    </div>
+    <!-- [E] 목돈만들기 나의목표 상세 - 4 -->
+    <!-- 퍼블확인용 --></div>
+
+    <!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no"> 목돈만들기 나의목표 상세 - 5 </h3>
+    <!-- [S] 목돈만들기 나의목표 상세 - 5 -->
+    <div id="SHR0001_4" class="layer_fullsheet" >
+        <div class="layer_inner">
+            <div class="layer_tit">
+                <strong class="tit">목표 상세</strong>
+                <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+            </div>
+            
+            <div class="layer_cont myGoal">
+                <div class="ic_group">
+                    <span class="lflag gray">D+12</span>
+                    <div class="ic_btnGroup">
+                        <button type="button" class="btn_edit"><span class="blind">수정하기</span></button>
+                    </div>
+                </div>
+
+                <div class="gaolTit">
+                    <h4>엄마 환갑파티</h4>
+                    <em class="date">2022.09.22 ~2022.11.10</em>
+                </div>
+                <div class="gaolState overdue">
+                    <div class="gaolGraph">
+                        <div class="gaolAmount">목표 금액 <span><em>53,000,000</em>원</span></div>
+                        <div class="exp_bar">
+                            <div class="bar">
+                                <p class="exp_amount"></p>
+                                <div class="bar_total"> 
+                                    <span class="bar_on" style="width: 70%;"></span>
+                                </div>
+                            </div>
+                            <div class="exp_num"> 
+                                <p class="fluct_amount left"><em class="num">60</em> %</p>
+                                <p class="fluct_msg right">목표기간이 지났어요!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="goalDetail">
+                        <li>
+                            <span class="left dot_gaol">모은 금액</span>
+                            <span class="right"><em class="num">5,000,000</em> 원</span>
+                        </li>
+                        <li>
+                            <span class="left dot_gray">남은 금액</span>
+                            <span class="right"><em class="num">950,000</em> 원</span>
+                        </li>
+                    </ul>  
+                </div>
+               
+                <hr class="hr_div">
+
+                <div class="set_info">
+                    <p class="smallTit">연결 계좌</p>
+                    <!-- <p class="txt">
+                        계좌를 등록하고 목표화 연결해 주세요.
+                    </p> -->
+                    <!-- <div class="sel_form type_border"> 
+                        <a href="#" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span class="sel_txt">연결 계좌 선택</span></a> 
+                    </div> -->
+                    <ul class="history_ic"> <!-- 아이콘 있을경우 history_ic 클래스 추가-->
+                        <li>
+                            <a href="#none" class="link link_detail" role="button">
+                                <div class="itemBox">
+                                    <div class="im"><img src="../../img/bank/bank_logo_021.png" alt="에이피더핀"></div>
+                                    <span class="itemTit">월급통장</span>
+                                    <span class="itemData"><em class="num">100,000</em>원</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="link link_detail" role="button">
+                                <div class="itemBox">
+                                    <div class="im"><img src="../../img/bank/bank_logo_021.png" alt="에이피더핀"></div>
+
+                                    <span class="itemTit">취업이룸통장</span>
+                                    <span class="itemData"><em class="num">50,000</em>원</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="link link_detail" role="button">
+                                <div class="itemBox">
+                                    <div class="im"><img src="../../img/bank/bank_logo_021.png" alt="에이피더핀"></div>
+
+                                    <span class="itemTit">SH취업이룸통장</span>
+                                    <span class="itemData"><em class="num">300,000</em>원</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- btn_wrap -->
+                <div class="btn_wrap">
+                    <div class="btnGroup type_col">
+                        <!-- <p><a href="#none" class="btnBl2" role="button">계좌 추가</a></p> -->
+                        <p><a href="#none" class="btnBl1" role="button">확인</a></p>
+                    </div>
+                </div>
+                <!--//btn_wrap -->
+            </div>
+        </div>
+    </div>
+    <!-- [E] 목돈만들기 나의목표 상세 - 5 -->
+    <!-- 퍼블확인용 --></div>    
+
+    <!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no"> 목돈만들기 나의목표 상세 - 6 </h3>
+    <!-- [S] 목돈만들기 나의목표 상세 - 6 -->
+    <div id="SHR0001_5" class="layer_fullsheet" >
+        <div class="layer_inner">
+            <div class="layer_tit">
+                <strong class="tit">목표 상세</strong>
+                <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+            </div>
+            
+            <div class="layer_cont myGoal">
+                <div class="ic_group">
+                    <span class="lflag orange">D-120</span>
+                    <div class="ic_btnGroup">
+                        <button type="button" class="btn_edit"><span class="blind">수정하기</span></button>
+                    </div>
+                </div>
+
+                <div class="gaolTit">
+                    <h4>엄마 환갑파티</h4>
+                    <em class="date">2022.09.22 ~2022.11.10</em>
+                </div>
+                <div class="gaolState">
+                    <div class="gaolGraph">
+                        <div class="gaolAmount">목표 금액 <span><em>53,000,000</em>원</span></div>
+                        <div class="exp_bar">
+                            <div class="bar">
+                                <p class="exp_amount"></p>
+                                <div class="bar_total"> 
+                                    <span class="bar_on" style="width: 0%;"></span>
+                                </div>
+                            </div>
+                            <div class="exp_num"> 
+                                <p class="fluct_amount left"><em class="num">0</em> %</p>
+                                <p class="fluct_msg right"><em class="num">5,950,000</em>원 남았어요!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="goalDetail">
+                        <li>
+                            <span class="left dot_gaol">모은 금액</span>
+                            <span class="right"><em class="num">0</em> 원</span>
+                        </li>
+                        <li>
+                            <span class="left dot_gray">남은 금액</span>
+                            <span class="right"><em class="num">5,950,000</em> 원</span>
+                        </li>
+                    </ul>  
+                </div>
+               
+                <hr class="hr_div">
+
+                <div class="set_info">
+                    <p class="smallTit">연결 계좌</p>
+                    <!-- <p class="txt">
+                        계좌를 등록하고 목표화 연결해 주세요.
+                    </p> -->
+                     <div class="sel_form type_border"> 
+                        <a href="#" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span class="sel_txt">연결 계좌 선택</span></a> 
+                    </div>
+                </div>
+
+                <!-- btn_wrap -->
+                <div class="btn_wrap">
+                    <div class="btnGroup type_col">
+                        <p><a href="#none" class="btnBl2" role="button">계좌 등록</a></p><!-- 비활성시 'disable' 추가 -->
+                        <p><a href="#none" class="img"><img src="../../img/theme/apthefin/im_banner_04.png" alt="배너 설명"></a></p>
+                        <p><a href="#none" class="btnBl1" role="button">등록</a></p>
+                    </div>
+                </div>
+                <!--//btn_wrap -->
+            </div>
+        </div>
+    </div>
+    <!-- [E] 목돈만들기 나의목표 상세 - 6 -->
+    <!-- 퍼블확인용 --></div>    
+    
+     <!-- 퍼블확인용 --><div class="view_section"><h3 class="type_no"> 목표세우기 등록  </h3>
+    <!-- [S] 목표세우기 등록  -->
+    <div id="SHR0002" class="layer_fullsheet" >
+        <div class="layer_inner">
+
+            <div class="layer_tit">
+                <strong class="tit">목표 세우기</strong>
+                <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+            </div>
+            
+            <div class="layer_cont myGoal">
+                <div class="cont_tit_wrap">
+                    <h2 class="cont_tit">
+                        목표를 세워보세요.
+                    </h2>
+                </div>
+
+                <div class="set_info">
+                    <div class="set_detail">
+                        <p class="inp_box">
+                            <label class="confirm_name confirm_dot">목표 이름</label>
+                            <input type="text" required="required" class="set_inp" maxlength="8" placeholder="나의 목표를 적어주세요" title="나의 목표를 적어주세요">
+                        </p>
+                    </div>
+
+                    <div class="set_detail">
+                        <p class="inp_box">
+                            <label class="confirm_name confirm_dot">목표 기간</label>
+                        </p>
+                            <ul class="radioTab">
+                                <li>
+                                    <input type="radio" id="radio1" name="radioTab1" class="blind">
+                                    <label for="radio1">6개월</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="radio2" name="radioTab1" class="blind">
+                                    <label for="radio2">12개월</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="radio3" name="radioTab1" class="blind">
+                                    <label for="radio3">24개월</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="radio4" name="radioTab1" class="blind" checked="">
+                                    <label for="radio4">직접입력</label>
+                                </li>
+                            </ul>
+                            <div class="selPeriod">
+                                <div class="dateItem">
+                                    <label for="startDate" class="blind">조회기간 시작일</label>
+                                    <input type="tel" required="required" class="datepicker hasDatepicker" id="startDate" autocomplete="off" data-title="시작일" placeholder="YYYY.MM.DD"><button type="button" class="ui-datepicker-trigger">달력열기</button>
+                                </div>
+                                <span class="unit"></span>
+                                <div class="dateItem">
+                                    <label for="endDate" class="blind">조회기간 종료일</label>
+                                    <input type="tel" required="required" id="endDate" class="datepicker hasDatepicker" autocomplete="off" data-title="완료일" placeholder="YYYY.MM.DD"><button type="button" class="ui-datepicker-trigger">달력열기</button> <!-- 22.11.11 종료일 -> 완료일 변경 -->
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="set_detail">
+                        <p class="inp_box">
+                            <label class="confirm_name confirm_dot">목표 금액</label>
+                        </p>
+                        <ul class="radioTab">
+                            <li>
+                                <input type="radio" id="radio5" name="radioTab2" class="blind">
+                                <label for="radio5">100만원</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="radio6" name="radioTab2" class="blind">
+                                <label for="radio6">300만원</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="radio7" name="radioTab2" class="blind">
+                                <label for="radio7">500만원</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="radio8" name="radioTab2" class="blind" checked="">
+                                <label for="radio8">직접입력</label>
+                            </li>
+                        </ul>
+                        <p class="inp_box inp_price">
+                            <input type="number" required="required" class="set_inp" maxlength="8" placeholder="0" title="목표금액을 입력해주세요">
+                        </p>
+                        <p class="inp_txt"><span class="price">원</span></p>
+                    </div>
+                    <hr class="hr_div">
+                    <div class="set_bottom">
+                        <p class="">연결 계좌</p>
+                        <p class="">
+                            계좌를 등록하고 목표화 연결해 주세요.
+                        </p>
+                        <a href="">계좌 등록하기</a>
+                        <a href="">목돈 계좌 만들러 가기</a>
+
+                    </div>
+                </div>
+                <div class="fix_bottom not_dock">
+                    <!-- btn_wrap -->
+                    <div class="btn_wrap full_btn_wrap">
+                        <div class="btnGroup btnSeWrap type_col">
+                            <p><a href="#none" class="btnBl1 disable" role="button">등록</a></p> <!-- 버튼 비활성화시 disable 클래스-->
+                        </div>
+                    </div>
+                    <!--//btn_wrap -->
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    <!-- [E] 목표세우기 등록  -->
+    <!-- 퍼블확인용 --></div>    
+<script>
+
+$(document).ready(function(){
+
+	// [S] 캘린더 탭
+	$(".tabInter").tabs({
+		wrapClass:".tabInter",
+		clickClass:".js_tabclickDp1",
+		showClass:".tab_cntDp1",
+		animate:false,
+		contentWidthFull:false,//effect when animate:true
+		animateBorder:["false",".tabs_header"],//show border in class .
+		fade:false,
+		speed:500
+	});
+	// [E] 캘린더 탭
+    
+    kepadOpenInpTxt();
+});
+
+// [S] 앱 키패드 올라올때
+function kepadOpenInpTxt(){
+    $('input[type=number]').click(function() {
+        setTimeout(() => $('#SHR2531 .layer_inner').scrollTop($('#SHR2531 .layer_inner').prop('scrollHeight')), 100);
+    });
+}
+</script>
+</body>
+</html>

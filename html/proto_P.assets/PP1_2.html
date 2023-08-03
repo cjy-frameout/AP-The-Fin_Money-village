@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- [S] chart -->
+<!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+<script src="../js/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<!-- [E] chart -->
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+
+	<!-- header -->
+	<div class="header">
+		<div class="header_inn">
+			<!-- <div class="left">
+				<a href="#none" class="btnBack"><span class="blind">Back</span></a>
+			</div> -->
+			<div class="center">
+				<h2 class="tit_h2">자산</h2>
+			</div>
+			<div class="right">
+				<a href="#none" class="btnMenu"><span class="blind">menu</span></a>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+            <!-- [S] 동의안내 -->
+			<div class="topInfoPop">
+				<a href="#" class="tx">
+                    ○○ 은행 자산 연결이 곧 만료됩니다.<br>
+                    연결기간을 연장해주세요
+                </a>
+			</div>
+			<!-- [E] 동의안내 -->
+			
+			<!-- [S] 자산 타이틀 -->
+            <div class="tBalance tAssets">
+				<h3 class="tBaltit">내 자산<a href="#layer_HM1_2_1BS" class="btn_open_bottom_sheet btn_more_ask" role="button"><span class="ico_ask type_white2"><em class="blind">더보기</em></span></a></h3>
+				<p class="tBalAmount">
+					<span class="tBalNum"><em class="amount">13,000,000</em>원</span>
+					<span class="txt">금액이 숨겨졌어요</span>
+				</p>
+				<div class="tBalUpdate">
+					<a href="#" class="btnUpdate"><span class="blind">새로고침</span></a>업데이트 02.08 16:40
+					<label class="btn_switch">
+						<input type="checkbox"><span class="round"></span>
+					</label>
+				</div>
+			</div>
+			<!-- [E] 자산 타이틀 -->
+			
+			<!-- [S] 막대그래프 -->
+            <div class="boxArea lineType">
+				<div class="tabInter">
+					<div class="asset_tab_header">
+						<ul class="cboth">
+							<li class="js_tabclickDp1 on"><a href="#none" title="선택됨"><span>자산 통계</span></a></li><!-- 선택시 title="선택됨" 추가 -->
+							<li class="js_tabclickDp1"><a href="#none"><span>자산 비교</span></a></li>
+						</ul>
+					</div>
+					<div class="asset_tab_body">
+						<div class="tab_cntDp1" style="display: block;">
+							<div class="asGroup assets_chart">
+								<div class="chart_info">내 금융자산은<br><span class="pointColor">입출금</span>이 가장 많아요</div>
+								<div class="wrap_chart type_pie">
+                                    <figure class="highcharts-figure" aria-hidden="true">
+                                        <div id="chart_pie_assets"></div>
+                                    </figure>
+                                    <!-- 접근성 -->
+                                    <div class="chart_disable blind">
+                                        <table class="info_tbl">
+                                            <caption>자산 통계</caption>
+                                            <colgroup>
+                                                <col /><col />
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">종목</th>
+                                                    <th scope="col">비율</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row"><div>예금·페이</div></th>
+                                                    <td><div><span class="assets_01"></span></div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><div>투자</div></th>
+                                                    <td><div><span class="assets_02"></span></div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><div>연금</div></th>
+                                                    <td><div><span class="assets_03"></span></div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><div>보험</div></th>
+                                                    <td><div><span class="assets_04"></span></div></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><div>대출</div></th>
+                                                    <td><div><span class="assets_05"></span></div></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="labelInfo">
+                                    <span class="rate"><span class="ico_rate assets_01"></span>입출금 <em>40%</em></span>
+                                    <span class="rate"><span class="ico_rate assets_02"></span>예적금 <em>22%</em></span>
+                                    <span class="rate"><span class="ico_rate assets_03"></span>선불·페이 <em>18%</em></span>
+                                    <span class="rate"><span class="ico_rate assets_04"></span>투자 <em>10%</em></span>
+                                    <span class="rate"><span class="ico_rate assets_05"></span>연금 <em>10%</em></span>
+                                </div>
+							</div>
+						</div>
+						<div class="tab_cntDp1" style="display: none;">
+							<div class="asGroup assets_chart">
+								<div class="chart_info">40대 평균에 비해<br><span class="pointColor">금융투자 </span> 상품 비중이 높아요</div>
+								<!-- [S] 자산비교 그래프 -->
+                                <div class="compare_chart">
+                                    <div class="wrapBarGraph">
+                                        <div class="wrapBar grap0">
+                                            <div class="gBarBox bar1">
+                                                <div class="myAsset">
+                                                    <span class="gBarPrice">
+                                                        <span class="inBox"><em class="num"></em>%</span>
+                                                    </span>
+                                                    <span class="gBar"></span>
+                                                </div>
+                
+                                                <div class="otherAsset">
+                                                    <span class="gBarPrice">
+                                                        <span class="inBox"><em class="num"></em>%</span>
+                                                    </span>
+                                                    <span class="gBar"></span>
+                                                </div>
+                                                
+                                                <span class="gTx"><span class="gtitle">예적금</span></span>
+                                            </div>
+                
+                                            <div class="gBarBox bar2">
+                                                <div class="myAsset">
+                                                    <span class="gBarPrice">
+                                                        <span class="inBox"><em class="num"></em>%</span>
+                                                    </span>
+                                                    <span class="gBar"></span>
+                                                </div>
+                
+                                                <div class="otherAsset">
+                                                    <span class="gBarPrice">
+                                                        <span class="inBox"><em class="num"></em>%</span>
+                                                    </span>
+                                                    <span class="gBar"></span>
+                                                </div>
+                                                <span class="gTx"><em class="gtitle">금융투자</em></span>
+                                            </div>
+                                            <div class="gBarBox bar3">
+                                                <div class="myAsset">
+                                                    <span class="gBarPrice">
+                                                        <span class="inBox"><em class="num"></em>%</span>
+                                                    </span>
+                                                    <span class="gBar"></span>
+                                                </div>
+                
+                                                <div class="otherAsset">
+                                                    <span class="gBarPrice">
+                                                        <span class="inBox"><em class="num"></em>%</span>
+                                                    </span>
+                                                    <span class="gBar"></span>
+                                                </div>
+                                                <span class="gTx txtLong"><em class="gtitle">저축성보험<br>(월납)</em></span> <!-- 텍스트 길경우 txtLong 클래스 추가-->
+                                            </div>
+                                        </div>
+                                        <div class="wrapBar_detail">
+                                            <span class="bar_rate blue">내 자산</span>
+                                            <span class="bar_rate gray">40대 평균자산</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- [E] 자산비교 그래프 -->
+                                <div class="btnListMore btnCenter"><a href="#none">자세히 보기</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- [E] 막대그래프 -->
+
+            <!-- [S] 자산별 현황  -->
+            <h3 class="smallTit">자산별 현황</h3>
+            <div class="astBox"><!-- 자산 연결 전 beforeLink 클래스 추가 / 자산 숨기기 토글 on 시 on 클래스 추가 -->
+                <div class="boxArea"> 
+                    <div class="expectPay">
+                        <div class="expectInfo">
+                            <a href="#" class="infoNum linking"> <!-- 자산 연동 후  linking 클래스 추가-->
+                            <span class="infoTit">예금·페이<em>3</em></span>
+                                <span class="assNum"><em class="num">20,800,000</em>원</span>
+                            </a>
+                        </div>
+                        <ul class="astDetail">
+                            <li>
+                                <span class="tit">입출금</span>
+                                <span class="num"><em>200,000</em>원</span>
+                            </li>
+                            <li>
+                                <span class="tit">예적금</span>
+                                <span class="num"><em>760,000</em>원</span>
+                            </li>
+                            <li>
+                                <span class="tit">선불·페이</span>
+                                <span class="num"><em>50,000</em>원</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="boxArea"> 
+                    <div class="expectPay">
+                        <div class="expectInfo">
+                            <a href="#" class="infoNum linking"> <!-- 자산 연동 후  linking 클래스 추가-->
+                            <span class="infoTit">투자<em>2</em></span>
+                                <span class="assNum"><em class="num">20,800,000</em>원</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxArea"> 
+                    <div class="expectPay">
+                        <div class="expectInfo">
+                            <a href="#" class="infoNum linking"> <!-- 자산 연동 후  linking 클래스 추가-->
+                            <span class="infoTit">연금<em>2</em></span>
+                                <span class="assNum"><em class="num">20,800,000</em>원</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxArea"> 
+                    <div class="expectPay">
+                        <div class="expectInfo">
+                            <a href="#" class="infoNum linking"> <!-- 자산 연동 후  linking 클래스 추가-->
+                            <span class="infoTit">보험<em>3</em></span>
+                                <span class="assNum"><em class="num">20,800,000</em>원</span>
+                            </a>
+                        </div>
+                        <ul class="astDetail">
+                            <li>
+                                <span class="tit">저축성</span>
+                                <span class="num"><em>200,000</em>원</span>
+                            </li>
+                            <li>
+                                <span class="tit">보장성</span>
+                                <span class="num"><em>760,000</em>원</span>
+                            </li>
+                            <li>
+                                <span class="tit">자동차</span>
+                                <span class="num"><em>50,000</em>원</span>
+                            </li>
+                            <li>
+                                <span class="tit">보증</span>
+                                <span class="num"><em>50,000</em>원</span>
+                            </li>
+                        </ul>
+                        <p class="ast_tx">공제보험은 마이데이터 서비스 대상이 아닙니다.</p>
+                    </div>
+                </div>
+                <div class="boxArea"> 
+                    <div class="expectPay">
+                        <div class="expectInfo">
+                            <a href="#" class="infoNum linking"> <!-- 자산 연동 후  linking 클래스 추가-->
+                            <span class="infoTit">자동차<em>1</em></span>
+                                <span class="assNum"><em class="num">20,800,000</em>원</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxArea"> 
+                    <div class="expectPay">
+                        <div class="expectInfo">
+                            <a href="#" class="infoNum linking"> <!-- 자산 연동 후  linking 클래스 추가-->
+                            <span class="infoTit">대출<em>3</em></span>
+                                <span class="assNum"><em class="num">20,800,000</em>원</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="boxArea beforeLink"> <!-- 자산 연동 전 beforeLink 클래스 추가-->
+                    <div class="expectPay">
+                        <div class="expectInfo">
+                            <span class="infoTit">대출</span>
+                            <a href="#" class="infoNum">연결하기</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn_wrap">
+                    <div class="btnGroup">
+                        <p><a href="#none" class="btnBl2 btnEdit" role="button" onclick="">목룍 편집</a></p>
+                        <p><a href="#layer_PP1_2_10BS" class="btnBl1 btnPlus btn_open_bottom_sheet" role="button" onclick="">자산 연결</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- [E] 자산별 현황  -->
+
+            <!-- [S] 잔여한도 배너 -->
+            <div class="banner inLink type2">
+                <a href="#none" class="link_type4">
+                    <h3 class="banner_tit">
+                        <span class="titPoint">세금우대상품 한도 조회</span><br>
+                        우대한도 확인하고 절세혜택 챙기세요.
+                    </h3>
+                </a>
+            </div>
+			<!-- [E] 잔여한도 배너 -->
+
+			<!-- [S] 슬라이드 배너 타입 -->
+			<div class="wrap_slider type_skin">
+				<div class="slider_container">
+					<div class="slider">
+						<a href="#none">
+							<span class="logo"><em class="blind">에이피더핀은행</em></span>
+							<img src="../../img/theme/apthefin/@thum.jpg">
+							<span class="noti">*본 서비스는 에이피더핀에서 제공합니다.</span>
+						</a>
+					</div>
+					<div class="slider">
+						<a href="#none">
+							<span class="logo"><em class="blind">에이피더핀은행</em></span>
+							<img src="../../img/theme/apthefin/@thum.jpg">
+							<span class="noti">*본 서비스는 에이피더핀에서 제공합니다.</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- [E] 슬라이드 배너 타입 -->
+			
+			<!-- [S] 하단 고정 영역 -->
+			<div class="fix_bottom">
+                <!-- dock_bar -->
+				<div class="dock_bar">
+                    <ul>
+                        <li>
+                            <a href="#none" class="btn dock_brand"><img src="../../img/theme/apthefin/ic_dock_ci.png" alt="bnk"><span class="tx">에이피더핀</span></a>
+                        </li>
+						<li><a href="#none" class="btn icon_menu ic_home"><span class="tx">홈</span></a></li>
+                        <li><a href="#none" class="btn icon_menu ic_asset on"><span class="tx">자산</span></a></li> 
+                        <li><a href="#none" class="btn icon_menu ic_consume"><span class="tx">소비</span></a></li><!-- 메뉴 선택시 on 클래스 추가 -->
+                        <li><a href="#none" class="btn icon_menu ic_tar"><span class="tx">목표</span></a></li>
+                    </ul>
+                </div>
+			</div>
+			<!-- [E] 하단 고정 영역 -->
+		</div>
+	</div>
+	<!-- //container -->
+</div>
+<!-- //wrap -->
+<!-- bottomsheet layer_HM1_2_1BS(홈메인 툴팁) -->
+<div id="layer_HM1_2_1BS" class="layer_bottomsheet">
+    <div class="layer_inner">
+        <div class="layer_tit type2"> 
+            <strong class="tit"><span>내 자산 합산기준</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont" style="max-height: 879px;">
+            <div class="msg_box">
+                <p class="msg_notice">
+                    예금페이 + 투자 + 연금 + 자동차시세 + 부동산시세 - 대출
+                </p>
+                <ul class="notice_list">
+                    <li class="list">
+                        <span class="tx">
+                            자산합계는 각 금융기관으로부터 제공받은 정보를 기준으로 하며, 정보가 최신화되지 않을 경우 자산연동 만료 또는 해지된 자산이 합계에 포함될 수도 있습니다.
+                        </span>
+                    </li>
+                    <li class="list">
+                        <span class="tx">
+                            ‘마이페이지 > 연동관리’에서 현재 연동된 자산의 정보를 최신화하면 보다 정확한 자산합계를 확인 하실 수 있습니다.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // layer_HM1_2_1BS(홈메인 툴팁) -->
+
+<!-- bottomsheet layer_PP1_2_10BS(자산 연결) -->
+<div id="layer_PP1_2_10BS" class="layer_bottomsheet">
+    <div class="layer_inner">
+        <div class="layer_tit"> 
+            <strong class="tit"><span>자산 연결</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont" style="max-height: 879px;">
+            <div class="msg_box">
+                <ul class="astList">
+                    <li>
+                        <a href="#none" class="link link_detail">
+                            <h3>금융 자산</h3>
+                            <p>카드, 통신은 연결 완료 후<br> 소비화면에서 확인할 수 있습니다.</p>
+                        </a>
+                    </li>
+                    <li><a href="#none" class="link link_detail"><h3>자동차 자산</h3></a></li>
+                    <li><a href="#none" class="link link_detail"><h3>부동산 자산</h3></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // layer_HM1_2_1BS(홈메인 툴팁) -->
+<script>
+$(document).ready(function(){
+	//선택 탭
+	$(".tabInter").tabs({
+		wrapClass:".tabInter",
+		clickClass:".js_tabclickDp1",
+		showClass:".tab_cntDp1",
+		animate:false,
+		contentWidthFull:false,//effect when animate:true
+		animateBorder:["false",".tabs_header"],//show border in class .
+		fade:false,
+		speed:500
+	});
+
+    // [S] 차트 파이 타입
+	Highcharts.chart('chart_pie_assets', {
+		title: {text: ''},// 타이틀 숨김
+		exporting: { enabled: false },// 우측상단 햄버거메뉴 숨김
+   		credits: {enabled: false},// highchart 워터마크 숨김
+		tooltip:  { enabled: false },// 툴팁 숨김
+		chart: {
+			plotBackgroundColor: '#fff',
+			plotBorderWidth: null,
+			plotShadow: false,
+			type: 'pie',
+			backgroundColor: '#fff',
+			margin: 0,
+			height:210,
+			events: {
+				load: function () {
+					//전체 카테고리 말풍선 초기 비노출
+					$('.highcharts-data-label').hide();
+					//비중 첫번째로 큰 카테고리 말풍선만 노출
+					$('.highcharts-data-label-color-0').show().find('.highcharts-label-box').css({'stroke-width':'1px'});
+				},
+			},
+		},
+		plotOptions: {
+			pie: {
+				allowPointSelect: true, // 선택모션
+            	slicedOffset: 0, // 슬라이스간격
+				cursor: 'pointer',
+				colors: ['#47B8E1', '#C293F3', '#FCC105', '#FF84B1', '#68D7C5'], // 색상지정 
+				colorByPoint: true, // 색상지정
+				margin: 0,
+				padding: 0,
+				borderWidth: 0,
+				point: {
+					events: {
+						click: function () {
+							$('.highcharts-data-label').css({'opacity':'1','transition':'all .5s ease'});//카테고리 말풍선 정보
+							$('.highcharts-data-label .highcharts-label-box').css({'stroke-width':'1px','transition':'all 1s ease'});//카테고리 말풍선 정보
+
+							/* 입출금 : assets_01, #47B8E1 */
+							if(this.name === '입출금'){
+								$('.highcharts-data-label').hide();
+								$('.highcharts-data-label-color-0').show()
+                                                                
+								if( this.selected === false){
+									$('.highcharts-data-label-color-0 .highcharts-label-box').css({'stroke':'#47B8E1','stroke-width':'1px'});
+								}else{
+									//$('.highcharts-data-label').hide();
+								}
+							}
+							/* 예적금 : assets_02, #C293F3 */
+							else if(this.name === '예적금'){
+								$('.highcharts-data-label').hide();
+								$('.highcharts-data-label-color-1').show();
+								if( this.selected === false){
+									$('.highcharts-data-label-color-1 .highcharts-label-box').css({'stroke':'#C293F3','stroke-width':'1px'});
+								}else{
+									//$('.highcharts-data-label').hide();
+								}
+							}
+							/* 선불·페이 : assets_03, #FCC105 */
+							else if(this.name === '선불·페이'){
+								$('.highcharts-data-label').hide();
+								$('.highcharts-data-label-color-2').show();
+								if( this.selected === false){
+									$('.highcharts-data-label-color-2 .highcharts-label-box').css({'stroke':'#FCC105','stroke-width':'1px'});
+								}else{
+									//$('.highcharts-data-label').hide();
+								}
+							}
+							/* 투자 : assets_04, ##FF84B1 */
+							else if(this.name === '투자'){
+								$('.highcharts-data-label').hide();
+								$('.highcharts-data-label-color-3').show();
+								if( this.selected === false){
+									$('.highcharts-data-label-color-3 .highcharts-label-box').css({'stroke':'#FF84B1','stroke-width':'1px'});
+								}else{
+									//$('.highcharts-data-label').hide();
+								}
+							}
+							/* 연금 : assets_05, #68D7C5 */
+							else if(this.name === '연금'){
+								$('.highcharts-data-label').hide();
+								$('.highcharts-data-label-color-4').show();
+								if( this.selected === false){
+									$('.highcharts-data-label-color-4 .highcharts-label-box').css({'stroke':'#68D7C5','stroke-width':'1px'});
+								}else{
+									//$('.highcharts-data-label').hide();
+								}
+							}
+						}// click
+					}// events
+				},// point
+			},// pie
+		},// plotOptions
+		series: [{
+            innerSize: '45%', //도넛모양
+			size: '55%',// 크기
+			startAngle: 0,// 각도 시작
+			endAngle: 360,// 각도 끝
+			center: ['50%', '45%'], //pie 위치
+			dataLabels: {
+				distance: '-1', //항목명과 그래프의 간격
+				align : 'center',
+				color: '#000',
+				backgroundColor: '#fff',
+				borderWidth: 0, //말풍선 라인
+				borderRadius: '100%',
+                connectorPadding: 0,
+				overflow: 'inherit',
+				crop: false,
+				size: "100%",
+				style : {
+         			fontFamily: 'notoSans',
+				 	fontSize: '17px',
+				 	fontWeight: '700',
+				},
+			},
+			data:
+			[
+				{
+					name: '입출금',
+					y: 0,// 100퍼센트 비율
+					sliced: true,
+					selected: true,
+					dataLabels: {
+						useHTML: true,
+						format: '<p class="chart_label_box rate_01"><b>{point.name}</b><b style="color:#47B8E1;"> {point.percentage:1f}% </b></p>',
+						borderColor: '#47B8E1',
+					},
+				},
+				{
+					name: '예적금',
+					y: 0,
+					sliced: false,
+					selected: false,
+					dataLabels: {
+						useHTML: true,
+						format: '<p class="chart_label_box rate_02"><b>{point.name}</b><b style="color:#C293F3;"> {point.percentage:1f}% </b>  </p>',
+						borderColor: '#C293F3',
+					},
+				},
+				{
+					name: '선불·페이',
+					y: 0,
+					sliced: false,
+					selected: false,
+					dataLabels: {
+						useHTML: true,
+						format: ' <p class="chart_label_box rate_03"><b>{point.name}</b><b style="color:#FCC105;"> {point.percentage:1f}% </b></p>',
+						borderColor: '#FCC105',
+					},
+				},
+				{
+					name: '투자',
+					y: 0,
+					sliced: false,
+					selected: false,
+					dataLabels: {
+						useHTML: true,
+						format: ' <p class="chart_label_box rate_04"><b>{point.name}</b><b style="color:#FF84B1;"> {point.percentage:1f}% </b></p>',
+						borderColor: '#FF84B1',
+					},
+				},
+				{
+					name: '연금',
+					y: 0,
+					sliced: false,
+					selected: false,
+					dataLabels: {
+						useHTML: true,
+						format: ' <p class="chart_label_box rate_05"><b>{point.name}</b><b style="color:#68D7C5;"> {point.percentage:1f}% </b></p>',
+						borderColor: '#68D7C5',
+					},
+				}
+				
+			]// data
+		}]// series
+	});
+	//접근성
+	$('.chart_disable .rate_01').text($('.chart_label_box.rate_01 b:last-child').html());
+	$('.chart_disable .rate_02').text($('.chart_label_box.rate_02 b:last-child').html());
+	$('.chart_disable .rate_03').text($('.chart_label_box.rate_03 b:last-child').html());
+	$('.chart_disable .rate_04').text($('.chart_label_box.rate_04 b:last-child').html());
+	$('.chart_disable .rate_05').text($('.chart_label_box.rate_05 b:last-child').html());
+    // // [E] 차트 파이 타입 */
+
+    // [S] 막대 그래프
+	grap0();
+    $(".lineType .js_tabclickDp1").on('click', function(){
+		var idx = $(this).index();
+		if(idx == 1){grap0(idx);barInit();}
+	});
+	function grap0(){
+		var $this = $(this);
+		var $gMaxHeight = 100;//그래프 높이 최대값
+		var $myAsset = [35, 50, 26];//내 자산 설정
+		var $otherAsset = [30, 30, 17];//비교 자산 설정
+		var $topConsume = Math.max(...$myAsset);
+
+		$.each($myAsset, function(index, value){
+			$index = index + 1;
+            var $idx = $index*2 -1;
+            
+			$('.grap0 .gBarBox.bar'+$index+' .myAsset .gBarPrice .num').text(value);
+
+			window['$barH'+$index] = parseInt($myAsset[index] / $topConsume * $gMaxHeight);//내자산 / 내자산최고값 * 그래프 최대 높이
+			
+			//막대그래프 상단 텍스트 모션
+			$('.grap0 .bar'+$index+' .myAsset .gBarPrice').delay($idx*150).animate({'height':window['$barH'+$index] + 25}, 1000, 'swing');//
+			//막대그래프 모션
+			$('.grap0 .bar'+$index+' .myAsset .gBar').delay($idx*150).animate({'height':window['$barH'+$index]}, 1000, 'swing');//
+		});
+
+		$.each($otherAsset, function(index, value){
+			$index = index + 1;
+            var $idx2 = $index*2;
+			$('.grap0 .gBarBox.bar'+$index+' .otherAsset .num').text(value);
+
+			window['$barH'+$index] = parseInt($otherAsset[index] / $topConsume * $gMaxHeight);//비교자산 / 비교자산최고값 * 그래프 최대 높이
+			
+			//막대그래프 상단 텍스트 모션
+			$('.grap0 .bar'+$index+' .otherAsset .gBarPrice').delay($idx2*150).animate({'height':window['$barH'+$index] + 25}, 1000, 'swing');//
+			//막대그래프 모션
+			$('.grap0 .bar'+$index+' .otherAsset .gBar').delay($idx2*150).animate({'height':window['$barH'+$index]}, 1000, 'swing');//
+		});
+	}
+    $(".gBarBox").on('click', function(){
+		var $this = $(this);
+		$this.addClass('on');
+		$this.siblings().removeClass('on');
+	});
+	function barInit(){
+		$(".gBarBox").removeClass('on');
+		$(".gBarBox span").removeAttr('style');
+		$(".gBarBox:last-child").addClass('on');
+	}
+	// [E] 막대 그래프 */	
+
+	/* [S] 슬라이드 배너형 */
+    var $sliderBanner= $('.wrap_slider.type_skin .slider_container');
+    $sliderBanner.slick({
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2500
+    });
+    /* 재생, 멈춤 */
+    var html_control = '<div class="slider_control">';
+    html_control += '<button type="button" class="btn_control play" tabindex="0"><span class="blind">배너 자동재생</span></button>';
+    html_control += '<button type="button" class="btn_control stop" tabindex="0"><span class="blind">배너 일시정지</span></button>';
+    html_control += '</div>'
+    $(".slick-dots").before(html_control);
+
+    var btnSliderPlay = $('.wrap_slider.type_skin .btn_control.play');
+    var btnSliderStop = $('.wrap_slider.type_skin .btn_control.stop');
+    $(btnSliderPlay).click(function(){
+        $sliderBanner.slick('slickPlay');
+        $(btnSliderPlay).hide();
+        $(btnSliderStop).show().focus();// 20210901 접근성 .focus() 추가
+    });
+    $(btnSliderStop).click(function(){
+        $sliderBanner.slick('slickPause');
+        $(btnSliderStop).hide();
+        $(btnSliderPlay).show().focus();// 20210901 접근성 .focus() 추가
+    });
+    /* [E] 슬라이드 배너형 */
+
+
+	// 스위치 토글시 자산 숨기기
+    var checkBox = $('.btn_switch input[type=checkbox]');
+    var changTxt = $('.tBalAmount');
+    var astBox = $('.astBox');
+
+    checkBox.on('change', function() {
+        if(this.checked) {
+           changTxt.addClass('on');
+           astBox.addClass('on');
+        } else {
+            changTxt.removeClass('on');
+            astBox.removeClass('on');
+            changTxt.children('.tBalNum').css('animation','fade-in 1s');
+        }
+    });
+
+});
+// [S] 바텀시트
+$(document).on("click", ".btn_open_bottom_sheet", function(e){
+    e.preventDefault();
+
+    var $href = $(this).attr('href');
+    layer_bottomsheet($href);
+    $('html').addClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+
+    // [S] multi layer 2021-08-02 추가
+    var dimIdx = $('.dim').index();
+    eval('$focusReturn' + [dimIdx] + '= $(this)');
+   
+
+});
+function layer_bottomsheet(el){
+    var $el = $(el);
+    $el.append("<div class=\"dim\"></div>");
+    isDim ? $('.layer_bottomsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
+    setTimeout(function() {
+        $el.find('.layer_inner').addClass('on');
+    }, 50);
+
+    var isDim;
+    var dimIdx = $('.dim').index();
+    var thisDim = $el.find('.dim');
+    var thisLyZindex = dimIdx + 4000;
+    $('.dim').css('opacity','0');
+    thisDim.css('opacity','.7');
+    thisDim.closest('.layer_bottomsheet, .layer_popup').css('z-index', thisLyZindex);
+    // [E] multi layer 2021-08-02 추가
+
+    $el.find('.js_pop_close').click(function(){
+
+        $el.find('.layer_inner').removeClass('on');
+        setTimeout(function() {
+            isDim ? $('.layer_bottomsheet').hide() : $el.hide();
+            $('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+            $el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
+            // [S] multi layer 2021-08-02 추가
+            if($('.dim').length == '2'){
+                $('.dim:eq(1)').css('opacity','.7');
+            }else if($('.dim').length == '1'){
+                $('.dim').css('opacity','.7');
+            }
+            // [E] multi layer 2021-08-02 추가
+        }, 200);
+
+        // [S] multi layer 2021-08-02 추가
+        eval('$focusReturn'+ [dimIdx]).focus();
+
+        return false;
+    });
+}
+
+
+
+</script>
+</body>
+</html>
