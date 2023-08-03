@@ -1,0 +1,197 @@
+/* WEB FONT (https://google-webfonts-helper.herokuapp.com/fonts)*/
+/*
+한글 범위: U+AC00-D7A3
+영어 대문자 범위: U+0041-005A
+영어 소문자 범위: U+0061-007A
+숫자 범위: U+0030-0039
+특수 문자: U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E
+*/
+/* noto-sans-kr-100 - latin */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 100;
+  src: local(''),
+    url('../font/noto-sans-kr-v27-latin-100.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../font/noto-sans-kr-v27-latin-100.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    unicode-range: U+AC00-D7A3, U+0041-005A, U+0061-007A, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
+}
+/* noto-sans-kr-300 - latin */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+    url('../font/noto-sans-kr-v27-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../font/noto-sans-kr-v27-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    unicode-range: U+AC00-D7A3, U+0041-005A, U+0061-007A, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
+}
+/* noto-sans-kr-400 - latin */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url('../font/noto-sans-kr-v27-latin-400.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../font/noto-sans-kr-v27-latin-400.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    unicode-range: U+AC00-D7A3, U+0041-005A, U+0061-007A, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
+}
+/* noto-sans-kr-500 - latin */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+    url('../font/noto-sans-kr-v27-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../font/noto-sans-kr-v27-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    unicode-range: U+AC00-D7A3, U+0041-005A, U+0061-007A, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
+}
+/* noto-sans-kr-700 - latin */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+    url('../font/noto-sans-kr-v27-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../font/noto-sans-kr-v27-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    unicode-range: U+AC00-D7A3, U+0041-005A, U+0061-007A, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
+}
+/* noto-sans-kr-900 - latin */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 900;
+  src: local(''),
+    url('../font/noto-sans-kr-v27-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../font/noto-sans-kr-v27-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    unicode-range: U+AC00-D7A3, U+0041-005A, U+0061-007A, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
+}
+/* roboto-100 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: local(''),
+    url('../font/roboto-v30-latin-100.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../font/roboto-v30-latin-100.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    unicode-range: U+0030-0039;
+}
+/* roboto-300 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+    url('../font/roboto-v30-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../font/roboto-v30-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    unicode-range: U+0030-0039;
+}
+/* roboto-400 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url('../font/roboto-v30-latin-400.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../font/roboto-v30-latin-400.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    unicode-range: U+0030-0039;
+}
+/* roboto-500 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+    url('../font/roboto-v30-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../font/roboto-v30-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    unicode-range: U+0030-0039;
+}
+/* roboto-700 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+    url('../font/roboto-v30-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../font/roboto-v30-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    unicode-range: U+0030-0039;
+}
+/* roboto-900 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: local(''),
+    url('../font/roboto-v30-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../font/roboto-v30-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    unicode-range: U+0030-0039;
+}
+
+/* BASE */
+html, body, div, ul, ol, dl, li, dt, dd, p, h1, h2, h3, h4, h5, h6, table, thead, tbody, tfoot, tr, th, td, caption, address, article, aside,
+canvas, details, figure, figcaption, footer, header, menu, nav, section, main,
+label, button, select, textarea, input, fieldset, legend, a, span, strong, em, address, dfn, small, i, b {margin: 0; padding: 0; border: 0; list-style: none; font-style: inherit; font-size: inherit; font-weight: inherit; font-family: inherit; line-height: inherit; letter-spacing: -0.1rem; word-break: inherit; word-wrap: inherit; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box;}
+:before, :after {box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box;}
+article, aside, canvas, details, figure, figcaption, footer, header, menu, nav, section, main {display: block;}
+a, area, button, input, label, select, summary, textarea, [tabindex] {touch-action: manipulation;}
+html {height: 100%; font-family: 'Noto Sans KR', 'Roboto'; font-size: 10px; -webkit-tap-highlight-color: transparent;}
+body {height: 100%; margin: 0; font-size: 1.6rem; font-style: normal; font-weight: normal; line-height: inherit; word-break: keep-all; word-wrap: word-break; letter-spacing: -0.1rem; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none;}
+[hidden], hr {display: none;}
+img {vertical-align: middle;}
+fieldset, iframe {width: 100%;}
+button, img, a, frame, iframe, fieldset {border: 0;}
+a {text-decoration: none;}
+table {width: 100%; border-spacing: 0; border-collapse: collapse;}
+caption {overflow: hidden; height: 0;}
+legend {overflow: hidden; height: 0;}
+button {overflow: hidden; background-color: transparent; cursor: pointer; color: rgb(0, 0, 0);}
+button::-moz-focus-inner {border: 0px; padding: 0px;}
+select {appearance: none; -webkit-appearance: none; -moz-appearance: none; -o-appearance: none;}
+select::-ms-expand {display: none;}
+input::-ms-clear,
+input::-ms-reveal {display: none; width: 0; height: 0;}
+input::search-decoration,
+input::search-cancel-button,
+input::search-results-button,
+input::search-results-decoration {display: none;}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {display: none;}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
+input::-webkit-calendar-picker-indicator {-webkit-appearance: none;}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 280px) {
+  html {font-size: 7.7px}
+}
+
+/* Media Query for Mobile Devices */
+@media (min-width: 281px) and (max-width: 320px) {
+  html {font-size: 8.8px}
+}
+
+/* Media Query for Mobile Devices */
+@media (min-width: 321px) and (max-width: 480px) {
+  html {}
+}
+
+/* Media Query for low resolution Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  html {}
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+  html {}
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px){
+  html {}
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+  html {}
+}
