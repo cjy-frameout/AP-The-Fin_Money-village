@@ -117,7 +117,7 @@ function inc_IAHead(){
 	str+='	<col class="path" style="width:15%" /><!-- 경로 -->';
 	// str+='	<col class="planner" style="width:4%" /><!-- 기획자 -->';
 	str+='	<col class="rdate" style="width:4%" /><!-- 완료일 -->';
-	str+='	<col class="mdate" style="width:4%" /><!-- 수정일 -->';
+	str+='	<col class="id" style="width:6%" /><!-- ID -->';
 	str+='	<col class="info" style="width:14%" /><!-- 요약 -->';
 	str+='	<col class="etc" style="width:auto" /><!-- 비고 -->';
 	str+='</colgroup>';
@@ -132,7 +132,7 @@ function inc_IAHead(){
 	str+='		<th scope="col" class="path">Path</th>';
 	// str+='		<th scope="col" class="planner">기획자</th>';
 	str+='		<th scope="col" class="rdate">End</th>';
-	str+='		<th scope="col" class="mdate">Modify</th>';
+	str+='		<th scope="col" class="mdate">ID</th>';
 	str+='		<th scope="col" class="info">Info</th>';
 	str+='		<th scope="col" class="etc">Log</th>';
 	str+='	</tr>';
