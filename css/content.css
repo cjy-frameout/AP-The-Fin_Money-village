@@ -975,7 +975,7 @@
 .asGroup .sortCtrl .on a {color:#fff;}
 /* 계좌 거래 내역 */
 .accHistory {position:relative;padding-top:25px;}
-.accHistory:before {content:'';display:block;position:absolute;left:-20px;top:0;width:calc(100% + 40px);height:10px;background:#f7f7f7;}
+.accHistory:before {content:'';display:block;position:absolute;left:-20px;top:0;width:calc(100% + 40px);height:10px;background:#F1F2F5;}
 .accHistory .topCtrl {display:flex;justify-content:center;position:relative;margin-bottom:23px;}
 .accHistory > .topCtrl:first-child {margin-top:10px;}
 .accHistory .rangeCtrl {display:flex;align-items:center;}
