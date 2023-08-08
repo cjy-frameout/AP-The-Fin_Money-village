@@ -999,9 +999,9 @@
 .accHistory .historyList .time {display:block;font-size:14px;font-weight:400;color:#666;line-height:18px;}
 .accHistory .historyList .time .tx {display:block;margin-bottom:4px;font-size:13px;}
 .accHistory .historyList .amount {display:block;font-size:15px;margin-bottom:3px;}
-.accHistory .historyList .amount .num {font-size:17px;}
+.accHistory .historyList .amount .num {font-size:18px; font-weight: 900;}
 .accHistory .historyList .withdrawal .amount {color:#d81921}
-.accHistory .historyList .balance {display:block;font-size:13px;color:#666;}
+.accHistory .historyList .balance {display:block;font-size:14px;color:#666;}
 .accHistory .historyList .balance .num {font-size:14px;}
 .accHistory .historyList .listNone {padding-top:60px;text-align:center;font-size:15px;line-height:20px;color:#666}
 .accHistory .historyList .upLoading {padding:30px 0 0;margin-bottom:-30px;}

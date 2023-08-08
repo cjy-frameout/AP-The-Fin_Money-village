@@ -1,102 +1,13 @@
 ﻿@charset "utf-8";
 
-/* font setup ========================================================================== */
-@font-face{
-	font-family:'Noto Sans KR';
-	font-style:normal;
-	font-weight:300;
-	src:local('Noto Sans Light'), local('NotoSans-Light'),
-		url('../font/NotoSansCJKkr-Light.eot');
-	src:url('../font/NotoSansCJKkr-Light.eot?#iefix') format('embedded-opentype'),
-		url('../font/NotoSansCJKkr-Light.woff2') format('woff2'),
-		url('../font/NotoSansCJKkr-Light.woff') format('woff'),
-		url('../font/NotoSansCJKkr-Light.ttf') format('truetype');
-		unicode-range:U+0033-0047, U+0058-0064, U+0091-0096, U+0123-0126, U+AC00-D7A3;/* 특수문자, 한글 유니코드 범위 */
-}
-@font-face{
-	font-family:'Noto Sans KR';
-	font-style:normal;
-	font-weight:400;
-	src:local('Noto Sans Regular'), local('NotoSans-Regular'),
-		url('../font/NotoSansCJKkr-Regular.eot');
-	src:url('../font/NotoSansCJKkr-Regular.eot?#iefix') format('embedded-opentype'),
-		url('../font/NotoSansCJKkr-Regular.woff2') format('woff2'),
-		url('../font/NotoSansCJKkr-Regular.woff') format('woff'),
-		url('../font/NotoSansCJKkr-Regular.ttf') format('truetype');
-		unicode-range:U+0033-0047, U+0058-0064, U+0091-0096, U+0123-0126, U+AC00-D7A3;/* 특수문자, 한글 유니코드 범위 */
-}
-@font-face{
-	font-family:'Noto Sans KR';
-	font-style:normal;
-	font-weight:500;
-	src:local('Noto Sans Medium'), local('NotoSans-Medium'),
-		url('../font/NotoSansCJKkr-Medium.eot');
-	src:url('../font/NotoSansCJKkr-Medium.eot?#iefix') format('embedded-opentype'),
-		url('../font/NotoSansCJKkr-Medium.woff2') format('woff2'),
-		url('../font/NotoSansCJKkr-Medium.woff') format('woff'),
-		url('../font/NotoSansCJKkr-Medium.ttf') format('truetype');
-		unicode-range:U+0033-0047, U+0058-0064, U+0091-0096, U+0123-0126, U+AC00-D7A3;/* 특수문자, 한글 유니코드 범위 */
-}
-@font-face{
-	font-family:'Noto Sans KR';
-	font-style:normal;
-	font-weight:700;
-	src:local('Noto Sans Bold'), local('NotoSans-Bold'),
-		url('../font/NotoSansCJKkr-Bold.eot');
-	src:url('../font/NotoSansCJKkr-Bold.eot?#iefix') format('embedded-opentype'),
-		url('../font/NotoSansCJKkr-Bold.woff2') format('woff2'),
-		url('../font/NotoSansCJKkr-Bold.woff') format('woff'),
-		url('../font/NotoSansCJKkr-Bold.ttf') format('truetype');
-		unicode-range:U+0033-0047, U+0058-0064, U+0091-0096, U+0123-0126, U+AC00-D7A3;/* 특수문자, 한글 유니코드 범위 */
-}
-/* Roboto ========================================================================== */
-@font-face{
-	font-family:'Roboto';
-	font-style:normal;
-	font-weight:200;
-	src:local('Roboto Thin'), local('Roboto-Thin'),
-		url('../font/Roboto-Thin.ttf') format('truetype');
-		/*unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;*//*영문 (대문자) :U+0041-005A, 영문 (소문자) :U+0061-007A, 숫자 :U+0030-0039*/
-}
-@font-face{
-	font-family:'Roboto';
-	font-style:normal;
-	font-weight:300;
-	src:local('Roboto Light'), local('Roboto-Light'),
-		url('../font/Roboto-Light.ttf') format('truetype');
-		/*unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;*//*영문 (대문자) :U+0041-005A, 영문 (소문자) :U+0061-007A, 숫자 :U+0030-0039*/
-}
-@font-face{
-	font-family:'Roboto';
-	font-style:normal;
-	font-weight:400;
-	src:local('Roboto Regular'), local('Roboto-Regular'),
-		url('../font/Roboto-Regular.ttf') format('truetype');
-		/*unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;*//*영문 (대문자) :U+0041-005A, 영문 (소문자) :U+0061-007A, 숫자 :U+0030-0039*/
-}
-@font-face{
-	font-family:'Roboto';
-	font-style:normal;
-	font-weight:500;
-	src:local('Roboto Medium'), local('Roboto-Medium'),
-		url('../font/Roboto-Medium.ttf') format('truetype');
-		/*unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;*//*영문 (대문자) :U+0041-005A, 영문 (소문자) :U+0061-007A, 숫자 :U+0030-0039*/
-}
-@font-face{
-	font-family:'Roboto';
-	font-style:normal;
-	font-weight:700;
-	src:local('Roboto Bold'), local('Roboto-Bold'),
-		url('../font/Roboto-Bold.ttf') format('truetype');
-		/*unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;*//*영문 (대문자) :U+0041-005A, 영문 (소문자) :U+0061-007A, 숫자 :U+0030-0039*/
-}
+
 
 /* reset =============================================================================== */
 *{padding:0;margin:0;}
 *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
 html, body{width:100%;height:auto;margin:0;padding:0;-webkit-overflow-scrolling:touch;-webkit-text-size-adjust:100%;}
 body{width:100%;font-size:12px;color:#000;-webkit-overflow-scrolling:touch;-webkit-text-size-adjust:100%;word-break:break-all;}
-html *, body *{font-family:'Roboto', 'Noto Sans KR', 'sans-serif';font-weight:500;}
+html *, body *{font-family:'Pretendard','sans-serif';font-weight:500;}
 dl,ul,ol{list-style:none;}
 table{empty-cells:show;border-collapse:collapse;width:100%;table-layout:fixed;}
 fieldset{border:none;}
