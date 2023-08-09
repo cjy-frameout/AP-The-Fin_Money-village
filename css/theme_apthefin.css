@@ -73,7 +73,7 @@ em,
 a:link, a:visited {color:#222;}
 a {-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;outline:none;}
 
-body {color:#222;}
+body {color:#333;}
 button span {font-size:15px;}
 ::-webkit-input-placeholder {font-weight:400 !important;}
 :-moz-placeholder {font-weight:400 !important;}
@@ -125,6 +125,7 @@ a.btnBl2.btnEdit:before {content:'';width:16px;height:16px;margin-right:6px;back
 a.btnBl3 {height:50px;border-radius:10px;background:#c2c2c2;font-size:16px;color:#fff;}
 a.btnBl4 {height:50px;border-radius:10px;background:#fff;border:1px solid #ddd;font-size:15px;color:#666;}
 a.btnBl6 { height: 50px; border-radius: 10px; background:#FEECF2; font-size: 15px; color:#BB2649; font-weight: 700;}
+a.btnBl6.btnEdit:before {content:'';width:16px;height:16px;margin-right:6px;background-image:url('../img/theme/apthefin/bt_edit.png?0426');background-size:16px auto;background-repeat:no-repeat;}
 a.chartFolding {display:flex;flex-direction:column;width:100%;height:auto;padding:20px 0 40px;margin-top:20px;font-size:14px;color:#666;font-weight:400;align-items:center;}
 a.chartFolding.fold:before,
 a.chartFolding.show:after {display:inline-block;width:16px;height:16px;content:'';background-image:url('../img/theme/apthefin/ic_scroll_arr.svg?0426');background-size:16px auto;filter: invert(44%) sepia(0%) saturate(501%) hue-rotate(197deg) brightness(90%) contrast(95%);}
@@ -501,13 +502,14 @@ a.btnMenu {display:block;width:32px;height:32px;background-image:url('../img/the
 .btnFilter.on {background-image:url('../img/theme/apthefin/bt_filter2_on.png?0426');background-size:16px auto;}
 .accHistory .topCtrl {margin-bottom:30px;}
 .accHistory .historyList .time {display:flex;color:#999;}
-.accHistory .historyList .amount .num {font-weight:900;}
+.accHistory .historyList .amount .num {font-weight:700;}
 .accHistory .historyList .amount.minus {color:#F44336;}
-.accHistory .historyList ul + .date {margin-top:25px;}
+.accHistory .historyList ul + .date {margin-top:40px;}
 .accHistory .historyList .balance {font-weight:400;color:#999;}
 .accHistory .historyList ul.detailBox {margin-top:8px;border-top:1px solid #E5E5E5;}
 .accHistory .historyList ul.detailBox li:first-child {padding-top:0;}
-.accHistory .historyList ul.detailBox li {padding:15px 0;}
+.accHistory .historyList ul.detailBox li:last-child {padding-bottom:0;}
+.accHistory .historyList ul.detailBox li {padding:10px 0;}
 .accHistory .historyList ul.detailBox .balance {color:#999;}
 .accHistory .historyList .date.type2 {color:#666;font-weight:500;font-size:13px;}
 .accHistory .historyList .date.type2 .num {color:#666;font-weight:500;font-size:12px;}
@@ -767,9 +769,9 @@ a.btnMenu {display:block;width:32px;height:32px;background-image:url('../img/the
 .asset_tab_header {margin-bottom:30px;}
 .asset_tab_header ul {position:relative;display:flex;width:100%;margin:0 auto;background-color:#F1F2F5;border:1px solid #e5e5e5;border-radius:10px;}
 .asset_tab_header ul li {flex:1;float:left;}
-.asset_tab_header ul li a {display:flex;justify-content:center;align-items:center;width:100%;height:40px;font-size:14px;font-weight:700;color:#666;border-left:1px solid #e5e5e5;}
+.asset_tab_header ul li a {display:flex;justify-content:center;align-items:center;width:100%;height:40px;font-size:14px;font-weight:500;color:#666;border-left:1px solid #e5e5e5;}
 .asset_tab_header ul li:first-child a {border-left:none;}
-.asset_tab_header ul li.on a {background-color:#fff;color:#3E5FAC;border-left:1px solid #e5e5e5;border-radius:0;}
+.asset_tab_header ul li.on a {background-color:#fff;color:#3E5FAC;border-left:1px solid #e5e5e5;border-radius:0;font-weight: 700;}
 .asset_tab_header ul li.on:first-child a {border-radius:10px 0 0 10px;border-left:none;}
 .asset_tab_header ul li.on:last-child a {border-radius:0 10px 10px 0;border-left:1px solid #e5e5e5;}
 /* [E] 자산 탭영역 */
@@ -782,7 +784,7 @@ a.btnMenu {display:block;width:32px;height:32px;background-image:url('../img/the
 .asList.type_info .state_contents {padding:15px 20px;}
 
 .tBalance {padding:30px 0 0px;}
-.tBalance .tBaltit {font-size:16px;margin-bottom:10px;}
+.tBalance .tBaltit {font-size:16px;margin-bottom:5px;}
 .asset_tab_body .tBalance {padding:0;}
 /* .hr_div.type4 {margin:30px -20px;} */
 .asset_tab_body .asGroup {padding-top:0;}
@@ -797,7 +799,7 @@ a.btnMenu {display:block;width:32px;height:32px;background-image:url('../img/the
 .agChkItem .btnFolding:after {content:none;}
 
 .tBalance .tBalAmount {font-size:22px;line-height:19px;}
-.tBalance .tBalAmount .amount {margin:-2px 2px 0 0;font-size:28px;font-weight:700;}
+.tBalance .tBalAmount .amount {margin:-2px 2px 0 0;font-size:30px;font-weight:700;letter-spacing: -1px;}
 .tBalance .tBalAmount .amount + .num {font-weight:500;margin-left:3px;line-height:inherit;}
 .tBalance .tBalAmount.type2 .amount {vertical-align:initial;}
 .tBalance + .asGroup {padding-top:20px;}
