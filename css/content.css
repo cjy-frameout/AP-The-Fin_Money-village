@@ -937,7 +937,7 @@
 .asGroup .listTit h3 {font-size:18px;}
 .asGroup .listTit em {font-size:20px;}
 .asGroup .asList {padding:10px 0;border:1px solid #ddd;border-radius:6px;}
-.asGroup .asList + .listTit {margin-top:25px;}
+.asGroup .asList + .listTit {margin-top:40px;}
 .asGroup .asList .im {display:flex;align-items:center;justify-content:center;width:38px;min-width:38px;margin-right:10px;border-radius:0;background-color:transparent;overflow:hidden;}
 .asGroup .asList .im.card {width:30px;min-width:30px;height:45px;margin-right:18px;}
 .asGroup .asList img {width:38px;height:38px;}
