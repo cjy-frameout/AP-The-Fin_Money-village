@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/* ================================================== S : FEED CSS ===================================================  */
+.wrap_search + .feed-list { margin-top: 20px; }
+.feed-list {
+    margin: 0 -20px;
+}
+.feed-item {
+    border-bottom: 1px solid #E5E5E5;
+    padding:  0 20px 20px;
+}
+.feed-item + .feed-item { margin-top: 20px;}
+
+.feed-item  .compare_chart { margin-top: 50px; }
+.list-name {
+    color: #434655;
+    display: flex;
+    font-size: 14px;
+    font-weight: 400;
+    align-items: center;
+}
+.feed-item .list-name > img { border-radius: 50%; margin-right: 5px; }
+.feed-item .list-title {
+    color: #333;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.feed-item .list-title.underLine {
+    border-bottom: 1px solid #F1F2F5;
+    padding-bottom: 10px;
+}
+.feed-item .list-title + .load-wrap { margin-top: 24px;}
+.feed-item .list-desc {
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+.feed-item .list-util {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.feed-item .list-util-left { display: flex;}
+.feed-item .list-util-left > div {
+    display: flex;
+    align-items: center;
+}
+.feed-item .list-util-left > div:last-child {margin-left: 18px;}
+.feed-item .likes-num, .feed-item .comment-num, .feed-item .list-date {
+    color: #999;
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 5px;
+}
+.feed-item .likes-num-btn {
+    background: url(../../img/theme/apthefin/icon_thumb.png) no-repeat 0 0;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+}
+.feed-item .likes-num-btn.on { background: url(../../img/theme/apthefin/icon_thumb_on.png) no-repeat 0 0; }
+.feed-item .comment-num-btn {
+    background: url(../../img/theme/apthefin/icon_comment.png) no-repeat 0 0;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+}
+.feed-item .list-name + .list-title { margin-top: 12px; }
+.feed-item .list-title + .list-desc { margin-top: 10px; }
+.feed-item .list-desc + .list-util { margin-top: 12px; }
+.feed-item .feed-btn-more {
+    background: url(../../img/theme/apthefin/icon_more.png) no-repeat 0 0;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    margin: 12px 0;
+}
+.feed-item .load-wrap + .list-util { margin-top: 26px; }
+.feed-item .load-wrap .asGroup .asList .amount:after {
+    background: none;
+}
+.feed-item .asGroup + .asGroup { margin-top: 10px; padding-top: 0; }
+.feed-item .asGroup + .asGroup > .asList { margin-top: 10px; }
+/* ================================================== E : FEED CSS ===================================================  */

@@ -2005,7 +2005,7 @@ to{opacity:1;margin-top:0px;}
 .tx.xg {padding-top:10px;font-size:22px;color:#333;font-weight:700;}
 
 .servTerm_tbl th strong, .servTerm_tbl td strong {color:#333;}
-.wrap_search {position:relative;margin-top:10px;background:#fff;}
+.wrap_search {position:relative;background:#fff;}
 .wrap_search .inp_search {width:100%;height:55px;margin-left:0;padding:15px 20px;border:1px solid #ddd;border-radius:8px;color:#333;font-weight:400;}
 .wrap_search .inp_search:focus {border:1px solid #3E5FAC;}
 .wrap_search .btn_search {position:absolute;right:0;}
