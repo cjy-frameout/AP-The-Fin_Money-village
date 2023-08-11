@@ -125,5 +125,33 @@
 .feed-item .compare_chart .wrapBarGraph .wrapBar_detail .bar_rate.gray:before { background-color: #DBDBDB;}
 .layer_fullsheet.feed {
     height: 100vh;
+    margin-bottom: 0;
 }
+.layer_fullsheet.feed .layer_cont {
+    height: 100%;
+    overflow: auto;
+}
+.layer_fullsheet.feed .layer_cont.hasFixBottom {
+    padding-bottom: 150px;
+}
+.input-wrap {
+    margin: 20px 0 0;
+    width: 100%;
+}
+.input-wrap.fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0 20px;
+}
+.ipt-typeA { /* feed 댓글달기에 들어가는 댓글 입력 input */
+    border: 0;
+    border-top: 1px solid #B3B3B3;
+    color: #333;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0;
+    width: 100%;
+}
+
 /* ================================================== E : FEED CSS ===================================================  */

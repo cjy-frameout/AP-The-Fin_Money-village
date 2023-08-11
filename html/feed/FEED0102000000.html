@@ -38,93 +38,143 @@
 <!-- [E] chart -->
 </head>
 <body>
-<div class="test_view">
-<!-- 퍼블 화면 확인용 -->
+
 <style>
-body{background-color:#444;}
-.test_view{display:flex;flex-wrap:wrap;}
-.view_section{position:relative;border:1px dotted #ddd;;height:100%;}
 .view_section .type_no{padding:5px 0;text-align:center;font-size:12px;font-weight:300;color:#fff;}
-.layer_bottomsheet, .layer_popup, .layer_fullsheet {display:block;position:relative;width:360px;height:100%;margin-bottom:10px;margin-left:0px;}
+.layer_bottomsheet, .layer_popup, .layer_fullsheet {display:block;position:relative;width:100%;height:100%;margin-bottom:10px;margin-left:0px;}
 .layer_bottomsheet .layer_inner,
 .layer_fullsheet .layer_inner {overflow:inherit;position:relative;max-height:auto;transform: translate(0, 0);}
 </style>
-<!-- //퍼블 화면 확인용 -->
-
-<div class="view_section">
-    <h3 class="type_no">FEED0102000000 피드댓글</h3>
-    <!-- [S] 피드 댓글 팝업 -->
-    <div id="PP1_2_2_1_2_2_1FP" class="layer_fullsheet ">
-        <div class="layer_inner">
-            <div class="layer_tit">
-                <strong class="tit">댓글</strong>
-                <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
-            </div>
-            <div class="layer_cont">
-                <section class="feed-item">
-                    <h2 class="list-name">
-                        <div class="list-name-box">
-                            <img src="../../img/theme/apthefin/feed_name_img.png" alt=""> 프로필 네임
-                        </div>
-                        <div class="list-name-likes">
-                            <button class="likes-num-btn " title="좋아요"></button>
-                            <span class="likes-num" title="좋아요 개수">10</span> 
-                        </div>
-                    </h2>
-                    <p class="list-desc">
-                        좋은 정보 감사합니다.
-                    </p>
-                    <div class="list-util jcfe">
-                        
-                        <span class="list-date">2023.07.18</span>
+  
+<!-- [S] 피드 댓글 팝업 -->
+<div id="PP1_2_2_1_2_2_1FP" class="layer_fullsheet feed">
+    <div class="layer_inner">
+        <div class="layer_tit">
+            <strong class="tit">댓글</strong>
+            <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont hasFixBottom">
+            
+            <section class="feed-item">
+                <h2 class="list-name">
+                    <div class="list-name-box">
+                        <img src="../../img/theme/apthefin/feed_name_img.png" alt=""> 프로필 네임
                     </div>
-                </section>
-                <section class="feed-item">
-                    <h2 class="list-name">
-                        <div class="list-name-box">
-                            <img src="../../img/theme/apthefin/feed_name_img.png" alt=""> 프로필 네임
-                        </div>
-                        <div class="list-name-likes">
-                            <button class="likes-num-btn on" title="좋아요"></button>
-                            <span class="likes-num" title="좋아요 개수">10</span> 
-                        </div>
-                    </h2>
-                    <p class="list-desc">
-                        아주 유용한 정보입니다. 생활에 많이 많이 참고 하겠습니다. 감사합니다.
-                    </p>
-                    <div class="list-util jcfe">
-                        
-                        <span class="list-date">2023.07.18</span>
+                    <div class="list-name-likes">
+                        <button class="likes-num-btn " title="좋아요"></button>
+                        <span class="likes-num" title="좋아요 개수">10</span> 
                     </div>
-                </section>
-                <section class="feed-item">
-                    <h2 class="list-name">
-                        <div class="list-name-box">
-                            <img src="../../img/theme/apthefin/feed_name_img.png" alt=""> 프로필 네임
-                        </div>
-                        <div class="list-name-likes">
-                            <button class="likes-num-btn " title="좋아요"></button>
-                            <span class="likes-num" title="좋아요 개수">10</span> 
-                        </div>
-                    </h2>
-                    <p class="list-desc">
-                        아주 유용한 정보입니다. 생활에 많이 많이 참고 하겠습니다. 감사합니다.
-                    </p>
-                    <div class="list-util jcfe">
-                        
-                        <span class="list-date">2023.07.18</span>
-                    </div>
-                </section>
-                <div class="accSetting">
-                    <div class="editName">
-                        <input type="text" id="name" title="이름" required="required" placeholder="댓글을 달아보세요.">
-                    </div>
+                </h2>
+                <p class="list-desc">
+                    좋은 정보 감사합니다.
+                </p>
+                <div class="list-util jcfe">
+                    
+                    <span class="list-date">2023.07.18</span>
                 </div>
-            </div>
+            </section>
+            <section class="feed-item">
+                <h2 class="list-name">
+                    <div class="list-name-box">
+                        <img src="../../img/theme/apthefin/feed_name_img.png" alt=""> 프로필 네임
+                    </div>
+                    <div class="list-name-likes">
+                        <button class="likes-num-btn on" title="좋아요"></button>
+                        <span class="likes-num" title="좋아요 개수">10</span> 
+                    </div>
+                </h2>
+                <p class="list-desc">
+                    아주 유용한 정보입니다. 생활에 많이 많이 참고 하겠습니다. 감사합니다.
+                </p>
+                <div class="list-util jcfe">
+                    
+                    <span class="list-date">2023.07.18</span>
+                </div>
+            </section>
+            <section class="feed-item">
+                <h2 class="list-name">
+                    <div class="list-name-box">
+                        <img src="../../img/theme/apthefin/feed_name_img.png" alt=""> 프로필 네임
+                    </div>
+                    <div class="list-name-likes">
+                        <button class="likes-num-btn " title="좋아요"></button>
+                        <span class="likes-num" title="좋아요 개수">10</span> 
+                    </div>
+                </h2>
+                <p class="list-desc">
+                    아주 유용한 정보입니다. 생활에 많이 많이 참고 하겠습니다. 감사합니다.
+                </p>
+                <div class="list-util jcfe">
+                    
+                    <span class="list-date">2023.07.18</span>
+                </div>
+            </section>
+            <section class="feed-item">
+                <h2 class="list-name">
+                    <div class="list-name-box">
+                        <img src="../../img/theme/apthefin/feed_name_img.png" alt=""> 프로필 네임
+                    </div>
+                    <div class="list-name-likes">
+                        <button class="likes-num-btn " title="좋아요"></button>
+                        <span class="likes-num" title="좋아요 개수">10</span> 
+                    </div>
+                </h2>
+                <p class="list-desc">
+                    아주 유용한 정보입니다. 생활에 많이 많이 참고 하겠습니다. 감사합니다.
+                </p>
+                <div class="list-util jcfe">
+                    
+                    <span class="list-date">2023.07.18</span>
+                </div>
+            </section>
+            <section class="feed-item">
+                <h2 class="list-name">
+                    <div class="list-name-box">
+                        <img src="../../img/theme/apthefin/feed_name_img.png" alt=""> 프로필 네임
+                    </div>
+                    <div class="list-name-likes">
+                        <button class="likes-num-btn " title="좋아요"></button>
+                        <span class="likes-num" title="좋아요 개수">10</span> 
+                    </div>
+                </h2>
+                <p class="list-desc">
+                    아주 유용한 정보입니다. 생활에 많이 많이 참고 하겠습니다. 감사합니다.
+                </p>
+                <div class="list-util jcfe">
+                    
+                    <span class="list-date">2023.07.18</span>
+                </div>
+            </section>
+            <section class="feed-item">
+                <h2 class="list-name">
+                    <div class="list-name-box">
+                        <img src="../../img/theme/apthefin/feed_name_img.png" alt=""> 프로필 네임
+                    </div>
+                    <div class="list-name-likes">
+                        <button class="likes-num-btn " title="좋아요"></button>
+                        <span class="likes-num" title="좋아요 개수">10</span> 
+                    </div>
+                </h2>
+                <p class="list-desc">
+                    아주 유용한 정보입니다. 생활에 많이 많이 참고 하겠습니다. 감사합니다.
+                </p>
+                <div class="list-util jcfe">
+                    
+                    <span class="list-date">2023.07.18</span>
+                </div>
+            </section>
+            
+            
+            
+            
+        </div>
+        <div class="input-wrap fixed">
+            <input class="ipt-typeA" type="text" id="comment" title="댓글 입력" required="required" placeholder="댓글을 달아보세요.">
         </div>
     </div>
-    <!-- [E] 피드 댓글 팝업 -->
 </div>
+<!-- [E] 피드 댓글 팝업 -->
+
 
 
 <script>
