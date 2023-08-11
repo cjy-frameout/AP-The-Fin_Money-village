@@ -10,16 +10,26 @@
     padding:  0 20px 20px;
 }
 .feed-item + .feed-item { margin-top: 20px;}
-
+.layer_cont .feed-item { padding: 0 0 10px; }
 .feed-item  .compare_chart { margin-top: 50px; }
+.feed-item .compare_chart.feed-bar-chart { margin-top: 30px; }
+.list-name-box {
+    color: #434655;
+    display: flex;
+    
+    font-size: 14px;
+    font-weight: 400;
+    align-items: center;
+}
 .list-name {
     color: #434655;
     display: flex;
     font-size: 14px;
     font-weight: 400;
     align-items: center;
+    justify-content: space-between;
 }
-.feed-item .list-name > img { border-radius: 50%; margin-right: 5px; }
+.feed-item .list-name-box > img { border-radius: 50%; margin-right: 5px; }
 .feed-item .list-title {
     color: #333;
     font-size: 14px;
@@ -42,6 +52,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.feed-item .list-util.jcfe {
+    justify-content: flex-end;
 }
 .feed-item .list-util-left { display: flex;}
 .feed-item .list-util-left > div {
@@ -69,6 +82,7 @@
     width: 16px;
 }
 .feed-item .list-name + .list-title { margin-top: 12px; }
+.feed-item .list-name + .list-desc { margin-top: 12px; }
 .feed-item .list-title + .list-desc { margin-top: 10px; }
 .feed-item .list-desc + .list-util { margin-top: 12px; }
 .feed-item .feed-btn-more {
@@ -100,5 +114,16 @@
     margin-top: 10px;
     padding-top: 10px;
 }
-.feed .bar-data {}
+.feed-item .bar-data { 
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+.feed-item .compare_chart .horizontal .wrapBar .gBarBox .gBar {text-align: right; height: 24px; padding-right: 10px; line-height: 24px;}
+.feed-item .compare_chart .horizontal .wrapBar .gBarBox .myAsset, .compare_chart .horizontal .wrapBar .gBarBox .otherAsset { height: 24px; }
+.feed-item .compare_chart .wrapBarGraph .wrapBar_detail .bar_rate.blue:before { background-color: #78C889; }
+.feed-item .compare_chart .wrapBarGraph .wrapBar_detail .bar_rate.gray:before { background-color: #DBDBDB;}
+.layer_fullsheet.feed {
+    height: 100vh;
+}
 /* ================================================== E : FEED CSS ===================================================  */
