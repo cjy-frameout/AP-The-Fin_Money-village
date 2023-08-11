@@ -84,4 +84,21 @@
 }
 .feed-item .asGroup + .asGroup { margin-top: 10px; padding-top: 0; }
 .feed-item .asGroup + .asGroup > .asList { margin-top: 10px; }
+.feed-item .asGroup + .asGroup > .listTit { display: none; }
+.feed-item .compare_chart .consumeAsList.fold, .compare_chart .consumeAsList.show {
+    padding: 0;
+}
+.feed-item .asGroup.compare_chart .asList {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+.feed-item .compare_chart .wrapBarGraph .wrapBar_detail {
+    border: 0;
+    border-top: 1px solid #E5E5E5;
+    border-style: dashed;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.feed .bar-data {}
 /* ================================================== E : FEED CSS ===================================================  */

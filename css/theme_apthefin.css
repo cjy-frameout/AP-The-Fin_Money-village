@@ -417,6 +417,7 @@ a.btnMenu {display:block;width:32px;height:32px;background-image:url('../img/the
 .pointLine3 {box-shadow:#FEECF2 0 -10px 0 inset ;}
 .pointLine4 {box-shadow:rgba(244, 130, 164, 0.3) 0 -10px 0 inset ;}
 .pointLine5 {box-shadow:rgba(94, 142, 217, 0.4) 0 -10px 0 inset ;}
+.fsz-13 { font-size: 13px !important; }
 
 /* [S] Tab */
 .tab_certi .tabs_header.type2 ul:after {background-color:#eee;}
