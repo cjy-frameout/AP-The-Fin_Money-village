@@ -577,7 +577,7 @@ a.btnMenu {display:block;width:32px;height:32px;background-image:url('../img/the
 .editList2.asGroup  div.hidden  .ctrl .btnHide:after,
 .editList3.asGroup  div.hidden  .ctrl .btnHide:after {content:'보이기';}
 .editList2.asGroup  div.hidden,
-.editList3.asGroup  div.hidden {background-color:#F1F2F5;}
+.editList3.asGroup  div.hidden {background-color:#EEEEEE;}
 
 .editList2.asGroup .ctrl a + a {margin-left:15px;}
 .asGroup .sortCtrl .on a{background:#3E5FAC;border-color:#3E5FAC}
@@ -2808,7 +2808,7 @@ to{opacity:1;margin-top:0px;}
 .consume_chart .wrapBarGraph{position:relative;height:150px;}
 .consume_chart .wrapBar{position:absolute;left:10px;top:12px;display:flex;width:calc(100% - 20px);justify-content:space-between;}
 .consume_chart .wrapBar .gBarBox{position:relative;flex:1;text-align:center;margin:0 auto;height:100%;min-height:110px;display:flex;align-items:flex-end;letter-spacing:-.7px;-webkit-tap-highlight-color: rgba(0,0,0,0);}
-.consume_chart .wrapBar .gBarBox .gBar{display:block;position:absolute;left:0;right:0;bottom:0px;width:63%;margin:0 auto;background-color:#eee;border:1px solid transparent;border-radius:4px 4px 4px 4px;z-index:2;transition:ease-in-out;}
+.consume_chart .wrapBar .gBarBox .gBar{display:block;position:absolute;left:0;right:0;bottom:0px;width:63%;margin:0 auto;background-color:#E7E9EE;border:1px solid transparent;border-radius:4px 4px 4px 4px;z-index:2;transition:ease-in-out;}
 .consume_chart .wrapBar .gBarBox .gBarPrice{display:none !important;position:absolute;left:0;bottom:0px;width:100%;text-align:center;font-size:12px;color:#666;z-index:1;transition:ease-in-out;}
 .consume_chart .wrapBar .gBarBox .gBarPrice span, .wrapBar .gBarBox .gBarPrice em{display: inline-block;font-size:13px;font-weight: 400;line-height: 1;margin-top: 2px;}
 .consume_chart .wrapBar .gBarBox{margin-top:10px;opacity:0;animation-iteration-count:1;animation-duration:.5s;animation-fill-mode:forwards;animation-timing-function:ease-in;animation-name:graph_bar_consume_1;}
