@@ -177,55 +177,6 @@
 
 
 
-<script>
 
-// [S] 월간내역 메모 textarea 자동 높이조절, 글자수 체크, textarea val값 초기화
-function testAreaHeight1() {
-	var textEle = $('.layer_memo_wrap .js_textarea1');
-	textEle[0].style.height = 'auto';
-	var textEleHeight = textEle.prop('scrollHeight');
-	textEle.css('height', textEleHeight);
-};
-var textEle = $('.layer_memo_wrap .js_textarea1');
-var btnMemoValReset = $('.layer_memo_wrap .btn_val_reset');
-btnMemoValReset.hide();
-textEle.on('keyup', function() {
-	//자동높이
-	testAreaHeight1();
-	$('#js_textarea1_cnt').html("<span class='pointColor'>"+$(this).val().length+"</span> / 60");
-	//val값 초기화
-	if(textEle.val().length === 0){
-		btnMemoValReset.hide();
-	}else if($(this).val().length > 60) {
-		$(this).val($(this).val().substring(0, 60));
-		$('#js_textarea1_cnt').html("<span class='pointColor'>60</span> / 60");
-	}else{
-		btnMemoValReset.show();
-	}
-});
-function memoValReset() {
-	textEle.val('').css('height','inherit').focus();
-	btnMemoValReset.hide();
-	$('#js_textarea1_cnt').html("<span class='pointColor'>"+textEle.val().length+"</span> / 60");
-}
-// [E] 월간내역 메모 textarea 자동 높이조절, 글자수 체크, textarea val값 초기화
-
-$(document).ready(function(){
-
-	// [S] 캘린더 탭
-	$(".tabInter").tabs({
-		wrapClass:".tabInter",
-		clickClass:".js_tabclickDp1",
-		showClass:".tab_cntDp1",
-		animate:false,
-		contentWidthFull:false,//effect when animate:true
-		animateBorder:["false",".tabs_header"],//show border in class .
-		fade:false,
-		speed:500
-	});
-	// [E] 캘린더 탭
-
-});
-</script>
 </body>
 </html>

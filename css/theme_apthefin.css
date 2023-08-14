@@ -141,6 +141,11 @@ a.btnManage {font-size:13px;}
 .btnGroup + .btnGroup {margin-top:10px;}
 .btn_more_ask {margin-left:5px;}
 .btn_more_ask .ico_ask {width:22px;height:22px;background-size:22px 22px;background-repeat:no-repeat;}
+.btn-imgUpload {
+	background: url(../img/theme/apthefin/icon_image.png) no-repeat 0 0;
+	height: 32px;
+	width: 32px;
+}
 
 /* 서브페이지 btn */
 .btn_wrap.type_agree {padding:10px 0 30px 0;}
@@ -223,7 +228,11 @@ a.btnManage {font-size:13px;}
 .tx_bold span em,
 .msg_txt.tx_bold,
 .msg_txt.tx_bold span,
-.msg_txt.tx_bold span em {font-weight:700;}
+.msg_txt.tx_bold span em {font-weight:700 !important;}
+.tx-light { font-weight: 300;}
+.tx-regular { font-weight: 400;}
+.tx-medium { font-weight: 500;}
+
 .symbol-dash {display:inline-block;margin:-4px 5px 0;vertical-align:middle;}
 
 .tooltip2 {display:none;position:absolute;top:29px;right:-33px;width:300px;padding:15px;font-size:13px;color:#333;border:1px solid #a7c9ee;background-color:#f2f8ff;border-radius:4px;z-index:3;}
@@ -619,6 +628,7 @@ a.btnMenu {display:block;width:32px;height:32px;background-image:url('../img/the
 .boxArea.lineType .compare_chart .wrapBarGraph .wrapBar_detail .bar_rate:before {width:10px;height:10px;}
 .asGroup.assets_chart .btnListMore a {margin:0 -20px -20px;}
 .asGroup.assets_chart .labelInfo {padding: 0 20px;}
+.feed-item .asGroup.assets_chart .labelInfo {padding: 0;}
 .asGroup.assets_chart .labelInfo .rate:nth-child(even) {padding-left:15px;}
 .asGroup.assets_chart .wrap_chart.type_pie  {margin-top:10px;}
 
@@ -930,7 +940,7 @@ a.btnMenu {display:block;width:32px;height:32px;background-image:url('../img/the
 .state_contents ul li p {color:#aaa;}
 .state_contents ul li p.state_price {color:#666;font-weight:400;font-size:14px;}
 .state_contents ul li:last-child {margin-bottom:0;}
-.state_contents ul .tx_bold {font-size:15px;font-weight:400;color:#333;letter-spacing:-0.04em;}
+.state_contents ul .tx_bold {font-size:15px;font-weight:500;color:#333;letter-spacing:-0.04em;}
 .state_contents ul .tx_bold em.num {font-size:18px;font-weight: 700;}
 .state_contents ul .tx_bold .btn_more_ask {margin-left:3px;}
 .state_contents ul .link_dashed {padding-right:0;text-align:end;}
