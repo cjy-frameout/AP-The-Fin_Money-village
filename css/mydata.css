@@ -201,5 +201,14 @@
     width: 100%;
 }
 .btn-wrap.two-items > a + a { margin-left: 10px; }
-
+.share {
+    background: url(../img/theme/apthefin/icon_share.png) no-repeat 0 0;
+    display: block;
+    height: 23px;
+    width: 23px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
 /* ================================================== E : FEED CSS ===================================================  */

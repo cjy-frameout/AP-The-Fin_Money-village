@@ -1,0 +1,860 @@
+﻿<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<title></title>
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="Pragma" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="title" content="">-->
+<meta name="description" content="">
+<!--<meta name="keywords" content="">-->
+<!-- The Open Graph protocol -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+<!-- //The Open Graph protocol -->
+<link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css">
+<link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+    <link rel="stylesheet" type="text/css" href="../../css/mydata.css">
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../js/slide_slick.js"></script>
+<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+<script type="text/javascript" src="../../js/cmd.js"></script>
+
+<!-- [S] chart -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<!-- [E] chart -->
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+
+	<!-- header -->
+	<div class="header">
+		<div class="header_inn">
+			<div class="left">
+				<a href="#none" class="btnBack"><span class="blind">Back</span></a>
+			</div>
+			<div class="center">
+				<h2 class="tit_h2">소비 비교</h2>
+			</div>
+			<div class="right">
+				<a href="#none" class="btnMenu"><span class="blind">menu</span></a>
+                <!-- <a href="#none" class="btnClose"><span class="blind">Close</span></a> -->
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+			<!-- [S] 동의안내 -->
+			<div class="topInfoPop">
+				<a href="#" class="tx">가맹점 정보에 동의하고<br> 또래그룹과 소비를 비교해보세요.</a>
+			</div>
+            <div class="topInfoPop">
+				<a href="#" class="tx">가맹점 정보 제공에 추가 동의하고<br> 또래그룹과 소비를 비교해보세요.</a>
+			</div>
+			<!-- [E] 동의안내 -->
+
+			<!-- [S] 비교 타이틀 -->
+			<div class="tBalance tConsume up">
+				<h3 class="tBaltit">내 소비는<a href="#layer_HM1_2_3_1BS" class="btn_open_bottom_sheet btn_more_ask" role="button"><span class="ico_ask type_white2"><em class="blind">더보기</em></span></a></h3>
+				<div class="tBalAmount">상위 <span class="pointColor"><em class="amount">40</em>%</span></div>
+			</div>
+            <div class="tBalance tConsume down">
+				<h3 class="tBaltit">내 소비는<a href="#layer_HM1_2_3_1BS" class="btn_open_bottom_sheet btn_more_ask" role="button"><span class="ico_ask type_white2"><em class="blind">더보기</em></span></a></h3>
+				<div class="tBalAmount">하위 <span class="pointColor2"><em class="amount">40</em>%</span></div>
+			</div>
+			<!-- [E] 비교 타이틀 -->
+
+            <div class="compArea">
+                <div class="asGroup">
+                    <div class="listTit"> 
+                        <a href="#HM1_2_2_1FP" class="link link_detail btn_open_full_sheet btnAdd" role="button"><span class="bank_link">비교그룹 찾기</span></a>
+                    </div>
+                </div>
+                <h3 class="sub_tit">
+                    나는<br> <span class="pointLine4">#초등생 이하</span> 자녀를 키우며<br>
+                    <span class="pointLine4">#월300이상</span>을 버는 <span class="pointLine4">#40대</span>에 비해
+                </h3>
+                <div class="compBox">
+                    <div class="boxTit">소비가 <span class="pointLine2">50만원</span> 많아요</div>
+                    <div class="comArea">
+                        <div class="boxArea">
+                            <h3 class="area_tit">내 소비</h3>
+                            <p class="comAmount"><em class="num">200</em>만원</p>
+                        </div>
+                        <div class="boxArea">
+                            <h3 class="area_tit">비교그룹</h3>
+                            <p class="comAmount"><em class="num">100</em>만원</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="compBox">
+                <div class="boxTit">
+                    <h3>금융 자산</h3>
+                </div>
+                <div class="comArea">
+                    <div class="boxArea bg_blue">
+                        <h3 class="area_tit">내 자산</h3>
+                        <p class="comAmount"><em class="num">3,000</em>만원</p>
+                    </div>
+                    <div class="boxArea bg_lgray">
+                        <h3 class="area_tit">또래그룹 자산</h3>
+                        <p class="comAmount"><em class="num">3,000</em>만원</p>
+                    </div>
+                </div>
+            </div>
+            <div class="compBox">
+                <div class="boxTit">
+                    <h3>대출 자산</h3>
+                </div>
+                <div class="comArea">
+                    <div class="boxArea bg_blue">
+                        <h3 class="area_tit">내 자산</h3>
+                        <p class="comAmount"><em class="num">500</em>만원</p>
+                    </div>
+                    <div class="boxArea bg_lgray">
+                        <h3 class="area_tit">또래그룹 자산</h3>
+                        <p class="comAmount"><em class="num">100</em>만원</p>
+                    </div>
+                </div>
+            </div>
+            <div class="boxArea">
+                <a href="#HM1_2_2_1FP" class="link link_detail btn_open_full_sheet" role="button">
+                    <p>비교할 그룹 찾기</p>
+                </a>
+			</div>
+           <div class="hr_div"></div> -->
+			
+			<!-- [S] 막대그래프 -->
+            <div class="asGroup compare_chart">
+                <h3 class="groupTit">소비 스타일 비교</h3>
+                <div class="asList consumeAsList fold">
+                    <h4 class="consume_tit">식비</h4>
+                    <div class="wrapBarGraph horizontal">
+                        <div class="wrapBar grap0">
+                            <div class="gBarBox bar1">
+                                <div class="myAsset">
+                                    <span class="gBarPrice">
+                                        <span class="inBox"><em class="num"></em>%</span>
+                                    </span>
+                                    <span class="gBar"></span>
+                                </div>
+
+                                <div class="otherAsset">
+                                    <span class="gBarPrice">
+                                        <span class="inBox"><em class="num"></em>%</span>
+                                    </span>
+                                    <span class="gBar"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <ul class="comList">
+                            <li class="msList">
+                                <div class="left">내 소비</div>
+                                <div class="right"><em class="num">150,000</em>원</div>
+                            </li>
+                            <li class="osList">
+                                <div class="left">40대평균 소비</div>
+                                <div class="right"><em class="num">50,000</em>원</div>
+                            </li>
+                        </ul> -->
+                    </div>
+                    <ul class="dotList">
+                        <li>
+                            <span class="infoTit"><span class="ico_cate food"></span>식비</span>
+                            <span class="infoNum"><em class="num">60,000</em>원</span>
+                        </li>
+                        <li>
+                            <span class="infoTit"><span class="ico_cate cafe"></span>카페/디저트</span>
+                            <span class="infoNum"><em class="num">40,000</em>원</span>
+                        </li>
+                    </ul>
+                    <a href="#none" class="btn_more" aria-expanded="true"><em class="blind">접기</em></a>
+                </div>
+
+                <div class="asList consumeAsList fold">
+                    <h4 class="consume_tit">교통, 주거/통신</h4>
+                    <div class="wrapBarGraph horizontal">
+                        <div class="wrapBar grap0">
+                            <div class="gBarBox bar1">
+                                <div class="myAsset">
+                                    <span class="gBarPrice">
+                                        <span class="inBox"><em class="num"></em>%</span>
+                                    </span>
+                                    <span class="gBar"></span>
+                                </div>
+
+                                <div class="otherAsset">
+                                    <span class="gBarPrice">
+                                        <span class="inBox"><em class="num"></em>%</span>
+                                    </span>
+                                    <span class="gBar"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="comList">
+                            <li class="msList">
+                                <div class="left">내 소비</div>
+                                <div class="right"><em class="num">150,000</em>원</div>
+                            </li>
+                            <li class="osList">
+                                <div class="left">40대평균 소비</div>
+                                <div class="right"><em class="num">50,000</em>원</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="dotList">
+                        <li>
+                            <span class="infoTit"><span class="ico_cate traffic"></span>교통</span>
+                            <span class="infoNum"><em class="num">60,000</em>원</span>
+                        </li>
+                        <li>
+                            <span class="infoTit"><span class="ico_cate dwelling"></span>주거/통신</span>
+                            <span class="infoNum"><em class="num">40,000</em>원</span>
+                        </li>
+                    </ul>
+                    <a href="#none" class="btn_more" aria-expanded="true"><em class="blind">접기</em></a>
+                </div>
+
+                <div class="asList consumeAsList fold">
+                    <h4 class="consume_tit">문화/여가</h4>
+                    <div class="wrapBarGraph horizontal">
+                        <div class="wrapBar grap0">
+                            <div class="gBarBox bar1">
+                                <div class="myAsset">
+                                    <span class="gBarPrice">
+                                        <span class="inBox"><em class="num"></em>%</span>
+                                    </span>
+                                    <span class="gBar"></span>
+                                </div>
+
+                                <div class="otherAsset">
+                                    <span class="gBarPrice">
+                                        <span class="inBox"><em class="num"></em>%</span>
+                                    </span>
+                                    <span class="gBar"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="comList">
+                            <li class="msList">
+                                <div class="left">내 소비</div>
+                                <div class="right"><em class="num">150,000</em>원</div>
+                            </li>
+                            <li class="osList">
+                                <div class="left">40대평균 소비</div>
+                                <div class="right"><em class="num">50,000</em>원</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="dotList">
+                        <li>
+                            <span class="infoTit"><span class="ico_cate culture"></span>문화/여가</span>
+                            <span class="infoNum"><em class="num">60,000</em>원</span>
+                        </li>
+                        <li>
+                            <span class="infoTit"><span class="ico_cate travel"></span>여행/숙박</span>
+                            <span class="infoNum"><em class="num">40,000</em>원</span>
+                        </li>
+                        <li>
+                            <span class="infoTit"><span class="ico_cate pleasure"></span>술/유흥</span>
+                            <span class="infoNum"><em class="num">40,000</em>원</span>
+                        </li>
+                    </ul>
+                    <a href="#none" class="btn_more" aria-expanded="true"><em class="blind">접기</em></a>
+                </div>
+
+                <div class="asList consumeAsList fold">
+                    <h4 class="consume_tit">쇼핑</h4>
+                    <div class="wrapBarGraph horizontal">
+                        <div class="wrapBar grap0">
+                            <div class="gBarBox bar1">
+                                <div class="myAsset">
+                                    <span class="gBarPrice">
+                                        <span class="inBox"><em class="num"></em>%</span>
+                                    </span>
+                                    <span class="gBar"></span>
+                                </div>
+
+                                <div class="otherAsset">
+                                    <span class="gBarPrice">
+                                        <span class="inBox"><em class="num"></em>%</span>
+                                    </span>
+                                    <span class="gBar"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="comList">
+                            <li class="msList">
+                                <div class="left">내 소비</div>
+                                <div class="right"><em class="num">150,000</em>원</div>
+                            </li>
+                            <li class="osList">
+                                <div class="left">40대평균 소비</div>
+                                <div class="right"><em class="num">50,000</em>원</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="dotList">
+                        <li>
+                            <span class="infoTit"><span class="ico_cate shopping"></span>온라인쇼핑</span>
+                            <span class="infoNum"><em class="num">60,000</em>원</span>
+                        </li>
+                        <li>
+                            <span class="infoTit"><span class="ico_cate fashion"></span>패션/쇼핑</span>
+                            <span class="infoNum"><em class="num">40,000</em>원</span>
+                        </li>
+                        <li>
+                            <span class="infoTit"><span class="ico_cate beauty"></span>뷰티</span>
+                            <span class="infoNum"><em class="num">40,000</em>원</span>
+                        </li>
+                    </ul>
+                    <a href="#none" class="btn_more" aria-expanded="true"><em class="blind">접기</em></a>
+                </div>
+
+                <div class="asList consumeAsList fold">
+                    <h4 class="consume_tit">교육</h4>
+                    <div class="wrapBarGraph horizontal">
+                        <div class="wrapBar grap0">
+                            <div class="gBarBox bar1">
+                                <div class="myAsset">
+                                    <span class="gBarPrice">
+                                        <span class="inBox"><em class="num"></em>%</span>
+                                    </span>
+                                    <span class="gBar"></span>
+                                </div>
+
+                                <div class="otherAsset">
+                                    <span class="gBarPrice">
+                                        <span class="inBox"><em class="num"></em>%</span>
+                                    </span>
+                                    <span class="gBar"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="comList">
+                            <li class="msList">
+                                <div class="left">내 소비</div>
+                                <div class="right"><em class="num">150,000</em>원</div>
+                            </li>
+                            <li class="osList">
+                                <div class="left">40대평균 소비</div>
+                                <div class="right"><em class="num">50,000</em>원</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="dotList">
+                        <li>
+                            <span class="infoTit"><span class="ico_cate learning"></span>교육/학습</span>
+                            <span class="infoNum"><em class="num">60,000</em>원</span>
+                        </li>
+                        <li>
+                            <span class="infoTit"><span class="ico_cate child"></span>자녀/육아</span>
+                            <span class="infoNum"><em class="num">40,000</em>원</span>
+                        </li>
+                    </ul>
+                    <a href="#none" class="btn_more" aria-expanded="true"><em class="blind">접기</em></a>
+                </div>
+
+                <div class="asList consumeAsList fold">
+                    <h4 class="consume_tit">의료/건강</h4>
+                    <div class="wrapBarGraph horizontal">
+                        <div class="wrapBar grap0">
+                            <div class="gBarBox bar1">
+                                <div class="myAsset">
+                                    <span class="gBarPrice">
+                                        <span class="inBox"><em class="num"></em>%</span>
+                                    </span>
+                                    <span class="gBar"></span>
+                                </div>
+
+                                <div class="otherAsset">
+                                    <span class="gBarPrice">
+                                        <span class="inBox"><em class="num"></em>%</span>
+                                    </span>
+                                    <span class="gBar"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="comList">
+                            <li class="msList">
+                                <div class="left">내 소비</div>
+                                <div class="right"><em class="num">150,000</em>원</div>
+                            </li>
+                            <li class="osList">
+                                <div class="left">40대평균 소비</div>
+                                <div class="right"><em class="num">50,000</em>원</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="dotList">
+                        <li>
+                            <span class="infoTit"><span class="ico_cate health"></span>의료/건강</span>
+                            <span class="infoNum"><em class="num">60,000</em>원</span>
+                        </li>
+                    </ul>
+                    <a href="#none" class="btn_more" aria-expanded="true"><em class="blind">접기</em></a>
+                </div>
+
+                <div class="asList consumeAsList fold">
+                    <h4 class="consume_tit">기타</h4>
+                    <div class="wrapBarGraph horizontal">
+                        <div class="wrapBar grap0">
+                            <div class="gBarBox bar1">
+                                <div class="myAsset">
+                                    <span class="gBarPrice">
+                                        <span class="inBox"><em class="num"></em>%</span>
+                                    </span>
+                                    <span class="gBar"></span>
+                                </div>
+
+                                <div class="otherAsset">
+                                    <span class="gBarPrice">
+                                        <span class="inBox"><em class="num"></em>%</span>
+                                    </span>
+                                    <span class="gBar"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="comList">
+                            <li class="msList">
+                                <div class="left">내 소비</div>
+                                <div class="right"><em class="num">150,000</em>원</div>
+                            </li>
+                            <li class="osList">
+                                <div class="left">40대평균 소비</div>
+                                <div class="right"><em class="num">50,000</em>원</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="dotList">
+                        <li>
+                            <span class="infoTit"><span class="ico_cate etc"></span>기타</span>
+                            <span class="infoNum"><em class="num">60,000</em>원</span>
+                        </li>
+                    </ul>
+                    <a href="#none" class="btn_more" aria-expanded="true"><em class="blind">접기</em></a>
+                </div>
+            </div>
+            <div class="asGroup compare_chart no_agree"><!-- 가맹점 미동의 경우 no_agree 추가 -->
+                <h3 class="groupTit">소비 스타일 비교</h3>
+                <div class="asList consumeAsList fold">
+                    <h4 class="consume_tit">식비</h4>
+                    <div class="wrapBarGraph horizontal">
+                        <div class="wrapBar grap0">
+                            <div class="gBarBox bar1">
+                                <div class="myAsset">
+                                    <span class="gBarPrice">
+                                        <span class="inBox"><em class="num"></em>%</span>
+                                    </span>
+                                    <span class="gBar"></span>
+                                </div>
+
+                                <div class="otherAsset">
+                                    <span class="gBarPrice">
+                                        <span class="inBox"><em class="num"></em>%</span>
+                                    </span>
+                                    <span class="gBar"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="comList">
+                            <li class="msList">
+                                <div class="left">내 소비</div>
+                                <div class="right"><em class="num">150,000</em>원</div>
+                            </li>
+                            <li class="osList">
+                                <div class="left">40대평균 소비</div>
+                                <div class="right"><em class="num">50,000</em>원</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="dotList">
+                        <li>
+                            <span class="infoTit"><span class="ico_cate food"></span>식비</span>
+                            <span class="infoNum"><em class="num">60,000</em>원</span>
+                        </li>
+                        <li>
+                            <span class="infoTit"><span class="ico_cate cafe"></span>카페/디저트</span>
+                            <span class="infoNum"><em class="num">40,000</em>원</span>
+                        </li>
+                    </ul>
+                    <a href="#none" class="btn_more" aria-expanded="true"><em class="blind">접기</em></a>
+                </div>
+
+                <div class="agrBox">
+                    <div class="agr_txt">
+                        <h3 class="agree_tit">
+                            가맹점 정보 제공에 동의하면<br>
+                            리포트를 볼 수 있어요
+                        </h3>
+                        <a href="#none" class="link_detail">동의하러 가기</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="asGroup compare_chart">
+                <h3 class="groupTit">소비 스타일 비교</h3>
+                <div class="asList consumeAsList fold">
+                    <!-- [S] 내용 없음 -->
+					<div class="msgResult">
+						<p>내 소비가 없어요.</p>
+					</div>
+					<!-- [E] 내용 없음 -->
+                </div>
+            </div>
+			<!-- [E] 막대그래프 -->
+
+            <!-- <div class="asGroup">
+                <div class="listTit">
+                    <h3>내 자산 늘리고 싶다면?</h3>
+                </div>
+            
+                <div class="im banner">
+                    <img src="../../img/theme/apthefin/im_banner_03.png" alt="banner">
+                </div>
+            </div> -->
+		</div>
+	</div>
+	<!-- //container -->
+</div>
+<!-- //wrap -->
+<!-- bottomsheet layer_HM1_2_3_1BS(소비 비교 툴팁) -->
+<div id="layer_HM1_2_3_1BS" class="layer_bottomsheet">
+    <div class="layer_inner">
+        <div class="layer_tit type2"> 
+            <strong class="tit"><span>소비 비교</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont" style="max-height: 879px;">
+            <div class="msg_box">
+                <ul class="notice_list">
+                    <li class="list">
+                        <span class="tx">비교그룹의 소비 금액은 신한은행에서 제공합니다.</span>
+                    </li>
+                    <li class="list">
+                        <span class="tx">마이데이터 서비스 이용을 위해 등록한 자산 중 '카드' 자산에 대하여 비교 할 수 있으며, 이전 달 사용금액을 기준으로 조회할 수 있습니다.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // layer_HM1_2_3_1BS(소비 비교 툴팁) -->
+
+<!-- HM1_2_2_1FP 비교그룹 찾기 -->
+<div id="HM1_2_2_1FP" class="layer_fullsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+            <strong class="tit">비교그룹 찾기</strong>
+            <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+        </div>
+        
+        <div class="layer_cont myGoalHouse">
+            <div class="cont_tit_wrap">
+                <h2 class="cont_tit">
+                비교하고 싶은 그룹을 설정해 보세요
+                </h2>
+                <p class="tx">
+                    나와 비교그룹의 자산과 소비를<br>
+                    정확하게 비교할 수 있어요
+                </p>
+            </div>
+
+            <div class="confirm_info">
+                <div class="filterItem">
+                    <p class="filterTit">성별 (선택)</p>
+                    <ul class="radioTab">
+                        <li class="radioLg">
+                            <input type="radio" id="radio1" name="radioTab1" class="blind">
+                            <label for="radio1">남</label>
+                        </li>
+                        <li class="radioLg">
+                            <input type="radio" id="radio2" name="radioTab1" class="blind" checked="">
+                            <label for="radio2">여</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filterItem">
+                    <p class="filterTit confirm_dot">연령대 (필수)</p>
+                    <div class="sel_form type_border"> <!-- 선택시 on 클래스 추가 -->
+                        <a href="#HM1_2_2_1FP_1BS" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>20대 (20 ~ 29세)</span></a>
+                    </div>
+                    <!-- <p class="inp_err_msg">에러메시지 필요시에 사용</p> -->
+                </div>
+                <div class="filterItem">
+                    <p class="filterTit">결혼 (선택)</p>
+                    <ul class="radioTab">
+                        <li class="radioLg">
+                            <input type="radio" id="radio3" name="radioTab2" class="blind">
+                            <label for="radio3">미혼</label>
+                        </li>
+                        <li class="radioLg">
+                            <input type="radio" id="radio4" name="radioTab2" class="blind" checked="">
+                            <label for="radio4">기혼</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filterItem">
+                    <p class="filterTit">자녀 (선택)</p>
+                    <div class="sel_form type_border"> <!-- 선택시 on 클래스 추가 -->
+                        <a href="#HM1_2_2_1FP_2BS" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>대략적인 자녀 구성을 선택해주세요</span></a>
+                    </div>
+                </div>
+
+                <div class="filterItem">
+                    <p class="filterTit">월 소득 (선택)</p>
+                    <div class="sel_form type_border"> <!-- 선택시 on 클래스 추가 -->
+                        <a href="#HM1_2_2_1FP_3BS" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>대략적인 소득을 선택해주세요</span></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- fix btn_wrap -->
+        <div class="fix_bottom not_dock">
+            <div class="btn_wrap">
+                <div class="btnGroup">
+                    <p><a href="#none" class="btnBl1" role="button">등록</a></p>
+                </div>
+            </div>
+        </div>
+        <!--// fix btn_wrap -->
+    </div>
+</div>
+<!-- [E] HM1_2_2_1FP 비교그룹 찾기 -->
+
+<!-- [S] 연령대 팝업 -->
+<div id="HM1_2_2_1FP_1BS" class="layer_bottomsheet" role="dialog" tabindex="-1" aria-hidden="true">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>연령대</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<ul class="layer_sel_opt type_date">
+					<li><button type="button" class="btn_sel_opt on" title="선택됨"><span>20대 (20 ~ 29세)</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+					<li><button type="button" class="btn_sel_opt"><span>30대 (30 ~ 39세)</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span>40대 ( 40 ~ 49세)</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span>50대 ( 50 ~ 59세)</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span>60대 ( 60세 이상)</span></button></li>
+                </ul>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+		<div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>저장</span></button>
+		</div>
+	</div>
+</div>
+<!-- [E] 연령대 팝업 -->
+
+<!-- [S] 월 소득 팝업 -->
+<div id="HM1_2_2_1FP_3BS" class="layer_bottomsheet" role="dialog" tabindex="-1" aria-hidden="true">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>월 소득</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<ul class="layer_sel_opt type_date">
+					<li><button type="button" class="btn_sel_opt on" title="선택됨"><span>100만원 이상</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+					<li><button type="button" class="btn_sel_opt"><span>200만원 이상</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span>300만원 이상</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span>400만원 이상</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span>500만원 이상</span></button></li>
+                </ul>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+		<div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>저장</span></button>
+		</div>
+	</div>
+</div>
+<!-- [E] 월 소득 팝업 -->
+
+<!-- [S] 자녀 팝업 -->
+<div id="HM1_2_2_1FP_2BS" class="layer_bottomsheet" role="dialog" tabindex="-1" aria-hidden="true">
+	<div class="layer_inner">
+		<div class="layer_tit">
+			<strong class="tit"><span>자녀 선택</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont">
+			<!-- 페이지 스타일 -->
+			<div class="type_page">
+				<ul class="layer_sel_opt type_date">
+					<li><button type="button" class="btn_sel_opt on" title="선택됨"><span> 없음</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+					<li><button type="button" class="btn_sel_opt"><span>초등생 이하 자녀</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span>중고등 자녀</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span>중고등/대학생 자녀</span></button></li>
+					<li><button type="button" class="btn_sel_opt"><span>학업완료 성인자녀</span></button></li>
+                </ul>
+			</div>
+			<!-- //페이지 스타일 -->
+		</div>
+		<div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>저장</span></button>
+		</div>
+	</div>
+</div>
+<!-- [E] 자녀 팝업 -->
+
+<script>
+$(document).ready(function(){
+	// [S] 막대 그래프
+	grap0();
+	function grap0(){
+		var $this = $(this);
+		var $gMaxWidth = 100;//그래프 가로 최대값
+		var $myAsset = [35];//내 자산 설정
+		var $otherAsset = [100];//비교 자산 설정
+		var $topConsume = Math.max(...$myAsset);
+
+		$.each($myAsset, function(index, value){
+			$index = index + 1;
+			//$('.grap0 .gBarBox.bar'+$index+' .myAsset .gBarPrice .num').text(value);
+
+			window['$barW'+$index] = parseInt($myAsset[index]);//내자산 / 내자산최고값 * 그래프 최대 높이 $myAsset[index] / $topConsume * $gMaxHeight)
+			
+			//막대그래프 상단 텍스트 모션
+			//$('.grap0 .bar'+$index+' .myAsset .gBarPrice').delay($index*150).animate({'height':window['$barW'+$index] + 25}, 1000, 'swing');//
+			//막대그래프 모션
+			$('.grap0 .bar'+$index+' .myAsset .gBar').delay($index*150).animate({'width':window['$barW'+$index] + '%'}, 1000, 'swing');//
+		});
+
+		$.each($otherAsset, function(index, value){
+			$index = index + 1;
+			//$('.grap0 .gBarBox.bar'+$index+' .otherAsset .num').text(value);
+
+			window['$barW'+$index] = parseInt($otherAsset[index]);//비교자산 / 비교자산최고값 * 그래프 최대 높이$otherAsset[index] / $topConsume * $gMaxHeight
+			
+			//막대그래프 상단 텍스트 모션
+			//$('.grap0 .bar'+$index+' .otherAsset .gBarPrice').delay($index*150).animate({'height':window['$barW'+$index] + 25}, 1000, 'swing');//
+			//막대그래프 모션
+			$('.grap0 .bar'+$index+' .otherAsset .gBar').delay($index*150).animate({'width':window['$barW'+$index] + '%'}, 1000, 'swing');//
+		});
+	}
+	// [E] 막대 그래프 */	
+
+    // [S] 항목 더보기, 접기
+    var animateTime = 500,
+        btnFold = $('.btn_more');
+
+    btnFold.click(function(){
+        var $self = $(this);
+        if($self.parent().hasClass('fold')){
+            $self.siblings('.dotList').stop().slideDown(animateTime);
+            $self.children('em').text('더보기');
+            $self.parent().addClass('show');
+            $self.parent().removeClass('fold');
+            $self.attr('aria-expanded','true');
+        }else{
+            $self.siblings('.dotList').stop().slideUp(animateTime);
+            $self.children('em').text('접기');
+            $self.parent().addClass('fold');
+            $self.parent().removeClass('show');
+            $self.attr('aria-expanded','false');
+        }
+    });
+    // [E] 항목 더보기, 접기 */
+
+    /* 하단고정버튼 체크 */
+    if($('.fix_bottom .btn_wrap').length){
+        $('.container').removeClass('has_fix_btn');
+        $('.content').removeAttr('style');
+    }
+});
+// [S] 풀페이지 팝업
+$(document).on("click", ".btn_open_full_sheet", function(e){
+    e.preventDefault();
+	var $fullPop = $(this).attr('href');
+    layer_fullsheet($fullPop);
+
+    $('html').addClass('scroll_lock');
+	$focusReturn = $(this);
+});
+function layer_fullsheet(el){
+	var $el = $(el);
+	$el.append("<div class=\"dim\"></div>");
+	isDim ? $('.layer_fullsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
+	setTimeout(function() {
+		$el.find('.layer_inner').addClass('on');
+	}, 50);
+
+	var isDim = $el.siblings().hasClass('dim');
+
+	$el.find('.js_pop_close').click(function(){
+		$el.find('.layer_inner').removeClass('on');
+		setTimeout(function() {
+			isDim ? $('.layer_fullsheet').hide() : $el.hide();
+			$('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+			$el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
+		}, 200);
+		$focusReturn.focus();
+
+		return false;
+	});
+}
+// [E] 풀페이지 팝업
+
+// [S] 바텀시트
+$(document).on("click", ".btn_open_bottom_sheet", function(e){
+	e.preventDefault();
+	var $href = $(this).attr('href');
+	layer_bottomsheet($href);
+	$('html').addClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+	$focusReturn = $(this);
+	if($href == '#layer_SHE1211'){
+		$(".filterFolding").trigger("click");
+	}
+});
+function layer_bottomsheet(el){
+	var $el = $(el);
+	$el.append("<div class=\"dim\"></div>");
+	isDim ? $('.layer_bottomsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
+	setTimeout(function() {
+		$el.find('.layer_inner').addClass('on');
+	}, 50);
+
+	var isDim = $el.siblings().hasClass('dim');
+
+	$el.find('.js_pop_close').click(function(){
+		$el.find('.layer_inner').removeClass('on');
+		setTimeout(function() {
+			isDim ? $('.layer_bottomsheet').hide() : $el.hide();
+			$('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+			$el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
+		}, 200);
+		$focusReturn.focus();
+		return false;
+	});
+}
+// [E] 바텀시트
+</script>
+</body>
+</html>
