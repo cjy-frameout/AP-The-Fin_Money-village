@@ -458,7 +458,7 @@ function bottomFixActionBar(){
                 fixBox.classList.add('show');
             }else if(nowScrollTop > lastScrollTop){// && nowScrollTop > fixBoxHeight
                 //Scroll down
-                fixBox.classList.remove('show');
+                //fixBox.classList.remove('show'); // 하단 퀵메뉴 바 보여지는 부분 스크립트 주석처리.
             }else{
                 if(nowScrollTop + window.innerHeight < document.body.offsetHeight + 10){
                     //Scroll up

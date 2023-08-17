@@ -56,11 +56,11 @@
                             <h3 class="list-typeA-title">간단 본인인증</h3>
                             <p class="list-typeA-desc">모바일로 쉽고 빠르게 본인 확인</p>
                         </li>
-                        <li class="list-typeA-li">
+                        <li class="list-typeA-li num2">
                             <h3 class="list-typeA-title">누구나 비교 가능</h3>
                             <p class="list-typeA-desc">직장인·사업자·프리랜서·주부도 </p>
                         </li>
-                        <li class="list-typeA-li">
+                        <li class="list-typeA-li num3">
                             <h3 class="list-typeA-title">적합한 상품 추천</h3>
                             <p class="list-typeA-desc">내 조건에 맞는 대출상품이 한 번에</p>
                         </li>
@@ -115,7 +115,105 @@
                     </ul>
                 </section>
                 <div class="btn-wrap fixed hasFixBottom">
-                    <a href="#none" class="btnBl1" role="button">신용대출 비교하기</a>
+                    <a href="#layerAssetEdit" class="btnBl1 btn_open_bottom_sheet" role="button">신용대출 비교하기</a>
+                </div>
+                <div id="layerAssetEdit" class="layer_bottomsheet" role="dialog" tabindex="-1" aria-hidden="true">
+                    <div class="layer_inner">
+                        <div class="layer_tit type2">
+                            <div class="agChkItem all">
+                                <label for="chkAll">
+                                    <input type="checkbox" id="chkAll"><i></i><span id="">약관 전체 동의</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="layer_cont" style="max-height: 736px;">
+                            <div class="agChkLst typeB">
+                                <div class="agChkItem">
+                                    <label for="subChk1">
+                                        <input type="checkbox" id="subChk1" ><i></i><span>(필수)서비스 이용약관</span>
+                                    </label>
+                                    <a href="#none" class="btnFolding" data-target="#folding" aria-expanded="false"><span class="blind">펼침</span></a><!-- 디폴트 닫힘 class="btnFolding show" 클래스 'show' 제거 -->
+                                </div>
+                                <ul class="agChkSubList" id="folding" style="display:none;"><!-- 디폴트 닫힘 style="display:none;" 추가 -->
+                                    <li id="" class="agChkItem">
+                                        <span>서비스 이용약관</span>
+                                        <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+                                    </li>
+                                    <li id="" class="agChkItem">
+                                        <span>개인정보 취급방침 동의</span>
+                                        <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+                                    </li>
+                                    <li id="" class="agChkItem">
+                                        <span>제 3자 개인정보 제공 동의</span>
+                                        <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="agChkLst typeB">
+                                <div class="agChkItem">
+                                    <label for="subChk2">
+                                        <input type="checkbox" id="subChk2" ><i></i><span>[필수] 금융기관 필수항목 동의</span>
+                                    </label>
+                                    <a href="#none" class="btnFolding" data-target="#folding1" aria-expanded="false"><span class="blind">펼침</span></a><!-- 디폴트 닫힘 class="btnFolding show" 클래스 'show' 제거 -->
+                                </div>
+                                <ul class="agChkSubList" id="folding1" style="display:none;"><!-- 디폴트 닫힘 style="display:none;" 추가 -->
+                                    <li id="" class="agChkItem">
+                                        <span>금융기관 필수 항목 동의</span>
+                                        <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="agChkLst typeB">
+                                <div class="agChkItem">
+                                    <label for="subChk3">
+                                        <input type="checkbox" id="subChk3" ><i></i><span>[필수] 통신사 본인인증 필수항목 동의</span>
+                                    </label>
+                                    <a href="#none" class="btnFolding" data-target="#folding2" aria-expanded="false"><span class="blind">펼침</span></a><!-- 디폴트 닫힘 class="btnFolding show" 클래스 'show' 제거 -->
+                                </div>
+                                <ul class="agChkSubList" id="folding2" style="display:none;"><!-- 디폴트 닫힘 style="display:none;" 추가 -->
+                                    <li id="" class="agChkItem">
+                                        <span>개인정보 수집 · 이용 · 취급 위탁동의</span>
+                                        <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+                                    </li>
+                                    <li id="" class="agChkItem">
+                                        <span>본인확인서비스 이용약관(NICE)</span>
+                                        <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+                                    </li>
+                                    <li id="" class="agChkItem">
+                                        <span>고유식별정보처리 동의</span>
+                                        <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+                                    </li>
+                                    <li id="" class="agChkItem">
+                                        <span>통신사 이용약관</span>
+                                        <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+                                    </li>
+                                    <li id="" class="agChkItem">
+                                        <span>개인정보 제 3자 제공 동의</span>
+                                        <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="agChkLst typeB">
+                                <div class="agChkItem">
+                                    <label for="subChk4">
+                                        <input type="checkbox" id="subChk4" ><i></i><span>[선택] 더핀 마케팅 수신 동의</span>
+                                    </label>
+                                    <a href="#none" class="btnFolding" data-target="#folding3" aria-expanded="false"><span class="blind">펼침</span></a><!-- 디폴트 닫힘 class="btnFolding show" 클래스 'show' 제거 -->
+                                </div>
+                                <ul class="agChkSubList" id="folding3" style="display:none;" ><!-- 디폴트 닫힘 style="display:none;" 추가 -->
+                                    <li id="" class="agChkItem">
+                                        <span>마케팅 수신 동의</span>
+                                        <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="layer_footer">
+                            <button type="button" class="js_pop_close btn_cancel"><span>취소</span></button>
+                            <button type="button" class="js_pop_close btn_confirm"><span>동의</span></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -137,5 +235,57 @@
         </footer>
         <!-- [E] 하단 고정 영역 -->
     </div>
+    <script>
+        // [S] 바텀시트
+        $(document).on("click", ".btn_open_bottom_sheet", function(e){
+            e.preventDefault();
+        
+            var $href = $(this).attr('href');
+            layer_bottomsheet($href);
+            $('html').addClass('scroll_lock');
+        
+            // [S] multi layer 2021-08-02 추가
+            var dimIdx = $('.dim').index();
+            eval('$focusReturn' + [dimIdx] + '= $(this)');
+        
+        });
+        function layer_bottomsheet(el){
+            var $el = $(el);
+            $el.append("<div class=\"dim\"></div>");
+            isDim ? $('.layer_bottomsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
+            setTimeout(function() {
+                $el.find('.layer_inner').addClass('on');
+            }, 50);
+        
+            var isDim = $el.siblings().hasClass('dim');
+        
+            var dimIdx = $('.dim').index();
+            var thisDim = $el.find('.dim');
+            var thisLyZindex = dimIdx + 4000;
+            $('.dim').css('opacity','0');
+            thisDim.css('opacity','.7');
+            thisDim.closest('.layer_bottomsheet, .layer_popup').css('z-index', thisLyZindex);
+        
+            $el.find('.js_pop_close').click(function(){
+        
+                $el.find('.layer_inner').removeClass('on');
+                setTimeout(function() {
+                    isDim ? $('.layer_bottomsheet').hide() : $el.hide();
+                    $('html').removeClass('scroll_lock');
+                    $el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
+                    if($('.dim').length == 2){
+                        $('.dim:eq(1)').css('opacity','.7');
+                    }else if($('.dim').length == 1){
+                        $('.dim').css('opacity','.7');
+                    }
+                }, 200);
+                eval('$focusReturn'+ [dimIdx]).focus();
+        
+                return false;
+            });
+        }
+        // [E] 바텀시트
+        
+        </script>
 </body>
 </html>
