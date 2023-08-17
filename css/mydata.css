@@ -138,12 +138,22 @@
 .input-wrap {
     margin: 20px 0 0;
     width: 100%;
+    position: relative;
 }
+.desc-wrap + .input-wrap { margin-top: 56px; }
 .input-wrap.fixed {
     position: fixed;
     bottom: 0;
     left: 0;
     padding: 0 20px;
+}
+.input-wrap input[type="text"] {
+    height: 42px;
+}
+.input-box { position: relative;}
+.ipt-label {
+    font-size: 14px;
+    font-weight: 700;
 }
 .ipt-typeA { /* feed 댓글달기에 들어가는 댓글 입력 input */
     border: 0;
@@ -154,6 +164,28 @@
     padding: 0;
     width: 100%;
 }
+.ipt-typeB { /* feed 댓글달기에 들어가는 댓글 입력 input */
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0;
+    width: 100%;
+}
+.ipt-time-limit {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.input-err-desc { 
+    color: #F05E89;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
 .feed-write-wrap {
     border-top: 1px solid #F1F2F5;
     color: #666;
@@ -249,6 +281,7 @@
     font-weight: 500;
     line-height: 1.3;
     text-align: center;
+    text-decoration: underline !important;
 }
 .main-title {
     color: #333;
@@ -358,6 +391,7 @@
 .agChkLst.typeB .agChkSubList .agChkItem + .agChkItem {
     margin-top: 18px;
 }
+.fwb { font-weight: bold;}
 /* E : common */
 /* S : component */
 .credit-score {
