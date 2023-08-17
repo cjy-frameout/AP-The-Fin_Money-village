@@ -416,6 +416,9 @@ function contentsBottomPadding(){
         if(!$('.fix_bottom .dock_bar').length){
             $('.fix_bottom').addClass('not_dock');
         }
+        if($('.hasFixBottom')){
+            $('.content').css('padding-bottom', fixBottomHeight + 92);
+        }
 	}
     if($('.toastMsg').length){
         $('.btn_wrap + .toastMsg').prev('.btn_wrap').css('padding-bottom','0');
@@ -567,3 +570,35 @@ function layerFPageBottomPadding(){
     }
 }
 /* [E] XX1300 wrap_full_page 하단 여백조정 */
+
+
+
+
+document.addEventListener('DOMContentLoaded', function(e){
+    // [S] Gnb 
+    var gnb = $('.gnb');
+    var gnbMenu = $('.gnb_menu');
+    var gnbHeight = gnb.outerHeight();
+
+    function gnbOpen() {
+    gnb.css({right: 0});
+    $("html, body").css({overflow: "hidden", height: "100%"});
+    }
+
+    function gnbClose() {
+    gnb.css({right: '-100%'});
+    $("html, body").removeAttr("style");
+    }
+
+    $('.btnMenu').on('click', function() {
+    gnbOpen();
+    });
+
+    $('.btn_menu_close').on('click', function() {
+    gnbClose();
+    });
+    // [E] Gnb
+});
+
+
+
