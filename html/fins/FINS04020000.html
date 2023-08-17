@@ -25,6 +25,7 @@
     <script type="text/javascript" src="../../js/slide_slick.js"></script>
     <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
     <script type="text/javascript" src="../../js/cmd.js"></script>
+    <script type="text/javascript" src="../../js/interaction.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -54,67 +55,48 @@
                 <div class="accSetting">
                     <div class="editName">
                         <label for="name" class="itemTit">이름</label>
-                        <input type="text" id="name" title="이름" required="required" placeholder="이름을 입력해주세요" value="홍길동">
+                        <input type="text" id="name" title="이름" required="required" placeholder="이름을 입력해주세요" value="홍길동" readonly>
                     </div>
                     <div class="editName">
                         <label for="name" class="itemTit">통신사선택</label>
-                        <div class="sel_form type_border no-border on"> <!-- 선택시 on 클래스 추가 -->
+                        <input type="text" id="name" title="통신사선택" required="required" placeholder="이름을 입력해주세요" value="LG U+ 알뜰폰" readonly>
+                    </div>
+                    <!-- <div class="editName">
+                        <label for="name" class="itemTit">통신사선택</label>
+                        <div class="sel_form type_border no-border on">  선택시 on 클래스 추가 
                             <a href="#layerCheck" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>LG U+ 알뜰폰</span></a>
                         </div>
-                    </div>
-                    <div id="layerCheck" class="layer_bottomsheet" role="dialog" tabindex="-1" aria-hidden="true">
-                        <div class="layer_inner">
-                            <div class="layer_tit type2">
-                                <strong class="tit"><span>조회 카드 선택</span></strong>
-                                <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
-                            </div>
-                            <div class="layer_cont" style="max-height: 736px;">
-                                <div class="cdChkLst">
-                                    <div class="cdChkItem all">
-                                        <label for="chkAll">
-                                            <input type="checkbox" id="chkAll">
-                                            <i></i><span id="">카드 전체</span>
-                                        </label>
-                                    </div>
-                                    <ul class="cdChkSubList">
-                                        <li class="cdChkItem"> 
-                                            <label for="subChk1">
-                                                <input type="checkbox" id="subChk1">
-                                                <i></i><span id=""><em>Real? Real! 2</em> 카드</span>
-                                                <span class="cdChkTxt"><em>490211******1234</em></span>
-                                            </label>
-                                        </li>
-                                        <li class="cdChkItem"> 
-                                            <label for="subChk1">
-                                                <input type="checkbox" id="subChk2">
-                                                <i></i><span id="">찐카드<em>(ZZIN CARD)</em></span>
-                                                <span class="cdChkTxt"><em>490211******1234</em></span>
-                                            </label>
-                                        </li>
-                                        <li class="cdChkItem"> 
-                                            <label for="subChk1">
-                                                <input type="checkbox" id="subChk3">
-                                                <i></i><span id=""><em>S1</em> 카드</span>
-                                                <span class="cdChkTxt"><em>490211******1234</em></span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="layer_footer">
-                                <button type="button" class="js_pop_close btn_confirm"><span>저장</span></button>
-                            </div>
-                        </div>
-                    </div>
+                    </div> -->
+                    
     
                     <div class="editName mgt25">
                         <label for="email" class="itemTit">휴대폰번호</label>
-                        <input type="text" id="email" required="required" value="01012345678" placeholder="휴대폰번호를 입력해 주세요." title="휴대폰번호 입력" >
+                        <input type="text" id="email" required="required" value="01012345678" placeholder="휴대폰번호를 입력해 주세요." title="휴대폰번호 입력" readonly>
                     </div>
                 </div>
                 <div class="btn-wrap fixed noBorder vertical">
-                    <a href="#none" class="btn-alink" role="button">입력된 정보가 다른가요?</a>
+                    <a href="#PP1_2_6_1_2_3IN_1LP" class="btn-alink btn-open-layerPop" role="button">입력된 정보가 다른가요?</a>
                     <a href="#none" class="btnBl1" role="button">다음</a>
+                </div>
+
+                <div id="PP1_2_6_1_2_3IN_1LP" class="layer_popup type2" role="dialog" tabindex="-1" aria-hidden="true"> 
+                    <div class="layer_position">
+                        <div class="layer_inner">
+                            <div class="layer_cont">
+                                <div class="msg_box">
+                                    <p class="msg_alert fs-14"> 
+                                        <span class="pointColor2 fs-18">잠시만요</span><br>
+                                        입력된 본인정보를 수정하려면<br>
+                                        본인 인증이 필요해요
+                                    </p>
+                                </div>
+                                <div class="btn_layer_wrap">
+                                    <button type="button" class="js_pop_close btn_cancel"><span>취소</span></button>
+                                    <button type="button" class="js_pop_close btn_confirm"><span>본인인증하기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

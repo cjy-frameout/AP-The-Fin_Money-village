@@ -195,6 +195,16 @@
 /* E : input CSS */
 
 /* S : common */
+.fs-18 {
+    color: #17181A;
+    font-size: 18px !important;
+    font-weight: 500;
+}
+.fs-14 {
+    color: #6F7A81;
+    font-size: 14px !important;
+    font-weight: 400;
+}
 .share {
     background: url(../img/theme/apthefin/icon_share.png) no-repeat 0 0;
     display: block;
@@ -326,6 +336,27 @@
     position:absolute;
     left: 0;
     top: 0;
+}
+.agChkLst.typeB{
+    border: 0;
+    border-radius: 0;
+    padding: 0 5px 0 0;
+}
+.agChkLst.typeB:first-child { margin-top: 16px; }
+.agChkLst.typeB + .agChkLst.typeB {
+    margin-top: 19px;
+}
+.agChkLst.typeB .agChkSubList .agChkItem {
+    font-size: 14px;
+    padding-left: 30px; 
+}
+.agChkLst.typeB .agChkSubList {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 16px;
+}
+.agChkLst.typeB .agChkSubList .agChkItem + .agChkItem {
+    margin-top: 18px;
 }
 /* E : common */
 /* S : component */
