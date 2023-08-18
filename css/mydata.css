@@ -135,6 +135,12 @@
 /* ================================================== E : FEED CSS ===================================================  */
 
 /* S : input CSS */
+
+input[type="password"] {
+    font-family: caption, sans-serif;
+    font-size: 22px;
+}
+
 .input-wrap {
     margin: 20px 0 0;
     width: 100%;
@@ -151,6 +157,42 @@
     height: 42px;
 }
 .input-box { position: relative;}
+.input-box.items2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ipt-pass-box { width: 100%; position: relative; height: 42px;}
+.ipt-pass-box input[type="password"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    opacity: 0;
+}
+.ipt-pass-box input[type="password"]:focus + .password-disc-wrap {
+    border-bottom: 1px solid #333;
+}
+.password-disc-wrap {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    height: 42px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+.pass-disc {
+    background-color: #000;
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+}
+.pass-disc + .pass-disc { margin-left: 5px;}
 .ipt-label {
     font-size: 14px;
     font-weight: 700;
@@ -224,9 +266,9 @@
     
     padding: 15px 0;
 }
-/* E : input CSS */
+/* ========================================== E : input CSS ========================================================= */
 
-/* S : common */
+/* =========================================== S : common =========================================================== */
 .fs-18 {
     color: #17181A;
     font-size: 18px !important;
@@ -392,7 +434,8 @@
     margin-top: 18px;
 }
 .fwb { font-weight: bold;}
-/* E : common */
+.dash { margin: 0 10px; }
+/* ========================================================= E : common  =====================================================*/
 /* S : component */
 .credit-score {
     background: url(../img/theme/apthefin/credit_score.png) no-repeat  50% 136px;
