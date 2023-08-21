@@ -145,6 +145,11 @@ input[type="password"] {
     width: 100%;
     position: relative;
 }
+.desc-wrap.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .desc-wrap + .input-wrap { margin-top: 56px; }
 .desc-wrap + .accSetting { margin-top: 10px; }
 .input-wrap.fixed {
@@ -227,7 +232,11 @@ input[type="password"] {
     font-size: 13px;
     margin-top: 10px;
 }
-
+.ipt-search-desc {
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+}
 .feed-write-wrap {
     border-top: 1px solid #F1F2F5;
     color: #666;
@@ -305,6 +314,9 @@ input[type="password"] {
     font-weight: 400;
 }
 .pointColor3 { color: #000; font-weight: 700; }
+.hasTopBorder {
+    border-top: 10px solid #F1F2F5;
+}
 .share {
     background: url(../img/theme/apthefin/icon_share.png) no-repeat 0 0;
     display: block;
@@ -381,6 +393,14 @@ input[type="password"] {
     right:30px;
     top: 50%;
     transform: translateY(-50%);
+}
+.btn-inside01 {
+    background: #F7F9FF;
+    border-radius: 6px;
+    color: #3E5FAC !important;
+    display: inline-block;
+    font-size: 13px;
+    padding: 8px 12px;
 }
 .main-title {
     color: #333;
@@ -492,6 +512,7 @@ input[type="password"] {
 }
 .fwb { font-weight: bold;}
 .dash { margin: 0 10px; }
+.no-result { font-size: 14px; font-weight: 500; color: #999; padding: 30px; text-align: center; }
 /* ========================================================= E : common  =====================================================*/
 /* S : component */
 .credit-score {
@@ -507,6 +528,33 @@ input[type="password"] {
     padding: 24px;
 }
 .info-wrap > h3 { margin-bottom: 4px; font-size: 14px; font-weight: 500; }
+.search-result-wrap {
+    margin: 30px -20px 0;
+    padding: 0 20px;
+}
+.search-result-li {
+    border-bottom: 1px solid #E5E5E5;
+}
+.search-result-li label {
+    display: block;
+    padding: 20px 0
+}
+.search-result-li input[type="radio"] {
+    -webkit-appearance: none;
+    position: absolute;
+}
+.search-result-li label h4 {
+    color: #333;
+    font-size: 14px; 
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+.business-num span, .business-address span {
+    color: #666;
+    font-size: 12px;
+    line-height: 1.3;
+}
+.business-num + .business-address { margin-top: 4px; }
 /* E : component */
 /* S : Layout  */
 .header {

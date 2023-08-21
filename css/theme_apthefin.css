@@ -71,7 +71,7 @@ em,
 /* [S] point color  =================================================================== */
 /* [S] 공통*/
 a:link, a:visited {color:#333;}
-a {-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;outline:none;}
+a {-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;}
 
 body {color:#333;}
 button span {font-size:15px;}
@@ -163,7 +163,7 @@ a.btnManage {font-size:13px;}
 .btn_wrap.type_more a.btnBl4 {background-color:#eee;color:#333;border:none;}
 
 /* switch btn */
-.btn_switch {width:40px;height:22px;-webkit-tap-highlight-color:transparent !important;outline:none !important; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; }
+.btn_switch {width:40px;height:22px;-webkit-tap-highlight-color:transparent !important; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; }
 .btn_switch input {width:40px;height:22px;}
 .btn_switch input:checked + .round {background-color:#3E5FAC;}
 .btn_switch input:focus + .round {box-shadow:0 0 1px #3E5FAC;}
@@ -298,7 +298,7 @@ a.btnBl1.wide i.more{margin-top:5px;}
 /* [E] Flag, tag */
 
 /*체크 이벤트 효과 제거*/
-.agChkItem label {-webkit-tap-highlight-color:transparent !important;outline:none !important; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; }
+.agChkItem label {-webkit-tap-highlight-color:transparent !important; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; }
 
 /* [S] 공통 아이콘 */
 .wmTx:after {width:inherit;margin:80px -20px 0;background-image:url('../img/theme/apthefin/bg_wm_tx.png?0426');background-size:400px auto;}
@@ -544,7 +544,7 @@ a.btnMenu {display:block;width:32px;height:32px;background-image:url('../img/the
 .editGroup .listChck .switch_name {color:#666;margin-right:30px;}
 .editGroup .listChck .titSwitch.type2 .switch_name {margin-right:0;}
 .editGroup .listChck .titSwitch .boxChkItem {top:0;right:0;}
-.editGroup .listChck .titSwitch .boxChkItem input[type=checkbox] {right:0;-webkit-tap-highlight-color:transparent !important;outline:none !important;}
+.editGroup .listChck .titSwitch .boxChkItem input[type=checkbox] {right:0;-webkit-tap-highlight-color:transparent !important;}
 .editGroup .listChck .titSwitch .boxChkItem i {top:17px;right:0;width:18px;height:18px;background-size:18px auto;}
 
 .asGroup.editList2 + .asGroup.editList2 {margin-top:30px;padding-top:0;}
@@ -1603,7 +1603,7 @@ to{opacity:1;margin-top:0px;}
 /* [E] 동그라미 체크 후*/
 
 /* [S] 목돈만들기 체크 */
-.selectItem label input[type=checkbox] {position:absolute;top:0;left:0;width:20px;height:20px;border:none;box-shadow:none;-webkit-appearance:none;outline:none;cursor:pointer;z-index:2;opacity:0;}
+.selectItem label input[type=checkbox] {position:absolute;top:0;left:0;width:20px;height:20px;border:none;box-shadow:none;-webkit-appearance:none;cursor:pointer;z-index:2;opacity:0;}
 .selectItem label input[type=checkbox] + i {display:inline-block;width:20px;height:20px;z-index:1;background-image:url('../img/theme/apthefin/ic_circle_chk.png?0426');background-size:20px auto;background-repeat:no-repeat;}
 .selectItem label input[type=checkbox]:checked + i {width:21px;height:21px;background-image:url('../img/theme/apthefin/ic_circle_chk_on.png?0426');background-size:20px auto;}
 /* [E] 목돈만들기 체크 */
@@ -1624,7 +1624,7 @@ to{opacity:1;margin-top:0px;}
 .cdChkItem.all label span {font-weight:700;}
 .cdChkItem label span {font-size:15px;font-weight:700;line-height:24px;}
 .cdChkItem label .cdChkTxt {display:inline-block;width:100%;font-size:13px;font-weight:400;color:#999;}
-.cdChkItem label input[type=checkbox],.cdChkItem label input[type=radio] {position:absolute;top:14px;right:7px;width:20px;height:20px;border:none;box-shadow:none;-webkit-appearance:none;outline:none;cursor:pointer;z-index:2;opacity:0;}
+.cdChkItem label input[type=checkbox],.cdChkItem label input[type=radio] {position:absolute;top:50%;transform: translateY(-50%);  right:7px;width:20px;height:20px;border:none;box-shadow:none;-webkit-appearance:none;cursor:pointer;z-index:2;opacity:0;}
 .cdChkItem.all label input[type=checkbox],.cdChkItem.all label input[type=radio] {top:3px;right:7px;}
 .cdChkItem label input[type=checkbox] + i,.cdChkItem label input[type=radio] + i {position:absolute;top:50%;transform: translateY(-50%);  right:7px;width:20px;height:20px;border:none;background-image:url('../img/theme/apthefin/ic_circle_chk.png?0426');background-size:20px auto;background-repeat:no-repeat;background-position:center;}
 .cdChkItem.all label input[type=checkbox] + i,.cdChkItem.all label input[type=radio] + i {top:3px;right:7px;}
@@ -3750,10 +3750,10 @@ a.filterFolding.show:after {transform:rotate(90deg);margin-left:3px;}
 .taxGroup .filterGroup .filterItem .filterTit .tit {color: #666;}
 
 .taxGroup .filterItem .boxChkItem {position: relative;}
-.taxGroup .filterItem .boxChkItem input[type=checkbox]{box-shadow:none;-webkit-appearance:none;outline:none;cursor:pointer;opacity:0;}
+.taxGroup .filterItem .boxChkItem input[type=checkbox]{box-shadow:none;-webkit-appearance:none;cursor:pointer;opacity:0;}
 .taxGroup .filterItem .boxChkItem input[type=checkbox] + i {display:inline-block;margin:-5px 0 0;vertical-align: middle;border:1px solid #aaa;background-color:#fff;border: none;border-radius:50%;background: url("../img/theme/apthefin/ic_circle_chk.png?0426") no-repeat center / 18px auto;}
 .taxGroup .filterItem .boxChkItem input[type="checkbox"]:checked + i {background: url("../img/theme/apthefin/ic_circle_chk_on.png?0426") no-repeat center / 18px auto;}
-.taxGroup .filterItem .boxChkItem input[type=checkbox] {right:0;-webkit-tap-highlight-color:transparent !important;outline:none !important;}
+.taxGroup .filterItem .boxChkItem input[type=checkbox] {right:0;-webkit-tap-highlight-color:transparent !important;}
 .taxGroup .filterItem .boxChkItem i {top:17px;right:0;width:18px;height:18px;background-size:18px auto;}
 
 .taxGroup .filterItem .inputPrice{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ddd;}

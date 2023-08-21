@@ -22,7 +22,7 @@
             var $this = $(this);
             var count = 0;
             var disc = $this.parents().find('.password-disc-wrap');
-            console.log(disc);
+            
             $this.keydown(function(e){
                 if(e.key === "Backspace" || e.key == "Delete") {
                     count--;
@@ -39,7 +39,24 @@
     $.fn.searchDel = function(){
         return this.each(function(){
             let $this = $(this);
-            let sBox = $this.find('')
+            let sBox = $this.find('input[type="text"]');
+            let search = `<a href="#none" id="btn-del" role="button" class="btn-del"></a>`
+            let count = 0;
+            
+            sBox.keydown(function(e){
+                if(e.key === "Backspace" || e.key == "Delete") count--;
+                else count++;
+
+                if(count >= 1) {
+                    $this.append(search); 
+                    var delL = $this.find('.btn-del');
+                    console.log(delL.length);
+                    if(delL.length > 1) {
+                        delL.last().remove();
+                    }
+                }
+                else $this.find('.btn-del').remove();
+            });
         });
     }
 
