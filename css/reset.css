@@ -271,6 +271,7 @@ transition:background-color 5000s ease-in-out 0s;
 .dock_bar .btn.dock_add{background-image:url('../img/ic/ic_dock_add.png');}
 .dock_bar .btn .tx{display:inline-block;padding-top:36px;font-size:10px;color:#000;}
 
+
 /* dim */
 .dim{position:fixed;top:0;right:0;bottom:0;left:0;background-color:#000;opacity:.7;z-index:2;}/* opacity:.7 !important;transition:all .5s ease; */
 

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title></title>
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="title" content="">-->
+    <meta name="description" content="">
+    <!--<meta name="keywords" content="">-->
+    <!-- The Open Graph protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+    <!-- //The Open Graph protocol -->
+    <link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/content.css">
+    <link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+    <link rel="stylesheet" type="text/css" href="../../css/mydata.css">
+    <link rel="stylesheet" type="text/css" href="../../css/insp.css"> <!-- 화면 검수용 -->
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/cmd.js"></script>
+</head>
+
+<body>
+
+<div id="PP1_2_4_2_2_1FP" class="layer_fullsheet insp" style="display: block">
+    <div class="layer_inner">
+        <div class="layer_tit">
+            <span class="tit">본인인증</span>
+            <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont">
+
+            <div class="agChkLst no-border">
+                <div class="agChkItem all">
+                    <label for="chkAll">
+                        <input type="checkbox" id="chkAll" checked=""><i></i><span id="">모든 약관 동의</span>
+                    </label>
+                </div>
+                <ul class="agChkSubList" id="folding" style="overflow: hidden; display: block;"><!-- 디폴트 닫힘 style="display:none;" 추가 -->
+                    <li id="agChkItem1" class="agChkItem">
+                        <label for="subChk1">
+                            <input type="checkbox" id="subChk1" checked=""><i></i><span>통신사 이용약관</span>
+                        </label>
+                        <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+                    </li>
+                    <li id="agChkItem2" class="agChkItem">
+                        <label for="subChk2">
+                            <input type="checkbox" id="subChk2"><i></i><span>본인확인 서비스 이용약관</span>
+                        </label>
+                        <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+                    </li>
+                    <li id="agChkItem3" class="agChkItem">
+                        <label for="subChk3">
+                            <input type="checkbox" id="subChk3"><i></i><span>개인(신용)정보 수집ㆍ이용 취급 위탁 동의</span>
+                        </label>
+                        <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+                    </li>
+                    <li id="agChkItem4" class="agChkItem">
+                        <label for="subChk4">
+                            <input type="checkbox" id="subChk4"><i></i><span>고유식별정보 처리 동의</span><!-- '제 3자' >> '제3자' 띄어쓰기 변경 -->
+                        </label>
+                        <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="accSetting">
+                <div class="editName flex">
+                    <input type="text" id="name" title="이름" required="required"  placeholder="이름 (실명)">
+                    <div class="sel_form type_border">
+                        <a href="#" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span class="sel_txt">내국인</span></a>
+                    </div>
+                </div>
+
+                <div class="editName flex mgt25">
+                    <input type="text" id="data" title="생년월일" required="required"  placeholder="생년월일(19990101)">
+                    <div class="sel_form type_border">
+                        <a href="#" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span class="sel_txt">남자</span></a>
+                    </div>
+                </div>
+
+                <div class="sel_form type_border">
+                    <a href="#" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span class="sel_txt">통신사 선택</span></a>
+                </div>
+
+                <div class="editName flex mgt25">
+                    <input type="text" id="inp" title="연락처" required="required"  placeholder="연락처">
+                    <a href="#none" role="button" class="btnBl1 disable">인증번호발송</a>
+                </div>
+            </div>
+
+
+
+            <div class="confirm_mail" style="margin-top:20px;">
+                <div class="certi_num">
+                    <p class="inp_line">
+                        <input type="tel" class="certi_num_inp" maxlength="8" placeholder="인증번호를 입력해 주세요" title="8자리 인증번호를 입력해주세요">
+                    </p>
+                    <p class="inp_time"><span class="time pointColor">10:00</span></p>
+<!--                    <p class="inp_err_msg">인증번호가 일치하지 않습니다 (1/5)</p>-->
+                    <p class="inp_caution mgt10">인증번호가 오지 않을 경우 ‘02-708-1007’ 스팸 여부 확인해주세요.</p>
+                </div>
+            </div>
+
+
+            <div class="btn_wrap mgt40">
+                <div class="btnGroup type2">
+                    <p><a href="intro_04.html" class="btnBl1" role="button">확인</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
