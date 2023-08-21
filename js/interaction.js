@@ -29,20 +29,27 @@
                     disc.find('span').last().remove();
                 }
                 else if(e.key == 0 || e.key == 1 || e.key == 2 || e.key == 3 || e.key == 4 || e.key == 5 || e.key == 6 || e.key == 7 || e.key == 8 || e.key == 9 ) {
-                    
                     count++;
                     disc.append("<span class='pass-disc'></span>"); 
                 } else {} 
-                console.log(count);
-                
             });
         });
+    },
+
+    $.fn.searchDel = function(){
+        return this.each(function(){
+            let $this = $(this);
+            let sBox = $this.find('')
+        });
     }
+
     
+
 })(jQuery);
 
 document.addEventListener('DOMContentLoaded', function(e){
     $('.btn-open-layerPop').layerPopOpen();
     $('input[type="password"]').passChange();
+    $('.search-box').searchDel();
 });
 
