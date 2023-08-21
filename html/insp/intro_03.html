@@ -57,19 +57,19 @@
                     </li>
                     <li id="agChkItem2" class="agChkItem">
                         <label for="subChk2">
-                            <input type="checkbox" id="subChk2"><i></i><span>본인확인 서비스 이용약관</span>
+                            <input type="checkbox" id="subChk2" checked=""><i></i><span>본인확인 서비스 이용약관</span>
                         </label>
                         <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
                     </li>
                     <li id="agChkItem3" class="agChkItem">
                         <label for="subChk3">
-                            <input type="checkbox" id="subChk3"><i></i><span>개인(신용)정보 수집ㆍ이용 취급 위탁 동의</span>
+                            <input type="checkbox" id="subChk3" checked=""><i></i><span>개인(신용)정보 수집ㆍ이용 취급 위탁 동의</span>
                         </label>
                         <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
                     </li>
                     <li id="agChkItem4" class="agChkItem">
                         <label for="subChk4">
-                            <input type="checkbox" id="subChk4"><i></i><span>고유식별정보 처리 동의</span><!-- '제 3자' >> '제3자' 띄어쓰기 변경 -->
+                            <input type="checkbox" id="subChk4" checked=""><i></i><span>고유식별정보 처리 동의</span><!-- '제 3자' >> '제3자' 띄어쓰기 변경 -->
                         </label>
                         <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
                     </li>
@@ -78,25 +78,25 @@
 
             <div class="accSetting">
                 <div class="editName flex">
-                    <input type="text" id="name" title="이름" required="required"  placeholder="이름 (실명)">
+                    <input type="text" id="name" title="이름" required="required" value="홍길동" placeholder="이름 (실명)">
                     <div class="sel_form type_border">
                         <a href="#" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span class="sel_txt">내국인</span></a>
                     </div>
                 </div>
 
                 <div class="editName flex mgt25">
-                    <input type="text" id="data" title="생년월일" required="required"  placeholder="생년월일(19990101)">
+                    <input type="text" id="data" title="생년월일" required="required" value="19990101"  placeholder="생년월일(19990101)">
                     <div class="sel_form type_border">
                         <a href="#" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span class="sel_txt">남자</span></a>
                     </div>
                 </div>
 
                 <div class="sel_form type_border">
-                    <a href="#" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span class="sel_txt">통신사 선택</span></a>
+                    <a href="#" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span class="sel_txt" style="color:#333;">KT</span></a>
                 </div>
 
                 <div class="editName flex mgt25">
-                    <input type="text" id="inp" title="연락처" required="required"  placeholder="연락처">
+                    <input type="text" id="inp" title="연락처" required="required" value="01012345678"  placeholder="연락처">
                     <a href="#none" role="button" class="btnBl1 disable">인증번호발송</a>
                 </div>
             </div>
@@ -106,7 +106,7 @@
             <div class="confirm_mail" style="margin-top:20px;">
                 <div class="certi_num">
                     <p class="inp_line">
-                        <input type="tel" class="certi_num_inp" maxlength="8" placeholder="인증번호를 입력해 주세요" title="8자리 인증번호를 입력해주세요">
+                        <input type="tel" class="certi_num_inp" maxlength="8"  placeholder="인증번호를 입력해 주세요" title="8자리 인증번호를 입력해주세요">
                     </p>
                     <p class="inp_time"><span class="time pointColor">10:00</span></p>
 <!--                    <p class="inp_err_msg">인증번호가 일치하지 않습니다 (1/5)</p>-->

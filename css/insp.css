@@ -268,3 +268,11 @@
     font-weight:700;
     line-height: 24px;
 }
+
+.insp__cert {
+    display: block;
+    width:100%;
+    vertical-align: top;
+    pointer-events: none;
+}
+

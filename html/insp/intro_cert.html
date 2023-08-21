@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" class="leaf">
+<html lang="ko" class="leaf scroll_lock">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
@@ -35,37 +35,27 @@
 <body>
 
 <!-- wrap -->
-<div class="wrap">
-
-
-    <!-- container -->
-    <div class="container">
-        <div class="content">
-
-            <img class="insp insp__intro" src="../../img/insp/img_intro.png" />
-
-
-            <div class="fix_bottom">
-                <!-- btn_wrap -->
-                <div class="btn_wrap">
-                    <div class="btnGroup">
-                        <p><a href="intro_02.html" class="btnBl1" role="button">시작하기</a></p>
-                    </div>
-                </div>
-            </div>
-
-
+<div id="layer_bs_2" class="layer_bottomsheet" style="display: block;z-index:100">
+    <div class="layer_inner on">
+        <div class="layer_tit type2">
+            <strong class="tit">인증 방식 선택</strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont">
+            <img src="../../img/insp/img_cert.png" alt="" class="insp__cert">
+        </div>
+        <div class="layer_footer">
+            <a href="intro_11.html" type="button" class="js_pop_close btn_confirm"><span>확인</span></a>
         </div>
     </div>
-    <!-- //container -->
-
-
+    <div class="dim" style="opacity: 0.7"></div>
 </div>
+
 <!-- //wrap -->
 <script>
     $(document).ready(function(){
-        $(".content").css("padding-bottom","0");
-    });
+
+    })
 </script>
 </body>
 </html>
