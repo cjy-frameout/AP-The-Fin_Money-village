@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title></title>
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="title" content="">-->
+    <meta name="description" content="">
+    <!--<meta name="keywords" content="">-->
+    <!-- The Open Graph protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+    <!-- //The Open Graph protocol -->
+    <link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/content.css">
+    <link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+    <link rel="stylesheet" type="text/css" href="../../css/mydata.css">
+    <link rel="stylesheet" href="../../css/insp.css">
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/cmd.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap insp">
+    <!-- header -->
+    <div class="header setup"><!-- 2021-10-07 마이페이지 클래스 'setup' 추가 -->
+        <div class="header_inn">
+            <div class="left">
+                <a href="#none" class="btnBack"><span class="blind">Back</span></a>
+            </div>
+            <div class="center">
+                <h2 class="tit_h2">자산 연동하기</h2>
+            </div>
+            <div class="right">
+                <!-- <a href="#none" class="btnBack"><span class="blind">Back</span></a> -->
+            </div>
+        </div>
+    </div>
+    <!-- //header -->
+
+    <!-- container -->
+    <div class="container">
+        <div class="content">
+
+            <div class="tit2_wrap has_process_step">
+
+                <div class="left">
+                    <h2 class="tit_h2">
+                        연결할 금융기관을<br>
+                        선택해주세요.
+                    </h2>
+                    <p class="link_arr"><a href="#" class="view_detail"><span>한 번에 선택하기</span></a></p>
+                </div>
+            </div>
+
+            <!-- 2021-08-06 보험, 금융투자, 할부금융, 통신, 전자금융 기관선택 추가 -->
+            <div class="tabs_wrap tab_certi type_scroll">
+                <div class="tabs_header type2 has_sel_all">
+                    <ul class="cboth">
+                        <li class="btn_sel_org on"><a href="#none"><span>은행</span></a></li><!-- 선택시 title="선택됨" 추가 -->
+                        <li class="btn_sel_org"><a href="#none"><span>카드</span></a></li>
+                        <li class="btn_sel_org"><a href="#none"><span>증권</span></a></li>
+                        <li class="btn_sel_org"><a href="#none"><span>캐피탈</span></a></li>
+                        <li class="btn_sel_org"><a href="#none"><span>보험</span></a></li>
+                        <li class="btn_sel_org"><a href="#none"><span>Pay</span></a></li>
+                        <li class="btn_sel_org"><a href="#none"><span>통신</span></a></li>
+                    </ul>
+
+                    <!-- [S] 전체 선택 -->
+                    <!-- <div class="certi_sel_all">
+                        <div class="agChkItem">
+                            <label for="chkAll">
+                                <input type="checkbox" id="chkAll"><i></i><span>전체 선택</span>
+                            </label>
+                        </div>
+                    </div> -->
+                    <!-- [E] 전체 선택 -->
+                </div>
+
+                <div class="tabs_body_wrap">
+                    <div class="tabs_body cboth has_sel_all">
+
+                        <!-- [S] 기관 -->
+                        <div class="ins1Link_wrap">
+
+                            <!-- 은행 -->
+                            <div class="org_wrap org_bank">
+                                <div class="certi_sel_all">
+                                    <div class="agChkItem">
+                                        <label for="chkAll1">
+                                            <p class="stit">은행</p>
+                                            <input type="checkbox" id="chkAll1"><i></i><span>전체 선택</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <ul class="ins1LinkLst">
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn"><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="경남은행"></span>
+                                            <span class="name">경남은행</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn disable"><!-- 연동완료시 클래스 'disable' 추가 -->
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="부산은행"></span>
+                                            <span class="name">부산은행</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn disable err"><!-- 점검중 클래스 'disable err' 추가 -->
+                                            <span class="ico"><img src="../../img/bank/D1AABJ0000.png" alt="국민은행"></span>
+                                            <span class="name">국민은행</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AABG0000.png" alt="우리"></span>
+                                            <span class="name">우리</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="IBK기업"></span>
+                                            <span class="name">IBK기업</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="SC제일"></span>
+                                            <span class="name">SC제일</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="부산"></span>
+                                            <span class="name">부산</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="하나"></span>
+                                            <span class="name">하나</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="에이피더핀"></span>
+                                            <span class="name">에이피더핀</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="새마을금고"></span>
+                                            <span class="name">새마을금고</span>
+                                        </button>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <!-- 카드 -->
+                            <div class="org_wrap org_card">
+                                <div class="certi_sel_all">
+                                    <div class="agChkItem">
+                                        <label for="chkAll2">
+                                            <p class="stit">카드</p>
+                                            <input type="checkbox" id="chkAll2"><i></i><span>전체 선택</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <ul class="ins1LinkLst">
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn"><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+                                            <span class="ico"><img src="../../img/bank/D1AAEV0000.png" alt="삼성카드"></span>
+                                            <span class="name">삼성카드</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn disable"><!-- 연동완료시 클래스 'disable' 추가 -->
+                                            <span class="ico"><img src="../../img/bank/A1AAIP0000.png" alt="신한카드"></span>
+                                            <span class="name">신한카드</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AABJ0000.png" alt="국민카드"></span>
+                                            <span class="name">국민카드</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AABG0000.png" alt="우리카드"></span>
+                                            <span class="name">우리카드</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="IBK기업카드"></span>
+                                            <span class="name">IBK기업카드</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="SC제일카드"></span>
+                                            <span class="name">SC제일카드</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="부산카드"></span>
+                                            <span class="name">부산카드</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="하나카드"></span>
+                                            <span class="name">하나카드</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="에이피더핀카드"></span>
+                                            <span class="name">에이피더핀카드</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="새마을금고카드"></span>
+                                            <span class="name">새마을금고</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="SC제일카드"></span>
+                                            <span class="name">SC제일카드</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="부산카드"></span>
+                                            <span class="name">부산카드</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="하나카드"></span>
+                                            <span class="name">하나카드</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="에이피더핀카드"></span>
+                                            <span class="name">에이피더핀카드</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="새마을금고카드"></span>
+                                            <span class="name">새마을금고</span>
+                                        </button>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <!-- 증권 -->
+                            <div class="org_wrap org_stock">
+                                <div class="certi_sel_all">
+                                    <div class="agChkItem">
+                                        <label for="chkAll3">
+                                            <p class="stit">증권</p>
+                                            <input type="checkbox" id="chkAll3"><i></i><span>전체 선택</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <ul class="ins1LinkLst">
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn"><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="경남은행"></span>
+                                            <span class="name">경남은행</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="부산은행"></span>
+                                            <span class="name">부산은행</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AABJ0000.png" alt="국민은행"></span>
+                                            <span class="name">국민은행</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AABG0000.png" alt="우리"></span>
+                                            <span class="name">우리</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn disable"><!-- 연동완료시 클래스 'disable' 추가 -->
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="IBK기업"></span>
+                                            <span class="name">IBK기업</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn disable"><!-- 연동완료시 클래스 'disable' 추가 -->
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="SC제일"></span>
+                                            <span class="name">SC제일</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="부산"></span>
+                                            <span class="name">부산</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="하나"></span>
+                                            <span class="name">하나</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="에이피더핀"></span>
+                                            <span class="name">에이피더핀</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="새마을금고"></span>
+                                            <span class="name">새마을금고</span>
+                                        </button>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <!-- 캐피탈 -->
+                            <div class="org_wrap org_loan">
+                                <div class="certi_sel_all">
+                                    <div class="agChkItem">
+                                        <label for="chkAll4">
+                                            <p class="stit">캐피탈</p>
+                                            <input type="checkbox" id="chkAll4"><i></i><span>전체 선택</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <ul class="ins1LinkLst">
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn"><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="경남은행"></span>
+                                            <span class="name">경남은행</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="부산은행"></span>
+                                            <span class="name">부산은행</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AABJ0000.png" alt="국민은행"></span>
+                                            <span class="name">국민은행</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AABG0000.png" alt="우리"></span>
+                                            <span class="name">우리</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn disable"><!-- 연동완료시 클래스 'disable' 추가 -->
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="IBK기업"></span>
+                                            <span class="name">IBK기업</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn disable"><!-- 연동완료시 클래스 'disable' 추가 -->
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="SC제일"></span>
+                                            <span class="name">SC제일</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="부산"></span>
+                                            <span class="name">부산</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="하나"></span>
+                                            <span class="name">하나</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="에이피더핀"></span>
+                                            <span class="name">에이피더핀</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="새마을금고"></span>
+                                            <span class="name">새마을금고</span>
+                                        </button>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <!-- 보험 -->
+                            <div class="org_wrap org_insu">
+                                <div class="certi_sel_all">
+                                    <div class="agChkItem">
+                                        <label for="chkAll5">
+                                            <p class="stit">보험</p>
+                                            <input type="checkbox" id="chkAll5"><i></i><span>전체 선택</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <ul class="ins1LinkLst">
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn"><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="경남은행"></span>
+                                            <span class="name">경남은행</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="부산은행"></span>
+                                            <span class="name">부산은행</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AABJ0000.png" alt="국민은행"></span>
+                                            <span class="name">국민은행</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AABG0000.png" alt="우리"></span>
+                                            <span class="name">우리</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn disable"><!-- 연동완료시 클래스 'disable' 추가 -->
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="IBK기업"></span>
+                                            <span class="name">IBK기업</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn disable"><!-- 연동완료시 클래스 'disable' 추가 -->
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="SC제일"></span>
+                                            <span class="name">SC제일</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="부산"></span>
+                                            <span class="name">부산</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="하나"></span>
+                                            <span class="name">하나</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="에이피더핀"></span>
+                                            <span class="name">에이피더핀</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="새마을금고"></span>
+                                            <span class="name">새마을금고</span>
+                                        </button>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <!-- pay -->
+                            <div class="org_wrap org_pay">
+                                <div class="certi_sel_all">
+                                    <div class="agChkItem">
+                                        <label for="chkAll6">
+                                            <p class="stit">pay</p>
+                                            <input type="checkbox" id="chkAll6"><i></i><span>전체 선택</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <ul class="ins1LinkLst">
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn"><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="경남은행"></span>
+                                            <span class="name">경남은행</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="부산은행"></span>
+                                            <span class="name">부산은행</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AABJ0000.png" alt="국민은행"></span>
+                                            <span class="name">국민은행</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AABG0000.png" alt="우리"></span>
+                                            <span class="name">우리</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn disable"><!-- 연동완료시 클래스 'disable' 추가 -->
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="IBK기업"></span>
+                                            <span class="name">IBK기업</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn disable"><!-- 연동완료시 클래스 'disable' 추가 -->
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="SC제일"></span>
+                                            <span class="name">SC제일</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="부산"></span>
+                                            <span class="name">부산</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="하나"></span>
+                                            <span class="name">하나</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="에이피더핀"></span>
+                                            <span class="name">에이피더핀</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="새마을금고"></span>
+                                            <span class="name">새마을금고</span>
+                                        </button>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <!-- 통신 -->
+                            <div class="org_wrap org_tel">
+                                <div class="certi_sel_all">
+                                    <div class="agChkItem">
+                                        <label for="chkAll7">
+                                            <p class="stit">통신</p>
+                                            <input type="checkbox" id="chkAll7"><i></i><span>전체 선택</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <ul class="ins1LinkLst">
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn"><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="경남은행"></span>
+                                            <span class="name">경남은행</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="부산은행"></span>
+                                            <span class="name">부산은행</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" href="#none" class="sel_btn">
+                                            <span class="ico"><img src="../../img/bank/D1AABJ0000.png" alt="국민은행"></span>
+                                            <span class="name">국민은행</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                                <!-- <div class="msgResult">
+                                    <p>연동할 자산이 없습니다</p>
+                                </div> -->
+                            </div>
+
+                        </div>
+                        <!-- [E] 기관 -->
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- [S] 하단 고정 영역 -->
+            <div class="fix_bottom bottom">
+                <div class="btn_wrap">
+                    <div class="btnGroup type2">
+                        <p><a href="intro_11.html" class="btnBl1" role="button" onclick="">한 번에 통합 조회하기</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- [E] 하단 고정 영역 -->
+
+        </div>
+    </div>
+    <!-- //container -->
+</div>
+<!-- //wrap -->
+
+
+
+
+
+<script>
+    $(document).ready(function(){
+        //은행,카드,기타 선택 탭
+        $(".tabInter").tabs({
+            wrapClass:".tabInter",
+            clickClass:".js_tabclickDp1",
+            showClass:".tab_cntDp1",
+            animate:false,
+            contentWidthFull:false,
+            animateBorder:["false",".tabs_header"],
+            fade:false,
+            speed:500
+        });
+
+        $(".sel_btn").on("click",function(){
+            $(this).toggleClass("on");
+            var chkSize = $(".sel_btn.on").size();
+            chkSize > 0 ? $(".fix_bottom").addClass("not_dock") : $(".fix_bottom").removeClass("not_dock");
+        })
+        $(".fix_bottom").removeClass("not_dock");
+
+    });
+
+    // [S] 바텀시트
+    $(document).on("click", ".btn_open_bottom_sheet", function(e){
+        e.preventDefault();
+        var $href = $(this).attr('href');
+        layer_bottomsheet($href);
+        $('html').addClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+        $focusReturn = $(this);
+    });
+    function layer_bottomsheet(el){
+        var $el = $(el);
+        $el.append("<div class=\"dim\"></div>");
+        isDim ? $('.layer_bottomsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
+        setTimeout(function() {
+            $el.find('.layer_inner').addClass('on');
+        }, 50);
+
+        var isDim = $el.siblings().hasClass('dim');
+
+        $el.find('.js_pop_close').click(function(){
+            $el.find('.layer_inner').removeClass('on');
+            setTimeout(function() {
+                isDim ? $('.layer_bottomsheet').hide() : $el.hide();
+                $('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+                $el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
+            }, 200);
+            $focusReturn.focus();
+            return false;
+        });
+
+    }
+    // [E] 바텀시트
+</script>
+</body>
+</html>

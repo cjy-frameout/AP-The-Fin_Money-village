@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title></title>
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="title" content="">-->
+    <meta name="description" content="">
+    <!--<meta name="keywords" content="">-->
+    <!-- The Open Graph protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+    <!-- //The Open Graph protocol -->
+    <link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/content.css">
+    <link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+    <link rel="stylesheet" type="text/css" href="../../css/mydata.css">
+    <link rel="stylesheet" href="../../css/insp.css">
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/cmd.js"></script>
+</head>
+
+<body>
+
+<!-- wrap -->
+<div class="wrap insp">
+
+    <!-- header -->
+    <div class="header setup"><!-- 2021-10-07 마이페이지 클래스 'setup' 추가 -->
+        <div class="header_inn">
+            <div class="left">
+                <!--<a href="#none" class="btnBack limit_hide"><span class="blind">Back</span></a>--><!-- 2021-11-23 뒤로가기 추가 -->
+            </div>
+            <div class="center">
+                <h2 class="tit_h2">자산 연동하기</h2>
+            </div>
+            <div class="right">
+                <!--<a href="#none" class="btnBack"><span class="blind">Back</span></a>-->
+            </div>
+        </div>
+    </div>
+    <!-- //header -->
+
+    <!-- container -->
+    <div class="container">
+        <div class="content">
+
+            <div class="ag_wrap">
+                <div class="agTx has_process_step">
+
+                    <h3>자산 조회를<br> 시작해주세요.</h3>
+                    <p>
+                        <span>고객님이 선택하신 개인신용정보를<br> 조회하기 위해 동의가 필요합니다.</span>
+                    </p>
+                </div>
+                <div class="terms_wrap">
+
+                    <div class="term_scroll term_01 line_div" aria-hidden="false" tabindex="1">
+
+                        <!-- [S] 약관 내용 -->
+                        <div class="terms_tit">
+                            <h3 style="color:#3E5FAC;font-weight: 700">가입상품 목록 전송요구서</h3>
+                        </div>
+                        <div class="servTerm">
+                            <div class="servTerm_tbl">
+                                <table>
+                                    <caption>전송요구 관련 자세한 안내</caption>
+                                    <colgroup>
+                                        <col style="width:35%;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <th>정보제공자</th>
+                                        <td>
+                                            주식회사 신한은행, 주식회사 하나은행, BNK캐피탈, 카카오페이
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>전송을 요구하는 개인신용정보</th>
+                                        <td>
+                                            <ul>
+                                                <li>• 은행 : 계좌(수신/투자상품/대출상품) 목록 및 개인형IRP 계좌 목록</li>
+                                                <li>• 카드 : 카드 목록 및 선불 카드 목록</li>
+                                                <li>• 할부금융 : 계좌(대출/운용리스) 목록</li>
+                                                <li>• 전자금융 : 선불전자지급수단 목록 및 계정 목록</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>개인신용정보를 제공받는 자</th>
+                                        <td>쿠콘</td>
+                                    </tr>
+                                    <tr>
+                                        <th>정기적 전송을 요구하는지 여부</th>
+                                        <td>아니오</td>
+                                    </tr>
+                                    <tr>
+                                        <th>전송요구의 종료시점</th>
+                                        <td class="middle">
+                                            <strong style="font-weight:500">상세정보 전송요구시까지 또는 7일 중 짧은 기간</strong>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- [E] 약관 내용 -->
+
+                    </div>
+
+                    <div class="term_scroll term_02 line_div" aria-hidden="true" tabindex="0">
+
+                        <!-- [S] 약관 내용 -->
+                        <div class="terms_tit">
+                            <h3 id="scroll02" style="color:#3E5FAC;font-weight: 700">개인(신용)정보 표준 수집 · 이용 동의</h3>
+                        </div>
+                        <div class="servTerm">
+                            <p class="tx">'쿠콘'은 ｢신용정보의 이용 및 보호에 관한 법률｣,｢개인정보 보호법｣ 등 관련 법령에 따라 다음과 같이 귀하의 개인 (신용)정보를 처리합니다.</p>
+                            <div class="servTerm_tbl">
+                                <table>
+                                    <caption>전송요구 관련 자세한 안내</caption>
+                                    <colgroup>
+                                        <col style="width:35%;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <th>전송을 요구하는 목적 및 수집 · 이용 목적</th>
+                                        <td>
+                                            상세정보 전송요구를 위한 가입상품 목록 조회
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>개인신용정보의 보유기간</th>
+                                        <td class="middle">
+                                            <strong>상세정보 전송요구시까지 또는 7일 중 짧은 기간</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>거부 권리 및 불이익</th>
+                                        <td>귀하는 개인(신용)정보 수집･이용에 관한 동의를 거부하실 수 있습니다. 다만, “수집･이용에 관한 동의”는 본인신용정보 통합조회, 데이터분석 서비스의 이용을 위한 필수적 사항이므로 동의를 거부하실 경우 본인신용정보 통합조회, 데이터분석 서비스의 이용이 제한될 수 있습니다.</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="servTerm_tbl">
+                                <p class="tbl_tit">&lt;수집 · 이용 항목 - 개인(신용)정보&gt;</p>
+                                <table>
+                                    <caption>개인(신용 정보) 수집 이용 항목 안내 표</caption>
+                                    <colgroup>
+                                        <col style="width:35%;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <th>개인(식별)정보</th>
+                                        <td>
+                                            전자서명, 접근토큰, 인증서, 전송요구서
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>신용거래정보</th>
+                                        <td>
+                                            수신계좌목록 : 고객정보 최초생성일시, 적요 정보 전송요구 여부, 계좌번호, 회차번호, 상품명, 외화계좌여부, 마이너스 약정 여부, 계좌번호 별 구분 코드, 계좌번호 별 상태 코드
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- [E] 약관 내용 -->
+
+                    </div>
+
+                    <div class="term_scroll term_03 line_div" aria-hidden="true" tabindex="0">
+
+                        <!-- [S] 약관 내용 -->
+                        <div class="terms_tit">
+                            <h3 id="scroll03" style="color:#3E5FAC;font-weight: 700">개인(신용)정보 제공 동의</h3>
+                        </div>
+                        <div class="servTerm">
+                            <p class="tx">귀하는 개인(신용)정보 제공에 관한 동의를 거부하실 수 있습니다. 다만, 개인(신용)정보의 제공에 관한 동의는 본인신용정보 통합조회, 데이터분석 서비스, 마이데이터 서비스 가입현황 안내 및 전송요구내역 통합조회 서비스 이용과 직접적으로 관련된 필수적 사항이므로 아래의 사항에 동의하셔야만 본인신용정보 통합조회, 데이터분석 서비스, 마이데이터서비스 가입현황 안내 및 전송요구내역 통합조회 서비스의 제공이 가능합니다.</p>
+                            <div class="servTerm_tbl">
+                                <table>
+                                    <caption>개인(신용정보) 제공 정보 안내 표</caption>
+                                    <colgroup>
+                                        <col style="width:83px;">
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <th class="bg_lgray">제공받는 자</th>
+                                        <td class="middle">
+                                            <strong>주식회사 신한카드, (주)카카오페이</strong>
+                                        </td>
+                                        <td class="middle">
+                                            <strong>한국신용정보원</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="bg_lgray">이용목적</th>
+                                        <td class="middle">
+                                            <strong>본인확인 및 개인(신용)정보의 전송</strong>
+                                        </td>
+                                        <td class="middle">
+                                            <strong>마이데이터서비스 가입현황 안내 및 전송요구내역 통합조회 서비스 제공</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="bg_lgray">보유 및 이용기간</th>
+                                        <td class="middle">
+                                            <strong>본인확인 및 개인(신용)정보의 전송 목적 달성시 까지</strong>
+                                        </td>
+                                        <td class="middle">
+                                            <strong>한국신용정보원의 마이데이터서비스 가입현황 안내 및 전송요구내역 통합조회 서비스 목적 달성시 까지</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="bg_lgray">제공항목</th>
+                                        <td class="middle">
+                                            전자서명, CI, 인증서, 전송요구서
+                                        </td>
+                                        <td class="middle">
+                                            회원 가입여부, 서비스목록수, 서비스목록, 클라이언트ID, 전송요구내역수, 전송요구내역목록, 정보제공자 기관코드, 권한 범위, 전송요구일자, 전송요구종료시점
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- [E] 약관 내용 -->
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- [S] 하단 고정 영역 -->
+            <div class="fix_bottom">
+                <div class="btn_wrap">
+                    <div class="btnGroup type_col">
+                        <p class="btn_step">
+                            <a href="#none" class="btnBl1 wide btMore n_1" role="button"><i class="more"></i>계속보기</a>
+                            <a href="#none" class="btnBl1 wide btAgr01" role="button">전송요구 동의하기</a>
+                            <a href="#none" class="btnBl1 wide btAgr02" role="button">수집ㆍ이용 동의하기</a>
+                            <a href="intro_12.html" class="btnBl1 wide btAgr03" role="button">동의하기</a>
+                        </p>
+                        <p class="btn_agree_cancel tac"><a href="#none" class="btnUnder">동의하지 않음 (돌아가기)</a></p><!-- 2022-08-17 동의하기 버튼 위로 이동 -->
+                    </div>
+                </div>
+            </div>
+            <!-- [E] 하단 고정 영역 -->
+        </div>
+    </div>
+    <!-- //container -->
+
+</div>
+<!-- //wrap -->
+<script>
+    $(document).ready(function(){
+
+        termsStepScrollXXC9000(); // 호출, 인증 동의 스크롤 모션
+
+    });
+
+    /* [S] 인증 동의 스크롤 모션 */
+    function termsStepScrollXXC9000(){
+        var $term_01 = $('.term_01');
+        var $term_02 = $('.term_02');
+        var $term_03 = $('.term_03');
+        var $btMore = $('.btMore');
+        var $btAgr01 = $('.btAgr01');
+        var $btAgr02 = $('.btAgr02');
+        var $btAgr03 = $('.btAgr03');
+        var $contSpace = 20;
+        var $windowInnerHeight = window.innerHeight;//window.innerHeight;
+        //console.log('contentsHeight: '+ ($('.header').height() + $('.container').height() + $contSpace), 'windowInnerHeight: '+ $windowInnerHeight);
+        //$('.js_tit_2').hide();
+
+        $(window).scroll(function(){
+            var $windowTop = $(window).scrollTop();
+            var $windowBottom = document.body.offsetHeight - $windowInnerHeight;
+            var $contentsHeight = ($('.header').height() + $('.container').height());
+            //console.log('windowTop: '+$windowTop, 'windowBottom: '+ $windowBottom, 'contentsHeight: '+ $contentsHeight);
+
+            if($('.btMore.n_1').length){
+                if($windowTop >= $windowBottom - $contSpace){// 2022-09-01 하단 js, '- $contSpace' if문 3개에 추가
+                    $btAgr01.css('display','flex');
+                    $('.btMore.n_1').hide();
+                }
+            }else if($('.btMore.n_2').length){
+                if($windowTop >= $windowBottom - $contSpace){// 2022-09-01 하단 js, '- $contSpace' if문 3개에 추가
+                    $btAgr02.css('display','flex');
+                    $('.btMore.n_2').hide();
+                }
+            }else if($('.btMore.n_3').length){
+                if($windowTop >= $windowBottom - $contSpace){// 2022-09-01 하단 js, '- $contSpace' if문 3개에 추가
+                    $btAgr03.css('display','flex');
+                    $('.btn_agree_cancel').show();
+                    $('.btMore.n_3').hide();
+                }
+            }
+        });
+
+        // 스크롤 미생성시
+        if($windowInnerHeight > $('.header').height() + $('.container').height()){
+            $btAgr01.css('display','flex');
+            $('.btMore.n_1').hide();
+        }
+
+        // [1] 1번째 계속보기 버튼
+        $('.btMore.n_1').click(function () {
+            var $windowTop = $(window).scrollTop() - 55;
+            $('html, body').animate({scrollTop: $windowTop + $windowInnerHeight}, 700);
+        });
+        // [2] 전송요구 동의하기 버튼
+        $btAgr01.click(function () {
+            $('.btMore').css('display','flex');
+            $btAgr01.hide();
+            $('.btMore.n_1').removeClass('n_1').addClass('n_2').show();
+            $term_02.show().attr({'aria-hidden':'false','tabindex':'1'}).focus();
+            var nowScroll = $("#scroll02").offset().top - 90;
+            $(window).scrollTop(nowScroll);
+
+
+            if($windowInnerHeight > $('.header').height() + $('.container').height() + $contSpace){
+                $btAgr02.css('display','flex');
+                $('.btMore.n_2').hide();
+                //console.log('계속보기 n_2 숨기기');
+            }
+            //console.log('전송요구 동의하기 버튼: ' + ($('.header').height() + $('.container').height()), 'windowInnerHeight: '+ $windowInnerHeight);
+        });
+        // [3] 2번째 계속보기 버튼
+        $('.btMore.n_2').click(function () {
+            var $windowTop = $(window).scrollTop() - 55;
+            $('html, body').animate({scrollTop: $windowTop + $windowInnerHeight}, 700);
+            if($windowInnerHeight > $('.header').height() + $('.container').height() + $contSpace){
+                $btAgr02.css('display','flex');
+                $('.btMore.n_2').hide();
+            }
+            //console.log('2번째 계속보기 버튼: ' + ($('.header').height() + $('.container').height()), 'windowInnerHeight: '+ $windowInnerHeight);
+        });
+        // [2] 수집 이용 동의하기 버튼
+        $btAgr02.click(function () {
+            //$('.js_tit_2').show();
+            $('.btMore').css('display','flex');
+            $btAgr02.hide();
+            $('.btMore.n_2').removeClass('n_2').addClass('n_3').show();
+            $term_03.show().attr({'aria-hidden':'false','tabindex':'1'}).focus();
+            var nowScroll = $("#scroll03").offset().top - 90;
+            $(window).scrollTop(nowScroll);
+            if($windowInnerHeight > $('.header').height() + $('.container').height() + $contSpace){
+                $btAgr03.css('display','flex');
+                $('.btMore.n_3').hide();
+            }
+            //console.log('수집 이용 동의하기 버튼: ' + ($('.header').height() + $('.container').height()), 'windowInnerHeight: '+ $windowInnerHeight);
+        });
+        // [4] 3번째 계속보기 버튼
+        $('.btMore.n_3').click(function () {
+            var $windowTop = $(window).scrollTop() - 55;
+            $('html, body').animate({scrollTop: $windowTop + $windowInnerHeight}, 700);
+        });
+        /* [E] 인증 동의 스크롤 모션 */
+    }
+</script>
+
+</body>
+</html>
