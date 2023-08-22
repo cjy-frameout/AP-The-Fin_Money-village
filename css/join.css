@@ -1,0 +1,159 @@
+.introLogo {
+    display: block;
+    margin: 0 auto;
+    overflow:hidden;
+    text-indent: -999px;
+    background:url("../img/theme/apthefin/icon/ico_intro_tit.png") no-repeat 0 0;
+    background-size:cover;
+    width:102px;
+    height:25px;
+    padding:0;
+}
+.introSub {
+    font-size:20px;
+    font-weight: 500;
+    line-height:26px;
+    letter-spacing: -0.4px;
+    color:#333;
+    margin-top:30px;
+}
+
+.introRequest {
+    margin-top:20px;
+}
+.introRequest li {
+    padding-left:64px;
+    position: relative;
+}
+.introRequest li:not(:first-of-type) {
+    margin-top:20px;
+}
+.introRequest li:before {
+    content:"";
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: block;
+    width:24px;
+    height:24px;
+    position: absolute;
+    left:10px;
+    top:50%;
+    transform: translateY(-50%);
+}
+.introRequest li.-phone:before {
+    background-image: url("../img/theme/apthefin/icon/ic_phone.png");
+}
+.introRequest li.-folder:before {
+    background-image: url("../img/theme/apthefin/icon/ic_folder.png");
+}
+.introRequest li.-address:before {
+    background-image: url("../img/theme/apthefin/icon/ic_address.png");
+}
+.introRequest li.-pinPoint:before {
+    background-image: url("../img/theme/apthefin/icon/ic_pin.png");
+}
+.introRequest li.-camera:before {
+    background-image: url("../img/theme/apthefin/icon/ic_cam.png");
+}
+
+.introRequest__tit {
+    flex-shrink: 0;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color:#333;
+}
+.introRequest__txt {
+    font-size:13px;
+    font-weight:400;
+    line-height: 18px;
+    color:#999;
+    display:block;
+    margin-top:2px;
+}
+
+.cdChkItem.roundType label input[type=radio] + i {
+    width:20px;
+    height:20px;
+    border:1px solid #E5E5E5;
+    background:#fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+
+
+
+
+.cdChkItem.roundType label input[type=radio]:checked + i {
+    border-color:#3E5FAC;
+}
+.cdChkItem.roundType label input[type=radio]:checked + i:after {
+    content:"";
+    display: block;
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    background-color:#3E5FAC;
+}
+.cdChkItem.roundType label input[type=radio]:checked ~ span {
+    color:#3E5FAC;
+}
+
+.input-box.password-last-one {
+    width:100%;
+}
+.input-box.password-last-one .password-disc-wrap {
+    left:20px;
+    bottom:1px;
+    height:41px;
+}
+
+.sampleMassage {
+    display: block;
+    vertical-align: top;
+    width:100%;
+    margin:20px auto 0;
+    max-width:320px;
+}
+
+.list li {
+    font-size:13px;
+    font-weight: 400;
+    line-height: 18px;
+    color:#666;
+}
+.list li:not(:first-of-type) {
+    margin-top:8px;
+}
+
+.txt-font15 {
+    font-size:15px;
+    font-weight: 500;
+    line-height:22px;
+    color:#333;
+}
+
+.agChkLst.no-border {
+    padding:0;
+    border:none;
+    margin:10px 0 0 0;
+}
+.agChkLst.no-border .agChkSubList {
+    border-top:none;
+    margin-top:0;
+}
+.no-border .agChkItem.all label {
+    border-bottom:1px solid #eee;
+    padding-bottom:19px;
+}
+
+.agChkItem.underLine {
+    padding-bottom:19px;
+    border-bottom:1px solid #eee;
+    margin-bottom:15px;
+}
