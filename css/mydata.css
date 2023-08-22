@@ -283,7 +283,7 @@ input[type="password"] {
     transition: all 0.5s;
     height: 0;
     overflow:hidden;
-    margin: 13px 0;
+    margin: 15px 0;
 }
 .accSetting.anima .editName:nth-of-type(1) { order: 4}
 .accSetting.anima .editName:nth-of-type(2) { order: 3}
@@ -295,11 +295,28 @@ input[type="password"] {
     overflow:hidden;
 }
 .accSetting.anima .editName.close {
-    
     height: 0;
     opacity: 0;
     margin: 0;
 }
+.chkLabel-type-btn {
+    border: 1px solid #E5E5E5;
+    border-radius: 6px;
+    color: #666;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+input[type="checkbox"]:checked + .chkLabel-type-btn { 
+    color: #3E5FAC;
+    border: 1px solid #3E5FAC;
+    font-weight: 700;
+}
+.itemTit + .input-box { margin-top: 10px; }
 /* ========================================== E : input CSS ========================================================= */
 
 /* =========================================== S : common =========================================================== */
@@ -434,6 +451,13 @@ input[type="password"] {
     font-weight: 400;
     line-height: 1.3;
 }
+.cont-desc-small {
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+.cont-title-big + .cont-desc-small { margin-top: 8px;}
 .list-wrap.hasImg {
     background: url(../img/theme/apthefin/FINS04010000.png) no-repeat 50% 0;
     padding-top: 280px; 
@@ -513,6 +537,18 @@ input[type="password"] {
 .fwb { font-weight: bold;}
 .dash { margin: 0 10px; }
 .no-result { font-size: 14px; font-weight: 500; color: #999; padding: 30px; text-align: center; }
+.filterTit {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.desc-wrap + .filterItem {
+    margin-top: 50px;
+}
+.filter-title-wrap .filterTit { margin-bottom: 2px; }
+.filter-title-wrap + .radioTab { margin-top: 10px; }
 /* ========================================================= E : common  =====================================================*/
 /* S : component */
 .credit-score {
@@ -555,6 +591,77 @@ input[type="password"] {
     line-height: 1.3;
 }
 .business-num + .business-address { margin-top: 4px; }
+.editName + .editName { margin-top: 30px; }
+.searching-loan { position: relative; width: 100%; min-height: 316px; margin-top: 80px; }
+.circle-big {
+    border-radius: 50%;
+    height: 316px;
+    width: 316px;
+    background: #F8EAEE;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: circleMove 1s alternate infinite both;
+    transform-origin: 0 0;
+    border: 1px solid #EECAD3;
+}
+.circle-mid {
+    border-radius: 50%;
+    border: 1px solid #EECAD3;
+    height: 206px;
+    width: 206px;
+    background: #F4DBE1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: circleMove2 1s alternate infinite both;
+    transform-origin: 0 0;
+ }
+.circle-small {
+    border-radius: 50%;
+    border: 1px solid #EECAD3;
+    height: 80px;
+    width: 80px;
+    background-image: url(../img/theme/apthefin/icon_house2.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #FFF2F2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: circleMove3 0.5s alternate infinite both;
+    transform-origin: 0 0;
+}
+
+@keyframes circleMove {
+    0% {
+        scale: 1;
+    }
+    100% {
+        scale: 0.9;
+    }
+}
+
+@keyframes circleMove2 {
+    0% {
+        scale: 0.7;
+    }
+    100% {
+        scale: 1.2;
+    }
+}
+@keyframes circleMove3 {
+    0% {
+        scale: 1;
+    }
+    100% {
+        scale: 0.9;
+    }
+}
+
 /* E : component */
 /* S : Layout  */
 .header {

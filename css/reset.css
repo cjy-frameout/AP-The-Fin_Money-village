@@ -47,7 +47,7 @@ a:hover, a:active{text-decoration:none;color:#000;cursor:pointer;}
 a, button {-webkit-tap-highlight-color:rgba(0,0,0,.03);}
 .scroll_lock{overflow:hidden;touch-action:none;}
 .hide{display:none !important;}
-.blind{position:absolute;overflow:hidden;width:1px;height:1px;margin:-1px;padding:0;border:0;clip:rect(0,0,0,0);}
+.blind{position:absolute;overflow:hidden;width:1px !important;height:1px !important;margin:-1px !important;padding:0 !important;border:0 !important;clip:rect(0,0,0,0);}
 .normal{font-weight:400;}
 .medium{font-weight:500;}
 .bold{font-weight:700;}

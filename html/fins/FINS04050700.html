@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title>추가정보입력 | 대출비교 > 정보입력</title>
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <link rel="SHORTCUT ICON" href="">
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/content.css">
+    <link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+    <link rel="stylesheet" type="text/css" href="../../css/mydata.css">
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/cmd.js"></script>
+    <script type="text/javascript" src="../../js/interaction.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- header -->
+        <div class="header">
+            <div class="header_inn">
+                <div class="left">
+                    <a href="#none" class="btnBack"><span class="blind">Back</span></a>
+                </div>
+                <div class="center">
+                    <h2 class="tit_h2">추가정보 입력</h2>
+                </div>
+                <div class="right">
+                    <a href="#none" class="btnMenu"><span class="blind">menu</span></a>
+                </div>
+            </div>
+        </div>
+        <!-- //header -->
+        <div class="container">
+            <div class="content">
+                <div class="desc-wrap mgt20">
+                    <h3 class="cont-title-big"><span class="pointColor3">추가 정보</span>를 입력해주세요</h3>
+                    <p class="cont-desc-small">추가정보 입력으로 더욱 다양한 상품을 찾을 수 있어요.</p>
+                </div>
+                
+                <div class="filterItem">
+                    <div class="filter-title-wrap">
+                        <p class="filterTit">주거정보</p>
+                        <p class="cont-desc-small">본인 명의의 집을 보유하고 있나요?</p>
+                    </div>
+                    
+                    <ul class="radioTab">
+                        <li class="radioMid">
+                            <input type="radio" id="radio1" name="radioTab1" class="blind" checked="">
+                            <label for="radio1">네, 있어요</label>
+                        </li>
+                        <li class="radioMid">
+                            <input type="radio" id="radio2" name="radioTab1" class="blind">
+                            <label for="radio2">아니오, 없어요</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="accSetting">
+                    <div class="editName">
+                        <h4 for="name" class="itemTit">차량정보</h4>
+                        <div class="input-box items2">
+                            <input type="checkbox" id="chk-btn1" class="blind">
+                            <label for="chk-btn1" class="chkLabel-type-btn">제 명의의 차량을 갖고 있어요</label>
+                        </div>
+                    </div>
+                    <div class="editName">
+                        <h4 for="name" class="itemTit">차량번호</h4>
+                        <input type="text" id="name" title="이름" required="required" placeholder="예) 00가0000, 서울00가0000" value="">
+                        <p class="input-err-desc">올바른 자동차 번호 형식이 아닙니다.</p>
+                    </div>
+                </div>
+                
+
+                <div class="btn-wrap fixed noBorder vertical">
+                    <a href="#car-confirm" class="btnBl1 btn-open-layerPop" role="button">확인</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="car-confirm" class="layer_popup type2" role="dialog" tabindex="-1" aria-hidden="true"> 
+            <div class="layer_position">
+                <div class="layer_inner">
+                    <div class="layer_cont">
+                        <div class="msg_box">
+                            <p class="msg_alert fs-14"> 
+                                <span class="pointColor- fs-18">차량번호 확인</span><br>
+                                차량번호가 존재하지 않습니다.<br>
+                                차량번호를 확인하여 주세요.
+                            </p>
+                            <!-- 차량소유자 불일치 일경우
+                            <p class="msg_alert fs-14"> 
+                                <span class="pointColor- fs-18">차량소유자 확인</span><br>
+                                차량소유자 정보와 일치하지 않습니다.<br>
+                                차량번호를 확인하여 주세요.
+                            </p>
+                            -->
+                        </div>
+                        <div class="btn_layer_wrap">
+                            <button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <script>
+        // [S] 바텀시트
+        $(document).on("click", ".btn_open_bottom_sheet", function(e){
+            e.preventDefault();
+            var $href = $(this).attr('href');
+            layer_bottomsheet($href);
+            $('html').addClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+            $focusReturn = $(this);
+            if($href == '#layer_SHE1211'){
+                $(".filterFolding").trigger("click");
+            }
+        });
+        function layer_bottomsheet(el){
+            var $el = $(el);
+            $el.append("<div class=\"dim\"></div>");
+            isDim ? $('.layer_bottomsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
+            setTimeout(function() {
+                $el.find('.layer_inner').addClass('on');
+            }, 50);
+
+            var isDim = $el.siblings().hasClass('dim');
+
+            $el.find('.js_pop_close').click(function(){
+                $el.find('.layer_inner').removeClass('on');
+                setTimeout(function() {
+                    isDim ? $('.layer_bottomsheet').hide() : $el.hide();
+                    $('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+                    $el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
+                }, 200);
+                $focusReturn.focus();
+                return false;
+            });
+        }
+        // [E] 바텀시트
+    </script>
+</body>
+</html>
