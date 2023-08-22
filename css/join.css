@@ -104,13 +104,9 @@
     color:#3E5FAC;
 }
 
-.input-box.password-last-one {
-    width:100%;
-}
-.input-box.password-last-one .password-disc-wrap {
-    left:20px;
-    bottom:1px;
-    height:41px;
+
+.password-last-one .password-disc-wrap {
+    padding-left:20px;
 }
 
 .sampleMassage {
