@@ -1848,7 +1848,9 @@ $(document).ready(function(){
 					, layerCnt = 0
 					, popupCnt = 0
 					, resultCnt = 0
+					, devResultCnt = 0
 					, result_exCnt = 0
+					, devResult_exCnt = 0
 					, realCnt = 0
 					, childCnt = 0
 					// , totalCnt = 0
@@ -1865,6 +1867,7 @@ $(document).ready(function(){
 					}
 
 					var rdateTxtFlag = $(this).find('td.rdate').text() ? true : false;//완료
+					var devdateTxtFlag = $(this).find('td.devdate').text() ? true : false;//완료
 					var popTxtFlag = ($(this).find('td.page').text().indexOf('pop') != -1 || $(this).find('td').text().indexOf('popup') != -1) ? true : false;//팝업
 
 					//Delete 포함
@@ -1878,6 +1881,9 @@ $(document).ready(function(){
 
 						if(rdateTxtFlag) resultCnt++;//완료
 						else result_exCnt++//미완료
+
+						if(devdateTxtFlag) devResultCnt++;
+						else devResult_exCnt++
 
 						if(popTxtFlag) {//팝업
 							popupCnt++;
@@ -1928,7 +1934,9 @@ $(document).ready(function(){
 
 				// var realPercent = Math.round((1-(result_exCnt/(totalCnt - delCnt)))*100);
 				var realPercent = Math.round((resultCnt/(totalCnt))*100);
-				$('.total_rate span').text("완료율 : " + realPercent +' % ');
+				var devRealPercent = Math.round((devResultCnt/(totalCnt))*100);
+				$('.total_rate span').text("퍼블완료율 : " + realPercent +' % ');
+				$('.total_dev_rate span').text("개발완료율 : " + devRealPercent +' % ');
 			}
 
 			//Calculator : 각 카테고리별 통계

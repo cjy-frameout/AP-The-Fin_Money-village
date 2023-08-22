@@ -47,16 +47,24 @@
         <div class="container">
             <div class="content">
                 <div class="desc-wrap mgt20">
-                    <h3 class="cont-title-big pointColor3">직업을 선택해주세요</h3>
+                    <!-- 직작인 선택했을 경우 : 각 단계별 타이틀 다르게 나옴 -->
+                    <h3 class="cont-title-big pointColor3">직업을 선택해 주세요</h3>
+                    <!-- <h3 class="cont-title-big pointColor3">직장명을 입력해 주세요</h3>
+                    <h3 class="cont-title-big pointColor3">입사일을 입력해 주세요</h3>
+                    <h3 class="cont-title-big pointColor3">고용형태를 선택해 주세요</h3> -->
+
+                    <!-- 개인 사업자 선택했을 경우 : 각 단계별 타이틀 다르게 나옴 -->
+                    <!-- <h3 class="cont-title-big pointColor3">사업장명(상호)을 입력해 주세요</h3>
+                    <h3 class="cont-title-big pointColor3">개업일자를 입력해 주세요</h3>
+                    <h3 class="cont-title-big pointColor3">업종형태를 선택해 주세요</h3>  -->
                 </div>
                 
-                <div class="accSetting anima">
+                <div class="accSetting">
                     <div class="editName open"> <!-- open, close 클래스를 토글합니다. -->
                         <p role="label" class="itemTit">직업</p>
                         <div class="sel_form type_border no-border"> <!-- 선택시 on 클래스 추가 -->
                             <a href="#layerJob" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>예)직장인</span></a>
                         </div>
-                        
                     </div>
                     <div class="editName open">
                         <label for="name" class="itemTit">직장명</label>
@@ -70,7 +78,7 @@
                     <div class="editName open">
                         <p role="label" class="itemTit">고용형태</p>
                         <div class="sel_form type_border no-border"> <!-- 선택시 on 클래스 추가 -->
-                            <a href="#none" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>예)정규직</span></a>
+                            <a href="#jobType" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>예)정규직</span></a>
                         </div>
                     </div>
                 </div>
@@ -140,6 +148,50 @@
             </div>
             <div class="layer_footer">
                 <button type="button" class="js_pop_close btn_confirm"><span>저장</span></button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="jobType" class="layer_bottomsheet">
+        <div class="layer_inner">
+            <div class="layer_tit type2">
+                <strong class="tit"><span>고용형태</span></strong>
+                <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+            </div>
+            <div class="layer_cont" style="max-height: 678px;">
+                <div class="cdChkLst">
+                    <!-- <div class="cdChkItem all">
+                        <label for="radio1">
+                            <input type="radio" name="jobinfo" id="radio1">
+                            <i></i><span id="">직장인</span>
+                        </label>
+                    </div> -->
+                    <ul class="cdChkSubList">
+                        <li class="cdChkItem"> 
+                            <label for="radio2">
+                                <input type="radio" name="jobinfo" id="radio2">
+                                <i></i><span id="">정규직</span>
+                            </label>
+                        </li>
+                        <li class="cdChkItem"> 
+                            <label for="radio3">
+                                <input type="radio" name="jobinfo" id="radio3">
+                                <i></i><span id="">계약직</span>
+                            </label> 
+                        </li>
+                        <li class="cdChkItem"> 
+                            <label for="radio4">
+                                <input type="radio" name="jobinfo" id="radio4">
+                                <i></i><span id="">기타</span>
+                            </label>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="layer_footer">
+                <button type="button" class="js_pop_close btn_confirm"><span>선택</span></button>
             </div>
         </div>
     </div>

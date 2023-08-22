@@ -64,7 +64,7 @@ function inc_filter(){
 	str+='		<tbody>';
 
 	str+='			<tr>';
-	str+='				<th rowspan="2"><span class="total_rate">&nbsp;<span></th>';
+	str+='				<th rowspan="2"><span class="total_rate">&nbsp;<span></span></span><br>  <span class="total_dev_rate">&nbsp;<span></span></span></th>';
 	str+='				<td class="filterOption">';
 	str+='					<p><strong>* Delete :</strong>';
 	str+='						<label><input type="radio" name="ch_del" id=del01 value="true"  /> 포함</label>';
@@ -109,17 +109,18 @@ function inc_IAHead(){
 	str+='<caption>작업 리스트</caption>';
 	str+='<colgroup>';
 	str+='	<col width="3%" /><!-- 번호 -->';
-	str+='	<col class="depth2" style="width:10%" /><!-- 2Depth -->';
-	str+='	<col class="depth3" style="width:10%" /><!-- 3Depth -->';
-	str+='	<col class="depth4" style="width:10%" /><!-- 4Depth -->';
-	str+='	<col class="depth5" style="width:10%" /><!-- 4Depth -->';
-	str+='	<col class="depth6" style="width:10%" /><!-- 5Depth -->';
+	str+='	<col class="depth2" style="width:8%" /><!-- 2Depth -->';
+	str+='	<col class="depth3" style="width:8%" /><!-- 3Depth -->';
+	str+='	<col class="depth4" style="width:8%" /><!-- 4Depth -->';
+	str+='	<col class="depth5" style="width:8%" /><!-- 4Depth -->';
+	str+='	<col class="depth6" style="width:8%" /><!-- 5Depth -->';
 	str+='	<col class="page" style="width:5%" /><!-- Page -->';
 	str+='	<col class="path" style="width:15%" /><!-- 경로 -->';
 	// str+='	<col class="planner" style="width:4%" /><!-- 기획자 -->';
-	str+='	<col class="rdate" style="width:4%" /><!-- 완료일 -->';
+	str+='	<col class="rdate" style="width:4%" /><!-- 퍼블 완료일 -->';
+	str+='	<col class="rdate" style="width:4%" /><!-- 개발 완료일 -->';
 	str+='	<col class="id" style="width:6%" /><!-- ID -->';
-	str+='	<col class="info" style="width:10%" /><!-- 요약 -->';
+	str+='	<col class="info" style="width:13%" /><!-- 요약 -->';
 	str+='	<col class="etc" style="width:auto" /><!-- 비고 -->';
 	str+='</colgroup>';
 	str+='<thead>';
@@ -133,7 +134,8 @@ function inc_IAHead(){
 	str+='		<th scope="col" class="page">Page</th>';
 	str+='		<th scope="col" class="path">Path</th>';
 	// str+='		<th scope="col" class="planner">기획자</th>';
-	str+='		<th scope="col" class="rdate">End</th>';
+	str+='		<th scope="col" class="rdate">Pub End</th>';
+	str+='		<th scope="col" class="rdate">Dev End</th>';
 	str+='		<th scope="col" class="mdate">ID</th>';
 	str+='		<th scope="col" class="info">Info</th>';
 	str+='		<th scope="col" class="etc">Log</th>';
