@@ -161,3 +161,49 @@
     height:280px;
     margin:20px auto 0;
 }
+
+
+.accBox {
+    border:1px solid #E5E5E5;
+    border-radius: 10px;
+}
+.accBox-tit {
+    padding:20px;
+    display: block;
+    font-size:15px;
+    font-weight:500;
+    line-height:22px;
+    color:#333;
+    position: relative;
+}
+
+.accBox-tit:after {
+    content:"";
+    display:block;
+    width:11px;
+    height:6px;
+    background:url("../img/ic/ic_arw_folding.png") no-repeat 50% 100%;
+    background-size:11px auto;
+    position: absolute;
+    right:20px;
+    top:50%;
+    margin-top:-3px;
+}
+.accBox-content {
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+}
+.accBox-item:not(:first-of-type) {
+    border-top:1px solid #e5e5e5;
+}
+.accBox-tit.-active:after {
+    transform: rotate(180deg);
+}
+.accBox-tit.-active ~ .accBox-content {
+    max-height:1000px;
+    border-top:1px solid #e5e5e5;
+}
+.accBox-inner {
+    padding:20px;
+}

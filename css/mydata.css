@@ -505,6 +505,9 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     position: relative;
     padding-left: 7px;
 }
+.list-typeB-li:not(:first-of-type) {
+    margin-top:4px;
+}
 .list-typeB-li:before {
     content:'·';
     display: inline-block;

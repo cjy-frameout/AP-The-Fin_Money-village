@@ -1,4 +1,4 @@
-﻿﻿(function ($){
+﻿(function ($){
     //tabs have 3 style normorl fade and animate
     $.fn.tabs = function(options){
         try{
@@ -104,6 +104,13 @@
 
 // 2021-06-30
 $(document).ready(function(){
+    //아코디언 메뉴
+    $(".accBox-tit").on("click",function(e) {
+        e.preventDefault();
+        $(this).closest('.accBox').find(".accBox-tit").removeClass("-active");
+        $(this).addClass("-active");
+
+    });
 
 	/* 팝업 접근성 초기값 */
 	$('.layer_popup, .layer_bottomsheet').attr({'role':'dialog','tabindex':'-1','aria-hidden':'true'});

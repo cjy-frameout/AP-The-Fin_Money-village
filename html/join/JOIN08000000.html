@@ -37,13 +37,32 @@
             <p class="joinComplete-dec">나의 모든 계좌, 대출 등을 한 번에 확인</p>
             <div class="joinComplete-img"></div>
 
-            <div class="accSetting">
-                <div class="editName">
-                    <div class="sel_form type_border mgt10"> <!-- 선택시 on 클래스 추가 -->
-                        <a href="#layer_bs" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>유의사항</span></a>
+            <div class="accBox mgt20 mgb30">
+                <div class="accBox-item" id="acc01">
+                    <a href="#acc01" class="accBox-tit">유의사항</a>
+                    <div class="accBox-content">
+                        <div class="accBox-inner">
+                            <ul class="list-typeB">
+                                <li class="list-typeB-li">
+                                    서비스 이용을 위해서는 에이피더핀의 개인(신용)정보 수집 · 이용에 관한 동의가 필요합니다.
+                                </li>
+                                <li class="list-typeB-li">개인(신용)정보 제3자 정보제공에 동의할 경우, 고객님의 개인(신용)정보 중 일부를 본인확인 및 회원가입, 민원처리
+                                    등을 위하여 ㈜에이피더핀에 제공합니다.
+                                </li>
+                                <li class="list-typeB-li">㈜에이피더핀에 개인(신용)정보 제공을 거부할 수 있습니다. 다만, 개인(신용)정보 제공을 거부할 경우 이 서비스를
+                                    이용하실 수 없습니다.
+                                </li>
+                                <li class="list-typeB-li">제공되는 정보 : 성명, 생년월일, 성별, 휴대전화번호, 이메일 주소, CI값<br>※ CI값은 주민등록번호를
+                                    대신하여 본인확인을 할 수 있는 대체수단으로써, 방송통신위원회의 허가를 받은 본인확인기관(한국정보인증, KCB, NICE 등)에서 부여합니다.
+                                </li>
+                                <li class="list-typeB-li">에이피더핀의 보유기간 : (주)에이피더핀 마이데이터 서비스의 이용해지, 동의철회, 회원탈회 시까지 보유 · 이용
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+
 
             <div class="btn-wrap fixed noBorder vertical">
                 <a href="#none" class="btnBl1" role="button">시작하기</a>
@@ -54,87 +73,17 @@
     </div>
 </div>
 
-<!-- [S] 유의사항 -->
-<div id="layer_bs" class="layer_bottomsheet">
-    <div class="layer_inner">
-        <div class="layer_tit type2">
-            <strong class="tit">유의사항 안내</strong>
-            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
-        </div>
-        <div class="layer_cont">
-            <!-- 내용 -->
-            <div class="msg_box">
-                <ul class="notice_list">
-                    <li class="list">
-                        <span class="tx">
-                            내용이 아직 없습니다.
-                        </span>
-                    </li>
-                    <li class="list">
-                        <span class="tx">
-                            내용이 아직 없습니다.
-                        </span>
-                    </li>
-                </ul>
-            </div>
-            <!-- //내용 -->
-        </div>
-        <div class="layer_footer">
-            <button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
-        </div>
-    </div>
-</div>
-<!-- [E] 유의사항 -->
+
 
 
 </body>
 <script>
-    $(document).on("click", ".btn_open_bottom_sheet", function(e){
-        e.preventDefault();
+    $(document).ready(function(){
+        //유의사항 클릭시 스크롤 내리기
+        $(".accBox-tit").on("click",function(){
+            $(this).hasClass("-active") && $('body,html').animate({scrollTop: $(document).height()}, 800);
+        })
 
-        var $href = $(this).attr('href');
-        layer_bottomsheet($href);
-        $('html').addClass('scroll_lock');
-
-        // [S] multi layer 2021-08-02 추가
-        var dimIdx = $('.dim').index();
-        eval('$focusReturn' + [dimIdx] + '= $(this)');
-
-    });
-    function layer_bottomsheet(el){
-        var $el = $(el);
-        $el.append("<div class=\"dim\"></div>");
-        isDim ? $('.layer_bottomsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
-        setTimeout(function() {
-            $el.find('.layer_inner').addClass('on');
-        }, 50);
-
-        var isDim = $el.siblings().hasClass('dim');
-
-        var dimIdx = $('.dim').index();
-        var thisDim = $el.find('.dim');
-        var thisLyZindex = dimIdx + 4000;
-        $('.dim').css('opacity','0');
-        thisDim.css('opacity','.7');
-        thisDim.closest('.layer_bottomsheet, .layer_popup').css('z-index', thisLyZindex);
-
-        $el.find('.js_pop_close').click(function(){
-
-            $el.find('.layer_inner').removeClass('on');
-            setTimeout(function() {
-                isDim ? $('.layer_bottomsheet').hide() : $el.hide();
-                $('html').removeClass('scroll_lock');
-                $el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
-                if($('.dim').length == 2){
-                    $('.dim:eq(1)').css('opacity','.7');
-                }else if($('.dim').length == 1){
-                    $('.dim').css('opacity','.7');
-                }
-            }, 200);
-            eval('$focusReturn'+ [dimIdx]).focus();
-
-            return false;
-        });
-    }
+    })
 </script>
 </html>

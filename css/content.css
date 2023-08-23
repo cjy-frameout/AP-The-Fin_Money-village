@@ -721,6 +721,7 @@
 .agChkLst{padding:20px;border:1px solid #ddd;border-radius:6px;}
 .agChkLst + .agChkLst {margin-top:10px;}
 .agChkItem {position:relative;}
+.agChkItem-tit {font-size:15px;font-weight:500;line-height:23px;color:#333}
 .agChkItem + .agChkItem {margin-top:13px;}
 .agChkLst .agChkSubList {padding:14px 0 0 30px;}
 .agChkItem label{display:flex;align-items:flex-start;}

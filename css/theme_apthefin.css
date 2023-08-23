@@ -1652,6 +1652,7 @@ to{opacity:1;margin-top:0px;}
 	border-radius: 50%;
 	background-color:#3E5FAC;
 }
+.cdChkItem.roundType label input[type=radio] ~ span {font-weight: 500}
 .cdChkItem.roundType label input[type=radio]:checked ~ span {
 	color:#3E5FAC;
 }
