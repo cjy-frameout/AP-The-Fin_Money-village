@@ -372,6 +372,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 .btn-wrap.vertical {
     flex-direction: column;
 }
+.vertical { flex-direction: column;}
 .btn-wrap.vertical a + a { margin-top: 24px; }
 .btn-wrap.hasFixBottom {
     bottom: 60px;
@@ -549,6 +550,9 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 }
 .filter-title-wrap .filterTit { margin-bottom: 2px; }
 .filter-title-wrap + .radioTab { margin-top: 10px; }
+.hr_div.noMgn { margin-bottom: 0 !important;}
+.tabs_header.w100 { margin: 0 -20px 15px; }
+
 /* ========================================================= E : common  =====================================================*/
 /* S : component */
 .credit-score {
@@ -563,7 +567,8 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     margin: 0 -20px;
     padding: 24px;
 }
-.info-wrap > h3 { margin-bottom: 4px; font-size: 14px; font-weight: 500; }
+.sub_detailList + .info-wrap { margin-top: 40px; }
+.info-wrap > h3 { margin-bottom: 15px; font-size: 14px; font-weight: 500; }
 .search-result-wrap {
     margin: 30px -20px 0;
     padding: 0 20px;
@@ -669,6 +674,8 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     justify-content: flex-start; 
     padding: 20px 0; 
 }
+.loan-list-bank { width: 100%; flex: 1;}
+.loan-list-cont { width: 100%;}
 .loan-list-bank > img { width: 32px; }
 .loan-list-bank + .loan-list-cont {
     margin-left: 12px;
@@ -679,6 +686,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     font-weight: 800;
     line-height: 1.3;
 }
+.loan-list-title.detail { font-size: 22px; font-weight: 500;}
 .lowest-rate-flag {
     background: #FFEDE8;
     border-radius: 8px;
@@ -695,6 +703,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     font-weight: 500;
     line-height: 1.3;
 }
+.loan-list-desc.detail { font-size: 20px; color: #666; }
 .loan-list-info-rate, .loan-list-info-money {
     color: #333;
     display: inline-block;
@@ -702,9 +711,15 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     font-weight: 700;
     line-height: 1.3;
 }
+.detail .loan-list-info-rate span, .detail .loan-list-info-money span {
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+}
 .loan-list-info-rate + .loan-list-info-money { margin-left: 60px; }
 .loan-list-title + .loan-list-desc { margin-top: 7px; }
 .loan-list-desc + .loan-list-info { margin-top: 12px;}
+.vertical .loan-list-bank + .loan-list-cont  { margin-top: 10px; }
 
 .unapproved .loan-list-li {
     border: 1px solid #E5E5E5;
@@ -714,6 +729,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 .unapproved .loan-list-li + .loan-list-li {
     margin-top: 10px; 
 }
+.layer_cont.hasFixBtn { padding-bottom: 90px !important; }
 /* E : component */
 /* S : Layout  */
 .header {
