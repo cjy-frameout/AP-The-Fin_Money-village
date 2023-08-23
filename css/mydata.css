@@ -662,6 +662,58 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     }
 }
 
+.tabs_body.type2 { padding-top:0; }
+.loan-list-li { border-bottom: 1px solid #F1F2F5}
+.loan-list-alink { 
+    display: flex;
+    justify-content: flex-start; 
+    padding: 20px 0; 
+}
+.loan-list-bank > img { width: 32px; }
+.loan-list-bank + .loan-list-cont {
+    margin-left: 12px;
+}
+.loan-list-title {
+    color:#333;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+.lowest-rate-flag {
+    background: #FFEDE8;
+    border-radius: 8px;
+    color: #B44011;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 6px;
+    margin-left: 8px;
+}
+.loan-list-desc {
+    color: #999;
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+.loan-list-info-rate, .loan-list-info-money {
+    color: #333;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.loan-list-info-rate + .loan-list-info-money { margin-left: 60px; }
+.loan-list-title + .loan-list-desc { margin-top: 7px; }
+.loan-list-desc + .loan-list-info { margin-top: 12px;}
+
+.unapproved .loan-list-li {
+    border: 1px solid #E5E5E5;
+    border-radius: 16px;
+    padding: 0 20px;
+}
+.unapproved .loan-list-li + .loan-list-li {
+    margin-top: 10px; 
+}
 /* E : component */
 /* S : Layout  */
 .header {
