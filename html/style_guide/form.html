@@ -253,7 +253,80 @@
                 </label>
             </div>
 
+            <div class="editName" style="margin-top:30px">
+                <label for="name01" class="itemTit">주민등록번호</label>
+                <div class="input-box items2">
+                    <input type="number" id="name01" required="required" placeholder="앞 6자리" value="">
+                    <div class="dash">-</div>
+                    <div class="ipt-pass-box password-last-one">
+                        <input type="number" id="name02" required="required" value="" title="뒤 1자리 입력">
+                        <div class="password-disc-wrap" aria-hidden="true">
+                            <span class="pass-disc"></span>
+                            <span class="pass-disc"></span>
+                            <span class="pass-disc"></span>
+                            <span class="pass-disc"></span>
+                            <span class="pass-disc"></span>
+                            <span class="pass-disc"></span>
+                        </div>
+                    </div>
+                </div>
+                <p class="input-err-desc" style="display: none">주민등록번호를 정확히 입력해주세요</p>
+            </div>
+
+            <hr class="hr_div">
+
+            <h3 class="tit_h2 mgt40">기본 라디오</h3>
+            <div class="cdChkLst">
+                <ul class="cdChkSubList">
+                    <li class="cdChkItem">
+                        <label>
+                            <input type="radio" name="radio02" id="radio21">
+                            <i></i><span>라디오1</span>
+                        </label>
+                    </li>
+                    <li class="cdChkItem">
+                        <label>
+                            <input type="radio" name="radio02" id="radio22">
+                            <i></i><span>라디오2</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <h3 class="tit_h2 mgt40">통신사 선택 라디오 버튼</h3>
+            <div class="cdChkLst">
+                <ul class="cdChkSubList">
+                    <li class="cdChkItem roundType">
+                        <label>
+                            <input type="radio" name="radio01" id="radio1">
+                            <i></i><span>SKT</span>
+                        </label>
+                    </li>
+                    <li class="cdChkItem roundType">
+                        <label>
+                            <input type="radio" name="radio01" id="radio2">
+                            <i></i><span>KT</span>
+                        </label>
+                    </li>
+                    <li class="cdChkItem roundType">
+                        <label>
+                            <input type="radio" name="radio01" id="radio3">
+                            <i></i><span>LGU+</span>
+                        </label>
+                    </li>
+                    <li class="cdChkItem roundType">
+                        <label>
+                            <input type="radio" name="radio01" id="radio4">
+                            <i></i><span>알뜰폰</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <hr class="hr_div">
             <!------------------------------------------------------------------->
+
+
            <p class="guide_stit mgt10">메모</p>
            <br>
             <div class="layer_memo_wrap">

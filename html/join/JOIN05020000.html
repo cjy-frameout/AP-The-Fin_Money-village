@@ -1,23 +1,19 @@
 <!DOCTYPE html>
-<html lang="ko" class="leaf">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
-    <title></title>
+    <title>인증번호확인 | 대출비교</title>
     <meta http-equiv="Cache-Control" content="No-Cache">
     <meta http-equiv="Pragma" content="No-Cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--<meta name="title" content="">-->
     <meta name="description" content="">
-    <!--<meta name="keywords" content="">-->
-    <!-- The Open Graph protocol -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="">
     <meta property="og:description" content="">
     <meta property="og:url" content="">
-    <meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
-    <!-- //The Open Graph protocol -->
-    <link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+    <meta property="og:image" content="">
+    <link rel="SHORTCUT ICON" href="">
     <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="../../css/reset.css">
     <link rel="stylesheet" type="text/css" href="../../css/content.css">
@@ -30,11 +26,9 @@
     <script type="text/javascript" src="../../js/slide_slick.js"></script>
     <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
     <script type="text/javascript" src="../../js/cmd.js"></script>
+    <script type="text/javascript" src="../../js/interaction.js"></script>
 </head>
-
 <body>
-
-<!-- wrap -->
 <div class="wrap">
     <!-- header -->
     <div class="header">
@@ -45,107 +39,52 @@
         </div>
     </div>
     <!-- //header -->
-
-    <!-- container -->
     <div class="container">
         <div class="content">
-
-            <div class="desc-wrap mgt30">
-                <h3 class="cont-title-big">실제 사용하시는<br>휴대폰 통신사를 선택해 주세요.</h3>
+            <div class="desc-wrap mgt20">
+                <h3 class="cont-title-big">보내드린 인증번호 6자리를 <br>입력해주세요.</h3>
             </div>
 
-            <div class="accSetting">
-                <div class="editName">
-                    <p role="label" class="itemTit">통신사</p>
-                    <div class="sel_form type_border mgt10"> <!-- 선택시 on 클래스 추가 -->
-                        <a href="#layer_bs" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>카테고리를 선택해 주세요</span></a>
-                    </div>
+            <div class="input-wrap">
+                <div class="input-box">
+                    <label for="aaa" class="ipt-label">인증번호</label>
+                    <input type="text" id="aaa" class="ipt-typeB" placeholder="6자리 입력">
+                    <span class="ipt-time-limit pointColor">02:48</span>
                 </div>
-                <div class="editName">
-                    <label for="name01" class="itemTit">주민등록번호</label>
-                    <div class="input-box items2">
-                        <input type="number" id="name01" required="required" placeholder="앞 6자리" value="">
-                        <div class="dash">-</div>
-                        <div class="ipt-pass-box password-last-one">
-                            <input type="number" id="name02" required="required"  placeholder="1자리"   title="뒤 1자리 입력">
-                            <div class="password-disc-wrap" aria-hidden="true">
-                                <span class="pass-disc"></span>
-                                <span class="pass-disc"></span>
-                                <span class="pass-disc"></span>
-                                <span class="pass-disc"></span>
-                                <span class="pass-disc"></span>
-                                <span class="pass-disc"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="input-err-desc" style="display: none">주민등록번호를 정확히 입력해주세요</p>
-                </div>
-
-                <div class="editName mgt60">
-                    <label for="name" class="itemTit">이름</label>
-                    <input type="text" id="name" title="이름" required="required" placeholder="이름을 입력해주세요" value="홍길동" readonly>
-                </div>
+                <p class="input-err-desc" style="display: none">인증번호가 일치하지 않습니다.</p>
             </div>
 
 
-
-
-
-
-            <div class="fix_bottom">
-                <!-- btn_wrap -->
-                <div class="btn_wrap">
-                    <div class="btnGroup">
-                        <p><a href="#none" class="btnBl1 disable" role="button">확인</a></p>
-                    </div>
-                </div>
+            <div class="btn-wrap fixed noBorder vertical">
+                <a href="#none" class="btnBl6" role="button">인증번호 재요청</a>
+                <a href="#none" class="btnBl1 disable" role="button">다음</a>
+                <a href="#layer_bs" class="btn-alink btn_open_bottom_sheet" role="button">인증번호를 못 받으셨나요?</a>
             </div>
-
 
         </div>
     </div>
-    <!-- //container -->
-
-
 </div>
-<!-- //wrap -->
 
-
-
-<!-- [S] 통신사 선택 -->
+<!-- [S] 인증번호 안내 -->
 <div id="layer_bs" class="layer_bottomsheet">
     <div class="layer_inner">
-        <div class="layer_tit">
-            <strong class="tit">통신사 선택</strong>
+        <div class="layer_tit type2">
+            <strong class="tit">인증번호를 못 받으셨나요?</strong>
             <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
         </div>
         <div class="layer_cont">
             <!-- 내용 -->
-            <div class="cdChkLst">
-                <ul class="cdChkSubList">
-                    <li class="cdChkItem roundType">
-                        <label>
-                            <input type="radio" name="radio01" id="radio1">
-                            <i></i><span>SKT</span>
-                        </label>
+            <div class="msg_box">
+                <ul class="notice_list">
+                    <li class="list">
+                        <span class="tx">
+                            <i class="pointColor2">스팸차단서비스</i>로 인증번호 수신이 어려울 수 있습니다. 전화 > 더보기 > 설정 > 수신차단 목록에서 SMS 인증 발신 번호(1600-1522)를 제외해주세요.
+                        </span>
                     </li>
-                    <li class="cdChkItem roundType">
-                        <label>
-                            <input type="radio" name="radio01" id="radio2">
-                            <i></i><span>KT</span>
-                        </label>
-                    </li>
-                    <li class="cdChkItem roundType">
-                        <label>
-                            <input type="radio" name="radio01" id="radio3">
-                            <i></i><span>LGU+</span>
-                        </label>
-                    </li>
-                    <li class="cdChkItem roundType">
-                        <label>
-                            <input type="radio" name="radio01" id="radio4">
-                            <i></i><span>알뜰폰</span>
-                        </label>
+                    <li class="list">
+                        <span class="tx">
+                            <i class="pointColor2">통신사 명의도용 알림서비스</i>로 인증번호 수신이 어려울 수 있습니다. 통신사에 직접 문의하여 해지해주세요.
+                        </span>
                     </li>
                 </ul>
             </div>
@@ -156,7 +95,7 @@
         </div>
     </div>
 </div>
-<!-- [E] 통신사 선택 -->
+<!-- [E] 인증번호 안내 -->
 
 
 </body>

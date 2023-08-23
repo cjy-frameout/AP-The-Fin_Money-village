@@ -164,101 +164,11 @@
 
 
 
-<!-- [S] 통신사 선택 -->
-<div id="layer_bs" class="layer_bottomsheet">
-    <div class="layer_inner">
-        <div class="layer_tit">
-            <strong class="tit">통신사 선택</strong>
-            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
-        </div>
-        <div class="layer_cont">
-            <!-- 내용 -->
-            <div class="cdChkLst">
-                <ul class="cdChkSubList">
-                    <li class="cdChkItem roundType">
-                        <label>
-                            <input type="radio" name="radio01" id="radio1">
-                            <i></i><span>SKT</span>
-                        </label>
-                    </li>
-                    <li class="cdChkItem roundType">
-                        <label>
-                            <input type="radio" name="radio01" id="radio2">
-                            <i></i><span>KT</span>
-                        </label>
-                    </li>
-                    <li class="cdChkItem roundType">
-                        <label>
-                            <input type="radio" name="radio01" id="radio3">
-                            <i></i><span>LGU+</span>
-                        </label>
-                    </li>
-                    <li class="cdChkItem roundType">
-                        <label>
-                            <input type="radio" name="radio01" id="radio4">
-                            <i></i><span>알뜰폰</span>
-                        </label>
-                    </li>
-                </ul>
-            </div>
-            <!-- //내용 -->
-        </div>
-        <div class="layer_footer">
-            <button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
-        </div>
-    </div>
-</div>
-<!-- [E] 통신사 선택 -->
+
 
 
 </body>
 <script>
-    $(document).on("click", ".btn_open_bottom_sheet", function(e){
-        e.preventDefault();
 
-        var $href = $(this).attr('href');
-        layer_bottomsheet($href);
-        $('html').addClass('scroll_lock');
-
-        // [S] multi layer 2021-08-02 추가
-        var dimIdx = $('.dim').index();
-        eval('$focusReturn' + [dimIdx] + '= $(this)');
-
-    });
-    function layer_bottomsheet(el){
-        var $el = $(el);
-        $el.append("<div class=\"dim\"></div>");
-        isDim ? $('.layer_bottomsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
-        setTimeout(function() {
-            $el.find('.layer_inner').addClass('on');
-        }, 50);
-
-        var isDim = $el.siblings().hasClass('dim');
-
-        var dimIdx = $('.dim').index();
-        var thisDim = $el.find('.dim');
-        var thisLyZindex = dimIdx + 4000;
-        $('.dim').css('opacity','0');
-        thisDim.css('opacity','.7');
-        thisDim.closest('.layer_bottomsheet, .layer_popup').css('z-index', thisLyZindex);
-
-        $el.find('.js_pop_close').click(function(){
-
-            $el.find('.layer_inner').removeClass('on');
-            setTimeout(function() {
-                isDim ? $('.layer_bottomsheet').hide() : $el.hide();
-                $('html').removeClass('scroll_lock');
-                $el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
-                if($('.dim').length == 2){
-                    $('.dim:eq(1)').css('opacity','.7');
-                }else if($('.dim').length == 1){
-                    $('.dim').css('opacity','.7');
-                }
-            }, 200);
-            eval('$focusReturn'+ [dimIdx]).focus();
-
-            return false;
-        });
-    }
 </script>
 </html>

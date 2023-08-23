@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title>회원가입 | 더핀</title>
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <link rel="SHORTCUT ICON" href="">
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/content.css">
+    <link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+    <link rel="stylesheet" type="text/css" href="../../css/mydata.css">
+    <link rel="stylesheet" type="text/css" href="../../css/join.css">
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/cmd.js"></script>
+    <script type="text/javascript" src="../../js/interaction.js"></script>
+</head>
+<body>
+<div class="wrap">
+
+    <div class="container">
+        <div class="content">
+            <h2 class="joinComplete-tit">APtheFin<br>자산관리서비스</h2>
+            <p class="joinComplete-dec">나의 모든 계좌, 대출 등을 한 번에 확인</p>
+            <div class="joinComplete-img"></div>
+
+            <div class="accSetting">
+                <div class="editName">
+                    <div class="sel_form type_border mgt10"> <!-- 선택시 on 클래스 추가 -->
+                        <a href="#layer_bs" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>유의사항</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-wrap fixed noBorder vertical">
+                <a href="#none" class="btnBl1" role="button">시작하기</a>
+                <a href="#layer_bs" class="btn-alink btn_open_bottom_sheet" role="button">시작하기</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- [S] 유의사항 -->
+<div id="layer_bs" class="layer_bottomsheet">
+    <div class="layer_inner">
+        <div class="layer_tit type2">
+            <strong class="tit">유의사항 안내</strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont">
+            <!-- 내용 -->
+            <div class="msg_box">
+                <ul class="notice_list">
+                    <li class="list">
+                        <span class="tx">
+                            내용이 아직 없습니다.
+                        </span>
+                    </li>
+                    <li class="list">
+                        <span class="tx">
+                            내용이 아직 없습니다.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <!-- //내용 -->
+        </div>
+        <div class="layer_footer">
+            <button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
+        </div>
+    </div>
+</div>
+<!-- [E] 유의사항 -->
+
+
+</body>
+<script>
+    $(document).on("click", ".btn_open_bottom_sheet", function(e){
+        e.preventDefault();
+
+        var $href = $(this).attr('href');
+        layer_bottomsheet($href);
+        $('html').addClass('scroll_lock');
+
+        // [S] multi layer 2021-08-02 추가
+        var dimIdx = $('.dim').index();
+        eval('$focusReturn' + [dimIdx] + '= $(this)');
+
+    });
+    function layer_bottomsheet(el){
+        var $el = $(el);
+        $el.append("<div class=\"dim\"></div>");
+        isDim ? $('.layer_bottomsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
+        setTimeout(function() {
+            $el.find('.layer_inner').addClass('on');
+        }, 50);
+
+        var isDim = $el.siblings().hasClass('dim');
+
+        var dimIdx = $('.dim').index();
+        var thisDim = $el.find('.dim');
+        var thisLyZindex = dimIdx + 4000;
+        $('.dim').css('opacity','0');
+        thisDim.css('opacity','.7');
+        thisDim.closest('.layer_bottomsheet, .layer_popup').css('z-index', thisLyZindex);
+
+        $el.find('.js_pop_close').click(function(){
+
+            $el.find('.layer_inner').removeClass('on');
+            setTimeout(function() {
+                isDim ? $('.layer_bottomsheet').hide() : $el.hide();
+                $('html').removeClass('scroll_lock');
+                $el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
+                if($('.dim').length == 2){
+                    $('.dim:eq(1)').css('opacity','.7');
+                }else if($('.dim').length == 1){
+                    $('.dim').css('opacity','.7');
+                }
+            }, 200);
+            eval('$focusReturn'+ [dimIdx]).focus();
+
+            return false;
+        });
+    }
+</script>
+</html>

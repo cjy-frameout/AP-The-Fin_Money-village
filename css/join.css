@@ -74,39 +74,16 @@
     margin-top:2px;
 }
 
-.cdChkItem.roundType label input[type=radio] + i {
-    width:20px;
-    height:20px;
-    border:1px solid #E5E5E5;
-    background:#fff;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-}
 
-
-
-
-
-.cdChkItem.roundType label input[type=radio]:checked + i {
-    border-color:#3E5FAC;
-}
-.cdChkItem.roundType label input[type=radio]:checked + i:after {
-    content:"";
-    display: block;
-    width:10px;
-    height:10px;
-    border-radius: 50%;
-    background-color:#3E5FAC;
-}
-.cdChkItem.roundType label input[type=radio]:checked ~ span {
-    color:#3E5FAC;
-}
 
 
 .password-last-one .password-disc-wrap {
-    padding-left:20px;
+    justify-content: flex-end;
+    background:transparent;
+    border:none;
+}
+.accSetting .editName .password-last-one input {
+    padding-left:15px;
 }
 
 .sampleMassage {
@@ -152,4 +129,35 @@
     padding-bottom:19px;
     border-bottom:1px solid #eee;
     margin-bottom:15px;
+}
+
+
+.btn-wrap.vertical a.btnBl6 + a {
+    margin-top:10px;
+}
+
+.joinComplete-tit {
+    font-size:30px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -0.6px;
+    color:#333;
+    text-align:center;
+    display:block;
+    margin:0 auto 0;
+}
+.joinComplete-dec {
+    font-size:14px;
+    font-weight:400;
+    line-height:22px;
+    color:#666;
+    text-align:center;
+    margin-top:8px;
+}
+.joinComplete-img {
+    background:url("../img/theme/apthefin/img_join_welcome.png") no-repeat 0 0;
+    background-size:cover;
+    width:280px;
+    height:280px;
+    margin:20px auto 0;
 }

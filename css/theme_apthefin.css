@@ -1630,6 +1630,31 @@ to{opacity:1;margin-top:0px;}
 .cdChkItem.all label input[type=checkbox] + i,.cdChkItem.all label input[type=radio] + i {top:3px;right:7px;}
 .cdChkItem label input[type=checkbox]:checked + i,.cdChkItem label input[type=radio]:checked + i {border:none;background-image:url('../img/theme/apthefin/ic_circle_chk_on.png?0426');}
 .cdChkSubList .cdChkItem + .cdChkItem {margin-top:25px;}
+.cdChkItem.roundType label input[type=radio] + i {
+	width:20px;
+	height:20px;
+	border:1px solid #E5E5E5;
+	background:#fff;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+}
+
+.cdChkItem.roundType label input[type=radio]:checked + i {
+	border-color:#3E5FAC;
+}
+.cdChkItem.roundType label input[type=radio]:checked + i:after {
+	content:"";
+	display: block;
+	width:10px;
+	height:10px;
+	border-radius: 50%;
+	background-color:#3E5FAC;
+}
+.cdChkItem.roundType label input[type=radio]:checked ~ span {
+	color:#3E5FAC;
+}
 /* [E] check, radio, switch, select */
 
 /* [S] list */
@@ -1853,6 +1878,7 @@ to{opacity:1;margin-top:0px;}
 .servTerm_tbl td div,
 .servTerm_tbl td ul li {font-weight:400;}
 .servTerm_tbl .tx {font-size:14px;margin:0 0 20px;font-weight:400;line-height:21px;}
+.servTerm_tbl .txStrong {margin-bottom:10px;font-size:14px;font-weight:500;line-height: 22px}
 .servTerm_tbl .tx:first-child {margin-bottom:15px;}
 .servTerm_tbl + .servTerm_tbl {margin-top:40px;}
 .servTerm_tbl p + table,
