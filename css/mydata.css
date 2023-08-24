@@ -162,6 +162,7 @@ input[type="password"] {
     height: 42px;
 }
 .input-box { position: relative;}
+.list-name + .input-box { margin-top: 10px;}
 .input-box.items2 {
     display: flex;
     justify-content: space-between;
