@@ -143,8 +143,16 @@ a.btnManage {font-size:13px;}
 .btn_more_ask .ico_ask {width:22px;height:22px;background-size:22px 22px;background-repeat:no-repeat;}
 .btn-imgUpload {
 	background: url(../img/theme/apthefin/icon_image.png) no-repeat 0 0;
+	display: block;;
 	height: 32px;
 	width: 32px;
+}
+input[type="file"], .input-box input[type="file"] {
+	height: 0;
+	width: 0;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
 }
 
 /* 서브페이지 btn */
