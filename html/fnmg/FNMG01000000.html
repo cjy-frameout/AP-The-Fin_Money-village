@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
-    <title>회원가입 | 더핀</title>
+    <title>안내 | 더핀</title>
     <meta http-equiv="Cache-Control" content="No-Cache">
     <meta http-equiv="Pragma" content="No-Cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,7 +38,7 @@
             <div class="joinComplete-img"></div>
 
             <div class="accBox mgt20 mgb30">
-                <div class="accBox-item" id="acc01">
+                <div class="accBox-item -active" id="acc01">
                     <a href="#acc01" class="accBox-tit">유의사항</a>
                     <div class="accBox-content">
                         <div class="accBox-inner">
@@ -61,15 +61,16 @@
                                     ※ 자세한 내용은 '[필수]개인(신용)정보 제3자 정보제공동의서‘ 에서 확인하실 수 있습니다
                                 </li>
                             </ul>
+
                         </div>
                     </div>
                 </div>
             </div>
 
 
-            <div class="btn-wrap fixed noBorder vertical">
+            <div class="btn-wrap vertical">
                 <a href="#none" class="btnBl1" role="button">시작하기</a>
-                <a href="#none" class="btn-alink btn_open_bottom_sheet" role="button">나중에 하기</a>
+                <a href="#layer_bs" class="btn-alink btn_open_bottom_sheet" role="button">나중에 하기</a>
             </div>
 
         </div>
@@ -77,20 +78,42 @@
 </div>
 
 
-
+<!-- [S] 안내 팝업 -->
+<div id="layer2_1" class="layer_popup type4">
+    <div class="layer_position">
+        <div class="layer_inner">
+            <div class="layer_cont">
+                <div class="msg_box">
+                    <p class="msg_alert">
+                        잠깐!<br>
+                        통합자산관리서비스 이용을 위해
+                        아래 중 하나를 확인해 주세요
+                    </p>
+                    <a class="blockLink tac mgt10">공동인증서</a>
+                    <a class="blockLink tac">네이버 인증서</a>
+                    <a class="blockLink tac">카카오 인증서</a>
+                </div>
+                <div class="btn_layer_wrap">
+                    <button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- [E] 안내 팝업 -->
 
 </body>
 <script>
     $(document).ready(function(){
+        //시작시 뜨는 팝업
+        layer_popup('#layer2_1');
+        $('html').addClass('scroll_lock');
+
+
+
         //유의사항 클릭시 스크롤 내리기
-
         $(".accBox-tit").on("click",function(){
-            if($(this).parent('.accBox-item').hasClass("-active")){
-                $('body,html').stop().animate({scrollTop: $(document).height()}, 300);
-            }else{
-                $('body,html').stop().animate({scrollTop: 0}, 300);
-            }
-
+            $(this).hasClass("-active") && $('body,html').animate({scrollTop: $(document).height()}, 800);
         })
 
     })

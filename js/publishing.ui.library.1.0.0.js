@@ -107,8 +107,7 @@ $(document).ready(function(){
     //아코디언 메뉴
     $(".accBox-tit").on("click",function(e) {
         e.preventDefault();
-        $(this).closest('.accBox').find(".accBox-tit").removeClass("-active");
-        $(this).addClass("-active");
+        $(this).closest('.accBox-item').toggleClass("-active").siblings().removeClass("-active");
 
     });
 
@@ -400,9 +399,13 @@ function bsPageTypeHeight(){
 
 // [S] 컨텐츠영역 하단 패딩 = 하단 고정높이값
 function contentsBottomPadding(){
+    //컨텐츠에 버튼 고정만 있을경우
+    var btnFixedHeight = $(".btn-wrap.fixed").height();
+    $('.content .btn-wrap.fixed').length && $('.content').css('padding-bottom',btnFixedHeight + 52);
+
     if($('.fix_bottom').length){
 		var fixBottomHeight = $('.fix_bottom').height();
-		$('.content').css('padding-bottom',fixBottomHeight);
+        $('.content').css('padding-bottom',fixBottomHeight);
         if($('.headerType2').length){
             $('.content').css('padding-bottom',fixBottomHeight + 52);
         }
@@ -423,13 +426,16 @@ function contentsBottomPadding(){
         if(!$('.fix_bottom .dock_bar').length){
             $('.fix_bottom').addClass('not_dock');
         }
-        if($('.hasFixBottom')){
-            $('.content').css('padding-bottom', fixBottomHeight + 92);
+        if($('.hasFixBottom').length){
+            var hasHeight = $('.hasFixBottom').height() + fixBottomHeight + 52;
+            $('.content').css('padding-bottom', hasHeight);
+
         }
 	}
     if($('.toastMsg').length){
         $('.btn_wrap + .toastMsg').prev('.btn_wrap').css('padding-bottom','0');
     }
+
 }
 // [E] 컨텐츠영역 하단 패딩 = 하단 고정높이값
 
@@ -584,17 +590,15 @@ function layerFPageBottomPadding(){
 document.addEventListener('DOMContentLoaded', function(e){
     // [S] Gnb 
     var gnb = $('.gnb');
-    var gnbMenu = $('.gnb_menu');
+    var gnbMenu = $('.gnbMenu');
     var gnbHeight = gnb.outerHeight();
 
     function gnbOpen() {
-    gnb.css({right: 0});
-    $("html, body").css({overflow: "hidden", height: "100%"});
+        $("html").addClass("-activeGnb");
     }
 
     function gnbClose() {
-    gnb.css({right: '-100%'});
-    $("html, body").removeAttr("style");
+        $("html").removeClass("-activeGnb");
     }
 
     $('.btnMenu').on('click', function() {
