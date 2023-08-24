@@ -421,6 +421,7 @@ a.btnMenu {display:block;width:32px;height:32px;background-image:url('../img/the
 .pointColor {color:#3E5FAC !important;}
 .pointColor2 {color:#F05E89 !important;}
 .pointColor_g {color:#aaa !important;}
+.pointColor3 { color: #2196F3 !important;}
 .pointLine {box-shadow:rgba(93, 207, 210, 0.25) 0px -10px 0px inset;}
 .pointLine2 {box-shadow:rgba(255, 151, 76, 0.25) 0px -10px 0 inset;}
 .pointLine3 {box-shadow:#FEECF2 0 -10px 0 inset ;}
@@ -2447,7 +2448,7 @@ to{opacity:1;margin-top:0px;}
 /* .consume_unlinked{margin:0 -20px -30px;background-color: #eff1f6;min-height: calc(100vh - 110px);} */
 .consume_unlinked{margin-left: -20px;margin-right: -20px;}
 .consume_unlinked .sub_banner .sub_tit {padding:40px 0 30px;font-size:18px;font-weight:500;text-align:center;line-height:26px;letter-spacing: -0.06em;}
-.consume_unlinked .sub_banner .sub_tit span {display: block; font-size:24px;font-weight:500;margin-top: 5px;color: #3D73C8 !important;}
+.consume_unlinked .sub_banner .sub_tit span {display: block; font-size:24px;font-weight:500;margin-top: 5px;color: #3E5FAC !important;}
 .consume_unlinked .sub_banner img {width:100%;height:auto;}
 .consume_unlinked .sub_banner .b_img{margin:0 70px 0 66px;position: relative;}
 .consume_unlinked .sub_banner .b_img div{display: flex;justify-content: center;align-items: center;width:32vw;height:32vw;position: absolute;margin:auto;text-align: center;border-radius: 100%; font-size: 12px;font-weight: 500;line-height: 17px;box-shadow: 0px 5px 7px rgba(32, 95, 149, 0.13);background-color: #fff;}
@@ -2864,20 +2865,21 @@ to{opacity:1;margin-top:0px;}
 .consume_chart .wrapBar .gBarBox.on .gBarPrice{display:block !important;color:#1072ff;overflow: visible !important;}
 .consume_chart .wrapBar .gBarBox:last-child.on .gBarPrice{display:block;color:#1072ff;}
 .consume_chart .wrapBar .gBarBox.on .gBar{opacity: 1;background-color:rgba(116, 172, 232, 0.5);}
-.consume_chart .wrapBar .gBarBox:last-child.on .gBar{opacity: 1;background-color:#3E5FAC;}
+.consume_chart .wrapBar .gBarBox:last-child.on .gBar{opacity: 1;background-color:#2196F3;}
 .consume_chart.useAlot .pointColor{color: #F482A4 !important;}
 .consume_chart.useAlot .wrapBar .gBarBox:last-child .gBarPrice{color:#F05E89;}
 .consume_chart.useAlot .wrapBar .gBarBox:last-child .gBar{background-color:#F482A4;}
 .consume_chart.useAlot .wrapBar .gBarBox.on .gBarPrice{display:block;color:#F05E89;}
 .consume_chart.useAlot .wrapBar .gBarBox:last-child.on .gBarPrice{display:block;color:#F05E89;}
 .consume_chart.useAlot .wrapBar .gBarBox.on .gBar{opacity: 1;background-color:rgba(244, 130, 164, 0.5);}
-.consume_chart.useAlot .wrapBar .gBarBox:last-child.on .gBar{opacity: 1;background-color:#F482A4;}
+.consume_chart.useAlot .wrapBar .gBarBox:last-child.on .gBar{opacity: 1;background-color:#F44336;}
 
 .boxArea{padding:20px;border: 1px solid #e5e5e5; border-radius: 16px;box-shadow: 0px 3px 8px -1px rgba(0,0,0,0.08);box-sizing: border-box;}
 .boxArea + .boxArea{margin-top:10px;}
 .boxArea.lineType{border:1px solid #E5E5E5;}
-.boxArea.bgBlue{display: block; background-color:#4B8DC5;border:none;}
+.boxArea.bgBlue{display: block; background-color:#3E5FAC;border:none;}
 .boxArea.bgOrange{display: block; background-color:#FF974C;border: 1px solid #E5E5E5;}
+.boxArea.bgRed{display: block; background-color:#BB2649;border: 1px solid #E5E5E5;}
 
 .expectPay{display:flex;flex-wrap:wrap;}
 .expectPay .tit{display:flex;font-size:16px;font-weight:500;margin-bottom: 15px;}
@@ -2909,7 +2911,7 @@ to{opacity:1;margin-top:0px;}
 .boxArea.compare .expectPay .btnListMore:after {display:inline-block;width:16px;height:16px;content:'';background-image:url('../img/theme/apthefin/ic_arw_gray.png?0426');background-repeat:no-repeat;background-size:16px auto;vertical-align: middle;margin-top: -2px;}
 .boxArea.compare + .btn_wrap{padding:0;margin-top: 30px;}
 
-.boxArea.bgBlue .expectPay{color: #fff;}
+.boxArea.bgBlue .expectPay, .boxArea.bgRed .expectPay{color: #fff;}
 .boxArea.bgBlue .expectPay .expectInfo.link .infoNum{color: #fff;}
 .boxArea.bgBlue .expectPay .expectInfo.link .infoTit{font-size: 16px;font-weight: 500;line-height: 24px;}
 .boxArea.bgBlue .expectPay .expectInfo.link .infoTit em{font-size: 17px;font-weight: 700;line-height: 24px;}
