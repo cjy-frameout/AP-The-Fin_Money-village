@@ -369,52 +369,7 @@ a.btnMenu {display:block;width:32px;height:32px;background-image:url('../img/the
 .btn_delete::before {position:absolute;top:0;left:0;content:'';width:16px;height:16px;background-image:url('../img/theme/apthefin/ic_del2.png?0426');background-size:16px auto;background-repeat:no-repeat;}
 /* [E] 공통 아이콘 */
 
-/* [S] gnb 영역 */
-.gnb {position:fixed;top:0;right:-100%;width:100%;height:100%;background-color:#fff;z-index:1110;transition:right .5s;overflow-y:auto;}
-.gnb .btn_menu_close {position:absolute;top:15px;right:15px;width:32px;height:32px;background:url('../img/theme/apthefin/bt_close.svg?0426') 0 0 no-repeat;background-size:32px auto;}
-.gnb_infoBox {padding:50px 20px 20px;background-color:#f5f6f7;}
-.gnb_infoTxt {font-size:20px;font-weight:400;}
-.gnb_infoTxt span {font-weight:700;}
-.gnb_infoBox .gnb_goLink {position:relative;display:inline-block;font-size:14px;color:#999;font-weight:400;margin-top:12px;}
-.gnb_infoBox .gnb_goLink:after {position:absolute;top:2px;right:-17px;display:inline-block;width:16px;height:16px;content:'';background-image:url('../img/theme/apthefin/ic_arw_gray.png?0426');background-size:16px auto;}
-.gnb .gnb_tit {margin-bottom:20px;font-size:16px;color:#666;font-weight:500;}
-.gnb_service {padding:30px 20px 10px;}
-.gnb_service .service_group {display:flex;margin-top:10px;}
-.gnb_service .service_group li {display:inline-block;width:50%;padding:20px;border-radius:10px;text-align:center;}
-.gnb_service .service_group li:first-child {background-color:#3E5FAC;}
-.gnb_service .service_group li:last-child {background-color:#5DCFD2;}
-.gnb_service .service_group li + li {margin-left:7px;}
-.gnb_service .service_group li span {color:#fff;font-size:16px;font-weight:500;line-height:21px;}
-.gnb_service .service_group li a {display:flex;flex-direction:column;align-items:center;}
-.gnb_service .service_group li a.service_link span {position:relative;}
-.gnb_service .service_group li a.service_link span:after {position:absolute;top:2px;right:-17px;width:16px;height:16px;content:'';background:url('../img/theme/apthefin/ic_arw_white2.png?0426') no-repeat;background-size:16px auto;}
-.gnb_service .service_group li .ic_service {display:inline-block;width:24px;height:24px;margin-bottom:5px;background-image:url('../img/theme/apthefin/ic_service.png?0426');background-repeat:no-repeat;background-position:0 0;background-size:58px auto;}
-.gnb_service .service_group li .ic_service.service1 {width:26px;background-position:-1px -2px;}
-.gnb_service .service_group li .ic_service.service2 {background-position:-31px -2px;}
 
-.gnb_menu {position:relative;height:100%;padding:20px;}
-.gnb_menu_group  {margin-bottom:25px;padding:10px 0 25px;border-bottom:1px solid #F5F6F7;}
-.gnb_menu_group.arr_type {border-bottom:none;}
-.gnb_menu_group.arr_type li a {width:100%;}
-.gnb_menu_group.arr_type li a:after {content:'';width:16px;height:16px;margin-left:auto;background-image:url('../img/theme/apthefin/ic_gray_arr.png?0426');background-repeat: no-repeat;background-size:16px auto;}
-.gnb_menu_group li + li {margin-top:20px;}
-.gnb_menu_item {display:inline-block;width:100%;}
-.gnb_menu_link {display:flex;height:auto;align-items:center;}
-.gnb_menu_link span {font-size:16px;line-height:24px;}
-.gnb_menu_link i.ic_menu {display:inline-block;width:22px;height:22px;margin-right:7px;background-size:120px auto;background-image:url('../img/theme/apthefin/ic_menu.png?0426');background-position:0 0;background-repeat:no-repeat;}
-.gnb_menu_link .ic_menu.menu1 {background-position:-5px -4px;}
-.gnb_menu_link .ic_menu.menu2 {height:25px;background-position:-34px -5px;}
-.gnb_menu_link .ic_menu.menu3 {background-position:-62px -9px;}
-.gnb_menu_link .ic_menu.menu4 {background-position:-94px -6px;}
-.gnb_menu_link .ic_menu.menu5 {background-position:-5px -33px;}
-.gnb_menu_link .ic_menu.menu6 {background-position:-34px -33px;}
-.gnb_menu_link .ic_menu.menu7 {background-position:-65px -34px;}
-.gnb_menu_link .ic_menu.menu8 {background-position:-94px -35px;}
-.gnb_menu_link .ic_menu.menu9 {background-position:-5px -63px;}
-.gnb_menu_link .ic_menu.menu10 {background-position:-34px -60px;}
-.gnb_menu_link .ic_menu.menu11 {height:25px;background-position:-62px -61px;}
-.gnb_menu_link .ic_menu.menu12 {background-position:-93px -61px;}
-/* [E] gnb 영역 */
 /* [E] 공통 */
 
 /* point */
@@ -4142,6 +4097,300 @@ a.filterFolding.show:after {transform:rotate(90deg);margin-left:3px;}
 .skeleton > div{display: none !important;}
 .skeleton > a{display: none !important;}
 .skeleton > ul{display: none !important;}
+
+/* 아코디언 */
+.accBox {
+	border:1px solid #E5E5E5;
+	border-radius: 10px;
+}
+.accBox-tit {
+	padding:20px;
+	display: block;
+	font-size:15px;
+	font-weight:500;
+	line-height:22px;
+	color:#333;
+	position: relative;
+}
+
+.accBox-tit:after {
+	content:"";
+	display:block;
+	width:11px;
+	height:6px;
+	background:url("../img/ic/ic_arw_folding.png") no-repeat 50% 100%;
+	background-size:11px auto;
+	position: absolute;
+	right:20px;
+	top:50%;
+	margin-top:-3px;
+}
+.accBox-content {
+	overflow: hidden;
+	transition: all .3s;
+	max-height: 0;
+	border-top:1px solid #e5e5e5;
+	visibility: hidden;
+}
+
+.accBox-item:not(:first-of-type) {
+	border-top:1px solid #e5e5e5;
+}
+.accBox-item.-active .accBox-tit:after {
+	transform: rotate(180deg);
+}
+.accBox-item.-active .accBox-tit ~ .accBox-content {
+	max-height:1000px;
+	visibility: visible;
+}
+.accBox-inner {
+	padding:20px;
+}
+.accBox._gnb {
+	border:none;
+	border-radius:0;
+}
+.accBox._gnb .accBox-content {
+	background:#F1F2F5;
+	padding-left:20px;
+	padding-right:20px;
+}
+.accBox._gnb .accBox-inner {
+	padding-left:0;
+	padding-right:0;
+}
+.accBox._gnb .accBox-content a {
+	font-size:16px;
+	display: block;
+	width:100%;
+	position: relative;
+}
+.accBox._gnb .accBox-content a:after {
+	content:"";
+	display:block;
+	width:24px;
+	height:24px;
+	background:url("../img/theme/apthefin/icon/ic_menu_arrow.png") no-repeat 0 0;
+	background-size:cover;
+	right:0;
+	top:50%;
+	margin-top:-12px;
+	position: absolute;
+}
+.accBox._gnb .accBox-inner:not(:first-of-type) {
+	border-top:1px solid #e5e5e5;
+}
+
+
+/* gnb신규 */
+html.-activeGnb,html.-activeGnb body {
+	overflow:hidden;
+	height:100%;
+	touch-action: none;
+}
+html.-activeGnb .gnbMenu {
+	transform:translateX(-100%);
+	transition: transform .3s;
+}
+
+.gnbMenu {
+	position: fixed;
+	right:-100%;
+	top:0;
+	width:100%;
+	height:100vh;
+	background:#fff;
+	z-index:3000;
+	transition: transform .3s;
+	padding-bottom:50px;
+}
+.gnbMenu-header {
+	display: flex;
+	width:100%;
+	height:50px;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 1px solid #DDE3E7;
+	padding:0 15px;
+}
+.gnbMenu-header .left {
+	position: absolute;
+	left:15px;
+}
+.gnbMenu-inner {
+	height:100%;
+	overflow-y: auto;
+}
+.gnbMenu-top {
+	padding:0 20px;
+}
+.gnbMenu-util {
+	display: flex;
+	width:100%;
+	justify-content: space-between;
+	align-items: center;
+	padding:0 10px;
+	margin-top:30px;
+}
+.gnbMenu-util a {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size:14px;
+	line-height:22px;
+	font-weight:400;
+	color:#333;
+}
+.gnbMenu-util a:before {
+	content:"";
+	display:block;
+	width:40px;
+	height:40px;
+	background-size:cover;
+	background-repeat: no-repeat;
+	line-height:0;
+}
+.gnbMenu-util ._news:before {
+	background-image:url("../img/theme/apthefin/icon/ic_news.png");
+}
+.gnbMenu-util ._notice:before {
+	background-image:url("../img/theme/apthefin/icon/ic_notice.png");
+}
+.gnbMenu-util ._service:before {
+	background-image:url("../img/theme/apthefin/icon/ic_service.png");
+}
+.gnbMenu-util ._setting:before {
+	background-image:url("../img/theme/apthefin/icon/ic_setting.png");
+}
+
+.gnbMenu-profile {
+	border:1px solid #E5E5E5;
+	border-radius:10px;
+	padding:20px 20px 10px 20px;
+	margin-top:30px;
+}
+.gnbMenu-profile ._top {
+	border-bottom:1px solid #E5E5E5;
+	padding-bottom:10px;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.gnbMenu-profile ._bottom {
+	margin-top:10px;
+}
+.gnbMenu-profile ._thum {
+	display:block;
+	border:1px solid #E5E5E5;
+	border-radius:50%;
+	overflow:hidden;
+	background-image:url("../img/theme/apthefin/icon/ic_profile_thum.png");
+	background-size:cover;
+	background-position:center center;
+	background-repeat: no-repeat;
+	width:30px;
+	height: 30px;
+}
+.gnbMenu-profile ._info {
+	display:flex;
+	align-items: center;
+}
+.gnbMenu-profile ._name {
+	margin:0 4px 0 6px;
+	font-size:16px;
+	font-weight:700;
+	line-height:24px;
+	color:#333;
+}
+.gnbMenu-profile ._linkProfile {
+	border-radius:6px;
+	padding:8px 12px;
+	display:flex;
+	align-items: center;
+	background:#f7f9ff;
+	color:#3E5FAC;
+	font-size:13px;
+	font-weight:500;
+	line-height: 18px;
+}
+.gnbMenu-profile ._linkProfile:after {
+	content:"";
+	display:block;
+	width:20px;
+	height:20px;
+	background:url("../img/theme/apthefin/icon/ic_profile_setting.png") no-repeat 0 0;
+	background-size:cover;
+}
+
+.gnbMenu-profile ._bottom ._thum {
+	width:50px;
+	height:50px;
+}
+.gnbMenu-profile ._thumList {
+	display:flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap:0 20px;
+	margin-top:10px;
+	flex-wrap: nowrap;
+	overflow-x:auto;
+	padding-bottom:10px;
+}
+.gnbMenu-profile ._thumList a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align:center;
+}
+.gnbMenu-profile ._thumName {
+	display: inline-block;
+	margin-top:8px;
+	font-size:14px;
+	font-weight:500;
+	line-height:22px;
+	color:#333;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	max-width: 90px;
+
+}
+.gnbMenu-profile ._thumList li.selected ._thumName {
+	color:#3E5FAC;
+}
+.gnbMenu-profile ._thumList li.selected ._thumName:before {
+	content:"";
+	display:inline-block;
+	width:14px;
+	height:14px;
+	background:url("../img/theme/apthefin/icon/ic_star.png") no-repeat 0 0;
+	background-size:cover;
+}
+.gnbMenu-profile ._addProfile {
+	width:50px;
+	height:50px;
+	background:url("../img/theme/apthefin/icon/ic_add_profile.png") no-repeat 0 0;
+	background-size:cover;
+	font-size:0;
+	overflow:hidden;
+	text-indent: -100px;
+	flex-shrink: 0;
+}
+.gnbMenu-profile ._tit {
+	display: flex;
+	align-items: center;
+	font-size:13px;
+	font-weight: 400;
+	line-height:18px;
+	color:#666;
+}
+
+.gnbMenu .hr_div {margin:30px 0 0 0}
+
+
+
 @keyframes skeleton-gradient {
   0% {
     background-color: rgba(165, 165, 165, 0.1);
