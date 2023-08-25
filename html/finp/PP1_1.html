@@ -65,11 +65,17 @@
 			<!-- [S] 자산 타이틀 -->
 			<div class="tBalance tAssets">
 				<div class="homeBox">
-					<h3 class="tit">내 자산</h3>
+					<h3 class="tit">
+                        내 자산
+                        <a href="#layer_PP1_1" class="btn_open_bottom_sheet btn_more_ask" role="button">
+                            <span class="ico_ask type_white2"><em class="blind">더보기</em></span>
+                        </a>
+                    </h3>
                     <div class="homeInfo type_home02">
-                        <h3 class="sub_tit">
-                            <span class="pointLine3">흩어진 자산을</span> 모아<br>
-                            한눈에 확인하세요!
+                        <h3 class="cont-desc-small pointColor4">
+                            에이피더핀에서<br>
+                            통합자산관리서비스를 제공합니다.<br>
+                            서비스를 이용하시려면 약관에 동의해 주세요.
                         </h3>
                     </div>
 				</div>
@@ -239,7 +245,33 @@
     <!-- [E] 하단 고정 영역 -->
 </div>
 <!-- //wrap -->
-
+<div id="layer_PP1_1" class="layer_bottomsheet" role="dialog" tabindex="-1" aria-hidden="true">
+    <div class="layer_inner">
+        <div class="layer_tit type2"> 
+            <strong class="tit"><span>내 자산 합산기준</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont" style="max-height: 879px;">
+            <div class="msg_box">
+                <p class="msg_notice">
+                    예금페이 + 투자 + 연금 + 자동차시세 + 부동산시세 - 대출
+                </p>
+                <ul class="notice_list">
+                    <li class="list">
+                        <span class="tx">
+                            자산합계는 각 금융기관으로부터 제공받은 정보를 기준으로 하며, 정보가 최신화되지 않을 경우 자산연동 만료 또는 해지된 자산이 합계에 포함될 수도 있습니다.
+                        </span>
+                    </li>
+                    <li class="list">
+                        <span class="tx">
+                            ‘마이페이지 > 연동관리’에서 현재 연동된 자산의 정보를 최신화하면 보다 정확한 자산합계를 확인 하실 수 있습니다.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 <script>
 $(document).ready(function(){
 	//선택 탭
@@ -297,6 +329,59 @@ $(document).ready(function(){
         }
     });
 });
+// [S] 바텀시트
+$(document).on("click", ".btn_open_bottom_sheet", function(e){
+    e.preventDefault();
+
+    var $href = $(this).attr('href');
+    layer_bottomsheet($href);
+    $('html').addClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+
+    // [S] multi layer 2021-08-02 추가
+    var dimIdx = $('.dim').index();
+    eval('$focusReturn' + [dimIdx] + '= $(this)');
+   
+
+});
+function layer_bottomsheet(el){
+    var $el = $(el);
+    $el.append("<div class=\"dim\"></div>");
+    isDim ? $('.layer_bottomsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
+    setTimeout(function() {
+        $el.find('.layer_inner').addClass('on');
+    }, 50);
+
+    var isDim;
+    var dimIdx = $('.dim').index();
+    var thisDim = $el.find('.dim');
+    var thisLyZindex = dimIdx + 4000;
+    $('.dim').css('opacity','0');
+    thisDim.css('opacity','.7');
+    thisDim.closest('.layer_bottomsheet, .layer_popup').css('z-index', thisLyZindex);
+    // [E] multi layer 2021-08-02 추가
+
+    $el.find('.js_pop_close').click(function(){
+
+        $el.find('.layer_inner').removeClass('on');
+        setTimeout(function() {
+            isDim ? $('.layer_bottomsheet').hide() : $el.hide();
+            $('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+            $el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
+            // [S] multi layer 2021-08-02 추가
+            if($('.dim').length == '2'){
+                $('.dim:eq(1)').css('opacity','.7');
+            }else if($('.dim').length == '1'){
+                $('.dim').css('opacity','.7');
+            }
+            // [E] multi layer 2021-08-02 추가
+        }, 200);
+
+        // [S] multi layer 2021-08-02 추가
+        eval('$focusReturn'+ [dimIdx]).focus();
+
+        return false;
+    });
+}
 </script>
 </body>
 </html>

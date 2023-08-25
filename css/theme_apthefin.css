@@ -576,7 +576,7 @@ a.btnMenu {display:block;width:32px;height:32px;background-image:url('../img/the
 .tBalance.tAssets .tBalUpdate {margin-top:5px;}
 
 .astBox .expectPay .expectInfo span.assNum {padding:0;}
-.astBox .expectPay .expectInfo span.assNum:after {display: block;width: 16px;height: 16px;margin-top:-2px;content: '';background-image: url('../img/theme/apthefin/ic_arw_black.png');background-repeat: no-repeat;background-size: 16px auto;}
+.astBox .expectPay .expectInfo span.assNum:after {display: block;width: 16px;height: 16px;margin-top:-2px;content: '';background-image: url('../img/theme/apthefin/ic_arw_black.png');background-repeat: no-repeat;background-size: 16px auto; margin-left: 19px; }
 
 @keyframes fade-in {
     from {
@@ -621,7 +621,7 @@ a.btnMenu {display:block;width:32px;height:32px;background-image:url('../img/the
 .astBox.beforeLink .boxArea {box-shadow:none;background-color: #F5F6F7;border:none;}
 .astBox .boxArea.beforeLink {box-shadow:none;background-color: #F5F6F7;border:none;}
 .astBox .btn_wrap {padding:30px 0 0;}
-.astBox .astDetail {width:100%;margin-top:15px;padding-right:20px;}
+.astBox .astDetail {width:100%;margin-top:15px;padding-right:37px;}
 .astBox .astDetail li {display:flex;justify-content:space-between;}
 .astBox .astDetail li span {margin-bottom:13px;font-size:14px;color:#666;font-weight:400;}
 .astBox .astDetail li span.tit {color:#999;}
@@ -637,7 +637,7 @@ a.btnMenu {display:block;width:32px;height:32px;background-image:url('../img/the
 
 .layer_inner .astList {padding-top:25px;}
 .layer_inner .astList li + li {margin-top:15px;}
-.layer_inner .astList .link_detail {position:relative;display:inline-block;width:100%;height:100%;min-height:64px;padding:20px;border-radius:10px;background-color:#fafafa;}
+.layer_inner .astList .link_detail {position:relative;display:inline-block;width:100%;height:100%;min-height:64px;padding:20px;border-radius:10px;background-color:#F7F9FF;}
 .layer_inner .astList .link_detail h3 {font-size:16px;font-weight:700;}
 .layer_inner .astList .link_detail p {margin-top:10px;font-size:14px;font-weight:400;color:#666;line-height:21px;}
 .layer_inner .astList .link_detail:after {position:absolute;top:50%;right:25px;transform:translateY(-50%);width:16px;height:16px;content: '';background-image: url('../img/theme/apthefin/ic_arw_black2.png?0426');background-repeat: no-repeat;background-size: 16px auto;}

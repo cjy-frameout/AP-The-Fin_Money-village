@@ -52,11 +52,12 @@
 	<div class="container">
 		<div class="content">
 			<div class="feed-item no-border-bottom">
-				<h2 class="list-name mgt30">
+				<div class="list-name mgt30">
 					<div class="list-name-box">
-						<img src="../../img/theme/apthefin/feed_name_img.png" alt=""> 프로필 네임
+						<h2 class="list-name"><img src="../../img/theme/apthefin/feed_name_img.png" alt=""> 프로필 네임</h2>
+						<a href="#changeProfile" class="btn_open_bottom_sheet alink-typeA" role="button">프로필 변경</a>
 					</div>
-				</h2>
+				</div>
 				<!-- <div class="sel_form type_border"> 
 					<a href="#layer_SHE1119" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>카테고리를 선택해 주세요</span></a>
 				</div> -->
@@ -154,6 +155,45 @@
 	</div>
 </div>
 <!-- // bottomsheet SHE1119(카테고리설정) -->
+
+<!-- [S] bottomsheet -->
+<div id="changeProfile" class="layer_bottomsheet">
+	<div class="layer_inner">
+		<div class="layer_tit type2">
+			<strong class="tit"><span>프로필 변경</span></strong>
+			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+		</div>
+		<div class="layer_cont" style="max-height: 678px;">
+			<div class="cdChkLst">
+				<!-- <div class="cdChkItem all">
+					<label for="radio1">
+						<input type="radio" name="jobinfo" id="radio1">
+						<i></i><span id="">직장인</span>
+					</label>
+				</div> -->
+				<ul class="cdChkSubList">
+					<li class="cdChkItem"> 
+						<label for="radio2">
+							<input type="radio" name="jobinfo" id="radio2">
+							<i></i><span class="list-name flexS"><img src="../../img/theme/apthefin/feed_name_img.png" alt=""> 프로필 네임</span>
+						</label>
+					</li>
+					<li class="cdChkItem"> 
+						<label for="radio3">
+							<input type="radio" name="jobinfo" id="radio3">
+							<i></i><span class="list-name flexS"><img src="../../img/theme/apthefin/feed_name_img.png" alt=""> 프로필 네임</span>
+						</label> 
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+		<div class="layer_footer">
+			<button type="button" class="js_pop_close btn_confirm"><span>저장</span></button>
+		</div>
+	</div>
+</div>
+
 
 <script>
 // [S] 풀페이지 팝업

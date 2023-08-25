@@ -18,6 +18,8 @@
     font-size: 14px;
     font-weight: 400;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 .list-name {
     color: #434655;
@@ -27,7 +29,11 @@
     align-items: center;
     justify-content: space-between;
 }
-.feed-item .list-name-box > img { border-radius: 50%; margin-right: 5px; }
+.list-name.flexS {
+    justify-content: flex-start !important;
+}
+.feed-item .list-name-box .list-name > img { border-radius: 50%; margin-right: 5px; }
+.list-name.flexS > img { margin-right: 5px; }
 .feed-item .list-title {
     color: #333;
     font-size: 14px;
@@ -321,6 +327,17 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 /* ========================================== E : input CSS ========================================================= */
 
 /* =========================================== S : common =========================================================== */
+.dpf { display: flex;}
+.jcc { justify-content: center;}
+.alink-typeA { 
+    background: url(../img/theme/apthefin/ic_arw5.png) no-repeat right center;
+    background-size: 13px;
+    color: #3E5FAC !important; 
+    font-size: 15px; 
+    font-weight: 700; 
+    padding-right: 15px;
+}
+
 .w100 { width: 100% !important; }
 .fs-18 {
     color: #17181A;
@@ -332,7 +349,8 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     font-size: 14px !important;
     font-weight: 400;
 }
-.pointColor3 { color: #000; font-weight: 700; }
+.pointColor3 { color: #000 !important; font-weight: 700; }
+.pointColor4 { color: #333 !important; }
 .hasTopBorder {
     border-top: 10px solid #F1F2F5;
 }
@@ -559,9 +577,45 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 .filter-title-wrap + .radioTab { margin-top: 10px; }
 .hr_div.noMgn { margin-bottom: 0 !important;}
 .tabs_header.w100 { margin: 0 -20px 15px; }
-
+.my-bar-rate-wrap {
+    display: flex;
+    align-items: center;
+}
+.my-bar-rate-wrap + .bar-rate.gray { margin-left: 30px;}
+.bar-rate {
+    display: inline-block;
+    position: relative;
+    padding-left: 15px;
+    font-size: 14px;
+}
+.bar-rate:before {
+    content:'';
+    border-radius: 50%;
+    display: block;
+    height: 12px !important;
+    width: 12px !important;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.bar-rate.rate1:before {
+    background-color: #4476FB !important;
+}
+.bar-rate.rate2:before {
+    background-color: #DD797A !important;
+}
+.bar-rate.rate3:before {
+    background-color: #8C65CD !important;
+}
+.bar-rate.gray:before {
+    background-color: #DBDBDB !important;
+}
 /* ========================================================= E : common  =====================================================*/
 /* S : component */
+.wrapBar > .gBarBox:nth-child(1) > .myAsset > .gBar { background-color: #4476FB;}
+.wrapBar > .gBarBox:nth-child(2) > .myAsset > .gBar { background-color: #DD797A;}
+.wrapBar > .gBarBox:nth-child(3) > .myAsset > .gBar { background-color: #8C65CD;}
 .credit-score {
     background: url(../img/theme/apthefin/credit_score.png) no-repeat  50% 136px;
     border-top: 1px solid #DDE3E7;
