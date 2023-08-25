@@ -1719,9 +1719,9 @@ to{opacity:1;margin-top:0px;}
 .filterItem .radioTab .radioMid label {height:44px;padding:10px 25px;line-height:24px;font-size:14px;border-radius:6px;}
 .filterItem .radioTab .radioLg label {height:50px;padding:10px 25px;line-height:31px;font-size:15px;border-radius:10px;}
 .layer_inner .filterItem .radioTab .radioMid label {font-size:14px;}
-.layer_inner .filterItem .dateItem input {width:100%;border-bottom:1px solid #ddd;padding:8px 0 11px 0px;font-size:18px;font-weight:400;}
+.layer_inner .filterItem .dateItem input {width:100%;border-bottom:1px solid #ddd;padding:8px 0 11px 0px;font-size:16px;font-weight:500;}
 .layer_inner .filterItem .dateItem input:valid {border-bottom:1px solid #333;}
-.layer_inner .filterItem .ui-datepicker-trigger {right:3px;top:11px;}
+.layer_inner .filterItem .ui-datepicker-trigger {right:3px;top:8px;}
 /* [E] 조회필터 팝업 */
 
 /* [S]  풀팝업 */
@@ -1996,7 +1996,7 @@ to{opacity:1;margin-top:0px;}
 .topMyInfo .name {font-size:16px;font-weight:400;color:#333;}
 .topMyInfo .email {font-size:16px;font-weight:500;color:#333;margin-top:5px;}
 .topErrPop {display:flex;background:#F5F8FC;;}
-.topErrPop .tx {font-weight:400;color:#F05E89;padding-left:26px;text-align:left;}
+.topErrPop .tx {font-weight:400;color:#E53A4C;padding-left:26px;text-align:left;}
 .topErrPop .tx:before {width:16px;height:16px;left:0px;top:9px;background:url('../img/theme/apthefin/ic_err.png?0426') no-repeat 50% 50%;background-size:16px auto;}
 
 .topInfoPop {padding:12px 20px;background:#F5F8FC;width:calc(100% + 40px);margin-left:-20px;}
