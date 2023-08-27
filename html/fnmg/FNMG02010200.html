@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title></title>
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="title" content="">-->
+    <meta name="description" content="">
+    <!--<meta name="keywords" content="">-->
+    <!-- The Open Graph protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+    <!-- //The Open Graph protocol -->
+    <link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/content.css">
+    <link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+    <link rel="stylesheet" type="text/css" href="../../css/mydata.css">
+    <link rel="stylesheet" type="text/css" href="../../css/fnmg.css">
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/cmd.js"></script>
+</head>
+
+<body>
+
+<!-- wrap -->
+<div class="wrap">
+    <!-- header -->
+    <div class="header">
+        <div class="header_inn">
+            <div class="left">
+                <a href="#none" class="btnBack"><span class="blind">Back</span></a>
+            </div>
+            <div class="center">
+                <h2 class="tit_h2">자산관리서비스</h2>
+            </div>
+        </div>
+    </div>
+    <!-- //header -->
+
+    <!-- container -->
+    <div class="container">
+        <div class="content">
+
+            <div class="terms_wrap">
+                <div class="terms-nav">
+                    <div class="nav-item">[필수] 자산관리서비스 이용약관</div>
+                    <div class="nav-item">[필수] 개인(신용)정보 수집·이용 동의</div>
+                </div>
+                <div class="terms-slider">
+                    <!-- [S] [필수] 자산관리서비스 이용약관 -->
+                    <div class="servTerm">
+                        <div class="servTerm_tbl">
+                            <p class="tx">기본 내용 text</p>
+                            <h4 class="txStrong">강조내용 text</h4>
+                            <table>
+                                <caption> 테이블 타이틀</caption>
+                                <colgroup>
+                                    <col style="width:35%;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <th>샘플</th>
+                                    <td>
+                                        샘플내용
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>일이삼사오육칠팔구십</th>
+                                    <td>
+                                        <ul>
+                                            <li>• 샘플내용</li>
+                                            <li>• 일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <!-- [E] [필수] 자산관리서비스 이용약관 -->
+                    <!-- [S] 탭2 -->
+                    <div class="servTerm">2</div>
+                    <!-- [S] 탭2 -->
+                </div>
+            </div>
+
+
+
+            <!-- [S] 하단 고정 영역 -->
+            <div class="fix_bottom">
+                <div class="btn_wrap">
+                    <div class="btnGroup type_col">
+                        <p class="btn_step">
+                            <a href="#none" class="btnBl1 btMore" role="button"><i class="more"></i>계속보기</a>
+                            <a href="#none" class="btnBl1 btAgr01 " role="button">동의</a><!-- disable 형태 클래스 'disable' 추가 -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- [E] 하단 고정 영역 -->
+
+        </div>
+    </div>
+    <!-- //container -->
+
+
+</div>
+<!-- //wrap -->
+
+
+
+
+
+
+</body>
+<script>
+    $(document).ready(function(){
+        $('.terms-nav').slick({
+            slidesToShow: 1, /* 21.07.14 옵션 변경*/
+            slidesToScroll: 1,
+            asNavFor: '.terms-slider',
+            dots: false,
+            focusOnSelect: true,
+            infinite: false,
+            variableWidth: true
+        });
+        $('.terms-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            asNavFor: '.terms-nav',
+            infinite: false,
+            adaptiveHeight: true
+        });
+        certiStepScroll(); // 호출, 인증 동의 스크롤 모션
+    })
+
+    function certiStepScroll(){
+        var $btAgr01 = $('.btAgr01');
+        var $windowHeight = $(window).height();
+        var $windowTop = $(window).scrollTop();
+        var $windowBottom = document.body.offsetHeight - window.innerHeight - 90;
+        if($('.btMore').length){
+            if($windowTop >= $windowBottom){
+                $btAgr01.css('display','flex');
+                $('.btMore').hide();
+            }
+        }
+        $(window).scroll(function(){
+            $windowTop = $(window).scrollTop();
+            $windowBottom = document.body.offsetHeight - window.innerHeight - 90;
+
+
+            if($('.btMore').length){
+                if($windowTop >= $windowBottom){
+                    $btAgr01.css('display','flex');
+                    $('.btMore').hide();
+                }
+            }
+        });
+
+        // [1] 1번째 계속보기 버튼
+        $(document).on("click", ".btMore", function(){
+            var $windowTop = $(window).scrollTop() - 55;
+            $('html, body').animate({scrollTop: $windowTop + $windowHeight}, 700);
+        });
+        /* [E] 인증 동의 스크롤 모션 */
+    }
+</script>
+</html>

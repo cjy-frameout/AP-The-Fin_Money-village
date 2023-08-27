@@ -552,6 +552,8 @@
 .info_box .info_txt{font-size:13px;color:#666;line-height:19px;}
 .tabs_wrap .tabs_body_wrap .info_box{margin-top:-10px;margin-bottom:14px;}
 /* 자산연동 계좌 선택 */
+.ins1Link_tit {display:flex;justify-content: space-between;margin:16px 0 10px !important;}
+.ins1Link_tit .stit {min-height:0 !important;}
 .ins1Link_wrap{padding:0;}
 .ins1LinkLst{padding:0px 0 0;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;flex-flow:row wrap;justify-content:flex-start;align-items:center;margin:0 -5px;text-align:center;}
 .ins1LinkLst li{width:33.33%;padding:10px 5px 0px;}
@@ -1986,7 +1988,7 @@ to{transform:scale(1.2) perspective(500px) rotate(360deg) translateZ(0px);}}
 .layer_popup .full_page .tab_certi .tabs_header:before, .layer_popup .full_page .tab_certi .tabs_header:after{display:none;}/* 2022-06-23 XX1300 화살표 미노출 */
 .wrap_process_step + .tit2_wrap + .tab_certi{margin-top:40px;margin-bottom:10px;}
 /* .tit2_wrap + .tab_certi{margin-top:30px;} */
-.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap{padding-bottom:30px;}
+.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap{padding-bottom:24px;}
 .tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:first-child{margin-top:0px;}
 .tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child{padding-bottom:0;}
 .tabs_wrap.type_scroll .ins1Link_wrap .org_wrap + .org_wrap{margin-top:0;}

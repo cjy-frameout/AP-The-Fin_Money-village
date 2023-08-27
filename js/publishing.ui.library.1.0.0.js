@@ -499,7 +499,7 @@ function orgSelScroll(){
 
             $(document).on("click", ".tabs_wrap .btn_sel_org:nth-child("+ $orgNth +") a", function(){
 
-                if($orgNth == 1){
+                /*if($orgNth == 1){
                     $('html, body').animate({scrollTop: $topScSpace}, 300);
                 }else if($orgNth == 2){
                     $('html, body').animate({scrollTop: $topScSpace + $('.org_nth_1').outerHeight(true)}, 300);
@@ -515,7 +515,7 @@ function orgSelScroll(){
                     $('html, body').animate({scrollTop: $topScSpace + $('.org_nth_1').outerHeight(true) + $('.org_nth_2').outerHeight(true) + $('.org_nth_3').outerHeight(true) + $('.org_nth_4').outerHeight(true) + $('.org_nth_5').outerHeight(true) + $('.org_nth_6').outerHeight(true)}, 300);
                 }else if($orgNth == 8){
                     $('html, body').animate({scrollTop: $topScSpace + $('.org_nth_1').outerHeight(true) + $('.org_nth_2').outerHeight(true) + $('.org_nth_3').outerHeight(true) + $('.org_nth_4').outerHeight(true) + $('.org_nth_5').outerHeight(true) + $('.org_nth_6').outerHeight(true) + $('.org_nth_7').outerHeight(true)}, 300);
-                }
+                }*/
             });
         });
 
@@ -564,7 +564,7 @@ function orgSelScroll(){
         });
 
         if($('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').outerHeight(true) < $(window).height() - $('.fix_bottom').outerHeight(true) - $('.tabs_header').outerHeight(true)){
-            $('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').css('padding-bottom', $(window).height() - $('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').height() - $('.fix_bottom').height() - $('.tabs_header').outerHeight(true));
+            $('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').css('padding-bottom', $(window).height() - $('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').height() - $('.fix_bottom').height() - $('.tabs_header').outerHeight(true) - 60);
 
             //console.log('.org_last_height >= window_height', $('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').outerHeight(true), $(window).height(), $(window).height() - $('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').outerHeight(true) - $('.fix_bottom').outerHeight(true) - $('.tabs_header').outerHeight(true)+'(디바이스높이, 컨텐츠높이 비교)');
             //console.log($('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').outerHeight(true), $('.fix_bottom').outerHeight(true), $('.fix_bottom').offsetHeight, $('.tabs_header').outerHeight(true));

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" class="leaf -activeGnb">
+<html lang="ko" class="leaf">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
@@ -79,11 +79,12 @@
                 <div class="_bottom">
                     <p class="_tit"><span>내 멀티프로필</span> <a href="#layer_profile" class="btn_open_bottom_sheet btn_more_ask" role="button"><span class="ico_ask type_white2"><em class="blind">더보기</em></span></a></p>
                     <div class="_thumList">
+                        <!-- 최대 노출5개 -->
                         <a href="#">
-                            <span class="_thum" style="background-image:url('../../img/theme/apthefin/@thum.jpg')"></span>
+                            <span class="_thum" style="background-image:url('../../img/theme/apthefin/@thum.jpg')"></span> <!-- 이미지가없으면 기본값출력됨 -->
                             <span class="_thumName">홍길동</span>
                         </a>
-                        <a href="#">
+                        <a href="#" class="selected"> <!-- 선택된 프로필 -->
                             <span class="_thum" style=""></span>
                             <span class="_thumName">일이삼사오육칠팔구십</span>
                         </a>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll_lock">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title></title>
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="title" content="">-->
+    <meta name="description" content="">
+    <!--<meta name="keywords" content="">-->
+    <!-- The Open Graph protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+    <!-- //The Open Graph protocol -->
+    <link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/content.css">
+    <link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+    <link rel="stylesheet" type="text/css" href="../../css/mydata.css">
+    <link rel="stylesheet" type="text/css" href="../../css/fnmg.css">
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/cmd.js"></script>
+    <style>
+        body{background-color:#444;}
+        .test_view{display:flex;flex-wrap:wrap;}
+        .view_section{position:relative;border:1px dotted #ddd;}
+        .view_section .type_no{padding:5px 0;text-align:center;font-size:12px;font-weight:300;color:#fff;}
+        .layer_bottomsheet, .layer_popup{display:block;position:relative;width:360px;height:100%;margin-bottom:10px;margin-left:0px;}
+        .layer_bottomsheet .layer_inner{overflow:inherit;position:fixed;left:0;bottom:0;max-height:auto;transform: translate(0, 0);}
+    </style>
+</head>
+
+<body>
+
+
+
+
+<!-- [S] FNMG0400 연결하기 팝업 -->
+<div id="FNMG0400" class="layer_fullsheet" style="display: block">
+    <div class="layer_inner on">
+
+        <div class="layer_tit">
+
+            <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+        </div>
+
+        <div class="layer_cont fnmg04"> <!-- fnmg04 css 추가 -->
+            <div class="tit2_wrap mgt10">
+                <div class="left">
+                    <h2 class="tit_h2">
+                        <span class="pointColor">홍길동님</span><br>
+                        많이 이용하는 금융사를<br>모아드렸어요.
+                    </h2>
+                    <span class="fnmg04-bg"></span>
+                </div>
+            </div>
+            <div class="certi_sel_all mgt20">
+                <div class="agChkItem tar">
+                    <label for="chkAll6">
+                        <input type="checkbox" id="chkAll6"><i></i><span>한번에 선택</span>
+                    </label>
+                </div>
+            </div>
+            <ul class="ins1LinkLst mgt10">
+                <li>
+                    <button type="button" href="#none" class="sel_btn"><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+                        <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="경남은행"></span>
+                        <span class="name">경남은행</span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" href="#none" class="sel_btn">
+                        <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="부산은행"></span>
+                        <span class="name">부산은행</span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" href="#none" class="sel_btn">
+                        <span class="ico"><img src="../../img/bank/D1AABJ0000.png" alt="국민은행"></span>
+                        <span class="name">국민은행</span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" href="#none" class="sel_btn">
+                        <span class="ico"><img src="../../img/bank/D1AABG0000.png" alt="우리"></span>
+                        <span class="name">우리</span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" href="#none" class="sel_btn disable"><!-- 연동완료시 클래스 'disable' 추가 -->
+                        <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="IBK기업"></span>
+                        <span class="name">IBK기업</span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" href="#none" class="sel_btn disable err"><!-- 점검시 클래스 'err' 추가 -->
+                        <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="SC제일"></span>
+                        <span class="name">SC제일</span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" href="#none" class="sel_btn">
+                        <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="부산"></span>
+                        <span class="name">부산</span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" href="#none" class="sel_btn">
+                        <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="하나"></span>
+                        <span class="name">하나</span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" href="#none" class="sel_btn">
+                        <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="에이피더핀"></span>
+                        <span class="name">에이피더핀</span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" href="#none" class="sel_btn">
+                        <span class="ico"><img src="../../img/bank/D1AAAH0000.png" alt="새마을금고"></span>
+                        <span class="name">새마을금고</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <!-- [S] 하단 고정 영역 -->
+        <div class="fix_bottom bottom">
+            <div class="btn_wrap">
+                <div class="btnGroup type2">
+                    <p><a href="" class="btnBl1" role="button" onclick=""><span class="sel_btnCount">0</span>개 기관 연결하기</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- [E] 하단 고정 영역 -->
+    </div>
+</div>
+<!-- [E] FNMG0400 거래내역상세 팝업 -->
+
+</body>
+<script>
+    $(document).ready(function(){
+        var chkSize; //은행선택 갯수
+
+        $(".sel_btn").on("click",function(){
+            $(this).toggleClass("on");
+            chkSize = $(".sel_btn.on").size();
+            chkSize > 0 ? $(".fix_bottom").addClass("not_dock") : $(".fix_bottom").removeClass("not_dock");
+            $(".sel_btnCount").text(chkSize);
+        });
+        $(".fix_bottom").removeClass("not_dock"); // 버튼 은행선택전 초기값 설정
+    })
+    // [S] 풀페이지 팝업
+    $(document).on("click", ".btn_open_full_sheet", function(e){
+        e.preventDefault();
+        var $fullPop = $(this).attr('href');
+        layer_fullsheet($fullPop);
+
+        $('html').addClass('scroll_lock');
+        $focusReturn = $(this);
+    });
+    function layer_fullsheet(el){
+        var $el = $(el);
+        $el.append("<div class=\"dim\"></div>");
+        isDim ? $('.layer_fullsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
+        setTimeout(function() {
+            $el.find('.layer_inner').addClass('on');
+        }, 50);
+
+        var isDim = $el.siblings().hasClass('dim');
+
+        $el.find('.js_pop_close').click(function(){
+            $el.find('.layer_inner').removeClass('on');
+            setTimeout(function() {
+                isDim ? $('.layer_fullsheet').hide() : $el.hide();
+                $('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+                $el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
+            }, 200);
+            $focusReturn.focus();
+            return false;
+        });
+    }
+    // [E] 풀페이지 팝업
+</script>
+</html>
