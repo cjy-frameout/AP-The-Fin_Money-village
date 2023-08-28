@@ -74,13 +74,13 @@
 							</tr>
 							<tr>
 								<th scope="row">Cross Browsing</th>
-								<td colspan="3">IE10, Chrome, Android 4.5</td>
+								<td colspan="3">IE계열 X, Chrome, Android 4.5</td>
 							</tr>
 							<tr>
 								<th scope="row">History</th>
 								<td colspan="3">
-									프로젝트_WBS_v1.1_200303_수행사.xlsx
-									<textarea class="history_area">
+									
+									<textarea class="history_area" disabled>
 
 									</textarea>
 								</td>
@@ -3963,6 +3963,8 @@
 						$this.parent().find('.pckg').text('Content');
 					}else if($this.text() == 'Fin 스토어'){
 						$this.parent().find('.pckg').text('Goods');
+					}else if($this.text() == '더핀 회원가입' || $this.text() == '로그인' || $this.text() == '전체메뉴'){
+						$this.parent().find('.pckg').text('Common');
 					}
 				});
 			}

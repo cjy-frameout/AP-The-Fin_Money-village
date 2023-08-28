@@ -847,7 +847,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     border-bottom: 1px solid #DDE3E7;
     background: #fff;
 }
-.container {
+.header + .container {
     padding-top: 50px !important;
 }
 .container.type_terms.load_term {
