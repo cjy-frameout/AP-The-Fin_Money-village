@@ -119,6 +119,7 @@ function inc_IAHead(){
 	// str+='	<col class="planner" style="width:4%" /><!-- 기획자 -->';
 	str+='	<col class="rdate" style="width:4%" /><!-- 퍼블 완료일 -->';
 	str+='	<col class="rdate" style="width:4%" /><!-- 개발 완료일 -->';
+	str+='	<col class="rdate" style="width:4%" /><!-- 패키지 구분 -->';
 	str+='	<col class="id" style="width:6%" /><!-- ID -->';
 	str+='	<col class="info" style="width:13%" /><!-- 요약 -->';
 	str+='	<col class="etc" style="width:auto" /><!-- 비고 -->';
@@ -136,6 +137,7 @@ function inc_IAHead(){
 	// str+='		<th scope="col" class="planner">기획자</th>';
 	str+='		<th scope="col" class="rdate">Pub End</th>';
 	str+='		<th scope="col" class="rdate">Dev End</th>';
+	str+='		<th scope="col" class="pckg">Package</th>';
 	str+='		<th scope="col" class="mdate">ID</th>';
 	str+='		<th scope="col" class="info">Info</th>';
 	str+='		<th scope="col" class="etc">Log</th>';
