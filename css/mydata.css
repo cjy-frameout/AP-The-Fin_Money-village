@@ -385,6 +385,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     left: 20px;
     right: 20px;
     border-top: 1px solid #E7E9EE;
+    z-index: 99;
 }
 .btn-wrap.noBorder {
     border-top: 0;
@@ -459,6 +460,8 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     line-height: 1.3;
 }
 .main-title + .list-wrap { margin-top: 24px; }
+.cont-title-big + .asGroup { margin-top: 30px;}
+.layer_cont > .cont-title-big { margin-top: 15px; }
 .cont-desc-big {
     color: #6F7A81;
     font-size: 18px;
@@ -611,6 +614,46 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 .bar-rate.gray:before {
     background-color: #DBDBDB !important;
 }
+.updating {
+    border-radius: 12px;
+    height: 16px;
+    overflow: hidden;
+    width: 114px;
+    position: relative;
+}
+.loadingBar {
+    height: 16px;
+    overflow: hidden;
+    width: 114px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.loadingBar:before,
+.loadingBar:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/theme/apthefin/icon_loading.png);
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    animation: loadingMove 3s linear infinite;
+}
+@keyframes loadingMove {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+        background-position: 114px 0;
+    }
+}
+.updating + .tx { margin-top: 20px !important; }
+
 /* ========================================================= E : common  =====================================================*/
 /* S : component */
 .wrapBar > .gBarBox:nth-child(1) > .myAsset > .gBar { background-color: #4476FB;}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title></title>
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="title" content="">-->
+    <meta name="description" content="">
+    <!--<meta name="keywords" content="">-->
+    <!-- The Open Graph protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+    <!-- //The Open Graph protocol -->
+    <link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/content.css">
+    <link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+        <link rel="stylesheet" type="text/css" href="../../css/mydata.css">
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/cmd.js"></script>
+
+    <!-- [S] chart -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <!-- [E] chart -->
+    <style>
+        .layer_fullsheet { display: block;} 
+    </style>
+</head>
+
+<body>
+
+    <!-- [S] FINP01070000 공유항목선택 팝업 -->
+    <div id="PP1_2_2_1_2_2_1FP" class="layer_fullsheet">
+        <div class="layer_inner">
+            <div class="layer_tit">
+                <strong class="tit">공유하기</strong>
+                <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+            </div>
+            <div class="layer_cont">
+                <h2 class="cont-title-big">
+                    피드에 공유할 자산을 <br>확인해주세요.
+                </h2>
+                <div class="asGroup">
+                    
+                    <div class="asList">
+                        <div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
+                            <label for="share1" class="flex ">
+                                <div class="im">
+                                    <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                </div>
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">에이피더핀 펀드1</span></p>
+                                    <p class="amount"><em>12,000,000</em>원</p>
+                                    <p class="profit plus"><em class="num">+230,000</em>원 (<em class="num invest_up">3.21%</em>)</p>
+                                </div>
+                                <input type="radio" name="share" id="share1">
+                                <i></i>
+                            </label>
+                        </div>
+                        <div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
+                            <label for="share2" class="flex ">
+                                <div class="im">
+                                    <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                </div>
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">에이피더핀 펀드1</span></p>
+                                    <p class="amount"><em>12,000,000</em>원</p>
+                                    <p class="profit plus"><em class="num">+230,000</em>원 (<em class="num invest_up">3.21%</em>)</p>
+                                </div>
+                                <input type="radio" name="share" id="share2">
+                                <i></i>
+                            </label>
+                        </div>
+                        <div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
+                            <label for="share3" class="flex ">
+                                <div class="im">
+                                    <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                </div>
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">에이피더핀 펀드1</span></p>
+                                    <p class="amount"><em>12,000,000</em>원</p>
+                                    <p class="profit plus"><em class="num">+230,000</em>원 (<em class="num invest_up">3.21%</em>)</p>
+                                </div>
+                                <input type="radio" name="share" id="share3">
+                                <i></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-wrap fixed noBorder vertical">
+            <a href="#none" class="btnBl1 " role="button">공유</a>
+        </div>
+    </div>
+
+</body>
+</html>
