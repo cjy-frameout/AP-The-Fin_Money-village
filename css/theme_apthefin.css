@@ -214,7 +214,7 @@ input[type="file"], .input-box input[type="file"] {
 .listNone:before {width:125px;height:110px;margin:0 auto 10px;background:url("../img/theme/apthefin/ic_complete_fail.png?0426") no-repeat center center;background-size:130px auto;margin-bottom:10px;}
 .historyNone {font-size:16px;padding-top:80px;}
 .historyNone .txt {font-size:16px;}
-.historyNone .txt:before {width:95px;height:100px;margin:0 auto 10px;background:url("../img/theme/apthefin/ic_complete_fail.png?0426") no-repeat center center;background-size:95px auto;margin-bottom:10px;}
+.historyNone .txt:before {width:32px;height:28px;margin:0 auto 10px;background:url("../img/theme/apthefin/ic_complete_fail.png?0426") no-repeat center center;background-size:cover;margin-bottom:10px;}
 .asGroup + .btn_wrap {margin-top:0;padding-top:30px;}
 .layer_bottomsheet .layer_inner .layer_footer .btn_cancel {background-color:#c2c2c2;color:#fff;}
 
@@ -626,7 +626,7 @@ a.btnMenu {display:block;width:32px;height:32px;background-image:url('../img/the
 .asGroup.assets_chart .wrapBarGraph.beforeLink .wrapBar_detail .bar_rate.gray:before {background-color:#eee;}
 
 .astBox .expectPay .expectInfo .infoTit em {font-weight:700;line-height:24px;}
-.astBox .expectPay .expectInfo span {padding-right:3px;font-size:15px;font-weight:500;line-height:24px;}
+.astBox .expectPay .expectInfo span {padding-right:3px;font-size:16px;font-weight:600;line-height:24px;}
 .astBox.beforeLink .boxArea {box-shadow:none;background-color: #F5F6F7;border:none;}
 .astBox .boxArea.beforeLink {box-shadow:none;background-color: #F5F6F7;border:none;}
 .astBox .btn_wrap {padding:30px 0 0;}
@@ -819,7 +819,7 @@ a.btnMenu {display:block;width:32px;height:32px;background-image:url('../img/the
 .asGroup .asList .accItem > a {min-width:180px;align-items:center;}
 .asGroup .asList .accItem + .accItem {margin-top:10px;}
 .asGroup .asList .btnTransfer {line-height:30px;right:20px;border:1px solid #3E5FAC;border-radius:20px;background-color:#fff;color: #3E5FAC;}
-.asGroup .asList .im {align-items:initial;}
+.asGroup .asList .im {align-items:center;}
 .asGroup .asList .im.card {height:50px;padding-top:0;}
 .asGroup .asList img {width:32px;height:32px;margin-right:auto;}
 .asGroup .asList .btnTransfer:after {content:none;}
@@ -2520,7 +2520,7 @@ to{opacity:1;margin-top:0px;}
 .upLoading.circleBar.type4 p {color:#3E5FAC;font-size:16px;font-weight:400;}
 
 .accHistory .historyList .upLoading {padding:50px 0 0;}
-.accHistory .historyList .upLoading .tx {color:#3E5FAC;font-size:16px;margin-top:0px;}
+.accHistory .historyList .upLoading .tx {color:#999;font-size:15px;margin-top:0px; font-weight: 600;}
 .accHistory .historyList .upLoading.type4 {padding:90px 0 0;}
 /* .upLoading.circleBar.type4 .loader{background-image:url('../img/theme/apthefin/loading.png?0426');} */
 
@@ -2868,7 +2868,7 @@ to{opacity:1;margin-top:0px;}
 
 .expectPay.bill .expectInfo .infoNum:after {display:block;width:16px;height:16px;margin-top:-2px;content:'';background-image:url('../img/theme/apthefin/ic_arw_black.png?0426');background-repeat:no-repeat;background-size:16px auto;}
 
-.expectPay .expectInfo .infoNum .num{font-size:18px;font-weight:700;margin-top: -2px;}
+.expectPay .expectInfo .infoNum .num{font-size:16px;font-weight:700;margin-top: -2px;}
 .expectPay .expectTxt{font-weight:400;font-size:14px;margin-top: 15px;}
 .expectPay .expectTxt.bar{border-top:1px solid rgba(116, 172, 232, 0.5);width: 100%;margin-top: 20px;padding-top: 20px;}
 .expectPay .expectTxt.bar .im{display: inline-block;width: 24px;height: 24px;}

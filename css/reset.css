@@ -583,7 +583,7 @@ a.btnBl6 { display:flex;align-items:center;justify-content:center;height:45px;pa
 .upLoading.circleBar::before{display:none;}
 .upLoading.circleBar p{margin-left:10px;}
 .upLoading.circleBar.type4{flex-flow:column nowrap;align-items:center;justify-content:center;margin-top:50px;}
-.upLoading.circleBar.type4 p{margin:0;padding:1px 0 2px;font-family:'Noto Sans KR';font-size:17px;font-weight:500;color:#000;}
+.upLoading.circleBar.type4 p{margin:0;padding:1px 0 2px;font-size:17px;font-weight:500;color:#000;}
 .upLoading.circleBar.type4 .num{display:block;margin:0 0 15px;padding:6px 0 1px;font-size:24px;font-weight:400;color:#d81921;line-height:24px;}
 .upLoading.circleBar.type4 .loader{width:46px;height:46px;background-repeat:no-repeat;background-size:46px 46px;animation:spin .7s linear 0s infinite;}
 .loader{width:24px;height:24px;background-repeat:no-repeat;background-size:24px 24px;animation:spin .5s linear 0s infinite;}
