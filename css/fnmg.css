@@ -58,3 +58,13 @@
     color:#3E5FAC;
     font-weight:700;
 }
+
+.bgAssSearch {
+    width:100%;
+    aspect-ratio: 16/16.889;
+    background:url("../img/theme/apthefin/bg_ass_search.png") no-repeat 0 0;
+    background-size:cover;
+    position: fixed;
+    left:0;
+    top:36.2162162162%;
+}
