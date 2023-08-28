@@ -297,7 +297,7 @@ transition:background-color 5000s ease-in-out 0s;
 
 a.btnBl1{position:relative;display:flex;align-items:center;justify-content:center;height:45px;padding:0;font-size:15px;border-radius:6px;}
 a.btnBl1.disable{color:#777;background-color:#f2f2f2;border:1px solid #ddd;}
-a.btnBl1 i.more {display:inline-block;width:12px;height:12px;margin-right:7px;background:url('../img/ic/ic_scroll_more.png') no-repeat 50% 50%;background-size:12px;}
+a.btnBl1 i.more {display:inline-block;width:16px;height:16px;margin-right:7px;background:url('../img/theme/apthefin/icon/ic_scroll_more.png') no-repeat 0 0;background-size:16px;}
 
 a.btnBl2{position:relative;display:flex;align-items:center;justify-content:center;height:45px;padding:0;font-size:15px;background-color:transparent;border-radius:6px;}
 a.btnBl2:after{content:'';position:absolute;left:0;top:0;width:100%;height:100%;background-size:cover;opacity:.08;border-radius:6px;}
@@ -634,11 +634,7 @@ a.blockLink {display:block;font-size:14px;line-height:22px;color:#666;}
 .errMsg {padding:25px 0;text-align:center}
 .errMsg .tx {font-size:15px;line-height:20px;color:#666}
 
-/* 동의버튼 과 계속하기버튼 */
-.btn_step.-continue a.btnBl1 {display:none}
-.btn_step.-continue a.btnBl1.-active {display:none}
-.btn_step.-continue a.btMore {display:flex;}
-.btn_step a.btnBl1.-active {display:flex;}
+
 
 /* theme limit reset */
 .limit_hide{display:none;}

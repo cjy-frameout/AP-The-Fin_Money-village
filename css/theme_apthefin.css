@@ -259,7 +259,7 @@ input[type="file"], .input-box input[type="file"] {
     padding-bottom:calc(18px + env(safe-area-inset-bottom)) !important;
     line-height:19px;
 }
-a.btnBl1.wide i.more{margin-top:5px;}
+a.btnBl1.wide i.more{margin-top:0;}
 /* [E] notch */
 
 /* [S] Flag, tag */
@@ -1831,7 +1831,7 @@ to{opacity:1;margin-top:0px;}
 .terms-nav {border-bottom:1px solid #e5e5e5;}
 .terms_wrap .terms-nav:after {width:45px;height:40px;right:0px;top:6px;background-image:url('../img/theme/apthefin/ic_scroll_arr.png?0426'),-webkit-linear-gradient(left, rgba(255,255,255,.1), rgba(255,255,255,.9), #fff);background-size:16px 16px, cover;}
 .terms_wrap .terms-nav:before {width:45px;height:40px;right:0px;top:6px;background-image:url('../img/theme/apthefin/ic_scroll_arr.png?0426'),-webkit-linear-gradient(left, rgba(255,255,255,.1), rgba(255,255,255,.9), #fff);background-size:16px 16px, cover;transform:rotate(180deg);}
-.terms_wrap .terms_tit h3 {font-size:16px;padding:0 0 10px 0;}
+.terms_wrap .terms_tit h3 {font-size:15px;padding:0 0 10px 0;color:#3E5FAC;font-weight:700;line-height:22px;}
 
 .servTerm ul li {font-weight:400;font-size:13px;}
 .servTerm .termTit {margin:30px 0 25px;font-size:22px;color:#333;font-weight:700;}
@@ -4409,9 +4409,9 @@ html.-activeGnb .gnbMenu {
 .gnbMenu .hr_div {margin:30px 0 0 0}
 
 
-.underLine {
+/*.underLine {
 	box-shadow: inset 0 -10px 0 #FEECF2
-}
+}*/
 
 /* 공동 인증서 선택 */
 .certiSelect {

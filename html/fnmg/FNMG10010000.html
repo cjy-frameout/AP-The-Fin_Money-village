@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title></title>
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="title" content="">-->
+    <meta name="description" content="">
+    <!--<meta name="keywords" content="">-->
+    <!-- The Open Graph protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+    <!-- //The Open Graph protocol -->
+    <link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/content.css">
+    <link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+    <link rel="stylesheet" type="text/css" href="../../css/mydata.css">
+    <link rel="stylesheet" type="text/css" href="../../css/fnmg.css">
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/cmd.js"></script>
+</head>
+
+<body>
+
+<!-- wrap -->
+<div class="wrap">
+
+    <!-- container -->
+    <div class="container">
+        <div class="content">
+            <div class="desc-wrap mgt10">
+                <h3 class="cont-title-big">보유하신 자산을<br>검색 중입니다</h3>
+            </div>
+            <div class="bgAssSearch"></div>
+        </div>
+    </div>
+    <!-- //container -->
+
+</div>
+<!-- //wrap -->
+<script>
+    $(document).ready(function(){
+        //전송요구 동의
+        $(".btAgr01").on("click",function(e){
+            e.preventDefault();
+            chkArgBtn(".btAgr01",".btAgr02",".term_02");
+        })
+        //수집이용동의
+        $(".btAgr02").on("click",function(e){
+            e.preventDefault();
+            chkArgBtn(".btAgr02",".btAgr03",".term_03");
+        });
+
+        //계속보기 버튼
+        $(".btMore").on("click",function(e){
+            e.preventDefault();
+            $('html, body').stop().animate({ scrollTop: $(document).height() - $(window).height() }, 300,function(){
+                scrollChk();
+            });
+        });
+    });
+
+    $(window).scroll(function(){
+        scrollChk();
+    });
+
+    //스크롤 체크
+    function scrollChk(){
+        var contentHeight = $(document).height(); // 페이지 내용 높이
+        var $windowTop = $(window).scrollTop();
+        var windowHeight = $(window).height() + $windowTop + 10; // 창 높이
+
+        if (contentHeight > windowHeight) {
+            //스크롤 끝이 아닐때
+        } else {
+            //스크롤 끝
+            $(".btMore").hide();
+            $(".btnBl1.-active").css('display','flex');
+            if($(".btAgr03").hasClass("-active")){
+                $(".btn_agree_cancel").show();
+            }
+        }
+    }
+
+    //버튼 이벤트
+    function chkArgBtn(tarBtn,nextBtn,contents){
+        var $tarBtn = $(tarBtn); //클릭버튼
+        var $nextBtn = $(nextBtn); //다음버튼
+        var $contents = $(contents); //다음 동의 내용
+        $tarBtn.removeClass("-active").hide();
+        $(".btMore").show();
+        $contents.show();
+        $("html,body").stop().animate({scrollTop:$contents.offset().top - 50},300,function(){
+            $nextBtn.addClass("-active");
+        });
+    }
+
+</script>
+
+</body>
+</html>

@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/content.css">
     <link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
     <link rel="stylesheet" type="text/css" href="../../css/mydata.css">
+    <link rel="stylesheet" type="text/css" href="../../css/fnmg.css">
     <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
@@ -276,122 +277,61 @@
 <!-- //wrap -->
 <script>
     $(document).ready(function(){
-        chkScrollBtn();
+        //전송요구 동의
+        $(".btAgr01").on("click",function(e){
+            e.preventDefault();
+            chkArgBtn(".btAgr01",".btAgr02",".term_02");
+        })
+        //수집이용동의
+        $(".btAgr02").on("click",function(e){
+            e.preventDefault();
+            chkArgBtn(".btAgr02",".btAgr03",".term_03");
+        });
+
+        //계속보기 버튼
+        $(".btMore").on("click",function(e){
+            e.preventDefault();
+            $('html, body').stop().animate({ scrollTop: $(window).scrollTop() + $(window).height() }, 300,function(){
+                scrollChk();
+            });
+        });
     });
 
-    function chkScrollBtn(){
+    $(window).scroll(function(){
+        scrollChk();
+    });
+
+    //스크롤 체크
+    function scrollChk(){
         var contentHeight = $(document).height(); // 페이지 내용 높이
-        var windowHeight = $(window).height(); // 창 높이
-        var $btnStep = $(".btn_step");
-        var chkScroll = false;
+        var $windowTop = $(window).scrollTop();
+        var windowHeight = $(window).height() + $windowTop + 10; // 창 높이
+
         if (contentHeight > windowHeight) {
-            $btnStep.addClass("-continue");
+            //스크롤 끝이 아닐때
         } else {
-            $btnStep.removeClass("-continue");
+            //스크롤 끝
+            $(".btMore").hide();
+            $(".btnBl1.-active").css('display','flex');
+            if($(".btAgr03").hasClass("-active")){
+                $(".btn_agree_cancel").show();
+            }
         }
-        $(".btn_step .btnBl1").on("click",function(){
-            $(this).addClass("-active").siblings().removeClass("-active");
-        });
-        $(".btMore").on("click",function(){
-            $btnStep.removeClass("-continue");
-        })
     }
 
-
-    /* [S] 인증 동의 스크롤 모션 */
-    function termsStepScrollXXC9000(){
-        var $term_01 = $('.term_01');
-        var $term_02 = $('.term_02');
-        var $term_03 = $('.term_03');
-        var $btMore = $('.btMore');
-        var $btAgr01 = $('.btAgr01');
-        var $btAgr02 = $('.btAgr02');
-        var $btAgr03 = $('.btAgr03');
-        var $contSpace = 20;
-        var $windowInnerHeight = window.innerHeight - 30;//window.innerHeight;
-        //console.log('contentsHeight: '+ ($('.header').height() + $('.container').height() + $contSpace), 'windowInnerHeight: '+ $windowInnerHeight);
-        //$('.js_tit_2').hide();
-
-        $(window).scroll(function(){
-            var $windowTop = $(window).scrollTop();
-            var $windowBottom = document.body.offsetHeight - $windowInnerHeight;
-            var $contentsHeight = ($('.header').height() + $('.container').height());
-            //console.log('windowTop: '+$windowTop, 'windowBottom: '+ $windowBottom, 'contentsHeight: '+ $contentsHeight);
-
-            if($('.btMore.n_1').length){
-                if($windowTop >= $windowBottom - $contSpace){// 2022-09-01 하단 js, '- $contSpace' if문 3개에 추가
-                    $btAgr01.css('display','flex');
-                    $('.btMore.n_1').hide();
-                }
-            }else if($('.btMore.n_2').length){
-                if($windowTop >= $windowBottom - $contSpace){// 2022-09-01 하단 js, '- $contSpace' if문 3개에 추가
-                    $btAgr02.css('display','flex');
-                    $('.btMore.n_2').hide();
-                }
-            }else if($('.btMore.n_3').length){
-                if($windowTop >= $windowBottom - $contSpace){// 2022-09-01 하단 js, '- $contSpace' if문 3개에 추가
-                    $btAgr03.css('display','flex');
-                    $('.btn_agree_cancel').show();
-                    $('.btMore.n_3').hide();
-                }
-            }
+    //버튼 이벤트
+    function chkArgBtn(tarBtn,nextBtn,contents){
+        var $tarBtn = $(tarBtn); //클릭버튼
+        var $nextBtn = $(nextBtn); //다음버튼
+        var $contents = $(contents); //다음 동의 내용
+        $tarBtn.removeClass("-active").hide();
+        $(".btMore").show();
+        $contents.show();
+        $("html,body").stop().animate({scrollTop:$contents.offset().top - 50},300,function(){
+            $nextBtn.addClass("-active");
         });
-
-        // 스크롤 미생성시
-        if($windowInnerHeight > $('.header').height() + $('.container').height()){
-            $btAgr01.css('display','flex');
-            $('.btMore.n_1').hide();
-            console.log(`$windowInnerHeight ${$windowInnerHeight} ${$('.header').height() + $('.container').height()}`)
-        }
-
-        // [1] 1번째 계속보기 버튼
-        $('.btMore.n_1').click(function () {
-            var $windowTop = $(window).scrollTop() - 55;
-            $('html, body').animate({scrollTop: $windowTop + $windowInnerHeight}, 700);
-        });
-        // [2] 전송요구 동의하기 버튼
-        $btAgr01.click(function () {
-            $('.btMore').css('display','flex');
-            $btAgr01.hide();
-            $('.btMore.n_1').removeClass('n_1').addClass('n_2').show();
-            $term_02.show().attr({'aria-hidden':'false','tabindex':'1'}).focus();
-            if($windowInnerHeight > $('.header').height() + $('.container').height() + $contSpace){
-                $btAgr02.css('display','flex');
-                $('.btMore.n_2').hide();
-                //console.log('계속보기 n_2 숨기기');
-            }
-            //console.log('전송요구 동의하기 버튼: ' + ($('.header').height() + $('.container').height()), 'windowInnerHeight: '+ $windowInnerHeight);
-        });
-        // [3] 2번째 계속보기 버튼
-        $('.btMore.n_2').click(function () {
-            var $windowTop = $(window).scrollTop() - 55;
-            $('html, body').animate({scrollTop: $windowTop + $windowInnerHeight}, 700);
-            if($windowInnerHeight > $('.header').height() + $('.container').height() + $contSpace){
-                $btAgr02.css('display','flex');
-                $('.btMore.n_2').hide();
-            }
-            //console.log('2번째 계속보기 버튼: ' + ($('.header').height() + $('.container').height()), 'windowInnerHeight: '+ $windowInnerHeight);
-        });
-        // [2] 수집 이용 동의하기 버튼
-        $btAgr02.click(function () {
-            //$('.js_tit_2').show();
-            $('.btMore').css('display','flex');
-            $btAgr02.hide();
-            $('.btMore.n_2').removeClass('n_2').addClass('n_3').show();
-            $term_03.show().attr({'aria-hidden':'false','tabindex':'1'}).focus();
-            if($windowInnerHeight > $('.header').height() + $('.container').height() + $contSpace){
-                $btAgr03.css('display','flex');
-                $('.btMore.n_3').hide();
-            }
-            //console.log('수집 이용 동의하기 버튼: ' + ($('.header').height() + $('.container').height()), 'windowInnerHeight: '+ $windowInnerHeight);
-        });
-        // [4] 3번째 계속보기 버튼
-        $('.btMore.n_3').click(function () {
-            var $windowTop = $(window).scrollTop() - 55;
-            $('html, body').animate({scrollTop: $windowTop + $windowInnerHeight}, 700);
-        });
-        /* [E] 인증 동의 스크롤 모션 */
     }
+
 </script>
 
 </body>
