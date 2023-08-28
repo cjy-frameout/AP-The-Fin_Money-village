@@ -1597,9 +1597,9 @@ to{opacity:1;margin-top:0px;}
 .cdChkItem.all label span {font-weight:700;}
 .cdChkItem label span {font-size:15px;font-weight:700;line-height:24px;}
 .cdChkItem label .cdChkTxt {display:inline-block;width:100%;font-size:13px;font-weight:400;color:#999;}
-.cdChkItem label input[type=checkbox],.cdChkItem label input[type=radio] {position:absolute;top:50%;transform: translateY(-50%);  right:7px;width:20px;height:20px;border:none;box-shadow:none;-webkit-appearance:none;cursor:pointer;z-index:2;opacity:0;}
+.cdChkItem label input[type=checkbox],.cdChkItem label input[type=radio] {position:absolute;top:50%;transform: translateY(-50%);  right:20px;width:20px;height:20px;border:none;box-shadow:none;-webkit-appearance:none;cursor:pointer;z-index:2;opacity:0;}
 .cdChkItem.all label input[type=checkbox],.cdChkItem.all label input[type=radio] {top:3px;right:7px;}
-.cdChkItem label input[type=checkbox] + i,.cdChkItem label input[type=radio] + i {position:absolute;top:50%;transform: translateY(-50%);  right:7px;width:20px;height:20px;border:none;background-image:url('../img/theme/apthefin/ic_circle_chk.png?0426');background-size:20px auto;background-repeat:no-repeat;background-position:center;}
+.cdChkItem label input[type=checkbox] + i,.cdChkItem label input[type=radio] + i {position:absolute;top:50%;transform: translateY(-50%);  right:20px;width:20px;height:20px;border:none;background-image:url('../img/theme/apthefin/ic_circle_chk.png?0426');background-size:20px auto;background-repeat:no-repeat;background-position:center;}
 .cdChkItem.all label input[type=checkbox] + i,.cdChkItem.all label input[type=radio] + i {top:3px;right:7px;}
 .cdChkItem label input[type=checkbox]:checked + i,.cdChkItem label input[type=radio]:checked + i {border:none;background-image:url('../img/theme/apthefin/ic_circle_chk_on.png?0426');}
 .cdChkSubList .cdChkItem + .cdChkItem {margin-top:25px;}
