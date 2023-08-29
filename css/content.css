@@ -1050,7 +1050,7 @@
 .accDetailList li {display:flex;justify-content:space-between;flex-wrap:wrap;align-items:flex-start;}
 .accDetailList li + li {margin-top:26px;}
 .accDetailList .itemTit {width:50%;color:#666;font-size:17px;line-height:20px;}
-.accDetailList .itemData {width:50%;display:flex;align-items:center;justify-content:flex-end;font-size:17px;line-height:20px;text-align:right}
+.accDetailList .itemData {width:50%;display:flex;align-items:center;justify-content:flex-end;font-size:17px;line-height:22px;text-align:right}
 .accDetailList .itemData.full {width:100%;justify-content:flex-start;margin-top:10px;}
 .accDetailList .itemData .num {font-size:19px;font-weight:400;display:inline-block;margin-left:5px;}
 .accDetailList .itemData .num.center {display:inline-block;margin-left:5px;}

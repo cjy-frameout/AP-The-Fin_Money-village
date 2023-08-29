@@ -63,11 +63,11 @@
 			<div class="asset_contents tab_certi"> <!-- /* tabs_wrap terms_wrap */ -->
 				<div class="tabs_header type2"> <!--  has_sel_all -->
 					<ul class="cboth">
-						<li class="btn_sel_org tab1 on"><a href="#none"><span>예금·페이</span></a></li><!-- 선택시 title="선택됨" 추가 -->
+						<li class="btn_sel_org tab1 on"><a href="#none"><span>예적금</span></a></li><!-- 선택시 title="선택됨" 추가 -->
 						<li class="btn_sel_org tab2"><a href="#none"><span>투자</span></a></li>
 						<li class="btn_sel_org tab3"><a href="#none"><span>연금</span></a></li>
 						<li class="btn_sel_org tab4"><a href="#none"><span>보험</span></a></li>
-						<li class="btn_sel_org tab5"><a href="#none"><span>자동차</span></a></li>
+						<li class="btn_sel_org tab5"><a href="#none"><span>자동차·부동산</span></a></li>
 						<li class="btn_sel_org tab6"><a href="#none"><span>대출</span></a></li>
 					</ul>
 				</div>
@@ -80,15 +80,16 @@
                                     <ul class="cboth">
                                         <li class="js_tabclickDp1 on"><a href="#none" title="선택됨"><span>입출금</span></a></li><!-- 선택시 title="선택됨" 추가 -->
                                         <li class="js_tabclickDp1"><a href="#none"><span>예적금</span></a></li>
-                                        <li class="js_tabclickDp1"><a href="#none"><span>선불페이</span></a></li>
+                                        <!-- <li class="js_tabclickDp1"><a href="#none"><span>선불페이</span></a></li> -->
                                     </ul>
                                 </div>
                                 <div class="asset_tab_body">
                                     <div class="tab_cntDp1" style="display: block;">
                                         <div class="tBalance">
-                                            <h3 class="tBaltit">입출금 잔액<a href="#layer_PP1_2_2_1_1_1BS" class="btn_open_bottom_sheet btn_more_ask" role="button"><span class="ico_ask type_white2"><em class="blind">더보기</em></span></a></h3>
+                                            <h3 class="tBaltit">입출금 계좌 잔액<a href="#layer_PP1_2_2_1_1_1BS" class="btn_open_bottom_sheet btn_more_ask" role="button"><span class="ico_ask type_white2"><em class="blind">더보기</em></span></a></h3>
                                             <p class="tBalAmount"><em class="amount">40,950,000</em>원</p>
                                             <p class="tBalDetail">외화계좌 9,999CNY + 9,999USD 미합산</p>
+                                            <button class="btn-share"></button>
                                         </div>
                                         <div class="hr_div"></div>    
                                     
@@ -196,29 +197,29 @@
 
                                     </div>
                                     <div class="tab_cntDp1" style="display: none;">예적금</div>
-                                    <div class="tab_cntDp1" style="display: none;">선불페이</div>
+                                    <!-- <div class="tab_cntDp1" style="display: none;">선불페이</div> -->
                                 </div>
                             </div>
 
                         </div>
     
                         <div class="org_wrap swiper-slide">
-                            <p class="stit">{예적금}</p>
-                        </div>
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{대출}</p>
-                        </div>
-                        <div class="org_wrap swiper-slide">
                             <p class="stit">{투자}</p>
-                        </div>
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{소비}</p>
                         </div>
                         <div class="org_wrap swiper-slide">
                             <p class="stit">{연금}</p>
                         </div>
                         <div class="org_wrap swiper-slide">
+                            <p class="stit">{보험}</p>
+                        </div>
+                        <div class="org_wrap swiper-slide">
                             <p class="stit">{자동차}</p>
+                        </div>
+                        <div class="org_wrap swiper-slide">
+                            <p class="stit">{부동산}</p>
+                        </div>
+                        <div class="org_wrap swiper-slide">
+                            <p class="stit">{대출}</p>
                         </div>
     
                     </div>
@@ -244,7 +245,7 @@
 <div id="layer_PP1_2_2_1_1_1BS" class="layer_bottomsheet">
     <div class="layer_inner">
         <div class="layer_tit type2"> 
-            <strong class="tit"><span>입출금 잔액 기준</span></strong>
+            <strong class="tit"><span>입출금 계좌 잔액 기준</span></strong>
             <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
         </div>
         <div class="layer_cont" style="max-height: 879px;">
@@ -253,6 +254,11 @@
                     <li class="list">
                         <span class="tx">
                             마이너스통장의 경우 잔액이 (+)면 입출금 잔액에 합산되고 (-)면 대출 잔액에 합산됩니다.
+                        </span>
+                    </li>
+                    <li class="list">
+                        <span class="tx">
+                            외화 금액은 포함하지 않습니다.
                         </span>
                     </li>
                 </ul>
