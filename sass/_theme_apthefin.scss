@@ -2144,6 +2144,7 @@ a.btnMenu {
 }
 
 .editList2.asGroup {
+	.asList .tx:after { display: none;}
 	.tx {
 		max-width: 160px;
 	}
@@ -3577,7 +3578,7 @@ a.btnMenu {
 				align-items: center;
 				font-size: 14px;
 				color: #3E5FAC;
-				font-weight: 400;
+				font-weight: 700;
 
 				&:after {
 					display: block;
@@ -16670,7 +16671,7 @@ a.filterFolding {
 		span {
 			font-size: 14px;
 			font-weight: 700;
-			color: #3E5FAC;
+			color: #3E5FAC;  
 		}
 
 		.tx_bold {
