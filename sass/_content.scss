@@ -5338,6 +5338,20 @@
 
     .tx {
       width: calc(100% - 50px);
+
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 11px;
+        margin-left: 10px;
+        background: url('../img/ic/ic_arw1.png') no-repeat 50% 50%;
+        background-size: 100% auto;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
 
     .prdName {
@@ -5376,16 +5390,6 @@
       font-size: 17px;
       line-height: 18px;
       margin-top: 5px;
-
-      &:after {
-        content: '';
-        display: inline-block;
-        width: 6px;
-        height: 11px;
-        margin-left: 10px;
-        background: url('../img/ic/ic_arw1.png') no-repeat 50% 50%;
-        background-size: 100% auto;
-      }
 
       em {
         font-size: 20px;
@@ -5514,6 +5518,8 @@
     }
   }
 }
+
+/* .asGroup .asList .amount:after {content:'';display:inline-block;width:6px;height:11px;margin-left:10px;background:url('../img/ic/ic_arw1.png') no-repeat 50% 50%;background-size:100% auto;} */
 
 /* 계좌 거래 내역 */
 
@@ -5867,7 +5873,7 @@
     align-items: center;
     justify-content: flex-end;
     font-size: 17px;
-    line-height: 20px;
+    line-height: 22px;
     text-align: right;
 
     &.full {
@@ -8250,7 +8256,7 @@
 @supports (-webkit-touch-callout: none) {
   .layer_popup {
     &.type_user_guide .dim, &.type_full_page .dim {
-      //height: -webkit-fill-available;
+      height: -webkit-fill-available;
     }
   }
 }
@@ -9770,7 +9776,7 @@
 
 @supports (-webkit-touch-callout: none) {
   .wrap_user_guide .slider_container .slider {
-    //height: -webkit-fill-available;
+    height: -webkit-fill-available;
   }
 }
 
