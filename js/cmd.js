@@ -35,6 +35,13 @@ $(document).ready(function(){
 				$self.closest('.asList').addClass('expanded');
 				$self.closest('.tab_year').removeClass('reduction');// 2022-11-14 계좌별 금액
 			}
+
+			
+			
+			// const swiper = document.querySelector('.swiper-container').swiper
+			
+			// swiper.update();
+
 		})
 	})
 

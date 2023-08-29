@@ -660,6 +660,9 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     width: 25px;
     position: absolute;
     right: 0;
+    top: 30px;
+}
+.asset_tab_body .tBalance .btn-share {
     top: 0;
 }
 

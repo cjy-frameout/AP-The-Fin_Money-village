@@ -949,12 +949,26 @@
 .asGroup .asList .accItem.ableTrf {padding:18px 80px 18px 20px;}
 .asGroup .asList .accItem > a {display:flex;align-items:center;}
 .asGroup .asList .tx {width:calc(100% - 50px);}
+.asGroup .asList .tx:after {
+  content:'';
+  display:inline-block;
+  width:6px;
+  height:11px;
+  margin-left:10px;
+  background:url('../img/ic/ic_arw1.png') no-repeat 50% 50%;
+  background-size:100% auto;
+  position: absolute;
+  right:20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 .asGroup .asList .prdName .orgName{margin-right:1px;}
 .asGroup .asList .prdName {display:flex;align-items:center;font-size:15px;line-height:20px;}
 .asGroup .asList .prdName .flag {display:inline-block;margin-right:5px;font-size:10px;line-height:18px;padding:0 8px;border-radius:12px;}
 .asGroup .asList .prdName .error {display:inline-block;width:14px;flex-shrink:0;height:14px;margin-right:6px;background:url('../img/ic/ic_err.png') no-repeat 50% 100%;background-size:100% auto;}
 .asGroup .asList .amount {display:flex;align-items:center;font-size:17px;line-height:18px;margin-top:5px;}
-.asGroup .asList .amount:after {content:'';display:inline-block;width:6px;height:11px;margin-left:10px;background:url('../img/ic/ic_arw1.png') no-repeat 50% 50%;background-size:100% auto;}
+/* .asGroup .asList .amount:after {content:'';display:inline-block;width:6px;height:11px;margin-left:10px;background:url('../img/ic/ic_arw1.png') no-repeat 50% 50%;background-size:100% auto;} */
+
 .asGroup .asList .amount em {font-size:20px;}
 .asGroup .asList .amount.multiple {display:block;}
 .asGroup .asList .amount.multiple em {display:block;}

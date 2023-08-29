@@ -76,7 +76,7 @@
                     <div class="terms-slider tabs_body_wrap swiper-wrapper">
 
                         <div class="org_wrap swiper-slide">
-                            <p class="stit">{예금페이}</p>
+                            <p class="stit">{예적금}</p>
                         </div>
                         <div class="org_wrap swiper-slide">
                             <p class="stit">{투자}</p>
@@ -87,27 +87,17 @@
 
                         <div class="org_wrap swiper-slide">
                             <div class="tabInter">
-                                <div class="asset_tab_header">
-                                    <ul class="cboth">
-                                        <li class="js_tabclickDp1 on"><a href="#none" title="선택됨"><span>저축성</span></a></li><!-- 선택시 title="선택됨" 추가 -->
-                                        <li class="js_tabclickDp1"><a href="#none"><span>보장성</span></a></li>
-                                        <li class="js_tabclickDp1"><a href="#none"><span>자동차</span></a></li>
-                                        <li class="js_tabclickDp1"><a href="#none"><span>기타</span></a></li>
-                                    </ul>
-                                </div>
                                 <div class="asset_tab_body">
                                     <div class="tab_cntDp1" style="display: block;">
                                         <div class="tBalance">
                                             <h3 class="tBaltit">이번 달 보험료<a href="#layer_PP1_2_5_1_1_1BS" class="btn_open_bottom_sheet btn_more_ask" role="button"><span class="ico_ask type_white2"><em class="blind">더보기</em></span></a></h3>
                                             <p class="tBalAmount"><em class="amount">1,234,567,890</em>원</p>
                                             <p class="tBalDetail">외화금액 9,999CNY + 9,999USD 미합산</p>
+                                            <button class="btn-share"></button>
                                         </div>
                                         <div class="hr_div"></div>    
                                         <div class="asGroup">
-                                            <div class="listTit "> 
-                                                <h3>저축보험 <em class="pointColor">2</em></h3>
-                                                <span class="top_num"><em class="num">2,600,000</em>원</span>
-                                            </div>
+                                            
                                             <div class="asList">
                                                 <div class="accItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
                                                     <a href="#none">
@@ -145,14 +135,6 @@
                                                         </div>
                                                     </a>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="asGroup">
-                                            <div class="listTit "> 
-                                                <h3>연금(저축)보험 <em class="pointColor">2</em></h3>
-                                                <span class="top_num"><em class="num">2,600,000</em>원</span>
-                                            </div>
-                                            <div class="asList">
                                                 <div class="accItem "> 
                                                     <a href="#none">
                                                         <div class="im">
@@ -185,16 +167,52 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="hr_div"></div>
+                                        <div class="asGroup"> <!-- 자산 폴딩 시 fGroup 사용 -->
+                                            <div class="fGroup" id="foldingList_01">
+                                                <h3 class="fGroup_tit">숨긴 보험</h3>
+                                                
+                                                <div class="asList">
+                                                    <div class="accItem">
+                                                        <a href="#none">
+                                                            <div class="im">
+                                                                <img src="../../img/theme/apthefin/logo/logo_05.png" alt="abl">
+                                                            </div>
+                                                            <div class="tx tx_type2">
+                                                                <p class="prdName">
+                                                                    <span class="flag lblue">정상</span>
+                                                                    <span class="ellipsis">보장기간<em>2028.01.20</em></span>
+                                                                </p>
+                                                                <p class="amount">(무)하모니변액연금보험2104</p>
+                                                                <p class="deposit"><em class="num">1,000,000</em>원</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="accItem">
+                                                        <a href="#none">
+                                                            <div class="im">
+                                                                <img src="../../img/theme/apthefin/logo/logo_05.png" alt="abl">
+                                                            </div>
+                                                            <div class="tx tx_type2">
+                                                                <p class="prdName">
+                                                                    <span class="flag lblue">정상</span>
+                                                                    <span class="ellipsis">보장기간<em>2028.01.20</em></span>
+                                                                </p>
+                                                                <p class="amount">(무)하모니변액연금보험2104</p>
+                                                                <p class="deposit"><em class="num">1,000,000</em>원</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+            
+                                            <a href="#none" class="btnFolding show" data-target="#foldingList_01" aria-expanded="true">숨긴 보험<i> 닫기</i></a>
+            
+                                        </div>
                                     </div>
-                                   
-                                    <div class="tab_cntDp1" style="display: none;">보장성</div>
-                                    <div class="tab_cntDp1" style="display: none;">자동차</div>
-                                    <div class="tab_cntDp1" style="display: none;">기타</div>
                                 </div>
                             </div>
-
                         </div>
-    
                       
                         <div class="org_wrap swiper-slide">
                             <p class="stit">{자동차}</p>
@@ -210,7 +228,7 @@
 			<!-- [S] 하단 버튼 영역 -->
             <div class="btn_wrap">
                 <div class="btnGroup">
-                    <p><a href="#none" class="btnBl2 btnEdit" role="button" onclick="">목록 편집</a></p>
+                    <p><a href="#none" class="btnBl6 btnEdit" role="button" onclick="">목록 편집</a></p>
                     <p><a href="#none" class="btnBl1 btnPlus" role="button" onclick="">자산 연결</a></p>
                 </div>
             </div>

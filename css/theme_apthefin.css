@@ -1411,7 +1411,7 @@ to{opacity:1;margin-top:0px;}
 .history_tBox {display:flex;align-items:center;}
 .history_tBox .history_sub {display:inline-block;width:auto;font-size:14px;font-weight:500;margin-left:auto;}
 .history_tBox .history_tit {display:inline-block;width:auto;font-size:16px;font-weight:700;}
-.sub_detailList ~ .history_tBox {border-top:1px solid #eee;margin-top:30px;padding-top:30px; }
+.sub_detailList ~ .history_tBox {border-top:1px solid #eee;margin-top:20px;padding-top:20px; }
 .history_tBox + .accDetailList li .num {margin-left:0;margin-right:2px;}
 .asGroup .asList .deposit {font-weight:400;color:#999;font-size:13px;}
 .bankLink_wrap {padding-bottom:40px;}
@@ -1797,12 +1797,12 @@ to{opacity:1;margin-top:0px;}
 .msg_notice em {font-weight:400;}
 .msg_notice + .notice_list {margin-top:15px;}
 .notice_list {margin-top:20px;/*width:calc(100% - 20px)*/}
-.notice_list .list {position:relative;padding-left:20px;color:#666;font-size:14px;line-height:21px;} /*min-width:320px;*/
+.notice_list .list {position:relative;padding-left:20px;color:#666;font-size:13px;line-height:18px;} /*min-width:320px;*/
 .notice_list.type2 .list {color:#333;font-weight:500;}
 .notice_list.type2 .list span {font-weight:500;}
 .notice_list .list + .list {margin-top:5px;}
 .notice_list .list span {font-weight:400;letter-spacing:-0.4px;word-break:keep-all;}
-.notice_list .list.red {color:#F05E89;}
+.notice_list .list.red {color:#E53A4C;}
 .notice_list .list:before {position:absolute;top:3px;left:-1px;display:inline-block;content:'';width:14px;height:14px;background-image:url('../img/theme/apthefin/ic_err_gray.png?0426');background-repeat:no-repeat;background-size:14px auto;} /*dot 스타일*/
 .notice_list .list.red:before {position:absolute;top:3px;left:-1px;display:inline-block;content:'';width:14px;height:17px;background-image:url('../img/theme/apthefin/ic_err_pink.png?0426');background-repeat:no-repeat;background-size:14px auto;} /*dot 스타일*/
 
@@ -3457,7 +3457,7 @@ a.filterFolding.show:after {transform:rotate(90deg);margin-left:3px;}
 .houseGroup .state_contents ul li.state_tit .tx_bold{color: #3E5FAC;}
 .houseGroup .state_contents ul li.state_tit .tx_bold em.num{font-size: 15px;}
 .houseGroup .btn_wrap.type_arw{padding: 15px 0 0;}
-.houseGroup .btn_wrap.type_arw a.btnBl2{background: #F2F8FF;}
+.houseGroup .btn_wrap.type_arw a.btnBl2{background: #F7F9FF; color: #3E5FAC; border: 1px solid #E9EFFF; }
 
 .houseGroup .state_contents ul li .gaolGraph{padding: 15px 0px 0px;margin-top: 10px;border-top:1px solid #eee;width: 100%;}
 .houseGroup .state_contents ul li .gaolGraph .gaolAmount{display: flex;justify-content: space-between;line-height: 24px;font-size: 14px;font-weight: 700;color: #3E5FAC;}
@@ -3467,12 +3467,12 @@ a.filterFolding.show:after {transform:rotate(90deg);margin-left:3px;}
 .houseGroup .state_contents ul li .gaolGraph .exp_bar .bar { position: relative; display: block; height: 10px; background-color: rgb(238, 238, 238); border-radius: 20px; }
 .houseGroup .state_contents ul li .gaolGraph .exp_amount { position: absolute; left: 10px; top: 5px; font-size: 12px; font-weight: 500; color: rgb(153, 153, 153); }
 .houseGroup .state_contents ul li .gaolGraph .bar_total { position: relative; width: 100%; height: 100%; margin-left: auto; text-align: right; border-radius: 20px; overflow: hidden; }
-.houseGroup .state_contents ul li .gaolGraph .bar_total .bar_on { width: 100%; max-width: 100%; height: 100%; display: inline-block; position: absolute; top: 0px; left: 0px; border-radius: 20px; background-color: rgb(116, 172, 232); }
+.houseGroup .state_contents ul li .gaolGraph .bar_total .bar_on { width: 100%; max-width: 100%; height: 100%; display: inline-block; position: absolute; top: 0px; left: 0px; border-radius: 20px; background-color: #3E5FAC; }
 .houseGroup .state_contents ul li .gaolGraph .bar_total .bar_on_num { display: inline-block; min-width: 45px; width: auto; height: 100%; position: absolute; top: 0px; right: 0px; border-radius: 20px; padding: 6px 10px 5px 0px; font-size: 11px; background-color: rgb(94, 142, 217); color: rgb(255, 255, 255); }
 .houseGroup .state_contents ul li .gaolGraph .exp_bar .exp_num { display: flex; justify-content: space-between; }
-.houseGroup .state_contents ul li .gaolGraph .exp_bar .fluct_amount { margin-top: 5px;font-size: 13px; font-weight: 500; color: rgb(94, 142, 217); }
+.houseGroup .state_contents ul li .gaolGraph .exp_bar .fluct_amount { margin-top: 5px;font-size: 13px; font-weight: 500; color: #3E5FAC; }
 .houseGroup .state_contents ul li .gaolGraph .exp_bar .fluct_amount em { font-weight: 700; }
-.houseGroup .state_contents ul li .gaolGraph .exp_bar .fluct_amount.right { color: rgb(153, 153, 153);  text-align: right; }
+.houseGroup .state_contents ul li .gaolGraph .exp_bar .fluct_amount.right { color: #999;  text-align: right; }
 
 /* 등록 */
 .houseGroup.register{padding-bottom: 30px;}
