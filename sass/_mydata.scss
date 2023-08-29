@@ -1003,6 +1003,20 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 
 /* ========================================================= E : common  =====================================================*/
 /* S : component */
+.car-insure-box {
+    border: 1px solid #E5E5E5;
+    border-radius: 16px;
+    padding: 20px;
+
+    .fDetail_list {
+        padding: 0;
+        margin: 0;
+
+        .state_tit span {
+            font-size: 18px !important;
+        }
+    }
+}
 
 .wrapBar > .gBarBox {
     &:nth-child(1) > .myAsset > .gBar {

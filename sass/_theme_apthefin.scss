@@ -3716,6 +3716,7 @@ a.btnMenu {
 
 .fDetail_list {
 	margin-top: 30px;
+	padding-bottom: 60px;
 
 	li {
 		display: flex;
@@ -12079,7 +12080,7 @@ a.btnMenu {
 	}
 
 	&.type_set, &.type_insure {
-		height: 140px;
+		min-height: 90px;
 	}
 
 	&.type_set:before {
@@ -12094,9 +12095,9 @@ a.btnMenu {
 	&.type_insure:before {
 		top: 25%;
 		right: 20px;
-		width: 70px;
-		height: 100px;
-		background-size: 70px auto;
+		width: 50px;
+		height: 50px;
+		background-size: 50px auto;
 		background-image: url('../img/theme/apthefin/im_type_insure.png?0426');
 	}
 
