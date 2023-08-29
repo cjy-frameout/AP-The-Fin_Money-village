@@ -1,0 +1,322 @@
+/* 통합자산관리 */
+
+.fnmg03-tit {
+    color: #333;
+    text-align: center;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: -0.4px;
+    font-weight: 500;
+}
+
+.fnmg03-dec {
+    color: #BB2649;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.fnmg03-bg {
+    width: 100%;
+    aspect-ratio: 16 / 8.7;
+    max-width: 640px;
+    background: url("../img/theme/apthefin/bg_fnmg03.png") no-repeat 0 0;
+    background-size: cover;
+    display: block;
+    margin: 20px auto 0;
+}
+
+.fnmg04 {
+    ~ .fix_bottom {
+        bottom: -100%;
+    }
+
+    .left {
+        position: relative;
+    }
+}
+
+.fnmg04-bg {
+    display: block;
+    width: 49.722222222222222%;
+    aspect-ratio: 16 / 11.173;
+    background: url("../img/theme/apthefin/bg_fnmg04.png") no-repeat 0 0;
+    background-size: cover;
+    margin-left: auto;
+    margin-top: -20px;
+    pointer-events: none;
+}
+
+.wrap_certi_way {
+    .tab_certi .tabs_header.type2 ul li {
+        width: auto;
+        min-width: 0;
+
+        &:not(:first-of-type) {
+            margin-left: 10px;
+        }
+    }
+
+    .tabs_header.type2 ul li a {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .tab_certi .tabs_header.type2 ul li.on a span {
+        color: #3E5FAC;
+        font-weight: 700;
+    }
+}
+
+.bgAssSearch {
+    width: 100%;
+    aspect-ratio: 16/16.889;
+    background: url("../img/theme/apthefin/bg_ass_search.png") no-repeat 0 0;
+    background-size: cover;
+    position: fixed;
+    left: 0;
+    top: 36.2162162162%;
+}
+
+.fullColumFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding-bottom: 0 !important;
+
+    > div {
+        flex-shrink: 0;
+    }
+
+    .fix_bottom {
+        position: relative;
+    }
+
+    .wrap_err_info {
+        margin: 0;
+    }
+
+    .tit2_wrap + .wrap_complete {
+        margin: 40px 0;
+    }
+}
+
+.wrap_complete .ico_complete.fail {
+    background-image: url("../img/theme/apthefin/ic_complete_fail_old.png");
+}
+
+/* 프로필 관리 */
+
+.userProfile-tit {
+    font-size: 14px;
+    color: #333;
+    font-weight: 700;
+    line-height: 22px;
+    margin-top: 30px;
+}
+
+.userProfile-box {
+    display: flex;
+    gap: 0 20px;
+}
+
+.userProfile-infoBox {
+    width: 100%;
+}
+
+.userProfile-info {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.userProfile-thum {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #E5E5E5;
+    border-radius: 50%;
+    background-image: url("../img/theme/apthefin/icon/ic_profile_thum.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    flex-shrink: 0;
+    margin-top: 6px;
+}
+
+.userProfile-editThum {
+    position: absolute;
+    overflow: hidden;
+    text-indent: -100px;
+    font-size: 0;
+    display: none;
+    background: url("../img/theme/apthefin/icon/ic_edit_profile.png") no-repeat;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+    left: 30px;
+    top: 30px;
+}
+
+.userProfile-edit {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    color: #999;
+    line-height: 22px;
+    margin-left: 2px;
+
+    &:before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background: url("../img/theme/apthefin/icon/ic_edit_square.png") no-repeat;
+        background-size: cover;
+        display: inline-block;
+    }
+}
+
+.userProfile-inp {
+    display: none;
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #E5E5E5;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+}
+
+.userProfile-name {
+    flex-shrink: 0;
+    font-size: 16px;
+    color: #333;
+    line-height: 24px;
+}
+
+.userProfile-infoFeed {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 14px;
+    height: 30px;
+    border: 1px solid #E5E5E5;
+    border-radius: 30px;
+    font-size: 13px;
+    line-height: 18px;
+    color: #666;
+}
+
+.userProfile-box.-edit {
+    .userProfile-editThum, .userProfile-inp {
+        display: block;
+    }
+
+    .userProfile-name, .userProfile-edit {
+        display: none;
+    }
+
+    .userProfile-infoFeed {
+        margin-top: 10px;
+    }
+}
+
+.multiProfile-empty {
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    color: #999;
+}
+
+.multiProfile-list {
+    padding-top: 10px;
+
+    .userProfile {
+        margin-bottom: 20px;
+    }
+}
+
+.iconPlus-whit {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../img/theme/apthefin/bt_plus.png") no-repeat 0 0;
+    background-size: cover;
+}
+
+.btnBl1 .iconPlus-whit {
+    margin-right: 4px;
+}
+
+.layer_cont .userProfile-tit {
+    margin-top: 10px;
+}
+
+.userProfile-chkAsset {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    line-height: 24px;
+    color: #666;
+    align-items: center;
+}
+
+.accItem {
+    .-hide {
+        display: flex;
+    }
+
+    .-show {
+        display: none;
+    }
+
+    &.-hideProfile {
+        background: #F1F2F5;
+
+        .-hide {
+            display: none;
+        }
+
+        .-show {
+            display: flex;
+        }
+    }
+
+    .-hide:before {
+        content: "";
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background: url("../img/theme/apthefin/icon/ic_profile_menu.png") no-repeat 0 0;
+        background-size: cover;
+        margin-right: 15px;
+    }
+}
+
+.asList .flex .amount:after {
+    display: none;
+}
+
+.userProfile-assetList .asGroup {
+    .asList {
+        .amount em {
+            font-size: 16px;
+        }
+
+        margin-top: 10px;
+    }
+
+    .listTit + .asList {
+        margin-top: 15px;
+    }
+
+    + .asGroup {
+        padding-top: 0;
+    }
+}

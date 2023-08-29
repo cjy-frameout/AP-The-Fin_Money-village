@@ -86,3 +86,160 @@
     background-image:url("../img/theme/apthefin/ic_complete_fail_old.png")
 }
 
+/* 프로필 관리 */
+.userProfile-tit {
+    font-size:14px;
+    color:#333;
+    font-weight:700;
+    line-height:22px;
+    margin-top:30px;
+}
+.userProfile-box {
+    display:flex;
+    gap:0 20px;
+}
+.userProfile-infoBox {
+    width:100%;
+}
+.userProfile-info {
+    display: flex;
+    height:50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.userProfile-thum {
+    width:50px;
+    height:50px;
+    border:1px solid #E5E5E5;
+    border-radius: 50%;
+    background-image: url("../img/theme/apthefin/icon/ic_profile_thum.png");
+    background-size:cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    flex-shrink: 0;
+    margin-top:6px;
+}
+.userProfile-editThum {
+    position: absolute;
+    overflow:hidden;
+    text-indent: -100px;
+    font-size:0;
+    display: none;
+    background:url("../img/theme/apthefin/icon/ic_edit_profile.png") no-repeat;
+    background-size:cover;
+    width:24px;
+    height:24px;
+    left:30px;
+    top:30px;
+
+}
+.userProfile-edit {
+    display:inline-flex;
+    align-items: center;
+    font-size:14px;
+    color:#999;
+    line-height:22px;
+    margin-left:2px;
+}
+.userProfile-edit:before {
+    content:"";
+    width:16px;
+    height:16px;
+    background:url("../img/theme/apthefin/icon/ic_edit_square.png") no-repeat;
+    background-size:cover;
+    display:inline-block;
+}
+.userProfile-inp {
+    display:none;
+    height:50px;
+    width:100%;
+    border:none;
+    border-bottom:1px solid #E5E5E5;
+    font-size:16px;
+    line-height:24px;
+    color:#333;
+}
+.userProfile-name {
+    flex-shrink: 0;
+    font-size:16px;
+    color:#333;
+    line-height: 24px;
+}
+.userProfile-infoFeed {
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding:0 14px;
+    height:30px;
+    border:1px solid #E5E5E5;
+    border-radius: 30px;
+    font-size:13px;
+    line-height:18px;
+    color:#666;
+}
+.userProfile-box.-edit .userProfile-editThum,
+.userProfile-box.-edit .userProfile-inp {
+    display: block;
+}
+.userProfile-box.-edit .userProfile-name,
+.userProfile-box.-edit .userProfile-edit {
+    display:none
+}
+.userProfile-box.-edit .userProfile-infoFeed {
+    margin-top:10px;
+}
+
+.multiProfile-empty {
+    text-align:center;
+    font-size:14px;
+    line-height:22px;
+    color:#999;
+}
+.multiProfile-list {padding-top:10px;}
+.multiProfile-list .userProfile {margin-bottom:20px}
+
+.iconPlus-whit {
+    display:inline-block;
+    width:16px;
+    height:16px;
+    background:url("../img/theme/apthefin/bt_plus.png") no-repeat 0 0;
+    background-size:cover;
+}
+.btnBl1 .iconPlus-whit {margin-right:4px}
+.layer_cont .userProfile-tit {
+    margin-top:10px;
+}
+
+.userProfile-chkAsset {
+    position: absolute;
+    right:20px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size:16px;
+    line-height:24px;
+    color:#666;
+    align-items: center;
+}
+.accItem .-hide {display:flex}
+.accItem .-show {display:none}
+.accItem.-hideProfile {
+    background:#F1F2F5;
+}
+.accItem.-hideProfile .-hide {display:none}
+.accItem.-hideProfile .-show {display:flex}
+.accItem .-hide:before {
+    content:"";
+    display:inline-block;
+    width:32px;
+    height:32px;
+    background:url("../img/theme/apthefin/icon/ic_profile_menu.png") no-repeat 0 0;
+    background-size:cover;
+    margin-right:15px;
+}
+.asList .flex .amount:after {display:none}
+
+.userProfile-assetList .asGroup .asList .amount em {font-size:16px}
+.userProfile-assetList .asGroup .asList {margin-top:10px}
+.userProfile-assetList .asGroup .listTit+.asList {margin-top:15px}
+.userProfile-assetList .asGroup + .asGroup {padding-top:0}

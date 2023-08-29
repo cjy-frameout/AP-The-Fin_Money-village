@@ -574,7 +574,7 @@
 .assets_history .tit_wrap .btnFolding.show:after {background-position:50% 0%;}
 /* 네이버인증 */
 .wrap_box_guide .box_guide{position:relative;display:flex;align-items:center;width:100%;min-height:100px;padding:15px 20px 15px 84px;border:1px solid #ddd;border-radius:6px;}
-.wrap_box_guide .box_guide:last-child(){margin-bottom:0;}
+.wrap_box_guide .box_guide:last-child {margin-bottom:0;}
 .wrap_box_guide .box_guide + .box_guide{margin-top:36px;}
 .wrap_box_guide .box_guide + .box_guide:after{content:'';position:absolute;left:50%;top:-23px;margin:0px 0 0 -3px;width:6px;height:11px;background-image:url('../img/ic/ic_arw_ag.png');background-size:5px auto;background-repeat:no-repeat;transform:rotate(90deg);}
 .wrap_box_guide .box_guide .tx{font-size:16px;}

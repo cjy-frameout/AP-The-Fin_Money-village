@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko" class="leaf">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title></title>
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="title" content="">-->
+    <meta name="description" content="">
+    <!--<meta name="keywords" content="">-->
+    <!-- The Open Graph protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+    <!-- //The Open Graph protocol -->
+    <link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/content.css">
+    <link rel="stylesheet" type="text/css" href="../../css/theme_apthefin.css">
+    <link rel="stylesheet" type="text/css" href="../../css/mydata.css">
+    <link rel="stylesheet" type="text/css" href="../../css/join.css">
+    <link rel="stylesheet" type="text/css" href="../../css/fnmg.css">
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/cmd.js"></script>
+</head>
+
+<body>
+<div class="wrap">
+    <!-- header -->
+    <div class="header">
+        <div class="header_inn">
+            <div class="left">
+                <a href="#none" class="btnBack"><span class="blind">Back</span></a>
+            </div>
+            <div class="center">
+                <h2 class="tit_h2">프로필 관리</h2>
+            </div>
+
+        </div>
+    </div>
+    <!-- //header -->
+
+    <div class="container">
+        <div class="content">
+            <section class="userProfile">
+                <h3 class="userProfile__tit">프로필</h3>
+                <div class="userProfile__box"> <!-- 관리버튼 클릭시 여기에 -edit 클래스 추가 -->
+                    <div class="userProfile__thum" style="background-image: url('../../img/theme/apthefin/icon/ic_profile_thum.png')">
+                        <button type="button" class="userProfile__editThum">프로필 이미지 변경</button>
+                    </div>
+                    <div class="userProfile__infoBox">
+                        <div class="userProfile__info">
+                            <label for="userName001" class="userProfile__name">홍길동</label>
+                            <button type="button" class="userProfile__edit">관리</button>
+                            <input type="text" class="userProfile__inp" placeholder="프로필 네임" id="userName001">
+                        </div>
+                        <a href="" class="userProfile__infoFeed">작성한 피드 0 개</a>
+                    </div>
+                </div>
+            </section>
+            <hr class="hr_div">
+
+            <section class="multiProfile">
+                <h3 class="userProfile__tit">멀티프로필</h3>
+                <div class="multiProfile__list">
+
+                    <p class="multiProfile__empty" style="display: none">멀티프로필이 없습니다.</p>
+
+                    <section class="userProfile">
+                            <div class="userProfile__box"> <!-- 관리버튼 클릭시 여기에 -edit 클래스 추가 -->
+                            <div class="userProfile__thum" style="background-image: url('../../img/theme/apthefin/icon/ic_profile_thum.png')">
+                                <button type="button" class="userProfile__editThum">프로필 이미지 변경</button>
+                            </div>
+                            <div class="userProfile__infoBox">
+                                <div class="userProfile__info">
+                                    <label for="userName001" class="userProfile__name">홍길동</label>
+                                    <button type="button" class="userProfile__edit">관리</button>
+                                    <input type="text" class="userProfile__inp" placeholder="프로필 네임" id="userName001">
+                                </div>
+                                <a href="" class="userProfile__infoFeed">작성한 피드 0 개</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="userProfile">
+                        <div class="userProfile__box"> <!-- 관리버튼 클릭시 여기에 -edit 클래스 추가 -->
+                            <div class="userProfile__thum" style="background-image: url('../../img/theme/apthefin/icon/ic_profile_thum.png')">
+                                <button type="button" class="userProfile__editThum">프로필 이미지 변경</button>
+                            </div>
+                            <div class="userProfile__infoBox">
+                                <div class="userProfile__info">
+                                    <label for="userName001" class="userProfile__name">홍길동</label>
+                                    <button type="button" class="userProfile__edit">관리</button>
+                                    <input type="text" class="userProfile__inp" placeholder="프로필 네임" id="userName001">
+                                </div>
+                                <a href="" class="userProfile__infoFeed">작성한 피드 0 개</a>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </section>
+            <!-- [S] 하단 고정 영역 -->
+            <div class="fix_bottom">
+                <!-- btn_wrap -->
+                <div class="btn_wrap">
+                    <div class="btnGroup">
+                        <p><a href="#none" class="btnBl1" role="button"><i class="iconPlus-whit"></i>멀티프포필 추가</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- [E] 하단 고정 영역 -->
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+</body>
+<script>
+
+</script>
+</html>
