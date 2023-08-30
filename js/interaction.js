@@ -58,9 +58,28 @@
                 else $this.find('.btn-del').remove();
             });
         });
-    }
+    },
 
-    
+    $.fn.resiType = function() {
+        return this.each(function() {
+            var $this = $(this);
+            var radio = $this.find('input[type="radio"]');
+            radio.each(function() {
+                var target = $(this);
+                target.on('click', function() {
+                    var targetId = $(this).attr('id');
+                    var dataResi = $('div[data-resi]');
+                    dataResi.each(function(){
+                        var dataTarget = $(this).attr('data-resi');
+                        if(targetId == dataTarget){
+                            $('div[data-resi]').hide();
+                            $('div[data-resi="'+ dataTarget +'"]').show();
+                        }
+                    });
+                });
+            });
+        });
+    }
 
 })(jQuery);
 
@@ -68,5 +87,6 @@ document.addEventListener('DOMContentLoaded', function(e){
     $('.btn-open-layerPop').layerPopOpen();
     $('input[type="password"]').passChange();
     $('.search-box').searchDel();
+    $('.resi-type').resiType();
 });
 

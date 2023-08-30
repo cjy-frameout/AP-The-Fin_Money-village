@@ -3717,7 +3717,6 @@ a.btnMenu {
 
 .fDetail_list {
 	margin-top: 30px;
-	padding-bottom: 60px;
 
 	li {
 		display: flex;
@@ -15377,7 +15376,7 @@ a.filterFolding {
 
 .gaolState {
 	position: relative;
-	min-height: 277px;
+	min-height: 289px;
 	padding: 20px 20px 70px;
 	box-shadow: none;
 
@@ -15456,17 +15455,17 @@ a.filterFolding {
 			font-weight: 400;
 			margin-bottom: 30px;
 
-			&:before {
-				position: absolute;
-				bottom: -25px;
-				right: 5px;
-				content: '';
-				width: 76px;
-				height: 76px;
-				background-image: url('../img/theme/apthefin/im_type_set2.png?0426');
-				background-repeat: no-repeat;
-				background-size: 76px auto;
-			}
+			// &:before {
+			// 	position: absolute;
+			// 	bottom: -25px;
+			// 	right: 5px;
+			// 	content: '';
+			// 	width: 76px;
+			// 	height: 76px;
+			// 	background-image: url('../img/theme/apthefin/im_type_set2.png?0426');
+			// 	background-repeat: no-repeat;
+			// 	background-size: 76px auto;
+			// }
 		}
 	}
 
@@ -15496,19 +15495,20 @@ a.filterFolding {
 			}
 
 			em {
-				font-size: 17px;
+				font-size: 18px;
 				font-weight: 700;
 				margin: 0 4px 0 0;
 			}
 		}
 
 		.exp_bar {
-			margin-top: 10px;
+			margin-top: 70px;
+			position: relative;
 
 			.bar {
 				position: relative;
 				display: block;
-				height: 10px;
+				height: 16px;
 				background-color: #eee;
 				border-radius: 20px;
 			}
@@ -15588,6 +15588,12 @@ a.filterFolding {
 
 				&.right {
 					color: #999;
+					position: absolute;
+					top: -65px;
+					right: 0;
+					background: #F7F9FF;
+					border: 1px solid #E9EFFF;
+					padding: 10px;
 				}
 			}
 		}
@@ -16315,7 +16321,7 @@ a.filterFolding {
 		vertical-align: middle;
 
 		&.self {
-			background-color: #985DD3;
+			background-color: #985CD3;
 			border: 1px solid #985DD3;
 			color: #fff;
 			margin-left: 0;
@@ -16826,7 +16832,7 @@ a.filterFolding {
 
 	.filterItem {
 		+ .filterItem {
-			margin-top: 35px;
+			margin-top: 30px;
 		}
 
 		.filterTit {
@@ -17097,7 +17103,7 @@ a.filterFolding {
 		}
 
 		.sel_form.type_border {
-			margin: 15px 0;
+			// margin: 15px 0;
 
 			.sel_box {
 				color: #aaa;
@@ -17703,7 +17709,7 @@ a.filterFolding {
 				top: 0px;
 				left: 0px;
 				border-radius: 20px;
-				background-color: rgb(116, 172, 232);
+				background-color: #3E5FAC;
 			}
 
 			.bar_on_num {

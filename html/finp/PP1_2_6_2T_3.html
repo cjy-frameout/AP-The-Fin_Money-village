@@ -26,6 +26,7 @@
 <script type="text/javascript" src="../../js/slide_slick.js"></script>
 <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
 <script type="text/javascript" src="../../js/cmd.js"></script>
+<script type="text/javascript" src="../../js/interaction.js"></script>
 </head>
 <body>
 <!-- wrap -->
@@ -56,16 +57,16 @@
                     <p class="tx">내 집의 정보를 입력하면<br>시세정보를 확인하실 수 있어요.</p>
                 </div>
 
-                <div class="filterItem">
+                <!-- <div class="filterItem">
                     <p class="filterTit"><label for="txt1">별명</label></p>
                     <input type="text" required="required" id="txt1" class="schTxt" placeholder="별명 입력">
                     <p class="inp_err_msg">에러 문구</p>
-                </div>
+                </div> -->
 
                 <div class="filterItem">
                     <p class="filterTit confirm_dot">부동산 찾기</p>
                     <div class="schArea">
-                        <input type="text" required="required" id="search" class="schTxt" placeholder="단지, 지역, 지하철, 학교, 빌라명 검색">
+                        <input type="text" required="required" id="search" class="schTxt" placeholder="아파트, 주상복합명 검색">
                         <a href="#SH_K4110_FP" class="btnSearch btn_open_full_sheet"><span class="blind">검색</span></a>
                     </div>
                     <p class="inp_err_msg">에러 문구</p>
@@ -74,66 +75,127 @@
                 <div class="filterItem">
                     <p class="filterTit confirm_dot">면적</p>
                     <div class="sel_form type_border"> <!-- 선택시 on 클래스 추가 -->
-                        <a href="#HM1_2_2_1FP_1BS" class="btn_open_bottom_sheet sel_box disable" role="button" title="선택"><span>면적선택</span></a>
+                        <a href="#HM1_2_2_1FP_1BS" class="btn_open_bottom_sheet sel_box " role="button" title="선택"><span>면적선택</span></a>
                     </div>
                     <p class="inp_err_msg">에러 문구</p>
                 </div>
 
-                <div class="filterItem">
+                <div class="filterItem resi-type">
                     <p class="filterTit confirm_dot">주거형태</p>
                     <ul class="radioTab">
                         <li class="radioMid">
-                            <input type="radio" id="radio1" name="radioTab1" class="blind" checked disabled>
-                            <label for="radio1">자가</label>
+                            <input type="radio" id="own-house" name="resi-type" class="blind" checked >
+                            <label for="own-house">자가</label>
                         </li>
                         <li class="radioMid">
-                            <input type="radio" id="radio2" name="radioTab1" class="blind" disabled>
-                            <label for="radio2">전세</label>
+                            <input type="radio" id="jeonse" name="resi-type" class="blind" >
+                            <label for="jeonse">전세</label>
                         </li>
                         <li class="radioMid">
-                            <input type="radio" id="radio3" name="radioTab1" class="blind" disabled>
-                            <label for="radio3">월세</label>
+                            <input type="radio" id="monthly-rent" name="resi-type" class="blind" >
+                            <label for="monthly-rent">월세</label>
                         </li>
                     </ul>
                 </div>
+                <div class="own-house" data-resi="own-house">
+                    <div class="filterItem">
+                        <p class="filterTit"><label for="txt2">매입가</label></p>
+                        <div class="set_detail">
+                            <p class="inp_box inp_price">
+                                <input type="text" required="required" class="set_inp js_tx_val" placeholder="0" title="매매가를 입력해주세요">
+                                <button type="button" class="btn_val_reset js_bt_val_reset"><span class="blind">검색어 삭제</span></button>
+                            </p>
+                            <p class="inp_txt"><span class="price">원</span></p>
+                        </div>
+                        <p class="inp_err_msg">에러 문구</p>
+                    </div>
+                </div>
 
-                <div class="filterItem">
-                    <p class="filterTit"><label for="txt2">매입가</label></p>
-                    <div class="set_detail">
-                        <p class="inp_box inp_price">
-                            <input type="text" required="required" class="set_inp js_tx_val" placeholder="0" title="매매가를 입력해주세요">
-                            <button type="button" class="btn_val_reset js_bt_val_reset"><span class="blind">검색어 삭제</span></button>
-                        </p>
-                        <p class="inp_txt"><span class="price">원</span></p>
-                    </div>
-                    <p class="inp_err_msg">에러 문구</p>
-                </div>
-                    
-                <div class="filterItem">
-                    <p class="filterTit">계약 기간</p>
-                    <div class="selPeriod">
-                        <!-- datepicker data-title 추가 -->
-                        <div class="dateItem">
-                            <label for="startDate" class="blind">조회기간 시작일</label>
-                            <input type="tel" required="required"  class="datepicker" id="startDate" autocomplete="off" data-title="시작일" placeholder="YYYY.MM.DD">
-                            <!---  datepicker 화살표 비활성화시  ui-datepicker-prevY,ui-datepicker-nextY,ui-datepicker-prev,ui-datepicker-next 에 disabled 클래스 추가  -->
-                        </div>
-                        <span class="unit"></span>
-                        <div class="dateItem">
-                            <label for="endDate" class="blind">조회기간 종료일</label> 
-                            <input type="tel" required="required" id="endDate" class="datepicker" autocomplete="off" data-title="완료일" placeholder="YYYY.MM.DD"> <!-- 22.11.11 종료일 -> 완료일 변경 -->
+                <div class="jeonse" style="display: none;" data-resi="jeonse">
+                    <div class="filterItem">
+                        <p class="filterTit">계약 기간</p>
+                        <div class="selPeriod">
+                            <!-- datepicker data-title 추가 -->
+                            <div class="dateItem">
+                                <label for="startDate" class="blind">조회기간 시작일</label>
+                                <input type="tel" required="required"  class="datepicker" id="startDate" autocomplete="off" data-title="시작일" placeholder="YYYY.MM.DD">
+                                <!---  datepicker 화살표 비활성화시  ui-datepicker-prevY,ui-datepicker-nextY,ui-datepicker-prev,ui-datepicker-next 에 disabled 클래스 추가  -->
+                            </div>
+                            <span class="unit"></span>
+                            <div class="dateItem">
+                                <label for="endDate" class="blind">조회기간 종료일</label> 
+                                <input type="tel" required="required" id="endDate" class="datepicker" autocomplete="off" data-title="완료일" placeholder="YYYY.MM.DD"> <!-- 22.11.11 종료일 -> 완료일 변경 -->
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="filterItem">
+                        <p class="filterTit"><label for="txt2">보증금</label></p>
+                        <div class="set_detail">
+                            <p class="inp_box inp_price">
+                                <input type="text" required="required" class="set_inp js_tx_val" placeholder="0" title="매매가를 입력해주세요">
+                                <button type="button" class="btn_val_reset js_bt_val_reset"><span class="blind">검색어 삭제</span></button>
+                            </p>
+                            <p class="inp_txt"><span class="price">원</span></p>
+                        </div>
+                        <p class="inp_err_msg">에러 문구</p>
+                    </div>
+                </div>   
+
+                <div class="monthly-rent" style="display: none;" data-resi="monthly-rent">
+                    <div class="filterItem">
+                        <p class="filterTit">계약 기간</p>
+                        <div class="selPeriod">
+                            <!-- datepicker data-title 추가 -->
+                            <div class="dateItem">
+                                <label for="startDate" class="blind">조회기간 시작일</label>
+                                <input type="tel" required="required"  class="datepicker" id="startDate" autocomplete="off" data-title="시작일" placeholder="YYYY.MM.DD">
+                                <!---  datepicker 화살표 비활성화시  ui-datepicker-prevY,ui-datepicker-nextY,ui-datepicker-prev,ui-datepicker-next 에 disabled 클래스 추가  -->
+                            </div>
+                            <span class="unit"></span>
+                            <div class="dateItem">
+                                <label for="endDate" class="blind">조회기간 종료일</label> 
+                                <input type="tel" required="required" id="endDate" class="datepicker" autocomplete="off" data-title="완료일" placeholder="YYYY.MM.DD"> <!-- 22.11.11 종료일 -> 완료일 변경 -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filterItem">
+                        <p class="filterTit"><label for="txt2">보증금</label></p>
+                        <div class="set_detail">
+                            <p class="inp_box inp_price">
+                                <input type="text" required="required" class="set_inp js_tx_val" placeholder="0" title="매매가를 입력해주세요">
+                                <button type="button" class="btn_val_reset js_bt_val_reset"><span class="blind">검색어 삭제</span></button>
+                            </p>
+                            <p class="inp_txt"><span class="price">원</span></p>
+                        </div>
+                        <p class="inp_err_msg">에러 문구</p>
+                    </div>
+                    <div class="filterItem">
+                        <p class="filterTit"><label for="txt2">월세</label></p>
+                        <div class="set_detail">
+                            <p class="inp_box inp_price">
+                                <input type="text" required="required" class="set_inp js_tx_val" placeholder="0" title="매매가를 입력해주세요">
+                                <button type="button" class="btn_val_reset js_bt_val_reset"><span class="blind">검색어 삭제</span></button>
+                            </p>
+                            <p class="inp_txt"><span class="price">원</span></p>
+                        </div>
+                        <p class="inp_err_msg">에러 문구</p>
+                    </div>
+                </div>  
+                
 
                 <div class="filterItem">
                     <p class="filterTit">대출을 받았나요?</p>
                     <p class="filterTitSub">계좌를 연결하면 정확한 자산 현황을 확인할 수 있어요</p>
-                    <div class="sel_form type_border"> <!-- 선택시 on 클래스 추가 -->
+                    <div class="btnGroup">
+                        <p><a href="#none" class="btnBl6" role="button">대출계좌 연결</a></p>
+                    </div>
+                    <!-- 선택시 on 클래스 추가 -->
+                    <!-- 대출계좌 연결 후
+                    <div class="sel_form type_border"> 
                         <a href="#HM1_2_2_1FP_1BS" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>대출 계좌 선택</span></a>
                     </div>
                     <div class="btnGroup">
-                        <p><a href="#none" class="btnBl2" role="button">대출계좌 연결</a></p>
+                        <p><a href="#none" class="btnBl6" role="button">대출계좌 추가</a></p>
                     </div>
                     <ul class="consume_info_list">
                         <li class="consume_info_item">
@@ -148,7 +210,8 @@
                             <span class="tit"><img src="../../img/bank/bank_logo_021.png" alt="bnk" class="im">월급통장</span>
                             <span class="amount"><em>300,000</em>원</span>
                         </li>
-                    </ul>
+                    </ul> 
+                    -->
                 </div>
 
                 <div class="filterItem">
