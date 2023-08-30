@@ -47,10 +47,18 @@
     font-size: 14px;
     font-weight: 400;
     align-items: center;
-    justify-content: space-between;
+    >img {
+        margin-right: 5px;
+    }
 
     &.flexS {
         justify-content: flex-start !important;
+    }
+    .list-name-box {
+        justify-content: flex-start;
+        img {
+            margin-right: 5px;
+        }
     }
 }
 
@@ -526,13 +534,9 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 
 /* =========================================== S : common =========================================================== */
 
-.dpf {
-    display: flex;
-}
-
-.jcc {
-    justify-content: center;
-}
+.dpf { display: flex; }
+.jcc { justify-content: center; }
+.jcs { justify-content: space-between; align-items: center; }
 
 .alink-typeA {
     background: url(../img/theme/apthefin/ic_arw5.png) no-repeat right center;
@@ -990,7 +994,17 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 .updating + .tx {
     margin-top: 20px !important;
 }
-
+.asset_tab_body .tBalance {
+    .btn-share {
+        background: url(../img/theme/apthefin/icon_share.png) no-repeat 50% 50%;
+        background-size: 16px auto;
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
 .btn-share {
     background: url(../img/theme/apthefin/icon_share.png) no-repeat 50% 50%;
     background-size: 16px auto;
@@ -998,11 +1012,60 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     width: 25px;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 30px;
 }
 
 /* ========================================================= E : common  =====================================================*/
 /* S : component */
+.plan-my-house {
+    background: #FCF3F0;
+    border-radius: 10px;
+    height: 120px;
+    padding: 20px;
+    width: 100%;
+    & + .gaolGraph {
+        margin-top: 30px;
+    }
+}
+.plan-my-house-alink {
+    background: url(../img/theme/apthefin/icon_plan_my_house.png) no-repeat right center;
+    display: block;
+    height: 100%;
+    width: 100%;
+    & .title {
+        font: {
+            size: 18px;
+            weight: bold;
+        };
+        color: #FC603B;
+    }
+    & .desc {
+        font: {
+            size: 14px;
+            weight: 400;
+        };
+        color: #333;
+    }
+    & .alink {
+        font: {
+            size: 13px;
+            weight: 500;
+        };
+        color: #FC603B;
+        margin-top: 6px;
+    }
+}
+
+.hr_div.thin {
+    height: 1px !important;
+}
+.own-house, .jeonse, .monthly-rent {
+    margin-top: 30px;
+    & + .filterItem {
+        margin-top: 30px;
+    }
+}
+
 .car-insure-box {
     border: 1px solid #E5E5E5;
     border-radius: 16px;

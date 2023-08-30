@@ -58,11 +58,11 @@
 			<div class="asset_contents tab_certi"> <!-- /* tabs_wrap terms_wrap */ -->
 				<div class="tabs_header type2"> <!--  has_sel_all -->
 					<ul class="cboth">
-						<li class="btn_sel_org tab1"><a href="#none"><span>예금·페이</span></a></li><!-- 선택시 title="선택됨" 추가 -->
+						<li class="btn_sel_org tab1"><a href="#none"><span>예적금</span></a></li><!-- 선택시 title="선택됨" 추가 -->
 						<li class="btn_sel_org tab2"><a href="#none"><span>투자</span></a></li>
 						<li class="btn_sel_org tab3"><a href="#none"><span>연금</span></a></li>
 						<li class="btn_sel_org tab4"><a href="#none"><span>보험</span></a></li>
-						<li class="btn_sel_org tab5"><a href="#none"><span>자동차</span></a></li>
+						<li class="btn_sel_org tab5 "><a href="#none"><span>자동차·부동산</span></a></li>
 						<li class="btn_sel_org tab6 on"><a href="#none"><span>대출</span></a></li>
 					</ul>
 				</div>
@@ -90,13 +90,11 @@
                             <div class="tBalance">
                                 <h3 class="tBaltit">대출 잔액<a href="#layer_PP1_2_7_1_1BS" class="btn_open_bottom_sheet btn_more_ask" role="button"><span class="ico_ask type_white2"><em class="blind">더보기</em></span></a></h3>
                                 <p class="tBalAmount"><em class="amount">32,350,000</em>원</p>
+                                <button class="btn-share"></button>
                             </div>
                             <div class="hr_div"></div>    
                             <div class="asGroup">
-                                <div class="listTit">
-                                    <h3>은행 <em class="pointColor">3</em></h3>
-                                    <span class="top_num"><em class="num">97,600,000</em>원</span>
-                                </div>
+                                
                                 <div class="asList"> 
                                     <div class="accItem">  <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
                                         <a href="#none">
@@ -134,14 +132,6 @@
                                             </div>
                                         </a>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="asGroup">
-                                <div class="listTit">
-                                    <h3>카드 <em class="pointColor">1</em></h3>
-                                    <span class="top_num"><em class="num">97,600,000</em>원</span>
-                                </div>
-                                <div class="asList"> 
                                     <div class="accItem">  <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
                                         <a href="#none">
                                             <div class="im">
@@ -154,14 +144,6 @@
                                             </div>
                                         </a>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="asGroup">
-                                <div class="listTit">
-                                    <h3>증권 <em class="pointColor">1</em></h3>
-                                    <span class="top_num"><em class="num">97,600,000</em>원</span>
-                                </div>
-                                <div class="asList"> 
                                     <div class="accItem">  <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
                                         <a href="#none">
                                             <div class="im">
@@ -173,14 +155,6 @@
                                             </div>
                                         </a>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="asGroup">
-                                <div class="listTit">
-                                    <h3>캐피탈 <em class="pointColor">1</em></h3>
-                                    <span class="top_num"><em class="num">97,600,000</em>원</span>
-                                </div>
-                                <div class="asList"> 
                                     <div class="accItem">  <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
                                         <a href="#none">
                                             <div class="im">
@@ -193,14 +167,6 @@
                                             </div>
                                         </a>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="asGroup">
-                                <div class="listTit">
-                                    <h3>보험 <em class="pointColor">1</em></h3>
-                                    <span class="top_num"><em class="num">97,600,000</em>원</span>
-                                </div>
-                                <div class="asList"> 
                                     <div class="accItem">  <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
                                         <a href="#none">
                                             <div class="im">
@@ -214,21 +180,18 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="asGroup">
-                                <div class="listTit "> 
-                                    <h3>보험</h3>
-                                    <a href="#" class="btnAdd"> <span class="bank_link">등록하기</span></a>
-                                </div>
-                            </div>
+                            
+                            
+                            
+                            
+                            
 
                             <div class="hr_div"></div>    
 
                             <div class="asGroup"> <!-- 자산 폴딩 시 fGroup 사용 -->
                                 <div class="fGroup" id="foldingList_01">
-                                    <h3 class="fGroup_tit">숨긴 투자</h3>
-                                    <div class="listTit "> 
-                                        <h3>은행 </h3>
-                                    </div>
+                                    <h3 class="fGroup_tit">숨긴 대출</h3>
+                                    
                                     
                                     <div class="asList">
                                         <div class="accItem">
@@ -243,13 +206,6 @@
                                                 </div>
                                             </a>
                                         </div>
-                                    </div>
-
-                                    <div class="listTit "> 
-                                        <h3>보험 </h3>
-                                    </div>
-                                    
-                                    <div class="asList"> 
                                         <div class="accItem">  <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
                                             <a href="#none">
                                                 <div class="im">
@@ -262,6 +218,10 @@
                                             </a>
                                         </div>
                                     </div>
+
+                                    
+                                    
+                                    
                                 </div>
 
                                 <a href="#none" class="btnFolding show" data-target="#foldingList_01" aria-expanded="false">숨긴 투자<i> 닫기</i></a>
@@ -290,7 +250,7 @@
 			<!-- [S] 하단 버튼 영역 -->
             <div class="btn_wrap">
                 <div class="btnGroup">
-                    <p><a href="#none" class="btnBl2 btnEdit" role="button" onclick="">목록 편집</a></p>
+                    <p><a href="#none" class="btnBl6 btnEdit" role="button" onclick="">목록 편집</a></p>
                     <p><a href="#none" class="btnBl1 btnPlus" role="button" onclick="">자산 연결</a></p>
                 </div>
             </div>
