@@ -47,10 +47,18 @@
     font-size: 14px;
     font-weight: 400;
     align-items: center;
-    justify-content: space-between;
+    >img {
+        margin-right: 5px;
+    }
 
     &.flexS {
         justify-content: flex-start !important;
+    }
+    .list-name-box {
+        justify-content: flex-start;
+        img {
+            margin-right: 5px;
+        }
     }
 }
 
