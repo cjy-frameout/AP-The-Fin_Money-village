@@ -2188,6 +2188,7 @@ a.btnMenu {
 }
 
 
+
 .editList2.asGroup div.hidden .ctrl .btnHide:after, .editList3.asGroup div.hidden .ctrl .btnHide:after {
 	content: '보이기';
 }
@@ -3680,6 +3681,7 @@ a.btnMenu {
 					position: absolute;
 					top: 3px;
 					right: -3px;
+					display:none;
 				}
 			}
 
