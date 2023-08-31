@@ -107,6 +107,9 @@ $(document).ready(function(){
     //아코디언 메뉴
     $(".accBox-tit").on("click",function(e) {
         e.preventDefault();
+        if($(this).closest('.bbsList').find('.accBox-item')) {
+            $(this).closest('.bbsList').find('.accBox-item').removeClass("-active");
+        }
         $(this).closest('.accBox-item').toggleClass("-active").siblings().removeClass("-active");
 
     });

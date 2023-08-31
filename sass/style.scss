@@ -2,14 +2,18 @@
 
 @import "reset";
 
-@import "icon";
+@import "mixin"; //mixin 모음
+@import "icon"; //아이콘 모음
+
 
 @import "content";
 @import "theme_apthefin";
 @import "mydata";
-@import "join";
-@import "fnmg";
-@import "menu";
+
+@import "join"; // 회원가입
+@import "fnmg"; //통합
+@import "menu"; //메뉴
+@import "qna"; //자주 묻는 질문
 
 
 

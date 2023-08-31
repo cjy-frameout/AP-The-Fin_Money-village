@@ -741,18 +741,16 @@ input[type="file"], .input-box input[type="file"] {
 
 .historyNone {
 	font-size: 16px;
-	padding-top: 80px;
+	padding:20px 0;
 
 	.txt {
 		font-size: 16px;
 
 		&:before {
-			width: 32px;
-			height: 28px;
-			margin: 0 auto 10px;
-			background: url("../img/theme/apthefin/ic_complete_fail.png?0426") no-repeat center center;
-			background-size: cover;
-			margin-bottom: 10px;
+			content:"";
+			@include iconTriCaution;
+			display:block;
+			margin:0 auto 20px;
 		}
 	}
 }
@@ -3455,6 +3453,12 @@ a.btnMenu {
 		border: none;
 		background-color: #fff;
 		overflow: hidden;
+		&.gap20 {
+			.accItem {
+				margin-top:25px;
+				+.accItem {margin-top:20px;}
+			}
+		}
 	}
 
 	.listTit {
@@ -3632,7 +3636,8 @@ a.btnMenu {
 		}
 
 		.amount em {
-			font-size: 18px;
+			//font-size: 18px;
+			font-size: 16px;
 			margin-right: 2px;
 			font-weight: 700;
 			vertical-align: bottom;
@@ -20248,10 +20253,34 @@ a.filterFolding {
 .accBox {
 	border: 1px solid #E5E5E5;
 	border-radius: 10px;
+	&.-bbsType {
+		.accBox {
+			&:not(:first-of-type) {
+				margin-top:20px;
+			}
+			&-date {
+				display:block;
+				font-size:13px;
+				font-weight:400;
+				line-height:18px;
+				color:#999;
+				margin-bottom:4px;
+			}
+			&-tit {
+				font-size:16px;
+			}
+			&-inner {
+				font-size:13px;
+				line-height:18px;
+				color:#666;
+				img {max-width:100%;margin:20px 0;}
+			}
+		}
+	}
 }
 
 .accBox-tit {
-	padding: 20px;
+	padding: 20px 45px 20px 20px;
 	display: block;
 	font-size: 15px;
 	font-weight: 500;

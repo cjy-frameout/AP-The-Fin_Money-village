@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll_lock">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title></title>
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="title" content="">-->
+    <meta name="description" content="">
+    <!--<meta name="keywords" content="">-->
+    <!-- The Open Graph protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+    <!-- //The Open Graph protocol -->
+    <link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/cmd.js"></script>
+</head>
+
+<body>
+
+
+
+
+
+<!-- [S] 소식 -->
+<div id="layer_bs" class="layer_bottomsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+            <strong class="tit">소식</strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont">
+            <!-- 내용 -->
+            <div class="cdChkLst">
+                <ul class="cdChkSubList">
+                    <li class="cdChkItem roundType">
+                        <label>
+                            <input type="radio" name="radio01" id="radio1">
+                            <i></i><span>NEWS</span>
+                        </label>
+                    </li>
+                    <li class="cdChkItem roundType">
+                        <label>
+                            <input type="radio" name="radio01" id="radio2">
+                            <i></i><span>공지사항</span>
+                        </label>
+                    </li>
+                    <li class="cdChkItem roundType">
+                        <label>
+                            <input type="radio" name="radio01" id="radio3" checked="checked">
+                            <i></i><span>이벤트</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <!-- //내용 -->
+        </div>
+        <div class="layer_footer">
+            <button type="button" class="js_pop_close btn_confirm"><span>선택</span></button>
+        </div>
+    </div>
+</div>
+<!-- [E] 소식 -->
+
+
+</body>
+<script>
+    $(document).ready(function(){
+        layer_bottomsheet('#layer_bs');
+    })
+    $(document).on("click", ".btn_open_bottom_sheet", function(e){
+        e.preventDefault();
+
+        var $href = $(this).attr('href');
+        layer_bottomsheet($href);
+        $('html').addClass('scroll_lock');
+
+        // [S] multi layer 2021-08-02 추가
+        var dimIdx = $('.dim').index();
+        eval('$focusReturn' + [dimIdx] + '= $(this)');
+
+    });
+    function layer_bottomsheet(el){
+        var $el = $(el);
+        $el.append("<div class=\"dim\"></div>");
+        isDim ? $('.layer_bottomsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
+        setTimeout(function() {
+            $el.find('.layer_inner').addClass('on');
+        }, 50);
+
+        var isDim = $el.siblings().hasClass('dim');
+
+        var dimIdx = $('.dim').index();
+        var thisDim = $el.find('.dim');
+        var thisLyZindex = dimIdx + 4000;
+        $('.dim').css('opacity','0');
+        thisDim.css('opacity','.7');
+        thisDim.closest('.layer_bottomsheet, .layer_popup').css('z-index', thisLyZindex);
+
+        $el.find('.js_pop_close').click(function(){
+
+            $el.find('.layer_inner').removeClass('on');
+            setTimeout(function() {
+                isDim ? $('.layer_bottomsheet').hide() : $el.hide();
+                $('html').removeClass('scroll_lock');
+                $el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
+                if($('.dim').length == 2){
+                    $('.dim:eq(1)').css('opacity','.7');
+                }else if($('.dim').length == 1){
+                    $('.dim').css('opacity','.7');
+                }
+            }, 200);
+            eval('$focusReturn'+ [dimIdx]).focus();
+
+            return false;
+        });
+    }
+</script>
+</html>
