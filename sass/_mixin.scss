@@ -23,20 +23,18 @@
 }
 
 //...한줄처리
-@mixin ellipsis(){
-    overflow:hidden; white-space:nowrap !important;
-    text-overflow:ellipsis; -o-text-overflow:ellipsis; word-wrap:normal !important;
-}
-// 말주림 2줄
-@mixin ellipsis_multi($textLine:2,$txtHeight:1.5em) {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: $textLine;
-    -webkit-box-orient: vertical;
-    word-wrap:break-word;
-    line-height:$txtHeight;
-    max-height: ($txtHeight * $textLine);
+@mixin ellipsis($line: 1) {
+    @if ($line == 1) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    } @else {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $line;
+    }
 }
 @mixin before-middle() {
     vertical-align: middle;
