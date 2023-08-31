@@ -8,6 +8,7 @@
     width: 102px;
     height: 25px;
     padding: 0;
+    margin-top:40px;
 }
 
 .introSub {
@@ -154,7 +155,8 @@
     color: #333;
     text-align: center;
     display: block;
-    margin: 0 auto 0;
+    margin: 40px auto 0;
+
 }
 
 .joinComplete-dec {
@@ -172,4 +174,8 @@
     width: 280px;
     height: 280px;
     margin: 20px auto 0;
+}
+
+.asGroup.editList2.sortListBox {
+    .asList a .amount:after {display:none}
 }

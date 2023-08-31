@@ -230,6 +230,13 @@
     font-size: 14px;
     line-height: 22px;
     color: #999;
+    padding:20px 0;
+    &:before {
+        content:"";
+        @include iconTriCaution;
+        display:block;
+        margin:0 auto 20px;
+    }
 }
 
 .multiProfile-list {
@@ -303,20 +310,25 @@
     display: none;
 }
 
-.userProfile-assetList .asGroup {
-    .asList {
-        .amount em {
-            font-size: 16px;
+.userProfile-assetList {
+    padding-bottom:60px;
+    .ins1Link_wrap {margin-top:35px}
+    .asGroup {
+        .asList {
+            .amount em {
+                font-size: 16px;
+            }
+
+            margin-top: 10px;
         }
 
-        margin-top: 10px;
-    }
+        .listTit + .asList {
+            margin-top: 15px;
+        }
 
-    .listTit + .asList {
-        margin-top: 15px;
-    }
-
-    + .asGroup {
-        padding-top: 0;
+        + .asGroup {
+            padding-top: 0;
+        }
     }
 }
+

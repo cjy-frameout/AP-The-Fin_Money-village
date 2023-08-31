@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="scroll_lock">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
-    <title>인증번호확인 | 대출비교</title>
+    <title></title>
     <meta http-equiv="Cache-Control" content="No-Cache">
     <meta http-equiv="Pragma" content="No-Cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="title" content="">-->
     <meta name="description" content="">
+    <!--<meta name="keywords" content="">-->
+    <!-- The Open Graph protocol -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="">
     <meta property="og:description" content="">
     <meta property="og:url" content="">
-    <meta property="og:image" content="">
-    <link rel="SHORTCUT ICON" href="">
+    <meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+    <!-- //The Open Graph protocol -->
+    <link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
     <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
 
@@ -23,100 +27,60 @@
     <script type="text/javascript" src="../../js/slide_slick.js"></script>
     <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
     <script type="text/javascript" src="../../js/cmd.js"></script>
-    <script type="text/javascript" src="../../js/interaction.js"></script>
 </head>
+
 <body>
-<div class="wrap">
-    <!-- header -->
-    <div class="header">
-        <div class="header_inn">
-            <div class="left">
-                <a href="#none" class="btnBack"><span class="blind">Back</span></a>
-            </div>
-        </div>
-    </div>
-    <!-- //header -->
-    <div class="container">
-        <div class="content">
-            <div class="desc-wrap mgt30"> <!-- 0831 mgt30 으로 변경 -->
-                <h3 class="cont-title-big">보내드린 인증번호 6자리를 <br>입력해주세요.</h3>
-            </div>
-
-            <div class="input-wrap">
-                <div class="input-box">
-                    <label for="aaa" class="ipt-label">인증번호</label>
-                    <input type="text" id="aaa" class="ipt-typeB" placeholder="6자리 입력">
-                    <span class="ipt-time-limit pointColor">02:48</span>
-                </div>
-                <p class="input-err-desc" style="display: none">인증번호가 일치하지 않습니다.</p>
-            </div>
 
 
-            <div class="btn-wrap fixed noBorder vertical">
-                <a href="#none" class="btnBl6" role="button">인증번호 재요청</a>
-                <a href="#none" class="btnBl1 disable" role="button">다음</a>
-                <a href="#layer_bs" class="btn-alink btn_open_bottom_sheet" role="button">인증번호를 못 받으셨나요?</a>
-            </div>
 
-        </div>
-    </div>
-</div>
 
-<!-- [S] 인증번호 안내 -->
+
+<!-- [S] 소식 -->
 <div id="layer_bs" class="layer_bottomsheet">
     <div class="layer_inner">
-        <div class="layer_tit type2">
-            <strong class="tit">인증번호를 못 받으셨나요?</strong>
+        <div class="layer_tit">
+            <strong class="tit">소식</strong>
             <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
         </div>
         <div class="layer_cont">
             <!-- 내용 -->
-            <div class="msg_box">
-                <ul class="notice_list">
-                    <li class="list">
-                        <span class="tx">
-                            <i class="pointColor2">스팸차단서비스</i>로 인증번호 수신이 어려울 수 있습니다. 전화 > 더보기 > 설정 > 수신차단 목록에서 SMS 인증 발신 번호(1600-1522)를 제외해주세요.
-                        </span>
+            <div class="cdChkLst">
+                <ul class="cdChkSubList">
+                    <li class="cdChkItem roundType">
+                        <label>
+                            <input type="radio" name="radio01" id="radio1" checked="checked">
+                            <i></i><span>NEWS</span>
+                        </label>
                     </li>
-                    <li class="list">
-                        <span class="tx">
-                            <i class="pointColor2">통신사 명의도용 알림서비스</i>로 인증번호 수신이 어려울 수 있습니다. 통신사에 직접 문의하여 해지해주세요.
-                        </span>
+                    <li class="cdChkItem roundType">
+                        <label>
+                            <input type="radio" name="radio01" id="radio2">
+                            <i></i><span>공지사항</span>
+                        </label>
+                    </li>
+                    <li class="cdChkItem roundType">
+                        <label>
+                            <input type="radio" name="radio01" id="radio3">
+                            <i></i><span>이벤트</span>
+                        </label>
                     </li>
                 </ul>
             </div>
             <!-- //내용 -->
         </div>
         <div class="layer_footer">
-            <button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
+            <button type="button" class="js_pop_close btn_confirm"><span>선택</span></button>
         </div>
     </div>
 </div>
-<!-- [E] 인증번호 안내 -->
-
-<!-- [S] 인증번호 시간 초과 -->
-<div id="layer2_1" class="layer_popup type4">
-    <div class="layer_position">
-        <div class="layer_inner">
-            <div class="layer_cont">
-                <div class="msg_box">
-                    <p class="msg_alert">
-                        인증번호 입력 시간이 초과하였습니다.<br>
-                        더핀 앱을 다시 실행해 주세요.
-                    </p>
-                </div>
-                <div class="btn_layer_wrap">
-                    <button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- [E] 인증번호 시간 초과 -->
+<!-- [E] 소식 -->
 
 
 </body>
 <script>
+    $(document).ready(function(){
+        layer_bottomsheet('#layer_bs');
+    })
     $(document).on("click", ".btn_open_bottom_sheet", function(e){
         e.preventDefault();
 

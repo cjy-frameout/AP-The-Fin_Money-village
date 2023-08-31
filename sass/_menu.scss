@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+.bbsList {
+  .accBox {
+    &:not(:first-of-type) {
+      margin-top:20px;
+    }
+    &-date {
+      display:block;
+      font-size:13px;
+      font-weight:400;
+      line-height:18px;
+      color:#999;
+      margin-bottom:4px;
+    }
+    &-tit {font-size:16px;}
+    &-inner {
+      font-size:13px;
+      line-height:18px;
+      color:#666;
+      img {max-width:100%;margin:20px 0;}
+    }
+  }
+}

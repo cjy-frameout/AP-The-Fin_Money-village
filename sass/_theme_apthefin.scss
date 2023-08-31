@@ -1436,7 +1436,7 @@ a.btnMenu {
 	background-image: url("../img/theme/apthefin/ic_complete_ok.png");
 
 	&.fail {
-		background-image: url('../img/theme/apthefin/ic_complete_fail.png?0426');
+		background-image: url('../img/theme/apthefin/ic_complete_fail_old.png?0426');
 	}
 }
 
@@ -1461,12 +1461,12 @@ a.btnMenu {
 
 .wrap_complete {
 	.ico_fail, .ico_complete.fail {
-		background-image: url('../img/theme/apthefin/ic_complete_fail.png?0426');
+		background-image: url('../img/theme/apthefin/ic_complete_fail_old.png?0426');
 	}
 }
 
 .wrap_complete2 .ico_cancel {
-	background-image: url('../img/theme/apthefin/ic_complete_fail.png?0426');
+	background-image: url('../img/theme/apthefin/ic_complete_fail_old.png?0426');
 }
 
 .btn_mark_heart {
@@ -3684,7 +3684,6 @@ a.btnMenu {
 					display:none;
 				}
 			}
-
 			.deposit {
 				color: #666;
 				margin-top: 3px;
