@@ -7,3 +7,9 @@
   background-size:cover;
 }
 
+@mixin iconArrowDown {
+  width:24px;
+  height:24px;
+  background:url("../img/theme/apthefin/icon/ic_down.png") no-repeat 0 0;
+  background-size:cover;
+}

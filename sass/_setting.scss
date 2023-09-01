@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+.setting {
+  height:100%;
+  background:#F1F2F5;
+  &-list {
+    background:#fff;
+    padding-top:30px;
+    margin-left:-20px;
+    margin-right:-20px;
+  }
+  &-item {
+    display:block;
+    padding:20px 64px 20px 20px;
+    border-bottom:1px solid #f1f2f5;
+    font-size:16px;
+    font-weight:500;
+    line-height:24px;
+    position: relative;
+  }
+  &-switch {
+    position: absolute;
+    right:20px;
+    top:50%;
+    transform: translateY(-50%);
+  }
+  a.setting-item:after {
+    content:"";
+    @include iconArrowDown;
+    position: absolute;
+    right:20px;
+    top:50%;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+}
+
+.cdChkLst.settingType {
+  margin-top:30px;
+  .cdChkSubList {
+    margin-left:-20px;
+    margin-right:-20px;
+    padding-left:20px;
+  }
+  .cdChkItem {
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-right:64px;
+    border-bottom:1px solid #E5E5E5;
+    margin-top:0;
+  }
+}
+
+.settingVer {
+  margin-top:25px;
+  color:#333;
+  &-tit {
+    font-size:16px;
+    line-height:24px;
+    font-weight:400;
+  }
+  &-num {
+    position: relative;
+    color:#333;
+    font-size:16px;
+    line-height:24px;
+    font-weight:400;
+    margin-top:15px;
+  }
+  &-btn {
+    display: block;
+    position: absolute;
+    right:0;
+    bottom:0;
+    padding:4px 12px;
+    border:1px solid #3e5fac;
+    border-radius: 20px;
+    font-size:14px;
+    font-weight:500;
+    line-height:22px;
+    text-align: center;
+    color:#3e5fac;
+  }
+  &-licence {
+    margin-top:15px;
+    color:#999;
+    font-size:13px;
+    line-height:18px;
+    font-weight:400;
+    padding-bottom:3px;
+    border-bottom:1px solid #999;
+    display: inline-block;
+    &:visited,&:link {color:#999}
+  }
+}
+
+.marketingChkResult {
+  border-radius: 10px;
+  background:#f1f2f5;
+  display:flex;
+  padding:10px 20px;
+  align-self:stretch;
+  font-size:14px;
+  flex-wrap: wrap;
+  gap:4px 0;
+  margin-top:10px;
+  dd {
+    flex-shrink: 0;
+    color:#333;
+    display: block;
+    text-align:right;
+    width:calc(100% - 60px);
+  }
+  dt {
+    width:60px;
+    color:#666;
+    display: block;
+  }
+}

@@ -38,7 +38,7 @@
                 <a href="#none" class="btnBack"><span class="blind">Back</span></a>
             </div>
             <div class="center">
-                <h2 class="tit_h2">로그인 방식</h2>
+                <h2 class="tit_h2">설정</h2>
             </div>
 
         </div>
@@ -46,50 +46,41 @@
     <!-- //header -->
 
     <div class="container">
-        <div class="content">
-            <div class="cdChkLst settingType">
-                <ul class="cdChkSubList">
-                    <li class="cdChkItem roundType">
-                        <label>
-                            <input type="radio" name="radio01" id="radio1" checked>
-                            <i></i><span>간편 비밀번호</span>
+        <div class="content setting">
+            <nav class="setting-list">
+                <a href="" class="setting-item">로그인 방식</a>
+                <a href="" class="setting-item">간편비밀번호 설정</a>
+                <div class="setting-item">
+                    생체 인증 사용
+                    <div class="setting-switch">
+                        <label class="btn_switch">
+                            <input type="checkbox"><span class="round"></span>
                         </label>
-                    </li>
-                    <li class="cdChkItem roundType">
-                        <label>
-                            <input type="radio" name="radio01" id="radio2">
-                            <i></i><span>생체 인증</span>
-                        </label>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<!-- [S] 알림 -->
-<div id="" class="layer_popup type2">
-    <div class="layer_position">
-        <div class="layer_inner">
-            <div class="layer_cont">
-                <div class="msg_box">
-                    <div class="msg_box">
-                        <p class="msg_alert"><span class="accNum">알림</span></p>
-                        <p class="msg_customer mgt10">
-                            등록된 생체 정보가 없습니다.<br>
-                            등록하시겠습니까?
-                        </p>
                     </div>
                 </div>
-                <div class="btn_layer_wrap">
-                    <button type="button" class="js_pop_close btn_cancel"><span>취소</span></button>
-                    <button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
+                <a href="" class="setting-item">공동인증서 관리</a>
+                <div class="setting-item">
+                    마케팅정보수신 동의
+                    <div class="setting-switch">
+                        <label class="btn_switch">
+                            <input type="checkbox"><span class="round"></span>
+                        </label>
+                    </div>
                 </div>
-            </div>
+                <a href="" class="setting-item">이용 해지</a>
+            </nav>
+            <section class="settingVer">
+                <h3 class="settingVer-tit">앱버전</h3>
+                <div class="settingVer-num">
+                    <p>현재 버전 1.0.6</p>
+                    <p>최신 버전 2.0.1</p>
+                    <button type="button" class="settingVer-btn">업데이트</button>
+                </div>
+                <a href="" class="settingVer-licence">오픈소스 라이센스 보기</a>
+            </section>
         </div>
     </div>
 </div>
-<!-- [E] 알림 -->
+
 </body>
 </html>
