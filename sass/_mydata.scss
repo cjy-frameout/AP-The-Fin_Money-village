@@ -5,24 +5,30 @@
 .wrap_search + .feed-list {
     margin-top: 20px;
 }
-
+.feed-list {
+    .feed-item:first-child {
+        margin-top: 40px;
+    }
+}
 .feed-item {
-    border-bottom: 1px solid #E5E5E5;
-    padding: 0 0 20px;
+    border-bottom: 10px solid #F1F2F5;
+    padding: 0 20px 20px;
+    margin: 0 -20px;
 
     &.no-border-bottom {
-        border-bottom: 0;
+        border-bottom: 0 !important;
     }
 
     + .feed-item {
-        margin-top: 20px;
+        margin-top: 40px;
     }
 }
 
 .layer_cont .feed-item {
-    padding: 0 0 10px;
+    padding: 20px 0; 
+    border-bottom: 1px solid #f1f2f5;
+    margin: 0;
 }
-
 .feed-item .compare_chart {
     margin-top: 50px;
 
@@ -74,7 +80,7 @@
 .feed-item {
     .list-title {
         color: #333;
-        font-size: 14px;
+        font-size: 16px; 
         font-weight: 700;
         line-height: 1.5;
 
@@ -90,7 +96,7 @@
 
     .list-desc {
         color: #666;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 400;
         line-height: 1.5;
         word-break: keep-all;
@@ -113,7 +119,7 @@
             display: flex;
             align-items: center;
 
-            &:last-child {
+            & + div {
                 margin-left: 18px;
             }
         }
@@ -121,7 +127,7 @@
 
     .likes-num, .comment-num, .list-date {
         color: #999;
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 400;
         margin-left: 5px;
     }
@@ -146,7 +152,7 @@
 
     .list-name + {
         .list-title, .list-desc {
-            margin-top: 12px;
+            margin-top: 20px;
         }
     }
 
@@ -163,7 +169,6 @@
         cursor: pointer;
         height: 24px;
         width: 24px;
-        margin: 12px 0;
     }
 
     .load-wrap {
@@ -211,7 +216,7 @@
         border: 0;
         border-top: 1px solid #E5E5E5;
         border-style: dashed;
-        margin-top: 10px;
+        margin-top: 30px;
         padding-top: 10px;
     }
 
@@ -223,6 +228,7 @@
 
     .compare_chart .horizontal .wrapBar .gBarBox {
         .gBar {
+            border-radius: 0px 4px 4px 0px !important;
             text-align: right;
             height: 24px;
             padding-right: 10px;
@@ -301,7 +307,8 @@ input[type="password"] {
         position: fixed;
         bottom: 0;
         left: 0;
-        padding: 0 20px;
+        padding: 0 20px 20px;
+        background: #fff;
     }
 
     input[type="text"] {
@@ -374,7 +381,7 @@ input[type="password"] {
 .ipt-typeA {
     /* feed 댓글달기에 들어가는 댓글 입력 input */
     border: 0;
-    border-top: 1px solid #B3B3B3;
+    border-top: 1px solid #E5E5E5;
     color: #333;
     font-weight: 400;
     font-size: 16px;
@@ -416,7 +423,7 @@ input[type="password"] {
 .feed-write-wrap {
     border-top: 1px solid #F1F2F5;
     color: #666;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
     margin-top: 24px;
     white-space: pre-wrap;
@@ -437,9 +444,9 @@ input[type="password"] {
 
     .layer_memo_wrap {
         border: 0;
-        border-bottom: 1px solid #E5E5E5;
+        border-top: 1px solid #E5E5E5;
         margin-top: 0;
-        padding: 13px 0;
+        padding: 20px 0;
         min-height: auto;
     }
 }
@@ -536,7 +543,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 
 .dpf { display: flex; }
 .jcc { justify-content: center; }
-.jcs { justify-content: space-between; align-items: center; }
+.jcs { justify-content: space-between !important; align-items: center; }
 
 .alink-typeA {
     background: url(../img/theme/apthefin/ic_arw5.png) no-repeat right center;
@@ -1013,6 +1020,12 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     position: absolute;
     right: 0;
     top: 30px;
+}
+.btn-delete-feed {
+    background: url(../img/theme/apthefin/ic_del2.png) no-repeat 50% 50%;
+    background-size: 16px;
+    height: 20px;
+    width: 20px;
 }
 
 /* ========================================================= E : common  =====================================================*/
