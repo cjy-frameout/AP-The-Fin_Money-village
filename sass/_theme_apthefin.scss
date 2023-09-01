@@ -2434,7 +2434,7 @@ a.btnMenu {
 	.chart_info {
 		font-size: 18px;
 		font-weight: 500;
-		margin-top: -10px;
+
 	}
 
 	.asList .img {
@@ -8063,7 +8063,7 @@ a.btnMenu {
 			font-size: 16px;
 			color: #333;
 			font-weight: 500;
-			box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
+			border-bottom: 1px solid #dde3e7;
 
 			.btn_close:before {
 				position: absolute;
@@ -8078,7 +8078,7 @@ a.btnMenu {
 		}
 
 		.layer_cont {
-			padding: 20px;
+			padding: 20px 20px 150px;
 
 			.accSetting {
 				padding: 0;
@@ -9479,7 +9479,7 @@ a.btnMenu {
 		width: 20px;
 		height: 20px;
 		left: 57%;
-		background-image: url('../img/theme/apthefin/bt_del_value.png?0426');
+		background-image: url('../img/theme/apthefin/bt_del_value2.png?0426');
 		background-repeat: no-repeat;
 		background-size: 20px auto;
 	}
