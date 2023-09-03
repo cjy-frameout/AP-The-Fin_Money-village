@@ -6,6 +6,7 @@
   .accBox {
     border:none;
     border-radius: 0;
+    &-item {border:none}
     &-tit {
       padding:20px 20px 20px 24px;
       font-size:14px;

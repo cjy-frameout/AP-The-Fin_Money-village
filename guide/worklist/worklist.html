@@ -110,7 +110,7 @@
 	-------------------------------------------------- -->
 	<div class="tab_contents_wrap">
 		<h3>F/O PC</h3>
-		<table width="100%;">
+		<table width="100%;" id="sortable-table">
 			<script> inc_IAHead();</script>
 			<tbody>
 				<tr class="del">
@@ -496,7 +496,7 @@
 					<td class="depth6"></td>
                     <td class="page"></td>
 					<td class="path"><a href="../../html/menu/MENU04010000.html" target="_blank"></a></td>
-					<td class="rdate"></td>
+					<td class="rdate">230901</td>
                     <td class="devdate"></td>
                     <td class="pckg">Common</td>
 					<td class="mdate">MENU04010000</td>
@@ -569,9 +569,9 @@
 					<td class="depth4">마케팅정보수신 동의</td>
 					<td class="depth5">약관</td>
 					<td class="depth6"></td>
-                    <td class="page"></td>
+                    <td class="page">popup</td>
 					<td class="path"><a href="../../html/menu/MENU04050100.html" target="_blank"></a></td>
-					<td class="rdate"></td>
+					<td class="rdate">230901</td>
                     <td class="devdate"></td>
                     <td class="pckg">Common</td>
 					<td class="mdate">MENU04050100</td>
@@ -916,7 +916,7 @@
 					<td class="depth6"></td>
                     <td class="page"></td>
 					<td class="path"><a href="../../html/menu/MENU07030000.html" target="_blank"></a></td>
-					<td class="rdate"></td>
+					<td class="rdate">230831</td>
                     <td class="devdate"></td>
                     <td class="pckg">Common</td>
 					<td class="mdate">MENU07030000</td>
@@ -3949,8 +3949,10 @@
 				<!-- ************************ 드림 플래닝 끝 ************************ -->
 			</tbody>
 		</table>
+		<button id="dnd-button">Enable DnD</button>
 	</div>
-
+			<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+			<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 	<script>
 
 		(function($){
@@ -3971,7 +3973,24 @@
 		})(jQuery);
 		
 		$('.depth2').pckg();
+		$(document).ready(function() {
+			var isDnDEnabled = false;
 
+			$('#dnd-button').click(function() {
+				isDnDEnabled = !isDnDEnabled;
+				if (isDnDEnabled) {
+					$('#sortable-table tbody').sortable({
+						helper: 'clone',
+						opacity: 0.6,
+						axis: 'y'
+					}).disableSelection();
+					$(this).text('Disable DnD');
+				} else {
+					$('#sortable-table tbody').sortable('destroy');
+					$(this).text('Enable DnD');
+				}
+			});
+		});
 	</script>
 
 </div><!-- //content -->

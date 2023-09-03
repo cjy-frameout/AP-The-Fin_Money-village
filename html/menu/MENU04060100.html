@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title></title>
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="title" content="">-->
+    <meta name="description" content="">
+    <!--<meta name="keywords" content="">-->
+    <!-- The Open Graph protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+    <!-- //The Open Graph protocol -->
+    <link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/cmd.js"></script>
+</head>
+
+<body>
+<div class="wrap">
+    <!-- header -->
+    <div class="header">
+        <div class="header_inn">
+            <div class="left">
+                <a href="#none" class="btnBack"><span class="blind">Back</span></a>
+            </div>
+            <div class="center">
+                <h2 class="tit_h2">이용 해지</h2>
+            </div>
+
+        </div>
+    </div>
+    <!-- //header -->
+
+    <div class="container">
+        <div class="content">
+            <h3 class="cont-title-big mgt30">홍길동님,<br>이용 해지 하시기 전에 확인해 주세요.</h3>
+
+            <ul class="list-typeB mgt30">
+                <li class="list-typeB-li">지금 해지하시면 등록된 계정(자산)정보 및 개인정보가 모두 삭제되어 다신 볼 수 없어요.</li>
+                <li class="list-typeB-li">비교적 대출상품 정보와 대출 내역들은 동일 계정으로 재가입하더라도 보이지 않아요.</li>
+                <li class="list-typeB-li">자세한 사항은 개인정보처리방침을 확인해 주세요.</li>
+            </ul>
+
+            <div class="filterItem mgt30">
+                <p class="filterTit">해지 이유</p>
+                <div class="sel_form type_border"> <!-- 선택시 on 클래스 추가 -->
+                    <a href="#layer_001" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span class="sel_txt">해지 이유를 알려주세요.</span></a>
+                </div>
+            </div>
+
+            <div class="accSetting inpWriteArea" style="display: none">
+                <div class="editName mgt0">
+                    <input type="text" id="name" title="해지이유 직접입력" required="required" placeholder="직접입력">
+                </div>
+            </div>
+
+            <div class="fix_bottom not_dock">
+                <div class="btn_wrap">
+                    <div class="btnGroup sub_btnGroup">
+                        <p><a href="#" class="btnBl3" role="button" onclick="">취소</a></p>
+                        <p><a href="#" class="btnBl1 btn_open_layer_pop" role="button" onclick="">확인</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- [S]해지 사유 -->
+<div id="layer_001" class="layer_bottomsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+            <strong class="tit"><span>해지 사유</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont">
+            <div class="cdChkLst">
+                <ul class="cdChkSubList">
+                    <li class="cdChkItem">
+                        <label>
+                            <input type="radio" name="radio02" id="radio1">
+                            <i></i><span>보안 불안</span>
+                        </label>
+                    </li>
+                    <li class="cdChkItem">
+                        <label>
+                            <input type="radio" name="radio02" id="radio2">
+                            <i></i><span>마케팅 알림 과다</span>
+                        </label>
+                    </li>
+                    <li class="cdChkItem">
+                        <label>
+                            <input type="radio" name="radio02" id="radio3">
+                            <i></i><span>앱 미사용</span>
+                        </label>
+                    </li>
+                    <li class="cdChkItem">
+                        <label>
+                            <input type="radio" name="radio02" id="radio4">
+                            <i></i><span>대출 한도 부족</span>
+                        </label>
+                    </li>
+                    <li class="cdChkItem">
+                        <label>
+                            <input type="radio" name="radio02" id="radio5">
+                            <i></i><span>기타(직접입력)</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="layer_footer">
+            <button type="button" class="js_pop_close"><span>확인</span></button>
+        </div>
+    </div>
+</div>
+<!-- [E]해지 사유 -->
+
+
+<!-- [S] 알림 -->
+<div id="" class="layer_popup type2">
+    <div class="layer_position">
+        <div class="layer_inner">
+            <div class="layer_cont">
+                <div class="msg_box">
+                    <div class="msg_box">
+                        <p class="msg_alert"><span class="accNum">잠시만요!</span></p>
+                        <p class="msg_customer mgt10">
+                            더핀은 홍길동님과 헤어지기 아쉬워요.<br>
+                            더핀 서비스와 계속 함께해 주시겠어요?
+                        </p>
+                    </div>
+                </div>
+                <div class="btn_layer_wrap">
+                    <button type="button" class="js_pop_close btn_cancel"><span>탈퇴할께요</span></button>
+                    <button type="button" class="js_pop_close btn_confirm"><span>계속 이용할께요</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- [E] 알림 -->
+
+
+</body>
+
+<script>
+    //직접입력 테스트용
+    $(".js_pop_close").on("click",function(){
+        $("#radio5").is(":checked") ? $(".inpWriteArea").show() : $(".inpWriteArea").hide();
+    })
+
+
+    // [S] 바텀시트
+    $(document).on("click", ".btn_open_bottom_sheet", function(e){
+        e.preventDefault();
+        var $href = $(this).attr('href');
+        layer_bottomsheet($href);
+        $('html').addClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+        $focusReturn = $(this);
+    });
+    function layer_bottomsheet(el){
+        var $el = $(el);
+        $el.append("<div class=\"dim\"></div>");
+        isDim ? $('.layer_bottomsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
+        setTimeout(function() {
+            $el.find('.layer_inner').addClass('on');
+        }, 50);
+
+        var isDim = $el.siblings().hasClass('dim');
+
+        $el.find('.js_pop_close').click(function(){
+            $el.find('.layer_inner').removeClass('on');
+            setTimeout(function() {
+                isDim ? $('.layer_bottomsheet').hide() : $el.hide();
+                $('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+                $el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
+            }, 200);
+            $focusReturn.focus();
+            return false;
+        });
+    }
+    // [E] 바텀시트
+</script>
+</html>
