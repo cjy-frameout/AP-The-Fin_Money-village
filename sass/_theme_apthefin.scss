@@ -176,7 +176,16 @@ input[type="text"] {
 .has_fix_btn .tab_certi {
 	margin-top: 0;
 }
-
+.btn-top-shadow:before {
+	content:'';
+	width: 100%;
+	height: 20px;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, #FFFFFF 100%);
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+}
 .fix_bottom {
 	.btn_wrap {
 		position: relative;
