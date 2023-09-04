@@ -616,11 +616,11 @@
 					<td class="depth6"></td>
                     <td class="page"></td>
 					<td class="path"><a href="../../html/menu/MENU04070000.html" target="_blank"></a></td>
-					<td class="rdate"></td>
+					<td class="rdate">0904</td>
                     <td class="devdate"></td>
                     <td class="pckg">Common</td>
 					<td class="mdate">MENU04070000</td>
-					<td class="info"></td>
+					<td class="info">설정페이지 하단</td>
 					<td class="etc"></td>
 				</tr>
 				<tr class="del">
@@ -3949,10 +3949,7 @@
 				<!-- ************************ 드림 플래닝 끝 ************************ -->
 			</tbody>
 		</table>
-		<button id="dnd-button">Enable DnD</button>
 	</div>
-			<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
-			<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 	<script>
 
 		(function($){
@@ -3973,24 +3970,6 @@
 		})(jQuery);
 		
 		$('.depth2').pckg();
-		$(document).ready(function() {
-			var isDnDEnabled = false;
-
-			$('#dnd-button').click(function() {
-				isDnDEnabled = !isDnDEnabled;
-				if (isDnDEnabled) {
-					$('#sortable-table tbody').sortable({
-						helper: 'clone',
-						opacity: 0.6,
-						axis: 'y'
-					}).disableSelection();
-					$(this).text('Disable DnD');
-				} else {
-					$('#sortable-table tbody').sortable('destroy');
-					$(this).text('Enable DnD');
-				}
-			});
-		});
 	</script>
 
 </div><!-- //content -->
