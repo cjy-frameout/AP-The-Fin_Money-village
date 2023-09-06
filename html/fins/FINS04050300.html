@@ -57,28 +57,54 @@
                 </div>
                 
                 <div class="accSetting">
-                    <div class="editName open"> <!-- open, close 클래스를 토글합니다. -->
-                        <p role="label" class="itemTit">직업</p>
-                        <div class="sel_form type_border no-border"> <!-- 선택시 on 클래스 추가 -->
-                            <a href="#layerJob" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>예)직장인</span></a>
-                        </div>
-                    </div>
-                    <div class="editName open">
-                        <label for="name" class="itemTit">직장명</label>
-                        <input type="text" id="name" title="이름" required="required" placeholder="예) 에이피더핀" value="" >
-                    </div>
-                    <div class="editName open">
-                        <label for="name" class="itemTit">입사일</label>
-                        <input type="text" id="name" title="이름" required="required" placeholder="예) 2023.01.01" value="" >
-                        <p class="input-err-desc">주민등록번호를 정확히 입력해주세요</p>
-                    </div>
                     <div class="editName open">
                         <p role="label" class="itemTit">고용형태</p>
                         <div class="sel_form type_border no-border"> <!-- 선택시 on 클래스 추가 -->
                             <a href="#jobType" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>예)정규직</span></a>
                         </div>
                     </div>
+                    <div class="editName open">
+                        <label for="name" class="itemTit">입사일</label>
+                        <input type="text" id="name" title="이름" required="required" placeholder="예) 2023.01.01" value="" >
+                        <p class="input-err-desc">올바른 날짜 형식이 아닙니다.</p>
+                    </div>
+                    <div class="editName open">
+                        <label for="name" class="itemTit">직장명</label>
+                        <input type="text" id="name" title="이름" required="required" placeholder="예) 에이피더핀" value="" >
+                    </div>
+                    <div class="editName open"> <!-- open, close 클래스를 토글합니다. -->
+                        <p role="label" class="itemTit">직업</p>
+                        <div class="sel_form type_border no-border"> <!-- 선택시 on 클래스 추가 -->
+                            <a href="#layerJob" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>예)직장인</span></a>
+                        </div>
+                    </div>
                 </div>
+
+                 <!-- 개인 사업자 선택시 입력 폼 -->
+                <div class="accSetting">
+                    <div class="editName open">
+                        <p role="label" class="itemTit">업종형태</p>
+                        <div class="sel_form type_border no-border"> <!-- 선택시 on 클래스 추가 -->
+                            <a href="#jobType2" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>예)제조업</span></a>
+                        </div>
+                    </div>
+                    <div class="editName open">
+                        <label for="name" class="itemTit">개업일자</label>
+                        <input type="text" id="name" title="이름" required="required" placeholder="예) 2023.01.01" value="" >
+                        <p class="input-err-desc">올바른 날짜 형식이 아닙니다.</p>
+                    </div>
+                    <div class="editName open">
+                        <label for="name" class="itemTit">사업자명</label>
+                        <input type="text" id="name" title="이름" required="required" placeholder="예) 에이피더핀" value="" >
+                    </div>
+                    <div class="editName open"> <!-- open, close 클래스를 토글합니다. -->
+                        <p role="label" class="itemTit">직업</p>
+                        <div class="sel_form type_border no-border"> <!-- 선택시 on 클래스 추가 -->
+                            <a href="#layerJob" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>예)직장인</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 개인 사업자 선택시 입력 폼 -->
 
                 <div class="btn-wrap fixed noBorder vertical">
                     <a href="#none" class="btnBl1 disable" role="button">다음</a>
@@ -184,6 +210,62 @@
                             </label>
                         </li>
                         
+                    </ul>
+                </div>
+            </div>
+            <div class="layer_footer">
+                <button type="button" class="js_pop_close btn_confirm"><span>선택</span></button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="jobType2" class="layer_bottomsheet">
+        <div class="layer_inner">
+            <div class="layer_tit type2">
+                <strong class="tit"><span>업종형태</span></strong>
+                <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+            </div>
+            <div class="layer_cont" style="max-height: 678px;">
+                <div class="cdChkLst">
+                    <!-- <div class="cdChkItem all">
+                        <label for="radio1">
+                            <input type="radio" name="jobinfo" id="radio1">
+                            <i></i><span id="">직장인</span>
+                        </label>
+                    </div> -->
+                    <ul class="cdChkSubList">
+                        <li class="cdChkItem"> 
+                            <label for="radio2">
+                                <input type="radio" name="jobinfo" id="radio2">
+                                <i></i><span id="">제조업</span>
+                            </label>
+                        </li>
+                        <li class="cdChkItem"> 
+                            <label for="radio3">
+                                <input type="radio" name="jobinfo" id="radio3">
+                                <i></i><span id="">도소매업</span>
+                            </label> 
+                        </li>
+                        <li class="cdChkItem"> 
+                            <label for="radio4">
+                                <input type="radio" name="jobinfo" id="radio4">
+                                <i></i><span id="">운수업</span>
+                            </label>
+                        </li>
+                        <li class="cdChkItem"> 
+                            <label for="radio4">
+                                <input type="radio" name="jobinfo" id="radio5">
+                                <i></i><span id="">음식/숙박/교육</span>
+                            </label>
+                        </li>
+                        <li class="cdChkItem"> 
+                            <label for="radio4">
+                                <input type="radio" name="jobinfo" id="radio6">
+                                <i></i><span id="">기타</span>
+                            </label>
+                        </li>
                     </ul>
                 </div>
             </div>
