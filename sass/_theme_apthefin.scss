@@ -408,7 +408,14 @@ a {
 	&.btnManage {
 		font-size: 13px;
 	}
+	&.type3 {
+		background:#F7F9FF;
+		border:1px solid #e9efff;
+		color:#3e5fac;
+		font-weight:500;
+	}
 }
+
 
 .btnGroup {
 	&.lb_bg .btnBl2 {
@@ -8969,6 +8976,9 @@ a.btnMenu {
 			&:focus, &:valid {
 				border-bottom: 1px solid #333;
 			}
+		}
+		&.passwordType {
+			input[type="password"] {font-family: 'Pretendard', 'Noto Sans CJK KR', sans-serif}
 		}
 	}
 }
