@@ -715,6 +715,11 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     font-size: 16px;
     font-weight: 500;
     line-height:  1.5;
+    &.underLine {
+        border-bottom: 1px solid #E5E5E5;
+        padding-bottom: 16px; 
+        margin-bottom: 16px;
+    }
 }
 .main-title + .list-wrap {
     margin-top: 24px;
@@ -1070,6 +1075,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 
 /* ========================================================= E : common  =====================================================*/
 /* S : component */
+.cont-box + .info-wrap.bank { margin-top: 60px;}
 .org_wrap {
     padding: 0 20px;
 }
