@@ -1223,7 +1223,14 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     background: #F5F7F9;
     margin: 0 -20px;
     padding: 24px;
+    &.info-box {
+        background: #F7F9FF;
+        margin: 10px 0 0;
+        padding: 12px 20px;
+
+    }
 }
+
 
 .sub_detailList + .info-wrap {
     margin-top: 40px;
