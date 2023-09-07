@@ -115,3 +115,57 @@
     display: block;
   }
 }
+
+.authList {
+  display: block;
+  padding:20px;
+  border:1px solid #E5E5E5;
+  border-radius: 16px;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.08);
+  margin-top:16px;
+  &-name {
+    font-size:16px;
+    line-height:24px;
+    font-weight:500;
+    color:#333;
+    display: flex;
+    align-items: center;
+    &:before {
+      content:"";
+      @include iconShdLock();
+      display: inline-block;
+      margin-right:6px;
+    }
+  }
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size:14px;
+    color:#999;
+    line-height:22px;
+    gap:4px 0;
+    margin-top:10px;
+    dt {width:100px}
+    dd {
+      flex-shrink: 0;
+      width:calc(100% - 100px);
+      text-align:right;
+    }
+  }
+  &-guide {
+    font-size:14px;
+    color:#999;
+    line-height:22px;
+  }
+  &.empty {
+    .authList-name {
+      &:before {display:none}
+
+    }
+  }
+}
+
+input[type="password"]::placeholder {
+  font-family: 'Pretendard', 'Noto Sans CJK KR', sans-serif;
+}

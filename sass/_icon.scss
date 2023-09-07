@@ -1,15 +1,27 @@
 @charset "UTF-8";
-
+@mixin icon {
+  background-position: 0 0;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
 @mixin iconTriCaution {
   width:32px;
   height:32px;
-  background:url("../img/theme/apthefin/icon/ic_tri_caution.png") no-repeat 0 0;
-  background-size:cover;
+  @include icon();
+  background-image: url("../img/theme/apthefin/icon/ic_tri_caution.png");
 }
 
 @mixin iconArrowDown {
   width:24px;
   height:24px;
-  background:url("../img/theme/apthefin/icon/ic_down.png") no-repeat 0 0;
-  background-size:cover;
+  @include icon();
+  background-image:url("../img/theme/apthefin/icon/ic_down.png");
+
+}
+
+@mixin iconShdLock {
+  width:24px;
+  height:24px;
+  @include icon();
+  background-image:url("../img/theme/apthefin/icon/ic_lock_shd.png");
 }
