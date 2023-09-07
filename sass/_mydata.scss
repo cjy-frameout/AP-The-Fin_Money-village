@@ -756,7 +756,6 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     font-weight: 400;
     line-height: 1.3;
 }
-
 .cont-desc-small {
     color: #666;
     font-size: 14px;
@@ -770,7 +769,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     line-height: 1.3;
 }
 
-.cont-title-big + .cont-desc-small {
+.cont-title-big + .cont-desc-small, .cont-title-big + .cont-desc-extraSmall {
     margin-top: 8px;
 }
 
@@ -868,8 +867,59 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
         font-weight: 500;
         width: 50%;
         padding-left: 34px;
+        position: relative;
         &:nth-child(n+3) {
             margin-top: 16px;
+        }
+        &.bank:before {
+            content:'';
+            
+            display: block;
+            height: 24px;
+            width: 24px;
+            position:absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        &.bank.bank1:before {
+            background: url(../img/theme/apthefin/bank_logo/shinhan.png) no-repeat 0 0;
+        }
+        &.bank.bank2:before {
+            background: url(../img/theme/apthefin/bank_logo/nh.png) no-repeat 0 0;
+        }
+        &.bank.bank3:before {
+            background: url(../img/theme/apthefin/bank_logo/woori.png) no-repeat 0 0;
+        }
+        &.bank.bank4:before {
+            background: url(../img/theme/apthefin/bank_logo/ibk.png) no-repeat 0 0;
+        }
+        &.bank.bank5:before {
+            background: url(../img/theme/apthefin/bank_logo/jbbank.png) no-repeat 0 0;
+        }
+        &.bank.bank6:before {
+            background: url(../img/theme/apthefin/bank_logo/sbi.png) no-repeat 0 0;
+        }
+        &.bank.bank7:before {
+            background: url(../img/theme/apthefin/bank_logo/koreainves.png) no-repeat 0 0;
+        }
+        &.bank.bank8:before {
+            background: url(../img/theme/apthefin/bank_logo/jt.png) no-repeat 0 0;
+        }
+        &.bank.bank9:before {
+            background: url(../img/theme/apthefin/bank_logo/osb.png) no-repeat 0 0;
+        }
+        &.bank.bank10:before {
+            background: url(../img/theme/apthefin/bank_logo/sangsang.png) no-repeat 0 0;
+        }
+        &.bank.bank11:before {
+            background: url(../img/theme/apthefin/bank_logo/welcome.png) no-repeat 0 0;
+        }
+        &.bank.bank12:before {
+            background: url(../img/theme/apthefin/bank_logo/kb.png) no-repeat 0 0;
+        }
+        &.bank.bank13:before {
+            background: url(../img/theme/apthefin/bank_logo/bnk.png) no-repeat 0 0;
         }
     }
 }
@@ -1188,6 +1238,13 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 .search-result-wrap {
     margin: 30px -20px 0;
     padding: 0 20px;
+}
+
+.noBorder-list .search-result-li {
+    border-bottom: 0;
+    label {
+        padding: 10px 0;
+    }
 }
 
 .search-result-li {
