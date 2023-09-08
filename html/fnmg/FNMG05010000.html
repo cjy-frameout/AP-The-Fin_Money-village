@@ -25,6 +25,7 @@
     <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
     <script type="text/javascript" src="../../js/slide_slick.js"></script>
     <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/interaction.js"></script>
     <script type="text/javascript" src="../../js/cmd.js"></script>
 </head>
 <body>
@@ -729,28 +730,7 @@
         $('html').addClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
         $focusReturn = $(this);
     });
-    function layer_bottomsheet(el){
-        var $el = $(el);
-        $el.append("<div class=\"dim\"></div>");
-        isDim ? $('.layer_bottomsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
-        setTimeout(function() {
-            $el.find('.layer_inner').addClass('on');
-        }, 50);
 
-        var isDim = $el.siblings().hasClass('dim');
-
-        $el.find('.js_pop_close').click(function(){
-            $el.find('.layer_inner').removeClass('on');
-            setTimeout(function() {
-                isDim ? $('.layer_bottomsheet').hide() : $el.hide();
-                $('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
-                $el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
-            }, 200);
-            $focusReturn.focus();
-            return false;
-        });
-
-    }
     // [E] 바텀시트
 </script>
 </body>
