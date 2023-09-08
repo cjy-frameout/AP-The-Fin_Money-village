@@ -169,3 +169,30 @@
 input[type="password"]::placeholder {
   font-family: 'Pretendard', 'Noto Sans CJK KR', sans-serif;
 }
+
+.listNum {
+  counter-reset: listN;
+  li {
+    counter-increment: listN;
+    position: relative;
+    font-size:14px;
+    line-height:22px;
+    font-weight:400;
+    color:#666;
+    padding-left:20px;
+    &:not(:first-of-type) {
+      margin-top:10px;
+    }
+    &:before {
+      content:counter(listN)". ";
+      display:block;
+      position: absolute;
+      left:-5px;
+      top:0;
+      text-align:right;
+      width:20px;
+    }
+  }
+}
+
+.tx-cnt {text-align:center !important;}
