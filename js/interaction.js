@@ -81,7 +81,74 @@
         });
     }
 
+
+
 })(jQuery);
+
+function layer_fullsheet(el){
+    var $el = $(el);
+    $el.append("<div class=\"dim\"></div>");
+    isDim ? $('.layer_fullsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
+    setTimeout(function() {
+        $el.find('.layer_inner').addClass('on');
+    }, 50);
+
+    var isDim = $el.siblings().hasClass('dim');
+
+    $el.find('.js_pop_close').click(function(){
+        $el.find('.layer_inner').removeClass('on');
+        setTimeout(function() {
+            isDim ? $('.layer_fullsheet').hide() : $el.hide();
+            $('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+            $el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
+        }, 200);
+        $focusReturn.focus();
+        return false;
+    });
+}
+
+
+function layer_bottomsheet(el){
+    var $el = $(el);
+    $('html').addClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+    $el.append("<div class=\"dim\"></div>");
+    isDim ? $('.layer_bottomsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
+    setTimeout(function() {
+        $el.find('.layer_inner').addClass('on');
+    }, 50);
+
+    var isDim;
+    var dimIdx = $('.dim').index();
+    var thisDim = $el.find('.dim');
+    var thisLyZindex = dimIdx + 4000;
+    $('.dim').css('opacity','0');
+    thisDim.css('opacity','.7');
+    thisDim.closest('.layer_bottomsheet, .layer_popup').css('z-index', thisLyZindex);
+    // [E] multi layer 2021-08-02 추가
+
+    $el.find('.js_pop_close').click(function(){
+
+        $el.find('.layer_inner').removeClass('on');
+        setTimeout(function() {
+            isDim ? $('.layer_bottomsheet').hide() : $el.hide();
+            $('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+            $el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
+            // [S] multi layer 2021-08-02 추가
+            if($('.dim').length == '2'){
+                $('.dim:eq(1)').css('opacity','.7');
+            }else if($('.dim').length == '1'){
+                $('.dim').css('opacity','.7');
+            }
+            // [E] multi layer 2021-08-02 추가
+        }, 200);
+
+        // [S] multi layer 2021-08-02 추가
+        eval('$focusReturn'+ [dimIdx]).focus();
+
+        return false;
+    });
+}
+
 
 document.addEventListener('DOMContentLoaded', function(e){
     $('.btn-open-layerPop').layerPopOpen();
