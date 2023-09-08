@@ -1352,7 +1352,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    animation: circleMove3 0.5s alternate infinite both;
+    animation: circleMove3 1s 1s alternate infinite both;
     transform-origin: 0 0;
 }
 
@@ -1362,17 +1362,17 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     }
 
     100% {
-        scale: 0.9;
+        scale: 0.95;
     }
 }
 
 @keyframes circleMove2 {
     0% {
-        scale: 0.7;
+        scale: 0.95;
     }
 
     100% {
-        scale: 1.2;
+        scale: 1;
     }
 }
 
