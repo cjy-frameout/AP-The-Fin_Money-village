@@ -893,6 +893,60 @@ input {
             color: #000;
         }
     }
+    &.mainFeed {
+        border:none;
+        .btn {height:50px}
+        ul {
+            background:#fff;
+            position: relative;
+            background-size:100% 50px;
+            height:40px;
+            top:5px;
+            z-index:10;
+        }
+        &:before {
+            content:"";
+            display:block;
+            position: absolute;
+            left:0;
+            top:-5px;
+            width:calc(50% - 24px);
+            border-radius: 0 26px 0 0;
+            height:26px;
+            pointer-events: none;
+            box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.20);
+        }
+        &:after {
+            content:"";
+            display:block;
+            position: absolute;
+            right:0;
+            top:-5px;
+            width:calc(50% - 24px);
+            border-radius: 26px 0 0 0;
+            height:26px;
+            pointer-events: none;
+            box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.20);
+        }
+        .dock_main {
+            bottom:9px;
+            a {
+                width:60px;
+                height:56px;
+                border-radius: 26px;
+                justify-content: center;
+                align-items: center;
+                background:#747687 url('../img/theme/apthefin/ic_dock_main_feed.png') no-repeat center 10px;
+                background-size:24px 24px;
+                &.on {
+                    background-color:#BB2649;
+                    box-shadow:2px 8px 10px 0px rgba(105, 105, 105, 0.30);
+                }
+            }
+            .tx {color:#fff;padding-top:34px}
+
+        }
+    }
 }
 
 /* dim */

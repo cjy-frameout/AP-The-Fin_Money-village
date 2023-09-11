@@ -2363,7 +2363,7 @@ a.btnMenu {
 		background-image: url('../img/theme/apthefin/ic_arw_black.png');
 		background-repeat: no-repeat;
 		background-size: 16px auto;
-		margin-left: 19px;
+		margin-left: 10px;
 	}
 }
 
@@ -2538,7 +2538,7 @@ a.btnMenu {
 	.astDetail {
 		width: 100%;
 		margin-top: 15px;
-		padding-right: 37px;
+		padding-right: 26px;
 
 		li {
 			display: flex;
@@ -12252,6 +12252,10 @@ a.btnMenu {
 
 		&.ic_apt {
 			background-image: url('../img/theme/apthefin/ic_dock_apt.png?0426');
+			&.on {
+				background-image: url('../img/theme/apthefin/ic_dock_apt_on.png');
+				.tx {color:#3e5fac;}
+			}
 		}
 
 		&.ic_finstore {
@@ -12264,6 +12268,9 @@ a.btnMenu {
 
 		&.ic_finProfile {
 			background-image: url('../img/theme/apthefin/ic_dock_finProfile.png?0426');
+			&.on {
+				background-image: url('../img/theme/apthefin/ic_dock_finProfile_on.png');
+			}
 		}
 	}
 }
@@ -14767,7 +14774,7 @@ a.btnMenu {
 		height: 50px;
 		border: none;
 		font-size: 16px;
-		padding: 0 54px 0 20px;
+		padding: 0 34px 0 0;
 		border-bottom: 1px solid #ddd;
 
 		&:focus {
@@ -14778,7 +14785,7 @@ a.btnMenu {
 	.btnSearch {
 		display: inline-block;
 		position: absolute;
-		right: 20px;
+		right: 0;
 		top: 13px;
 		width: 24px;
 		height: 24px;
@@ -14812,7 +14819,7 @@ a.btnMenu {
 
 	.btnSearch {
 		cursor: none;
-		background-image: url('../img/theme/apthefin/bt_search2.png?0426');
+		//background-image: url('../img/theme/apthefin/bt_search2.png?0426');
 	}
 }
 

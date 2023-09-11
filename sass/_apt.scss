@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+//아파트
+
+.aptInfo {
+  margin-top:30px;
+  background:url('../img/theme/apthefin/bg_apt_info.png') no-repeat right bottom;
+  background-size:88px 80px;
+  &-tit {
+    font-size:16px;
+    font-weight:700;
+    line-height:24px;
+    color:#333;
+  }
+  &-dec {
+    margin-top:15px;
+    color:#333;
+    font-size:14px;
+    line-height:22px;
+    font-weight:400;
+  }
+}
+
+.aptFindMap {
+  display: flex;
+  width:100%;
+  padding:33px 20px;
+  align-items: center;
+  border-radius: 16px;
+  border:1px solid #E5E5E5;
+  background:#FCFCFC url('../img/theme/apthefin/bg_findmap.png') no-repeat calc(100% - 20px) center;
+  background-size:50px 50px;
+  font-size:16px;
+  font-weight:500;
+  line-height:24px;
+}
+
+.txtLink {
+  font-size:16px;
+  font-weight:700;
+  line-height:24px;
+  color:#333;
+  display: flex;
+  align-items: center;
+  position: relative;
+  &:after {
+    content:"";
+    display:block;
+    @include iconArrowDown();
+    transform: rotate(-90deg);
+    margin-left:auto;
+  }
+  i {
+    display:inline-block;
+    margin-left:4px;
+    font-size:18px;color:#3e5fac;line-height:26px;
+    font-style: normal;
+  }
+}
