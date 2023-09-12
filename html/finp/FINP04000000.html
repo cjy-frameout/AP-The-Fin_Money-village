@@ -37,16 +37,17 @@
 <!-- wrap -->
 <div class="wrap">
 	<!-- header -->
-	<div class="header">
+	<div class="header main">
 		<div class="header_inn">
 			<div class="left">
-				<a href="#none" class="btnBack"><span class="blind">Back</span></a>
+				<!-- <a href="#none" class="btnBack"><span class="blind">Back</span></a> -->
+                <a href="#none" class="btnLogo"><span class="logoTit">핀프로필</span></a>
 			</div>
-			<div class="center">
-				<h2 class="tit_h2">나의 자산</h2>
-			</div>
+			<!-- <div class="center">
+				<h2 class="tit_h2">자산</h2>
+			</div> -->
 			<div class="right">
-                <a href="#none" class="btnMenu"><span class="blind">menu</span></a>
+				<a href="#none" class="btnMenu"><span class="blind">menu</span></a>
 			</div>
 		</div>
 	</div>
@@ -58,25 +59,41 @@
 
 			<div class="asset_contents tab_certi"> <!-- /* tabs_wrap terms_wrap */ -->
 				<div class="tabs_header type2"> <!--  has_sel_all -->
-					<!--  S : 9/12 수정 -->
 					<ul class="cboth">
-						<li class="btn_sel_org tab1 "><a href="#none"><span>입출금</span></a></li><!-- 선택시 title="선택됨" 추가 -->
+						<li class="btn_sel_org tab1 on"><a href="#none"><span>입출금</span></a></li><!-- 선택시 title="선택됨" 추가 -->
                         <li class="btn_sel_org tab2 "><a href="#none"><span>예적금</span></a></li>
-						<li class="btn_sel_org tab3 "><a href="#none"><span>투자</span></a></li>
-						<li class="btn_sel_org tab4 "><a href="#none"><span>연금</span></a></li>
-						<li class="btn_sel_org tab5 "><a href="#none"><span>보험</span></a></li>
+						<li class="btn_sel_org tab3"><a href="#none"><span>투자</span></a></li>
+						<li class="btn_sel_org tab4"><a href="#none"><span>연금</span></a></li>
+						<li class="btn_sel_org tab5"><a href="#none"><span>보험</span></a></li>
                         <li class="btn_sel_org tab6"><a href="#none"><span>대출</span></a></li>
-						<li class="btn_sel_org tab7 "><a href="#none"><span>자동차</span></a></li>
-                        <li class="btn_sel_org tab8 on"><a href="#none"><span>부동산</span></a></li>
+						<li class="btn_sel_org tab7"><a href="#none"><span>자동차</span></a></li>
+                        <li class="btn_sel_org tab8"><a href="#none"><span>부동산</span></a></li>
+						
 					</ul>
-                    <!--  E : 9/12 수정 -->
 				</div>
 
                 <div class="swiper-container">
                     <div class="terms-slider tabs_body_wrap swiper-wrapper">
                         <div class="org_wrap swiper-slide">
-                            <p class="stit">{입출금}</p>
+                            <div class="tab_cntDp1">
+                                <div class="tBalance">
+                                    <h3 class="tBaltit">입출금 계좌 잔액<a href="#" class="btn_open_bottom_sheet btn_more_ask" role="button"><span class="ico_ask type_white2"><em class="blind">더보기</em></span></a></h3>
+                                    <p class="tBalAmount"><em class="amount">0</em>원</p>
+                                    <!-- <p class="tBalDetail">외화계좌 9,999CNY + 9,999USD 미합산</p> -->
+                                    <button class="btn-share"></button>
+                                </div>
+                                <div class="hr_div"></div>    
+                            
+                                <div class="asGroup">
+                                    <div class="listTit"> 
+                                        <h3>은행</h3>
+                                        <a href="#" class="btnAdd"> <span class="bank_link">연결하기</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
+    
                         <div class="org_wrap swiper-slide">
                             <p class="stit">{예적금}</p>
                         </div>
@@ -96,29 +113,22 @@
                             <p class="stit">{자동차}</p>
                         </div>
                         <div class="org_wrap swiper-slide">
-                            <div class="asGroup">
-                                <div class="listTit"> 
-                                    <h3>내 부동산 관리</h3>
-                                    <a href="#" class="btnAdd"> <span class="bank_link">연결하기</span></a>
-                                </div>
-                                <a href="#" class="asLink_box">
-                                    <div class="sub_banner">
-                                        <h3 class="sub_tit">
-                                            내 부동산 <span class="pointLine">시세를 조회</span>하고,<br>
-                                            <span class="pointLine">내 집 마련 플랜</span>도 세워보세요.
-                                        </h3>
-                                        <img src="../../img/theme/apthefin/im_subBanner_02.png" alt="부동산시세 알아보기">
-                                    </div>
-                                </a>
-                            </div>
-                            
-
+                            <p class="stit">{부동산}</p>
                         </div>
-                     
                     </div>
                 </div>
               
 			</div>
+
+			<!-- [S] 하단 버튼 영역 -->
+            <div class="btn_wrap">
+                <div class="btnGroup">
+                    <p><a href="#none" class="btnBl6 btnEdit" role="button" onclick="">목록 편집</a></p>
+                    <p><a href="#none" class="btnBl1 btnPlus" role="button" onclick="">자산 연결</a></p>
+                </div>
+            </div>
+			<!-- [E] 하단 버튼 영역 -->
+
 		</div>
 	</div>
 	<!-- //container -->
@@ -127,7 +137,7 @@
 
 <script>
 $(document).ready(function(){
-    // 선택 탭
+    //입출금 예적금 선불페이 선택 탭
     $(".tabInter").tabs({
         wrapClass:".tabInter",
         clickClass:".js_tabclickDp1",
@@ -141,7 +151,7 @@ $(document).ready(function(){
 
     // Swiper point
     var swiperPoint = new Swiper('.swiper-container', {
-        initialSlide: 7, //슬라이드 시작위치
+        initialSlide: 0, //슬라이드 시작위치
         slidesPerView:1,
         observer: true,
         centeredSlides:false ,
