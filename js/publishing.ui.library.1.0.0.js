@@ -194,17 +194,22 @@ function jsTxValReset(){
         $('.js_tx_val').each(function(){
             var textEle = $(this);
             var btnTxtValReset = textEle.siblings('.js_bt_val_reset');
+            var keyword = $(".searchKeyword");
             btnTxtValReset.hide();
             textEle.on('keyup', function(){
                 // val값 초기화
                 if(textEle.val().length === 0){
                     btnTxtValReset.hide();
+                    keyword.hide();
                 }else{
                     btnTxtValReset.show();
+                    keyword.show();
+
                 }
             });
             btnTxtValReset.on('click', function(){
                 btnTxtValReset.hide();
+                keyword.hide();
                 setTimeout(function(){
                     textEle.val('').focus();
                 }, 100);
@@ -406,13 +411,13 @@ function contentsBottomPadding(){
     var btnFixedHeight = $(".btn-wrap.fixed").height();
     $('.content .btn-wrap.fixed').length && $('.content').css('padding-bottom',btnFixedHeight + 52);
 
-    if($('.fix_bottom').length){
-		var fixBottomHeight = $('.fix_bottom').height();
+    if($('footer.fix_bottom').length){
+		var fixBottomHeight = $('footer.fix_bottom').height();
         $('.content').css('padding-bottom',fixBottomHeight);
         if($('.headerType2').length){
             $('.content').css('padding-bottom',fixBottomHeight + 52);
         }
-        if(!$('.fix_bottom .btn_wrap').length){
+        if(!$('footer.fix_bottom .btn_wrap').length){
             $('.content').css('padding-bottom', fixBottomHeight + 32);
         }
         //YY1200
@@ -426,8 +431,8 @@ function contentsBottomPadding(){
             $('.tabs_wrap.tab_calendar').closest('.content').css('padding-bottom', fixBottomHeight);
         }
         //docbar
-        if(!$('.fix_bottom .dock_bar').length){
-            $('.fix_bottom').addClass('not_dock');
+        if(!$('footer.fix_bottom .dock_bar').length){
+            $('footer.fix_bottom').addClass('not_dock');
         }
         if($('.hasFixBottom').length){
             var hasHeight = $('.hasFixBottom').height() + fixBottomHeight + 52;

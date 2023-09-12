@@ -26,6 +26,7 @@
     <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
     <script type="text/javascript" src="../../js/slide_slick.js"></script>
     <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/interaction.js"></script>
     <script type="text/javascript" src="../../js/cmd.js"></script>
 </head>
 
@@ -80,7 +81,7 @@
                 </div>
             </section>
 
-            <div class="fix_bottom">
+            <footer class="fix_bottom">
                 <!-- btn_wrap -->
                 <div class="btn_wrap">
                     <div class="btnGroup btnSeWrap type_col">
@@ -89,7 +90,7 @@
                     </div>
                 </div>
                 <!-- //btn_wrap -->
-            </div>
+            </footer>
         </div>
     </div>
 </div>
@@ -153,40 +154,6 @@
         eval('$focusReturn' + [dimIdx] + '= $(this)');
 
     });
-    function layer_bottomsheet(el){
-        var $el = $(el);
-        $el.append("<div class=\"dim\"></div>");
-        isDim ? $('.layer_bottomsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
-        setTimeout(function() {
-            $el.find('.layer_inner').addClass('on');
-        }, 50);
 
-        var isDim = $el.siblings().hasClass('dim');
-
-        var dimIdx = $('.dim').index();
-        var thisDim = $el.find('.dim');
-        var thisLyZindex = dimIdx + 4000;
-        $('.dim').css('opacity','0');
-        thisDim.css('opacity','.7');
-        thisDim.closest('.layer_bottomsheet, .layer_popup').css('z-index', thisLyZindex);
-
-        $el.find('.js_pop_close').click(function(){
-
-            $el.find('.layer_inner').removeClass('on');
-            setTimeout(function() {
-                isDim ? $('.layer_bottomsheet').hide() : $el.hide();
-                $('html').removeClass('scroll_lock');
-                $el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
-                if($('.dim').length == 2){
-                    $('.dim:eq(1)').css('opacity','.7');
-                }else if($('.dim').length == 1){
-                    $('.dim').css('opacity','.7');
-                }
-            }, 200);
-            eval('$focusReturn'+ [dimIdx]).focus();
-
-            return false;
-        });
-    }
 </script>
 </html>
