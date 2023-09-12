@@ -59,20 +59,28 @@
 
 			<div class="asset_contents tab_certi"> <!-- /* tabs_wrap terms_wrap */ -->
 				<div class="tabs_header type2"> <!--  has_sel_all -->
+                    <!--  S : 9/12 수정 -->
 					<ul class="cboth">
-						<li class="btn_sel_org tab1"><a href="#none"><span>예적금</span></a></li><!-- 선택시 title="선택됨" 추가 -->
-						<li class="btn_sel_org tab2"><a href="#none"><span>투자</span></a></li>
-						<li class="btn_sel_org tab3"><a href="#none"><span>연금</span></a></li>
-						<li class="btn_sel_org tab4 on"><a href="#none"><span>보험</span></a></li>
-						<li class="btn_sel_org tab5"><a href="#none"><span>자동차·부동산</span></a></li>
-						<li class="btn_sel_org tab6"><a href="#none"><span>대출</span></a></li>
+						<li class="btn_sel_org tab1 "><a href="#none"><span>입출금</span></a></li><!-- 선택시 title="선택됨" 추가 -->
+                        <li class="btn_sel_org tab2 "><a href="#none"><span>예적금</span></a></li>
+						<li class="btn_sel_org tab3 "><a href="#none"><span>투자</span></a></li>
+						<li class="btn_sel_org tab4 "><a href="#none"><span>연금</span></a></li>
+						<li class="btn_sel_org tab5 "><a href="#none"><span>보험</span></a></li>
+                        <li class="btn_sel_org tab6"><a href="#none"><span>대출</span></a></li>
+						<li class="btn_sel_org tab7 on"><a href="#none"><span>자동차</span></a></li>
+                        <li class="btn_sel_org tab8"><a href="#none"><span>부동산</span></a></li>
 					</ul>
+                    <!--  E : 9/12 수정 -->
 				</div>
 
                 <div class="swiper-container">
+                    <!--  S : 9/12 수정 -->
                     <div class="terms-slider tabs_body_wrap swiper-wrapper">
                         <div class="org_wrap swiper-slide">
-                            <p class="stit">{예금페이}</p>
+                            <p class="stit">{입출금}</p>
+                        </div>
+                        <div class="org_wrap swiper-slide">
+                            <p class="stit">{예적금}</p>
                         </div>
                         <div class="org_wrap swiper-slide">
                             <p class="stit">{투자}</p>
@@ -83,393 +91,383 @@
                         <div class="org_wrap swiper-slide">
                             <p class="stit">{보험}</p>
                         </div>
-
-                        <div class="org_wrap swiper-slide">
-                            <div class="tabInter">
-                                <div class="asset_tab_header">
-                                    <ul class="cboth">
-                                        <li class="js_tabclickDp1 on"><a href="#none" title="선택됨"><span>자동차</span></a></li><!-- 선택시 title="선택됨" 추가 -->
-                                        <li class="js_tabclickDp1"><a href="#none"><span>부동산</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="asset_tab_body">
-                                    <div class="tab_cntDp1" style="display: block;">
-                                        <div class="tBalance">
-                                            <h3 class="tBaltit">내 차 시세<a href="#layer_PP1_2_6_1_2_1BS" class="btn_open_bottom_sheet btn_more_ask" role="button"><span class="ico_ask type_white2"><em class="blind">더보기</em></span></a></h3>
-                                            <p class="tBalAmount"><em class="amount">40,950,000</em>원</p>
-                                            <button class="btn-share"></button>
-                                            <ul class="top_info_list">
-                                                <li class="top_info_item">
-                                                    <span class="top_info_title">구매가격</span>
-                                                    <p class="invest"><em class="num">26,000,000</em> 원</p>
-                                                </li>
-                                                <li class="top_info_item">
-                                                    <span class="top_info_title">구매가 기준 손익</span>
-                                                    <p class="invest minus"><em class="num">-6,000,000</em>원 (<em class="num invest_down">45%</em>)</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="hr_div"></div>    
-
-                                        <!-- [s] 자동차 연동 - 데이터 없음 -->
-                                        <!-- <div class="asGroup">
-                                            <div class="listTit">
-                                                <h3>내 자동차</h3>
-                                                <a href="#" class="btnAdd"> <span class="bank_link">등록하기</span></a>
-                                            </div>
-                                        </div> -->
-                                        <!-- [E] 자동차 연동 - 데이터 없음 -->
-
-
-                                        <!-- [S] 자동차 연동 - 케이스 2가지 -->
-                                        <div class="asGroup">
-                                            <div class="listTit">
-                                                <h3>내 자동차 <em class="pointColor">2</em></h3>
-                                            </div>
-                
-                                            <div class="asList type_info">
-                                                <div class="state_top">
-                                                    <a href="#">볼보 V90 크로스컨트리 F/L</a>
-                                                </div>
-                                                <div class="state_contents">
-                                                    <div class="state_name">
-                                                        <span>
-                                                            <em>12가3456</em> <em class="num_year">2016</em>년형
-                                                        </span>
-                                                        <a href="#" class="link_dashed">상세모델 정보가 없습니다</a>
-                                                        <div class="ic_btnGroup">
-                                                            <button type="button" class="btn_delete"><span class="blind">삭제하기</span></button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="state_imBox">
-                                                        <img src="../../img/theme/apthefin/im_car_01.png" alt="볼보">
-                                                    </div>
-                
-                                                    <ul>
-                                                        <li class="state_tit">
-                                                            <span>
-                                                                내 차 시세
-                                                            </span>
-                                                            <p class="invest tx_bold"><em class="num">16,450,000</em> 원</p>
-                                                        </li>
-                                                        <li>
-                                                            <span>출고가격</span>
-                                                            <p class="invest state_price"><em class="num">26,000,000</em> 원</p>
-                                                        </li>
-                                                        <li>
-                                                            <span>출고가 기준 손익</span>
-                                                            <p class="invest minus"><em class="num">-6,000,000</em>원 (<em class="num invest_down">45%</em>)</p>
-                                                        </li>
-                                                        <li>
-                                                            <span>구매가격</span>
-                                                            <a href="#" class="link_dashed btn_edit">구매가격을 입력해주세요</a> 
-                                                        </li>
-                                                        <li>
-                                                            <span>구매가 기준 손익</span>
-                                                            <p class="invest"><em class="num">0</em>원 (<em class="num">0%</em>)</p>
-                                                        </li>
-                                                    </ul>
-                
-                                                </div>
-                                            </div>
-
-                                            <div class="asList type_info">
-                                                <div class="state_top">
-                                                    <a href="#">폭스바겐 비틀 카브리올레</a>
-                                                </div>
-                                                <div class="state_contents">
-                                                    <div class="state_name">
-                                                        <span>
-                                                            <em>12가3456</em> <em class="num_year">2016</em>년형
-                                                        </span>
-                                                        <span>2.0 T4 AWD Momemtum</span>
-                                                        <!-- <a href="#" class="link_dashed">상세모델명을 입력해주세요</a> -->
-                                                        <div class="ic_btnGroup">
-                                                            <button type="button" class="btn_delete"><span class="blind">삭제하기</span></button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="state_imBox">
-                                                        <img src="../../img/theme/apthefin/im_car_02.png" alt="폭스바겐">
-                                                    </div>
-                
-                                                    <ul>
-                                                        <li>
-                                                            <span class="tx_bold">
-                                                                내 차 시세 
-                                                            </span>
-                                                            <p class="invest tx_bold"><em class="num">16,450,000</em> 원</p>
-                                                        </li>
-                                                        <li>
-                                                            <span>출고가격</span>
-                                                            <p class="invest state_price"><em class="num">26,000,000</em> 원</p>
-                                                        </li>
-                                                        <li>
-                                                            <span>출고가 기준 손익</span>
-                                                            <p class="invest minus"><em class="num">-6,000,000</em>원 (<em class="num invest_down">45%</em>)</p>
-                                                        </li>
-                                                        <li>
-                                                            <span>구매가격</span>
-                                                            <a href="#" class="link_txt btn_edit">  
-                                                                <em class="num">600,000</em> 원
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <span>구매가 기준 손익</span>
-                                                            <p class="invest"><em class="num">0</em> 원 (<em class="num">0%</em>)</p>
-                                                        </li>
-                                                    </ul>
-                                                    
-                                                </div>
-                                            </div>
-                                        
-                                        </div>
-                                        <!-- [E] 자동차 연동 - 케이스 2가지 -->
-
-                                        
-                                        <!-- [S] 슬라이드 배너 타입 등록후 -->
-                                        <div class="asGroup">
-                                            <div class="listTit">
-                                                <h3>내 차 만들기</h3>
-                                            </div>
-                                            <div class="slide-container type_goal">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <div class="boxArea gaolState linking">
-                                                            <div class="ic_group">
-                                                                <span class="lflag orange">대기</span>
-                                                                <div class="ic_btnGroup">
-                                                                    <button type="button" class="btn_delete"><span class="blind">삭제하기</span></button>
-                                                                </div>
-                                                            </div>
-                                                            <a href="#none">
-                                                                <h4>지프 랭글러 4XE</h4>
-                                                                <em class="date">2022.09.22 ~2022.11.10</em>
-                                                            </a>
-                                                            <div class="gaolGraph">
-                                                                <div class="gaolAmount">목표 금액 <span><em>53,000,000</em>원</span></div>
-                                                                <div class="exp_bar">
-                                                                    <!-- <div class="bar">
-                                                                        <p class="exp_amount"></p>
-                                                                        <div class="bar_total"> 
-                                                                            <span class="bar_on" style="width: 0%;"></span>
-                                                                        </div>
-                                                                    </div> -->
-                                                                    <div class="exp_num"> 
-                                                                        <!-- <p class="fluct_amount left"><em class="num">0</em> %</p> -->
-                                                                        <a href="#none" class="fluct_amount right">계좌 연결 대기중</a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="boxArea gaolState beforeStart">
-                                                            <div class="ic_group">
-                                                                <span class="lflag orange">대기</span>
-                                                                <div class="ic_btnGroup">
-                                                                    <button type="button" class="btn_delete"><span class="blind">삭제하기</span></button>
-                                                                </div>
-                                                            </div>
-                                                            <a href="#none">
-                                                                <h4>계좌연결대기 (D-50)</h4>
-                                                                <em class="date">2022.09.22 ~2022.11.10</em>
-                                                            </a>
-                                                            <div class="gaolGraph">
-                                                                <div class="gaolAmount">목표 금액<span><em>53,000,000</em>원</span></div>
-                                                                <div class="exp_bar">
-                                                                    <!-- <div class="bar">
-                                                                        <p class="exp_amount"></p>
-                                                                        <div class="bar_total"> 
-                                                                            <span class="bar_on" style="width: 0%;"></span>
-                                                                        </div>
-                                                                    </div> -->
-                                                                    <div class="exp_num"> 
-                                                                        <!-- <p class="fluct_amount left"><em class="num">0</em> %</p> -->
-                                                                        <a href="#none" class="fluct_amount right">목표 날짜가 시작되지 않았어요!</a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="boxArea gaolState">
-                                                            <div class="ic_group">
-                                                                <span class="lflag orange">D-120</span>
-                                                                <div class="ic_btnGroup">
-                                                                    <button type="button" class="btn_delete"><span class="blind">삭제하기</span></button>
-                                                                </div>
-                                                            </div>
-                                                            <a href="#none">
-                                                                <h4>지프 랭글러 4XE</h4>
-                                                                <em class="date">2022.09.22 ~2022.11.10</em>
-                                                            </a>
-                                                            <div class="gaolGraph">
-                                                                <div class="gaolAmount">목표 <span><em>53,000,000</em>원</span></div>
-                                                                <div class="exp_bar">
-                                                                    <div class="bar">
-                                                                        <p class="exp_amount"></p>
-                                                                        <div class="bar_total"> 
-                                                                            <span class="bar_on" style="width: 40%;"></span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="exp_num"> 
-                                                                        <p class="fluct_amount left"><em class="num">40</em> %</p>
-                                                                        <p class="fluct_amount right pointColor"><em class="num">65,200,000원</em> 남았어요!</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="boxArea gaolState">
-                                                            <div class="ic_group">
-                                                                <span class="lflag orange">D-120</span>
-                                                                <div class="ic_btnGroup">
-                                                                    <button type="button" class="btn_delete"><span class="blind">삭제하기</span></button>
-                                                                </div>
-                                                            </div>
-                                                            <a href="#none">
-                                                                <h4>지프 랭글러 4XE</h4>
-                                                                <em class="date">2022.09.22 ~2022.11.10</em>
-                                                            </a>
-                                                            <div class="gaolGraph">
-                                                                <div class="gaolAmount">목표 <span><em>53,000,000</em>원</span></div>
-                                                                <div class="exp_bar">
-                                                                    <div class="bar">
-                                                                        <p class="exp_amount"></p>
-                                                                        <div class="bar_total"> 
-                                                                            <span class="bar_on" style="width: 0%;"></span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="exp_num"> 
-                                                                        <p class="fluct_amount left"><em class="num">0</em> %</p>
-                                                                        <p class="fluct_amount right"><em class="num">70</em> %</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="boxArea gaolState">
-                                                            <div class="ic_group">
-                                                                <span class="lflag orange">D-120</span>
-                                                                <div class="ic_btnGroup">
-                                                                    <button type="button" class="btn_delete"><span class="blind">삭제하기</span></button>
-                                                                </div>
-                                                            </div>
-                                                            <a href="#none">
-                                                                <h4 class="ellipsis">구월힐스테이트롯데캐슬골드클래스아파트</h4> <!-- 타이틀 길어질 경우 ellipsis 클래스 추가  -->
-                                                                <em class="date">2022.09.22 ~2022.11.10</em>
-                                                            </a>
-                                                            <div class="gaolGraph">
-                                                                <div class="gaolAmount">목표 <span><em>53,000,000</em>원</span></div>
-                                                                <div class="exp_bar">
-                                                                    <div class="bar">
-                                                                        <p class="exp_amount"></p>
-                                                                        <div class="bar_total"> 
-                                                                            <span class="bar_on" style="width: 0%;"></span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="exp_num"> 
-                                                                        <p class="fluct_amount left"><em class="num">0</em> %</p>
-                                                                        <p class="fluct_amount right"><em class="num">70</em> %</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="boxArea gaolState complete">
-                                                            <div class="ic_group">
-                                                                <span class="lflag orange">D-120</span>
-                                                                <div class="ic_btnGroup">
-                                                                    <button type="button" class="btn_delete"><span class="blind">삭제하기</span></button>
-                                                                </div>
-                                                            </div>
-                                                            <a href="#none">
-                                                                <h4>지프 랭글러 4XE</h4>
-                                                                <em class="date">2022.09.22 ~2022.11.10</em>
-                                                            </a>
-                                                            <div class="gaolGraph">
-                                                                <div class="gaolAmount">목표 <span><em>53,000,000</em>원</span></div>
-                                                                <div class="exp_bar">
-                                                                    <div class="bar">
-                                                                        <p class="exp_amount"></p>
-                                                                        <div class="bar_total"> 
-                                                                            <span class="bar_on" style="width: 100%;"></span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="exp_num"> 
-                                                                        <p class="fluct_amount left"><em class="num">100</em> %</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="boxArea gaolState overdue">
-                                                            <div class="ic_group">
-                                                                <span class="lflag gray">D+10</span>
-                                                                <div class="ic_btnGroup">
-                                                                    <button type="button" class="btn_delete"><span class="blind">삭제하기</span></button>
-                                                                </div>
-                                                            </div>
-                                                            <a href="#none">
-                                                                <h4>기관초과케이스</h4>
-                                                                <em class="date">2022.09.22 ~2022.11.10</em>
-                                                            </a>
-                                                            <div class="gaolGraph">
-                                                                <div class="gaolAmount">목표 <span><em>53,000,000</em>원</span></div>
-                                                                <div class="exp_bar">
-                                                                    <div class="bar">
-                                                                        <p class="exp_amount"></p>
-                                                                        <div class="bar_total"> 
-                                                                            <span class="bar_on" style="width: 535%;"></span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="exp_num"> 
-                                                                        <p class="fluct_amount left"><em class="num">30</em> %</p>
-                                                                        <p class="fluct_amount right"><em class="num">70</em> %</p>
-                            
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper_control">
-                                                    <div class="swiper-button-prev"></div>
-                                                    <div class="swiper_pagination"></div>
-                                                    <div class="swiper-button-next"></div>
-                                                </div>
-                                            </div>
-
-                                            <div class="banner inLink">
-                                                <a href="#none" class="link_type1">
-                                                    <h3 class="banner_tit">
-                                                        <span class="titPoint">나의 드림카</span><br>
-                                                        진짜 내 차로 만들어 보세요.
-                                                    </h3>
-                                                    <span class="tx">목표 세우기</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- [E] 슬라이드 배너 타입 등록후 -->
-
-                                    </div>
-                                    <div class="tab_cntDp1" style="display: none;">
-                                        부동산
-                                    </div>
-                                
-                                </div>
-                            </div>
-
-                        </div>
-                     
                         <div class="org_wrap swiper-slide">
                             <p class="stit">{대출}</p>
                         </div>
+                        <div class="org_wrap swiper-slide">
+                            <div class="tab_cntDp1" style="display: block;">
+                                <div class="tBalance">
+                                    <h3 class="tBaltit">내 차 시세<a href="#layer_PP1_2_6_1_2_1BS" class="btn_open_bottom_sheet btn_more_ask" role="button"><span class="ico_ask type_white2"><em class="blind">더보기</em></span></a></h3>
+                                    <p class="tBalAmount"><em class="amount">40,950,000</em>원</p>
+                                    <button class="btn-share"></button>
+                                    <ul class="top_info_list">
+                                        <li class="top_info_item">
+                                            <span class="top_info_title">구매가격</span>
+                                            <p class="invest"><em class="num">26,000,000</em> 원</p>
+                                        </li>
+                                        <li class="top_info_item">
+                                            <span class="top_info_title">구매가 기준 손익</span>
+                                            <p class="invest minus"><em class="num">-6,000,000</em>원 (<em class="num invest_down">45%</em>)</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="hr_div"></div>    
+
+                                <!-- [s] 자동차 연동 - 데이터 없음 -->
+                                <!-- <div class="asGroup">
+                                    <div class="listTit">
+                                        <h3>내 자동차</h3>
+                                        <a href="#" class="btnAdd"> <span class="bank_link">등록하기</span></a>
+                                    </div>
+                                </div> -->
+                                <!-- [E] 자동차 연동 - 데이터 없음 -->
+
+
+                                <!-- [S] 자동차 연동 - 케이스 2가지 -->
+                                <div class="asGroup">
+                                    <div class="listTit">
+                                        <h3>내 자동차 <em class="pointColor">2</em></h3>
+                                    </div>
+        
+                                    <div class="asList type_info">
+                                        <div class="state_top">
+                                            <a href="#">볼보 V90 크로스컨트리 F/L</a>
+                                        </div>
+                                        <div class="state_contents">
+                                            <div class="state_name">
+                                                <span>
+                                                    <em>12가3456</em> <em class="num_year">2016</em>년형
+                                                </span>
+                                                <a href="#" class="link_dashed">상세모델 정보가 없습니다</a>
+                                                <div class="ic_btnGroup">
+                                                    <button type="button" class="btn_delete"><span class="blind">삭제하기</span></button>
+                                                </div>
+                                            </div>
+                                            <div class="state_imBox">
+                                                <img src="../../img/theme/apthefin/im_car_01.png" alt="볼보">
+                                            </div>
+        
+                                            <ul>
+                                                <li class="state_tit">
+                                                    <span>
+                                                        내 차 시세
+                                                    </span>
+                                                    <p class="invest tx_bold"><em class="num">16,450,000</em> 원</p>
+                                                </li>
+                                                <li>
+                                                    <span>출고가격</span>
+                                                    <p class="invest state_price"><em class="num">26,000,000</em> 원</p>
+                                                </li>
+                                                <li>
+                                                    <span>출고가 기준 손익</span>
+                                                    <p class="invest minus"><em class="num">-6,000,000</em>원 (<em class="num invest_down">45%</em>)</p>
+                                                </li>
+                                                <li>
+                                                    <span>구매가격</span>
+                                                    <a href="#" class="link_dashed btn_edit">구매가격을 입력해주세요</a> 
+                                                </li>
+                                                <li>
+                                                    <span>구매가 기준 손익</span>
+                                                    <p class="invest"><em class="num">0</em>원 (<em class="num">0%</em>)</p>
+                                                </li>
+                                            </ul>
+        
+                                        </div>
+                                    </div>
+
+                                    <div class="asList type_info">
+                                        <div class="state_top">
+                                            <a href="#">폭스바겐 비틀 카브리올레</a>
+                                        </div>
+                                        <div class="state_contents">
+                                            <div class="state_name">
+                                                <span>
+                                                    <em>12가3456</em> <em class="num_year">2016</em>년형
+                                                </span>
+                                                <span>2.0 T4 AWD Momemtum</span>
+                                                <!-- <a href="#" class="link_dashed">상세모델명을 입력해주세요</a> -->
+                                                <div class="ic_btnGroup">
+                                                    <button type="button" class="btn_delete"><span class="blind">삭제하기</span></button>
+                                                </div>
+                                            </div>
+                                            <div class="state_imBox">
+                                                <img src="../../img/theme/apthefin/im_car_02.png" alt="폭스바겐">
+                                            </div>
+        
+                                            <ul>
+                                                <li>
+                                                    <span class="tx_bold">
+                                                        내 차 시세 
+                                                    </span>
+                                                    <p class="invest tx_bold"><em class="num">16,450,000</em> 원</p>
+                                                </li>
+                                                <li>
+                                                    <span>출고가격</span>
+                                                    <p class="invest state_price"><em class="num">26,000,000</em> 원</p>
+                                                </li>
+                                                <li>
+                                                    <span>출고가 기준 손익</span>
+                                                    <p class="invest minus"><em class="num">-6,000,000</em>원 (<em class="num invest_down">45%</em>)</p>
+                                                </li>
+                                                <li>
+                                                    <span>구매가격</span>
+                                                    <a href="#" class="link_txt btn_edit">  
+                                                        <em class="num">600,000</em> 원
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <span>구매가 기준 손익</span>
+                                                    <p class="invest"><em class="num">0</em> 원 (<em class="num">0%</em>)</p>
+                                                </li>
+                                            </ul>
+                                            
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                                <!-- [E] 자동차 연동 - 케이스 2가지 -->
+
+                                
+                                <!-- [S] 슬라이드 배너 타입 등록후 -->
+                                <div class="asGroup">
+                                    <div class="listTit">
+                                        <h3>내 차 만들기</h3>
+                                    </div>
+                                    <div class="slide-container type_goal">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="boxArea gaolState linking">
+                                                    <div class="ic_group">
+                                                        <span class="lflag orange">대기</span>
+                                                        <div class="ic_btnGroup">
+                                                            <button type="button" class="btn_delete"><span class="blind">삭제하기</span></button>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#none">
+                                                        <h4>지프 랭글러 4XE</h4>
+                                                        <em class="date">2022.09.22 ~2022.11.10</em>
+                                                    </a>
+                                                    <div class="gaolGraph">
+                                                        <div class="gaolAmount">목표 금액 <span><em>53,000,000</em>원</span></div>
+                                                        <div class="exp_bar">
+                                                            <!-- <div class="bar">
+                                                                <p class="exp_amount"></p>
+                                                                <div class="bar_total"> 
+                                                                    <span class="bar_on" style="width: 0%;"></span>
+                                                                </div>
+                                                            </div> -->
+                                                            <div class="exp_num"> 
+                                                                <!-- <p class="fluct_amount left"><em class="num">0</em> %</p> -->
+                                                                <a href="#none" class="fluct_amount right">계좌 연결 대기중</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="boxArea gaolState beforeStart">
+                                                    <div class="ic_group">
+                                                        <span class="lflag orange">대기</span>
+                                                        <div class="ic_btnGroup">
+                                                            <button type="button" class="btn_delete"><span class="blind">삭제하기</span></button>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#none">
+                                                        <h4>계좌연결대기 (D-50)</h4>
+                                                        <em class="date">2022.09.22 ~2022.11.10</em>
+                                                    </a>
+                                                    <div class="gaolGraph">
+                                                        <div class="gaolAmount">목표 금액<span><em>53,000,000</em>원</span></div>
+                                                        <div class="exp_bar">
+                                                            <!-- <div class="bar">
+                                                                <p class="exp_amount"></p>
+                                                                <div class="bar_total"> 
+                                                                    <span class="bar_on" style="width: 0%;"></span>
+                                                                </div>
+                                                            </div> -->
+                                                            <div class="exp_num"> 
+                                                                <!-- <p class="fluct_amount left"><em class="num">0</em> %</p> -->
+                                                                <a href="#none" class="fluct_amount right">목표 날짜가 시작되지 않았어요!</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="boxArea gaolState">
+                                                    <div class="ic_group">
+                                                        <span class="lflag orange">D-120</span>
+                                                        <div class="ic_btnGroup">
+                                                            <button type="button" class="btn_delete"><span class="blind">삭제하기</span></button>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#none">
+                                                        <h4>지프 랭글러 4XE</h4>
+                                                        <em class="date">2022.09.22 ~2022.11.10</em>
+                                                    </a>
+                                                    <div class="gaolGraph">
+                                                        <div class="gaolAmount">목표 <span><em>53,000,000</em>원</span></div>
+                                                        <div class="exp_bar">
+                                                            <div class="bar">
+                                                                <p class="exp_amount"></p>
+                                                                <div class="bar_total"> 
+                                                                    <span class="bar_on" style="width: 40%;"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="exp_num"> 
+                                                                <p class="fluct_amount left"><em class="num">40</em> %</p>
+                                                                <p class="fluct_amount right pointColor"><em class="num">65,200,000원</em> 남았어요!</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="boxArea gaolState">
+                                                    <div class="ic_group">
+                                                        <span class="lflag orange">D-120</span>
+                                                        <div class="ic_btnGroup">
+                                                            <button type="button" class="btn_delete"><span class="blind">삭제하기</span></button>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#none">
+                                                        <h4>지프 랭글러 4XE</h4>
+                                                        <em class="date">2022.09.22 ~2022.11.10</em>
+                                                    </a>
+                                                    <div class="gaolGraph">
+                                                        <div class="gaolAmount">목표 <span><em>53,000,000</em>원</span></div>
+                                                        <div class="exp_bar">
+                                                            <div class="bar">
+                                                                <p class="exp_amount"></p>
+                                                                <div class="bar_total"> 
+                                                                    <span class="bar_on" style="width: 0%;"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="exp_num"> 
+                                                                <p class="fluct_amount left"><em class="num">0</em> %</p>
+                                                                <p class="fluct_amount right"><em class="num">70</em> %</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="boxArea gaolState">
+                                                    <div class="ic_group">
+                                                        <span class="lflag orange">D-120</span>
+                                                        <div class="ic_btnGroup">
+                                                            <button type="button" class="btn_delete"><span class="blind">삭제하기</span></button>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#none">
+                                                        <h4 class="ellipsis">구월힐스테이트롯데캐슬골드클래스아파트</h4> <!-- 타이틀 길어질 경우 ellipsis 클래스 추가  -->
+                                                        <em class="date">2022.09.22 ~2022.11.10</em>
+                                                    </a>
+                                                    <div class="gaolGraph">
+                                                        <div class="gaolAmount">목표 <span><em>53,000,000</em>원</span></div>
+                                                        <div class="exp_bar">
+                                                            <div class="bar">
+                                                                <p class="exp_amount"></p>
+                                                                <div class="bar_total"> 
+                                                                    <span class="bar_on" style="width: 0%;"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="exp_num"> 
+                                                                <p class="fluct_amount left"><em class="num">0</em> %</p>
+                                                                <p class="fluct_amount right"><em class="num">70</em> %</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="boxArea gaolState complete">
+                                                    <div class="ic_group">
+                                                        <span class="lflag orange">D-120</span>
+                                                        <div class="ic_btnGroup">
+                                                            <button type="button" class="btn_delete"><span class="blind">삭제하기</span></button>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#none">
+                                                        <h4>지프 랭글러 4XE</h4>
+                                                        <em class="date">2022.09.22 ~2022.11.10</em>
+                                                    </a>
+                                                    <div class="gaolGraph">
+                                                        <div class="gaolAmount">목표 <span><em>53,000,000</em>원</span></div>
+                                                        <div class="exp_bar">
+                                                            <div class="bar">
+                                                                <p class="exp_amount"></p>
+                                                                <div class="bar_total"> 
+                                                                    <span class="bar_on" style="width: 100%;"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="exp_num"> 
+                                                                <p class="fluct_amount left"><em class="num">100</em> %</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="boxArea gaolState overdue">
+                                                    <div class="ic_group">
+                                                        <span class="lflag gray">D+10</span>
+                                                        <div class="ic_btnGroup">
+                                                            <button type="button" class="btn_delete"><span class="blind">삭제하기</span></button>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#none">
+                                                        <h4>기관초과케이스</h4>
+                                                        <em class="date">2022.09.22 ~2022.11.10</em>
+                                                    </a>
+                                                    <div class="gaolGraph">
+                                                        <div class="gaolAmount">목표 <span><em>53,000,000</em>원</span></div>
+                                                        <div class="exp_bar">
+                                                            <div class="bar">
+                                                                <p class="exp_amount"></p>
+                                                                <div class="bar_total"> 
+                                                                    <span class="bar_on" style="width: 535%;"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="exp_num"> 
+                                                                <p class="fluct_amount left"><em class="num">30</em> %</p>
+                                                                <p class="fluct_amount right"><em class="num">70</em> %</p>
+                    
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper_control">
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper_pagination"></div>
+                                            <div class="swiper-button-next"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="banner inLink">
+                                        <a href="#none" class="link_type1">
+                                            <h3 class="banner_tit">
+                                                <span class="titPoint">나의 드림카</span><br>
+                                                진짜 내 차로 만들어 보세요.
+                                            </h3>
+                                            <span class="tx">목표 세우기</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- [E] 슬라이드 배너 타입 등록후 -->
+
+                            </div>
+                            
+
+                        </div>
+                        <div class="org_wrap swiper-slide">
+                            <p class="stit">{부동산}</p>
+                        </div>
+                        
                     </div>
+                    <!--  E : 9/12 수정 -->
                 </div>
 			</div>
 
@@ -588,7 +586,7 @@ $(document).ready(function(){
 
     // Swiper point
     var swiperPoint = new Swiper('.swiper-container', {
-        initialSlide: 4, //슬라이드 시작위치
+        initialSlide: 6, //슬라이드 시작위치
         slidesPerView:1,
         observer: true,
         centeredSlides:false ,
@@ -697,45 +695,7 @@ $(document).on("click", ".btn_open_bottom_sheet", function(e){
    
 
 });
-function layer_bottomsheet(el){
-    var $el = $(el);
-    $el.append("<div class=\"dim\"></div>");
-    isDim ? $('.layer_bottomsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
-    setTimeout(function() {
-        $el.find('.layer_inner').addClass('on');
-    }, 50);
 
-    var isDim;
-    var dimIdx = $('.dim').index();
-    var thisDim = $el.find('.dim');
-    var thisLyZindex = dimIdx + 4000;
-    $('.dim').css('opacity','0');
-    thisDim.css('opacity','.7');
-    thisDim.closest('.layer_bottomsheet, .layer_popup').css('z-index', thisLyZindex);
-    // [E] multi layer 2021-08-02 추가
-
-    $el.find('.js_pop_close').click(function(){
-
-        $el.find('.layer_inner').removeClass('on');
-        setTimeout(function() {
-            isDim ? $('.layer_bottomsheet').hide() : $el.hide();
-            $('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
-            $el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
-            // [S] multi layer 2021-08-02 추가
-            if($('.dim').length == '2'){
-                $('.dim:eq(1)').css('opacity','.7');
-            }else if($('.dim').length == '1'){
-                $('.dim').css('opacity','.7');
-            }
-            // [E] multi layer 2021-08-02 추가
-        }, 200);
-
-        // [S] multi layer 2021-08-02 추가
-        eval('$focusReturn'+ [dimIdx]).focus();
-
-        return false;
-    });
-}
 // [S] 풀페이지 팝업
 $(document).on("click", ".btn_open_full_sheet", function(e){
     e.preventDefault();
@@ -745,28 +705,7 @@ $(document).on("click", ".btn_open_full_sheet", function(e){
     $('html').addClass('scroll_lock');
 	$focusReturn = $(this);
 });
-function layer_fullsheet(el){
-	var $el = $(el);
-	$el.append("<div class=\"dim\"></div>");
-	isDim ? $('.layer_fullsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
-	setTimeout(function() {
-		$el.find('.layer_inner').addClass('on');
-	}, 50);
 
-	var isDim = $el.siblings().hasClass('dim');
-
-	$el.find('.js_pop_close').click(function(){
-		$el.find('.layer_inner').removeClass('on');
-		setTimeout(function() {
-			isDim ? $('.layer_fullsheet').hide() : $el.hide();
-			$('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
-			$el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
-		}, 200);
-		$focusReturn.focus();
-
-		return false;
-	});
-}
 // [E] 풀페이지 팝업
 </script>
 </body>

@@ -58,20 +58,27 @@
 
 			<div class="asset_contents tab_certi"> <!-- /* tabs_wrap terms_wrap */ -->
 				<div class="tabs_header type2"> <!--  has_sel_all -->
+					<!--  S : 9/12 수정 -->
 					<ul class="cboth">
-						<li class="btn_sel_org tab1"><a href="#none"><span>예금·페이</span></a></li><!-- 선택시 title="선택됨" 추가 -->
-						<li class="btn_sel_org tab2"><a href="#none"><span>투자</span></a></li>
-						<li class="btn_sel_org tab3"><a href="#none"><span>연금</span></a></li>
-						<li class="btn_sel_org tab4"><a href="#none"><span>보험</span></a></li>
-						<li class="btn_sel_org tab5 on"><a href="#none"><span>자동차·부동산</span></a></li> <!-- 자동차·부동산 -->
-						<li class="btn_sel_org tab6"><a href="#none"><span>대출</span></a></li>
+						<li class="btn_sel_org tab1 "><a href="#none"><span>입출금</span></a></li><!-- 선택시 title="선택됨" 추가 -->
+                        <li class="btn_sel_org tab2 "><a href="#none"><span>예적금</span></a></li>
+						<li class="btn_sel_org tab3 "><a href="#none"><span>투자</span></a></li>
+						<li class="btn_sel_org tab4 "><a href="#none"><span>연금</span></a></li>
+						<li class="btn_sel_org tab5 "><a href="#none"><span>보험</span></a></li>
+                        <li class="btn_sel_org tab6"><a href="#none"><span>대출</span></a></li>
+						<li class="btn_sel_org tab7 "><a href="#none"><span>자동차</span></a></li>
+                        <li class="btn_sel_org tab8 on"><a href="#none"><span>부동산</span></a></li>
 					</ul>
+                    <!--  E : 9/12 수정 -->
 				</div>
 
                 <div class="swiper-container">
                     <div class="terms-slider tabs_body_wrap swiper-wrapper">
                         <div class="org_wrap swiper-slide">
-                            <p class="stit">{예금페이}</p>
+                            <p class="stit">{입출금}</p>
+                        </div>
+                        <div class="org_wrap swiper-slide">
+                            <p class="stit">{예적금}</p>
                         </div>
                         <div class="org_wrap swiper-slide">
                             <p class="stit">{투자}</p>
@@ -82,49 +89,32 @@
                         <div class="org_wrap swiper-slide">
                             <p class="stit">{보험}</p>
                         </div>
-
-                        <div class="org_wrap swiper-slide">
-                            <div class="tabInter">
-                                <!-- [S] 탭 : 1차에는 숨겨서 사용해주세요 -->
-                                <div class="asset_tab_header">
-                                    <ul class="cboth">
-                                        <li class="js_tabclickDp1"><a href="#none" title="선택됨"><span>자동차</span></a></li>
-                                        <li class="js_tabclickDp1 on"><a href="#none"><span>부동산</span></a></li><!-- 선택시 title="선택됨" 추가 -->
-                                    </ul>
-                                </div>
-                                <!-- [E] 탭 : 1차에는 숨겨서 사용해주세요 --> 
-                                <div class="asset_tab_body">
-                                    <div class="tab_cntDp1" style="display: none;">
-                                        자동차
-                                    </div>
-                                    <div class="tab_cntDp1" style="display: block;">
-                                        <div class="asGroup">
-                                            <div class="listTit"> 
-                                                <h3>내 부동산 관리</h3>
-                                                <a href="#" class="btnAdd"> <span class="bank_link">연결하기</span></a>
-                                            </div>
-                                            <a href="#" class="asLink_box">
-                                                <div class="sub_banner">
-                                                    <h3 class="sub_tit">
-                                                        내 부동산 <span class="pointLine">시세를 조회</span>하고,<br>
-                                                        <span class="pointLine">내 집 마련 플랜</span>도 세워보세요.
-                                                    </h3>
-                                                    <img src="../../img/theme/apthefin/im_subBanner_02.png" alt="부동산시세 알아보기">
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                
-                                </div>
-                            </div>
-
-                        </div>
-                     
                         <div class="org_wrap swiper-slide">
                             <p class="stit">{대출}</p>
                         </div>
-                        
-    
+                        <div class="org_wrap swiper-slide">
+                            <p class="stit">{자동차}</p>
+                        </div>
+                        <div class="org_wrap swiper-slide">
+                            <div class="asGroup">
+                                <div class="listTit"> 
+                                    <h3>내 부동산 관리</h3>
+                                    <a href="#" class="btnAdd"> <span class="bank_link">연결하기</span></a>
+                                </div>
+                                <a href="#" class="asLink_box">
+                                    <div class="sub_banner">
+                                        <h3 class="sub_tit">
+                                            내 부동산 <span class="pointLine">시세를 조회</span>하고,<br>
+                                            <span class="pointLine">내 집 마련 플랜</span>도 세워보세요.
+                                        </h3>
+                                        <img src="../../img/theme/apthefin/im_subBanner_02.png" alt="부동산시세 알아보기">
+                                    </div>
+                                </a>
+                            </div>
+                            
+
+                        </div>
+                     
                     </div>
                 </div>
               
@@ -151,7 +141,7 @@ $(document).ready(function(){
 
     // Swiper point
     var swiperPoint = new Swiper('.swiper-container', {
-        initialSlide: 4, //슬라이드 시작위치
+        initialSlide: 7, //슬라이드 시작위치
         slidesPerView:1,
         observer: true,
         centeredSlides:false ,
