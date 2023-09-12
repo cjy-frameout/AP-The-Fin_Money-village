@@ -171,3 +171,28 @@
   line-height:22px;
 
 }
+
+.btnMoveMap {
+  position: fixed;
+  bottom:20px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding:6px 15px;
+  border:1px solid #E5E5E5;
+  background:#fff;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.08);
+  border-radius: 30px;
+  left:50%;
+  transform: translateX(-50%);
+  z-index:10;
+  font-size:13px;
+  line-height:18px;
+  color:#666;
+  &:before {
+    content:"";
+    display: block;
+    @include iconSmMap();
+    margin-right:2px;
+  }
+}

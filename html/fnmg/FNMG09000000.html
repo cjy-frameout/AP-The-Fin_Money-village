@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title></title>
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="title" content="">-->
+    <meta name="description" content="">
+    <!--<meta name="keywords" content="">-->
+    <!-- The Open Graph protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+    <!-- //The Open Graph protocol -->
+    <link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/interaction.js"></script>
+    <script type="text/javascript" src="../../js/cmd.js"></script>
+</head>
+
+<body>
+<div class="wrap">
+    <!-- header -->
+    <div class="header">
+        <div class="header_inn">
+            <div class="left">
+                <a href="#none" class="btnBack"><span class="blind">Back</span></a>
+            </div>
+            <div class="center">
+                <h2 class="tit_h2">공동인증서 관리</h2>
+            </div>
+
+        </div>
+    </div>
+    <!-- //header -->
+
+    <div class="container">
+        <div class="content">
+
+            <a href="#" class="authList">
+                <p class="authList-name">홍길동</p>
+                <dl class="authList-info">
+                    <dt>발급자</dt>
+                    <dd>금융결제원</dd>
+                    <dt>구분</dt>
+                    <dd>은행/신용카드/보험(개인)</dd>
+                    <dt>만료일</dt>
+                    <dd>2023.10.12</dd>
+                </dl>
+            </a>
+
+            <a href="#" class="authList">
+                <p class="authList-name">홍길동</p>
+                <dl class="authList-info">
+                    <dt>발급자</dt>
+                    <dd>금융결제원</dd>
+                    <dt>구분</dt>
+                    <dd>은행/신용카드/보험(개인)</dd>
+                    <dt>만료일</dt>
+                    <dd>2023.10.12</dd>
+                </dl>
+            </a>
+
+            <!-- 인증서 없는경우
+            <a href="#" class="authList empty">
+                <p class="authList-name">공동인증서 가져오기</p>
+                <p class="authList-guide">PC의 공동인증서를 스마트폰으로<br>가져올 수 있습니다.</p>
+            </a>
+            -->
+
+
+
+
+            <!-- [S] 비밀번호 입력 -->
+            <div class="accSetting" style="display: none">
+                <div class="editName">
+                    <label for="name" class="itemTit">비밀번호</label>
+                    <div class="input-box items2">
+                        <div class="ipt-pass-box">
+                            <input type="password" id="name" required="required" placeholder="인증서 비밀번호 입력" value="" >
+                            <div class="password-disc-wrap" aria-hidden="true"></div>
+                        </div>
+                    </div>
+                    <p class="input-err-desc" style="display: none">비밀번호가 일치하지않습니다.</p>
+                </div>
+            </div>
+            <!-- [E] 비밀번호 입력 -->
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- [S]  알림 -->
+<div id="" class="layer_popup type2">
+    <div class="layer_position">
+        <div class="layer_inner">
+            <div class="layer_cont">
+                <div class="msg_box">
+                    <div class="msg_box">
+                        <p class="msg_alert"><span class="accNum">알림</span></p>
+                        <p class="msg_customer mgt10">
+                            비밀번호가 일치하지 않습니다.<br>
+                            다시 입력해 주세요.
+                        </p>
+                    </div>
+                </div>
+                <div class="btn_layer_wrap">
+                    <button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- [E] 알림 -->
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<script>
+    $(document).ready(function(){
+        //테스트용
+        $(".authList").on("click",function(e){
+            e.preventDefault();
+            $(this).addClass("on").siblings().removeClass("on");
+            $(".accSetting").show();
+        })
+    })
+</script>
+</html>

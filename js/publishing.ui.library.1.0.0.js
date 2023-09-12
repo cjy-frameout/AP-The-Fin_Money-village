@@ -194,22 +194,17 @@ function jsTxValReset(){
         $('.js_tx_val').each(function(){
             var textEle = $(this);
             var btnTxtValReset = textEle.siblings('.js_bt_val_reset');
-            var keyword = $(".searchKeyword");
             btnTxtValReset.hide();
             textEle.on('keyup', function(){
                 // val값 초기화
                 if(textEle.val().length === 0){
                     btnTxtValReset.hide();
-                    keyword.hide();
                 }else{
                     btnTxtValReset.show();
-                    keyword.show();
-
                 }
             });
             btnTxtValReset.on('click', function(){
                 btnTxtValReset.hide();
-                keyword.hide();
                 setTimeout(function(){
                     textEle.val('').focus();
                 }, 100);
@@ -405,7 +400,7 @@ function bsPageTypeHeight(){
 }
 // [E] 바텀시트 페이지타입 높이
 
-// [S] 컨텐츠영역 하단 패딩 = 하단 고정높이값
+// [S] 컨텐츠영역 하단 패딩 = 하단 고정높이값 0912일자 변경
 function contentsBottomPadding(){
     //컨텐츠에 버튼 고정만 있을경우
     var btnFixedHeight = $(".btn-wrap.fixed").height();

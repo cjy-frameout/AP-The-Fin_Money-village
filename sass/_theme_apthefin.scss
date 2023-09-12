@@ -17505,6 +17505,11 @@ a.filterFolding {
 			clip: rect(0, 0, 0, 0);
 			pointer-events: none;
 		}
+		&:checked + label {
+			border-color:#3e5fac;
+			color:#3e5fac;
+			font-weight: 700;
+		}
 	}
 }
 

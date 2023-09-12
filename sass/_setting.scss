@@ -123,6 +123,12 @@
   border-radius: 16px;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.08);
   margin-top:16px;
+  &.on {
+    border-color:#3e5fac;
+  }
+  &:not(:first-of-type) {
+    margin-top:20px;
+  }
   &-name {
     font-size:16px;
     line-height:24px;

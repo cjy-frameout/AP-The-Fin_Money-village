@@ -37,7 +37,7 @@
     <!-- container -->
     <div class="container">
         <div class="content">
-            <div class="desc-wrap mgt10">
+            <div class="desc-wrap mgt60"> <!-- 0912 mgt60 으로 변경 -->
                 <h3 class="cont-title-big">보유하신 자산을<br>검색 중입니다</h3>
             </div>
             <div class="bgAssSearch"></div>
@@ -48,61 +48,6 @@
 </div>
 <!-- //wrap -->
 <script>
-    $(document).ready(function(){
-        //전송요구 동의
-        $(".btAgr01").on("click",function(e){
-            e.preventDefault();
-            chkArgBtn(".btAgr01",".btAgr02",".term_02");
-        })
-        //수집이용동의
-        $(".btAgr02").on("click",function(e){
-            e.preventDefault();
-            chkArgBtn(".btAgr02",".btAgr03",".term_03");
-        });
-
-        //계속보기 버튼
-        $(".btMore").on("click",function(e){
-            e.preventDefault();
-            $('html, body').stop().animate({ scrollTop: $(document).height() - $(window).height() }, 300,function(){
-                scrollChk();
-            });
-        });
-    });
-
-    $(window).scroll(function(){
-        scrollChk();
-    });
-
-    //스크롤 체크
-    function scrollChk(){
-        var contentHeight = $(document).height(); // 페이지 내용 높이
-        var $windowTop = $(window).scrollTop();
-        var windowHeight = $(window).height() + $windowTop + 10; // 창 높이
-
-        if (contentHeight > windowHeight) {
-            //스크롤 끝이 아닐때
-        } else {
-            //스크롤 끝
-            $(".btMore").hide();
-            $(".btnBl1.-active").css('display','flex');
-            if($(".btAgr03").hasClass("-active")){
-                $(".btn_agree_cancel").show();
-            }
-        }
-    }
-
-    //버튼 이벤트
-    function chkArgBtn(tarBtn,nextBtn,contents){
-        var $tarBtn = $(tarBtn); //클릭버튼
-        var $nextBtn = $(nextBtn); //다음버튼
-        var $contents = $(contents); //다음 동의 내용
-        $tarBtn.removeClass("-active").hide();
-        $(".btMore").show();
-        $contents.show();
-        $("html,body").stop().animate({scrollTop:$contents.offset().top - 50},300,function(){
-            $nextBtn.addClass("-active");
-        });
-    }
 
 </script>
 
