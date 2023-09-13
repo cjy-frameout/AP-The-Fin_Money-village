@@ -786,7 +786,7 @@ input[type="file"], .input-box input[type="file"] {
 }
 
 .hr_div {
-	margin: 40px -20px;
+	margin: 30px -20px;
 	background-color: #F1F2F5;
 
 	&.thin_div {
@@ -3454,10 +3454,10 @@ a.btnMenu {
 		margin-top: 12px;
 	}
 }
-
+.hr_div + .asGroup { padding-top: 0; }
+.load-wrap .asGroup { padding-top:0; }
 .asGroup {
-	padding-top: 0;
-
+	padding-top: 30px;
 	+ .asGroup {
 		padding-top: 40px;
 	}
