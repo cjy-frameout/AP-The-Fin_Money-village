@@ -58,7 +58,7 @@
 
 			<div class="asset_contents tab_certi"> <!-- /* tabs_wrap terms_wrap */ -->
 				<div class="tabs_header type2"> <!--  has_sel_all -->
-					<!--  S : 9/12 수정 -->
+					<!--  S : 9/12 수정,-->
 					<ul class="cboth">
 						<li class="btn_sel_org tab1 "><a href="#none"><span>입출금</span></a></li><!-- 선택시 title="선택됨" 추가 -->
                         <li class="btn_sel_org tab2 "><a href="#none"><span>예적금</span></a></li>
@@ -69,32 +69,12 @@
 						<li class="btn_sel_org tab7 "><a href="#none"><span>자동차</span></a></li>
                         <li class="btn_sel_org tab8 on"><a href="#none"><span>부동산</span></a></li>
 					</ul>
-                    <!--  E : 9/12 수정 -->
+                    <!--  E : 9/12 수정, -->
 				</div>
 
                 <div class="swiper-container">
                     <div class="terms-slider tabs_body_wrap swiper-wrapper">
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{입출금}</p>
-                        </div>
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{예적금}</p>
-                        </div>
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{투자}</p>
-                        </div>
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{연금}</p>
-                        </div>
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{보험}</p>
-                        </div>
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{대출}</p>
-                        </div>
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{자동차}</p>
-                        </div>
+                        <!--  S : 9/13 수정,-->
                         <div class="org_wrap swiper-slide">
                             <div class="asGroup">
                                 <div class="listTit"> 
@@ -110,11 +90,20 @@
                                         <img src="../../img/theme/apthefin/im_subBanner_02.png" alt="부동산시세 알아보기">
                                     </div>
                                 </a>
+                                <div class="banner inLink">
+                                    <a href="#none" class="link_type2">
+                                        <h3 class="banner_tit">
+                                            <span class="titPoint">갖고 싶은 집이 있나요?</span><br>
+                                            내 집 마련 플랜을 세워보세요.
+                                        </h3>
+                                        <span class="tx">목표 설정하기</span>
+                                    </a>
+                                </div>
                             </div>
                             
 
                         </div>
-                     
+                        <!--  E : 9/13 수정,-->
                     </div>
                 </div>
               
@@ -127,49 +116,6 @@
 
 <script>
 $(document).ready(function(){
-    // 선택 탭
-    $(".tabInter").tabs({
-        wrapClass:".tabInter",
-        clickClass:".js_tabclickDp1",
-        showClass:".tab_cntDp1",
-        animate:false,
-        contentWidthFull:false,//effect when animate:true
-        animateBorder:["false",".tabs_header"],//show border in class .
-        fade:false,
-        speed:500
-    });
-
-    // Swiper point
-    var swiperPoint = new Swiper('.swiper-container', {
-        initialSlide: 7, //슬라이드 시작위치
-        slidesPerView:1,
-        observer: true,
-        centeredSlides:false ,
-        observeParents: true,
-        observeParents: true,
-        autoHeight : true,
-        on: {
-            slideChangeTransitionEnd: function(){
-                var slideIdx = this.activeIndex;
-                var $orgNth = slideIdx + 1;
-                $('.btn_sel_org').removeClass('on');
-                $('.tab' + $orgNth).addClass('on');
-                if ($orgNth < 3) {
-                    $('.tabs_header.type2 ul').scrollLeft(0);
-                } else if ($orgNth < 4) {
-                    $('.tabs_header.type2 ul').scrollLeft(10);
-                } else if ($orgNth < 5) {
-                    $('.tabs_header.type2 ul').scrollLeft(85);
-                } else if ($orgNth < 6) {
-                    $('.tabs_header.type2 ul').scrollLeft(90);
-                } else if ($orgNth < 7){
-                    $('.tabs_header.type2 ul').scrollLeft(150);
-                } else {
-                    $('.tabs_header.type2 ul').scrollLeft(220);
-                }
-            }
-        }
-    });     
      
     // 메뉴랑 스와이프 연동, 메뉴 중앙정렬
     $('.terms-slider .org_wrap').each(function (index, item) {

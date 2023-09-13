@@ -74,25 +74,8 @@
 				</div>
 
                 <div class="swiper-container">
-                    <!--  S : 9/12 수정 -->
+                    <!--  S : 9/12 수정, 9/13 수정(스와이퍼 제거) -->
                     <div class="terms-slider tabs_body_wrap swiper-wrapper">
-                        
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{입출금}</p>
-                        </div>
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{예적금}</p>
-                        </div>
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{투자}</p>
-                        </div>
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{연금}</p>
-                        </div>
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{보험}</p>
-                        </div>
-                        
 
                         <div class="org_wrap swiper-slide">
                             <div class="tBalance">
@@ -241,16 +224,9 @@
 
                             </div>
                         </div>
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{자동차}</p>
-                        </div>
-                        
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{부동산}</p>
-                        </div>
-    
+
                     </div>
-                    <!--  E : 9/12 수정 -->
+                    <!--  E : 9/12 수정, 9/13 수정(스와이퍼 제거 -->
                 </div>
               
 			</div>
@@ -300,37 +276,7 @@
 <!-- // layer_PP1_2_7_1_1BS (대출 툴팁) -->
 <script>
 $(document).ready(function(){
-    // Swiper point
-    var swiperPoint = new Swiper('.swiper-container', {
-        initialSlide: 5, //슬라이드 시작위치
-        slidesPerView:1,
-        observer: true,
-        centeredSlides:false ,
-        observeParents: true,
-        observeParents: true,
-        autoHeight : true,
-        on: {
-            slideChangeTransitionEnd: function(){
-                var slideIdx = this.activeIndex;
-                var $orgNth = slideIdx + 1;
-                $('.btn_sel_org').removeClass('on');
-                $('.tab' + $orgNth).addClass('on');
-                if ($orgNth < 3) {
-                    $('.tabs_header.type2 ul').scrollLeft(0);
-                } else if ($orgNth < 4) {
-                    $('.tabs_header.type2 ul').scrollLeft(10);
-                } else if ($orgNth < 5) {
-                    $('.tabs_header.type2 ul').scrollLeft(85);
-                } else if ($orgNth < 6) {
-                    $('.tabs_header.type2 ul').scrollLeft(90);
-                } else if ($orgNth < 7){
-                    $('.tabs_header.type2 ul').scrollLeft(150);
-                } else {
-                    $('.tabs_header.type2 ul').scrollLeft(220);
-                }
-            }
-        }
-    });     
+       
      
     // 메뉴랑 스와이프 연동, 메뉴 중앙정렬
     $('.terms-slider .org_wrap').each(function (index, item) {
@@ -396,45 +342,7 @@ $(document).on("click", ".btn_open_bottom_sheet", function(e){
    
 
 });
-function layer_bottomsheet(el){
-    var $el = $(el);
-    $el.append("<div class=\"dim\"></div>");
-    isDim ? $('.layer_bottomsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
-    setTimeout(function() {
-        $el.find('.layer_inner').addClass('on');
-    }, 50);
 
-    var isDim;
-    var dimIdx = $('.dim').index();
-    var thisDim = $el.find('.dim');
-    var thisLyZindex = dimIdx + 4000;
-    $('.dim').css('opacity','0');
-    thisDim.css('opacity','.7');
-    thisDim.closest('.layer_bottomsheet, .layer_popup').css('z-index', thisLyZindex);
-    // [E] multi layer 2021-08-02 추가
-
-    $el.find('.js_pop_close').click(function(){
-
-        $el.find('.layer_inner').removeClass('on');
-        setTimeout(function() {
-            isDim ? $('.layer_bottomsheet').hide() : $el.hide();
-            $('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
-            $el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
-            // [S] multi layer 2021-08-02 추가
-            if($('.dim').length == '2'){
-                $('.dim:eq(1)').css('opacity','.7');
-            }else if($('.dim').length == '1'){
-                $('.dim').css('opacity','.7');
-            }
-            // [E] multi layer 2021-08-02 추가
-        }, 200);
-
-        // [S] multi layer 2021-08-02 추가
-        eval('$focusReturn'+ [dimIdx]).focus();
-
-        return false;
-    });
-}
 </script>
 </body>
 </html>

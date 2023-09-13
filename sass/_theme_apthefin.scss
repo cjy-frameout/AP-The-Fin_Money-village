@@ -786,7 +786,7 @@ input[type="file"], .input-box input[type="file"] {
 }
 
 .hr_div {
-	margin: 40px -20px;
+	margin: 30px -20px;
 	background-color: #F1F2F5;
 
 	&.thin_div {
@@ -1550,7 +1550,7 @@ a.btnMenu {
 }
 
 .pointLine {
-	box-shadow: rgba(93, 207, 210, 0.25) 0px -10px 0px inset;
+	box-shadow: #FEECF2 0px -10px 0px inset;
 }
 
 .pointLine2 {
@@ -3454,10 +3454,10 @@ a.btnMenu {
 		margin-top: 12px;
 	}
 }
-
+.hr_div + .asGroup { padding-top: 0; }
+.load-wrap .asGroup { padding-top:0; }
 .asGroup {
-	padding-top: 0;
-
+	padding-top: 30px;
 	+ .asGroup {
 		padding-top: 40px;
 	}
@@ -14614,7 +14614,7 @@ a.btnMenu {
 
 		&.link_type2 {
 			.banner_tit .titPoint {
-				color: #5DCFD2;
+				color: #52AFB1;
 			}
 
 			.tx {
@@ -16522,9 +16522,9 @@ a.filterFolding {
 		padding: 15px 20px 20px;
 	}
 
-	.listTit {
-		margin-top: 30px;
-	}
+	// .listTit {
+	// 	margin-top: 30px;
+	// }
 
 	.type_goal {
 		position: relative;
@@ -16858,7 +16858,7 @@ a.filterFolding {
 	}
 
 	.cont_tit_wrap {
-		margin: 30px 0;
+		margin: 30px 0 50px;
 
 		.cont_tit {
 			font-size: 22px;
@@ -16868,7 +16868,7 @@ a.filterFolding {
 		}
 
 		.tx {
-			margin-top: 20px;
+			margin-top: 10px;
 			font-size: 14px;
 			color: #666;
 			font-weight: 400;
@@ -16892,7 +16892,7 @@ a.filterFolding {
 				display: inline-block;
 				width: 4px;
 				height: 4px;
-				background-color: #3E5FAC;
+				background-color: #BB2649;
 				border-radius: 4px;
 				vertical-align: top;
 				margin: 4px 0 0 4px;
@@ -17180,7 +17180,7 @@ a.filterFolding {
 	}
 
 	label {
-		padding-left: 80px;
+		padding-left: 40px;
 
 		span.chkName {
 			color: #666666;
@@ -17190,7 +17190,7 @@ a.filterFolding {
 		}
 
 		.cdChkTxt {
-			padding-left: 80px;
+			padding-left: 40px;
 			font-size: 15px;
 			font-weight: 500;
 			line-height: 23px;
@@ -17206,7 +17206,7 @@ a.filterFolding {
 
 		input {
 			&[type=checkbox], &[type=radio], &[type=checkbox] + i, &[type=radio] + i {
-				left: 5px;
+				right: 5px;
 			}
 		}
 
@@ -17215,7 +17215,7 @@ a.filterFolding {
 			height: 32px;
 			position: absolute;
 			top: 50%;
-			left: 35px;
+			left: 0;
 			margin-top: -16px;
 		}
 	}
@@ -17560,9 +17560,21 @@ a.filterFolding {
 		}
 	}
 
-	.msgResult {
-		padding: 40px 0 70px;
-		margin: 0;
+	
+}
+.msgResult {
+	padding: 40px 0 70px;
+	margin: 0;
+	p:before {
+		background-image: url(../img/theme/apthefin/icon/ic_tri_caution.png);
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+		content: "";
+		display: block;
+		height: 32px;
+		margin: 0 auto 20px;
+		width: 32px;
 	}
 }
 
