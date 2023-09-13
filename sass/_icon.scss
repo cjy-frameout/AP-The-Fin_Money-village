@@ -32,3 +32,31 @@
   @include icon();
   background-image:url("../img/theme/apthefin/icon/ic_sm_map.png");
 }
+
+@mixin iconFav {
+  width:24px;
+  height:24px;
+  @include icon();
+  background-image: url("../img/theme/apthefin/icon/ic_fav.png");
+}
+
+@mixin iconFav_on {
+  width:24px;
+  height:24px;
+  @include icon();
+  background-image: url("../img/theme/apthefin/icon/ic_fav_on.png");
+}
+
+@mixin iconEdit {
+  width:16px;
+  height:16px;
+  @include icon();
+  background-image: url('../img/theme/apthefin/icon/ic_edit_square.png');
+}
+
+@mixin iconTrash {
+  width:16px;
+  height:19px;
+  @include icon();
+  background-image:url('../img/theme/apthefin/icon/ic_trash.png');
+}

@@ -29,4 +29,18 @@
     background:#ccc;
     margin:20px auto 0;
   }
+  .slider_container {
+    .slick-dots li button {
+      width:6px;
+      height:6px;
+      border-radius:50%;
+    }
+    .slick-dots li.slick-active button {
+      background-color:#434655;
+    }
+  }
+}
+.introBtnLast {
+  bottom:41px;
+  margin:0 !important;
 }

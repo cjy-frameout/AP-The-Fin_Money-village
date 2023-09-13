@@ -1,5 +1,57 @@
 @charset "UTF-8";
 
+.tabs {
+  &-header {
+    border-bottom:1px solid #E5E5E5;
+    display:flex;
+    width:100%;
+  }
+  &-nav {
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:14px;
+    line-height:22px;
+    color:#666;
+    text-align:center;
+    height:43px;
+    position: relative;
+    &.on {
+      color:#3e5fac;
+      font-weight: 700;
+      &:after {
+        content: "";
+        display: block;
+        width:100%;
+        left:0;
+        bottom:-1px;
+        border-bottom:2px solid #3e5fac;
+        position: absolute;
+      }
+    }
+  }
+  &-item {
+    display:none;
+    &.on {display:block;}
+  }
+  &-content {
+    margin-top:10px;
+  }
+  &.tab-aptPrice {
+    margin:0 -20px;
+    overflow-y:auto;
+    height:calc(100% - 94px);
+    padding-bottom:105px;
+    .tabs-content {
+      padding:0 20px;
+      .tabs-content {
+        padding-left:0;padding-right:0;
+      }
+    }
+  }
+}
+
 //아파트
 
 .aptInfo {
@@ -194,5 +246,468 @@
     display: block;
     @include iconSmMap();
     margin-right:2px;
+  }
+}
+
+.mapArea {
+  height:calc(100vh - 50px);
+  margin:0 -20px -20px;
+  position: relative;
+  overflow:hidden;
+  &-map {
+    width:100%;height:100%;overflow:hidden;
+    background: #f3f3f3;
+  }
+
+}
+
+.mapFilter {
+  position: absolute;
+  left:0;
+  top:20px;
+  width:100%;
+  &-inner {
+    width:100%;
+    height:38px;
+    overflow-x:auto;
+    display:flex;
+    gap:0 6px;
+    align-items: center;
+    padding:0 80px 0 20px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  label {
+    display:block;
+    span {
+      display: block;
+      padding:6px 10px;
+      border:1px solid #E5E5E5;
+      border-radius: 6px;
+      font-size:14px;
+      line-height:22px;
+      color:#666;
+      white-space: nowrap;
+      flex-shrink: 0;
+      background:#fff;
+    }
+  }
+  input:checked+span {
+    border-color:#3e5fac;
+    color:#3e5fac;
+    font-weight:700;
+  }
+  &-all {
+    position: absolute;
+    right:20px;
+    top:20px;
+    border-radius: 50%;
+    width:48px;
+    height:45px;
+    background:#fff;
+    box-shadow: 2px 8px 10px 0px rgba(105, 105, 105, 0.30);
+    z-index:20;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    .btnFilter {@include txtHidden}
+  }
+}
+
+.priceTab {
+  position: absolute;
+  top:82px;
+  left:20px;
+  width:calc(100% - 40px);
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.08);
+  border:1px solid #E5E5E5;
+  padding:10px;
+  background:#fff;
+  border-radius: 6px;
+  &-header {
+    border-bottom:1px solid #E5E5E5;
+    display:flex;
+    width:100%;
+    button {
+      flex:1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size:14px;
+      line-height:22px;
+      color:#666;
+      text-align:center;
+      height:43px;
+      position: relative;
+      &.on {
+        color:#3e5fac;
+        font-weight: 700;
+        &:after {
+          content: "";
+          display: block;
+          width:100%;
+          left:0;
+          bottom:-1px;
+          border-bottom:2px solid #3e5fac;
+          position: absolute;
+        }
+      }
+    }
+  }
+  &-item {
+    flex-wrap: wrap;
+    gap:10px 6px;
+    display:none;
+    &.on {display:flex}
+    &.arr4 {
+      label {
+        width:calc(25% - 5px);
+      }
+    }
+    label {
+      display: block;
+      width:calc(20% - 5px);
+      span {
+        display: block;
+        padding:6px;
+        border:1px solid #E5E5E5;
+        border-radius: 6px;
+        font-size:14px;
+        line-height:22px;
+        color:#666;
+        white-space: nowrap;
+        flex-shrink: 0;
+        background:#fff;
+        text-align:center;
+      }
+    }
+    input:checked+span {
+      border-color:#3e5fac;
+      color:#3e5fac;
+      font-weight:700;
+    }
+  }
+  &-content {
+    margin-top:10px;
+  }
+}
+
+
+
+.mapPin {
+  position: absolute;
+  display: block;
+  min-width:58px;
+  color:#fff;
+  text-align:center;
+  &-header {
+    width:100%;
+    height:18px;
+    font-size:10px;
+    font-weight:500;
+    line-height:14px;
+    color:#747687;
+    background:#fff;
+    border:1px solid #747687;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    border-radius: 6px 6px 0 0;
+  }
+  &-content {
+    background:#747687;
+    border-radius: 0 0 6px 6px;
+  }
+  &-price {
+    font-size:14px;
+    font-weight:700;
+    line-height:22px;
+  }
+  &-size {
+    color:#c1cad7;
+    font-size:10px;
+    font-weight:500;
+    line-height:14px;
+    position: relative;
+    top:-2px;
+  }
+  &:after {
+    content:"";
+    display:block;
+    position: absolute;
+    left:calc(50% - 10px);
+    border-top: 10px solid #747687;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    bottom:-19px;
+  }
+  &.on {
+    &:after {
+      border-top-color:#BB2649;
+    }
+    .mapPin {
+      &-header {color:#BB2649;border-color:#BB2649;}
+      &-content {background:#BB2649}
+      &-size {color:rgba(254, 236, 242, 0.70);}
+    }
+
+  }
+}
+
+
+.aptInfoPop {
+  padding:30px 20px;
+  position: fixed;
+  left:0;
+  top:0;
+  width:100%;
+  background:#fff;
+  border-top:1px solid #E5E5E5;
+  transform: translateY(100vh);
+  transition: transform .3s;
+  &.half {
+    transform: translateY(calc(100vh - 200px));
+  }
+  &-fav {
+    position: absolute;
+    right:0;
+    top:2px;
+    display:none;
+    span {
+      @include txtHidden;
+      &:after {
+        content:"";
+        display: block;
+        @include iconFav;
+      }
+    }
+    input:checked ~ span:after {
+      @include iconFav_on;
+    }
+  }
+  &-type {
+    position: relative;
+    display: flex;
+    width:100%;
+    height:24px;
+    align-items: center;
+    .flagArea {margin:0}
+    &:after {
+      content:"";
+      @include iconArrowDown();
+      display: block;
+      position: absolute;
+      right:0;
+      transform: rotate(180deg);
+    }
+  }
+  &-tit {
+    font-size:18px;
+    font-weight:700;
+    line-height:26px;
+    color:#333;
+    margin-top:5px;
+    position: relative;
+    padding-right:40px;
+  }
+  &-detail {
+    margin-top:10px;
+    padding-top:10px;
+    border-top:1px solid #E5E5E5;
+    position:relative;
+    li {
+      display: block;
+      font-size:14px;
+      line-height:22px;
+      color:#666;
+      &:not(:first-of-type) {
+        margin-top:4px;
+      }
+    }
+  }
+  &-sizeType {
+    position: absolute;
+    right:0;
+    top:10px;
+    display:none;
+    input:checked+label {
+      display:none;
+    }
+    label {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      font-size:13px;
+      padding:6px 14px;
+      border:1px solid #E5E5E5;
+      border-radius: 30px;
+      color:#666;
+      &:before {
+        content: "";
+        display:block;
+        width:12px;
+        height:12px;
+        background:url('../img/theme/apthefin/bt_refresh2.png') no-repeat 0 0;
+        background-size:cover;
+        margin-right:2px;
+      }
+    }
+    span {@include txtHide}
+    .meter:after {content:"㎡"}
+    .pyeone:after {content:"평"}
+  }
+  &.open {
+    transform: translateY(49px);
+    z-index:100;
+    height:calc(100vh - 50px);
+    //overflow-y:auto;
+    padding-bottom:105px;
+    .aptInfoPop {
+      &-type:after {transform: rotate(0)}
+      &-sizeType,
+      &-fav {display:block}
+    }
+  }
+}
+
+.aptSection {
+  margin-top:30px;
+  padding-top:30px;
+  border-top:1px solid #E5E5E5;
+  .subTit {
+    font-size:16px;
+    font-weight:700;
+    line-height:24px;
+    color:#333;
+  }
+}
+
+.table-price {
+  border:1px solid #E5E5E5;
+  color:#666;
+  width:100%;
+  td,th {
+    padding:12px 9px;
+    border-left:1px solid #E5E5E5;
+    height:40px;
+    font-size:13px;
+    line-height:18px;
+    text-align:center;
+    border-bottom:1px solid #E5E5E5;
+  }
+  thead {
+    th {
+      background:#F1F2F5;
+      font-weight:normal;
+    }
+  }
+  tbody {
+    tr {
+      &:first-of-type td:nth-child(4) {text-align:right}
+      &:not(:first-of-type) {
+        td:nth-child(3) {text-align:right}
+      }
+    }
+  }
+}
+
+.btnFolding.hasBorder {
+  height:38px;
+  padding-bottom:10px;
+  border-bottom:1px solid #E5E5E5;
+}
+
+.allFilter {
+  &-tit {
+    font-size:15px;
+    font-weight: 700;
+    line-height:22px;
+  }
+  &-list {
+    margin-top:10px;
+    display:flex;
+    width:100%;
+    gap:6px;
+    label,span {display:block}
+    label,p {
+      width:100%;
+    }
+    span,p {
+      padding:6px 0;
+      border:1px solid #E5E5E5;
+      border-radius: 6px;
+      font-size:13px;
+      color:#666;
+      line-height:18px;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    p {border:none}
+    input:checked+span {
+      border-color:#3e5fac;
+      color:#3e5fac;
+      font-weight:700;
+    }
+    &.line-3 {
+      flex-wrap: wrap;
+      label {
+        width:calc(33.3333333% - 5px);
+      }
+    }
+    &.line-4 {
+      flex-wrap: wrap;
+      label {
+        width:calc(25% - 5px);
+      }
+    }
+  }
+}
+
+.aptFavEdit {
+  &:after {display:none}
+  .btnEdit {
+    font-size:14px;
+    line-height:22px;
+    color:#999;
+    position: absolute;
+    right:0;
+    display: flex;
+    align-items: center;
+    &:before {
+      content:"";
+      @include iconEdit;
+      display:inline-block;
+      margin-right:3px;
+    }
+  }
+  .btnDel {
+    position: absolute;
+    right:0;
+    font-size:14px;
+    line-height:22px;
+    color:#999;
+    display: none;
+  }
+}
+
+.aptFavList {
+  .linking {
+    pointer-events: none;
+    .assNum {display:none}
+  }
+  &.editOn {
+    .astBox .expectPay .expectInfo span.assNum:after {
+      @include iconTrash();
+    }
+    .linking {
+      pointer-events: auto;
+      .assNum {
+        display: block;
+      }
+    }
   }
 }

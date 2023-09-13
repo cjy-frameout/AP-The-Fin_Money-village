@@ -41,17 +41,17 @@
 			<section class="wrap_slider intro">
 				<div class="slider_container">
 					<div class="slider intro-item">
-						<h2 class="intro-tit">FEED</h2>
+						<h2 class="intro-tit">피드</h2>
 						<p class="intro-dec">소중한 사람들과 금융 콘텐츠에<br>더욱 가까이 다가갈 수 있는<br>소통의 공간</p>
 						<div class="intro-img"></div>
 					</div>
 					<div class="slider intro-item">
-						<h2 class="intro-tit">Fin Profile</h2>
+						<h2 class="intro-tit">프로필</h2>
 						<p class="intro-dec">기본 프로필 자산관리 외에도<br>내 프로필을 여러 개 만들어<br>자산도 멀티로 관리</p>
 						<div class="intro-img"></div>
 					</div>
 					<div class="slider intro-item">
-						<h2 class="intro-tit">아파트 한눈에</h2>
+						<h2 class="intro-tit">아파트</h2>
 						<p class="intro-dec">다양한 플랫폼에서 수집한<br>아파트 가격, 생활 정보는 물론<br>매물 정보까지 한눈에</p>
 						<div class="intro-img"></div>
 					</div>
@@ -72,12 +72,13 @@
 			</section>
 
 
-			<div class="fix_bottom">
+			<div class="fix_bottom not_dock">
 				<!-- btn_wrap -->
 				<div class="btn_wrap">
 					<div class="btnGroup btnSeWrap type_col">
 						<p class="btnSe"><a href="#none" class="btnBl1">다음</a></p>
 						<p class="tac btnUnderWrap"><a href="#none" class="btnUnder">건너뛰기</a></p>
+						<p class="introBtnLast" style="display:none"><a href="#none" class="btnBl1">시작하기</a></p>
 					</div>
 				</div>
 				<!-- //btn_wrap -->
@@ -92,10 +93,25 @@
 
 <script type="text/javascript">
 	$(document).ready(function(){
-
-		$('.intro .slider_container').slick({
-		arrows: false,
-		infinite: false,
+		var $slider = $('.intro .slider_container');
+		$slider.slick({
+			arrows: false,
+			infinite: false,
+			dots:true,
+		});
+		$(".btnSe .btnBl1").on("click",function(){
+			$slider.slick('slickNext');
+		});
+		$slider.on('afterChange', function(event, slick, currentSlide) {
+			var slider = $slider.slick('getSlick');
+			var slideCount = slider.slideCount;
+			if (currentSlide === slideCount - 1) {
+				$(".btnSe , .tac").hide();
+				$(".introBtnLast").show();
+			} else {
+				$(".btnSe , .tac").show();
+				$(".introBtnLast").hide();
+			}
 		});
 
 	})

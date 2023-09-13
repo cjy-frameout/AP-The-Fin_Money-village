@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title></title>
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="title" content="">-->
+    <meta name="description" content="">
+    <!--<meta name="keywords" content="">-->
+    <!-- The Open Graph protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+    <!-- //The Open Graph protocol -->
+    <link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/cmd.js"></script>
+    <script type="text/javascript" src="../../js/interaction.js"></script>
+
+    <!-- [S] chart -->
+    <script src="../../js/highchart/highcharts.js"></script>
+    <script src="../../js/highchart/modules/exporting.js"></script>
+    <script src="../../js/highchart/modules/export-data.js"></script>
+    <script src="../../js/highchart/modules/accessibility.js"></script>
+    <!-- [E] chart -->
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+
+    <!-- header -->
+    <div class="header">
+        <div class="header_inn">
+            <div class="left">
+                <a href="#none" class="btnBack"><span class="blind">Back</span></a>
+            </div>
+            <div class="center">
+                <h2 class="tit_h2">아파트 찾기</h2>
+            </div>
+
+        </div>
+    </div>
+    <!-- //header -->
+
+    <!-- container -->
+    <div class="container">
+        <div class="content">
+            <div class="mapArea">
+                <div class="mapArea-map">지도영역</div>
+
+                <!-- 핀 -->
+                <div class="mapPin" style="left:100px;top:400px">
+                    <p class="mapPin-header">2023년</p>
+                    <div class="mapPin-content">
+                        <p class="mapPin-price">1.0억</p>
+                        <p class="mapPin-size">155㎡</p>
+                    </div>
+                </div>
+                <!-- 핀 active -->
+                <div class="mapPin on" style="left:200px;top:400px">
+                    <p class="mapPin-header">2023년</p>
+                    <div class="mapPin-content">
+                        <p class="mapPin-price">99.9억</p>
+                        <p class="mapPin-size">155㎡</p>
+                    </div>
+                </div>
+
+                <button type="button" class="mapFilter-all"><span class="btnFilter">필터전체보기</span></button>
+
+                <nav class="mapFilter">
+                    <div class="mapFilter-inner">
+                        <label><input type="radio" name="radio001" checked="checked" hidden><span>매매</span></label>
+                        <label><input type="radio" name="radio001" hidden><span>가격</span></label>
+                        <label><input type="radio" name="radio001" hidden><span>면적</span></label>
+                        <label><input type="radio" name="radio001" hidden><span>준공연도</span></label>
+                        <label><input type="radio" name="radio001" hidden><span>방,욕실수</span></label>
+                        <label><input type="radio" name="radio001" hidden><span>세대수</span></label>
+                    </div>
+                </nav>
+
+                <section class="tabs priceTab">
+                    <nav class="priceTab-header">
+                        <button type="button" class="tabs-nav on" data-tab="tab001">매매가</button>
+                        <button type="button" class="tabs-nav" data-tab="tab002">보증금</button>
+                        <button type="button" class="tabs-nav" data-tab="tab003">월세</button>
+                    </nav>
+                    <div class="tabs-content priceTab-content">
+                        <!-- 매매가 -->
+                        <div class="tabs-item priceTab-item on" data-tabCon="tab001">
+                            <label><input type="radio" name="radio010" hidden><span>전채</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>1억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>2억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>3억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>4억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>5억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>7억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>10억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>12억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>15억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>17억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>20억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>25억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>30억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>30억~</span></label>
+                        </div>
+                        <!-- 보증금 -->
+                        <div class="tabs-item priceTab-item arr4" data-tabCon="tab002">
+                            <label><input type="radio" name="radio010" hidden><span>전채</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>1천만원</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>2천만원</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>3천만원</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>5천만원</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>7천만원</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>1억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>2억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>3억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>5억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>7억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>10억</span></label>
+                        </div>
+                        <!-- 월세 -->
+                        <div class="tabs-item priceTab-item arr4" data-tabCon="tab003">
+                            <label><input type="radio" name="radio010" hidden><span>전채</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>30만원</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>40만원</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>50만원</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>60만원</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>70만원</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>80만원</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>90만원</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>100만원</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>120만원</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>150만원</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>200만원</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>300만원</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>500만원</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>500만원~</span></label>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- [S] 아파트 정보 -->
+                <section class="aptInfoPop half"> <!-- half 아래쪽 활성화, open 전체팝업 클래스없으면 숨김처리 -->
+
+                    <div class="touchArea">
+                        <button type="button" class="aptInfoPop-type">
+                            <div class="flagArea">
+                                <span class="sq_flag self">자가</span>
+                                <!--<span class="sq_flag apt">아파트</span>
+                                <span class="sq_flag lease">전세</span>
+                                <span class="sq_flag officetels">오피스텔</span>
+                                <span class="sq_flag monthly">월세</span>
+                                <span class="sq_flag villa">주상복합</span>-->
+                            </div>
+                        </button>
+                        <h3 class="aptInfoPop-tit">
+                            광교힐스테이트레이크
+                            <label class="aptInfoPop-fav">
+                                <input type="checkbox" hidden>
+                                <span>즐겨찾기</span>
+                            </label>
+                        </h3>
+                        <div class="aptInfoPop-detail">
+                            <ul>
+                                <li>599세대 Ι 15.09(9년차)</li>
+                                <li>155.30~276.06㎡</li>
+                                <li>수원시 영통구 센트럴파크로 33</li>
+                            </ul>
+                            <div class="aptInfoPop-sizeType">
+                                <input type="radio" name="type0001" id="type0001" hidden checked>
+                                <label for="type0001" class="meter"><span>평수로 보기</span></label>
+                                <input type="radio" name="type0001" id="type0002" hidden>
+                                <label for="type0002" class="pyeone"><span>제곱미터로 보기</span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hr_div mgb0"></div>
+
+                    <div class="tabs tab-aptPrice">
+                        <nav class="tabs-header">
+                            <button type="button" class="tabs-nav on" data-tab="tab021">시세</button>
+                            <button type="button" class="tabs-nav" data-tab="tab022">평형</button>
+                            <button type="button" class="tabs-nav" data-tab="tab023">단지</button>
+                        </nav>
+                        <div class="tabs-content mgt30">
+                            <!-- [S] 시세 -->
+                            <div class="tabs-item on" data-tabCon="tab021">
+
+
+
+                                <!-- [S] 시세정보 -->
+                                <div class="marketBox">
+                                    <p class="smallTit">시세 정보 <span class="sub_title">(2023.08.25 업데이트 Ι KB부동산 제공)</span></p>
+                                    <ul class="market_list">
+                                        <li class="list_tit">
+                                            <span class="itemTit">
+                                                <span class="flag self">매매</span>
+                                                155B㎡
+                                            </span>
+                                            <span class="itemData"><em>6억 9,000만</em>원</span>
+                                        </li>
+                                        <li>
+                                            <span class="itemTit">상위 평균</span>
+                                            <span class="itemData"><em>7억 9,000만</em>원</span>
+                                        </li>
+                                        <li>
+                                            <span class="itemTit">하위 평균</span>
+                                            <span class="itemData"><em>5억 9,000만</em>원</span>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="market_list">
+                                        <li class="list_tit">
+                                            <span class="itemTit">
+                                                <span class="flag lease">전세</span>
+                                                155B㎡
+                                            </span>
+                                            <span class="itemData"><em>6억 9,000만</em>원</span>
+                                        </li>
+                                        <li>
+                                            <span class="itemTit">상위 평균</span>
+                                            <span class="itemData"><em>7억 9,000만</em>원</span>
+                                        </li>
+                                        <li>
+                                            <span class="itemTit">하위 평균</span>
+                                            <span class="itemData"><em>5억 9,000만</em>원</span>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="market_list">
+                                        <li class="list_tit">
+                                            <span class="itemTit">
+                                                <span class="flag monthly">월세</span>
+                                                155B㎡
+                                            </span>
+                                            <span class="itemData"><em>6억 9,000만</em>원</span>
+                                        </li>
+                                        <li>
+                                            <span class="itemTit">상위 평균</span>
+                                            <span class="itemData"><em>7억 9,000만</em>원</span>
+                                        </li>
+                                        <li>
+                                            <span class="itemTit">하위 평균</span>
+                                            <span class="itemData"><em>5억 9,000만</em>원</span>
+                                        </li>
+                                    </ul>
+
+
+                                </div>
+                                <!-- [E] 시세정보 -->
+                                <!-- [S] 그래프영역 -->
+                                <div class="wrap_chart_area">
+                                    <div class="wrap_chart type_line">
+                                        <h3 class="chart_legend">(단위 : 만원)</h3>
+                                        <!-- [S] 차트 라인 타입 -->
+                                        <figure class="highcharts-figure" aria-hidden="true">
+                                            <div id="line_con" class="line_con"></div>
+                                        </figure>
+                                        <!-- [E] 차트 라인 타입 -->
+                                    </div>
+                                </div>
+                                <!-- [E] 그래프영역 -->
+
+                                <!-- [S] 실거래가 -->
+                                <div class="aptSection">
+                                    <div class="subTit">실거래가</div>
+                                    <div class="tabs">
+                                        <nav class="tabs-header">
+                                            <button type="button" class="tabs-nav on" data-tab="tab031">전체</button>
+                                            <button type="button" class="tabs-nav" data-tab="tab032">매매</button>
+                                            <button type="button" class="tabs-nav" data-tab="tab033">전/월세</button>
+                                        </nav>
+                                        <div class="tabs-content">
+                                            <!-- [S] 실거래가 전체 -->
+                                            <div class="tabs-item on" data-tabCon="tab031">
+                                                <table class="table-price">
+                                                    <caption>실거래가 전체내용</caption>
+                                                    <colgroup>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col style="width:30%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="row" colspan="2">계약일</th>
+                                                            <th scope="row">거래</th>
+                                                            <th scope="row">가격</th>
+                                                            <th scope="row">층</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td rowspan="5">2023</td>
+                                                            <td>08.31</td>
+                                                            <td>전세</td>
+                                                            <td>4억3,000</td>
+                                                            <td>5층</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>08.31</td>
+                                                            <td>전세</td>
+                                                            <td>4억3,000</td>
+                                                            <td>5층</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>08.31</td>
+                                                            <td>전세</td>
+                                                            <td>4억3,000</td>
+                                                            <td>5층</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>08.31</td>
+                                                            <td>전세</td>
+                                                            <td>4억3,000</td>
+                                                            <td>5층</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>08.31</td>
+                                                            <td>전세</td>
+                                                            <td>4억3,000</td>
+                                                            <td>5층</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <a href="#none" class="btnFolding hasBorder mgt15" aria-expanded="false">더보기</a>
+                                            </div>
+                                            <!-- [E] 실거래가 전체 -->
+                                            <!-- [S] 실거래가 매매 -->
+                                            <div class="tabs-item" data-tabCon="tab032">
+                                                <table class="table-price">
+                                                    <caption>실거래가 매매</caption>
+                                                    <colgroup>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col style="width:30%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <thead>
+                                                    <tr>
+                                                        <th scope="row" colspan="2">계약일</th>
+                                                        <th scope="row">거래</th>
+                                                        <th scope="row">가격</th>
+                                                        <th scope="row">층</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td rowspan="5">2023</td>
+                                                        <td>08.31</td>
+                                                        <td>전세</td>
+                                                        <td>4억3,000</td>
+                                                        <td>5층</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>08.31</td>
+                                                        <td>전세</td>
+                                                        <td>4억3,000</td>
+                                                        <td>5층</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>08.31</td>
+                                                        <td>전세</td>
+                                                        <td>4억3,000</td>
+                                                        <td>5층</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>08.31</td>
+                                                        <td>전세</td>
+                                                        <td>4억3,000</td>
+                                                        <td>5층</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>08.31</td>
+                                                        <td>전세</td>
+                                                        <td>4억3,000</td>
+                                                        <td>5층</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- [E] 실거래가 매매 -->
+                                            <!-- [S] 실거래가 전/월세 -->
+                                            <div class="tabs-item" data-tabCon="tab033">
+                                                <table class="table-price">
+                                                    <caption>실거래가 전/월세 내용</caption>
+                                                    <colgroup>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col style="width:30%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <thead>
+                                                    <tr>
+                                                        <th scope="row" colspan="2">계약일</th>
+                                                        <th scope="row">거래</th>
+                                                        <th scope="row">가격</th>
+                                                        <th scope="row">층</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td rowspan="5">2023</td>
+                                                        <td>08.31</td>
+                                                        <td>전세</td>
+                                                        <td>4억3,000</td>
+                                                        <td>5층</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>08.31</td>
+                                                        <td>전세</td>
+                                                        <td>4억3,000</td>
+                                                        <td>5층</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>08.31</td>
+                                                        <td>전세</td>
+                                                        <td>4억3,000</td>
+                                                        <td>5층</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>08.31</td>
+                                                        <td>전세</td>
+                                                        <td>4억3,000</td>
+                                                        <td>5층</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>08.31</td>
+                                                        <td>전세</td>
+                                                        <td>4억3,000</td>
+                                                        <td>5층</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- [E] 실거래가 전/월세 -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- [E] 실거래가 -->
+
+                            </div>
+                            <!-- [E] 시세 -->
+                            <!-- [S] 평형 -->
+                            <div class="tabs-item" data-tabCon="tab022">
+                                <div class="marketBox">
+                                    <p class="smallTit">평형 정보</p>
+                                    <ul class="market_list">
+                                        <li class="list_tit">
+                                            <span class="itemTit">155B㎡</span>
+                                        </li>
+                                        <li>
+                                            <span class="itemTit">계약/전용</span>
+                                            <span class="itemData">155B㎡/84.68㎡</span>
+                                        </li>
+                                        <li>
+                                            <span class="itemTit">방/욕실</span>
+                                            <span class="itemData">3개/2개</span>
+                                        </li>
+                                        <li>
+                                            <span class="itemTit">전용률</span>
+                                            <span class="itemData">70.26%</span>
+                                        </li>
+                                    </ul>
+                                    <ul class="market_list">
+                                        <li class="list_tit">
+                                            <span class="itemTit">155B㎡</span>
+                                        </li>
+                                        <li>
+                                            <span class="itemTit">계약/전용</span>
+                                            <span class="itemData">155B㎡/84.68㎡</span>
+                                        </li>
+                                        <li>
+                                            <span class="itemTit">방/욕실</span>
+                                            <span class="itemData">3개/2개</span>
+                                        </li>
+                                        <li>
+                                            <span class="itemTit">전용률</span>
+                                            <span class="itemData">70.26%</span>
+                                        </li>
+                                    </ul>
+                                    <ul class="market_list">
+                                        <li class="list_tit">
+                                            <span class="itemTit">155B㎡</span>
+                                        </li>
+                                        <li>
+                                            <span class="itemTit">계약/전용</span>
+                                            <span class="itemData">155B㎡/84.68㎡</span>
+                                        </li>
+                                        <li>
+                                            <span class="itemTit">방/욕실</span>
+                                            <span class="itemData">3개/2개</span>
+                                        </li>
+                                        <li>
+                                            <span class="itemTit">전용률</span>
+                                            <span class="itemData">70.26%</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <!-- [E] 평형 -->
+                            <!-- [S] 단지 -->
+                            <div class="tabs-item" data-tabCon="tab023">
+                                <ul class="fDetail_list estate">
+                                    <li class="state_tit">
+                                        <span>단지 정보</span>
+                                    </li>
+                                    <li>
+                                        <span class="itemTit">사용승인일</span>
+                                        <span class="itemData">2015.09.14(9년차)</span>
+                                    </li>
+                                    <li>
+                                        <span class="itemTit">주소</span>
+                                        <span class="itemData">서울시 송파구 신천동17 1011</span>
+                                    </li>
+                                    <li>
+                                        <span class="itemTit">세대수</span>
+                                        <span class="itemData">000세대(총0개동)</span>
+                                    </li>
+                                    <li>
+                                        <span class="itemTit">총 주차대수</span>
+                                        <span class="itemData">총00대/세대당0.00대</span>
+                                    </li>
+                                    <li>
+                                        <span class="itemTit">저/최고층</span>
+                                        <span class="itemData">00층/00층</span>
+                                    </li>
+                                    <li>
+                                        <span class="itemTit">현관구조</span>
+                                        <span class="itemData">텍스트</span>
+                                    </li>
+                                    <li>
+                                        <span class="itemTit">난방</span>
+                                        <span class="itemData">텍스트</span>
+                                    </li>
+                                    <li>
+                                        <span class="itemTit">용적률</span>
+                                        <span class="itemData">0%</span>
+                                    </li>
+                                    <li>
+                                        <span class="itemTit">건폐율</span>
+                                        <span class="itemData">0%</span>
+                                    </li>
+                                    <li>
+                                        <span class="itemTit">건설사</span>
+                                        <span class="itemData">현대건설(주)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- [E] 단지 -->
+                        </div>
+                    </div>
+                </section>
+                <div class="fix_bottom">
+                    <div class="btn_wrap">
+                        <div class="btnGroup type2">
+                            <p><a href="#none" class="btnBl1" role="button">지도로 보기</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- [E] 아파트 정보 -->
+            </div>
+
+        </div>
+
+    </div>
+    <!-- //container -->
+
+</div>
+<!-- //wrap -->
+
+
+<!-- [S] 선호 아파트로 등록-->
+<div id="pop001" class="layer_popup type2">
+    <div class="layer_position">
+        <div class="layer_inner">
+            <div class="layer_cont">
+                <div class="msg_box">
+                    <div class="msg_box">
+                        <p class="msg_alert">선호 아파트로 등록되었습니다.</p>
+                        <p class="msg_customer mgt10">
+                            내 아파트로 만들기 위한<br>
+                            목표아파트로 등록하시겠습니까?
+                        </p>
+                    </div>
+                </div>
+                <div class="btn_layer_wrap">
+                    <button type="button" class="js_pop_close btn_cancel"><span>취소</span></button>
+                    <button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- [S] 선호 아파트로 등록-->
+
+
+<!-- [S] -->
+<div id="full001" class="layer_fullsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+            <strong class="tit">전체 필터</strong>
+            <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+        </div>
+
+        <div class="layer_cont">
+            <section class="allFilter">
+                <h3 class="allFilter-tit mgt10">거래유형</h3>
+                <div class="allFilter-list">
+                    <label><input type="radio" name="radio001" hidden checked><span>전체</span></label>
+                    <label><input type="radio" name="radio001" hidden><span>매매</span></label>
+                    <label><input type="radio" name="radio001" hidden><span>전세</span></label>
+                    <label><input type="radio" name="radio001" hidden><span>월세</span></label>
+                </div>
+                <h3 class="allFilter-tit mgt30">가격</h3>
+                <div class="tabs">
+                    <div class="tabs-header">
+                        <button type="button" class="tabs-nav on" data-tab="layTab001">매매가</button>
+                        <button type="button" class="tabs-nav" data-tab="layTab002">보증금</button>
+                        <button type="button" class="tabs-nav" data-tab="layTab003">월세</button>
+                    </div>
+                    <div class="tabs-content">
+                        <!-- 매매가 -->
+                        <div class="tabs-item priceTab-item on" data-tabCon="layTab001">
+                            <label><input type="radio" name="radio010" hidden><span>전채</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>1억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>2억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>3억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>4억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>5억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>7억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>10억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>12억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>15억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>17억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>20억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>25억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>30억</span></label>
+                            <label><input type="radio" name="radio010" hidden><span>30억~</span></label>
+                        </div>
+                        <!-- 보증금 -->
+                        <div class="tabs-item priceTab-item arr4" data-tabCon="layTab002">
+                            <label><input type="radio" name="radio020" hidden><span>전채</span></label>
+                            <label><input type="radio" name="radio020" hidden><span>1천만원</span></label>
+                            <label><input type="radio" name="radio020" hidden><span>2천만원</span></label>
+                            <label><input type="radio" name="radio020" hidden><span>3천만원</span></label>
+                            <label><input type="radio" name="radio020" hidden><span>5천만원</span></label>
+                            <label><input type="radio" name="radio020" hidden><span>7천만원</span></label>
+                            <label><input type="radio" name="radio020" hidden><span>1억</span></label>
+                            <label><input type="radio" name="radio020" hidden><span>2억</span></label>
+                            <label><input type="radio" name="radio020" hidden><span>3억</span></label>
+                            <label><input type="radio" name="radio020" hidden><span>5억</span></label>
+                            <label><input type="radio" name="radio020" hidden><span>7억</span></label>
+                            <label><input type="radio" name="radio020" hidden><span>10억</span></label>
+                        </div>
+                        <!-- 월세 -->
+                        <div class="tabs-item priceTab-item arr4" data-tabCon="layTab003">
+                            <label><input type="radio" name="radio030" hidden><span>전채</span></label>
+                            <label><input type="radio" name="radio030" hidden><span>30만원</span></label>
+                            <label><input type="radio" name="radio030" hidden><span>40만원</span></label>
+                            <label><input type="radio" name="radio030" hidden><span>50만원</span></label>
+                            <label><input type="radio" name="radio030" hidden><span>60만원</span></label>
+                            <label><input type="radio" name="radio030" hidden><span>70만원</span></label>
+                            <label><input type="radio" name="radio030" hidden><span>80만원</span></label>
+                            <label><input type="radio" name="radio030" hidden><span>90만원</span></label>
+                            <label><input type="radio" name="radio030" hidden><span>100만원</span></label>
+                            <label><input type="radio" name="radio030" hidden><span>120만원</span></label>
+                            <label><input type="radio" name="radio030" hidden><span>150만원</span></label>
+                            <label><input type="radio" name="radio030" hidden><span>200만원</span></label>
+                            <label><input type="radio" name="radio030" hidden><span>300만원</span></label>
+                            <label><input type="radio" name="radio030" hidden><span>500만원</span></label>
+                            <label><input type="radio" name="radio030" hidden><span>500만원~</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="allFilter-tit mgt30">면적</h3>
+                <div class="allFilter-list line-3">
+                    <label><input type="radio" name="radio-l001" hidden checked><span>전체</span></label>
+                    <label><input type="radio" name="radio-l001" hidden><span>~10평</span></label>
+                    <label><input type="radio" name="radio-l001" hidden><span>10평대</span></label>
+                    <label><input type="radio" name="radio-l001" hidden><span>20평대</span></label>
+                    <label><input type="radio" name="radio-l001" hidden><span>30평대</span></label>
+                    <label><input type="radio" name="radio-l001" hidden><span>40평대</span></label>
+                    <label><input type="radio" name="radio-l001" hidden><span>50평대</span></label>
+                    <label><input type="radio" name="radio-l001" hidden><span>60평~</span></label>
+                </div>
+                <h3 class="allFilter-tit mgt30">준공연도</h3>
+                <div class="allFilter-list line-4">
+                    <label><input type="radio" name="radio-l002" hidden checked><span>전체</span></label>
+                    <label><input type="radio" name="radio-l002" hidden><span>~2년</span></label>
+                    <label><input type="radio" name="radio-l002" hidden><span>~5년</span></label>
+                    <label><input type="radio" name="radio-l002" hidden><span>~10년</span></label>
+                    <label><input type="radio" name="radio-l002" hidden><span>~15년</span></label>
+                    <label><input type="radio" name="radio-l002" hidden><span>~20년</span></label>
+                    <label><input type="radio" name="radio-l002" hidden><span>~30년</span></label>
+                    <label><input type="radio" name="radio-l002" hidden><span>30년~</span></label>
+                </div>
+
+                <h3 class="allFilter-tit mgt30">방, 욕실수</h3>
+                <div class="allFilter-list line-1">
+                    <p>방</p>
+                    <label><input type="radio" name="radio-l003" hidden checked><span>전체</span></label>
+                    <label><input type="radio" name="radio-l003" hidden><span>1개</span></label>
+                    <label><input type="radio" name="radio-l003" hidden><span>2개</span></label>
+                    <label><input type="radio" name="radio-l003" hidden><span>3개</span></label>
+                    <label><input type="radio" name="radio-l003" hidden><span>4개~</span></label>
+                </div>
+                <div class="allFilter-list line-1">
+                    <p>욕실</p>
+                    <label><input type="radio" name="radio-l004" hidden checked><span>전체</span></label>
+                    <label><input type="radio" name="radio-l004" hidden><span>1개</span></label>
+                    <label><input type="radio" name="radio-l004" hidden><span>2개</span></label>
+                    <label><input type="radio" name="radio-l004" hidden><span>3개</span></label>
+                    <label><input type="radio" name="radio-l004" hidden><span>4개~</span></label>
+                </div>
+                <h3 class="allFilter-tit mgt30">세대 수</h3>
+                <div class="allFilter-list line-4">
+                    <label><input type="radio" name="radio-l005" hidden checked><span>전체</span></label>
+                    <label><input type="radio" name="radio-l005" hidden><span>~50세대</span></label>
+                    <label><input type="radio" name="radio-l005" hidden><span>50세대~</span></label>
+                    <label><input type="radio" name="radio-l005" hidden><span>100세대~</span></label>
+                    <label><input type="radio" name="radio-l005" hidden><span>300세대~</span></label>
+                    <label><input type="radio" name="radio-l005" hidden><span>500세대~</span></label>
+                    <label><input type="radio" name="radio-l005" hidden><span>1000세대~</span></label>
+                    <label><input type="radio" name="radio-l005" hidden><span>3000세대~</span></label>
+                </div>
+            </section>
+            <div class="fix_bottom not_dock">
+                <div class="btn_wrap">
+                    <div class="btnGroup type2">
+                        <p><a href="#none" class="btnBl1 js_pop_close" role="button">적용</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- [E] -->
+
+
+<script>
+    $(document).ready(function () {
+
+
+        //테스트용 즐겨찾기
+        $(document).on("change", ".aptInfoPop-fav input", function(e){
+            if($(this).is(":checked")){
+                layer_popup("#pop001");
+            }
+        });
+
+        //전체필터
+        $(document).on("click",".mapFilter-all",function(){
+            layer_fullsheet("#full001");
+        })
+
+
+        //터치위로 올릴때 이벤트
+        var startY = 0;
+        var touchChk = false;
+
+        //탭
+        $(document).on("click", ".tabs-nav", function () {
+            var $tar = $(this);
+            var idx = $tar.data('tab');
+            $tar.addClass("on").siblings().removeClass("on");
+            $('.tabs-item[data-tabCon="' + idx + '"]').addClass("on").siblings().removeClass("on");
+        });
+
+        //아파트 정보창 키우기
+        $(document).on("click", ".aptInfoPop-type", function () {
+            $('.aptInfoPop').toggleClass("half open");
+            $(".fix_bottom").toggleClass("not_dock");
+
+        });
+
+
+        $(document).on("touchstart", ".touchArea", function (event) {
+            startY = event.originalEvent.touches[0].clientY; // 터치 시작 위치 기록
+        });
+
+        $(document).on("touchmove", ".touchArea", function (event) {
+            var currentY = event.originalEvent.touches[0].clientY;
+            var deltaY = startY - currentY;
+
+            if (deltaY > 50) { // 위로 스와이프
+                $('.aptInfoPop').removeClass("half").addClass("open");
+                $(".fix_bottom").addClass("not_dock");
+            }else if (deltaY < -50) { // 아래로 스와이프
+                $('.aptInfoPop').removeClass("open").addClass("half");
+                $(".fix_bottom").removeClass("not_dock");
+            }
+        });
+
+
+        loadLineChart(); //라인차트
+
+    })
+
+
+
+    // [S] 차트 라인 타입
+    function loadLineChart(){
+        //차트 색상 지정
+        Highcharts.setOptions({
+            colors: ['#985CD3','#4E8FF0']
+        });
+
+        Highcharts.chart('line_con', {
+            title: {text: ''},// 타이틀 숨김
+            exporting: { enabled: false },// 우측상단 햄버거메뉴 숨김
+            credits: {enabled: false},// highchart 워터마크 숨김
+            tooltip:  { enabled: false },// 툴팁 숨김
+
+            chart: {
+                type: 'areaspline',
+                inverted: false,
+                height:270,
+                marginBottom: 60
+            },
+            // minTickInterval:1,
+            xAxis: {
+                title: {text: ''},// 타이틀 숨김
+                gridLineWidth: 1,
+                gridLineDashStyle: 'dash',
+                categories: [['‘19.10'], ['‘20.05'], ['‘20.12'], ['‘21.07'], ['‘22.02'], ['‘22.09'], ['‘22.10']], //x축 표시값
+                labels: {
+                    align:'left',
+                    x: 0,
+                    style: {
+                        color: '#999',
+                        fontSize: '10px',
+                        fontFamily : 'Lato'
+                    }
+                },
+                //showFirstLabel: false,
+                showLastLabel: false
+            },
+            yAxis: {
+                title: {text: ''},// 타이틀 숨김
+                tickAmount: 5,
+                min:5,
+                max:25,
+                labels: {
+                    format: '{value} 억',
+                    x: -5,
+                    style: {
+                        color: '#999',
+                        fontSize: '10px',
+                        fontFamily : 'Lato'
+                    }
+                }
+            },
+            legend: {
+                align: 'center',
+                verticalAlign: 'bottom',
+                x:0,
+                y:20,
+                floating: true,
+                backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
+            },
+            tooltip: {
+                enabled: false //툴팁 사용안함
+            },
+            plotOptions: {
+                areaspline: {
+                    fillOpacity: 0 //영역 채우기 없음
+                }
+            },
+            series: [{
+                name: '매매',
+                data: [14,17,20,22,23,22,22]
+            }, {
+                name: '전세',
+                marker: {
+                    symbol: 'dot'
+                },
+                data: [12,13,14,15,16,17,17]
+                // data: [[0, 12],[1, 13],[2, 14],[3,15],[4, 16],[5, 17],[6, 17]]
+            }]
+        });
+    }
+    // [E] 차트 라인 타입 */
+</script>
+</body>
+</html>
+
+
+

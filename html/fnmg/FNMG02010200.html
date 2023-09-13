@@ -141,20 +141,21 @@
 </body>
 <script>
     $(document).ready(function(){
-        $('.terms-nav').slick({
-            slidesToShow: 1, /* 21.07.14 옵션 변경*/
+        //0913 삭제
+        /*$('.terms-nav').slick({
+            slidesToShow: 1, /!* 21.07.14 옵션 변경*!/
             slidesToScroll: 1,
             asNavFor: '.terms-slider',
             dots: false,
             focusOnSelect: true,
             infinite: false,
             variableWidth: true
-        });
+        });*/
         $('.terms-slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
-            asNavFor: '.terms-nav',
+            /*asNavFor: '.terms-nav', 0913 삭제 */
             infinite: false,
             adaptiveHeight: true
         });
