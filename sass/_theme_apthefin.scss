@@ -1550,7 +1550,7 @@ a.btnMenu {
 }
 
 .pointLine {
-	box-shadow: rgba(93, 207, 210, 0.25) 0px -10px 0px inset;
+	box-shadow: #FEECF2 0px -10px 0px inset;
 }
 
 .pointLine2 {
@@ -14610,7 +14610,7 @@ a.btnMenu {
 
 		&.link_type2 {
 			.banner_tit .titPoint {
-				color: #5DCFD2;
+				color: #52AFB1;
 			}
 
 			.tx {
@@ -16509,9 +16509,9 @@ a.filterFolding {
 		padding: 15px 20px 20px;
 	}
 
-	.listTit {
-		margin-top: 30px;
-	}
+	// .listTit {
+	// 	margin-top: 30px;
+	// }
 
 	.type_goal {
 		position: relative;
