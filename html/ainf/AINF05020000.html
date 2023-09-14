@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title></title>
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="title" content="">-->
+    <meta name="description" content="">
+    <!--<meta name="keywords" content="">-->
+    <!-- The Open Graph protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+    <!-- //The Open Graph protocol -->
+    <link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/cmd.js"></script>
+    <script type="text/javascript"  src="../../js/interaction.js"></script>
+
+    <!-- [S] chart -->
+    <script src="../../js/highchart/highcharts.js"></script>
+    <script src="../../js/highchart/modules/exporting.js"></script>
+    <script src="../../js/highchart/modules/export-data.js"></script>
+    <script src="../../js/highchart/modules/accessibility.js"></script>
+    <!-- [E] chart -->
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+
+    <!-- header -->
+    <div class="header">
+        <div class="header_inn">
+            <div class="left">
+                <a href="#none" class="btnBack"><span class="blind">Back</span></a>
+            </div>
+            <div class="center">
+                <h2 class="tit_h2">아파트 찾기</h2>
+            </div>
+
+        </div>
+    </div>
+    <!-- //header -->
+
+    <!-- container -->
+    <div class="container">
+        <div class="content">
+            <div class="layer_cont mgt30">
+                <div class="schArea">
+                    <input type="text" required="required" id="search" class="schTxt js_tx_val" placeholder="선호하는 단지, 지역을 검색해 주세요">
+                    <button type="button" class="btn_val_reset js_bt_val_reset"><span class="blind">검색어 삭제</span></button>
+                    <a href="#none" class="btnSearch"><span class="blind">검색</span></a>
+                </div>
+                <hr class="hr_div type4">
+
+                <div class="tabs_wrap tabInter">
+                    <div class="tabs_header type2">
+                        <ul class="cboth">
+                            <li class="js_tabclickDp1"><a href="#none" title="선택됨"><span>최근검색</span></a></li><!-- 선택시 title="선택됨" 추가 -->
+                            <li class="js_tabclickDp1 on"><a href="#none"><span>주소로 찾기</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="tabs_body_wrap">
+                        <div class="tabs_body cboth">
+                            <!-- 최근검색 -->
+                            <div class="tab_cntDp1" style="display: none;">
+                                <button type="button" class="mykeyword-clear">전체삭제</button>
+                                <ul class="mykeyword mgt20">
+                                    <li>
+                                        <a href="#none">
+                                            <i class="sq_flag search"></i>
+                                            광교힐수테이트레이크파크광교힐수테이트레이크파크광교힐수테이트레이크파크
+                                            <em>03.20</em>
+                                        </a>
+                                        <button type="button" class="btn_close"><span class="blind">닫기</span></button>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <i class="sq_flag search"></i>
+                                            두산위브
+                                            <em>03.20</em>
+                                        </a>
+                                        <button type="button" class="btn_close"><span class="blind">닫기</span></button>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <i class="sq_flag search"></i>
+                                            파크리오
+                                            <em>03.20</em>
+                                        </a>
+                                        <button type="button" class="btn_close"><span class="blind">닫기</span></button>
+                                    </li>
+                                </ul>
+
+                                <!-- [S] 아파트 검색 결과 -->
+                                <div class="asGroup estate searchKeyword">
+                                    <nav class="searchKeyword-list">
+                                        <button type="button" class="searchKeyword-item">
+                                            <span class="searchKeyword-more"><i>일이삼</i>사오육칠팔구십</span>
+                                            <span class="searchKeyword-key"><i>영등포구</i> 당산어쩌구</span>
+                                        </button>
+                                        <button type="button" class="searchKeyword-item">
+                                            <span class="searchKeyword-more"><i>일이삼</i>사오육칠팔구십</span>
+                                            <span class="searchKeyword-key"><i>영등포구</i> 당산어쩌구</span>
+                                        </button>
+                                        <button type="button" class="searchKeyword-item">
+                                            <span class="searchKeyword-more"><i>일이삼</i>사오육칠팔구십</span>
+                                            <span class="searchKeyword-key"><i>영등포구</i> 당산어쩌구</span>
+                                        </button>
+                                        <button type="button" class="searchKeyword-item">
+                                            <span class="searchKeyword-more"><i>일이삼</i>사오육칠팔구십</span>
+                                            <span class="searchKeyword-key"><i>영등포구</i> 당산어쩌구</span>
+                                        </button>
+                                        <button type="button" class="searchKeyword-item">
+                                            <span class="searchKeyword-more"><i>일이삼</i>사오육칠팔구십</span>
+                                            <span class="searchKeyword-key"><i>영등포구</i> 당산어쩌구</span>
+                                        </button>
+                                        <button type="button" class="searchKeyword-item">
+                                            <span class="searchKeyword-more"><i>일이삼</i>사오육칠팔구십</span>
+                                            <span class="searchKeyword-key"><i>영등포구</i> 당산어쩌구</span>
+                                        </button>
+                                        <button type="button" class="searchKeyword-item">
+                                            <span class="searchKeyword-more"><i>일이삼</i>사오육칠팔구십</span>
+                                            <span class="searchKeyword-key"><i>영등포구</i> 당산어쩌구</span>
+                                        </button>
+                                        <button type="button" class="searchKeyword-item">
+                                            <span class="searchKeyword-more"><i>일이삼</i>사오육칠팔구십</span>
+                                            <span class="searchKeyword-key"><i>영등포구</i> 당산어쩌구</span>
+                                        </button>
+                                        <button type="button" class="searchKeyword-item">
+                                            <span class="searchKeyword-more"><i>일이삼</i>사오육칠팔구십</span>
+                                            <span class="searchKeyword-key"><i>영등포구</i> 당산어쩌구</span>
+                                        </button>
+                                        <button type="button" class="searchKeyword-item">
+                                            <span class="searchKeyword-more"><i>일이삼</i>사오육칠팔구십</span>
+                                            <span class="searchKeyword-key"><i>영등포구</i> 당산어쩌구</span>
+                                        </button>
+
+                                    </nav>
+                                    <a href="#none" class="btnFolding hasBorder" aria-expanded="false"></a>
+                                </div>
+                                <!-- [E] 아파트 검색 결과 -->
+
+                                <div class="msgResult">
+                                    <p>검색 기록이 없습니다.</p>
+                                </div>
+                            </div>
+                            <!-- //최근검색 -->
+
+                            <!-- 주소로 찾기 -->
+                            <div class="tab_cntDp1">
+                                <div class="navHistory">
+                                    <!-- 선택시 done 클래스 추가 -->
+                                    <a href="#none" class="select done">시/도</a><a href="#none" class="select">시/군/구</a><a href="#none">읍/면/동</a>
+                                </div>
+                                <div class="btList">
+                                    <input type="radio" name="address" value="서울" id="adr1"><label for="adr1">서울</label>
+                                    <input type="radio" name="address" value="부산" id="adr2"><label for="adr2">부산</label>
+                                    <input type="radio" name="address" value="인천" id="adr3"><label for="adr3">인천</label>
+                                    <input type="radio" name="address" value="대구" id="adr4"><label for="adr4">대구</label>
+                                    <input type="radio" name="address" value="대전" id="adr5"><label for="adr5">대전</label>
+                                    <input type="radio" name="address" value="광주" id="adr6"><label for="adr6">광주</label>
+                                    <input type="radio" name="address" value="울산" id="adr7"><label for="adr7">울산</label>
+                                    <input type="radio" name="address" value="경기" id="adr8"><label for="adr8">경기</label>
+                                    <input type="radio" name="address" value="강원" id="adr9"><label for="adr9">강원</label>
+                                    <input type="radio" name="address" value="세종" id="adr10"><label for="adr10">세종</label>
+                                    <input type="radio" name="address" value="충북" id="adr11"><label for="adr11">충북</label>
+                                    <input type="radio" name="address" value="충남" id="adr12"><label for="adr12">충남</label>
+                                    <input type="radio" name="address" value="경북" id="adr13"><label for="adr13">경북</label>
+                                    <input type="radio" name="address" value="경남" id="adr14"><label for="adr14">경남</label>
+                                    <input type="radio" name="address" value="전북" id="adr15"><label for="adr15">전북</label>
+                                    <input type="radio" name="address" value="전남" id="adr16"><label for="adr16">전남</label>
+                                    <input type="radio" name="address" value="제주" id="adr17"><label for="adr17">제주</label>
+                                </div>
+
+                                <!-- 시/군/구 -->
+                                <div class="btList" style="display: none">
+                                    <input type="radio" name="address2" value="강남구" id="adr001"><label for="adr001">강남구</label>
+                                    <input type="radio" name="address2" value="강동구" id="adr002"><label for="adr002">강동구</label>
+                                </div>
+                                <!-- 시/군/구 -->
+
+                                <!-- 읍동면 -->
+                                <div class="btList" style="display: none">
+                                    <input type="radio" name="address3" value="당산동" id="adr101"><label for="adr101">당산동</label>
+                                    <input type="radio" name="address3" value="당산동1가" id="adr102"><label for="adr102">당산동1가</label>
+                                </div>
+                                <!-- 읍동면 -->
+
+                                <!-- 상세주소 -->
+                                <div class="btList lastAdd" style="display:none">
+                                    <input type="radio" name="address4" value="당산동" id="adr201"><label for="adr201">힐스테이트에코마곡나루역라마다앙코르 힐스테이트에코마곡나루역라마다앙코르 힐스테이트에코마곡나루역라마다앙코르</label>
+                                    <input type="radio" name="address4" value="당산동1가" id="adr202"><label for="adr202"><i>당산타워빌</i> 영등포구 당산</label>
+                                </div>
+                                <!-- 상세주소 -->
+
+
+                                <!-- 지도 이동 버튼 -->
+                                <a href="" class="btnMoveMap" style="display: none"><span>서울</span> 지도로 이동</a>
+                                <!-- 지도 이동 버튼 -->
+
+
+
+                            </div>
+                            <!-- //주소로 찾기 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- //container -->
+
+</div>
+<!-- //wrap -->
+
+<script>
+    $(document).ready(function(){
+        //탭
+        $(".tabInter").tabs({
+            wrapClass:".tabInter",
+            clickClass:".js_tabclickDp1",
+            showClass:".tab_cntDp1",
+            animate:false,
+            contentWidthFull:false,//effect when animate:true
+            animateBorder:["false",".tabs_header"],//show border in class .
+            fade:false,
+            speed:500
+        });
+
+        //검색 버튼 클릭시 검색결과
+        $(".btnSearch").on("click",function (e){
+            e.preventDefault();
+            $(".searchKeyword").show();
+        });
+        $(".btn_val_reset").on("click",function(e){
+            e.preventDefault();
+            $(".searchKeyword").hide();
+        })
+
+    })
+
+</script>
+</body>
+</html>
+
+
+

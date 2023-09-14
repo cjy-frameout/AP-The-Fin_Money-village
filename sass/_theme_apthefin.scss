@@ -20392,34 +20392,39 @@ a.filterFolding {
 	border: none;
 	border-radius: 0;
 
-	.accBox-content {
-		background: #F1F2F5;
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-
-	.accBox-inner {
-		padding-left: 0;
-		padding-right: 0;
-	}
-
-	.accBox-content a {
-		font-size: 16px;
-		display: block;
-		width: 100%;
-		position: relative;
-
-		&:after {
-			content: "";
-			display: block;
-			width: 24px;
-			height: 24px;
-			background: url("../img/theme/apthefin/icon/ic_menu_arrow.png") no-repeat 0 0;
-			background-size: cover;
-			right: 0;
-			top: 50%;
-			margin-top: -12px;
-			position: absolute;
+	.accBox {
+		&-tit {
+			pointer-events: none;
+			&:after {display:none}
+		}
+		&-content {
+			background: #F1F2F5;
+			padding-left: 20px;
+			padding-right: 20px;
+			max-height:1000px;
+			visibility: visible;
+			a {
+				font-size: 16px;
+				display: block;
+				width: 100%;
+				position: relative;
+				&:after {
+					content: "";
+					display: block;
+					width: 24px;
+					height: 24px;
+					background: url("../img/theme/apthefin/icon/ic_menu_arrow.png") no-repeat 0 0;
+					background-size: cover;
+					right: 0;
+					top: 50%;
+					margin-top: -12px;
+					position: absolute;
+				}
+			}
+		}
+		&-inner {
+			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 
