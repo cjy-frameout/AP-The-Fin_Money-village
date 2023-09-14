@@ -79,6 +79,17 @@
                 });
             });
         });
+    },
+
+    $.fn.goTop = function() {
+        return this.each(function(){
+            var $this = $(this);
+            $this.on('click', function() {
+                $('html, body').animate({
+                    scrollTop: 0,
+                }, 500, 'swing');
+            });
+        });
     }
 
 
@@ -155,5 +166,6 @@ document.addEventListener('DOMContentLoaded', function(e){
     $('input[type="password"]').passChange();
     $('.search-box').searchDel();
     $('.resi-type').resiType();
+    $('.feed-quick-goTop').goTop();
 });
 
