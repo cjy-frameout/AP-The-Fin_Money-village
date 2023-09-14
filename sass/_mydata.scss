@@ -307,12 +307,13 @@ input[type="password"] {
         position: fixed;
         bottom: 0;
         left: 0;
-        padding: 0 20px 20px;
+        padding-bottom: 15px;
         background: #fff;
     }
 
     input[type="text"] {
-        height: 42px;
+        height: 54px;
+        padding: 15px 45px 15px 20px; 
     }
 }
 
@@ -693,6 +694,15 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     display: inline-block;
     font-size: 13px;
     padding: 8px 12px;
+}
+.btn-feed-comment {
+    background: url(../img/theme/apthefin/icon_feed_comment.png) no-repeat 0 0;
+    height: 24px;
+    width: 24px;
+    position:absolute;
+    right:20px;
+    top: calc(50% - 20px);
+    
 }
 .main-title {
     color: #333;
