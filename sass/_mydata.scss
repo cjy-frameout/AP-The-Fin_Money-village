@@ -1133,6 +1133,40 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 
 /* ========================================================= E : common  =====================================================*/
 /* S : component */
+.feed-quick-menu {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    a {
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        width: 48px;
+        box-shadow: 0 7px 7px rgba($color: #000000, $alpha: 0.3);
+        & + a {
+            margin-top: 10px;
+        }
+    }
+    
+}
+.feed-quick-regi {
+    background: url(../img/theme/apthefin/icon_write_feed.png) no-repeat 0 0;
+    background-size: 48px;
+    background-color: #747687;
+}
+.feed-quick-myfeed {
+    background-color: #BB2649;
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 12px;
+}
+.feed-quick-goTop{
+    background: url(../img/theme/apthefin/icon_goTop.png) no-repeat 0 0;
+    background-size: 48px;
+    background-color: #fff;
+}
 .tab_cntDp1 > .btn-wrap { padding: 0 0 20px;}
 .asLink_box + .banner.inLink{ margin-top: 20px; }
 .cont-box + .info-wrap.bank { margin-top: 60px;}
