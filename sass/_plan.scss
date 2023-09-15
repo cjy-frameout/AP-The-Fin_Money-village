@@ -249,6 +249,32 @@ $black : #17181A;
   padding:20px;
   border:1px solid #dde3e7;
   border-radius: 12px;
+  &.-noBorder {
+    border:none;
+    padding:0;
+  }
+  &.-notLink {
+    position: relative;
+    &:after {
+      content:"데이터에 연결되어있지 않음 문구";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width:100%;
+      height:100%;
+      position: absolute;
+      left:0;
+      top:0;
+      border-radius: 12px;
+      opacity: 0.8;
+      background: var(--font-ffffff, #FFF);
+      backdrop-filter: blur(2px);
+      font-size:16px;
+      line-height:1.5;
+      color:$black;
+      font-weight:500;
+    }
+  }
   &__tit {
     display:flex;
     justify-content: space-between;
@@ -307,7 +333,7 @@ $black : #17181A;
   }
 }
 
-.agigoGraph {
+.savegoGraph {
   margin:30px auto 0;
   width:calc(100% - 20px);
   height:170px;
@@ -346,10 +372,11 @@ $black : #17181A;
     width:40px;
     border-radius: 4px;
     background:#dde3e7;
-    height:100%;
+    height:0%;
     max-height:122px;
     position: relative;
     margin:0 auto;
+    transition: height 1s .5s;
   }
   &__txt {
     font-size:13px;
@@ -363,12 +390,16 @@ $black : #17181A;
     left:50%;
     transform: translateX(-50%);
     top:0;
-    width:calc(100% - 40px);
+    width:0;
     height:1px;
     border-top:1px dashed $black;
+    transition: width .3s;
+    &.-active {
+      width:calc(100% - 40px);
+    }
   }
   .-left {
-    .agigoGraph__topTxt {
+    .savegoGraph__topTxt {
       border-radius: 4px;
       background:#fff;
       font-size:13px;
@@ -405,9 +436,11 @@ $black : #17181A;
       }
     }
     .-left {
-      .agigoGraph__bar {background:#DEF0EB}
-      .agigoGraph__inner {background:#12CA98}
+      .savegoGraph__bar {background:#DEF0EB}
+      .savegoGraph__inner {background:#12CA98}
     }
+    .savegoInfo__today:before {background:#12CA98}
+    .savegoInfo__per {color:#12CA98}
   }
   //지출 과다
   @at-root .planSec.-bed {
@@ -416,26 +449,28 @@ $black : #17181A;
       &:after {background-color:#F6E5E5}
     }
     .-left {
-      .agigoGraph__bar {background:#F6E5E5}
-      .agigoGraph__inner {background:#FF3E3E}
+      .savegoGraph__bar {background:#F6E5E5}
+      .savegoGraph__inner {background:#FF3E3E}
     }
+    .savegoInfo__today:before {background:#FF3E3E}
+    .savegoInfo__per {color:#FF3E3E}
   }
   //30대 기준
   @at-root .planSec.-year30 {
     .-center {
-      .agigoGraph__bar {background:#DDE3E7}
+      .savegoGraph__bar {background:#DDE3E7}
     }
     .-right {
-      .agigoGraph__bar {background:#172733}
+      .savegoGraph__bar {background:#172733}
     }
   }
   //내평균
   @at-root .planSec.-my {
     .-center {
-      .agigoGraph__bar {background:#172733}
+      .savegoGraph__bar {background:#172733}
     }
     .-right {
-      .agigoGraph__bar {background:#DDE3E7}
+      .savegoGraph__bar {background:#DDE3E7}
     }
   }
 }
@@ -509,8 +544,41 @@ $black : #17181A;
     }
   }
 }
-
-.biligoBox {
+.borrowgoProgress {
+  position: relative;
+  @include clearFix();
+  &__bar {
+    appearance: none;
+    width:100%;
+    &::-webkit-progress-bar {
+      background:#ff3e3e;
+      border-radius: 200px;
+      height:12px;
+    }
+    &::-webkit-progress-value {
+      background:#FFE5E5;
+      border-radius: 200px;
+      height:12px;
+    }
+  }
+  &__txt {
+    display:inline-block;
+    margin-top:4px;
+    font-size:12px;
+    line-height:1;
+    font-weight:500;
+    &.-left {
+      color:#ff8080;
+      float:left;
+    }
+    &.-right {
+      float:right;
+      color:#ff3e3e;
+      text-align:right;
+    }
+  }
+}
+.borrowgoBox {
   display: flex;
   padding:16px 24px;
   background:#F5F8FC;
@@ -537,3 +605,141 @@ $black : #17181A;
   }
 }
 
+.collectgo {
+  &__item {
+    display:flex;
+    align-items: center;
+    &:not(:first-of-type) {
+      margin-top:20px;
+    }
+    &:nth-child(1) {
+      .collectgo__bar{background-color:#FCC;}
+    }
+    &:nth-child(2) {
+      .collectgo__bar{background-color:#FFE5E5;}
+    }
+    &:nth-child(3) {
+      .collectgo__bar{background-color:#FFF2F2;}
+    }
+    &.-self {
+      .collectgo__img {background-color:#985CD3}
+      .collectgo__bar {background-color:#E0CEF1}
+    }
+    &.-lease {
+      .collectgo__img {background-color:#4E8FF0}
+      .collectgo__bar {background-color:#C9DDFA}
+    }
+    &.-monthly {
+      .collectgo__img {background-color:#69B556}
+      .collectgo__bar {background-color:#D2E9CC}
+    }
+  }
+  &__img {
+    display:flex;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    overflow:hidden;
+    margin-right:10px;
+    justify-content: center;
+    align-items: center;
+    img {display:block;width:100%;height:100%}
+    color:#fff;
+    font-size:13px;
+    font-weight:700;
+    line-height:1;
+  }
+  &__tit {
+    font-size:13px;
+    font-weight:500;
+    color:#455057;
+    line-height:1;
+    @include ellipsis();
+  }
+  &__box {
+    width:calc(100% - 50px);
+  }
+  &__bar {
+    margin-top:4px;
+    height:26px;
+    border-radius: 4px;
+    position: relative;
+    padding:4px 0;
+    box-sizing:border-box;
+    width:0%;
+    transition: width 1s;
+  }
+  &__txt {
+    text-align:right;
+    font-size:14px;
+    line-height:1.3;
+    color:$black;
+    font-weight:500;
+    white-space: nowrap;
+    padding:0 10px;
+  }
+}
+
+.savegoInfo {
+  border:1px solid #D8DEE7;
+  border-radius:8px;
+  padding:18px 20px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:1px solid #d8dee7;
+    padding-bottom:10px;
+    margin-bottom:10px;
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__tit {
+    font-size:14px;
+    color:$black;
+    font-weight:500;
+  }
+  &__day {
+    font-size:12px;
+    color:$gray;
+    font-weight:500;
+  }
+  &__today {
+    font-size:14px;
+    font-weight:500;
+    line-height:1.6;
+    color:#59656d;
+    display: flex;
+    align-items: center;
+    &:before {
+      content:"";
+      width:6px;
+      height:6px;
+      margin-right:8px;
+      border-radius: 50%;
+      display:inline-block;
+      background:#12ca98;
+    }
+  }
+  &__won {
+    font-size:14px;
+    color:$black;
+    font-weight:700;
+    line-height:1.6;
+    text-align:right;
+  }
+  &__result {
+    margin-top:10px;
+    color:$gray;
+    font-size:14px;
+    font-weight:600;
+    line-height:1.6;
+    text-align:center;
+    padding:10px;
+    background:#F5F7F9;
+    border-radius:4px;
+  }
+}

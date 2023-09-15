@@ -94,7 +94,7 @@
             <h3 class="planTit"><strong>아끼고</strong> <button type="button" class="plan__btnTooltip">도움말</button></h3>
             <p class="planDec">신용카드 이용내역을 점검하여 내 지출을 관리해요</p>
 
-            <section class="planSec mgt20 -year30 -good"> <!-- 30대기준 -year30, 내평균 -my, 적절할때 -good, 지출과다 -bed, 클래스 추가 -->
+            <section id="savego" class="planSec mgt20 -year30 -good"> <!-- 30대기준 -year30, 내평균 -my, 적절할때 -good, 지출과다 -bed, 클래스 추가 -->
                 <h3 class="planSec__tit">
                     <span class="planSec__titLeft">
                         이달의<br>
@@ -102,25 +102,25 @@
                     </span>
                     <a href="" class="planSec__titRight planMore">자세히</a>
                 </h3>
-                <div class="agigoGraph">
-                    <div class="agigoGraph__item -left">
-                        <div class="agigoGraph__topTxt">100%</div>
-                        <div class="agigoGraph__bar" data-height="70">
-                            <div class="agigoGraph__inner" style="height:50%"><span>50%</span></div>
+                <div class="savegoGraph">
+                    <div class="savegoGraph__item -left">
+                        <div class="savegoGraph__topTxt">100%</div>
+                        <div class="savegoGraph__bar" data-height="80">
+                            <div class="savegoGraph__inner" style="height:50%"><span>50%</span></div>
                         </div>
-                        <div class="agigoGraph__txt">9월 지출</div>
+                        <div class="savegoGraph__txt">9월 지출</div>
                     </div>
-                    <div class="agigoGraph__item -center">
-                        <div class="agigoGraph__topTxt">125만원</div>
-                        <div class="agigoGraph__bar" data-height="100"></div>
-                        <div class="agigoGraph__txt">내 평균</div>
+                    <div class="savegoGraph__item -center">
+                        <div class="savegoGraph__topTxt">125만원</div>
+                        <div class="savegoGraph__bar" data-height="100"></div>
+                        <div class="savegoGraph__txt">내 평균</div>
                     </div>
-                    <div class="agigoGraph__item -right">
-                        <div class="agigoGraph__topTxt">102만원</div>
-                        <div class="agigoGraph__bar" data-height="70"></div>
-                        <div class="agigoGraph__txt">30대 평균</div>
+                    <div class="savegoGraph__item -right">
+                        <div class="savegoGraph__topTxt">102만원</div>
+                        <div class="savegoGraph__bar" data-height="80"></div>
+                        <div class="savegoGraph__txt">30대 평균</div>
                     </div>
-                    <div class="agigoGraph__line"></div>
+                    <div class="savegoGraph__line"></div>
                 </div>
             </section>
             <!-- [E] 아끼고 -->
@@ -137,7 +137,35 @@
                     </span>
                     <a href="" class="planSec__titRight">99억 9,999만<span>원</span></a>
                 </h3>
-
+                <div class="collectgo mgt30" id="collectgo">
+                    <div class="collectgo__item">
+                        <div class="collectgo__img"><img src="../../img/bank/D1AAAH0000.png" alt="은행"></div>
+                        <div class="collectgo__box">
+                            <div class="collectgo__tit">은행명 예금</div>
+                            <div class="collectgo__bar" data-width="100">
+                                <p class="collectgo__txt">99억 9,999만원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collectgo__item">
+                        <div class="collectgo__img"><img src="../../img/bank/D1AAAH0000.png" alt="은행"></div>
+                        <div class="collectgo__box">
+                            <div class="collectgo__tit">은행명 예금</div>
+                            <div class="collectgo__bar" data-width="50">
+                                <p class="collectgo__txt">99억 9,999만원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collectgo__item">
+                        <div class="collectgo__img"><img src="../../img/bank/D1AAAH0000.png" alt="은행"></div>
+                        <div class="collectgo__box">
+                            <div class="collectgo__tit">은행명 예금</div>
+                            <div class="collectgo__bar" data-width="10">
+                                <p class="collectgo__txt">4만원</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <!-- [E] 모으고 -->
 
@@ -153,7 +181,35 @@
                     </span>
                     <a href="" class="planSec__titRight">99억 9,999만<span>원</span></a>
                 </h3>
-
+                <div class="collectgo mgt30" id="plusgo">
+                    <div class="collectgo__item -self"> <!-- 자가 -self, 전세 -lease, 월세 -monthly -->
+                        <div class="collectgo__img">자가</div>
+                        <div class="collectgo__box">
+                            <div class="collectgo__tit">은행명 예금</div>
+                            <div class="collectgo__bar" data-width="100">
+                                <p class="collectgo__txt">99억 9,999만원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collectgo__item -lease">
+                        <div class="collectgo__img">전세</div>
+                        <div class="collectgo__box">
+                            <div class="collectgo__tit">은행명 예금</div>
+                            <div class="collectgo__bar" data-width="50">
+                                <p class="collectgo__txt">99억 9,999만원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collectgo__item -monthly">
+                        <div class="collectgo__img">월세</div>
+                        <div class="collectgo__box">
+                            <div class="collectgo__tit">은행명 예금</div>
+                            <div class="collectgo__bar" data-width="5">
+                                <p class="collectgo__txt">4만원</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <!-- [E] 더하고 -->
 
@@ -167,14 +223,20 @@
                     <span class="planSec__titLeft">부족한 금액</span>
                     <a href="" class="planSec__titRight">99억 9,999만<span>원</span></a>
                 </h3>
-                <div class="biligoBox">
-                    <div class="biligoBox__item">
-                        <p class="biligoBox__tit">내 대출 잔액</p>
-                        <p class="biligoBox__num">0억,0,000<span>만원</span></p>
+                <div class="borrowgoProgress mgt10">
+                    <progress class="borrowgoProgress__bar" value="82" max="100"></progress>
+                    <p class="borrowgoProgress__txt -left">0억 9,999만원 (82%)</p>
+                    <p class="borrowgoProgress__txt -right">0억 9,999만원 (18%)</p>
+                </div>
+
+                <div class="borrowgoBox">
+                    <div class="borrowgoBox__item">
+                        <p class="borrowgoBox__tit">내 대출 잔액</p>
+                        <p class="borrowgoBox__num">0억,0,000<span>만원</span></p>
                     </div>
-                    <div class="biligoBox__item">
-                        <p class="biligoBox__tit">내 신용점수</p>
-                        <p class="biligoBox__num">999<span>점</span></p>
+                    <div class="borrowgoBox__item">
+                        <p class="borrowgoBox__tit">내 신용점수</p>
+                        <p class="borrowgoBox__num">999<span>점</span></p>
                     </div>
                 </div>
             </section>
@@ -229,8 +291,15 @@
             $(".planRate__img").attr("data-per",10);
         }
 
+        saveGo();
+        collectgo("#collectgo");
+        collectgo("#plusgo");
+    })
+
+    //아끼고
+    function saveGo(){
         //아끼고 그래프 높이값
-        $(".agigoGraph__bar").each(function(){
+        $(".savegoGraph__bar").each(function(){
             var barH = $(this).data("height");
             var resultH =(barH / 100) * 75
             $(this).css("height",resultH+"%");
@@ -238,15 +307,33 @@
 
         //아끼고 평균 기준선 잡기
         var lineH;
-        if($(".planSec").hasClass("-year30")){
-            lineH = $(".agigoGraph .-right .agigoGraph__bar").height() - 28;
+        if($("#savego").hasClass("-year30")){
+            setTimeout(function(){
+                lineH = 150 - $(".savegoGraph .-right .savegoGraph__bar").height();
+                $(".savegoGraph__line").css({"top":lineH}).addClass("-active");
+            },1500);
         }else{
-            lineH = $(".agigoGraph .-center .agigoGraph__bar").height() - 28;
+            setTimeout(function(){
+                lineH = 150 - $(".savegoGraph .-center .savegoGraph__bar").height();
+                $(".savegoGraph__line").css({"top":lineH}).addClass("-active");
+            },1500);
         }
-        $(".agigoGraph__line").css("top",lineH);
 
+    }
 
-
-    })
+    //게이지
+    function collectgo(target){
+        var $tar = $(target);
+        var time = 0;
+        $tar.find(".collectgo__item").each(function(){
+            console.log($(this));
+            var $bar = $(this).find(".collectgo__bar");
+            var tarW = $bar.data("width");
+            time++;
+            setTimeout(function(){
+                $bar.css("width",tarW+"%");
+            },time*500);
+        });
+    }
 </script>
 </html>
