@@ -39,7 +39,7 @@
                 <a href="#none" class="btnBack"><span class="blind">Back</span></a>
             </div>
             <div class="center">
-                <h2 class="tit_h2">플랜</h2>
+                <h2 class="tit_h2">신용점수</h2>
             </div>
         </div>
     </div>
@@ -53,7 +53,7 @@
                 <button type="button" class="plan__btnTooltip">도움말</button>
             </h2>
 
-            <div class="planRate">
+            <div class="planRate -cerScore">
                 <div class="planProgress">
                     <div class="planProgress__bg"></div>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 136" class="planProgress__bar" fill="transparent">
@@ -70,10 +70,12 @@
                         <use clip-path="url(#myClip)" href="#planProgress__bar" fill="url(#gra01)" />
                     </svg>
                 </div>
-                <p class="planRate__txt -start">0억0,000만원</p>
-                <p class="planRate__txt -end">0억0,000만원</p>
-                <p class="planRate__per"><span>18</span>%남음</p>
-                <div class="planRate__img" data-per="0"></div>
+                <p class="planRate__per">상위<span>18</span>%</p>
+                <div class="cerScore">
+                    <p class="cerScore__tit">NICE 기준</p>
+                    <p class="cerScore__num">861 점</p>
+                    <a href="" class="cerScore__btn">신용조회내역</a>
+                </div>
             </div>
 
             <a class="planTarget mgt10">
@@ -284,12 +286,7 @@
         $(".planTit__bold span").text(perCent);
         $(".planRate__per span").text(100 - perCent);
 
-        //내집 그림 형태잡아주기
-        if(perCent > 10){
-            $(".planRate__img").attr("data-per",perCent);
-        }else{
-            $(".planRate__img").attr("data-per",10);
-        }
+
 
         saveGo();
         collectgo("#collectgo");

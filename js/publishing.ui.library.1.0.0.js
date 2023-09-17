@@ -149,6 +149,14 @@ $(document).ready(function(){
         $('.wrap.bg_lgray').closest('body').addClass('bg_lgray');
     }
 
+    //아파트,플랜 탭
+    $(document).on("click", ".tabs-nav", function () {
+        var $tar = $(this);
+        var idx = $tar.data('tab');
+        $tar.addClass("on").siblings().removeClass("on");
+        $('.tabs-item[data-tabCon="' + idx + '"]').addClass("on").siblings().removeClass("on");
+    });
+
     bsPageTypeHeight();         // 바텀시트 페이지타입 높이
 	bottomFixActionBar();       // 하단 고정 바
     contentsBottomPadding();    // 컨텐츠영역 하단 패딩 = 하단 고정높이값

@@ -778,13 +778,7 @@
         var startY = 0;
         var touchChk = false;
 
-        //탭
-        $(document).on("click", ".tabs-nav", function () {
-            var $tar = $(this);
-            var idx = $tar.data('tab');
-            $tar.addClass("on").siblings().removeClass("on");
-            $('.tabs-item[data-tabCon="' + idx + '"]').addClass("on").siblings().removeClass("on");
-        });
+
 
         //아파트 정보창 키우기
         $(document).on("click", ".aptInfoPop-type", function () {
