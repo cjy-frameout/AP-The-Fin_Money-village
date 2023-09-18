@@ -1030,9 +1030,33 @@ $black : #17181A;
   width:calc(100% - 40px);
   height:190px;
   margin:0 auto;
+  position: relative;
   &__box {
     width:100%;
     height:100%;
+  }
+  &__toolTip {
+    display: flex;
+    padding: 8px 12px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    background: #FFF;
+    position: relative;
+    border:1px solid red;
+  }
+  &__txt {
+    color: #6F7A81;
+    font-family: Pretendard;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 14.3px */
+    letter-spacing: -0.23px;
+    position: absolute;
+    z-index:100;
+    left:0;
+    top:0;
   }
 }
 
@@ -1323,3 +1347,5 @@ $black : #17181A;
 
   }
 }
+
+.highcharts-exporting-group {display:none !important;}

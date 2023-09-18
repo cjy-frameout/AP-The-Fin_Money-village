@@ -176,7 +176,11 @@
             </h3>
 
             <div class="savegoChart mgt30">
-                차트박스 영역 태스트영역
+                <div class="savegoChart__box" id="chart-container"></div>
+                <p class="savegoChart__txt">
+                    (x)소득 15구간<br>
+                    (y)인원수
+                </p>
             </div>
 
             <div class="likeUser">
@@ -215,6 +219,12 @@
 <!-- //wrap -->
 
 </body>
+<!-- [S] chart -->
+<script src="../../js/highchart/highcharts.js"></script>
+<script src="../../js/highchart/modules/exporting.js"></script>
+<script src="../../js/highchart/modules/export-data.js"></script>
+<script src="../../js/highchart/modules/accessibility.js"></script>
+<!-- [E] chart -->
 <script>
     $(document).ready(function(){
         saveGo();
@@ -242,5 +252,142 @@
         }
 
     }
+
+    // 소득 구간 데이터와 인구 수 데이터
+    var incomeCategories = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]; // 눈금을 1부터 15까지로 변경
+    var populationData = [750, 500, 300, 1600, 2100, 2400, 300, 3000, 3300, 3600, 4000, 4200, 4500, 5000, 800]; // 15개의 데이터 포인트로 변경
+
+    var targetIndex1 = 3; // 첫 번째 특정값 (소득 중간값)의 인덱스
+    var targetIndex2 = 11; // 두 번째 특정값 (상위값)의 인덱스
+    var targetValue1 = populationData[targetIndex1]; // 첫 번째 특정값 (소득 중간값)의 값
+    var targetValue2 = populationData[targetIndex2]; // 두 번째 특정값 (상위값)의 값
+    var targetColor1 = '#D4DADF'; // 회색
+    var targetColor2 = '#FF3E3E'; // 빨간색
+
+    // 데이터 포인트의 색상을 지정하고 상위값에만 특정 텍스트를 추가
+    var seriesData = populationData.map(function (value, index) {
+        var color = index === targetIndex1 ? targetColor1 : (index === targetIndex2 ? targetColor2 : '#EEF2F5');
+        var perCentVal = 0;
+        var customHTML = index === targetIndex2 ? `<div class="savegoChart__toolTip">상위${perCentVal}%</div>` : ''; // 상위값에만 특정 텍스트 추가
+        return {
+            y: value,
+            color: color,
+            customHTML: customHTML, // 커스텀 HTML 추가
+        };
+    });
+
+    // 특정 눈금 위치와 해당 위치의 레이블을 정의
+    var tickPositions = [0, targetIndex1, targetIndex2, 14]; // 특정 위치에 눈금 표시
+    var tickLabels = ["저소득", "소득중간값","", "고소득"]; // 인덱스에 해당하는 눈금에 표시할 텍스트
+
+    // Highcharts 그래프 옵션 설정
+    var options = {
+        chart: {
+            type: 'column', // 막대 그래프로 설정
+            events: {
+                render: function () {
+                    var chart = this;
+                    var renderer = chart.renderer;
+                    var targetPoint = chart.series[0].points.find(function (point) {
+                        return point.y === targetValue2;
+                    });
+
+                    // targetValue2의 그래프 위에 커스텀 HTML을 추가
+                    if (targetPoint && targetPoint.graphic) {
+                        var box = targetPoint.graphic.getBBox();
+                        var xPos = box.x + box.width / 2; // x 위치 계산
+                        var yPos = box.y - 20; // y 위치 계산
+                        var customHTML = seriesData.find(function (data) {
+                            return data.y === targetValue2;
+                        }).customHTML;
+
+                        var label = renderer
+                            .label(customHTML, xPos, yPos)
+                            .attr({
+                                fill: 'rgba(255, 255, 255, 0.85)', // 배경색 및 투명도
+                                r: 8, // 모서리 반경
+                                zIndex: 5, // 그림순서 ,
+                                padding:6,
+                                style:'padding:6px 8px;font-weight:600;',
+                                stroke:"#D8DEE7",
+                                'stroke-width':1,
+                                filter: 'url(#box-shadow)', // 그림자 효과 추가
+                            })
+                            .add();
+                        // 커스텀 레이블을 클릭해도 다른 이벤트가 발생하지 않도록 처리
+                        label.element.style.pointerEvents = 'none';
+                        var defs = renderer.createElement('defs').add();
+                        var filter = renderer.createElement('filter').attr({ id: 'box-shadow' }).add(defs);
+                        filter.element.innerHTML = '<feGaussianBlur stdDeviation="2.5" result="shadow" />\n' +
+                            '<feOffset dx="0" dy="2" />\n' + // 2px 아래로
+                            '<feMerge>\n' +
+                            '  <feMergeNode in="shadow" />\n' +
+                            '  <feMergeNode in="SourceGraphic" />\n' +
+                            '</feMerge>';
+
+                    }
+                },
+            },
+        },
+        xAxis: {
+            categories: incomeCategories, // 눈금 레이블을 카테고리로 설정
+            tickPositions: tickPositions, // 특정 위치에 눈금 표시
+            tickmarkPlacement: 'on', // 눈금 위치에 표시
+            title: {
+                text: null // x 축 설명글 제거
+            },
+            labels: {
+                enabled: true, // x 축 라벨 활성화
+                align: 'center', // 텍스트를 가운데 정렬
+                rotation: 0, // 텍스트 회전 각도 (0도: 수평)
+                formatter: function () {
+                    var index = tickPositions.indexOf(this.pos);
+                    if (index !== -1) {
+                        return tickLabels[index]; // 눈금 위치에 해당하는 레이블 반환
+                    }
+                    return this.value; // 그 외의 경우에는 기본값을 반환 (x 값 표시)
+                }
+            }
+        },
+        yAxis: {
+            title: {
+                text: null // y 축 제목 제거
+            },
+            labels: {
+                enabled: false // y 축 라벨 비활성화
+            }
+        },
+        series: [{
+            name: '', // 시리즈 이름을 비워서 숨김
+            data: seriesData, // 변경된 데이터 포인트 배열 사용
+            dataLabels: {
+                enabled: false,
+            }
+        }],
+        title: {
+            text: null
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0, // 포인트 패딩을 0으로 설정
+                groupPadding: 0.04, // 그룹 패딩을 4%로 설정 (간격 4px)
+                states: {
+                    hover: {
+                        enabled: false // hover 상태에서 변경 효과 비활성화
+                    }
+                }
+            }
+        },
+        tooltip: {
+            enabled: false, // 툴팁 비활성화
+        },
+    };
+
+    // 그래프 그리기
+    Highcharts.chart('chart-container', options);
+
+
+
+
 </script>
 </html>
