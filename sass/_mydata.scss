@@ -797,15 +797,15 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     margin-top: 24px;
 }
 
-.list-typeA-title {
-    color: #BB2649;
+.list-typeA-title { 
+    color: #333;
     font-size: 16px;
     font-weight: 600;
 }
 
 .list-typeA-desc {
-    color: #6F7A81;
-    font-size: 16px;
+    color: #999;
+    font-size: 13px;
     font-weight: 400;
     line-height: 1.3;
     margin-top: 5px;
@@ -1180,6 +1180,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 .tab_cntDp1 > .btn-wrap { padding: 0 0 20px;}
 .asLink_box + .banner.inLink{ margin-top: 20px; }
 .cont-box + .info-wrap.bank { margin-top: 60px;}
+.credit-score + .cont-box { margin-top: 60px;}
 .org_wrap {
     padding: 0 20px;
 }
@@ -1270,7 +1271,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     border-top: 1px solid #DDE3E7;
     margin-top: 32px;
     padding-top: 40px;
-    padding-bottom: 220px;
+    padding-bottom: 195px;
     &.type2 {
         background: url(../img/theme/apthefin/credit_score2.png) no-repeat 50% 136px;
     }
