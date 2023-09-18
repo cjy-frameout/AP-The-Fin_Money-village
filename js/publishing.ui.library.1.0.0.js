@@ -337,6 +337,7 @@ $(document).on("click", ".btn_open_layer_pop", function(e){
 	$('html').addClass('scroll_lock');
 	var dimIdx = $('.dim').index();
 	eval('$focusReturn' + [dimIdx] + '= $(this)');
+
 });
 function layer_popup(el){
 	var $el = $(el);
@@ -361,7 +362,9 @@ function layer_popup(el){
         }else if($('.dim').length == '1'){
             $('.dim').css('opacity','.7');
         }
-		eval('$focusReturn'+ [dimIdx]).focus();	// multi layer
+        if($focusReturn!=undefined){
+            eval('$focusReturn'+ [dimIdx]).focus();	// multi layer
+        }
 		return false;
 	});
 }

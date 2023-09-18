@@ -96,3 +96,24 @@
   @include icon();
   background-image: url('../img/theme/apthefin/icon/ic_paper_color.png');
 }
+
+@mixin iconSpeedBar {
+  width:20px;
+  height:20px;
+  @include icon();
+  background-image: url('../img/theme/apthefin/icon/ic_speed_bar.png');
+}
+
+@mixin iconBankType {
+  width:40px;
+  height:40px;
+  @include icon();
+  background-image: url('../img/theme/apthefin/icon/ic_bank_type.png');
+}
+
+@mixin iconCardType {
+  width:40px;
+  height:40px;
+  @include icon();
+  background-image: url('../img/theme/apthefin/icon/ic_card_type.png');
+}

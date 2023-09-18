@@ -277,9 +277,9 @@
 <script>
     $(document).ready(function(){
         // 내집마련 테스트용
-        var perCent = 80; //%값
+        var perCent = 90; //%값
         var $result = $("#planProgress__bar"); //그래프 바
-        var val = (perCent-100)/(5/9); //회전 180도를 퍼센트로
+        var val = ((perCent / 100) * 180) - 180; // 0에서 1000을 -180에서 0으로 변환
         $result.css("transform",`rotate(${val}deg)`); //css 적용
         $(".planTit__bold span").text(perCent);
         $(".planRate__per span").text(100 - perCent);
@@ -291,16 +291,28 @@
             $(".planRate__img").attr("data-per",10);
         }
 
-        saveGo();
-        collectgo("#collectgo");
-        collectgo("#plusgo");
+
+        //collectgo("#collectgo");
+        //collectgo("#plusgo");
+
+
+
+        $(window).scroll(function(){
+            var chk01 = $("#scrollTar01").offset().top - 150;
+            var chk02 = $("#scrollTar02").offset().top - 250;
+            var chk03 = $("#scrollTar03").offset().top - 350;
+            var scrollH = $(window).scrollTop();
+
+            scrollH >= chk01 && saveGo();
+            scrollH >= chk02 && collectgo("#collectgo");
+            scrollH >= chk03 && collectgo("#plusgo");
+
+        })
+
     })
 
-    $(window).scroll(function(){
-        var chk01 = $("#scrollTar01").offset().top;
-        var chk02 = $("#scrollTar02").offset().top;
-        var chk03 = $("#scrollTar03").offset().top;
-    })
+
+
 
     //아끼고
     function saveGo(){
@@ -317,12 +329,12 @@
             setTimeout(function(){
                 lineH = 150 - $(".savegoGraph .-right .savegoGraph__bar").height();
                 $(".savegoGraph__line").css({"top":lineH}).addClass("-active");
-            },1500);
+            },500);
         }else{
             setTimeout(function(){
                 lineH = 150 - $(".savegoGraph .-center .savegoGraph__bar").height();
                 $(".savegoGraph__line").css({"top":lineH}).addClass("-active");
-            },1500);
+            },500);
         }
 
     }
@@ -330,15 +342,12 @@
     //모으고,더하고 게이지
     function collectgo(target){
         var $tar = $(target);
-        var time = 0;
+
         $tar.find(".collectgo__item").each(function(){
             console.log($(this));
             var $bar = $(this).find(".collectgo__bar");
             var tarW = $bar.data("width");
-            time++;
-            setTimeout(function(){
-                $bar.css("width",tarW+"%");
-            },time*500);
+            $bar.css("width",tarW+"%");
         });
     }
 </script>

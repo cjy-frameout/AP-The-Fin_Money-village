@@ -73,185 +73,95 @@
                 <p class="planRate__per">상위<span>18</span>%</p>
                 <div class="cerScore">
                     <p class="cerScore__tit">NICE 기준</p>
-                    <p class="cerScore__num">861 점</p>
+                    <p class="cerScore__num"><span>861</span>점</p>
                     <a href="" class="cerScore__btn">신용조회내역</a>
                 </div>
             </div>
+            <a href="" class="cerScore__up mgt30">신용점수 한번에 올리기</a>
 
-            <a class="planTarget mgt10">
-                <div class="planTarget__info">
-                    <p class="planTarget__type">목표 주택</p>
-                    <h3 class="planTarget__name">역삼 푸르지오 아파트</h3>
-                    <p  class="planTarget__size">60A㎡ 34/63㎡</p>
-                </div>
-                <div class="planTarget__price">
-                    <span class="planTarget__now">현재 시세</span>
-                    <span class="planTarget__won">10억 4,615만원</span>
-                </div>
+            <a href="" class="chkLoanBanner mgt10">
+                <span class="chkLoanBanner__dec">부족한 금액을 채우는</span>
+                <p class="chkLoanBanner__tit">최저금리 대출 확인하기</p>
             </a>
+
 
             <hr class="plan__hr">
 
-            <!-- [S] 아끼고 -->
-            <h3 class="planTit" id="scrollTar01"><strong>아끼고</strong> <button type="button" class="plan__btnTooltip">도움말</button></h3>
-            <p class="planDec">신용카드 이용내역을 점검하여 내 지출을 관리해요</p>
-
-            <section id="savego" class="planSec mgt20 -year30 -good"> <!-- 30대기준 -year30, 내평균 -my, 적절할때 -good, 지출과다 -bed, 클래스 추가 -->
+            <!-- [S] 신용점수비교 -->
+            <section id="scrollTar01" class="planSec -hi -noBorder"> <!-- 신용점수가 높을때 -hi, 낮을때는 -low -->
                 <h3 class="planSec__tit">
                     <span class="planSec__titLeft">
-                        이달의<br>
-                        <strong>내 지출은 <span class="planSec__titEff">적절해요</span></strong>
+                        <strong>
+                            내 신용점수는<br>
+                            30대 평균 대비 약 <span class="planSec__titEff">161점 높아요</span>
+                        </strong>
                     </span>
-                    <a href="" class="planSec__titRight planMore">자세히</a>
                 </h3>
                 <div class="savegoGraph">
                     <div class="savegoGraph__item -left">
-                        <div class="savegoGraph__topTxt">100%</div>
-                        <div class="savegoGraph__bar" data-height="80">
-                            <div class="savegoGraph__inner" style="height:50%"><span>50%</span></div>
+                        <div class="savegoGraph__topTxt">999점</div>
+                        <div class="savegoGraph__bar" data-height="100">
+                            <div class="savegoGraph__inner"></div>
                         </div>
-                        <div class="savegoGraph__txt">9월 지출</div>
+                        <div class="savegoGraph__txt">나</div>
                     </div>
                     <div class="savegoGraph__item -center">
-                        <div class="savegoGraph__topTxt">125만원</div>
-                        <div class="savegoGraph__bar" data-height="100"></div>
-                        <div class="savegoGraph__txt">내 평균</div>
+                        <div class="savegoGraph__topTxt">800점</div>
+                        <div class="savegoGraph__bar" data-height="50"></div>
+                        <div class="savegoGraph__txt">30대</div>
                     </div>
                     <div class="savegoGraph__item -right">
-                        <div class="savegoGraph__topTxt">102만원</div>
-                        <div class="savegoGraph__bar" data-height="80"></div>
-                        <div class="savegoGraph__txt">30대 평균</div>
+                        <div class="savegoGraph__topTxt">680점</div>
+                        <div class="savegoGraph__bar" data-height="60"></div>
+                        <div class="savegoGraph__txt">전국민</div>
                     </div>
                     <div class="savegoGraph__line"></div>
                 </div>
             </section>
-            <!-- [E] 아끼고 -->
+            <!-- [E] 신용점수비교 -->
 
             <hr class="plan__hr">
 
-            <!-- [S] 모으고 -->
-            <h3 class="planTit" id="scrollTar02"><strong>모으고</strong> <button type="button" class="plan__btnTooltip">도움말</button></h3>
-            <p class="planDec">내 집 마련을 위해 모으는 금액이에요</p>
-            <section class="planSec mgt20">
+            <!-- [S] 대출잔액 -->
+            <section id="scrollTar02" class="planSec -low -noBorder"> <!-- 높을때 -hi, 낮을때는 -low -->
                 <h3 class="planSec__tit">
                     <span class="planSec__titLeft">
-                        계좌 <span class="planSec__titNum">4</span>
+                        <strong>
+                            내  <span class="planSec__titEff">대출 잔액은 <i>0</i>원</span>이에요<br>
+                            30대 평균보다 대출이 적어요!
+                        </strong>
                     </span>
-                    <a href="" class="planSec__titRight">99억 9,999만<span>원</span></a>
                 </h3>
-                <div class="collectgo mgt30" id="collectgo">
-                    <div class="collectgo__item">
-                        <div class="collectgo__img"><img src="../../img/bank/D1AAAH0000.png" alt="은행"></div>
-                        <div class="collectgo__box">
-                            <div class="collectgo__tit">은행명 예금</div>
-                            <div class="collectgo__bar" data-width="100">
-                                <p class="collectgo__txt">99억 9,999만원</p>
-                            </div>
+                <div class="savegoGraph">
+                    <div class="savegoGraph__item -left">
+                        <div class="savegoGraph__topTxt">0원</div>
+                        <div class="savegoGraph__bar" data-height="0">
+                            <div class="savegoGraph__inner"></div>
                         </div>
+                        <div class="savegoGraph__txt">내 대출</div>
                     </div>
-                    <div class="collectgo__item">
-                        <div class="collectgo__img"><img src="../../img/bank/D1AAAH0000.png" alt="은행"></div>
-                        <div class="collectgo__box">
-                            <div class="collectgo__tit">은행명 예금</div>
-                            <div class="collectgo__bar" data-width="50">
-                                <p class="collectgo__txt">99억 9,999만원</p>
-                            </div>
-                        </div>
+                    <div class="savegoGraph__item -center">
+                        <div class="savegoGraph__topTxt">9,999만원</div>
+                        <div class="savegoGraph__bar" data-height="100"></div>
+                        <div class="savegoGraph__txt">30대</div>
                     </div>
-                    <div class="collectgo__item">
-                        <div class="collectgo__img"><img src="../../img/bank/D1AAAH0000.png" alt="은행"></div>
-                        <div class="collectgo__box">
-                            <div class="collectgo__tit">은행명 예금</div>
-                            <div class="collectgo__bar" data-width="10">
-                                <p class="collectgo__txt">4만원</p>
-                            </div>
-                        </div>
+                    <div class="savegoGraph__item -right">
+                        <div class="savegoGraph__topTxt">9,999만원</div>
+                        <div class="savegoGraph__bar" data-height="100"></div>
+                        <div class="savegoGraph__txt">전연령</div>
                     </div>
+                    <div class="savegoGraph__line"></div>
                 </div>
+                <ul class="planCaution__list mgt20">
+                    <li>나와 유사소득군인 동일 연령과 전연령의 대출 잔액 평균입니다.</li>
+                </ul>
             </section>
-            <!-- [E] 모으고 -->
-
-            <hr class="plan__hr">
-
-            <!-- [S] 더하고 -->
-            <h3 class="planTit" id="scrollTar03"><strong>더하고</strong> <button type="button" class="plan__btnTooltip">도움말</button></h3>
-            <p class="planDec">내 집 마련에 더할 부동산 자산이에요</p>
-            <section class="planSec mgt20">
-                <h3 class="planSec__tit">
-                    <span class="planSec__titLeft">
-                        부동산 <span class="planSec__titNum">4</span>
-                    </span>
-                    <a href="" class="planSec__titRight">99억 9,999만<span>원</span></a>
-                </h3>
-                <div class="collectgo mgt30" id="plusgo">
-                    <div class="collectgo__item -self"> <!-- 자가 -self, 전세 -lease, 월세 -monthly -->
-                        <div class="collectgo__img">자가</div>
-                        <div class="collectgo__box">
-                            <div class="collectgo__tit">은행명 예금</div>
-                            <div class="collectgo__bar" data-width="100">
-                                <p class="collectgo__txt">99억 9,999만원</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collectgo__item -lease">
-                        <div class="collectgo__img">전세</div>
-                        <div class="collectgo__box">
-                            <div class="collectgo__tit">은행명 예금</div>
-                            <div class="collectgo__bar" data-width="50">
-                                <p class="collectgo__txt">99억 9,999만원</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collectgo__item -monthly">
-                        <div class="collectgo__img">월세</div>
-                        <div class="collectgo__box">
-                            <div class="collectgo__tit">은행명 예금</div>
-                            <div class="collectgo__bar" data-width="5">
-                                <p class="collectgo__txt">4만원</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- [E] 더하고 -->
-
-            <hr class="plan__hr">
-
-            <!-- [S] 빌리고 -->
-            <h3 class="planTit"><strong>빌리고</strong> <button type="button" class="plan__btnTooltip">도움말</button></h3>
-            <p class="planDec">내 집 마련을 위해 가능한 대출 상품을 확인해요</p>
-            <section class="planSec mgt20">
-                <h3 class="planSec__tit">
-                    <span class="planSec__titLeft">부족한 금액</span>
-                    <a href="" class="planSec__titRight">99억 9,999만<span>원</span></a>
-                </h3>
-                <div class="borrowgoProgress mgt10">
-                    <progress class="borrowgoProgress__bar" value="82" max="100"></progress>
-                    <p class="borrowgoProgress__txt -left">0억 9,999만원 (82%)</p>
-                    <p class="borrowgoProgress__txt -right">0억 9,999만원 (18%)</p>
-                </div>
-
-                <div class="borrowgoBox">
-                    <div class="borrowgoBox__item">
-                        <p class="borrowgoBox__tit">내 대출 잔액</p>
-                        <p class="borrowgoBox__num">0억,0,000<span>만원</span></p>
-                    </div>
-                    <div class="borrowgoBox__item">
-                        <p class="borrowgoBox__tit">내 신용점수</p>
-                        <p class="borrowgoBox__num">999<span>점</span></p>
-                    </div>
-                </div>
-            </section>
-            <!-- [E] 빌리고 -->
+            <!-- [E] 대출잔액 -->
 
 
-            <a class="planBanner mgt20">
-                <p class="planBanner__tit">
-                    내 집 마련을 위해<br>
-                    <strong>지금 대출 가능한 상품은?</strong>
-                </p>
-                <p class="planBanner__btn">대출 조회</p>
-            </a>
+
+
+
 
             <section class="planCaution">
                 <h3 class="planCaution__tit">안내사항</h3>
@@ -278,65 +188,56 @@
 </body>
 <script>
     $(document).ready(function(){
-        // 내집마련 테스트용
-        var perCent = 80; //%값
-        var $result = $("#planProgress__bar"); //그래프 바
-        var val = (perCent-100)/(5/9); //회전 180도를 퍼센트로
-        $result.css("transform",`rotate(${val}deg)`); //css 적용
-        $(".planTit__bold span").text(perCent);
-        $(".planRate__per span").text(100 - perCent);
+        // 신용점수 테스트용
+        var perCent = 800; // 0에서 1000 사이의 값
+        var $result = $("#planProgress__bar"); // 그래프 바
+        var val = ((perCent / 1000) * 180) - 180; // 0에서 1000을 -180에서 0으로 변환
+        $result.css("transform", `rotate(${val}deg)`); // CSS 적용
+        $(".cerScore__num span").text(perCent); //테스트 확인용
+
+        $(window).scroll(function(){
+            var chk01 = $("#scrollTar01").offset().top - 200;
+            var chk02 = $("#scrollTar02").offset().top - 250;
+            var scrollH = $(window).scrollTop();
+
+            scrollH >= chk01 && saveGo("#scrollTar01");
+            scrollH >= chk02 && saveGo("#scrollTar02");
+        })
 
 
 
-        saveGo();
-        collectgo("#collectgo");
-        collectgo("#plusgo");
     })
 
-    $(window).scroll(function(){
-        var chk01 = $("#scrollTar01").offset().top;
-        var chk02 = $("#scrollTar02").offset().top;
-        var chk03 = $("#scrollTar03").offset().top;
-    })
 
-    //아끼고
-    function saveGo(){
-        //아끼고 그래프 높이값
-        $(".savegoGraph__bar").each(function(){
+
+    //신용점수비교
+    function saveGo(tar){
+        //신용점수비교 그래프 높이값
+        var $tar = $(tar);
+        $tar.find(".savegoGraph__bar").each(function(){
             var barH = $(this).data("height");
             var resultH =(barH / 100) * 75
             $(this).css("height",resultH+"%");
         })
-
-        //아끼고 평균 기준선 잡기
+        //신용점수비교 평균 기준선 잡기
         var lineH;
-        if($("#savego").hasClass("-year30")){
-            setTimeout(function(){
-                lineH = 150 - $(".savegoGraph .-right .savegoGraph__bar").height();
-                $(".savegoGraph__line").css({"top":lineH}).addClass("-active");
-            },1500);
-        }else{
-            setTimeout(function(){
-                lineH = 150 - $(".savegoGraph .-center .savegoGraph__bar").height();
-                $(".savegoGraph__line").css({"top":lineH}).addClass("-active");
-            },1500);
-        }
+        setTimeout(function(){
+            $tar.find(".savegoGraph__line").css({"top":lineH}).addClass("-active");
+            var lefH = $tar.find(".-left .savegoGraph__bar").height();
+            var tarH = $tar.find(".-center .savegoGraph__bar").height();
+            var $inner = $tar.find(".savegoGraph__inner");
+            var $line = $tar.find(".savegoGraph__line");
+
+            if($tar.hasClass("-hi")){
+                $inner.css("height",tarH+"px");
+                lineH = 150 - tarH
+            }else{
+                $line.hide();
+            }
+            $line.css({"top":lineH}).addClass("-active");
+        },500);
 
     }
 
-    //모으고,더하고 게이지
-    function collectgo(target){
-        var $tar = $(target);
-        var time = 0;
-        $tar.find(".collectgo__item").each(function(){
-            console.log($(this));
-            var $bar = $(this).find(".collectgo__bar");
-            var tarW = $bar.data("width");
-            time++;
-            setTimeout(function(){
-                $bar.css("width",tarW+"%");
-            },time*500);
-        });
-    }
 </script>
 </html>
