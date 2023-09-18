@@ -1058,6 +1058,9 @@ $black : #17181A;
     left:0;
     top:0;
   }
+  .highcharts-exporting-group {display:none !important;}
+  .highcharts-credits,
+  .highcharts-a11y-proxy-button {display:none}
 }
 
 .likeUser {
@@ -1348,4 +1351,3 @@ $black : #17181A;
   }
 }
 
-.highcharts-exporting-group {display:none !important;}
