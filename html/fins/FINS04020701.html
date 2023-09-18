@@ -123,9 +123,15 @@
                                     </li>
                                 </ul>
 
-                                <div class="btn-wrap noBorder">
-                                    <a href="#unapproved" class="btn-alink btn-open-layerPop" role="button">미승인 내역 확인하기</a>
+                                <!-- S : 9/18 버튼 수정 -->
+                                <div class="fix_bottom not_dock">
+                                    <div class="btn_wrap">
+                                        <div class="btnGroup type2">
+                                            <p><a href="#other-condi" class="btnBl1 btn_open_layer_pop" role="button">다른 조건으로 다시 조회하기</a></p>
+                                        </div>
+                                    </div>
                                 </div>
+                                <!-- E : 9/18 버튼 수정 -->
                             </div>
                             <!-- // [E] 낮은 금리순 -->
                             <!-- [S] 높은 한도순 -->
@@ -367,6 +373,28 @@
                 </div>
             </div>
         </div>
+
+        <!-- 다른조건 팝업  -->
+        <div id="other-condi" class="layer_popup type2">
+            <div class="layer_position">
+                <div class="layer_inner">
+                    <div class="layer_cont">
+                        <div class="msg_box">
+                            <div class="msg_box">
+                                <p class="msg_alert">
+                                    <span class="accNum">다른 조건으로 대출을 알아볼까요?</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="btn_layer_wrap">
+                            <button type="button" class="js_pop_close btn_cancel"><span>나가기</span></button>
+                            <button type="button" class="js_pop_close btn_confirm"><span>계속하기</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //다른조건팝업 -->
         
     </div>
     <script type="text/javascript">
