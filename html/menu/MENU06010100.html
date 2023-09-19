@@ -33,74 +33,14 @@
 <body>
 
 
-<div class="wrap">
-    <!-- header -->
-    <div class="header">
-        <div class="header_inn">
-            <div class="left">
-                <a href="#none" class="btnBack"><span class="blind">Back</span></a>
-            </div>
-            <div class="center">
-                <h2 class="tit_h2">자주 묻는 질문</h2>
-            </div>
 
-        </div>
-    </div>
-    <!-- //header -->
-
-    <div class="container">
-        <div class="content">
-            <section class="qna">
-                <h3 class="tit_h3">비교 대출</h3>
-                <div class="accBox">
-                    <div class="accBox-item -active"> <!-- 펼치기 -active -->
-                        <a class="accBox-tit">
-                            정말 이 조건 그대로 대출 가능한가요?정말 이 조건 그대로 대출 가능한가요?정말 이 조건 그대로 대출 가능한가요?정말 이 조건 그대로 대출 가능한가요?
-                        </a>
-                        <div class="accBox-content">
-                            <div class="accBox-inner">
-                                제공받은자<br>
-                                안녕하세요. 더핀입니다.<br>
-                                금융의 고유명사, 더핀의 iOS 버전이 출시되었습니다.<br>
-                                앞으로 더욱 좋은 서비스를 제공하기 위하여 최선을 다하겠습니다.<br>
-                                고객 여러분의 많은 관심과 의견을 부탁드립니다.<br>
-                                감사합니다.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accBox-item">
-                        <a class="accBox-tit">
-                            qna 타이틀
-                        </a>
-                        <div class="accBox-content">
-                            <div class="accBox-inner">
-                                답변
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <footer class="fix_bottom">
-                <!-- btn_wrap -->
-                <div class="btn_wrap">
-                    <div class="btnGroup btnSeWrap type_col">
-                        <p class="btnSe"><a href="#none" class="btnBl1">서비스 문의</a></p>
-                        <p class="tac btnUnderWrap"><a href="#none" class="btnUnder">원하는 정보를 찾지 못하셨나요?</a></p>
-                    </div>
-                </div>
-                <!-- //btn_wrap -->
-            </footer>
-        </div>
-    </div>
-</div>
 
 
 <!-- [S] 소식 -->
 <div id="layer_bs" class="layer_bottomsheet">
     <div class="layer_inner">
         <div class="layer_tit">
-            <strong class="tit">고객센터</strong>
+            <strong class="tit">소식</strong>
             <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
         </div>
         <div class="layer_cont">
@@ -109,20 +49,20 @@
                 <ul class="cdChkSubList">
                     <li class="cdChkItem roundType">
                         <label>
-                            <input type="radio" name="radio01" id="radio1" checked="checked">
-                            <i></i><span>자주 묻는 질문</span>
+                            <input type="radio" name="radio01" id="radio1">
+                            <i></i><span>NEWS</span>
                         </label>
                     </li>
                     <li class="cdChkItem roundType">
                         <label>
                             <input type="radio" name="radio01" id="radio2">
-                            <i></i><span>이용약관</span>
+                            <i></i><span>공지사항</span>
                         </label>
                     </li>
                     <li class="cdChkItem roundType">
                         <label>
-                            <input type="radio" name="radio01" id="radio3">
-                            <i></i><span>금융소비자보호</span>
+                            <input type="radio" name="radio01" id="radio3" checked="checked">
+                            <i></i><span>이벤트</span>
                         </label>
                     </li>
                 </ul>
@@ -140,7 +80,7 @@
 </body>
 <script>
     $(document).ready(function(){
-        /*layer_bottomsheet('#layer_bs');*/
+        layer_bottomsheet('#layer_bs');
     })
     $(document).on("click", ".btn_open_bottom_sheet", function(e){
         e.preventDefault();

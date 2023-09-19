@@ -39,7 +39,7 @@
                 <a href="#none" class="btnBack"><span class="blind">Back</span></a>
             </div>
             <div class="center">
-                <h2 class="tit_h2">공동인증서 가져오기</h2>
+                <h2 class="tit_h2">인증서 비밀번호 변경</h2>
             </div>
 
         </div>
@@ -48,63 +48,77 @@
 
     <div class="container">
         <div class="content">
-            <h3 class="cont-title-big mgt30">PC에 저장되어 있는 공동인증서를<br>스마트폰으로 복사합니다.</h3>
 
-            <ol class="listNum mgt30">
-                <li>PC에서 공동인증서 복사 페이지 접속 (URL : <a href="https://cert.bizplay.co.kr/apthefin">https://cert.bizplay.co.kr/apthefin</a>)</li>
-                <li>공동인증서 복사하기 버튼 클릭</li>
-                <li>가져올 공동인증서 선택</li>
-                <li>공동인증서 비밀번호 입력</li>
-                <li>아래 인증번호 입력</li>
-                <li>아래의 ‘다음’ 버튼 터치 시 가져오기 완료</li>
-            </ol>
+            <a href="#" class="authList">
+                <p class="authList-name">홍길동</p>
+                <dl class="authList-info">
+                    <dt>발급자</dt>
+                    <dd>금융결제원</dd>
+                    <dt>구분</dt>
+                    <dd>은행/신용카드/보험(개인)</dd>
+                    <dt>만료일</dt>
+                    <dd>2023.10.12</dd>
+                </dl>
+            </a>
 
 
+
+
+            <!-- [S] 비밀번호 입력 -->
             <div class="accSetting">
-                <div class="editName">
-                    <label for="inp001" class="itemTit">인증번호 입력</label>
+                <div class="editName mgt10">
+                    <label for="inp001" class="itemTit">현재 비밀번호</label>
                     <div class="input-box items2">
-                        <input type="number" id="inp001" required="required"  value="1234" class="tx-cnt">
-                        <div class="dash">-</div>
-                        <input type="number" id="inp002" title="인증번호 5번째" required="required"  value="1234" class="tx-cnt">
-                        <div class="dash">-</div>
-                        <input type="number" id="inp003" title="인증번호 9번째" required="required"  value="1234" class="tx-cnt">
+                        <div class="ipt-pass-box">
+                            <input type="password" id="inp001" required="required" placeholder="인증서 비밀번호 입력" value="" >
+                            <div class="password-disc-wrap" aria-hidden="true"></div>
+                        </div>
                     </div>
                 </div>
+                <div class="editName">
+                    <label for="inp002" class="itemTit">이름</label>
+                    <input type="password" id="inp002" required="required" placeholder="숫자+영문+특수문자 조합 8자리 이상" >
+                </div>
+                <div class="editName">
+                    <label for="inp003" class="itemTit">이름</label>
+                    <input type="password" id="inp003" required="required" placeholder="새 비밀번호 입력" >
+                </div>
             </div>
+            <!-- [E] 비밀번호 입력 -->
 
+            
 
+            <!-- [S] 하단 고정 영역 -->
             <footer class="fix_bottom">
                 <div class="btn_wrap">
                     <div class="btnGroup sub_btnGroup">
-                        <p><a href="#" class="btnBl3" role="button" onclick="">취소</a></p>
-                        <p><a href="#" class="btnBl1 btn_open_layer_pop" role="button" onclick="">다음</a></p>
+                        <p><a href="#none" class="btnBl3">취소</a></p>
+                        <p><a href="#none" class="btnBl1">확인</a></p>
                     </div>
                 </div>
             </footer>
-
+            <!-- [E] 하단 고정 영역 -->
         </div>
     </div>
 </div>
 
 
 
-
-<!-- [S] 알림 -->
+<!-- [S]  알림 -->
 <div id="" class="layer_popup type2">
     <div class="layer_position">
         <div class="layer_inner">
             <div class="layer_cont">
                 <div class="msg_box">
                     <div class="msg_box">
-                        <p class="msg_alert">알림</p>
+                        <p class="msg_alert"><span class="accNum">알림</span></p>
                         <p class="msg_customer mgt10">
-                            인증서 가져오기를 성공적으로 완료했습니다.
+                            비밀번호가 일치하지 않습니다.<br>다시 입력해 주세요.
                         </p>
                     </div>
                 </div>
                 <div class="btn_layer_wrap">
-                    <button type="button" class="js_pop_close"><span>확인</span></button>
+                    <button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
                 </div>
             </div>
         </div>
@@ -112,48 +126,36 @@
 </div>
 <!-- [E] 알림 -->
 
-<!-- [S] 알림 -->
+<!-- [S]  알림 -->
 <div id="" class="layer_popup type2">
     <div class="layer_position">
         <div class="layer_inner">
             <div class="layer_cont">
                 <div class="msg_box">
                     <div class="msg_box">
-                        <p class="msg_alert">알림</p>
+                        <p class="msg_alert"><span class="accNum">알림</span></p>
                         <p class="msg_customer mgt10">
-                            인증서 가져오지 못했습니다.<br>
-                            다시 시도해 주세요.
+                            공동인증서를<br>삭제하시겠습니까?
                         </p>
                     </div>
                 </div>
                 <div class="btn_layer_wrap">
-                    <button type="button" class="js_pop_close"><span>확인</span></button>
+                    <button type="button" class="js_pop_close btn_cancel"><span>취소</span></button>
+                    <button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- [E] 알림 -->
+
+
+
 
 
 </body>
 
 <script>
-    //직접입력 테스트용
-    $(".js_pop_close").on("click",function(){
-        $("#radio5").is(":checked") ? $(".inpWriteArea").show() : $(".inpWriteArea").hide();
-    })
 
-
-    // [S] 바텀시트
-    $(document).on("click", ".btn_open_bottom_sheet", function(e){
-        e.preventDefault();
-        var $href = $(this).attr('href');
-        layer_bottomsheet($href);
-        $('html').addClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
-        $focusReturn = $(this);
-    });
-    
-    // [E] 바텀시트
 </script>
 </html>

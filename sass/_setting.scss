@@ -202,3 +202,26 @@ input[type="password"]::placeholder {
 }
 
 .tx-cnt {text-align:center !important;}
+
+.marketingArg {
+  display:block;
+  border-top:1px solid #E5E5E5;
+  padding-top:15px;
+  span {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:14px;
+    font-weight:400;
+    line-height:22px;
+    color:#666;
+    &:after {
+      content:"";
+      display:block;
+      @include iconCheck();
+    }
+  }
+  input:checked+span:after {
+    @include iconCheck(checked);
+  }
+}

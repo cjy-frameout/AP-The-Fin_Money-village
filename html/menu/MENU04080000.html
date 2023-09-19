@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title></title>
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="title" content="">-->
+    <meta name="description" content="">
+    <!--<meta name="keywords" content="">-->
+    <!-- The Open Graph protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+    <!-- //The Open Graph protocol -->
+    <link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/interaction.js"></script>
+    <script type="text/javascript" src="../../js/cmd.js"></script>
+</head>
+
+<body>
+<div class="wrap">
+    <!-- header -->
+    <div class="header">
+        <div class="header_inn">
+            <div class="left">
+                <a href="#none" class="btnBack"><span class="blind">Back</span></a>
+            </div>
+            <div class="center">
+                <h2 class="tit_h2">설정</h2>
+            </div>
+
+        </div>
+    </div>
+    <!-- //header -->
+
+    <div class="container">
+        <div class="content setting">
+            <nav class="setting-list">
+                <a href="" class="setting-item">로그인 방식</a>
+                <a href="" class="setting-item">간편비밀번호 설정</a>
+                <div class="setting-item">
+                    생체 인증 사용
+                    <div class="setting-switch">
+                        <label class="btn_switch">
+                            <input type="checkbox" id="chk001"><span class="round"></span>
+                        </label>
+                    </div>
+                </div>
+                <a href="" class="setting-item">공동인증서 관리</a>
+                <div class="setting-item">
+                    마케팅정보수신 동의
+                    <div class="setting-switch">
+                        <label class="btn_switch">
+                            <input type="checkbox"><span class="round"></span>
+                        </label>
+                    </div>
+                </div>
+                <a href="" class="setting-item">이용 해지</a>
+            </nav>
+            <section class="settingVer">
+                <h3 class="settingVer-tit">앱버전</h3>
+                <div class="settingVer-num">
+                    <p>현재 버전 1.0.6</p>
+                    <p>최신 버전 2.0.1</p>
+                    <button type="button" class="settingVer-btn">업데이트</button>
+                </div>
+                <a href="" class="settingVer-licence">오픈소스 라이센스 보기</a>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+<!-- [S]  알림 -->
+<div id="pop001" class="layer_popup type2">
+    <div class="layer_position">
+        <div class="layer_inner">
+            <div class="layer_cont">
+                <div class="msg_box">
+                    <div class="msg_box">
+                        <p class="msg_alert"><span class="accNum">알림</span></p>
+                        <p class="msg_customer mgt10">
+                            다음 로그인부터 생체 <br>로그인하실 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="btn_layer_wrap">
+                    <button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- [E] 알림 -->
+
+
+
+</body>
+<script>
+    $(document).ready(function(){
+        $("#chk001").on("change",function(){
+            $(this).is(":checked") && layer_popup("#pop001");
+        })
+    })
+</script>
+</html>

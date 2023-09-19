@@ -117,3 +117,13 @@
   @include icon();
   background-image: url('../img/theme/apthefin/icon/ic_card_type.png');
 }
+
+@mixin iconCheck($chk:ready) {
+  width:20px;
+  height:20px;
+  @include icon();
+  background-image:url('../img/theme/apthefin/ic_circle_chk.png');
+  @if($chk == checked){
+    background-image:url('../img/theme/apthefin/ic_circle_chk_on.png');
+  }
+}

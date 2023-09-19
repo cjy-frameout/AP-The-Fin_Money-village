@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title></title>
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="title" content="">-->
+    <meta name="description" content="">
+    <!--<meta name="keywords" content="">-->
+    <!-- The Open Graph protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+    <!-- //The Open Graph protocol -->
+    <link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/cmd.js"></script>
+</head>
+
+<body>
+
+<!-- wrap -->
+<div class="wrap">
+    <!-- header -->
+    <div class="header">
+        <div class="header_inn">
+            <div class="left">
+                <a href="#none" class="btnBack"><span class="blind">Back</span></a>
+            </div>
+            <div class="center">
+                <h2 class="tit_h2">아끼고</h2>
+            </div>
+        </div>
+    </div>
+    <!-- //header -->
+
+    <!-- container -->
+    <div class="container">
+        <div class="content">
+
+
+            <!-- [S] 아끼고 -->
+            <section id="savego" class="planSec mgt20 -noBorder -year30 -good"> <!-- 30대기준 -year30, 내평균 -my, 적절할때 -good, 지출과다 -bed, 클래스 추가 -->
+                <h3 class="planSec__tit">
+                    <span class="planSec__titLeft">
+                        이달의<br>
+                        <strong>
+                            내 지출은 <span class="planSec__titEff">적절해요</span><br>
+                            이대로만 유지해요
+                        </strong>
+                    </span>
+                </h3>
+                <div class="savegoGraph">
+                    <div class="savegoGraph__item -left">
+                        <div class="savegoGraph__topTxt">100%</div>
+                        <div class="savegoGraph__bar" data-height="80">
+                            <div class="savegoGraph__inner" style="height:50%"><span>50%</span></div>
+                        </div>
+                        <div class="savegoGraph__txt">9월 지출</div>
+                    </div>
+                    <div class="savegoGraph__item -center">
+                        <div class="savegoGraph__topTxt">125만원</div>
+                        <div class="savegoGraph__bar" data-height="100"></div>
+                        <div class="savegoGraph__txt">내 평균</div>
+                    </div>
+                    <div class="savegoGraph__item -right">
+                        <div class="savegoGraph__topTxt">102만원</div>
+                        <div class="savegoGraph__bar" data-height="80"></div>
+                        <div class="savegoGraph__txt">30대 평균</div>
+                    </div>
+                    <div class="savegoGraph__line"></div>
+                </div>
+
+                <div class="savegoInfo mgt30">
+                    <div class="savegoInfo__top">
+                        <p class="savegoInfo__tit">9월 지출 현황</p>
+                        <p class="savegoInfo__day">23.9.27 기준</p>
+                    </div>
+                    <div class="savegoInfo__bottom">
+                        <p class="savegoInfo__today">오늘까지의 지출</p>
+                        <p class="savegoInfo__won">34만원</p>
+                    </div>
+                    <p class="savegoInfo__result">30대 월 평균 지출의 <span class="savegoInfo__per">43%</span>를 썼어요</p>
+                </div>
+                <ul class="planCaution__list mgt20">
+                    <li>이 달의 지출은 신용카드 이용금액을 의미합니다.</li>
+                    <li>내 평균과 동일연령(유사소득군) 평균은 1년 간의 신용카드 일시불, 할부, 현금서비스 금액을 12개월로 나눈 값입니다.</li>
+                </ul>
+            </section>
+            <!-- [E] 아끼고 -->
+
+            <hr class="plan__hr">
+
+            <h3 class="planTitSub">9월 카드 결제 내역이에요</h3>
+            <div class="tabs planTabsCard mgt20">
+                <div class="tabs-header">
+                    <button type="button" class="tabs-nav on" data-tab="tabs001">높은 금액순</button>
+                    <button type="button" class="tabs-nav" data-tab="tabs002">최근 결제순</button>
+                </div>
+                <div class="tabs-content">
+                    <!-- 높은금액순 -->
+                    <div class="tabs-item on" data-tabCon="tabs001">
+                        <!-- [S] empty -->
+                        <div class="historyNone" style="display:none">
+                            <p class="txt">결제 내역이 없습니다.</p>
+                        </div>
+                        <!-- [E] empty -->
+
+                        <ol class="useCardList mgt20">
+                            <li>
+                                <span class="useCardList__txt">
+                                    <span class="useCardList__use">GS25편의점</span>
+                                    <span class="useCardList__card">네이버 현대카드</span>
+                                </span>
+                                <a class="useCardList__won">999,999<span>원</span></a>
+                            </li>
+                            <li>
+                                <span class="useCardList__txt">
+                                    <span class="useCardList__use">GS25편의점</span>
+                                    <span class="useCardList__card">네이버 현대카드</span>
+                                </span>
+                                <a class="useCardList__won">999,999<span>원</span></a>
+                            </li>
+                            <li>
+                                <span class="useCardList__txt">
+                                    <span class="useCardList__use">GS25편의점</span>
+                                    <span class="useCardList__card">네이버 현대카드</span>
+                                </span>
+                                <a class="useCardList__won">999,999<span>원</span></a>
+                            </li>
+                            <li>
+                                <span class="useCardList__txt">
+                                    <span class="useCardList__use">GS25편의점 </span>
+                                    <span class="useCardList__card">네이버 현대카드</span>
+                                </span>
+                                <a class="useCardList__won">999,999<span>원</span></a>
+                            </li>
+                            <li>
+                                <span class="useCardList__txt">
+                                    <span class="useCardList__use">GS25편의점</span>
+                                    <span class="useCardList__card">네이버 현대카드</span>
+                                </span>
+                                <a class="useCardList__won">999,999<span>원</span></a>
+                            </li>
+                        </ol>
+                        <button type="button" class="useCardList__allView">전체 보기</button>
+                    </div>
+                    <!-- 최근 결제순 -->
+                    <div class="tabs-item" data-tabCon="tabs002">
+                        <!-- [S] empty -->
+                        <div class="historyNone" >
+                            <p class="txt">결제 내역이 없습니다.</p>
+                        </div>
+                        <!-- [E] empty -->
+                    </div>
+                </div>
+            </div>
+
+            <hr class="plan__hr">
+
+            <div class="planTooltipTxt">내 소득은 상위 몇 %일까?</div>
+            <h3 class="planTitSub">
+                내 추정소득 <span>6,000만원</span>은<br>
+                30대 기준 <span class="-underLine">상위 14.4%</span>에 속해요
+            </h3>
+
+            <div class="savegoChart mgt30">
+                <div class="savegoChart__box" id="chart-container"></div>
+                <p class="savegoChart__txt">
+                    (x)소득 15구간<br>
+                    (y)인원수
+                </p>
+            </div>
+
+            <div class="likeUser">
+                <p class="likeUser__tit">나와 유사한 소득군(30대)</p>
+                <p class="likeUser__num">999만 9,999명</p>
+            </div>
+
+            <div class="annualIncome mgt10">
+                <div class="annualIncome__top">
+                    <p class="annualIncome__tit">나의 추정 연소득</p>
+                    <p class="annualIncome__won">6,000만원</p>
+                </div>
+                <div class="annualIncome__bottom">
+                    <p class="annualIncome__tit">소득 중간값</p>
+                    <p class="annualIncome__won">2,900만원</p>
+                </div>
+            </div>
+
+            <p class="plan__txtCaution mgt20">정광수님의 추정소득은 NICE평가정보의 소득추정모델에서 08월 25일 기준 산출된 참고 지수이며, 실제와 다를 수 있습니다.</p>
+
+            <section class="planCaution">
+                <h3 class="planCaution__tit">안내사항</h3>
+                <ul class="planCaution__list">
+                    <li>내용은 추후에 수정할 예정입니다. 현재는 예시 문구입니다.</li>
+                    <li>대출한도 및 금리 등은 당행 소정의 심사철자를 거쳐 진행되며, 상기 대출조건은 당행 대출한도 소진 등의 사정에 따라 변동될 수 있습니다.</li>
+                    <li>대출승인 후 고객님의 신용정보 변경 시 대출실행이 제한될 수 있습니다.</li>
+                    <li>소득 및 재직을 자동으로 확인할 수 없는 경우 ‘건강보험공단’의 건강보험자격득실확인서, 건강장기요양보험료 납부확인서 등이 필요합니다.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <!-- //container -->
+
+
+</div>
+<!-- //wrap -->
+
+</body>
+<!-- [S] chart -->
+<script src="../../js/highchart/highcharts.js"></script>
+<script src="../../js/highchart/modules/exporting.js"></script>
+<script src="../../js/highchart/modules/export-data.js"></script>
+<script src="../../js/highchart/modules/accessibility.js"></script>
+<!-- [E] chart -->
+<script>
+    $(document).ready(function(){
+        saveGo();
+    })
+    function saveGo(){
+        //아끼고 그래프 높이값
+        $(".savegoGraph__bar").each(function(){
+            var barH = $(this).data("height");
+            var resultH =(barH / 100) * 75
+            $(this).css("height",resultH+"%");
+        })
+
+        //아끼고 평균 기준선 잡기
+        var lineH;
+        if($("#savego").hasClass("-year30")){
+            setTimeout(function(){
+                lineH = 150 - $(".savegoGraph .-right .savegoGraph__bar").height();
+                $(".savegoGraph__line").css({"top":lineH}).addClass("-active");
+            },1500);
+        }else{
+            setTimeout(function(){
+                lineH = 150 - $(".savegoGraph .-center .savegoGraph__bar").height();
+                $(".savegoGraph__line").css({"top":lineH}).addClass("-active");
+            },1500);
+        }
+
+    }
+
+    // 소득 구간 데이터와 인구 수 데이터
+    var incomeCategories = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]; // 눈금을 1부터 15까지로 변경
+    var populationData = [750, 500, 300, 1600, 2100, 2400, 300, 3000, 3300, 3600, 4000, 4200, 4500, 5000, 800]; // 15개의 데이터 포인트로 변경
+
+    var targetIndex1 = 3; // 첫 번째 특정값 (소득 중간값)의 인덱스
+    var targetIndex2 = 10; // 두 번째 특정값 (상위값)의 인덱스
+    var targetValue1 = populationData[targetIndex1]; // 첫 번째 특정값 (소득 중간값)의 값
+    var targetValue2 = populationData[targetIndex2]; // 두 번째 특정값 (상위값)의 값
+    var targetColor1 = '#D4DADF'; // 회색
+    var targetColor2 = '#FF3E3E'; // 빨간색
+
+    // 데이터 포인트의 색상을 지정하고 상위값에만 특정 텍스트를 추가
+    var seriesData = populationData.map(function (value, index) {
+        var color = index === targetIndex1 ? targetColor1 : (index === targetIndex2 ? targetColor2 : '#EEF2F5');
+        var perCentVal = 0;
+        var customHTML = index === targetIndex2 ? `<div class="savegoChart__toolTip">상위${perCentVal}%</div>` : ''; // 상위값에만 특정 텍스트 추가
+        return {
+            y: value,
+            color: color,
+            customHTML: customHTML, // 커스텀 HTML 추가
+        };
+    });
+
+    // 특정 눈금 위치와 해당 위치의 레이블을 정의
+    var tickPositions = [0, targetIndex1, targetIndex2, 14]; // 특정 위치에 눈금 표시
+    var tickLabels = ["저소득", "소득중간값","", "고소득"]; // 인덱스에 해당하는 눈금에 표시할 텍스트
+
+    // Highcharts 그래프 옵션 설정
+    var options = {
+        chart: {
+            type: 'column', // 막대 그래프로 설정
+            events: {
+                render: function () {
+                    var chart = this;
+                    var renderer = chart.renderer;
+                    var targetPoint = chart.series[0].points.find(function (point) {
+                        return point.y === targetValue2;
+                    });
+
+                    // targetValue2의 그래프 위에 커스텀 HTML을 추가
+                    if (targetPoint && targetPoint.graphic) {
+                        var box = targetPoint.graphic.getBBox();
+                        var xPos = box.x + box.width / 2; // x 위치 계산
+                        var yPos = box.y - 20; // y 위치 계산
+                        var customHTML = seriesData.find(function (data) {
+                            return data.y === targetValue2;
+                        }).customHTML;
+
+                        var label = renderer
+                            .label(customHTML, xPos, yPos)
+                            .attr({
+                                fill: 'rgba(255, 255, 255, 0.85)', // 배경색 및 투명도
+                                r: 8, // 모서리 반경
+                                zIndex: 5, // 그림순서 ,
+                                padding:6,
+                                style:'padding:6px 8px;font-weight:600;',
+                                stroke:"#D8DEE7",
+                                'stroke-width':1,
+                                filter: 'url(#box-shadow)', // 그림자 효과 추가
+                            })
+                            .add();
+                        // 커스텀 레이블을 클릭해도 다른 이벤트가 발생하지 않도록 처리
+                        label.element.style.pointerEvents = 'none';
+                        var defs = renderer.createElement('defs').add();
+                        var filter = renderer.createElement('filter').attr({ id: 'box-shadow' }).add(defs);
+                        filter.element.innerHTML = '<feGaussianBlur stdDeviation="2.5" result="shadow" />\n' +
+                            '<feOffset dx="0" dy="2" />\n' + // 2px 아래로
+                            '<feMerge>\n' +
+                            '  <feMergeNode in="shadow" />\n' +
+                            '  <feMergeNode in="SourceGraphic" />\n' +
+                            '</feMerge>';
+
+                    }
+                },
+            },
+        },
+        xAxis: {
+            categories: incomeCategories, // 눈금 레이블을 카테고리로 설정
+            tickPositions: tickPositions, // 특정 위치에 눈금 표시
+            tickmarkPlacement: 'on', // 눈금 위치에 표시
+            title: {
+                text: null // x 축 설명글 제거
+            },
+            labels: {
+                enabled: true, // x 축 라벨 활성화
+                align: 'center', // 텍스트를 가운데 정렬
+                rotation: 0, // 텍스트 회전 각도 (0도: 수평)
+                formatter: function () {
+                    var index = tickPositions.indexOf(this.pos);
+                    if (index !== -1) {
+                        return tickLabels[index]; // 눈금 위치에 해당하는 레이블 반환
+                    }
+                    return this.value; // 그 외의 경우에는 기본값을 반환 (x 값 표시)
+                }
+            }
+        },
+        yAxis: {
+            title: {
+                text: null // y 축 제목 제거
+            },
+            labels: {
+                enabled: false // y 축 라벨 비활성화
+            }
+        },
+        series: [{
+            name: '', // 시리즈 이름을 비워서 숨김
+            data: seriesData, // 변경된 데이터 포인트 배열 사용
+            dataLabels: {
+                enabled: false,
+            },
+            showInLegend:false
+        }],
+        title: {
+            text: null
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0, // 포인트 패딩을 0으로 설정
+                groupPadding: 0.04, // 그룹 패딩을 4%로 설정 (간격 4px)
+                states: {
+                    hover: {
+                        enabled: false // hover 상태에서 변경 효과 비활성화
+                    }
+                }
+            }
+        },
+        tooltip: {
+            enabled: false, // 툴팁 비활성화
+        },
+    };
+
+    // 그래프 그리기
+    Highcharts.chart('chart-container', options);
+
+
+
+
+</script>
+</html>
