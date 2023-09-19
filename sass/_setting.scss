@@ -167,7 +167,19 @@
   &.empty {
     .authList-name {
       &:before {display:none}
-
+    }
+  }
+  .btnGroup {
+    margin-top:10px;
+    gap:0 20px;
+    .btnBl1 {
+      padding:10px;
+      background-color:#fff;
+      height:40px;
+      color:#666;
+      font-size:14px;
+      font-weight:400;
+      border-color:#E5E5E5;
     }
   }
 }
