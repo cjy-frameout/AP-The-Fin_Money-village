@@ -1,0 +1,144 @@
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title></title>
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="title" content="">-->
+    <meta name="description" content="">
+    <!--<meta name="keywords" content="">-->
+    <!-- The Open Graph protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+    <!-- //The Open Graph protocol -->
+    <link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/cmd.js"></script>
+</head>
+
+<body>
+
+<!-- wrap -->
+<div class="wrap">
+    <!-- header -->
+    <div class="header">
+        <div class="header_inn">
+            <div class="left">
+                <a href="#none" class="btnBack"><span class="blind">Back</span></a>
+            </div>
+            <div class="center">
+                <h2 class="tit_h2">더하고</h2>
+            </div>
+            <div class="right">
+                <a href="#SHH1190" class="btnManage pointColor">편집</a>
+            </div>
+        </div>
+    </div>
+    <!-- //header -->
+
+    <!-- container -->
+    <div class="container">
+        <div class="content">
+
+
+            <h3 class="collectgoTit mgt30">
+                <span class="collectgoTit__bank">내 부동산 자산 <button type="button" class="plan__btnTooltip">도움말</button></span>
+                <span class="collectgoTit__num">0억 0,000</span>
+                <span class="collectgoTit__won">만원</span>
+            </h3>
+
+            <h3 class="planTit mgt30" style="display:none">내 집 마련에 반영할<br>부동산을 선택해주세요</h3>
+
+
+            <div class="asGroup houseGroup">
+                <div class="asList type_info">
+                    <div class="state_top">
+                        <a href="#">
+                            <div class="flagArea">
+                                <span class="sq_flag self">자가</span><span class="sq_flag apt">아파트</span>
+                                <span class="sq_flag lease">전세</span><span class="sq_flag officetels">오피스텔</span>
+                                <span class="sq_flag monthly">월세</span><span class="sq_flag villa">주상복합</span>
+                            </div>
+                            <div class="name">구월 롯데캐슬골드 1단지구월 롯데캐슬골드 1단지구월 롯데캐슬골드 1단지구월 롯데캐슬골드 1단지</div>
+                            <div class="info">60A㎡ 34/63㎡</div>
+                        </a>
+                        <label class="chkBox"><input type="checkbox" hidden><span>선택하기</span></label>
+                    </div>
+                    <div class="state_contents">
+                        <ul class="state_list">
+                            <li class="marketPrice mgb0">
+                                <span class="tx_bold">현재 시세</span>
+                                <p class="invest tx_bold"><em class="num">2,220,000,000</em> 원</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="asList type_info">
+                    <div class="state_top">
+                        <a href="#">
+                            <div class="flagArea">
+                                <span class="sq_flag self">자가</span><span class="sq_flag apt">아파트</span>
+                                <span class="sq_flag lease">전세</span><span class="sq_flag officetels">오피스텔</span>
+                                <span class="sq_flag monthly">월세</span><span class="sq_flag villa">주상복합</span>
+                            </div>
+                            <div class="name">구월 롯데캐슬골드 1단지</div>
+                            <div class="info">60A㎡ 34/63㎡</div>
+                        </a>
+                        <label class="chkBox"><input type="checkbox" hidden><span>선택하기</span></label>
+                    </div>
+                    <div class="state_contents">
+                        <ul class="state_list">
+                            <li class="marketPrice mgb0">
+                                <span class="tx_bold">현재 시세</span>
+                                <p class="invest tx_bold"><em class="num">2,220,000,000</em> 원</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a class="addHouseBtn mgt10" style="display:none">부동산 자산 추가하기</a>
+
+
+            </div>
+            <!-- [S] 하단 고정 영역 -->
+            <footer class="fix_bottom" style="display:none">
+                <div class="btn_wrap">
+                    <div class="btnGroup type2">
+                        <p><a href="#none" class="btnBl1 disable" role="button">확인</a></p>
+                    </div>
+                </div>
+            </footer>
+            <!-- [E] 하단 고정 영역 -->
+        </div>
+    </div>
+    <!-- //contai er -->
+
+
+</div>
+<!-- //wrap -->
+
+</body>
+<script>
+    $(document).ready(function(){
+        $(".btnManage").on("click",function(e){
+            e.preventDefault();
+            $(".btnManage,.collectgoTit").hide();
+            $(".content").addClass("editMode");
+            $(".fix_bottom,.planTit,.addHouseBtn").show();
+        })
+    })
+    
+</script>
+</html>
