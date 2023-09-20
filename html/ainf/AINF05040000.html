@@ -204,7 +204,20 @@
 
                                 <!-- [S] 시세정보 -->
                                 <div class="marketBox">
-                                    <p class="smallTit">시세 정보 <span class="sub_title">(2023.08.25 업데이트 Ι KB부동산 제공)</span></p>
+                                    <div class="aptSelectType">
+                                        <label class="aptSelectType__item">
+                                            <input type="radio" name="selt001" hidden checked>
+                                            <span>매매</span>
+                                        </label>
+                                        <label class="aptSelectType__item">
+                                            <input type="radio" name="selt001" hidden>
+                                            <span>전/월세</span>
+                                        </label>
+                                        <div class="sel_form type_border on"> <!-- 선택시 on 클래스 추가 -->
+                                            <a href="#none"  class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>155Bm²/84.68m²</span></a>
+                                        </div>
+                                    </div>
+                                    <p class="smallTit mgt30">시세 정보 <span class="sub_title">(2023.08.25 업데이트 Ι KB부동산 제공)</span></p>
                                     <ul class="market_list">
                                         <li class="list_tit">
                                             <span class="itemTit">
@@ -755,6 +768,33 @@
     </div>
 </div>
 <!-- [E] -->
+
+
+<div id="pop002" class="layer_bottomsheet" role="dialog" tabindex="-1" aria-hidden="true">
+    <div class="layer_inner">
+        <div class="layer_tit">
+            <strong class="tit"><span>면적 선택</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont">
+            <!-- 페이지 스타일 -->
+            <div class="type_page">
+                <ul class="layer_sel_opt type_date">
+                    <li><button type="button" class="btn_sel_opt on" title="선택됨"><span>138㎡/113.67㎡</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+                    <li><button type="button" class="btn_sel_opt"><span>138㎡/113.67㎡</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>138㎡/113.67㎡ </span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>138㎡/113.67㎡ </span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>138㎡/113.67㎡ </span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>138㎡/113.67㎡ </span></button></li>
+                </ul>
+            </div>
+            <!-- //페이지 스타일 -->
+        </div>
+        <div class="layer_footer">
+            <button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
+        </div>
+    </div>
+</div>
 
 
 <script>
