@@ -113,7 +113,7 @@ function layer_fullsheet(el){
             $('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
             $el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
         }, 200);
-        $focusReturn.focus();
+        $focusReturn!=undefined && $focusReturn.focus(); //230920 예외추가
         return false;
     });
 }
@@ -154,7 +154,7 @@ function layer_bottomsheet(el){
         }, 200);
 
         // [S] multi layer 2021-08-02 추가
-        eval('$focusReturn'+ [dimIdx]).focus();
+        $focusReturn!=undefined && eval('$focusReturn'+ [dimIdx]).focus();
 
         return false;
     });

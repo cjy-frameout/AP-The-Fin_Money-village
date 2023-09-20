@@ -336,7 +336,7 @@ $(document).on("click", ".btn_open_layer_pop", function(e){
 	layer_popup($href);
 	$('html').addClass('scroll_lock');
 	var dimIdx = $('.dim').index();
-	eval('$focusReturn' + [dimIdx] + '= $(this)');
+    $focusReturn!=undefined && eval('$focusReturn' + [dimIdx] + '= $(this)'); //0919수정
 
 });
 function layer_popup(el){
@@ -362,9 +362,7 @@ function layer_popup(el){
         }else if($('.dim').length == '1'){
             $('.dim').css('opacity','.7');
         }
-        if($focusReturn!=undefined){
-            eval('$focusReturn'+ [dimIdx]).focus();	// multi layer
-        }
+        $focusReturn!=undefined && eval('$focusReturn'+ [dimIdx]).focus();	// multi layer 0919수정
 		return false;
 	});
 }

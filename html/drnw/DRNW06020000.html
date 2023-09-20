@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title></title>
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="title" content="">-->
+    <meta name="description" content="">
+    <!--<meta name="keywords" content="">-->
+    <!-- The Open Graph protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+    <!-- //The Open Graph protocol -->
+    <link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/cmd.js"></script>
+    <script type="text/javascript"  src="../../js/interaction.js"></script>
+
+    <!-- [S] chart -->
+    <script src="../../js/highchart/highcharts.js"></script>
+    <script src="../../js/highchart/modules/exporting.js"></script>
+    <script src="../../js/highchart/modules/export-data.js"></script>
+    <script src="../../js/highchart/modules/accessibility.js"></script>
+    <!-- [E] chart -->
+</head>
+<body>
+
+
+<div id="pop001" class="layer_fullsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+            <strong class="tit">목표 아파트</strong>
+            <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont">
+            <div class="txtLink aptFavEdit mgt10">
+                <span>목표 아파트</span>
+            </div>
+            <div class="aptFavList mgt20">
+                <div class="astBox">
+                    <div class="boxArea">
+                        <div class="expectPay">
+                            <div class="expectInfo">
+                                <label class="infoNum chkType">
+                                    <span class="infoTit">목동신시가지(1단지) 117동 12층</span>
+                                    <input type="checkbox" hidden>
+                                    <span class="chkTypeBox"></span>
+                                </label>
+                            </div>
+                            <ul class="astDetail">
+                                <li>
+                                    <span class="tit">주소</span>
+                                    <span class="num">영등포구 여의도동</span>
+                                </li>
+                                <li>
+                                    <span class="tit">매매</span>
+                                    <span class="num">22억</span>
+                                </li>
+                                <li>
+                                    <span class="tit">평형</span>
+                                    <span class="num">188/147㎡</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="astBox mgt20">
+                    <div class="boxArea">
+                        <div class="expectPay">
+                            <div class="expectInfo">
+                                <label class="infoNum chkType">
+                                    <span class="infoTit">목동신시가지(1단지) 117동 12층</span>
+                                    <input type="checkbox" hidden>
+                                    <span class="chkTypeBox"></span>
+                                </label>
+                            </div>
+                            <ul class="astDetail">
+                                <li>
+                                    <span class="tit">주소</span>
+                                    <span class="num">영등포구 여의도동</span>
+                                </li>
+                                <li>
+                                    <span class="tit">매매</span>
+                                    <span class="num">22억</span>
+                                </li>
+                                <li>
+                                    <span class="tit">평형</span>
+                                    <span class="num">188/147㎡</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--[S] 등록된 아파트가 없습니다. 구조가다름 -->
+            <div class="asBox mgt20" style="display:none">
+                <div class="historyNone">
+                    <p class="txt">등록된 목표아파트가 없습니다.</p>
+                </div>
+                <!-- [S] 하단 고정 영역 -->
+                <footer class="fix_bottom">
+                    <div class="btn_wrap">
+                        <div class="btnGroup">
+                            <p><a href="#none" class="btnBl1 btnPlus">아파트 찾기</a></p>
+                        </div>
+                    </div>
+                </footer>
+                <!-- [E] 하단 고정 영역 -->
+            </div>
+            <!--[E] 등록된 아파트가 없습니다. -->
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+$(document).ready(function(){
+    layer_fullsheet("#pop001")
+})
+
+</script>
+</body>
+</html>
