@@ -711,3 +711,20 @@
     }
   }
 }
+
+.infoNum.chkType {
+  position: relative;
+  flex-shrink: 0;
+  width:100%;
+  .infoTit {
+    padding-right:30px;
+  }
+  .chkTypeBox {
+    display:block;
+    position: absolute;
+    @include iconCheck();
+    right:20px;
+    top:0;
+  }
+  input:checked+.chkTypeBox {@include iconCheck(checked)}
+}
