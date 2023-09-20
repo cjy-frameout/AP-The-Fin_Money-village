@@ -1139,10 +1139,55 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     height: 20px;
     width: 20px;
 }
-
-
+.titPoint.green {
+    color: #52AFB1 !important;
+}
+.bg-green {
+    background: #F6FCF5 !important;
+}
+.link-card, .link-deposit {
+    display: flex !important;
+    align-items: center;
+}
+.link-card:after {
+    content:'';
+    background-image: url(../img/theme/apthefin/card_bg.png);
+    background-size: 62px auto !important;
+    height: 60px !important;
+    top: 17px !important;
+    width: 62px !important;
+}
+.link-deposit:after {
+    content:'';
+    background-image: url(../img/theme/apthefin/bg_deposit.png);
+    background-size: 60px auto !important;
+    height: 60px !important;
+    top: 17px !important;
+    width: 62px !important;
+}
 /* ========================================================= E : common  =====================================================*/
 /* S : component */
+.preparing {
+    padding: 20px;
+    margin-top: 30px;
+    .txt {
+        color: #999;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        &:before {
+            content: "";
+            background-image: url(../img/theme/apthefin/bg_preparing.png);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: block;
+            height: 72px;
+            margin: 0 auto 20px;
+            width: 68px;
+        }
+    }
+}
 .feed-quick-menu {
     position: fixed;
     bottom: 100px;
@@ -1556,6 +1601,42 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 
 .layer_cont.hasFixBtn {
     padding-bottom: 90px !important;
+}
+
+.storeInfo {
+    background: url(../img/theme/apthefin/bg_store_info.png) no-repeat 100% 100%;
+    background-size: 115px 80px;
+    margin-top: 30px;
+}
+.smallTit + .banner { margin-top: -5px;}
+
+.card-list-alink {
+    display: block;
+    position: relative;
+    border-bottom: 1px solid #F1F2F5;
+    padding: 20px 0 20px 42px; 
+    .card-list-title {
+        color: #333;
+        font-size: 16px;
+        font-weight: bold;
+        display: block;
+        line-height: 24px;
+    }
+    .card-list-desc {
+        color: #999;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-top: 4px;
+        display: block;
+    }
+    .card-list-img {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        
+    }
 }
 
 /* E : component */

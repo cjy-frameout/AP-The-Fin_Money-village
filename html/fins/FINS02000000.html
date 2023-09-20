@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title></title>
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="title" content="">-->
+    <meta name="description" content="">
+    <!--<meta name="keywords" content="">-->
+    <!-- The Open Graph protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+    <!-- //The Open Graph protocol -->
+    <link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/cmd.js"></script>
+    <script type="text/javascript" src="../../js/interaction.js"></script>
+
+    <!-- [S] chart -->
+    <script src="../../js/highchart/highcharts.js"></script>
+    <script src="../../js/highchart/modules/exporting.js"></script>
+    <script src="../../js/highchart/modules/export-data.js"></script>
+    <script src="../../js/highchart/modules/accessibility.js"></script>
+    <!-- [E] chart -->
+</head>
+<body>
+<!-- wrap -->
+<div class="wrap">
+
+    <!-- header -->
+    <div class="header">
+        <div class="header_inn">
+            <div class="left">
+                <a href="#none" class="btnBack"><span class="blind">Back</span></a>
+            </div>
+            <div class="center">
+                <h2 class="tit_h2">카드비교</h2>
+            </div>
+
+        </div>
+    </div>
+    <!-- //header -->
+
+    <!-- container -->
+    <div class="container">
+        <div class="content">
+            <div class="tabs tab-aptPrice">
+                <nav class="tabs-header">
+                    <button type="button" class="tabs-nav on" data-tab="tab021">신용카드</button>
+                    <button type="button" class="tabs-nav" data-tab="tab022">체크카드</button>
+                </nav>
+                <div class="tabs-content mgt30">
+
+                    <div class="tabs-item on" data-tabCon="tab021">
+                        <div class="topCtrl tar">
+                            <a href="#full001" class="btnFilter btn_open_full_sheet" role="button"><span class="blind">필터</span></a> <!-- 필터 활성화 시 btnFilter on 클래스 추가 -->
+                        </div>
+                        <ul class="card-list">
+                            <li class="card-list-li">
+                                <a href="#none" class="card-list-alink">
+                                    <img src="../../img/theme/apthefin/img_cardList01.png" class="card-list-img" alt="">
+                                    <span class="card-list-title">올바른 FLEX카드</span>
+                                    <span class="card-list-desc">스타벅스 50%할인, 구독서비스 20% 할인</span>
+                                </a>
+                            </li>
+                            <li class="card-list-li">
+                                <a href="#none" class="card-list-alink">
+                                    <img src="../../img/theme/apthefin/img_cardList01.png" class="card-list-img" alt="">
+                                    <span class="card-list-title">올바른 FLEX카드</span>
+                                    <span class="card-list-desc">스타벅스 50%할인, 구독서비스 20% 할인</span>
+                                </a>
+                            </li>
+                            <li class="card-list-li">
+                                <a href="#none" class="card-list-alink">
+                                    <img src="../../img/theme/apthefin/img_cardList01.png" class="card-list-img" alt="">
+                                    <span class="card-list-title">올바른 FLEX카드</span>
+                                    <span class="card-list-desc">스타벅스 50%할인, 구독서비스 20% 할인</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="tabs-item" data-tabCon="tab022">
+                        <div class="msgResult tac">
+                            <p>검색 결과가 없어요.<br>선택한 검색 조건을 확인해주세요.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- //container -->
+
+</div>
+<!-- //wrap -->
+
+
+
+
+<!-- [S] -->
+<div id="full001" class="layer_fullsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+            <strong class="tit">조회 필터</strong>
+            <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+        </div>
+
+        <div class="layer_cont">
+            <section class="allFilter">
+                <h3 class="allFilter-tit mgt10">유형</h3>
+                <div class="allFilter-list">
+                    <label><input type="radio" name="radio001" hidden checked><span>할인</span></label>
+                    <label><input type="radio" name="radio001" hidden><span>적립</span></label>
+                </div>
+                <h3 class="allFilter-tit mgt30">주요 혜택(중복선택 가능)</h3>
+                <div class="allFilter-list line-3">
+                    <label><input type="checkbox" hidden checked><span>공과금</span></label>
+                    <label><input type="checkbox" hidden><span>주유</span></label>
+                    <label><input type="checkbox" hidden><span>대중교통</span></label>
+                    <label><input type="checkbox" hidden><span>통신</span></label>
+                    <label><input type="checkbox" hidden><span>카페</span></label>
+                    <label><input type="checkbox" hidden><span>쇼핑</span></label>
+                    <label><input type="checkbox" hidden><span>마트</span></label>
+                    <label><input type="checkbox" hidden><span>뷰티</span></label>
+                    <label><input type="checkbox" hidden><span>편의점</span></label>
+                </div>
+                <h3 class="allFilter-tit mgt30">카드사</h3>
+                <div class="allFilter-list line-4">
+                    <label><input type="radio" name="radio-l002" hidden checked><span>신한</span></label>
+                    <label><input type="radio" name="radio-l002" hidden><span>삼성</span></label>
+                    <label><input type="radio" name="radio-l002" hidden><span>현대</span></label>
+                    <label><input type="radio" name="radio-l002" hidden><span>국민</span></label>
+                    <label><input type="radio" name="radio-l002" hidden><span>하나</span></label>
+                    <label><input type="radio" name="radio-l002" hidden><span>롯데</span></label>
+                    <label><input type="radio" name="radio-l002" hidden><span>우리</span></label>
+                    <label><input type="radio" name="radio-l002" hidden><span>농협</span></label>
+                </div>
+
+                <h3 class="allFilter-tit mgt30">연회비</h3>
+                <div class="allFilter-list line-1">
+                    <label><input type="radio" name="radio-l003" hidden checked><span>없음</span></label>
+                    <label><input type="radio" name="radio-l003" hidden><span>~1만원</span></label>
+                    <label><input type="radio" name="radio-l003" hidden><span>~3만원</span></label>
+                    <label><input type="radio" name="radio-l003" hidden><span>~5만원</span></label>
+                    <label><input type="radio" name="radio-l003" hidden><span>5만원 이상</span></label>
+                </div>
+                
+                <h3 class="allFilter-tit mgt30">전월 최소 실적</h3>
+                <div class="allFilter-list line-4">
+                    <label><input type="radio" name="radio-l005" hidden checked><span>무실적</span></label>
+                    <label><input type="radio" name="radio-l005" hidden><span>~20만원</span></label>
+                    <label><input type="radio" name="radio-l005" hidden><span>~30만원</span></label>
+                    <label><input type="radio" name="radio-l005" hidden><span>~50만원</span></label>
+                    <label><input type="radio" name="radio-l005" hidden><span>50만원 이상</span></label>
+                    
+                </div>
+            </section>
+            <div class="fix_bottom not_dock">
+                <div class="btn_wrap">
+                    <div class="btnGroup type2">
+                        <p><a href="#none" class="btnBl1 js_pop_close" role="button">적용</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- [E] -->
+
+
+<script>
+    
+// [S] 풀페이지 팝업
+$(document).on("click", ".btn_open_full_sheet", function(e){
+    e.preventDefault();
+	var $fullPop = $(this).attr('href');
+    layer_fullsheet($fullPop);
+
+    $('html').addClass('scroll_lock');
+	$focusReturn = $(this);
+});
+
+// [E] 풀페이지 팝업
+
+
+
+
+    
+</script>
+</body>
+</html>
+
+
+
