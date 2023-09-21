@@ -736,6 +736,8 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 .main-title + .list-wrap {
     margin-top: 24px;
 }
+.sub-extra-title + .accDetailList { margin-top: 15px; }
+.flagArea + .main-title { margin-top: 10px; }
 .sub-title + .list-wrap {
     margin-top: 16px;
 }
@@ -783,6 +785,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 .cont-title-big + .cont-desc-small, .cont-title-big + .cont-desc-extraSmall, .input-box + .cont-desc-extraSmall {
     margin-top: 8px;
 }
+.main-title + .cont-desc-small { margin-top: 10px;}
 
 .list-wrap.hasImg {
     background: url(../img/theme/apthefin/FINS04010000.png) no-repeat 50% 0;
@@ -840,13 +843,14 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
         content: '3';
     }
 }
-
 .list-typeB-li {
-    color: #6F7A81;
+    color: #666;
     line-height: 1.3;
     position: relative;
     padding-left: 7px;
-
+    &.fs13 {
+        font-size: 13px;
+    }
     &:not(:first-of-type) {
         margin-top: 4px;
     }
@@ -1167,6 +1171,17 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 }
 /* ========================================================= E : common  =====================================================*/
 /* S : component */
+.asGroup {
+    .accBox:not(:first-of-type) {
+        margin-top: 20px;
+    }
+}
+.card-img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
 .preparing {
     padding: 20px;
     margin-top: 30px;
@@ -1350,7 +1365,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 }
 
 
-.sub_detailList + .info-wrap {
+.sub_detailList + .info-wrap, .asGroup + .info-wrap {
     margin-top: 40px;
 }
 
