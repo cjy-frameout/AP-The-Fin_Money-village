@@ -474,7 +474,7 @@
   &-fav {
     position: absolute;
     right:0;
-    top:2px;
+    top:0;
     display:none;
     span {
       @include txtHidden;
@@ -728,7 +728,6 @@
   }
   input:checked+.chkTypeBox {@include iconCheck(checked)}
 }
-
 .aptSelectType {
   display:flex;
   align-items: center;
@@ -759,6 +758,17 @@
     margin-left:20px;
     &.type_border .sel_box {
       padding:9px 20px;
+    }
+  }
+}
+.marketBox {
+  .market_list {
+    .list_tit {
+      position: relative;
+    }
+    .itemData.bold {
+      color:#333;
+      em {font-weight:700}
     }
   }
 }
