@@ -98,11 +98,18 @@
 
 function layer_fullsheet(el){
     var $el = $(el);
+    var isDim;
     $el.append("<div class=\"dim\"></div>");
     isDim ? $('.layer_fullsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
     setTimeout(function() {
         $el.find('.layer_inner').addClass('on');
     }, 50);
+    var dimIdx = $('.dim').index();
+    var thisDim = $el.find('.dim');
+    var thisLyZindex = dimIdx + 4000;
+    $('.dim').css('opacity','0');
+    thisDim.css('opacity','.7');
+    thisDim.closest('.layer_fullsheet, .layer_popup').css('z-index', thisLyZindex);
 
     var isDim = $el.siblings().hasClass('dim');
 
