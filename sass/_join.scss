@@ -84,11 +84,16 @@
     display: block;
     margin-top: 2px;
 }
-
+.input-box {
+    .password-last-one input {
+        &::placeholder {font-size:0}
+    }
+}
 .password-last-one .password-disc-wrap {
-    justify-content: flex-end;
+    justify-content: space-between;
     background: transparent;
     border: none;
+    padding-left:30px;
 }
 
 .accSetting .editName .password-last-one input {
@@ -180,4 +185,8 @@
 
 .asGroup.editList2.sortListBox {
     .asList a .amount:after {display:none}
+}
+
+.ipt-pass-box.useInp {
+    .password-disc-wrap {pointer-events: none}
 }
