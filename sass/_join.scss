@@ -94,6 +94,7 @@
     background: transparent;
     border: none;
     padding-left:30px;
+    pointer-events: none;
 }
 
 .accSetting .editName .password-last-one input {
@@ -189,4 +190,13 @@
 
 .ipt-pass-box.useInp {
     .password-disc-wrap {pointer-events: none}
+}
+.input-box input.ipt-typeB {
+    padding:13px 45px 13px 0;
+    height:50px;
+}
+.input-box input.ipt-typeB+.ipt-time-limit {
+    bottom:13px;
+    font-size:14px;
+    line-height:24px;
 }
