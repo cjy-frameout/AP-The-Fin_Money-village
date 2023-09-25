@@ -920,6 +920,7 @@ input {
             height:26px;
             pointer-events: none;
             box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.20);
+            background-color:#fff;
         }
         &:after {
             content:"";
@@ -932,6 +933,7 @@ input {
             height:26px;
             pointer-events: none;
             box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.20);
+            background-color:#fff;
         }
         .dock_main {
             bottom:9px;
