@@ -1177,10 +1177,10 @@ a.btnBl1.wide i.more {
 		.btnLogo {
 			width: auto;
 			height: 20px;
-			background-image: url('../img/theme/apthefin/thefin_logo.png?0807');
+			//background-image: url('../img/theme/apthefin/thefin_logo.png?0807');
 			background-repeat: no-repeat;
 			background-size: 66px auto;
-			padding-left: 66px;
+			//padding-left: 66px;
 		}
 
 		.logoTit {
@@ -3234,14 +3234,13 @@ a.btnMenu {
 
 .asGroup .asList.type_info {
 	min-height: 87px;
-	margin-top: 15px;
 	padding: 0;
 	border: 1px solid #eee;
 	border-radius: 16px;
 	background-color: #fff;
 	overflow: hidden;
 }
-
+.listTit + .asList.type_info { margin-top: 15px; }
 .asList.type_info {
 	.state_top {
 		width: 100%;
@@ -3279,6 +3278,10 @@ a.btnMenu {
 
 	.state_contents {
 		padding: 15px 20px;
+	}
+
+	& + .asList.type_info {
+		margin-top: 20px;
 	}
 }
 
@@ -3464,7 +3467,7 @@ a.btnMenu {
 
 	.asList {
 		min-height: 87px;
-		margin-top: 15px;
+
 		padding: 0;
 		border: none;
 		background-color: #fff;
