@@ -89,6 +89,9 @@
   @if($type == bold){
     background-image: url('../img/theme/apthefin/svg/ic_arrow_bold.svg');
   }
+  @if($type == blue){
+    background-image: url('../img/theme/apthefin/svg/ic_arrow_blue.svg');
+  }
 }
 @mixin iconPaperColor {
   width:20px;
