@@ -69,7 +69,7 @@ $black : #17181A;
     @include txtHidden();
     line-height:22px;
   }
-  & __txtCaution {
+  &__txtCaution {
     font-size:12px;
     line-height:1.3;
     color:$gray;
