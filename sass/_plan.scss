@@ -78,7 +78,10 @@ $black : #17181A;
 
 .planRate {
   position: relative;
-  padding-bottom:20px;
+  &__inner {
+    position: relative;
+    padding-bottom:20px;
+  }
   &__txt {
     position: absolute;
     font-size:12px;
