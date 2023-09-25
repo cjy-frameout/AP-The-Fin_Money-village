@@ -2420,23 +2420,23 @@ a.btnMenu {
 
 .ico_rate {
 	&.assets_01 {
-		background-color: #47B8E1;
+		background-color: #4476FB;
 	}
 
 	&.assets_02 {
-		background-color: #C293F3;
+		background-color: #72CBA9;
 	}
 
 	&.assets_03 {
-		background-color: #FCC105;
+		background-color: #F0CF72;
 	}
 
 	&.assets_04 {
-		background-color: #FF84B1;
+		background-color: #DD797A;
 	}
 
 	&.assets_05 {
-		background-color: #68D7C5;
+		background-color: #3E4D94;
 	}
 }
 
@@ -3459,6 +3459,7 @@ a.btnMenu {
 }
 .hr_div + .asGroup { padding-top: 0; }
 .load-wrap .asGroup { padding-top:0; }
+
 .asGroup {
 	padding-top: 30px;
 	+ .asGroup {
@@ -3500,6 +3501,9 @@ a.btnMenu {
 		em {
 			font-size: 18px;
 			font-weight: 700;
+		}
+		& + .asList {
+			margin-top: 20px;
 		}
 	}
 
@@ -13517,6 +13521,12 @@ a.btnMenu {
 		background-color: #BB2649;
 		border: 1px solid #E5E5E5;
 	}
+	> .assets_chart {
+		padding-top: 0;
+		> .chart_info {
+			margin-top: 0;
+		}
+	}
 }
 
 .expectPay {
@@ -13580,6 +13590,9 @@ a.btnMenu {
 				margin: -2px 0 0 5px;
 				color: #fff;
 			}
+		}
+		& + .ast_tx {
+			margin-top:10px;
 		}
 	}
 

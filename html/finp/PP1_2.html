@@ -59,6 +59,7 @@
 	<!-- container -->
 	<div class="container">
 		<div class="content">
+            
             <!-- [S] 동의안내 -->
 			<div class="topInfoPop">
 				<a href="#" class="tx">
@@ -67,7 +68,14 @@
                 </a>
 			</div>
 			<!-- [E] 동의안내 -->
-			
+			<!-- S : 9/25 수정 -->
+			<div class="list-name mgt30 hasLine">
+                <div class="list-name-box jcs ">
+                    <h3 class="sub-extra-small-title"><img src="../../img/theme/apthefin/feed_name_img.png" alt=""> 홍길동님</h3>
+                    <a href="#none" role="button" class="btn-change-profile">프로필 변경</a>
+                </div>
+            </div>
+            <!-- S : 9/25 수정 -->
 			<!-- [S] 자산 타이틀 -->
             <div class="tBalance tAssets">
 				<h3 class="tBaltit">내 자산<a href="#layer_HM1_2_1BS" class="btn_open_bottom_sheet btn_more_ask" role="button"><span class="ico_ask type_white2"><em class="blind">더보기</em></span></a></h3>
@@ -86,144 +94,62 @@
 			
 			<!-- [S] 막대그래프 -->
             <div class="boxArea lineType">
-				<div class="tabInter">
-					<div class="asset_tab_header">
-						<ul class="cboth">
-							<li class="js_tabclickDp1 on"><a href="#none" title="선택됨"><span>자산 통계</span></a></li><!-- 선택시 title="선택됨" 추가 -->
-							<li class="js_tabclickDp1"><a href="#none"><span>자산 비교</span></a></li>
-						</ul>
-					</div>
-					<div class="asset_tab_body">
-						<div class="tab_cntDp1" style="display: block;">
-							<div class="asGroup assets_chart">
-                                <a href="#none" role="button" title="공유하기" class="share"></a>
-								<div class="chart_info">내 금융자산은<br><span class="pointColor">입출금</span>이 가장 많아요</div>
-								<div class="wrap_chart type_pie">
-                                    <figure class="highcharts-figure" aria-hidden="true">
-                                        <div id="chart_pie_assets"></div>
-                                    </figure>
-                                    <!-- 접근성 -->
-                                    <div class="chart_disable blind">
-                                        <table class="info_tbl">
-                                            <caption>자산 통계</caption>
-                                            <colgroup>
-                                                <col /><col />
-                                            </colgroup>
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">종목</th>
-                                                    <th scope="col">비율</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row"><div>예금·페이</div></th>
-                                                    <td><div><span class="assets_01"></span></div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row"><div>투자</div></th>
-                                                    <td><div><span class="assets_02"></span></div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row"><div>연금</div></th>
-                                                    <td><div><span class="assets_03"></span></div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row"><div>보험</div></th>
-                                                    <td><div><span class="assets_04"></span></div></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row"><div>대출</div></th>
-                                                    <td><div><span class="assets_05"></span></div></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="labelInfo">
-                                    <span class="rate"><span class="ico_rate assets_01"></span>입출금 <em>40%</em></span>
-                                    <span class="rate"><span class="ico_rate assets_02"></span>예적금 <em>22%</em></span>
-                                    <span class="rate"><span class="ico_rate assets_03"></span>선불·페이 <em>18%</em></span>
-                                    <span class="rate"><span class="ico_rate assets_04"></span>투자 <em>10%</em></span>
-                                    <span class="rate"><span class="ico_rate assets_05"></span>연금 <em>10%</em></span>
-                                </div>
-							</div>
-						</div>
-						<div class="tab_cntDp1" style="display: none;">
-							<div class="asGroup assets_chart">
-                                <a href="#none" role="button" title="공유하기" class="share"></a>
-								<div class="chart_info">40대 평균에 비해<br><span class="pointColor">금융투자 </span> 상품 비중이 높아요</div>
-								<!-- [S] 자산비교 그래프 -->
-                                <div class="compare_chart">
-                                    <div class="wrapBarGraph">
-                                        <div class="wrapBar grap0">
-                                            <div class="gBarBox bar1">
-                                                <div class="myAsset">
-                                                    <span class="gBarPrice">
-                                                        <span class="inBox"><em class="num"></em>%</span>
-                                                    </span>
-                                                    <span class="gBar"></span>
-                                                </div>
-                
-                                                <div class="otherAsset">
-                                                    <span class="gBarPrice">
-                                                        <span class="inBox"><em class="num"></em>%</span>
-                                                    </span>
-                                                    <span class="gBar"></span>
-                                                </div>
-                                                
-                                                <span class="gTx"><span class="gtitle">예적금</span></span>
-                                            </div>
-                
-                                            <div class="gBarBox bar2">
-                                                <div class="myAsset">
-                                                    <span class="gBarPrice">
-                                                        <span class="inBox"><em class="num"></em>%</span>
-                                                    </span>
-                                                    <span class="gBar"></span>
-                                                </div>
-                
-                                                <div class="otherAsset">
-                                                    <span class="gBarPrice">
-                                                        <span class="inBox"><em class="num"></em>%</span>
-                                                    </span>
-                                                    <span class="gBar"></span>
-                                                </div>
-                                                <span class="gTx"><em class="gtitle">금융투자</em></span>
-                                            </div>
-                                            <div class="gBarBox bar3">
-                                                <div class="myAsset">
-                                                    <span class="gBarPrice">
-                                                        <span class="inBox"><em class="num"></em>%</span>
-                                                    </span>
-                                                    <span class="gBar"></span>
-                                                </div>
-                
-                                                <div class="otherAsset">
-                                                    <span class="gBarPrice">
-                                                        <span class="inBox"><em class="num"></em>%</span>
-                                                    </span>
-                                                    <span class="gBar"></span>
-                                                </div>
-                                                <span class="gTx txtLong"><em class="gtitle">저축성보험<br>(월납)</em></span> <!-- 텍스트 길경우 txtLong 클래스 추가-->
-                                            </div>
-                                        </div>
-                                        <div class="wrapBar_detail dpf jcc">
-                                            <div class="my-bar-rate-wrap">
-                                                <span class="bar-rate rate1"></span>
-                                                <span class="bar-rate rate2"></span>
-                                                <span class="bar-rate rate3">내 평균자산</span>
-                                            </div>
-                                            <span class="bar-rate gray">40대 평균자산</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- [E] 자산비교 그래프 -->
-                                <div class="btnListMore btnCenter"><a href="#none">자세히 보기</a></div>
-							</div>
-						</div>
-					</div>
-				</div>
+                <div class="asGroup assets_chart">
+                    <!-- S : 9/25 수정 -->
+                    <!-- <a href="#none" role="button" title="공유하기" class="share"></a> -->
+                    <div class="chart_info">내 금융자산은<br><span class="pointColor">입출금</span>이 가장 많아요</div>
+                    <div class="wrap_chart type_pie">
+                        <figure class="highcharts-figure" aria-hidden="true">
+                            <div id="chart_pie_assets"></div>
+                        </figure>
+                        <!-- 접근성 -->
+                        <div class="chart_disable blind">
+                            <table class="info_tbl">
+                                <caption>자산 통계</caption>
+                                <colgroup>
+                                    <col /><col />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">종목</th>
+                                        <th scope="col">비율</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><div>예금·페이</div></th>
+                                        <td><div><span class="assets_01"></span></div></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><div>투자</div></th>
+                                        <td><div><span class="assets_02"></span></div></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><div>연금</div></th>
+                                        <td><div><span class="assets_03"></span></div></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><div>보험</div></th>
+                                        <td><div><span class="assets_04"></span></div></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><div>대출</div></th>
+                                        <td><div><span class="assets_05"></span></div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="labelInfo">
+                        <span class="rate"><span class="ico_rate assets_01"></span>입출금 <em>40%</em></span>
+                        <span class="rate"><span class="ico_rate assets_02"></span>예적금 <em>22%</em></span>
+                        <span class="rate"><span class="ico_rate assets_03"></span>선불·페이 <em>18%</em></span>
+                        <span class="rate"><span class="ico_rate assets_04"></span>투자 <em>10%</em></span>
+                        <span class="rate"><span class="ico_rate assets_05"></span>연금 <em>10%</em></span>
+                    </div>
+                    <!-- E : 9/25 수정 -->
+                </div>
+				
 			</div>
 			<!-- [E] 막대그래프 -->
 
@@ -238,7 +164,7 @@
                                 <span class="assNum"><em class="num">20,800,000</em>원</span>
                             </a>
                         </div>
-                        <ul class="astDetail">
+                        <!-- <ul class="astDetail">
                             <li>
                                 <span class="tit">입출금</span>
                                 <span class="num"><em>200,000</em>원</span>
@@ -251,7 +177,7 @@
                                 <span class="tit">선불·페이</span>
                                 <span class="num"><em>50,000</em>원</span>
                             </li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
                 <div class="boxArea"> 
@@ -282,24 +208,6 @@
                                 <span class="assNum"><em class="num">20,800,000</em>원</span>
                             </a>
                         </div>
-                        <ul class="astDetail">
-                            <li>
-                                <span class="tit">저축성</span>
-                                <span class="num"><em>200,000</em>원</span>
-                            </li>
-                            <li>
-                                <span class="tit">보장성</span>
-                                <span class="num"><em>760,000</em>원</span>
-                            </li>
-                            <li>
-                                <span class="tit">자동차</span>
-                                <span class="num"><em>50,000</em>원</span>
-                            </li>
-                            <li>
-                                <span class="tit">보증</span>
-                                <span class="num"><em>50,000</em>원</span>
-                            </li>
-                        </ul>
                         <p class="ast_tx">공제보험은 마이데이터 서비스 대상이 아닙니다.</p>
                     </div>
                 </div>
