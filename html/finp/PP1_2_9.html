@@ -57,17 +57,24 @@
 	<!-- container -->
 	<div class="container">
 		<div class="content">
+            <div class="topInfoPop">
+				<p class="tx">
+                    홍길동님의 프로필 목록에서 숨기거나 순서를 변경할 수 있어요.
+                </p>
+			</div>
             <div class="edit_contents">
 
                 <div class="tabs_wrap tab_certi type_scroll">
                     <div class="tabs_header type2 has_sel_all">
                         <ul class="cboth">
-                            <li class="btn_sel_org tab1 on"><a href="#none"><span>예적금</span></a></li><!-- 선택시 title="선택됨" 추가 -->
-                            <li class="btn_sel_org tab2"><a href="#none"><span>투자</span></a></li>
-                            <li class="btn_sel_org tab3"><a href="#none"><span>연금</span></a></li>
-                            <li class="btn_sel_org tab4"><a href="#none"><span>보험</span></a></li>
-                            <li class="btn_sel_org tab5"><a href="#none"><span>자동차·부동산</span></a></li>
+                            <li class="btn_sel_org tab1 on"><a href="#none"><span>입출금</span></a></li><!-- 선택시 title="선택됨" 추가 -->
+                            <li class="btn_sel_org tab2"><a href="#none"><span>예적금</span></a></li>
+                            <li class="btn_sel_org tab3"><a href="#none"><span>투자</span></a></li>
+                            <li class="btn_sel_org tab4"><a href="#none"><span>연금</span></a></li>
+                            <li class="btn_sel_org tab5"><a href="#none"><span>보험</span></a></li>
                             <li class="btn_sel_org tab6"><a href="#none"><span>대출</span></a></li>
+                            <li class="btn_sel_org tab7"><a href="#none"><span>자동차</span></a></li>
+                            <li class="btn_sel_org tab8"><a href="#none"><span>부동산</span></a></li>
                         </ul>
 
                     </div>
@@ -78,27 +85,14 @@
                             <!-- [S] 자산 카테고리 -->
                             <div class="ins1Link_wrap">
 
-                                <!-- 예금·페이 -->
+                                <!-- 입출금 -->
                                 <div class="org_wrap editGroup">
-                                    <div class="listChck">
-                                        <h3 class="pointColor">예금·페이</h3>
-                                    </div>
                                     <!-- 입출금 -->
                                     <div class="asGroup editList2 sortListBox">
                                         <div class="listTit listChck">
                                             <h3>입출금 <em class="pointColor">3</em></h3>
 
-                                            <div class="titSwitch">
-                                                <span class="switch_name">
-                                                    내 자산 합산에 포함
-                                                </span>
-                                                <div class="boxChkItem">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        <i></i>
-                                                    </label>
-                                                </div>
-                                            </div>
+                                            
                                         </div>
                                         <div class="asList">
                                             <div class="wrap_slider">
@@ -150,12 +144,17 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="hr_div"></div>
+                                <!-- 예적금 -->
+                                <div class="org_wrap editGroup">
+                                    
                                     <!-- 예적금 -->
                                     <div class="asGroup editList2 sortListBox">
                                         <div class="listTit listChck">
                                             <h3>예적금 <em class="pointColor">1</em></h3>
 
-                                            <div class="titSwitch">
+                                            <!-- <div class="titSwitch">
                                                 <span class="switch_name">
                                                     내 자산 합산에 포함
                                                 </span>
@@ -165,7 +164,7 @@
                                                         <i></i>
                                                     </label>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <div class="asList">
                                             <div class="wrap_slider">
@@ -187,137 +186,16 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 신용카드 -->
-                                    <div class="asGroup editList2 sortListBox">
-                                        <div class="listTit listChck">
-                                            <h3>신용카드 <em class="pointColor">1</em></h3>
-
-                                            <div class="titSwitch">
-                                                <span class="switch_name">
-                                                    내 자산 합산에 포함
-                                                </span>
-                                                <div class="boxChkItem">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        <i></i>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="asList">
-                                            <div class="wrap_slider">
-                                                <div class="accItem"> <!-- 숨기기 버튼 클릭시 hidden 클래스 추가, 목록 선택 시 itemSelect 클래스 추가-->
-                                                    <a href="#none">
-                                                        <div class="im">
-                                                            <img src="../../img/bank/bank_logo_021.png" alt="bnk">
-                                                        </div>
-                                                        <div class="tx">
-                                                            <p class="prdName"><span class="ellipsis">모바일입출금통장</span></p>
-                                                            <p class="amount"><em>120,000,000</em>원</p>
-                                                        </div>
-                                                    </a>
-                                                    <div class="ctrl">
-                                                        <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
-                                                        <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 선불카드 -->
-                                    <div class="asGroup editList2 sortListBox">
-                                        <div class="listTit listChck">
-                                            <h3>선불카드 <em class="pointColor">1</em></h3>
-                                            <div class="titSwitch">
-                                                <span class="switch_name">
-                                                    내 자산 합산에 포함
-                                                </span>
-                                                <div class="boxChkItem">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        <i></i>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="asList">
-                                            <div class="wrap_slider">
-                                                <div class="accItem"> <!-- 숨기기 버튼 클릭시 hidden 클래스 추가, 목록 선택 시 itemSelect 클래스 추가-->
-                                                    <a href="#none">
-                                                        <div class="im">
-                                                            <img src="../../img/bank/bank_logo_021.png" alt="bnk">
-                                                        </div>
-                                                        <div class="tx">
-                                                            <p class="prdName"><span class="ellipsis">모바일입출금통장</span></p>
-                                                            <p class="amount"><em>120,000,000</em>원</p>
-                                                        </div>
-                                                    </a>
-                                                    <div class="ctrl">
-                                                        <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
-                                                        <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 페이 -->
-                                    <div class="asGroup editList2 sortListBox">
-                                        <div class="listTit listChck">
-                                            <h3>페이 <em class="pointColor">1</em></h3>
-                                            <div class="titSwitch">
-                                                <span class="switch_name">
-                                                    내 자산 합산에 포함
-                                                </span>
-                                                <div class="boxChkItem">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        <i></i>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="asList">
-                                            <div class="wrap_slider">
-                                                <div class="accItem"> <!-- 숨기기 버튼 클릭시 hidden 클래스 추가, 목록 선택 시 itemSelect 클래스 추가-->
-                                                    <a href="#none">
-                                                        <div class="im">
-                                                            <img src="../../img/bank/bank_logo_021.png" alt="bnk">
-                                                        </div>
-                                                        <div class="tx">
-                                                            <p class="prdName"><span class="ellipsis">모바일입출금통장</span></p>
-                                                            <p class="amount"><em>120,000,000</em>원</p>
-                                                        </div>
-                                                    </a>
-                                                    <div class="ctrl">
-                                                        <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
-                                                        <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="hr_div"></div>
                                 <!-- 투자 -->
                                 <div class="org_wrap editGroup">
-                                    <div class="listChck">
-                                        <h3 class="pointColor">투자</h3>
-                                    </div>
+                                    
                                     <!-- 은행 -->
                                     <div class="asGroup editList2 sortListBox">
                                         <div class="listTit listChck">
-                                            <h3>은행 <em class="pointColor">1</em></h3>
-                                            <div class="titSwitch">
-                                                <span class="switch_name">
-                                                    내 자산 합산에 포함
-                                                </span>
-                                                <div class="boxChkItem">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        <i></i>
-                                                    </label>
-                                                </div>
-                                            </div>
+                                            <h3>투자 <em class="pointColor">1</em></h3>
+                                            
                                         </div>
                                         <div class="asList">
                                             <div class="wrap_slider">
@@ -337,27 +215,6 @@
                                                         <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 증권 -->
-                                    <div class="asGroup editList2 sortListBox">
-                                        <div class="listTit listChck">
-                                            <h3>증권 <em class="pointColor">1</em></h3>
-                                            <div class="titSwitch">
-                                                <span class="switch_name">
-                                                    내 자산 합산에 포함
-                                                </span>
-                                                <div class="boxChkItem">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        <i></i>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="asList">
-                                            <div class="wrap_slider">
                                                 <div class="accItem">
                                                     <a href="#none">
                                                         <div class="im">
@@ -366,7 +223,7 @@
                                                         <div class="tx">
                                                             <p class="prdName"><span class="ellipsis">프리미엄 마이너스통장</span></p>
                                                             <p class="amount"><em>400,000</em>원</p>
-                                                            <p class="profit minus"><em class="num">-230,000</em>원 (<em class="num invest_down">3.21%</em>)</p>
+                                                            <p class="profit plus"><em class="num">+230,000</em>원 (<em class="num invest_up">3.21%</em>)</p>
                                                         </div>
                                                     </a>
                                                     <div class="ctrl type2"> <!-- 자산이 3줄일 경우 ctrl에 type2 클래스 추가 -->
@@ -377,29 +234,16 @@
                                             </div>
                                         </div>
                                     </div>
+                                    
                                 </div>
                                 <div class="hr_div"></div>
                                 <!-- 연금 -->
                                 <div class="org_wrap editGroup">
-                                    <div class="listChck">
-                                        <h3 class="pointColor">연금</h3>
-                                    </div>
+                                    
                                     <!-- 개인형 -->
                                     <div class="asGroup editList2 sortListBox">
                                         <div class="listTit listChck">
-                                            <h3>개인형IRP <em class="pointColor">1</em></h3>
-
-                                            <div class="titSwitch">
-                                                <span class="switch_name">
-                                                    내 자산 합산에 포함
-                                                </span>
-                                                <div class="boxChkItem">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        <i></i>
-                                                    </label>
-                                                </div>
-                                            </div>
+                                            <h3>연금<em class="pointColor">1</em></h3>
                                         </div>
                                         <div class="asList">
                                             <div class="wrap_slider">
@@ -419,28 +263,6 @@
                                                         <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 증권 -->
-                                    <div class="asGroup editList2 sortListBox">
-                                        <div class="listTit listChck">
-                                            <h3>증권 <em class="pointColor">1</em></h3>
-
-                                            <div class="titSwitch">
-                                                <span class="switch_name">
-                                                    내 자산 합산에 포함
-                                                </span>
-                                                <div class="boxChkItem">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        <i></i>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="asList">
-                                            <div class="wrap_slider">
                                                 <div class="accItem">
                                                     <a href="#none">
                                                         <div class="im">
@@ -449,7 +271,7 @@
                                                         <div class="tx">
                                                             <p class="prdName"><span class="ellipsis">프리미엄 마이너스통장</span></p>
                                                             <p class="amount"><em>400,000</em>원</p>
-                                                            <p class="profit plus"><em class="num">+230,000</em>원 (<em class="num invest_up">3.21%</em>)</p>
+                                                            <p class="profit minus"><em class="num">-230,000</em>원 (<em class="num invest_down">3.21%</em>)</p>
                                                         </div>
                                                     </a>
                                                     <div class="ctrl type2"> <!-- 자산이 3줄일 경우 ctrl에 type2 클래스 추가 -->
@@ -460,57 +282,112 @@
                                             </div>
                                         </div>
                                     </div>
+                                    
                                 </div>
                                 <div class="hr_div"></div>
                                 <!-- 보험 -->
                                 <div class="org_wrap editGroup">
-                                    <div class="listChck">
-                                        <h3 class="pointColor">보험</h3>
-            
-                                        <div class="titSwitch type2"> <!-- 체크박스 없을경우 type2 클래스 추가 -->
-                                            <span class="switch_name">
-                                                총 자산 금액에 미포함됩니다.
-                                            </span>
-                                        </div>
-                                    </div>
+                                    
                                     <div class="asGroup editList2 sortListBox">
                                         <div class="listTit">
-                                            <h3>저축보험 <em class="pointColor_g">0</em></h3>
+                                            <h3>보험 <em class="pointColor_g">2</em></h3>
+                                            <div class="titSwitch type2"> <!-- 체크박스 없을경우 type2 클래스 추가 -->
+                                                <span class="switch_name">
+                                                    총 자산 금액에 미포함됩니다.
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="asList">
+                                            <div class="wrap_slider">
+                                                <div class="accItem">
+                                                    <a href="#none">
+                                                        <div class="im">
+                                                            <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                                        </div>
+                                                        <div class="tx">
+                                                            <p class="prdName"><span class="ellipsis">보장기간 2028.01.20</span></p>
+                                                            <p class="amount"><em>(무)꿈나무재테크보험</em></p>
+                                                            <p class="profit minus"><em class="num pointColor4">230,000원</em></p>
+                                                        </div>
+                                                    </a>
+                                                    <div class="ctrl type2"> <!-- 자산이 3줄일 경우 ctrl에 type2 클래스 추가 -->
+                                                        <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                                                        <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                                    </div>
+                                                </div>
+                                                <div class="accItem">
+                                                    <a href="#none">
+                                                        <div class="im">
+                                                            <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                                        </div>
+                                                        <div class="tx">
+                                                            <p class="prdName"><span class="ellipsis">보장기간 2028.01.20</span></p>
+                                                            <p class="amount"><em>(무)꿈나무재테크보험</em></p>
+                                                            <p class="profit minus"><em class="num pointColor4">230,000원</em></p>
+                                                        </div>
+                                                    </a>
+                                                    <div class="ctrl type2"> <!-- 자산이 3줄일 경우 ctrl에 type2 클래스 추가 -->
+                                                        <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                                                        <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="asGroup editList2 sortListBox">
-                                        <div class="listTit">
-                                            <h3>연금(저축)보험 <em class="pointColor_g">0</em></h3>
-                                        </div>
-                                    </div>
-                                    <div class="asGroup editList2 sortListBox">
-                                        <div class="listTit">
-                                            <h3>보장보험 <em class="pointColor_g">0</em></h3>
-                                        </div>
-                                    </div>
-                                    <div class="asGroup editList2 sortListBox">
-                                        <div class="listTit">
-                                            <h3>자동차보험 <em class="pointColor_g">0</em></h3>
-                                        </div>
-                                    </div>
-                                    <div class="asGroup editList2 sortListBox">
-                                        <div class="listTit">
-                                            <h3>보증보험 <em class="pointColor_g">0</em></h3>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                                 <div class="hr_div"></div>
-                                <!-- 자동차·부동산 -->
+                                <!-- 대출 -->
                                 <div class="org_wrap editGroup">
-                                    <div class="listChck">
-                                        <h3 class="pointColor">자동차</h3>
+                                    
+                                    <!-- 은행 -->
+                                    <div class="asGroup editList2 sortListBox">
+                                        <div class="listTit listChck">
+                                            <h3>대출 <em class="pointColor">2</em></h3>
+                                            <!-- <div class="titSwitch">
+                                                <span class="switch_name">
+                                                    내 자산 합산에 포함
+                                                </span>
+                                                <div class="boxChkItem">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <i></i>
+                                                    </label>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                        <div class="asList">
+                                            <div class="wrap_slider">
+                                                <div class="accItem">
+                                                    <div class="imGroup">
+                                                        <div class="im">
+                                                            <img src="../../img/bank/bank_logo_021.png" alt="bnk">
+                                                        </div>
+                                                        <div class="tx">
+                                                            <p class="prdName"><span class="ellipsis">BNK대출</span></p>
+                                                            <p class="amount"><em>400,000</em>원</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ctrl"> <!-- 자산이 3줄일 경우 ctrl에 type2 클래스 추가 -->
+                                                        <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
+                                                        <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+                                    
+                                </div>
+                                
+                                <div class="hr_div"></div>
+                                <!-- 자동차 -->
+                                <div class="org_wrap editGroup">
                                     <!-- 자동차 -->
                                     <div class="asGroup editList2 sortListBox">
                                         <div class="listTit listChck">
                                             <h3>자동차 <em class="pointColor">1</em></h3>
 
-                                            <div class="titSwitch">
+                                            <!-- <div class="titSwitch">
                                                 <span class="switch_name">
                                                     내 자산 합산에 포함
                                                 </span>
@@ -520,7 +397,7 @@
                                                         <i></i>
                                                     </label>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <div class="asList">
                                             <div class="wrap_slider">
@@ -542,12 +419,17 @@
                                             </div>
                                         </div>
                                     </div>
+                                    
+                                </div>
+                                <div class="hr_div"></div>
+                                <!-- 부동산 -->
+                                <div class="org_wrap editGroup">
                                     <!-- 부동산 -->
                                     <div class="asGroup editList2 sortListBox">
                                         <div class="listTit listChck">
                                             <h3>부동산 <em class="pointColor">1</em></h3>
 
-                                            <div class="titSwitch">
+                                            <!-- <div class="titSwitch">
                                                 <span class="switch_name">
                                                     내 자산 합산에 포함
                                                 </span>
@@ -557,7 +439,7 @@
                                                         <i></i>
                                                     </label>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <div class="asList">
                                             <div class="wrap_slider">
@@ -580,70 +462,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="hr_div"></div>
-                                <!-- 대출 -->
-                                <div class="org_wrap editGroup">
-                                    <div class="listChck">
-                                        <h3 class="pointColor">대출</h3>
-                                    </div>
-                                    <!-- 은행 -->
-                                    <div class="asGroup editList2 sortListBox">
-                                        <div class="listTit listChck">
-                                            <h3>은행 <em class="pointColor">2</em></h3>
-
-                                            <div class="titSwitch">
-                                                <span class="switch_name">
-                                                    내 자산 합산에 포함
-                                                </span>
-                                                <div class="boxChkItem">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        <i></i>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="asList">
-                                            <div class="wrap_slider">
-                                                <div class="accItem">
-                                                    <div class="imGroup">
-                                                        <div class="im">
-                                                            <img src="../../img/bank/bank_logo_021.png" alt="bnk">
-                                                        </div>
-                                                        <div class="tx">
-                                                            <p class="prdName"><span class="ellipsis">프리미엄 마이너스통장</span></p>
-                                                            <p class="amount"><em>400,000</em>원</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ctrl"> <!-- 자산이 3줄일 경우 ctrl에 type2 클래스 추가 -->
-                                                        <a role="button" class="btnHandle ui-sortable-handle"><span class="blind">드래그 앤 드롭</span></a>
-                                                        <a role="button" class="btnHide"><span class="blind">목록에서 숨기기</span></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="asGroup editList2 sortListBox">
-                                        <div class="listTit">
-                                            <h3>카드 <em class="pointColor_g">0</em></h3>
-                                        </div>
-                                    </div>
-                                    <div class="asGroup editList2 sortListBox">
-                                        <div class="listTit">
-                                            <h3>증권 <em class="pointColor_g">0</em></h3>
-                                        </div>
-                                    </div>
-                                    <div class="asGroup editList2 sortListBox">
-                                        <div class="listTit">
-                                            <h3>캐피탈 <em class="pointColor_g">0</em></h3>
-                                        </div>
-                                    </div>
-                                    <div class="asGroup editList2 sortListBox">
-                                        <div class="listTit">
-                                            <h3>보험 <em class="pointColor_g">0</em></h3>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                             <!-- [E] 자산 카테고리  -->
                         </div>
@@ -652,14 +470,14 @@
 
             </div>
 
-            <div class="fix_bottom not_dock">
+            <footer class="fix_bottom not_dock">
                 <div class="btn_wrap">
                     <div class="btnGroup sub_btnGroup">
                         <p><a href="#SHZ3001" class="btnBl6 btn_open_layer_pop" role="button" onclick="">취소</a></p>
                         <p><a href="#SHZ3000" class="btnBl1 btn_open_layer_pop" role="button" onclick="">저장</a></p>
                     </div>
                 </div>
-            </div>
+            </footer>
 			
 		</div>
 	</div>
@@ -823,6 +641,10 @@
                         $('html, body').animate({scrollTop: $topScSpace + $('.org_nth_1').outerHeight(true) + $('.org_nth_2').outerHeight(true) + $('.org_nth_3').outerHeight(true) + $('.org_nth_4').outerHeight(true) + 370}, 300);
                     }else if($orgNth == 6){
                         $('html, body').animate({scrollTop: $topScSpace + $('.org_nth_1').outerHeight(true) + $('.org_nth_2').outerHeight(true) + $('.org_nth_3').outerHeight(true) + $('.org_nth_4').outerHeight(true) + $('.org_nth_5').outerHeight(true) + 460}, 300);
+                    }else if($orgNth == 7){
+                        $('html, body').animate({scrollTop: $topScSpace + $('.org_nth_1').outerHeight(true) + $('.org_nth_2').outerHeight(true) + $('.org_nth_3').outerHeight(true) + $('.org_nth_4').outerHeight(true) + $('.org_nth_5').outerHeight(true) + $('.org_nth_6').outerHeight(true) + 460}, 300);
+                    }else if($orgNth == 8){
+                        $('html, body').animate({scrollTop: $topScSpace + $('.org_nth_1').outerHeight(true) + $('.org_nth_2').outerHeight(true) + $('.org_nth_3').outerHeight(true) + $('.org_nth_4').outerHeight(true) + $('.org_nth_5').outerHeight(true) + $('.org_nth_6').outerHeight(true) + $('.org_nth_7').outerHeight(true) + 460}, 300);
                     }
                 });
             });
@@ -837,6 +659,8 @@
                 var $orgEq3 = $('.ins1Link_wrap .org_wrap:eq(3)').outerHeight(true);
                 var $orgEq4 = $('.ins1Link_wrap .org_wrap:eq(4)').outerHeight(true);
                 var $orgEq5 = $('.ins1Link_wrap .org_wrap:eq(5)').outerHeight(true);
+                var $orgEq6 = $('.ins1Link_wrap .org_wrap:eq(6)').outerHeight(true);
+                var $orgEq7 = $('.ins1Link_wrap .org_wrap:eq(7)').outerHeight(true);
 
                 if($windowTop < $activePosArea + $orgEq0){
                     $(".tabs_wrap .btn_sel_org:nth-child(1)").addClass('on').siblings().removeClass('on');
@@ -856,14 +680,22 @@
                 }else if($windowTop < $activePosArea + $orgEq0 + $orgEq1 + $orgEq2 + $orgEq3 + $orgEq4 +$orgEq5 ){
                     $(".tabs_wrap .btn_sel_org:nth-child(6)").addClass('on').siblings().removeClass('on');
                     $('.tabs_header.type2 ul').scrollLeft(150);
+                }else if($windowTop < $activePosArea + $orgEq0 + $orgEq1 + $orgEq2 + $orgEq3 + $orgEq4 +$orgEq5 +$orgEq6 ){
+                    $(".tabs_wrap .btn_sel_org:nth-child(7)").addClass('on').siblings().removeClass('on');
+                    $('.tabs_header.type2 ul').scrollLeft(150);
+                }else if($windowTop < $activePosArea + $orgEq0 + $orgEq1 + $orgEq2 + $orgEq3 + $orgEq4 +$orgEq5 +$orgEq6 +$orgEq7 ){
+                    $(".tabs_wrap .btn_sel_org:nth-child(8)").addClass('on').siblings().removeClass('on');
+                    $('.tabs_header.type2 ul').scrollLeft(150);
                 }
-            });
-            if($('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').outerHeight(true) < $(window).height() - $('.fix_bottom').outerHeight(true) - $('.tabs_header').outerHeight(true)){
-                $('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').css('padding-bottom', $(window).height() - $('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').height() - $('.fix_bottom').height() - $('.tabs_header').outerHeight(true));
 
-            //console.log('.org_last_height >= window_height', $('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').outerHeight(true), $(window).height(), $(window).height() - $('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').outerHeight(true) - $('.fix_bottom').outerHeight(true) - $('.tabs_header').outerHeight(true)+'(디바이스높이, 컨텐츠높이 비교)');
-            //console.log($('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').outerHeight(true), $('.fix_bottom').outerHeight(true), $('.fix_bottom').offsetHeight, $('.tabs_header').outerHeight(true));
-            }
+                
+            });
+            // if($('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').outerHeight(true) < $(window).height() - $('.fix_bottom').outerHeight(true) - $('.tabs_header').outerHeight(true)){
+            //     $('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').css('padding-bottom', $(window).height() - $('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').height() - $('.fix_bottom').height() - $('.tabs_header').outerHeight(true));
+
+            // //console.log('.org_last_height >= window_height', $('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').outerHeight(true), $(window).height(), $(window).height() - $('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').outerHeight(true) - $('.fix_bottom').outerHeight(true) - $('.tabs_header').outerHeight(true)+'(디바이스높이, 컨텐츠높이 비교)');
+            // //console.log($('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').outerHeight(true), $('.fix_bottom').outerHeight(true), $('.fix_bottom').offsetHeight, $('.tabs_header').outerHeight(true));
+            // }
         }
 
     }

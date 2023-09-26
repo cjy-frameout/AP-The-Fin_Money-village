@@ -59,72 +59,46 @@
 			<div class="asset_contents tab_certi"> <!-- /* tabs_wrap terms_wrap */ -->
 				<div class="tabs_header type2"> <!--  has_sel_all -->
 					<ul class="cboth">
-						<li class="btn_sel_org tab1"><a href="#none"><span>예금·페이</span></a></li><!-- 선택시 title="선택됨" 추가 -->
-						<li class="btn_sel_org tab2 on"><a href="#none"><span>투자</span></a></li>
-						<li class="btn_sel_org tab3"><a href="#none"><span>연금</span></a></li>
-						<li class="btn_sel_org tab4"><a href="#none"><span>보험</span></a></li>
-						<li class="btn_sel_org tab5"><a href="#none"><span>자동차</span></a></li>
-						<li class="btn_sel_org tab6"><a href="#none"><span>대출</span></a></li>
+						<li class="btn_sel_org tab1 "><a href="#none"><span>입출금</span></a></li><!-- 선택시 title="선택됨" 추가 -->
+                        <li class="btn_sel_org tab2 "><a href="#none"><span>예적금</span></a></li>
+						<li class="btn_sel_org tab3 on"><a href="#none"><span>투자</span></a></li>
+						<li class="btn_sel_org tab4"><a href="#none"><span>연금</span></a></li>
+						<li class="btn_sel_org tab5"><a href="#none"><span>보험</span></a></li>
+                        <li class="btn_sel_org tab6"><a href="#none"><span>대출</span></a></li>
+						<li class="btn_sel_org tab7"><a href="#none"><span>자동차</span></a></li>
+                        <li class="btn_sel_org tab8"><a href="#none"><span>부동산</span></a></li>
+						
 					</ul>
 				</div>
-
-                <div class="swiper-container">
-                    <div class="terms-slider tabs_body_wrap swiper-wrapper">
-                        
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{예금페이}</p>
+                <div class="org_wrap swiper-slide">
+                    <div class="tBalance">
+                        <h3 class="tBaltit">투자 현황<a href="#layer_PP1_2_3_1_1BS" class="btn_open_bottom_sheet btn_more_ask" role="button"><span class="ico_ask type_white2"><em class="blind">더보기</em></span></a></h3>
+                        <p class="tBalAmount"><em class="amount">0</em>원</p>
+                        <!-- <p class="invest plus"><em class="num">+23,000</em>원 (<em class="num invest_up">3.21%</em>)</p>
+                        <p class="tBalDetail">외화금액 3,550CNY + 8,200USD 미합산</p> -->
+                    </div>
+                    <div class="hr_div"></div>    
+                    <div class="asGroup">
+                        <div class="listTit"> 
+                            <h3>은행</h3>
+                            <a href="#" class="btnAdd"> <span class="bank_link">연결하기</span></a>
                         </div>
-
-                        <div class="org_wrap swiper-slide">
-                            <div class="tBalance">
-                                <h3 class="tBaltit">투자 현황<a href="#layer_PP1_2_3_1_1BS" class="btn_open_bottom_sheet btn_more_ask" role="button"><span class="ico_ask type_white2"><em class="blind">더보기</em></span></a></h3>
-                                <p class="tBalAmount"><em class="amount">0</em>원</p>
-                                <!-- <p class="invest plus"><em class="num">+23,000</em>원 (<em class="num invest_up">3.21%</em>)</p>
-                                <p class="tBalDetail">외화금액 3,550CNY + 8,200USD 미합산</p> -->
-                            </div>
-                            <div class="hr_div"></div>    
-                            <div class="asGroup">
-                                <div class="listTit"> 
-                                    <h3>은행</h3>
-                                    <a href="#" class="btnAdd"> <span class="bank_link">연결하기</span></a>
-                                </div>
-                            </div>
-                            <div class="asGroup">
-                                <div class="listTit"> 
-                                    <h3>증권</h3>
-                                    <a href="#" class="btnAdd"> <span class="bank_link">연결하기</span></a>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{대출}</p>
-                        </div>
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{투자}</p>
-                        </div>
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{소비}</p>
-                        </div>
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{연금}</p>
-                        </div>
-                        <div class="org_wrap swiper-slide">
-                            <p class="stit">{자동차}</p>
-                        </div>
-    
                     </div>
                 </div>
+                
               
 			</div>
 
 			<!-- [S] 하단 버튼 영역 -->
-            <div class="btn_wrap">
-                <div class="btnGroup">
-                    <!-- <p><a href="#none" class="btnBl2 btnEdit" role="button" onclick="">목록 편집</a></p> -->
-                    <p><a href="#none" class="btnBl1 btnPlus" role="button" onclick="">자산 연결</a></p>
+            <footer class="fix_bottom not_dock">
+                <div class="btn_wrap fixed">
+                    <div class="btnGroup">
+                        <!-- <p><a href="#none" class="btnBl2 btnEdit" role="button" onclick="">목록 편집</a></p> -->
+                        <p><a href="#none" class="btnBl1 btnPlus" role="button" onclick="">자산 연결</a></p>
+                    </div>
                 </div>
-            </div>
+            </footer>
+            
 			<!-- [E] 하단 버튼 영역 -->
 
 		</div>
