@@ -1217,6 +1217,16 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 }
 /* ========================================================= E : common  =====================================================*/
 /* S : component */
+.detail-box{
+    border-bottom: 1px solid #E5E5E5;
+    padding-bottom: 15px;
+    & + .detail-box {
+        margin-top: 15px;
+    }
+    &:last-child {
+        border-bottom: 0;
+    }
+}
 .asGroup {
     .accBox:not(:first-of-type) {
         margin-top: 20px;
