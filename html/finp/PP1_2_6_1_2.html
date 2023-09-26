@@ -429,7 +429,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="banner inLink">
+                                    <!--0926 삭제 <div class="banner inLink">
                                         <a href="#none" class="link_type1">
                                             <h3 class="banner_tit">
                                                 <span class="titPoint">나의 드림카</span><br>
@@ -437,9 +437,68 @@
                                             </h3>
                                             <span class="tx">목표 세우기</span>
                                         </a>
-                                    </div>
+                                    </div>-->
                                 </div>
                                 <!-- [E] 슬라이드 배너 타입 등록후 -->
+
+                                <!-- 0926 내용 추가 -->
+                                <div class="hr_div"></div>
+
+                                <div class="asGroup houseGroup"> <!-- 자산 폴딩 시 fGroup 사용 -->
+                                    <div class="fGroup" id="foldingList_01">
+                                        <h3 class="fGroup_tit">숨긴 자동차</h3>
+
+                                        <!-- 숨긴 자동차 영역 -->
+                                        <div class="asList type_info">
+                                            <div class="state_top">
+                                                <a href="#">볼보 V90 크로스컨트리 F/L</a>
+                                            </div>
+                                            <div class="state_contents">
+                                                <div class="state_name">
+                                                <span>
+                                                    <em>12가3456</em> <em class="num_year">2016</em>년형
+                                                </span>
+                                                    <a href="#" class="link_dashed">상세모델 정보가 없습니다</a>
+                                                    <div class="ic_btnGroup">
+                                                        <button type="button" class="btn_delete"><span class="blind">삭제하기</span></button>
+                                                    </div>
+                                                </div>
+                                                <div class="state_imBox">
+                                                    <img src="../../img/theme/apthefin/im_car_01.png" alt="볼보">
+                                                </div>
+
+                                                <ul>
+                                                    <li class="state_tit">
+                                                    <span>
+                                                        내 차 시세
+                                                    </span>
+                                                        <p class="invest tx_bold"><em class="num">16,450,000</em> 원</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>출고가격</span>
+                                                        <p class="invest state_price"><em class="num">26,000,000</em> 원</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>출고가 기준 손익</span>
+                                                        <p class="invest minus"><em class="num">-6,000,000</em>원 (<em class="num invest_down">45%</em>)</p>
+                                                    </li>
+                                                    <li>
+                                                        <span>구매가격</span>
+                                                        <a href="#" class="link_dashed btn_edit">구매가격을 입력해주세요</a>
+                                                    </li>
+                                                    <li>
+                                                        <span>구매가 기준 손익</span>
+                                                        <p class="invest"><em class="num">0</em>원 (<em class="num">0%</em>)</p>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <a href="#none" class="btnFolding show" data-target="#foldingList_01" aria-expanded="false">숨긴 자동차ㆍ부동산<i> 닫기</i></a> <!-- 0926 버튼 text 변경 -->
+                                </div>
 
                             </div>
                             
@@ -555,8 +614,11 @@
 
 <script>
 $(document).ready(function(){
-    
-     
+
+    $(".btnFolding").on("click",function(){
+        $(this).hasClass("show") ? $(this).find("i").text("닫기") : $(this).find("i").text("펼치기")
+    })
+
     // 메뉴랑 스와이프 연동, 메뉴 중앙정렬
     $('.terms-slider .org_wrap').each(function (index, item) {
         $(item).addClass('org_nth_' + (index + 1));
