@@ -1,5 +1,5 @@
 (function($){
-
+    //얼랫같은 센터 팝업
     $.fn.layerPopOpen = function(){
         return this.each(function(){
             var $this = $(this);
@@ -96,6 +96,7 @@
 
 })(jQuery);
 
+//전체 레이어 팝업
 function layer_fullsheet(el){
     var $el = $(el);
     var isDim;
@@ -125,7 +126,7 @@ function layer_fullsheet(el){
     });
 }
 
-
+//하단 호출 레이어 팝업
 function layer_bottomsheet(el){
     var $el = $(el);
     $('html').addClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
