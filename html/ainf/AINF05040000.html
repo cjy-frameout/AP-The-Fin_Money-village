@@ -793,7 +793,7 @@
 </div>
 <!-- [E] -->
 
-
+<!-- 면적 버텀 팝업 -->
 <div id="pop002" class="layer_bottomsheet" role="dialog" tabindex="-1" aria-hidden="true">
     <div class="layer_inner">
         <div class="layer_tit">
@@ -804,7 +804,7 @@
             <!-- 페이지 스타일 -->
             <div class="type_page">
                 <ul class="layer_sel_opt type_date">
-                    <li><button type="button" class="btn_sel_opt on" title="선택됨"><span>138㎡/113.67㎡</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+                    <li><button type="button" class="btn_sel_opt on"><span>138㎡/113.67㎡</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
                     <li><button type="button" class="btn_sel_opt"><span>138㎡/113.67㎡</span></button></li>
                     <li><button type="button" class="btn_sel_opt"><span>138㎡/113.67㎡ </span></button></li>
                     <li><button type="button" class="btn_sel_opt"><span>138㎡/113.67㎡ </span></button></li>
@@ -837,6 +837,17 @@
             layer_fullsheet("#full001");
         })
 
+        //면적선택 팝업
+        $(document).on("click",".sel_box",function(){
+            layer_bottomsheet("#pop002")
+        })
+
+        //면적선택 on 클래스 제어
+        $(document).on("click",".btn_sel_opt",function(){
+            $(".btn_sel_opt").removeClass("on");
+            $(this).addClass("on");
+        })
+
 
         //터치위로 올릴때 이벤트
         var startY = 0;
@@ -857,11 +868,11 @@
 
         });
 
-
+        //아파트 정보창 터치로 올리기
         $(document).on("touchstart", ".touchArea", function (event) {
             startY = event.originalEvent.touches[0].clientY; // 터치 시작 위치 기록
         });
-
+        //아파트 정보창 터치로 올리기
         $(document).on("touchmove", ".touchArea", function (event) {
             var currentY = event.originalEvent.touches[0].clientY;
             var deltaY = startY - currentY;
