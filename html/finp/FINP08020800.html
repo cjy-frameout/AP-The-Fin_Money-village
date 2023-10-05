@@ -91,8 +91,10 @@
                             <p class="invest state_price"><em class="num">132,000,000</em> 원</p>
                         </li>
                         <li>
-                            <span>보증금/월</span>
-                            <p class="invest state_price"><em class="num">5,000만원 / 70만원</em></p>
+                            <!-- [S] 1005 계약기간 추가 -->
+                            <span>계약기간</span>
+                            <p class="invest state_price"><em class="num">2023.10.04 ~ 2025.10.03</em></p>
+                            <!-- [E] 1005 계약기간 추가 -->
                         </li>
                         <li class="slideArea">
                             <span>대출금액</span>
@@ -186,131 +188,135 @@
                 </div>
             </div>
 
-            <hr class="hr_div">
-            <!-- [S] 시세변동 -->
-            <div class="marketBox">
-                <p class="smallTit">시세 변동 <span class="sub_title">(2022.10.14 업데이트)</span></p>
-                <ul class="market_list">
-                    <li class="list_tit">
+            <!-- 1005 내용 삭제 -->
+            <div style="display: none">
+                <hr class="hr_div">
+                <!-- [S] 시세변동 -->
+                <div class="marketBox">
+                    <p class="smallTit">시세 변동 <span class="sub_title">(2022.10.14 업데이트)</span></p>
+                    <ul class="market_list">
+                        <li class="list_tit">
                         <span class="itemTit">
                             <span class="flag self">매매</span>
                             매매 시세
                         </span>
-                        <span class="itemData"><em>2,050,000,000</em>원</span>
-                    </li>
-                    <li>
-                        <span class="itemTit">최근 실거래가(2022.06/17층)</span>
-                        <span class="itemData"><em>2,150,000,000</em>원</span>
-                    </li>
-                    <li>
-                        <span class="itemTit">매물 평균가</span>
-                        <span class="itemData"><em>2,050,000,000</em>원</span>
-                    </li>
-                </ul>
+                            <span class="itemData"><em>2,050,000,000</em>원</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">최근 실거래가(2022.06/17층)</span>
+                            <span class="itemData"><em>2,150,000,000</em>원</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">매물 평균가</span>
+                            <span class="itemData"><em>2,050,000,000</em>원</span>
+                        </li>
+                    </ul>
 
-                <ul class="market_list">
-                    <li class="list_tit">
+                    <ul class="market_list">
+                        <li class="list_tit">
                         <span class="itemTit">
                             <span class="flag lease">전세</span>
                             전세 시세
                         </span>
-                        <span class="itemData"><em>1,050,000,000</em>원</span>
-                    </li>
-                    <li>
-                        <span class="itemTit">최근 실거래가(2022.06/18층)</span>
-                        <span class="itemData"><em>1,100,000,000</em>원</span>
-                    </li>
-                    <li>
-                        <span class="itemTit">전세 평균가</span>
-                        <span class="itemData"><em>1,000,000,000</em>원</span>
-                    </li>
-                </ul>
+                            <span class="itemData"><em>1,050,000,000</em>원</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">최근 실거래가(2022.06/18층)</span>
+                            <span class="itemData"><em>1,100,000,000</em>원</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">전세 평균가</span>
+                            <span class="itemData"><em>1,000,000,000</em>원</span>
+                        </li>
+                    </ul>
 
-                <ul class="market_list">
-                    <li class="list_tit">
+                    <ul class="market_list">
+                        <li class="list_tit">
                         <span class="itemTit">
                             <span class="flag monthly">월세</span>
                             월세 평균가
                         </span>
+                        </li>
+                        <li>
+                            <span class="itemTit">보증금</span>
+                            <span class="itemData"><em class="tx_bold">100,000,000</em>원</span>
+                        </li>
+                        <li>
+                            <span class="itemTit">월세</span>
+                            <span class="itemData"><em class="tx_bold">2,390,000~3,350,000</em>원</span>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- [E] 시세변동 -->
+                <!-- [S] 그래프영역 -->
+                <div class="wrap_chart_area">
+                    <div class="wrap_chart type_line">
+                        <h3 class="chart_legend">(단위 : 만원)</h3>
+                        <!-- [S] 차트 라인 타입 -->
+                        <figure class="highcharts-figure" aria-hidden="true">
+                            <div id="line_con" class="line_con"></div>
+                        </figure>
+                        <!-- [E] 차트 라인 타입 -->
+                    </div>
+                </div>
+                <!-- [E] 그래프영역 -->
+
+                <hr class="hr_div">
+                <ul class="fDetail_list estate">
+                    <li class="state_tit">
+                        <span>단지요약정보</span>
                     </li>
                     <li>
-                        <span class="itemTit">보증금</span>
-                        <span class="itemData"><em class="tx_bold">100,000,000</em>원</span>
+                        <span class="itemTit">주소</span>
+                        <span class="itemData">서울시 송파구 신천동17</span>
                     </li>
                     <li>
-                        <span class="itemTit">월세</span>
-                        <span class="itemData"><em class="tx_bold">2,390,000~3,350,000</em>원</span>
+                        <span class="itemTit">세대수</span>
+                        <span class="itemData">총 6,864세대 / 총 66개동</span>
+                    </li>
+                    <li>
+                        <span class="itemTit">최고층</span>
+                        <span class="itemData">20~36층</span>
+                    </li>
+                    <li>
+                        <span class="itemTit">지역난방</span>
+                        <span class="itemData">열병합</span>
+                    </li>
+                    <li>
+                        <span class="itemTit">주차</span>
+                        <span class="itemData">총 9,766세대 / 세대당 1.42대</span>
+                    </li>
+                    <li>
+                        <span class="itemTit">용적률</span>
+                        <span class="itemData">283%</span>
+                    </li>
+                    <li>
+                        <span class="itemTit">건폐율</span>
+                        <span class="itemData">14%</span>
                     </li>
                 </ul>
-
+                <hr class="hr_div thin">
+                <ul class="fDetail_list estate">
+                    <li class="state_tit">
+                        <span>평형정보(108B㎡)</span>
+                    </li>
+                    <li>
+                        <span class="itemTit">면적</span>
+                        <span class="itemData">공급 108.82m2 / 전용 84.79m2<br>방 3개 / 욕실 2개</span>
+                    </li>
+                    <li>
+                        <span class="itemTit">현관구조</span>
+                        <span class="itemData">계단식</span>
+                    </li>
+                    <li>
+                        <div class="msgResult">
+                            <p>등록된 정보가 없습니다.</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <!-- [E] 시세변동 -->
-            <!-- [S] 그래프영역 -->
-            <div class="wrap_chart_area">
-                <div class="wrap_chart type_line">
-                    <h3 class="chart_legend">(단위 : 만원)</h3>
-                    <!-- [S] 차트 라인 타입 -->
-                    <figure class="highcharts-figure" aria-hidden="true">
-                        <div id="line_con" class="line_con"></div>
-                    </figure>
-                    <!-- [E] 차트 라인 타입 -->
-                </div>
-            </div>
-            <!-- [E] 그래프영역 -->
-
-            <hr class="hr_div">
-            <ul class="fDetail_list estate">
-                <li class="state_tit">
-                    <span>단지요약정보</span>
-                </li>
-                <li>
-                    <span class="itemTit">주소</span>
-                    <span class="itemData">서울시 송파구 신천동17</span>
-                </li>
-                <li>
-                    <span class="itemTit">세대수</span>
-                    <span class="itemData">총 6,864세대 / 총 66개동</span>
-                </li>
-                <li>
-                    <span class="itemTit">최고층</span>
-                    <span class="itemData">20~36층</span>
-                </li>
-                <li>
-                    <span class="itemTit">지역난방</span>
-                    <span class="itemData">열병합</span>
-                </li>
-                <li>
-                    <span class="itemTit">주차</span>
-                    <span class="itemData">총 9,766세대 / 세대당 1.42대</span>
-                </li>
-                <li>
-                    <span class="itemTit">용적률</span>
-                    <span class="itemData">283%</span>
-                </li>
-                <li>
-                    <span class="itemTit">건폐율</span>
-                    <span class="itemData">14%</span>
-                </li>
-            </ul>
-            <hr class="hr_div thin">
-            <ul class="fDetail_list estate">
-                <li class="state_tit">
-                    <span>평형정보(108B㎡)</span>
-                </li>
-                <li>
-                    <span class="itemTit">면적</span>
-                    <span class="itemData">공급 108.82m2 / 전용 84.79m2<br>방 3개 / 욕실 2개</span>
-                </li>
-                <li>
-                    <span class="itemTit">현관구조</span>
-                    <span class="itemData">계단식</span>
-                </li>
-                <li>
-                    <div class="msgResult">
-                        <p>등록된 정보가 없습니다.</p>
-                    </div>
-                </li>
-            </ul>
+            <!-- //1005 내용 삭제 -->
 		</div>
 
 	</div>
