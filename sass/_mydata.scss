@@ -138,18 +138,18 @@
     }
 
     .likes-num-btn {
-        background: url(../../img/theme/apthefin/icon_thumb.png) no-repeat 0 0;
+        background: url(../img/theme/apthefin/icon_thumb.png) no-repeat 0 0;
         cursor: pointer;
-        height: 16px;
+        height: 16px; 
         width: 16px;
 
         &.on {
-            background: url(../../img/theme/apthefin/icon_thumb_on.png) no-repeat 0 0;
+            background: url(../img/theme/apthefin/icon_thumb_on.png) no-repeat 0 0;
         }
     }
 
     .comment-num-btn {
-        background: url(../../img/theme/apthefin/icon_comment.png) no-repeat 0 0;
+        background: url(../img/theme/apthefin/icon_comment.png) no-repeat 0 0;
         cursor: pointer;
         height: 16px;
         width: 16px;
@@ -170,7 +170,7 @@
     }
 
     .feed-btn-more {
-        background: url(../../img/theme/apthefin/icon_more.png) no-repeat 0 0;
+        background: url(../img/theme/apthefin/icon_more.png) no-repeat 0 0;
         cursor: pointer;
         height: 24px;
         width: 24px;
