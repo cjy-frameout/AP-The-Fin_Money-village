@@ -7457,6 +7457,10 @@ a.btnMenu {
 			font-size: 15px;
 			font-weight: 700;
 			line-height: 24px;
+			&.flag {
+				font-size: 10px; 
+				line-height: 17px;
+			}
 		}
 
 		.cdChkTxt {

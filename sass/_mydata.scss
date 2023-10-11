@@ -96,6 +96,12 @@
 
         + .load-wrap {
             margin-top: 24px;
+            .accItem i {
+                background: #fff;
+            }
+            .accItem input[type="checkbox"] {
+                display: none;
+            }
         }
     }
 
@@ -177,6 +183,15 @@
     }
 
     .load-wrap {
+        &.padd20 {
+            padding: 20px 0;
+            .accItem input[type="checkbox"] {
+                display: none;
+            }
+            .accItem i {
+                background: #fff;
+            }
+        }
         + .list-util {
             margin-top: 26px;
         }
