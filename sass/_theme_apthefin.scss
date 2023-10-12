@@ -3281,7 +3281,7 @@ a.btnMenu {
 	}
 
 	& + .asList.type_info {
-		margin-top: 20px;
+		margin-top: 10px;
 	}
 }
 
@@ -3526,7 +3526,7 @@ a.btnMenu {
 				align-items: center;
 			}
 
-			+ .accItem {
+			+ .accItem,+ .asList {
 				margin-top: 10px;
 			}
 		}
