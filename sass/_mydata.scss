@@ -5,9 +5,34 @@
 .wrap_search + .feed-list {
     margin-top: 20px;
 }
+@mixin afterBluer {
+    overflow:hidden;
+    height:180px;
+    position: relative;
+    &:after {
+        content:"";
+        position: absolute;
+        left:0;
+        bottom:0;
+        width:100%;
+        height:20px;
+        display: block;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.20) 0%, #FFF 100%);
+    }
+}
 .feed-list {
-    .feed-item:first-child {
-        margin-top: 40px;
+    .feed-item {
+        &:first-child {
+            margin-top: 40px;
+        }
+        .list-desc {@include afterBluer;}
+        .load-wrap {
+            @include afterBluer;
+            .list-desc {
+                height:auto;
+                &:after {display:none}
+            }
+        }
     }
 }
 .feed-item {
@@ -102,6 +127,9 @@
             .accItem input[type="checkbox"] {
                 display: none;
             }
+            .asList.type_info {
+                input,i {display:none}
+            }
         }
     }
 
@@ -180,6 +208,8 @@
         cursor: pointer;
         height: 24px;
         width: 24px;
+        @include txtHidden();
+        display:block;
     }
 
     .load-wrap {
@@ -1267,8 +1297,13 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
         height: 48px;
         width: 48px;
         box-shadow: 0 7px 7px rgba($color: #000000, $alpha: 0.3);
+        /*transition: all .3s;
+        transform:translateX(calc(100% + 20px));*/
         & + a {
             margin-top: 10px;
+        }
+        &.-active {
+            transform:translateX(0);
         }
     }
     
@@ -1277,17 +1312,20 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     background: url(../img/theme/apthefin/icon_write_feed.png) no-repeat 0 0;
     background-size: 48px;
     background-color: #747687;
+    &.-active {transition-delay: .4s}
 }
 .feed-quick-myfeed {
     background-color: #BB2649;
     color: #fff !important;
     font-weight: bold;
     font-size: 12px;
+    &.-active {transition-delay: .3s}
 }
 .feed-quick-goTop{
     background: url(../img/theme/apthefin/icon_goTop.png) no-repeat 0 0;
     background-size: 48px;
     background-color: #fff;
+    &.-active {transition-delay: .2s}
 }
 .tab_cntDp1 > .btn-wrap { padding: 0 0 20px;}
 .asLink_box + .banner.inLink{ margin-top: 20px; }

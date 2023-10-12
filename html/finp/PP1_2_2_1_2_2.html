@@ -116,6 +116,84 @@
 								<span class="balance">잔액 <em class="num">12,500,000</em> 원</span>
 							</div>
 						</li>
+						<li>
+							<div class="left">
+								<span class="category">이승훈</span>
+								<span class="time">
+                                    20:28
+                                    <span class="tx t_dot">출금</span>
+                                </span>
+							</div>
+							<div class="right">
+								<span class="amount"><em class="num">660,000</em>원</span>
+								<span class="balance">잔액 <em class="num">12,500,000</em> 원</span>
+							</div>
+						</li>
+						<li>
+							<div class="left">
+								<span class="category">9월 급여</span>
+								<span class="time">
+                                    08:00
+                                    <span class="tx t_dot">출금</span>
+                                </span>
+							</div>
+							<div class="right">
+								<span class="amount"><em class="num">400,000</em>원</span>
+								<span class="balance">잔액 <em class="num">12,500,000</em> 원</span>
+							</div>
+						</li>
+						<li>
+							<div class="left">
+								<span class="category">최나영</span>
+								<span class="time">
+                                    20:28
+                                    <span class="tx t_dot">출금</span>
+                                </span>
+							</div>
+							<div class="right">
+								<span class="amount minus"><em class="num">-30,000</em>원</span>
+								<span class="balance">잔액 <em class="num">12,500,000</em> 원</span>
+							</div>
+						</li>
+						<li>
+							<div class="left">
+								<span class="category">이승훈</span>
+								<span class="time">
+                                    20:28
+                                    <span class="tx t_dot">출금</span>
+                                </span>
+							</div>
+							<div class="right">
+								<span class="amount"><em class="num">660,000</em>원</span>
+								<span class="balance">잔액 <em class="num">12,500,000</em> 원</span>
+							</div>
+						</li>
+						<li>
+							<div class="left">
+								<span class="category">9월 급여</span>
+								<span class="time">
+                                    08:00
+                                    <span class="tx t_dot">출금</span>
+                                </span>
+							</div>
+							<div class="right">
+								<span class="amount"><em class="num">400,000</em>원</span>
+								<span class="balance">잔액 <em class="num">12,500,000</em> 원</span>
+							</div>
+						</li>
+						<li>
+							<div class="left">
+								<span class="category">최나영</span>
+								<span class="time">
+                                    20:28
+                                    <span class="tx t_dot">출금</span>
+                                </span>
+							</div>
+							<div class="right">
+								<span class="amount minus"><em class="num">-30,000</em>원</span>
+								<span class="balance">잔액 <em class="num">12,500,000</em> 원</span>
+							</div>
+						</li>
 					</ul>
 					<span class="date type2">09.22 목요일</span>
 					<ul class="detailBox">
@@ -204,6 +282,33 @@ $(document).on("click", ".btn_open_full_sheet", function(e){
 
     $('html').addClass('scroll_lock');
 	$focusReturn = $(this);
+});
+
+$(document).ready(function () {
+	// 스크롤 컨테이너와 데이터 컨테이너 요소 선택
+	var $scrollContainer = $(window);
+	var $dataContainer = $(".container");
+	var $appArea = $(".historyList");
+	var loadData = false;
+	var delayTime  = 500;
+	// 스크롤 이벤트 리스너를 등록
+	$scrollContainer.scroll(function () {
+		// 현재 스크롤 위치 확인
+		var scrollTop = $scrollContainer.scrollTop();
+		var containerHeight = $scrollContainer.height();
+		var contentHeight = $dataContainer.height() + 10;
+		// 스크롤이 하단에 도달하면 추가 데이터 로드
+		if (scrollTop + containerHeight >= contentHeight && !loadData) {
+			// 여기에서 새 데이터를 비동기로 로드하고 추가합니다.
+			// 이 예시에서는 단순히 더미 데이터를 추가합니다.
+			loadData = true;
+			var $newData = $("<div>새 데이터</div>");
+			$appArea.append($newData);
+			setTimeout(function(){
+				loadData = false;
+			},delayTime)
+		}
+	});
 });
 
 // [E] 풀페이지 팝업

@@ -436,6 +436,13 @@ $black : #17181A;
     display:flex;
     justify-content: center;
     align-items: center;
+    &.-low {
+      span {
+        position: absolute;
+        top:-15px;
+        color:#333;
+      }
+    }
   }
   &__item {
     display:flex;
