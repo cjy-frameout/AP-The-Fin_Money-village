@@ -651,6 +651,21 @@
                     otherAsset.find('>span').css('width', otherAssetWidth).css('background-color', settings.otherColor).css('border-radius','0');
                 });
             }
+
+            /*var $scrollElement = $(".feed-quick-menu a");
+            var lastScrollTop = 0;
+            $(window).scroll(function () {
+                var currentScrollTop = $(window).scrollTop();
+                if (currentScrollTop > lastScrollTop) {
+                    // 스크롤을 아래로 내릴 때 클래스 추가
+                    $scrollElement.addClass("-active");
+                } else {
+                    // 스크롤을 위로 올릴 때 클래스 추가
+                    $scrollElement.removeClass("-active");
+                }
+                lastScrollTop = currentScrollTop; // 이전 스크롤 위치 업데이트
+            });*/
+
         })(jQuery);
 
         document.addEventListener('DOMContentLoaded', function(e){
@@ -659,6 +674,8 @@
                 otherWidth: 75+'%',
             });
         });
+
+
     </script>
 </body>
 </html>
