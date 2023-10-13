@@ -47,6 +47,14 @@
     + .feed-item {
         margin-top: 40px;
     }
+    &.write-page {
+        .load-wrap {
+            border-bottom: 1px solid #e5e5e5; 
+        }
+        .layer_memo_wrap { 
+            border-top: 0;
+        }
+    }
 }
 
 .layer_cont .feed-item {
