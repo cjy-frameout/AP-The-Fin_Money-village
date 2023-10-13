@@ -618,11 +618,13 @@ document.addEventListener('DOMContentLoaded', function(e){
     }
 
     $('.btnMenu').on('click', function() {
-    gnbOpen();
+        $(this).attr("aria-expanded",true);
+        gnbOpen();
     });
 
     $('.btn_menu_close').on('click', function() {
-    gnbClose();
+        $('.btnMenu').attr("aria-expanded",false);
+        gnbClose();
     });
     // [E] Gnb
 });
