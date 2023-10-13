@@ -1366,7 +1366,7 @@ $black : #17181A;
         top:50%;
         transform: translateY(-50%);
       }
-      &:after {
+      /*&:after {
         content:"";
         @include iconArrowPlan;
         position: absolute;
@@ -1374,7 +1374,7 @@ $black : #17181A;
         top:50%;
         transform: translateY(-50%);
         display:block;
-      }
+      }*/
       &.-typeBank:before {@include iconBankType()}
       &.-typeCard:before {@include iconCardType()}
     }
