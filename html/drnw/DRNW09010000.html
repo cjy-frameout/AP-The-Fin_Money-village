@@ -24,6 +24,7 @@
     <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
     <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script src="../../js/interaction.js"></script>
     <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
     <script type="text/javascript" src="../../js/cmd.js"></script>
 </head>
@@ -39,7 +40,7 @@
                 <a href="#none" class="btnBack"><span class="blind">Back</span></a>
             </div>
             <div class="center">
-                <h2 class="tit_h2">신용조회내역</h2>
+                <h2 class="tit_h2">신용점수</h2>
             </div>
         </div>
     </div>
@@ -48,52 +49,60 @@
     <!-- container -->
     <div class="container">
         <div class="content">
-            <h3 class="collectgoTit mgt20">
-                <span class="collectgoTit__bank">NICE 신용점수</span>
-                <span class="collectgoTit__num">861점</span>
-            </h3>
-
-            <a href="" class="chkLoanBanner mgt30">
-                <span class="chkLoanBanner__dec">부족한 금액을 채우는</span>
-                <p class="chkLoanBanner__tit">최저금리 대출 확인하기</p>
-            </a>
 
 
-            <hr class="plan__hr">
-
-            <div class="searchChkLoan">
-                <p class="searchChkLoan__day">8월 30일</p>
-                <ul class="searchChkLoan__list mgt20">
-                   <li class="-typeBank">
-                       <span class="searchChkLoan__type">신용정보 조회</span>
-                       <span class="searchChkLoan__info">캐이뱅크에서 확인했어요.</span>
-                   </li>
-                    <li class="-typeCard">
-                        <span class="searchChkLoan__type">카드발급</span>
-                        <span class="searchChkLoan__info">현대카를 만들었어요.</span>
-                    </li>
-                </ul>
-                <p class="searchChkLoan__day">8월 29일</p>
-                <ul class="searchChkLoan__list mgt20">
-                    <li class="-typeBank">
-                        <span class="searchChkLoan__type">신용정보 조회</span>
-                        <span class="searchChkLoan__info">캐이뱅크에서 확인했어요.</span>
-                    </li>
-                    <li class="-typeCard">
-                        <span class="searchChkLoan__type">카드발급</span>
-                        <span class="searchChkLoan__info">현대카를 만들었어요.</span>
-                    </li>
-                    <li class="-typeCard">
-                        <span class="searchChkLoan__type">카드발급</span>
-                        <span class="searchChkLoan__info">현대카를 만들었어요.</span>
-                    </li>
-                </ul>
-                <button type="button" class="searchChkLoan__btnMore">내역 더보기</button>
+            <div id="layerAssetEdit" class="layer_bottomsheet" role="dialog" tabindex="-1" aria-hidden="true">
+                <div class="layer_inner">
+                    <div class="layer_tit type2">
+                        <div class="agChkItem all">
+                            <label for="chkAll">
+                                <input type="checkbox" id="chkAll"><i></i><span id="">약관 전체 동의</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="layer_cont" style="max-height: 736px;">
+                        <div class="agChkLst typeB">
+                            <div class="agChkItem">
+                                <label for="subChk1">
+                                    <input type="checkbox" id="subChk1" ><i></i><span>[필수] NICE 지키미 회원 이용 약관</span>
+                                </label>
+                                <a href="#none" class="btnFolding" data-target="#folding" aria-expanded="false"><span class="blind">펼침</span></a><!-- 디폴트 닫힘 class="btnFolding show" 클래스 'show' 제거 -->
+                            </div>
+                            <ul class="agChkSubList" id="folding" style="display:none;"><!-- 디폴트 닫힘 style="display:none;" 추가 -->
+                                <li id="" class="agChkItem">
+                                    <span>NICE 지키미 회원 이용 약관</span>
+                                    <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="agChkLst typeB">
+                            <div class="agChkItem">
+                                <label for="subChk2">
+                                    <input type="checkbox" id="subChk2" ><i></i><span>[필수] 신용관리 서비스 이용 동의</span>
+                                </label>
+                                <a href="#none" class="btnFolding" data-target="#folding1" aria-expanded="false"><span class="blind">펼침</span></a><!-- 디폴트 닫힘 class="btnFolding show" 클래스 'show' 제거 -->
+                            </div>
+                            <ul class="agChkSubList" id="folding1" style="display:none;"><!-- 디폴트 닫힘 style="display:none;" 추가 -->
+                                <li id="" class="agChkItem">
+                                    <span>개인(신용)정보수집 이용·필수 동의</span>
+                                    <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+                                </li>
+                                <li id="" class="agChkItem">
+                                    <span>개인(신용)정보 제3자 제공 동의</span>
+                                    <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+                                </li>
+                                <li id="" class="agChkItem">
+                                    <span>NICE평가정보㈜_개인(신용)정보 제3자 제공 동의</span>
+                                    <a href="#none" class="btnAgMore"><span class="blind">자세히보기</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="layer_footer">
+                        <button type="button" class="btn_confirm disable"><span>다음</span></button>
+                    </div>
+                </div>
             </div>
-
-
-
-
 
         </div>
     </div>
@@ -105,6 +114,8 @@
 
 </body>
 <script>
-
+    $(document).ready(function() {
+        layer_bottomsheet("#layerAssetEdit");
+    });
 </script>
 </html>

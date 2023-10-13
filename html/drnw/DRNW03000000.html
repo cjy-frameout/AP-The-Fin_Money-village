@@ -53,7 +53,7 @@
                 <button type="button" class="plan__btnTooltip">도움말</button>
             </h2>
 
-            <div class="planRate "> <!-- 0925 구조변경 및 링크연결문구 노출시 -noLink 추가 -->
+            <div class="planRate"> <!-- 0925 구조변경 및 링크연결문구 노출시 -noLink 추가 -->
                 <div class="planRate__inner">
                     <div class="planProgress">
                         <div class="planProgress__bg"></div>
@@ -63,6 +63,7 @@
                                     <stop stop-color="#FF3E3E"/>
                                     <stop offset="1" stop-color="#FF8080"/>
                                 </linearGradient>
+                                <path id="test" d="M263 132C263 97.2566 249.198 63.9363 224.631 39.369C200.064 14.8017 166.743 1 132 1C97.2567 0.999997 63.9363 14.8017 39.369 39.369C14.8018 63.9363 1.00001 97.2566 1 132" stroke="#FFE5E5" stroke-linecap="round"/>
                             </defs>
                             <clipPath id="myClip">
                                 <path d="M267.815 136C270.127 136 272.007 134.126 271.936 131.816C271.43 115.383 267.948 99.1656 261.648 83.955C254.813 67.4547 244.795 52.4622 232.167 39.8335C219.538 27.2047 204.545 17.187 188.045 10.3524C171.545 3.51773 153.86 -1.42315e-05 136 -1.18895e-05C118.14 -9.54747e-06 100.455 3.51774 83.955 10.3524C67.4548 17.187 52.4622 27.2047 39.8335 39.8335C27.2047 52.4623 17.187 67.4548 10.3524 83.9551C4.05192 99.1657 0.570143 115.383 0.0643615 131.816C-0.00673699 134.126 1.8735 136 4.1846 136L24.3754 136C26.6865 136 28.5515 134.126 28.6415 131.816C29.1356 119.135 31.8733 106.63 36.7384 94.8845C42.1377 81.8493 50.0517 70.0052 60.0284 60.0284C70.0052 50.0517 81.8493 42.1377 94.8845 36.7384C107.92 31.339 121.891 28.56 136 28.56C150.109 28.56 164.08 31.339 177.116 36.7384C190.151 42.1377 201.995 50.0517 211.972 60.0284C221.948 70.0052 229.862 81.8492 235.262 94.8845C240.127 106.63 242.864 119.135 243.359 131.816C243.449 134.126 245.314 136 247.625 136L267.815 136Z" />
@@ -71,25 +72,36 @@
                             <use clip-path="url(#myClip)" href="#planProgress__bar" fill="url(#gra01)" />
                         </svg>
                     </div>
+                    <div class="planProgress__txtBox">
+                        <svg></svg>
+                    </div>
                     <p class="planRate__txt -start">0억0,000만원</p>
                     <p class="planRate__txt -end">0억0,000만원</p>
-                    <p class="planRate__per"><span>18</span>%남음</p>
+                    <p class="planRate__per"><span>18% 남음</span></p> <!-- 1012 span값 변경 -->
                     <div class="planRate__img" data-per="0"></div>
                 </div>
-                <a class="planTarget mgt10">
+                <!-- [S] 1012 a태그에서 div로 변경 -->
+                <div class="planTarget mgt10">
                     <div class="planTarget__info">
-                        <p class="planTarget__type">목표 주택</p>
-                        <h3 class="planTarget__name">역삼 푸르지오 아파트</h3>
+                        <p class="planTarget__type">내 집 설정</p> <!-- 1012 텍스트 변경 -->
+                        <h3 class="planTarget__name">일이삼사오육칠팔구십 일이삼사오육칠팔구십 일이삼사오육칠팔구십 일이삼사오육칠팔구십</h3>
                         <p  class="planTarget__size">60A㎡ 34/63㎡</p>
+                        <a href="" class="planTarget__link">변경</a> <!-- 1012 버튼추가 -->
                     </div>
                     <div class="planTarget__price">
                         <span class="planTarget__now">현재 시세</span>
                         <span class="planTarget__won">10억 4,615만원</span>
                     </div>
-                </a>
+                </div>
+                <!-- [E] 1012 a태그에서 div로 변경 -->
+
                 <div class="disconnectLink"> <!-- 0925 내용추가 -->
                     <p class="disconnectLink__txt">내용</p>
                     <a href="" class="disconnectLink__btn">선택하기</a>
+                </div>
+                <!-- 1012 toastMsg 추가 -->
+                <div class="toastMsg"> <!-- active 클래스로 활성화 -->
+                    <p class="tx">내 집 설정이 완료 되었습니다.</p>
                 </div>
             </div>
 
@@ -111,7 +123,7 @@
                     <div class="savegoGraph__item -left">
                         <div class="savegoGraph__topTxt">100%</div>
                         <div class="savegoGraph__bar" data-height="80">
-                            <div class="savegoGraph__inner" data-height="20"><span>20%</span></div>
+                            <div class="savegoGraph__inner" data-height="50"><span>50%</span></div>
                         </div>
                         <div class="savegoGraph__txt">9월 지출</div>
                     </div>
@@ -246,16 +258,19 @@
                     <p class="borrowgoProgress__txt -right">0억 9,999만원 (18%)</p>
                 </div>
 
+                <!-- 10/12 [S] 신용점수와 잔액 위치 바뀜 -->
                 <div class="borrowgoBox">
                     <div class="borrowgoBox__item">
-                        <p class="borrowgoBox__tit">내 대출 잔액</p>
-                        <p class="borrowgoBox__num">0억,0,000<span>만원</span></p>
+                        <p class="borrowgoBox__tit">내 신용점수</p>
+                        <a class="borrowgoBox__num -link">861<span>만원</span></a>
                     </div>
                     <div class="borrowgoBox__item">
-                        <p class="borrowgoBox__tit">내 신용점수</p>
-                        <p class="borrowgoBox__num">999<span>점</span></p>
+                        <p class="borrowgoBox__tit">내 대출 잔액</p>
+                        <p class="borrowgoBox__num">63,125<span>만원</span></p>
                     </div>
                 </div>
+                <!-- [E] 신용점수와 잔액 위치 바뀜 -->
+
                 <div class="disconnectLink"> <!-- 0925 내용추가 -->
                     <p class="disconnectLink__txt">내용</p>
                     <a href="" class="disconnectLink__btn">선택하기</a>
@@ -298,13 +313,13 @@
 <script>
     $(document).ready(function(){
         // 내집마련 테스트용
-        var perCent = 66; //%값
+        var perCent = 55; //%값
         var $result = $("#planProgress__bar"); //그래프 바
         var val = ((perCent / 100) * 180) - 180; // 0에서 1000을 -180에서 0으로 변환
         $result.css("transform",`rotate(${val}deg)`); //css 적용
         $(".planTit__bold span").text(perCent);
-        $(".planRate__per span").text(100 - perCent);
-
+        $(".planRate__per span").text(100 - perCent+"% 남음");
+        perCent == 100 && $(".planRate__per span").text("목표달성!");
         //내집 그림 형태잡아주기
         if(perCent > 10){
             $(".planRate__img").attr("data-per",perCent);

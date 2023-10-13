@@ -11,12 +11,14 @@
   background-image: url("../img/theme/apthefin/icon/ic_tri_caution.png");
 }
 
-@mixin iconArrowDown {
+@mixin iconArrowDown($type:normal) {
   width:24px;
   height:24px;
   @include icon();
   background-image:url("../img/theme/apthefin/icon/ic_down.png");
-
+  @if ($type == blue) {
+    stroke: #3e5fac;
+  }
 }
 
 @mixin iconShdLock {
@@ -68,12 +70,6 @@
   background-image:url('../img/theme/apthefin/icon/ic_tooltip.png');
 }
 
-@mixin iconArrowPlan {
-  width:18px;
-  height:18px;
-  @include icon();
-  background-image:url('../img/theme/apthefin/icon/ic_arrow_gray.png');
-}
 
 @mixin iconBtnMore {
   width:18px;
@@ -85,14 +81,33 @@
   width:16px;
   height:16px;
   @include icon();
-  background-image: url('../img/theme/apthefin/svg/ic_arrow_black.svg');
-  @if($type == bold){
-    background-image: url('../img/theme/apthefin/svg/ic_arrow_bold.svg');
+  mask-image: url('../img/theme/apthefin/svg/ic_arrow_black.svg');
+  @if($type==normal){
+    background-color:#17181A;
+  }@else if($type == blue){
+    background-color:#3E5FAC;
   }
-  @if($type == blue){
-    background-image: url('../img/theme/apthefin/svg/ic_arrow_blue.svg');
+  @if($type == bold) {
+    mask-image: url('../img/theme/apthefin/svg/ic_arrow_bold.svg');
+    background-color:#17181A;
   }
 }
+@mixin iconArrow18x18($type:default){
+  width:18px;
+  height:18px;
+  @include icon();
+  mask-image:url('../img/theme/apthefin/svg/ic_arrow18x18.svg');
+  @if($type==default){
+    background-color:#455057;
+  }@else {
+    background-color:$type;
+  }
+}
+
+@mixin iconArrowPlan {
+  @include iconArrow18x18();
+}
+
 @mixin iconPaperColor {
   width:20px;
   height:20px;

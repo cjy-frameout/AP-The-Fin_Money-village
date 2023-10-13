@@ -77,13 +77,15 @@
                     <a href="" class="cerScore__btn">신용조회내역</a>
                 </div>
             </div>
+            <!-- 1012 삭제
             <a href="" class="cerScore__up mgt30">신용점수 한번에 올리기</a>
 
             <a href="" class="chkLoanBanner mgt10">
                 <span class="chkLoanBanner__dec">부족한 금액을 채우는</span>
                 <p class="chkLoanBanner__tit">최저금리 대출 확인하기</p>
-            </a>
+            </a>-->
 
+            <div class="cerChart" id="chart-container"></div>
 
             <hr class="plan__hr">
 
@@ -97,10 +99,10 @@
                         </strong>
                     </span>
                 </h3>
-                <div class="savegoGraph">
+                <div class="savegoGraph -viewPage">
                     <div class="savegoGraph__item -left">
                         <div class="savegoGraph__topTxt">999점</div>
-                        <div class="savegoGraph__bar" data-height="100">
+                        <div class="savegoGraph__bar" data-height="80">
                             <div class="savegoGraph__inner"></div>
                         </div>
                         <div class="savegoGraph__txt">나</div>
@@ -132,7 +134,7 @@
                         </strong>
                     </span>
                 </h3>
-                <div class="savegoGraph">
+                <div class="savegoGraph -viewPage">
                     <div class="savegoGraph__item -left">
                         <div class="savegoGraph__topTxt">0원</div>
                         <div class="savegoGraph__bar" data-height="0">
@@ -186,6 +188,12 @@
 <!-- //wrap -->
 
 </body>
+<!-- [S] chart -->
+<script src="../../js/highchart/highcharts.js"></script>
+<script src="../../js/highchart/modules/exporting.js"></script>
+<script src="../../js/highchart/modules/export-data.js"></script>
+<script src="../../js/highchart/modules/accessibility.js"></script>
+<!-- [E] chart -->
 <script>
     $(document).ready(function(){
         // 신용점수 테스트용
@@ -194,6 +202,7 @@
         var val = ((perCent / 1000) * 180) - 180; // 0에서 1000을 -180에서 0으로 변환
         $result.css("transform", `rotate(${val}deg)`); // CSS 적용
         $(".cerScore__num span").text(perCent); //테스트 확인용
+
 
         $(window).scroll(function(){
             var chk01 = $("#scrollTar01").offset().top - 300;
@@ -227,7 +236,9 @@
             var tarH = $tar.find(".-center .savegoGraph__bar").height();
             var $inner = $tar.find(".savegoGraph__inner");
             var $line = $tar.find(".savegoGraph__line");
-
+            if(lefH < tarH){
+                $line.hide();
+            }
             if($tar.hasClass("-hi")){
                 $inner.css("height",tarH+"px");
                 lineH = 150 - tarH
@@ -238,6 +249,86 @@
         },500);
 
     }
+
+
+    //그래프
+    // 오늘 날짜 계산
+    var today = new Date();
+    var data = [];
+
+
+    for (var i = 30; i >= 0; i--) {
+        var date = new Date(today);
+        date.setDate(today.getDate() - i);
+
+        var month = date.getMonth() + 1;
+        var day = date.getDate();
+
+        var name = month + "." + day; // 일자 포맷 변경
+
+        data.push({
+            y: Math.random() * 100, // 임의의 데이터 생성 실제데이터 영역
+            name: name,
+            color: i === 0 ? "#FF3E3E" : "#D4DADF" // 오늘의 막대만 색상 변경
+        });
+    }
+
+    // "오늘"을 마지막 데이터 포인트에 추가
+    var lastDataPoint = data[data.length - 1];
+    lastDataPoint.name = "오늘";
+
+    // Highcharts 세로 바 그래프 생성
+    Highcharts.chart('chart-container', {
+        chart: {
+            type: 'column', // 세로 바 그래프 설정,
+            marginTop:0,
+        },
+        title: {
+            text: null // 타이틀 삭제
+        },
+        navigation: {
+            buttonOptions: {
+                enabled: false // 메뉴바 삭제
+            }
+        },
+        xAxis: {
+            visible: true, // x축 텍스트 표시
+            labels: {
+                rotation: 0, // 레이블 텍스트 회전 값 설정
+                step: 6 // 각 6번째 레이블만 표시
+            },
+            categories: data.map(function(item, index) {
+                return item.name; // 일자 표시
+            })
+        },
+        yAxis: {
+            visible: false, // y축 텍스트 숨기기
+            gridLineWidth: 0 // 가이드 라인 제거
+        },
+        plotOptions: {
+            series: {
+                dataLabels: {
+                    enabled: false // 데이터 레이블 제거
+                },
+                pointPadding: 0.15, // 바 간격 설정
+                groupPadding: 0, // 그룹 간격 제거
+                borderWidth: 0, // 바 테두리 제거
+            }
+        },
+        exporting: {
+            enabled: false,// 우측상단 햄버거메뉴 숨김
+        },
+        credits: {enabled: false},// highchart 워터마크 숨김
+        tooltip: {
+            enabled: false, // 툴팁 비활성화
+        },
+        legend: {
+            enabled: false // 범례 비활성화
+        },
+        series: [{
+            data: data, // 30일 동안의 데이터
+        }]
+    });
 
 </script>
 </html>

@@ -686,6 +686,12 @@ input[type="file"], .input-box input[type="file"] {
 .layer_bottomsheet .layer_inner .layer_footer {
 	button, a {
 		background-color: #BB2649;
+		&.disable {
+			pointer-events: none;
+			background: #c2c2c2;
+			border: none;
+			color:#fff;
+		}
 	}
 
 	button, a span {

@@ -26,112 +26,170 @@
     <script type="text/javascript" src="../../js/slide_slick.js"></script>
     <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
     <script type="text/javascript" src="../../js/cmd.js"></script>
-    <script type="text/javascript"  src="../../js/interaction.js"></script>
-
-    <!-- [S] chart -->
-    <script src="../../js/highchart/highcharts.js"></script>
-    <script src="../../js/highchart/modules/exporting.js"></script>
-    <script src="../../js/highchart/modules/export-data.js"></script>
-    <script src="../../js/highchart/modules/accessibility.js"></script>
-    <!-- [E] chart -->
 </head>
+
 <body>
 
-
-<div id="pop001" class="layer_fullsheet">
-    <div class="layer_inner">
-        <div class="layer_tit">
-            <strong class="tit">목표 아파트</strong>
-            <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
-        </div>
-        <div class="layer_cont">
-            <div class="txtLink aptFavEdit mgt10">
-                <span>목표 아파트</span>
+<!-- wrap -->
+<div class="wrap">
+    <!-- header -->
+    <div class="header">
+        <div class="header_inn">
+            <div class="left">
+                <a href="#none" class="btnBack"><span class="blind">Back</span></a>
             </div>
-            <div class="aptFavList mgt20">
-                <div class="astBox">
-                    <div class="boxArea">
-                        <div class="expectPay">
-                            <div class="expectInfo">
-                                <label class="infoNum chkType">
-                                    <span class="infoTit">목동신시가지(1단지) 117동 12층</span>
-                                    <input type="checkbox" hidden>
-                                    <span class="chkTypeBox"></span>
-                                </label>
-                            </div>
-                            <ul class="astDetail">
-                                <li>
-                                    <span class="tit">주소</span>
-                                    <span class="num">영등포구 여의도동</span>
-                                </li>
-                                <li>
-                                    <span class="tit">매매</span>
-                                    <span class="num">22억</span>
-                                </li>
-                                <li>
-                                    <span class="tit">평형</span>
-                                    <span class="num">188/147㎡</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="astBox mgt20">
-                    <div class="boxArea">
-                        <div class="expectPay">
-                            <div class="expectInfo">
-                                <label class="infoNum chkType">
-                                    <span class="infoTit">목동신시가지(1단지) 117동 12층</span>
-                                    <input type="checkbox" hidden>
-                                    <span class="chkTypeBox"></span>
-                                </label>
-                            </div>
-                            <ul class="astDetail">
-                                <li>
-                                    <span class="tit">주소</span>
-                                    <span class="num">영등포구 여의도동</span>
-                                </li>
-                                <li>
-                                    <span class="tit">매매</span>
-                                    <span class="num">22억</span>
-                                </li>
-                                <li>
-                                    <span class="tit">평형</span>
-                                    <span class="num">188/147㎡</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div class="center">
+                <h2 class="tit_h2">카드 결제내역</h2>
             </div>
-
-            <!--[S] 등록된 아파트가 없습니다. 구조가다름 -->
-            <div class="asBox mgt20" style="display:none">
-                <div class="historyNone">
-                    <p class="txt">등록된 목표아파트가 없습니다.</p>
-                </div>
-                <!-- [S] 하단 고정 영역 -->
-                <footer class="fix_bottom">
-                    <div class="btn_wrap">
-                        <div class="btnGroup">
-                            <p><a href="#none" class="btnBl1 btnPlus">아파트 찾기</a></p>
-                        </div>
-                    </div>
-                </footer>
-                <!-- [E] 하단 고정 영역 -->
-            </div>
-            <!--[E] 등록된 아파트가 없습니다. -->
         </div>
     </div>
+    <!-- //header -->
+
+    <!-- container -->
+    <div class="container">
+        <div class="content">
+            <div class="tBalance">
+                <h3 class="tBaltit">9월 카드 이용금액</h3>
+                <p class="tBalAmount"><em class="amount">350,236,000</em>원</p>
+            </div>
+            <div class="tabs planTabsCard mgt20">
+                <div class="tabs-header">
+                    <button type="button" class="tabs-nav on" data-tab="tabs001">높은 금액순</button>
+                    <button type="button" class="tabs-nav" data-tab="tabs002">최근 결제순</button>
+                </div>
+                <div class="tabs-content">
+                    <!-- 높은금액순 -->
+                    <div class="tabs-item on" data-tabCon="tabs001">
+                        <!-- [S] empty -->
+                        <div class="historyNone" style="display:none">
+                            <p class="txt">결제 내역이 없습니다.</p>
+                        </div>
+                        <!-- [E] empty -->
+
+                        <ol class="useCardList mgt20">
+                            <li>
+                                <span class="useCardList__txt">
+                                    <span class="useCardList__use">GS25편의점</span>
+                                    <span class="useCardList__card">네이버 현대카드</span>
+                                </span>
+                                <span class="useCardList__right">
+                                    <span class="useCardList__won">999,999<i>원</i></span>
+                                    <span class="useCardList__date">23.09.10<i>11:28</i></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="useCardList__txt">
+                                    <span class="useCardList__use">GS25편의점</span>
+                                    <span class="useCardList__card">네이버 현대카드</span>
+                                </span>
+                                <span class="useCardList__right">
+                                    <span class="useCardList__won">999,999<i>원</i></span>
+                                    <span class="useCardList__date">23.09.10<i>11:28</i></span>
+                                </span>
+                            </li>
+                            <li class="-cancel">
+                                <span class="useCardList__txt">
+                                    <span class="useCardList__use">GS25편의점</span>
+                                    <span class="useCardList__card">네이버 현대카드 <i class="useCardList__cancel">거래취소</i></span>
+                                </span>
+                                <span class="useCardList__right">
+                                    <span class="useCardList__won">999,999<i>원</i></span>
+                                    <span class="useCardList__date">23.09.10<i>11:28</i></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="useCardList__txt">
+                                    <span class="useCardList__use">GS25편의점 </span>
+                                    <span class="useCardList__card">네이버 현대카드</span>
+                                </span>
+                                <span class="useCardList__right">
+                                    <span class="useCardList__won">999,999<i>원</i></span>
+                                    <span class="useCardList__date">23.09.10<i>11:28</i></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="useCardList__txt">
+                                    <span class="useCardList__use">GS25편의점</span>
+                                    <span class="useCardList__card">네이버 현대카드</span>
+                                </span>
+                                <span class="useCardList__right">
+                                    <span class="useCardList__won">999,999<i>원</i></span>
+                                    <span class="useCardList__date">23.09.10<i>11:28</i></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="useCardList__txt">
+                                    <span class="useCardList__use">GS25편의점</span>
+                                    <span class="useCardList__card">네이버 현대카드</span>
+                                </span>
+                                <span class="useCardList__right">
+                                    <span class="useCardList__won">999,999<i>원</i></span>
+                                    <span class="useCardList__date">23.09.10<i>11:28</i></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="useCardList__txt">
+                                    <span class="useCardList__use">GS25편의점</span>
+                                    <span class="useCardList__card">네이버 현대카드</span>
+                                </span>
+                                <span class="useCardList__right">
+                                    <span class="useCardList__won">999,999<i>원</i></span>
+                                    <span class="useCardList__date">23.09.10<i>11:28</i></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="useCardList__txt">
+                                    <span class="useCardList__use">GS25편의점</span>
+                                    <span class="useCardList__card">네이버 현대카드</span>
+                                </span>
+                                <span class="useCardList__right">
+                                    <span class="useCardList__won">999,999<i>원</i></span>
+                                    <span class="useCardList__date">23.09.10<i>11:28</i></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="useCardList__txt">
+                                    <span class="useCardList__use">GS25편의점</span>
+                                    <span class="useCardList__card">네이버 현대카드</span>
+                                </span>
+                                <span class="useCardList__right">
+                                    <span class="useCardList__won">999,999<i>원</i></span>
+                                    <span class="useCardList__date">23.09.10<i>11:28</i></span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="useCardList__txt">
+                                    <span class="useCardList__use">GS25편의점</span>
+                                    <span class="useCardList__card">네이버 현대카드</span>
+                                </span>
+                                <span class="useCardList__right">
+                                    <span class="useCardList__won">999,999<i>원</i></span>
+                                    <span class="useCardList__date">23.09.10<i>11:28</i></span>
+                                </span>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- 최근 결제순 -->
+                    <div class="tabs-item" data-tabCon="tabs002">
+                        <!-- [S] empty -->
+                        <div class="historyNone" >
+                            <p class="txt">결제 내역이 없습니다.</p>
+                        </div>
+                        <!-- [E] empty -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //container -->
+
+
 </div>
+<!-- //wrap -->
 
-
+</body>
 
 <script>
-$(document).ready(function(){
-    layer_fullsheet("#pop001")
-})
 
 </script>
-</body>
 </html>

@@ -441,9 +441,13 @@ function contentsBottomPadding(){
         if($('.hasFixBottom').length){
             var hasHeight = $('.hasFixBottom').height() + fixBottomHeight + 52;
             $('.content').css('padding-bottom', hasHeight);
-
         }
 	}
+    //일반 fix_bottom 에 not_dock 추가
+    if($('div.fix_bottom').length){
+        $('div.fix_bottom').addClass("not_dock");
+    }
+
     if($('.toastMsg').length){
         $('.btn_wrap + .toastMsg').prev('.btn_wrap').css('padding-bottom','0');
     }

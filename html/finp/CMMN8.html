@@ -53,7 +53,7 @@
 	<!-- container -->
 	<div class="container">
 		<div class="content">
-			<div class="toastMsg">
+			<div class="toastMsg"> <!-- 활성화시 active 클래스 추가 -->
                 <p class="tx">이전 업데이트가 진행 중입니다.<br>업데이트 종료 후 실행해주세요.</p>
             </div>
 		</div>
@@ -64,4 +64,9 @@
 <!-- //wrap -->
 
 </body>
+<script>
+	$(document).ready(function(){
+		$(".toastMsg").addClass("active");
+	})
+</script>
 </html>
