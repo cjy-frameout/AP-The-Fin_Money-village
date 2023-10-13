@@ -1,48 +1,62 @@
 
 $(document).ready(function(){
 	'use strict';
+	// var folding = $('.btnFolding');
+	// var foldTarget = folding.prev().find('.accItem ');
+	// if(foldTarget.length=0){
+
+	// }
 
 	// 아코디언
 	$('.btnFolding').each(function(){
 		var $self = $(this);
 		var target = $($self.attr('data-target'));
-		if($self.hasClass('show')){
-			$self.children('.blind').html('닫힘');
-			$self.attr('aria-expanded','true');
+		var targetCount = target.find('.accItem').length;
+		
+		if(targetCount == 0) {
+			target.css('display', 'none');
 		}else {
-			$self.children('.blind').html('펼침');
-			$self.attr('aria-expanded','false');
-		}
-		$self.on('click', function(){
-			if($self.hasClass('faq')){
-				$self.closest('.faq_list').siblings('.faq_list').find('.folding_cont').slideUp(0);
-				$self.closest('.faq_list').siblings('.faq_list').find('.faq').removeClass('show').attr('aria-expanded','false');
-				var clickBtnOffsetTop = $self.offset().top;
-				$('html, body').animate({scrollTop: clickBtnOffsetTop}, 500);
-			}
 			if($self.hasClass('show')){
-				target.slideUp(200);
-				$self.removeClass('show');
-				$self.attr('aria-expanded','false');
-				$self.children('.blind').html('펼침');
-				$self.closest('.asList').removeClass('expanded');
-				$self.closest('.tab_year').addClass('reduction');// 2022-11-14 계좌별 금액
-			}else{
-				$self.addClass('show');
-				$self.attr('aria-expanded','true');
-				target.slideDown(200);
 				$self.children('.blind').html('닫힘');
-				$self.closest('.asList').addClass('expanded');
-				$self.closest('.tab_year').removeClass('reduction');// 2022-11-14 계좌별 금액
+				$self.attr('aria-expanded','true');
+			}else {
+				$self.children('.blind').html('펼침');
+				$self.attr('aria-expanded','false');
 			}
+			$self.on('click', function(){
+				if($self.hasClass('faq')){
+					$self.closest('.faq_list').siblings('.faq_list').find('.folding_cont').slideUp(0);
+					$self.closest('.faq_list').siblings('.faq_list').find('.faq').removeClass('show').attr('aria-expanded','false');
+					var clickBtnOffsetTop = $self.offset().top;
+					$('html, body').animate({scrollTop: clickBtnOffsetTop}, 500);
+				}
+				if($self.hasClass('show')){
+					target.slideUp(200);
+					$self.removeClass('show');
+					$self.attr('aria-expanded','false');
+					$self.children('.blind').html('펼침');
+					$self.closest('.asList').removeClass('expanded');
+					$self.closest('.tab_year').addClass('reduction');// 2022-11-14 계좌별 금액
+				}else{
+					$self.addClass('show');
+					$self.attr('aria-expanded','true');
+					target.slideDown(200);
+					$self.children('.blind').html('닫힘');
+					$self.closest('.asList').addClass('expanded');
+					$self.closest('.tab_year').removeClass('reduction');// 2022-11-14 계좌별 금액
+				}
+	
+				
+				
+				// const swiper = document.querySelector('.swiper-container').swiper
+				
+				// swiper.update();
+	
+			})
+		}
 
-			
-			
-			// const swiper = document.querySelector('.swiper-container').swiper
-			
-			// swiper.update();
 
-		})
+		
 	})
 
 	// 목록편집
