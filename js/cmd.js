@@ -11,7 +11,7 @@ $(document).ready(function(){
 	$('.btnFolding').each(function(){
 		var $self = $(this);
 		var target = $($self.attr('data-target'));
-		var targetCount = target.find('.accItem').length;
+		var targetCount = target.find('.accItem, .type_info').length;
 		
 		if(targetCount == 0) {
 			target.css('display', 'none');
