@@ -278,6 +278,13 @@
     &::-webkit-scrollbar {
       display: none;
     }
+    label {
+      height:auto;
+      &.on {
+        font-weight: normal;
+        &:after {display:none}
+      }
+    }
   }
   label {
     display:block;
@@ -313,6 +320,14 @@
     justify-content: center;
     align-items: center;
     .btnFilter {@include txtHidden}
+  }
+  &-group {
+    .priceTab {
+      display:none;
+      &.on {
+        display:block;
+      }
+    }
   }
 }
 
@@ -576,6 +591,9 @@
     }
     ~ .fix_bottom {bottom:0 !important;}
   }
+  ~ .fix_bottom {
+    bottom:-100px !important;
+  }
 }
 
 .aptSection {
@@ -632,10 +650,10 @@
     line-height:22px;
   }
   &-list {
-    margin-top:10px;
     display:flex;
     width:100%;
     gap:6px;
+    margin-top:10px;
     label,span {display:block}
     label,p {
       width:100%;
