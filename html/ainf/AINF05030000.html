@@ -35,6 +35,8 @@
     <script src="../../js/highchart/modules/export-data.js"></script>
     <script src="../../js/highchart/modules/accessibility.js"></script>
     <!-- [E] chart -->
+
+    <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=b6bb19adfeeca03b8ffa06601ef84076&libraries=services"></script>
 </head>
 <body>
 <!-- wrap -->
@@ -58,10 +60,10 @@
     <div class="container">
         <div class="content">
             <div class="mapArea">
-                <div class="mapArea-map">지도영역</div>
+                <div class="mapArea-map" id="map">지도영역</div>
 
                 <!-- 핀 -->
-                <div class="mapPin" style="left:100px;top:400px;position: absolute">
+                <div class="mapPin" style="left:100px;top:400px;position: absolute"> <!-- style은 테스트용 적용시 삭제 -->
                     <p class="mapPin-header">2023년</p>
                     <div class="mapPin-content">
                         <p class="mapPin-price">1.0억</p>
@@ -69,7 +71,7 @@
                     </div>
                 </div>
                 <!-- 핀 active -->
-                <div class="mapPin on" style="left:200px;top:400px;position: absolute">
+                <div class="mapPin on" style="left:200px;top:400px;position: absolute"> <!-- style은 테스트용 적용시 삭제 -->
                     <p class="mapPin-header">2023년</p>
                     <div class="mapPin-content">
                         <p class="mapPin-price">99.9억</p>
@@ -758,6 +760,50 @@
 
 
 <script>
+        // 여러 개의 마커 좌표를 정의합니다.
+        // JavaScript 코드
+    var mapContainer = document.getElementById('map'); // 지도를 표시할 div 요소
+    var mapOptions = {
+        center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도 중심 좌표
+        level: 5 // 지도 확대 레벨
+    };
+    var map = new kakao.maps.Map(mapContainer, mapOptions); // 지도 생성
+
+    var customMarker = document.querySelector('.mapPin'); // 커스텀 마커 요소
+    var markerPosition = new kakao.maps.LatLng(37.566826, 126.9786567); // 마커 위치 좌표
+
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+
+    map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC); // 지도 유형 추가
+    marker.setMap(map);
+
+    // 커스텀 마커를 지도에 추가
+    var overlay = new kakao.maps.CustomOverlay({
+        content: customMarker,
+        map: map,
+        position: markerPosition,
+        yAnchor: 1.1
+    });
+
+    var center = map.getCenter();
+
+    // 주소 검색 객체를 생성합니다.
+    var geocoder = new kakao.maps.services.Geocoder();
+
+    // 중심 좌표로부터 주소를 검색합니다.
+    geocoder.coord2RegionCode(center.getLng(), center.getLat(), function(result, status) {
+        if (status === kakao.maps.services.Status.OK) {
+            if (result.length > 0) {
+                var address = result[0].address_name;
+                console.log("중심 좌표의 주소: " + address);
+            }
+        }
+    });
+</script>
+
+<script>
     $(document).ready(function () {
 
 
@@ -897,6 +943,3 @@
 </script>
 </body>
 </html>
-
-
-
