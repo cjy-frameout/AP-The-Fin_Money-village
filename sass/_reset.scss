@@ -991,6 +991,7 @@ i {font-style: normal}
             padding: 0 5px 0px;
             flex: 1;
         }
+
     }
 
     &.type_col {
@@ -1040,6 +1041,10 @@ i {font-style: normal}
             font-size: 12px;
             line-height: 18px;
         }
+    }
+    &.type2 {
+        p {flex:2}
+        p+p {flex:1}
     }
 }
 

@@ -83,11 +83,11 @@
 
                 <nav class="mapFilter">
                     <div class="mapFilter-inner"> <!-- checkbox로 변경됨 1024 -->
-                        <label data-tab="mapFilter-group-01"><input type="checkbox" checked="checked" hidden><span>매매</span></label>
+                        <label data-tab="mapFilter-group-01"><input type="checkbox" checked="checked" hidden><span>거래유형</span></label>
                         <label data-tab="mapFilter-group-02"><input type="checkbox" hidden><span>가격</span></label>
                         <label data-tab="mapFilter-group-03"><input type="checkbox" hidden><span>면적</span></label>
                         <label data-tab="mapFilter-group-04"><input type="checkbox" hidden><span>준공연도</span></label>
-                        <label data-tab="mapFilter-group-05"><input type="checkbox" hidden><span>방,욕실수</span></label>
+                        <label data-tab="mapFilter-group-05"><input type="checkbox" hidden><span>방 <i></i>,욕실수 <i></i></span></label>
                         <label data-tab="mapFilter-group-06"><input type="checkbox" hidden><span>세대수</span></label>
                     </div>
                 </nav>
@@ -97,10 +97,10 @@
                     <!-- 매매 -->
                     <section class="tabs priceTab on" data-tabCon="mapFilter-group-01">
                         <div class="allFilter-list mgt0">
-                            <label><input type="radio" name="radio0001" hidden="" checked=""><span>전체</span></label>
-                            <label><input type="radio" name="radio0001" hidden=""><span>매매</span></label>
-                            <label><input type="radio" name="radio0001" hidden=""><span>전세</span></label>
-                            <label><input type="radio" name="radio0001" hidden=""><span>월세</span></label>
+                            <label><input type="radio" name="radio0001" hidden checked><span>전체</span></label>
+                            <label><input type="radio" name="radio0001" hidden><span>매매</span></label>
+                            <label><input type="radio" name="radio0001" hidden><span>전세</span></label>
+                            <label><input type="radio" name="radio0001" hidden><span>월세</span></label>
                         </div>
                     </section>
 
@@ -253,10 +253,11 @@
                         </button>
                         <h3 class="aptInfoPop-tit">
                             광교힐스테이트레이크
+                            <!-- 0921 삭제
                             <label class="aptInfoPop-fav">
                                 <input type="checkbox" hidden>
                                 <span>즐겨찾기</span>
-                            </label>
+                            </label>-->
                         </h3>
                         <div class="aptInfoPop-detail">
                             <ul>
@@ -285,16 +286,39 @@
                             <!-- [S] 시세 -->
                             <div class="tabs-item on" data-tabCon="tab021">
 
+
+
                                 <!-- [S] 시세정보 -->
                                 <div class="marketBox">
-                                    <p class="smallTit">시세 정보 <span class="sub_title">(2023.08.25 업데이트 Ι KB부동산 제공)</span></p>
+                                    <div class="aptSelectType">
+                                        <label class="aptSelectType__item">
+                                            <input type="radio" name="selt001" hidden checked>
+                                            <span>매매</span>
+                                        </label>
+                                        <label class="aptSelectType__item">
+                                            <input type="radio" name="selt001" hidden>
+                                            <span>전/월세</span>
+                                        </label>
+                                        <div class="sel_form type_border on"> <!-- 선택시 on 클래스 추가 -->
+                                            <a href="#none"  class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>155Bm²/84.68m²</span></a>
+                                        </div>
+                                    </div>
+                                    <p class="smallTit mgt30">시세 정보 <span class="sub_title">(2023.08.25 업데이트 Ι KB부동산 제공)</span></p>
+                                    <!-- [S] 0921 구조변경 -->
                                     <ul class="market_list">
                                         <li class="list_tit">
                                             <span class="itemTit">
                                                 <span class="flag self">매매</span>
                                                 155B㎡
                                             </span>
-                                            <span class="itemData"><em>6억 9,000만</em>원</span>
+                                            <label class="aptInfoPop-fav">
+                                                <input type="checkbox" hidden>
+                                                <span>즐겨찾기</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <span class="itemTit">시세 일반가(`23,08,29)</span>
+                                            <span class="itemData bold"><em>7억 9,000만</em>원</span>
                                         </li>
                                         <li>
                                             <span class="itemTit">상위 평균</span>
@@ -305,6 +329,7 @@
                                             <span class="itemData"><em>5억 9,000만</em>원</span>
                                         </li>
                                     </ul>
+                                    <!-- [E] 0921 구조변경 -->
 
                                     <ul class="market_list">
                                         <li class="list_tit">
@@ -312,11 +337,18 @@
                                                 <span class="flag lease">전세</span>
                                                 155B㎡
                                             </span>
-                                            <span class="itemData"><em>6억 9,000만</em>원</span>
+                                            <label class="aptInfoPop-fav">
+                                                <input type="checkbox" hidden>
+                                                <span>즐겨찾기</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <span class="itemTit">시세 일반가(`23,08,29)</span>
+                                            <span class="itemData bold"><em>7억 9,000만</em>원</span>
                                         </li>
                                         <li>
                                             <span class="itemTit">상위 평균</span>
-                                            <span class="itemData"><em>7억 9,000만</em>원</span>
+                                            <span class="itemData bo"><em>7억 9,000만</em>원</span>
                                         </li>
                                         <li>
                                             <span class="itemTit">하위 평균</span>
@@ -330,7 +362,14 @@
                                                 <span class="flag monthly">월세</span>
                                                 155B㎡
                                             </span>
-                                            <span class="itemData"><em>6억 9,000만</em>원</span>
+                                            <label class="aptInfoPop-fav">
+                                                <input type="checkbox" hidden>
+                                                <span>즐겨찾기</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <span class="itemTit">시세 일반가(`23,08,29)</span>
+                                            <span class="itemData bold"><em>7억 9,000만</em>원</span>
                                         </li>
                                         <li>
                                             <span class="itemTit">상위 평균</span>
@@ -341,6 +380,7 @@
                                             <span class="itemData"><em>5억 9,000만</em>원</span>
                                         </li>
                                     </ul>
+
 
                                 </div>
                                 <!-- [E] 시세정보 -->
@@ -379,48 +419,54 @@
                                                         <col>
                                                     </colgroup>
                                                     <thead>
-                                                        <tr>
-                                                            <th scope="row" colspan="2">계약일</th>
-                                                            <th scope="row">거래</th>
-                                                            <th scope="row">가격</th>
-                                                            <th scope="row">층</th>
-                                                        </tr>
+                                                    <tr>
+                                                        <th scope="row" colspan="2">계약일</th>
+                                                        <th scope="row">거래</th>
+                                                        <th scope="row">가격</th>
+                                                        <th scope="row">층</th>
+                                                    </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td rowspan="5">2023</td>
-                                                            <td>08.31</td>
-                                                            <td>전세</td>
-                                                            <td>4억3,000</td>
-                                                            <td>5층</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>08.31</td>
-                                                            <td>전세</td>
-                                                            <td>4억3,000</td>
-                                                            <td>5층</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>08.31</td>
-                                                            <td>전세</td>
-                                                            <td>4억3,000</td>
-                                                            <td>5층</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>08.31</td>
-                                                            <td>전세</td>
-                                                            <td>4억3,000</td>
-                                                            <td>5층</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>08.31</td>
-                                                            <td>전세</td>
-                                                            <td>4억3,000</td>
-                                                            <td>5층</td>
-                                                        </tr>
+                                                    <tr>
+                                                        <td rowspan="5">2023</td>
+                                                        <td>08.31</td>
+                                                        <td>전세</td>
+                                                        <td>4억3,000</td>
+                                                        <td>5층</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>08.31</td>
+                                                        <td>전세</td>
+                                                        <td>4억3,000</td>
+                                                        <td>5층</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>08.31</td>
+                                                        <td>전세</td>
+                                                        <td>4억3,000</td>
+                                                        <td>5층</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>08.31</td>
+                                                        <td>전세</td>
+                                                        <td>4억3,000</td>
+                                                        <td>5층</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>08.31</td>
+                                                        <td>전세</td>
+                                                        <td>4억3,000</td>
+                                                        <td>5층</td>
+                                                    </tr>
                                                     </tbody>
                                                 </table>
                                                 <a href="#none" class="btnFolding hasBorder mgt15" aria-expanded="false">더보기</a>
+
+                                                <!-- 내용이 없을경우 -->
+                                                <div class="historyNone">
+                                                    <p class="txt">관련된 내용이 없습니다.</p>
+                                                </div>
+
                                             </div>
                                             <!-- [E] 실거래가 전체 -->
                                             <!-- [S] 실거래가 매매 -->
@@ -651,7 +697,7 @@
                         </div>
                     </div>
                 </section>
-                <div class="fix_bottom">
+                <div class="fix_bottom not_dock">
                     <div class="btn_wrap">
                         <div class="btnGroup type2">
                             <p><a href="#none" class="btnBl1" role="button">지도로 보기</a></p>
@@ -830,6 +876,8 @@
                 <div class="btn_wrap">
                     <div class="btnGroup type2">
                         <p><a href="#none" class="btnBl1 js_pop_close" role="button">적용</a></p>
+                        <p><a href="#none" role="button" class="btnBl1 btnRef2">초기화</a></p>
+
                     </div>
                 </div>
             </div>
@@ -837,6 +885,34 @@
     </div>
 </div>
 <!-- [E] -->
+
+<!-- [S] 면적 버텀 팝업 -->
+<div id="pop002" class="layer_bottomsheet" role="dialog" tabindex="-1" aria-hidden="true">
+    <div class="layer_inner">
+        <div class="layer_tit">
+            <strong class="tit"><span>면적 선택</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont">
+            <!-- 페이지 스타일 -->
+            <div class="type_page">
+                <ul class="layer_sel_opt type_date">
+                    <li><button type="button" class="btn_sel_opt on"><span>138㎡/113.67㎡</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+                    <li><button type="button" class="btn_sel_opt"><span>138㎡/113.67㎡</span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>138㎡/113.67㎡ </span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>138㎡/113.67㎡ </span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>138㎡/113.67㎡ </span></button></li>
+                    <li><button type="button" class="btn_sel_opt"><span>138㎡/113.67㎡ </span></button></li>
+                </ul>
+            </div>
+            <!-- //페이지 스타일 -->
+        </div>
+        <div class="layer_footer">
+            <button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
+        </div>
+    </div>
+</div>
+<!-- [E] 면적 버텀 팝업 -->
 
 
 <script>
@@ -899,6 +975,16 @@
             layer_fullsheet("#full001");
         })
 
+        //면적선택 팝업
+        $(document).on("click",".sel_box",function(){
+            layer_bottomsheet("#pop002")
+        })
+
+        //면적선택 on 클래스 제어
+        $(document).on("click",".btn_sel_opt",function(){
+            $(".btn_sel_opt").removeClass("on");
+            $(this).addClass("on");
+        })
 
         //터치위로 올릴때 이벤트
         var startY = 0;
@@ -935,12 +1021,14 @@
         loadLineChart(); //라인차트
 
 
+
         //범위 값 체크 1024 추가
         var chkAttr = [];
         $(document).on("click",".priceTab-item input[type='checkbox'],.allFilter-list input[type='checkbox']",function(){
             var $this = $(this)
             var $group = $this.closest(".priceTab-item,.allFilter-list");
             var chkCount = $group.find("input:checked").length;
+
 
             //전체값 체크하기
             if($group.find("label").first().find("input").is(":checked")){
@@ -952,6 +1040,7 @@
                 if(chkCount == 2){
                     $group.find("label").each(function(){
                         var $tar = $(this).find("input");
+
                         if($tar.is(":checked")){
                             chkAttr.push(parseInt($(this).index()));
                             chkAttr = $.unique(chkAttr); //중복된거 빼기
@@ -964,18 +1053,54 @@
                     $this.prop('checked', !$this.prop('checked'));
                 }
 
-                //사이값 뿌리기
+                //사이값 체크하기
                 for (var i=chkAttr[0];i<chkAttr[1];i++){
                     $group.find("label").eq(i).find("input").prop("checked",true);
                 }
             }
-
-
-
-
-
-
         })
+
+
+
+        // 조건문 클릭할때 조건문 달기 1025
+        $(document).on("click",".priceTab input",function(){
+            var $this = $(this);
+
+            //라디오 일때
+            if($this.is(":radio")){
+                var idx = $this.closest(".allFilter-list").index();
+                var navIdx = $this.closest(".priceTab").index();
+                var txt = $this.next("span").text(); //value 값이나 text 내용
+                var tarTxt = $(".mapFilter-inner label").eq(navIdx).find("span");
+                if(tarTxt.find("i").length > 0){
+                    tarTxt.find("i").eq(idx).text(txt);
+                }else{
+                    tarTxt.text(txt);
+                }
+                //그외
+            }else{
+                var navIdx = $this.closest(".priceTab").index();
+                var navTar = $(".mapFilter-inner label");
+                // 체크된 체크박스만 선택
+                var checkedInputs = $this.closest(".priceTab-item,.allFilter-list").find("input:checked");
+                var firstTxt = checkedInputs.first().next("span").text();
+                var lastTxt = checkedInputs.last().next("span").text();
+                if(firstTxt == lastTxt) {
+                    navTar.eq(navIdx).find("span").text(firstTxt);
+                }else{
+                    if (firstTxt.endsWith("~")) {
+                        firstTxt = firstTxt.slice(0, -1); // 끝의 "~" 문자를 삭제
+                    }
+                    if(lastTxt.startsWith("~")){
+                        lastTxt = lastTxt.slice(1); // 앞 "~" 문자를 삭제
+                    }
+                    navTar.eq(navIdx).find("span").text(`${firstTxt} ~ ${lastTxt}`);
+
+                }
+
+
+            }
+        });
 
 
         //아파트 찾기 필터 토글 1024
