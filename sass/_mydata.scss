@@ -469,7 +469,7 @@ input[type="password"] {
 }
 
 .input-err-desc {
-    color: #F05E89;
+    color: #C81E1E;
     font-size: 13px;
     margin-top: 10px;
 }
@@ -905,8 +905,8 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 
     &:before {
         content: '1';
-        background-color: #FEECF2;
-        color: #BB2649;
+        background-color: #EBF5FF;
+        color: #1C64F2;
         font-size: 14px;
         font-weight: 500;
         display: flex;
@@ -1036,7 +1036,12 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     border: 0;
     border-radius: 0;
     padding: 0 5px 0 0;
-
+    .agChkItem {
+        label {
+            display:flex;
+            align-items: center;
+        }
+    }
     &:first-child {
         margin-top: 16px;
     }
@@ -1323,7 +1328,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     &.-active {transition-delay: .4s}
 }
 .feed-quick-myfeed {
-    background-color: #BB2649;
+    background-color: #1C64F2;
     color: #fff !important;
     font-weight: bold;
     font-size: 12px;

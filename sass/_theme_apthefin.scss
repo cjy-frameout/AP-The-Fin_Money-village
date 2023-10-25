@@ -239,11 +239,11 @@ a {
 		font-weight: 700;
 		color: #fff;
 		border-radius: 10px;
-		background-color: #BB2649;
+		background-color: #1C64F2;
 
 		&.disable {
 			height: 50px;
-			background: #c2c2c2;
+			background: #C3DDFD;
 			border: none;
 			color: #fff;
 			font-weight: 700;
@@ -252,7 +252,7 @@ a {
 
 	&.btnBl2.disable {
 		height: 50px;
-		background: #c2c2c2;
+		background: #C3DDFD;
 		border: none;
 		color: #fff;
 		font-weight: 700;
@@ -289,7 +289,7 @@ a {
 			width: auto;
 			background: #DCEAF9;
 			background-image: none;
-			color: #3E5FAC;
+			color: #1C64F2;
 
 			&:after {
 				content: '';
@@ -310,17 +310,17 @@ a {
 		font-weight: 700;
 		color: #fff;
 		border-radius: 10px;
-		background-color: #BB2649;
+		background-color: #1C64F2;
 		color: #fff;
 
 		&.btntType2 {
-			background-color: #3E5FAC;
+			background-color: #1C64F2;
 			color: #fff;
 		}
 
 		&.btntType3 {
-			background-color: #FEECF2;
-			color: #BB2649;
+			background-color: #EBF5FF;
+			color: #1C64F2;
 		}
 
 		&.btnEdit:before {
@@ -354,9 +354,9 @@ a {
 	&.btnBl6 {
 		height: 50px;
 		border-radius: 10px;
-		background: #FEECF2;
+		background: #EBF5FF;
 		font-size: 15px;
-		color: #BB2649;
+		color: #1C64F2;
 		font-weight: 700;
 
 		&.btnEdit:before {
@@ -409,9 +409,9 @@ a {
 		font-size: 13px;
 	}
 	&.type3 {
-		background:#F7F9FF;
-		border:1px solid #e9efff;
-		color:#3e5fac;
+		background:#EBF5FF;
+		border:1px solid #EBF5FF;
+		color:#1C64F2;
 		font-weight:500;
 	}
 }
@@ -551,13 +551,13 @@ input[type="file"], .input-box input[type="file"] {
 	}
 
 	&.type2 a.btnBl2 {
-		background-color: #3E5FAC;
+		background-color: #1C64F2;
 		color: #fff;
 	}
 }
 
 .ag_wrap + .fix_bottom .btn_wrap a.btnBl3 {
-	background-color: #3E5FAC;
+	background-color: #1C64F2;
 }
 
 .btn_wrap {
@@ -584,11 +584,11 @@ input[type="file"], .input-box input[type="file"] {
 		height: 22px;
 
 		&:checked + .round {
-			background-color: #3E5FAC;
+			background-color: #1C64F2;
 		}
 
 		&:focus + .round {
-			box-shadow: 0 0 1px #3E5FAC;
+			box-shadow: 0 0 1px #1C64F2;
 		}
 
 		&:checked + .round:before {
@@ -668,7 +668,7 @@ input[type="file"], .input-box input[type="file"] {
 
 .layer_popup .layer_inner .layer_cont .btn_layer_wrap {
 	button, a {
-		background-color: #BB2649;
+		background-color: #1C64F2;
 	}
 
 	button, a {
@@ -685,7 +685,7 @@ input[type="file"], .input-box input[type="file"] {
 
 .layer_bottomsheet .layer_inner .layer_footer {
 	button, a {
-		background-color: #BB2649;
+		background-color: #1C64F2;
 		&.disable {
 			pointer-events: none;
 			background: #c2c2c2;
@@ -707,7 +707,7 @@ input[type="file"], .input-box input[type="file"] {
 		margin-left: auto;
 		align-items: center;
 		font-size: 14px;
-		color: #3E5FAC;
+		color: #1C64F2;
 		font-weight: 400;
 
 		&:after {
@@ -729,13 +729,13 @@ input[type="file"], .input-box input[type="file"] {
 /* xx1100 tab selected border */
 
 .tabs_header.type2 ul li.on a:after {
-	background-color: #3E5FAC;
+	background-color: #1C64F2;
 }
 
 /* xx1100 bank selected border */
 
 .ins1LinkLst li .sel_btn.on {
-	border: solid 2px #3E5FAC;
+	border: solid 2px #1C64F2;
 }
 
 .insLink:only-child {
@@ -1008,7 +1008,7 @@ a.btnBl1.wide i.more {
 
 .flag {
 	&.day {
-		background-color: #3E5FAC;
+		background-color: #1C64F2;
 		color: #fff;
 	}
 
@@ -1024,7 +1024,7 @@ a.btnBl1.wide i.more {
 
 .flag {
 	&.green, &.lblue {
-		background-color: #3E5FAC;
+		background-color: #1C64F2;
 		color: #fff;
 	}
 
@@ -1102,7 +1102,7 @@ a.btnBl1.wide i.more {
 	border-radius: 1px;
 
 	&.sq_dblue, &.sq_blue, &.sq_lblue {
-		background-color: #3E5FAC;
+		background-color: #1C64F2;
 	}
 
 	&.sq_dgreen {
@@ -1145,8 +1145,8 @@ a.btnBl1.wide i.more {
 	font-size: 13px;
 
 	&.blue {
-		border: 1px solid #3E5FAC;
-		color: #3E5FAC;
+		border: 1px solid #1C64F2;
+		color: #1C64F2;
 	}
 }
 
@@ -1536,11 +1536,12 @@ a.btnMenu {
 /* point */
 
 .pointColor {
-	color: #3E5FAC !important;
+	color: #1C64F2 !important;
 }
 
 .pointColor2 {
-	color: #F05E89 !important;
+	//color: #F05E89 !important;
+	color: #1C64F2 !important;
 }
 
 .pointColor_g {
@@ -1556,7 +1557,7 @@ a.btnMenu {
 }
 
 .pointLine {
-	box-shadow: #FEECF2 0px -10px 0px inset;
+	box-shadow: #EBF5FF 0px -10px 0px inset;
 }
 
 .pointLine2 {
@@ -1564,7 +1565,7 @@ a.btnMenu {
 }
 
 .pointLine3 {
-	box-shadow: #FEECF2 0 -10px 0 inset;
+	box-shadow: #EBF5FF 0 -10px 0 inset;
 }
 
 .pointLine4 {
@@ -1598,7 +1599,7 @@ a.btnMenu {
 }
 
 .tabs_header.type2 ul li.on a > span {
-	color: #3E5FAC;
+	color: #1C64F2;
 	font-weight: 700;
 }
 
@@ -1610,7 +1611,7 @@ a.btnMenu {
 .tabs_header.type2 ul li.on a:after {
 	margin: 0;
 	height: 2px;
-	background-color: #3E5FAC;
+	background-color: #1C64F2;
 }
 
 .wrap_certi_way .tabs_header.type2 ul li.on a > span, .asset_list .tabs_header.type2 ul li.on a > span {
@@ -1627,7 +1628,7 @@ a.btnMenu {
 }
 
 .certi_sel_all .agChkItem label {
-	align-items: initial;
+	align-items: center;
 }
 
 .tabs_header {
@@ -1788,7 +1789,7 @@ a.btnMenu {
 	}
 
 	.slider_container .slick-dots li.slick-active button {
-		background-color: #3E5FAC;
+		background-color: #1C64F2;
 	}
 }
 
@@ -1805,26 +1806,26 @@ a.btnMenu {
 }
 
 .wrap_assets .asGroup .listTit h3 > em:after {
-	background-color: #3E5FAC;
+	background-color: #1C64F2;
 }
 
 /* 브릿지 */
 
 .agChkItem label input[type=checkbox]:checked + i {
-	background-color: #3E5FAC;
-	border-color: #3E5FAC;
+	background-color: #1C64F2;
+	border-color: #1C64F2;
 }
 
 .terms-nav .nav-item.slick-current:after {
 	height: 2px;
-	background: #3E5FAC;
+	background: #1C64F2;
 }
 
 .asGroup .asList .btnTransfer {
-	color: #3E5FAC;
+	color: #1C64F2;
 
 	&:after {
-		background-color: #3E5FAC;
+		background-color: #1C64F2;
 	}
 }
 
@@ -1846,24 +1847,24 @@ a.btnMenu {
 
 .filterItem .radioTab {
 	input:checked + label {
-		border-color: #3E5FAC;
-		color: #3E5FAC;
+		border-color: #1C64F2;
+		color: #1C64F2;
 	}
 
 	li:last-child input:checked + label {
-		border-color: #3E5FAC;
+		border-color: #1C64F2;
 	}
 }
 
 .asGroup .sortCtrl .on a {
-	background: #3E5FAC;
-	border-color: #3E5FAC;
+	background: #1C64F2;
+	border-color: #1C64F2;
 }
 
 .editList {
 	.sortCtrl .on a {
-		background: #3E5FAC;
-		border-color: #3E5FAC;
+		background: #1C64F2;
+		border-color: #1C64F2;
 	}
 
 	.asList {
@@ -2222,14 +2223,14 @@ a.btnMenu {
 }
 
 .asGroup .sortCtrl .on a {
-	background: #3E5FAC;
-	border-color: #3E5FAC;
+	background: #1C64F2;
+	border-color: #1C64F2;
 }
 
 .editList2 {
 	.sortCtrl .on a {
-		background: #3E5FAC;
-		border-color: #3E5FAC;
+		background: #1C64F2;
+		border-color: #1C64F2;
 	}
 
 	.asList > div.hidden .ctrl .btnHide {
@@ -2242,7 +2243,7 @@ a.btnMenu {
 		padding: 18px 20px;
 		content: '';
 		background-color: #F5F8FC;
-		border: 1px solid #3E5FAC;
+		border: 1px solid #1C64F2;
 	}
 }
 
@@ -2500,7 +2501,7 @@ a.btnMenu {
 			color: #333;
 
 			&:before {
-				background-color: #3E5FAC;
+				background-color: #1C64F2;
 			}
 		}
 
@@ -2603,7 +2604,7 @@ a.btnMenu {
 
 		.infoTit em {
 			font-size: 16px;
-			color: #3E5FAC;
+			color: #1C64F2;
 		}
 	}
 
@@ -2760,7 +2761,7 @@ a.btnMenu {
 	}
 
 	.swiper-pagination-current {
-		color: #3E5FAC;
+		color: #1C64F2;
 	}
 
 	.swiper-button-next {
@@ -2949,7 +2950,7 @@ a.btnMenu {
 			}
 
 			&.on a > span {
-				color: #3E5FAC;
+				color: #1C64F2;
 				font-weight: 700;
 			}
 		}
@@ -3052,7 +3053,7 @@ a.btnMenu {
 			}
 
 			&.on a > span {
-				color: #3E5FAC;
+				color: #1C64F2;
 				font-weight: 700;
 			}
 		}
@@ -3115,7 +3116,7 @@ a.btnMenu {
 .asset_contents {
 	.tabs_header .tab_menu_wrap li.on a {
 		> span {
-			color: #3E5FAC;
+			color: #1C64F2;
 			font-weight: 700;
 		}
 
@@ -3216,7 +3217,7 @@ a.btnMenu {
 			&.on {
 				a {
 					background-color: #fff;
-					color: #3E5FAC;
+					color: #1C64F2;
 					border-left: 1px solid #e5e5e5;
 					border-radius: 0;
 					font-weight: 700;
@@ -3540,10 +3541,10 @@ a.btnMenu {
 		.btnTransfer {
 			line-height: 30px;
 			right: 20px;
-			border: 1px solid #3E5FAC;
+			border: 1px solid #1C64F2;
 			border-radius: 20px;
 			background-color: #fff;
-			color: #3E5FAC;
+			color: #1C64F2;
 		}
 
 		.im {
@@ -3612,7 +3613,7 @@ a.btnMenu {
 				margin-left: auto;
 				align-items: center;
 				font-size: 14px;
-				color: #3E5FAC;
+				color: #1C64F2;
 				font-weight: 700;
 
 				&:after {
@@ -4276,7 +4277,7 @@ a.btnMenu {
 					content: '';
 					width: 4px;
 					height: 4px;
-					background-color: #3E5FAC;
+					background-color: #1C64F2;
 					border-radius: 25px;
 				}
 
@@ -4493,7 +4494,7 @@ a.btnMenu {
 			top: 0;
 			right: 0;
 			border-radius: 20px;
-			background-color: #3E5FAC;
+			background-color: #1C64F2;
 		}
 
 		.bar_on_num {
@@ -4507,7 +4508,7 @@ a.btnMenu {
 			border-radius: 20px;
 			padding: 6px 10px 5px 0;
 			font-size: 13px;
-			background-color: #3E5FAC;
+			background-color: #1C64F2;
 			color: #fff;
 		}
 	}
@@ -4517,7 +4518,7 @@ a.btnMenu {
 		text-align: right;
 		font-size: 13px;
 		font-weight: 500;
-		color: #3E5FAC;
+		color: #1C64F2;
 	}
 }
 
@@ -4564,7 +4565,7 @@ a.btnMenu {
 			color: #333;
 
 			&:before {
-				background-color: #3E5FAC;
+				background-color: #1C64F2;
 			}
 		}
 	}
@@ -4937,7 +4938,7 @@ a.btnMenu {
 				color: #333;
 
 				&:before {
-					background-color: #3E5FAC;
+					background-color: #1C64F2;
 				}
 			}
 
@@ -5227,7 +5228,7 @@ a.btnMenu {
 				position: relative;
 				font-size: 15px;
 				font-weight: 700;
-				color: #3E5FAC;
+				color: #1C64F2;
 
 				&:after {
 					position: absolute;
@@ -5286,11 +5287,11 @@ a.btnMenu {
 
 			.myAsset {
 				.gBar {
-					background-color: #3E5FAC;
+					background-color: #1C64F2;
 				}
 
 				.gBarPrice span {
-					color: #3E5FAC;
+					color: #1C64F2;
 					font-weight: 700;
 
 					em {
@@ -5427,7 +5428,7 @@ a.btnMenu {
 				color: #333;
 
 				&:before {
-					background-color: #3E5FAC;
+					background-color: #1C64F2;
 				}
 			}
 
@@ -5753,7 +5754,7 @@ a.btnMenu {
 				}
 
 				> span {
-					color: #3E5FAC;
+					color: #1C64F2;
 					font-weight: 700;
 				}
 			}
@@ -5889,7 +5890,7 @@ a.btnMenu {
 
 			&.on a {
 				background-color: #fff;
-				color: #3E5FAC;
+				color: #1C64F2;
 				font-weight: 700;
 			}
 		}
@@ -6171,7 +6172,7 @@ a.btnMenu {
 			top: 0;
 			left: 0;
 			border-radius: 20px;
-			background-color: #3E5FAC;
+			background-color: #1C64F2;
 		}
 	}
 
@@ -6190,7 +6191,7 @@ a.btnMenu {
 		border-radius: 20px;
 		padding: 6px 10px 5px 0;
 		font-size: 11px;
-		background-color: #3E5FAC;
+		background-color: #1C64F2;
 		color: #fff;
 	}
 
@@ -6209,7 +6210,7 @@ a.btnMenu {
 			}
 
 			&.minus .fluct_amount.left {
-				color: #3E5FAC;
+				color: #1C64F2;
 			}
 
 			&.plus .fluct_amount.left {
@@ -6363,8 +6364,8 @@ a.btnMenu {
 
 		input:checked + label {
 			font-weight: 700;
-			color: #3E5FAC;
-			border-color: #3E5FAC;
+			color: #1C64F2;
+			border-color: #1C64F2;
 		}
 	}
 
@@ -6831,7 +6832,7 @@ a.btnMenu {
 	.itemData .detail {
 		font-size: 14px;
 		font-weight: 700;
-		color: #3E5FAC;
+		color: #1C64F2;
 
 		.num {
 			font-size: 18px;
@@ -7083,7 +7084,7 @@ a.btnMenu {
 }
 
 .cardSelect.on {
-	border-color: #3E5FAC;
+	border-color: #1C64F2;
 }
 
 .cardTotal.cardSelect {
@@ -7114,7 +7115,7 @@ a.btnMenu {
 /* 마이페이지 */
 
 .confirm_mail .tit {
-	color: #3E5FAC;
+	color: #1C64F2;
 	font-size: 15px;
 	margin-bottom: 10px;
 	font-weight: 700;
@@ -7122,25 +7123,25 @@ a.btnMenu {
 
 .wrap_trans_info {
 	.top_alert_box .box_link:before {
-		background-color: #3E5FAC;
+		background-color: #1C64F2;
 	}
 
 	.info_tbl .point {
-		color: #3E5FAC;
+		color: #1C64F2;
 	}
 
 	.tit_flex .btn.point {
-		color: #3E5FAC;
+		color: #1C64F2;
 		background-image: url('../img/theme/apthefin/ic_arw3.png?0426');
 	}
 }
 
 .box_inp_ck.on {
-	border: 1px solid #3E5FAC;
+	border: 1px solid #1C64F2;
 }
 
 .boxChkItem label input[type=checkbox]:checked + i {
-	background-color: #3E5FAC;
+	background-color: #1C64F2;
 }
 
 .wrap_faq {
@@ -7199,7 +7200,7 @@ a.btnMenu {
 	}
 
 	&.on {
-		border-color: #3E5FAC;
+		border-color: #1C64F2;
 
 		.sel_box {
 			color: #333;
@@ -7414,7 +7415,7 @@ a.btnMenu {
 	}
 
 	&.optional label input[type=radio]:checked + i + span {
-		color: #3E5FAC;
+		color: #1C64F2;
 		font-weight: 700;
 	}
 }
@@ -7551,20 +7552,20 @@ a.btnMenu {
 
 	&:checked {
 		+ i {
-			border-color: #3E5FAC;
+			border-color: #1C64F2;
 
 			&:after {
 				content: "";
 				display: block;
-				width: 10px;
-				height: 10px;
+				width: 11px;
+				height: 11px;
 				border-radius: 50%;
-				background-color: #3E5FAC;
+				background-color: #1C64F2;
 			}
 		}
 
 		~ span {
-			color: #3E5FAC;
+			color: #1C64F2;
 		}
 	}
 
@@ -7872,7 +7873,7 @@ a.btnMenu {
 	}
 
 	&.on {
-		border: solid 1px #3E5FAC;
+		border: solid 1px #1C64F2;
 	}
 
 	&.disable {
@@ -7883,13 +7884,15 @@ a.btnMenu {
 		}
 
 		&:after {
-			height: 16px;
-			padding: 1px 4px;
+			height: 14px;
+			padding: 0 4px;
 			border-radius: 4px 4px 4px 0px;
 			font-size: 9px;
 			background-color: #2196F3;
 			color: #fff;
 			border: none;
+			display:flex;
+			align-items: center;
 		}
 
 		&.err:after {
@@ -8149,7 +8152,7 @@ a.btnMenu {
 			content: '';
 			width: 4px;
 			height: 4px;
-			background-color: #3E5FAC;
+			background-color: #1C64F2;
 			border-radius: 25px;
 		}
 	}
@@ -8221,7 +8224,7 @@ a.btnMenu {
 
 				.tx_03 {
 					margin-top: 3px;
-					color: #3E5FAC;
+					color: #1C64F2;
 					font-size: 14px;
 				}
 			}
@@ -8230,7 +8233,7 @@ a.btnMenu {
 
 	.layer_inner .layer_cont .msg_box {
 		.msg_tit {
-			color: #3E5FAC;
+			color: #1C64F2;
 			font-weight: 700;
 
 			+ .msg_alert {
@@ -8244,7 +8247,7 @@ a.btnMenu {
 			font-weight: 500;
 
 			&.type_tit2 {
-				color: #3E5FAC;
+				color: #1C64F2;
 				font-size: 18px;
 				font-weight: 700;
 			}
@@ -8284,7 +8287,7 @@ a.btnMenu {
 			}
 
 			&.type2 .tit {
-				box-shadow: inset 0 -10px 0 #FEECF2;
+				box-shadow: inset 0 -10px 0 #EBF5FF;
 			}
 		}
 
@@ -8348,7 +8351,7 @@ a.btnMenu {
 	padding-bottom: 0;
 
 	.tit {
-		color: #3E5FAC;
+		color: #1C64F2;
 		font-weight: 700;
 		font-size: 18px;
 
@@ -8563,7 +8566,7 @@ a.btnMenu {
 
 		&.slick-active {
 			font-weight: 700;
-			color: #3E5FAC;
+			color: #1C64F2;
 		}
 	}
 
@@ -8595,7 +8598,7 @@ a.btnMenu {
 	.terms_tit h3 {
 		font-size: 15px;
 		padding: 0 0 10px 0;
-		color: #3E5FAC;
+		color: #1C64F2;
 		font-weight: 700;
 		line-height: 22px;
 	}
@@ -8960,7 +8963,7 @@ a.btnMenu {
 
 	td {
 		&.ui-datepicker-today a.ui-state-default {
-			color: #3E5FAC !important;
+			color: #1C64F2 !important;
 		}
 
 		&.ui-datepicker-current-day a.ui-state-active {
@@ -8970,8 +8973,8 @@ a.btnMenu {
 			border-radius: 25px;
 			line-height: 24px;
 			color: #fff !important;
-			background-color: #3E5FAC !important;
-			border-color: #3E5FAC !important;
+			background-color: #1C64F2 !important;
+			border-color: #1C64F2 !important;
 		}
 	}
 }
@@ -9491,7 +9494,7 @@ a.btnMenu {
 		font-weight: 400;
 
 		&:focus {
-			border: 1px solid #3E5FAC;
+			border: 1px solid #1C64F2;
 		}
 	}
 
@@ -9777,7 +9780,7 @@ a.btnMenu {
 	}
 
 	.agree_chk label input[type=radio]:checked + i + span {
-		color: #3E5FAC;
+		color: #1C64F2;
 		font-weight: 700;
 	}
 
@@ -9879,7 +9882,7 @@ a.btnMenu {
 		font-size: 13px;
 		background: rgba(46, 129, 248, 0.1);
 		border-radius: 4px;
-		color: #3E5FAC;
+		color: #1C64F2;
 
 		&:after {
 			content: none;
@@ -9968,7 +9971,7 @@ a.btnMenu {
 	font-size: 14px;
 
 	.num {
-		color: #3E5FAC;
+		color: #1C64F2;
 		font-weight: 700;
 	}
 }
@@ -10420,8 +10423,8 @@ a.btnMenu {
 				height: 17px;
 				padding: 0 4px;
 				font-weight: 700;
-				color: #3E5FAC;
-				border-color: #3E5FAC;
+				color: #1C64F2;
+				border-color: #1C64F2;
 			}
 		}
 
@@ -10460,12 +10463,12 @@ a.btnMenu {
 		}
 
 		&.type_1 .mark_acc, &.type_2 .mark_acc {
-			color: #3E5FAC;
+			color: #1C64F2;
 		}
 
 		&.type_1 .mark_acc:before, &.type_2 .mark_acc:before {
 			left: -10px;
-			background-color: #3E5FAC;
+			background-color: #1C64F2;
 		}
 	}
 
@@ -10486,12 +10489,12 @@ a.btnMenu {
 }
 
 .layer_popup .layer_inner .layer_cont .msg_box .msg_alert.type2 {
-	color: #3E5FAC;
+	color: #1C64F2;
 	font-weight: 700;
 }
 
 .wrap_cal_tbl .mark .ico_mark.type_02:before {
-	background-color: #3E5FAC;
+	background-color: #1C64F2;
 }
 
 .layer_detail {
@@ -10643,7 +10646,7 @@ a.btnMenu {
 			&.on {
 				a {
 					background-color: #fff;
-					color: #3E5FAC;
+					color: #1C64F2;
 					border-left: 1px solid #e5e5e5;
 					border-radius: 0;
 				}
@@ -11426,7 +11429,7 @@ a.btnMenu {
 				font-size: 24px;
 				font-weight: 500;
 				margin-top: 5px;
-				color: #3E5FAC !important;
+				color: #1C64F2 !important;
 			}
 		}
 
@@ -11459,7 +11462,7 @@ a.btnMenu {
 			.flag_txt1 {
 				right: -60px;
 				top: 24px;
-				border: 1.5px solid #3E5FAC;
+				border: 1.5px solid #1C64F2;
 			}
 
 			.flag_txt2 {
@@ -11785,35 +11788,35 @@ a.btnMenu {
 
 .wrap_cal_tbl .cal_tbl td .date {
 	&.today .num {
-		color: #3E5FAC;
+		color: #1C64F2;
 		background-color: none;
 	}
 
 	&.selday .num {
 		color: #fff;
-		background-color: #3E5FAC;
+		background-color: #1C64F2;
 	}
 }
 
 .layer_sel_opt .btn_sel_opt.on {
-	color: #3E5FAC;
+	color: #1C64F2;
 	background-color: #f5f6f7;
 }
 
 .category_set .ck_name.on {
-	color: #3E5FAC;
-	border-color: #3E5FAC;
+	color: #1C64F2;
+	border-color: #1C64F2;
 	font-weight: 700;
 }
 
 .history_box .trans_info .cate_name:after {
-	border-top: 1px solid #3E5FAC;
-	border-right: 1px solid #3E5FAC;
+	border-top: 1px solid #1C64F2;
+	border-right: 1px solid #1C64F2;
 }
 
 .cal_exp_box .list {
 	.exp_ico .date {
-		color: #3E5FAC;
+		color: #1C64F2;
 		background-color: none;
 		font-weight: 500;
 		font-size: 18px;
@@ -11843,7 +11846,7 @@ a.btnMenu {
 /* 인증 */
 
 .wrap_process_step .process_step .list.on .tx {
-	background-color: #3E5FAC;
+	background-color: #1C64F2;
 }
 
 /* 이벤트 */
@@ -11853,7 +11856,7 @@ a.btnMenu {
 	height: 50px;
 	margin: 0;
 	bottom: 0;
-	background-color: #3E5FAC;
+	background-color: #1C64F2;
 	border-radius: 0px;
 
 	span {
@@ -11879,12 +11882,12 @@ a.btnMenu {
 
 .upLoading {
 	p {
-		color: #3E5FAC;
+		color: #1C64F2;
 		font-size: 14px;
 	}
 
 	&.circleBar.type4 p {
-		color: #3E5FAC;
+		color: #1C64F2;
 		font-size: 16px;
 		font-weight: 400;
 	}
@@ -11913,48 +11916,48 @@ a.btnMenu {
 
 .terms_wrap .terms_tit h3:after {
 	height: 2px;
-	background: #3E5FAC;
+	background: #1C64F2;
 }
 
 .insLinkList .state.soon {
-	color: #3E5FAC;
+	color: #1C64F2;
 }
 
 .label_txt.red .txt {
-	color: #3E5FAC;
-	border-color: #3E5FAC;
+	color: #1C64F2;
+	border-color: #1C64F2;
 }
 
 .servTerm .agree_chk label input[type=radio]:checked + i {
-	background-color: #3E5FAC;
-	border-color: #3E5FAC;
+	background-color: #1C64F2;
+	border-color: #1C64F2;
 }
 
 .custom_radio input[type="radio"]:checked {
-	border-color: #3E5FAC;
+	border-color: #1C64F2;
 
 	&:before {
-		background: #3E5FAC;
+		background: #1C64F2;
 	}
 }
 
 .asGroup.payList .sortCtrl > li.on a:after {
-	background-color: #3E5FAC;
+	background-color: #1C64F2;
 }
 
 .form_rdo_cir .rdo_cir:checked + i {
-	border-color: #3E5FAC;
+	border-color: #1C64F2;
 
 	&:before {
-		background-color: #3E5FAC;
+		background-color: #1C64F2;
 	}
 }
 
 .wrap_faq .faq_menu_inner .item .menu.on {
-	background-color: #3E5FAC;
+	background-color: #1C64F2;
 
 	&:after {
-		border-color: #3E5FAC;
+		border-color: #1C64F2;
 	}
 }
 
@@ -12236,8 +12239,8 @@ a.btnMenu {
 	}
 
 	.btn.on span {
-		color: #3E5FAC;
-		border-color: #BB2649;
+		color: #1C64F2;
+		border-color: #1C64F2;
 	}
 
 	.on {
@@ -12275,7 +12278,7 @@ a.btnMenu {
 			background-image: url('../img/theme/apthefin/ic_dock_apt.png?0426');
 			&.on {
 				background-image: url('../img/theme/apthefin/ic_dock_apt_on.png');
-				.tx {color:#3e5fac;}
+				.tx {color:#1C64F2;}
 			}
 		}
 
@@ -12335,8 +12338,8 @@ a.btnMenu {
 	}
 
 	&.green .txt {
-		color: #3E5FAC;
-		border-color: #3E5FAC;
+		color: #1C64F2;
+		border-color: #1C64F2;
 	}
 
 	&.gray .txt {
@@ -12351,7 +12354,7 @@ a.btnMenu {
 	}
 
 	&.normal {
-		color: #3E5FAC;
+		color: #1C64F2;
 	}
 
 	&.etc {
@@ -12402,7 +12405,7 @@ a.btnMenu {
 	.tit {
 		font-size: 14px;
 		font-weight: 700;
-		color: #3E5FAC;
+		color: #1C64F2;
 		line-height: 24px;
 	}
 
@@ -12873,7 +12876,7 @@ a.btnMenu {
 				position: relative;
 				font-size: 15px;
 				font-weight: 700;
-				color: #3E5FAC;
+				color: #1C64F2;
 
 				&:after {
 					position: absolute;
@@ -12933,14 +12936,14 @@ a.btnMenu {
 			max-width: 100%;
 			height: 10px;
 			border-radius: 20px;
-			background-color: #3E5FAC;
+			background-color: #1C64F2;
 		}
 
 		.bar_on_num {
 			width: 35px;
 			text-align: right;
 			font-size: 13px;
-			color: #3E5FAC;
+			color: #1C64F2;
 			font-weight: 500;
 		}
 	}
@@ -13087,7 +13090,7 @@ a.btnMenu {
 	.agree_chk label input[type=radio]:checked + i, .agree_item.optional label input[type=radio]:checked + i {
 		background-image: none;
 		background-color: #fff;
-		border: 1px solid #3E5FAC;
+		border: 1px solid #1C64F2;
 	}
 }
 
@@ -13172,7 +13175,7 @@ a.btnMenu {
 
 .accHistory.type2 {
 	.tabs_header.type2 ul li.on a span {
-		color: #3E5FAC;
+		color: #1C64F2;
 	}
 
 	.balance .t_dot {
@@ -13249,11 +13252,11 @@ a.btnMenu {
 /* 소비 막대그래프 */
 
 .lineType .asset_tab_header ul {
-	border: 1px solid #BB2649;
+	border: 1px solid #1C64F2;
 	border-radius: 12px;
 
 	li.on a {
-		background-color: #BB2649;
+		background-color: #1C64F2;
 		color: #FFFFFF;
 	}
 }
@@ -13409,7 +13412,7 @@ a.btnMenu {
 
 			.gBar {
 				color: #1072ff;
-				background-color: #3E5FAC;
+				background-color: #1C64F2;
 			}
 		}
 	}
@@ -13516,7 +13519,7 @@ a.btnMenu {
 
 	&.bgBlue {
 		display: block;
-		background-color: #3E5FAC;
+		background-color: #1C64F2;
 		border: none;
 	}
 
@@ -13528,7 +13531,7 @@ a.btnMenu {
 
 	&.bgRed {
 		display: block;
-		background-color: #BB2649;
+		background-color: #1C64F2;
 		border: 1px solid #E5E5E5;
 	}
 	> .assets_chart {
@@ -13607,7 +13610,7 @@ a.btnMenu {
 	}
 
 	&.bill .expectInfo .infoTit em {
-		color: #3E5FAC;
+		color: #1C64F2;
 	}
 
 	.expectInfo .infoNum {
@@ -14049,7 +14052,7 @@ a.btnMenu {
 				margin: 0 auto;
 				font-size: 15px;
 				font-weight: 700;
-				color: #3E5FAC;
+				color: #1C64F2;
 				margin-top: 20px;
 
 				&:after {
@@ -14426,7 +14429,7 @@ a.btnMenu {
 
 			&.type2 {
 				.titPoint, .noti {
-					color: #3E5FAC;
+					color: #1C64F2;
 				}
 			}
 
@@ -14437,7 +14440,7 @@ a.btnMenu {
 			}
 
 			&.type2 .logo {
-				border: 1.5px solid #3E5FAC;
+				border: 1.5px solid #1C64F2;
 				background: url('../img/theme/apthefin/logo/logo_txt_shbank2.svg?0426') no-repeat (center / 44px) 9px;
 			}
 
@@ -14634,7 +14637,7 @@ a.btnMenu {
 	a {
 		&.link_type1 {
 			.banner_tit .titPoint, .tx {
-				color: #3E5FAC;
+				color: #1C64F2;
 			}
 		}
 
@@ -14713,12 +14716,12 @@ a.btnMenu {
 
 	.link_type3 .banner_tit .titPoint, .link_type4 .banner_tit .titPoint {
 		font-size: 18px;
-		color: #3E5FAC;
+		color: #1C64F2;
 	}
 }
 
 .titPoint.red {
-	color: #BB2649 !important;
+	color: #1C64F2 !important;
 }
 
 .type_goal + .banner.inLink {
@@ -15067,7 +15070,7 @@ a.filterFolding {
 
 .asGroup.telecom {
 	.listTit h3 em {
-		color: #3E5FAC;
+		color: #1C64F2;
 	}
 
 	.asList {
@@ -15296,7 +15299,7 @@ a.filterFolding {
 			position: relative;
 			height: 180px;
 			border: none;
-			background-color: #3E5FAC;
+			background-color: #1C64F2;
 			border-radius: 10px;
 			box-shadow: none;
 
@@ -15394,7 +15397,7 @@ a.filterFolding {
 
 	&.type_goal {
 		.swiper-pagination-current {
-			color: #3E5FAC;
+			color: #1C64F2;
 		}
 
 		.swiper-button-next {
@@ -15604,10 +15607,10 @@ a.filterFolding {
 				top: 0;
 				left: 0;
 				border-radius: 20px;
-				background-color: #3E5FAC;
+				background-color: #1C64F2;
 
 				&.full {
-					background: linear-gradient(90deg, #3E5FAC, #5DCFD2);
+					background: linear-gradient(90deg, #1C64F2, #5DCFD2);
 				}
 			}
 
@@ -15622,7 +15625,7 @@ a.filterFolding {
 				border-radius: 20px;
 				padding: 6px 10px 5px 0;
 				font-size: 11px;
-				background-color: #3E5FAC;
+				background-color: #1C64F2;
 				color: #fff;
 			}
 		}
@@ -15643,7 +15646,7 @@ a.filterFolding {
 				text-align: right;
 				font-size: 13px;
 				font-weight: 500;
-				color: #3E5FAC;
+				color: #1C64F2;
 
 				em {
 					font-weight: 700;
@@ -15675,7 +15678,7 @@ a.filterFolding {
 	}
 
 	&.linking .gaolGraph .exp_bar .fluct_amount.right, &.beforeStart .gaolGraph .exp_bar .fluct_amount.right {
-		color: #3E5FAC;
+		color: #1C64F2;
 	}
 
 	&.linking .gaolGraph .exp_bar .fluct_amount.right:after {
@@ -15691,7 +15694,7 @@ a.filterFolding {
 
 	&.complete .gaolGraph {
 		.gaolAmount {
-			color: #3E5FAC;
+			color: #1C64F2;
 		}
 
 		.exp_bar .fluct_amount.right {
@@ -15729,7 +15732,7 @@ a.filterFolding {
 		border-radius: 4px;
 		font-weight: 500;
 		font-size: 14px;
-		color: #3E5FAC;
+		color: #1C64F2;
 
 		&.btnBl2.btnEdit:before {
 			background-image: url('../img/theme/apthefin/bt_edit2.png?0426');
@@ -15869,7 +15872,7 @@ a.filterFolding {
 			border: 1px solid #badbff;
 			background-color: #fff;
 			border-radius: 10px;
-			color: #3E5FAC;
+			color: #1C64F2;
 			font-size: 18px;
 			font-weight: 500;
 
@@ -15917,7 +15920,7 @@ a.filterFolding {
 				}
 
 				&.dot_gaol:before, &.dot_gaol2:before {
-					background-color: #3E5FAC;
+					background-color: #1C64F2;
 				}
 
 				&.dot_etc:before {
@@ -16137,7 +16140,7 @@ a.filterFolding {
 			content: '';
 			width: 4px;
 			height: 4px;
-			background-color: #3E5FAC;
+			background-color: #1C64F2;
 			border-radius: 25px;
 		}
 
@@ -16190,7 +16193,7 @@ a.filterFolding {
 		border: 1px solid #badbff;
 		background-color: #fff;
 		border-radius: 10px;
-		color: #3E5FAC;
+		color: #1C64F2;
 		font-size: 15px;
 		font-weight: 700;
 
@@ -16751,11 +16754,11 @@ a.filterFolding {
 		span {
 			font-size: 14px;
 			font-weight: 700;
-			color: #3E5FAC;  
+			color: #1C64F2;  
 		}
 
 		.tx_bold {
-			color: #3E5FAC;
+			color: #1C64F2;
 
 			em.num {
 				font-size: 15px;
@@ -16768,7 +16771,7 @@ a.filterFolding {
 
 		a.btnBl2 {
 			background: #F7F9FF;
-			color: #3E5FAC;
+			color: #1C64F2;
 			border: 1px solid #E9EFFF;
 		}
 	}
@@ -16785,10 +16788,10 @@ a.filterFolding {
 			line-height: 24px;
 			font-size: 14px;
 			font-weight: 700;
-			color: #3E5FAC;
+			color: #1C64F2;
 
 			span {
-				color: #3E5FAC;
+				color: #1C64F2;
 			}
 
 			em {
@@ -16836,7 +16839,7 @@ a.filterFolding {
 				top: 0px;
 				left: 0px;
 				border-radius: 20px;
-				background-color: #3E5FAC;
+				background-color: #1C64F2;
 			}
 
 			.bar_on_num {
@@ -16865,7 +16868,7 @@ a.filterFolding {
 				margin-top: 5px;
 				font-size: 13px;
 				font-weight: 500;
-				color: #3E5FAC;
+				color: #1C64F2;
 
 				em {
 					font-weight: 700;
@@ -16918,7 +16921,7 @@ a.filterFolding {
 				display: inline-block;
 				width: 4px;
 				height: 4px;
-				background-color: #BB2649;
+				background-color: #1C64F2;
 				border-radius: 4px;
 				vertical-align: top;
 				margin: 4px 0 0 4px;
@@ -17550,8 +17553,8 @@ a.filterFolding {
 			pointer-events: none;
 		}
 		&:checked + label {
-			border-color:#3e5fac;
-			color:#3e5fac;
+			border-color:#1C64F2;
+			color:#1C64F2;
 			font-weight: 700;
 		}
 	}
@@ -17646,7 +17649,7 @@ a.filterFolding {
 			text-align: right;
 
 			&.loan {
-				color: #3E5FAC;
+				color: #1C64F2;
 			}
 		}
 
@@ -17753,10 +17756,10 @@ a.filterFolding {
 			line-height: 24px;
 			font-size: 14px;
 			font-weight: 700;
-			color: #3E5FAC;
+			color: #1C64F2;
 
 			span {
-				color: #3E5FAC;
+				color: #1C64F2;
 			}
 
 			em {
@@ -17804,7 +17807,7 @@ a.filterFolding {
 				top: 0px;
 				left: 0px;
 				border-radius: 20px;
-				background-color: #3E5FAC;
+				background-color: #1C64F2;
 			}
 
 			.bar_on_num {
@@ -18361,7 +18364,7 @@ a.filterFolding {
 		.txt_year {
 			font-size: 22px;
 			font-weight: 500;
-			color: #3E5FAC;
+			color: #1C64F2;
 			line-height: 21px;
 		}
 
@@ -18536,7 +18539,7 @@ a.filterFolding {
 				padding: 0 12px;
 				font-size: 13px;
 				font-weight: 500;
-				color: #3E5FAC;
+				color: #1C64F2;
 				height: 34px;
 				background: #EBF3FF;
 				border-radius: 6px;
@@ -18592,9 +18595,9 @@ a.filterFolding {
 			line-height: 24px;
 			font-size: 14px;
 			border-radius: 6px;
-			border: 1px solid #3E5FAC;
+			border: 1px solid #1C64F2;
 			background-color: #fff;
-			color: #3E5FAC;
+			color: #1C64F2;
 			text-align: center;
 			margin-top: 10px;
 		}
@@ -19350,8 +19353,8 @@ a.filterFolding {
 	font-size: 16px;
 	font-weight: 700;
 	line-height: 24px;
-	color: #3E5FAC;
-	border-bottom: 1px solid #3E5FAC;
+	color: #1C64F2;
+	border-bottom: 1px solid #1C64F2;
 	padding: 0 0 10px;
 
 	em {
@@ -19414,7 +19417,7 @@ a.filterFolding {
 				display: block;
 				padding: 20px;
 				background: #FFFFFF;
-				border: 1px solid #3E5FAC;
+				border: 1px solid #1C64F2;
 				border-radius: 10px;
 
 				.tit {
@@ -19625,14 +19628,14 @@ a.filterFolding {
 
 					i {
 						display: contents;
-						color: #3E5FAC;
+						color: #1C64F2;
 					}
 				}
 			}
 
 			input[type="radio"]:focus + label {
-				border: 1px solid #3E5FAC;
-				color: #3E5FAC;
+				border: 1px solid #1C64F2;
+				color: #1C64F2;
 			}
 		}
 	}
@@ -19786,7 +19789,7 @@ a.filterFolding {
 				margin-left: auto;
 				font-size: 15px;
 				font-weight: 400;
-				color: #3E5FAC;
+				color: #1C64F2;
 			}
 		}
 	}
@@ -19851,7 +19854,7 @@ a.filterFolding {
 				top: 0;
 				right: 0;
 				border-radius: 20px;
-				background-color: #3E5FAC;
+				background-color: #1C64F2;
 			}
 
 			.bar_on_num {
@@ -19865,7 +19868,7 @@ a.filterFolding {
 				border-radius: 20px;
 				padding: 6px 10px 5px 0;
 				font-size: 11px;
-				background-color: #3E5FAC;
+				background-color: #1C64F2;
 				color: #fff;
 			}
 		}
@@ -20019,7 +20022,7 @@ a.filterFolding {
 					border: 1px solid #badbff;
 					background-color: #fff;
 					border-radius: 10px;
-					color: #3E5FAC;
+					color: #1C64F2;
 					font-size: 16px;
 					font-weight: 700;
 
@@ -20095,7 +20098,7 @@ a.filterFolding {
 				}
 
 				&.dot_gaol2:before {
-					background-color: #3E5FAC;
+					background-color: #1C64F2;
 				}
 
 				&.dot_etc:before {
@@ -20614,8 +20617,8 @@ html.-activeGnb {
 		padding: 8px 12px;
 		display: flex;
 		align-items: center;
-		background: #f7f9ff;
-		color: #3E5FAC;
+		background: #EBF5FF;
+		color: #1C64F2;
 		font-size: 13px;
 		font-weight: 500;
 		line-height: 18px;
@@ -20668,17 +20671,17 @@ html.-activeGnb {
 	}
 
 	._thumList .selected ._thumName {
-		color: #3E5FAC;
+		color: #1C64F2;
 
 		&:before {
 			content: "";
 			display: inline-block;
-			width: 14px;
-			height: 14px;
+			width: 16px;
+			height: 16px;
 			background: url("../img/theme/apthefin/icon/ic_star.png") no-repeat 0 0;
 			background-size: cover;
 			position: relative;
-			top: 1px;
+			top: 2px;
 		}
 	}
 
@@ -20708,7 +20711,7 @@ html.-activeGnb {
 }
 
 .txtLight {
-	box-shadow: inset 0 -10px 0 #FEECF2;
+	box-shadow: inset 0 -10px 0 #EBF5FF;
 }
 
 /* 공동 인증서 선택 */
