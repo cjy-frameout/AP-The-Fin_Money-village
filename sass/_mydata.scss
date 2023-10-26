@@ -403,7 +403,7 @@ input[type="password"] {
         opacity: 1;
 
         &:focus + .password-disc-wrap {
-            border-bottom: 1px solid #333;
+            border-bottom: 1px solid #333; 
         }
     }
 }
