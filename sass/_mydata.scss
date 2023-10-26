@@ -723,11 +723,14 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     text-decoration: underline !important;
 }
 .btn-change-profile {
-    background: #F7F9FF;
+    background: #EBF5FF;
     border-radius: 6px;
-    color: #3E5FAC;
+    color: #1C64F2;
     padding: 8px 32px 8px 12px;
     position: relative;
+    font-size:13px;
+    font-weight:500;
+    &:visited {color:#1C64F2}
     &:after {
         content:'';
         background: url(../img/theme/apthefin/icon_change_profile.png) no-repeat 0 0;
@@ -738,6 +741,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
         right: 12px;
         top: 50%;
         transform: translateY(-50%);
+        background-size:cover;
     }
 }
 

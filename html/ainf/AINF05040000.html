@@ -35,6 +35,8 @@
     <script src="../../js/highchart/modules/export-data.js"></script>
     <script src="../../js/highchart/modules/accessibility.js"></script>
     <!-- [E] chart -->
+
+    <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=b6bb19adfeeca03b8ffa06601ef84076&libraries=services"></script>
 </head>
 <body>
 <!-- wrap -->
@@ -57,6 +59,178 @@
     <!-- container -->
     <div class="container">
         <div class="content">
+            <div class="mapArea">
+                <div class="mapArea-map" id="map">지도영역</div>
+
+                <!-- 핀 -->
+                <div class="mapPin" style="left:100px;top:400px;position: absolute"> <!-- style은 테스트용 적용시 삭제 -->
+                    <p class="mapPin-header">2023년</p>
+                    <div class="mapPin-content">
+                        <p class="mapPin-price">1.0억</p>
+                        <p class="mapPin-size">155㎡</p>
+                    </div>
+                </div>
+                <!-- 핀 active -->
+                <div class="mapPin on" style="left:200px;top:400px;position: absolute"> <!-- style은 테스트용 적용시 삭제 -->
+                    <p class="mapPin-header">2023년</p>
+                    <div class="mapPin-content">
+                        <p class="mapPin-price">99.9억</p>
+                        <p class="mapPin-size">155㎡</p>
+                    </div>
+                </div>
+
+                <button type="button" class="mapFilter-all"><span class="btnFilter">필터전체보기</span></button>
+
+                <nav class="mapFilter">
+                    <div class="mapFilter-inner"> <!-- checkbox로 변경됨 1024 -->
+                        <label data-tab="mapFilter-group-01"><input type="checkbox" checked="checked" hidden><span>거래유형</span></label>
+                        <label data-tab="mapFilter-group-02"><input type="checkbox" hidden><span>가격</span></label>
+                        <label data-tab="mapFilter-group-03"><input type="checkbox" hidden><span>면적</span></label>
+                        <label data-tab="mapFilter-group-04"><input type="checkbox" hidden><span>준공연도</span></label>
+                        <label data-tab="mapFilter-group-05"><input type="checkbox" hidden><span>방 <i></i>,욕실수 <i></i></span></label>
+                        <label data-tab="mapFilter-group-06"><input type="checkbox" hidden><span>세대수</span></label>
+                    </div>
+                </nav>
+
+                <!-- 필터영역 1024 수정됨 -->
+                <div class="mapFilter-group">
+                    <!-- 매매 -->
+                    <section class="tabs priceTab on" data-tabCon="mapFilter-group-01">
+                        <div class="allFilter-list mgt0">
+                            <label><input type="radio" name="radio0001" hidden checked><span>전체</span></label>
+                            <label><input type="radio" name="radio0001" hidden><span>매매</span></label>
+                            <label><input type="radio" name="radio0001" hidden><span>전세</span></label>
+                            <label><input type="radio" name="radio0001" hidden><span>월세</span></label>
+                        </div>
+                    </section>
+
+                    <!-- 가격 -->
+                    <section class="tabs priceTab" data-tabCon="mapFilter-group-02">
+                        <nav class="priceTab-header">
+                            <button type="button" class="tabs-nav on" data-tab="tab001">매매가</button>
+                            <button type="button" class="tabs-nav" data-tab="tab002">보증금</button>
+                            <button type="button" class="tabs-nav" data-tab="tab003">월세</button>
+                        </nav>
+                        <div class="tabs-content priceTab-content">
+                            <!-- 가격 -->
+                            <div class="tabs-item priceTab-item on" data-tabCon="tab001">
+                                <label><input type="checkbox" checked hidden><span>전채</span></label>
+                                <label><input type="checkbox" hidden><span>1억</span></label>
+                                <label><input type="checkbox" hidden><span>2억</span></label>
+                                <label><input type="checkbox" hidden><span>3억</span></label>
+                                <label><input type="checkbox" hidden><span>4억</span></label>
+                                <label><input type="checkbox" hidden><span>5억</span></label>
+                                <label><input type="checkbox" hidden><span>7억</span></label>
+                                <label><input type="checkbox" hidden><span>10억</span></label>
+                                <label><input type="checkbox" hidden><span>12억</span></label>
+                                <label><input type="checkbox" hidden><span>15억</span></label>
+                                <label><input type="checkbox" hidden><span>17억</span></label>
+                                <label><input type="checkbox" hidden><span>20억</span></label>
+                                <label><input type="checkbox" hidden><span>25억</span></label>
+                                <label><input type="checkbox" hidden><span>30억</span></label>
+                                <label><input type="checkbox" hidden><span>30억~</span></label>
+                            </div>
+                            <!-- 보증금 -->
+                            <div class="tabs-item priceTab-item arr4" data-tabCon="tab002">
+                                <label><input type="checkbox" hidden><span>전채</span></label>
+                                <label><input type="checkbox" hidden><span>1천만원</span></label>
+                                <label><input type="checkbox" hidden><span>2천만원</span></label>
+                                <label><input type="checkbox" hidden><span>3천만원</span></label>
+                                <label><input type="checkbox" hidden><span>5천만원</span></label>
+                                <label><input type="checkbox" hidden><span>7천만원</span></label>
+                                <label><input type="checkbox" hidden><span>1억</span></label>
+                                <label><input type="checkbox" hidden><span>2억</span></label>
+                                <label><input type="checkbox" hidden><span>3억</span></label>
+                                <label><input type="checkbox" hidden><span>5억</span></label>
+                                <label><input type="checkbox" hidden><span>7억</span></label>
+                                <label><input type="checkbox" hidden><span>10억</span></label>
+                            </div>
+                            <!-- 월세 -->
+                            <div class="tabs-item priceTab-item arr4" data-tabCon="tab003">
+                                <label><input type="checkbox" hidden><span>전채</span></label>
+                                <label><input type="checkbox" hidden><span>30만원</span></label>
+                                <label><input type="checkbox" hidden><span>40만원</span></label>
+                                <label><input type="checkbox" hidden><span>50만원</span></label>
+                                <label><input type="checkbox" hidden><span>60만원</span></label>
+                                <label><input type="checkbox" hidden><span>70만원</span></label>
+                                <label><input type="checkbox" hidden><span>80만원</span></label>
+                                <label><input type="checkbox" hidden><span>90만원</span></label>
+                                <label><input type="checkbox" hidden><span>100만원</span></label>
+                                <label><input type="checkbox" hidden><span>120만원</span></label>
+                                <label><input type="checkbox" hidden><span>150만원</span></label>
+                                <label><input type="checkbox" hidden><span>200만원</span></label>
+                                <label><input type="checkbox" hidden><span>300만원</span></label>
+                                <label><input type="checkbox" hidden><span>500만원</span></label>
+                                <label><input type="checkbox" hidden><span>500만원~</span></label>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 면적 -->
+                    <section class="tabs priceTab" data-tabCon="mapFilter-group-03">
+                        <div class="allFilter-list line-3 mgt0">
+                            <label><input type="checkbox" hidden="" checked=""><span>전체</span></label>
+                            <label><input type="checkbox" hidden=""><span>~10평</span></label>
+                            <label><input type="checkbox" hidden=""><span>10평대</span></label>
+                            <label><input type="checkbox" hidden=""><span>20평대</span></label>
+                            <label><input type="checkbox" hidden=""><span>30평대</span></label>
+                            <label><input type="checkbox" hidden=""><span>40평대</span></label>
+                            <label><input type="checkbox" hidden=""><span>50평대</span></label>
+                            <label><input type="checkbox" hidden=""><span>60평~</span></label>
+                        </div>
+                    </section>
+
+                    <!-- 준공연도 -->
+                    <section class="tabs priceTab" data-tabCon="mapFilter-group-04">
+                        <div class="allFilter-list line-4 mgt0">
+                            <label><input type="checkbox" hidden="" checked=""><span>전체</span></label>
+                            <label><input type="checkbox" hidden=""><span>~2년</span></label>
+                            <label><input type="checkbox" hidden=""><span>~5년</span></label>
+                            <label><input type="checkbox" hidden=""><span>~10년</span></label>
+                            <label><input type="checkbox" hidden=""><span>~15년</span></label>
+                            <label><input type="checkbox" hidden=""><span>~20년</span></label>
+                            <label><input type="checkbox" hidden=""><span>~30년</span></label>
+                            <label><input type="checkbox" hidden=""><span>30년~</span></label>
+                        </div>
+                    </section>
+
+                    <!-- 방,욕실수 -->
+                    <section class="tabs priceTab" data-tabCon="mapFilter-group-05">
+                        <div class="allFilter-list line-1 mgt0">
+                            <p>방</p>
+                            <label><input type="radio" name="radio-l0013" hidden="" checked=""><span>전체</span></label>
+                            <label><input type="radio" name="radio-l0013" hidden=""><span>1개</span></label>
+                            <label><input type="radio" name="radio-l0013" hidden=""><span>2개</span></label>
+                            <label><input type="radio" name="radio-l0013" hidden=""><span>3개</span></label>
+                            <label><input type="radio" name="radio-l0013" hidden=""><span>4개~</span></label>
+                        </div>
+                        <div class="allFilter-list line-1">
+                            <p>욕실</p>
+                            <label><input type="radio" name="radio-l0014" hidden="" checked=""><span>전체</span></label>
+                            <label><input type="radio" name="radio-l0014" hidden=""><span>1개</span></label>
+                            <label><input type="radio" name="radio-l0014" hidden=""><span>2개</span></label>
+                            <label><input type="radio" name="radio-l0014" hidden=""><span>3개</span></label>
+                            <label><input type="radio" name="radio-l0014" hidden=""><span>4개~</span></label>
+                        </div>
+                    </section>
+
+                    <!-- 세대수 -->
+                    <section class="tabs priceTab" data-tabCon="mapFilter-group-06">
+                        <div class="allFilter-list line-4 mgt0">
+                            <label><input type="checkbox" hidden="" checked=""><span>전체</span></label>
+                            <label><input type="checkbox" hidden=""><span>~50세대</span></label>
+                            <label><input type="checkbox" hidden=""><span>50세대~</span></label>
+                            <label><input type="checkbox" hidden=""><span>100세대~</span></label>
+                            <label><input type="checkbox" hidden=""><span>300세대~</span></label>
+                            <label><input type="checkbox" hidden=""><span>500세대~</span></label>
+                            <label><input type="checkbox" hidden=""><span>1000세대~</span></label>
+                            <label><input type="checkbox" hidden=""><span>3000세대~</span></label>
+                        </div>
+                    </section>
+                </div>
+
+
 
 
 
@@ -244,48 +418,54 @@
                                                         <col>
                                                     </colgroup>
                                                     <thead>
-                                                        <tr>
-                                                            <th scope="row" colspan="2">계약일</th>
-                                                            <th scope="row">거래</th>
-                                                            <th scope="row">가격</th>
-                                                            <th scope="row">층</th>
-                                                        </tr>
+                                                    <tr>
+                                                        <th scope="row" colspan="2">계약일</th>
+                                                        <th scope="row">거래</th>
+                                                        <th scope="row">가격</th>
+                                                        <th scope="row">층</th>
+                                                    </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td rowspan="5">2023</td>
-                                                            <td>08.31</td>
-                                                            <td>전세</td>
-                                                            <td>4억3,000</td>
-                                                            <td>5층</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>08.31</td>
-                                                            <td>전세</td>
-                                                            <td>4억3,000</td>
-                                                            <td>5층</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>08.31</td>
-                                                            <td>전세</td>
-                                                            <td>4억3,000</td>
-                                                            <td>5층</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>08.31</td>
-                                                            <td>전세</td>
-                                                            <td>4억3,000</td>
-                                                            <td>5층</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>08.31</td>
-                                                            <td>전세</td>
-                                                            <td>4억3,000</td>
-                                                            <td>5층</td>
-                                                        </tr>
+                                                    <tr>
+                                                        <td rowspan="5">2023</td>
+                                                        <td>08.31</td>
+                                                        <td>전세</td>
+                                                        <td>4억3,000</td>
+                                                        <td>5층</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>08.31</td>
+                                                        <td>전세</td>
+                                                        <td>4억3,000</td>
+                                                        <td>5층</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>08.31</td>
+                                                        <td>전세</td>
+                                                        <td>4억3,000</td>
+                                                        <td>5층</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>08.31</td>
+                                                        <td>전세</td>
+                                                        <td>4억3,000</td>
+                                                        <td>5층</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>08.31</td>
+                                                        <td>전세</td>
+                                                        <td>4억3,000</td>
+                                                        <td>5층</td>
+                                                    </tr>
                                                     </tbody>
                                                 </table>
                                                 <a href="#none" class="btnFolding hasBorder mgt15" aria-expanded="false">더보기</a>
+
+                                                <!-- 내용이 없을경우 -->
+                                                <div class="historyNone">
+                                                    <p class="txt">관련된 내용이 없습니다.</p>
+                                                </div>
+
                                             </div>
                                             <!-- [E] 실거래가 전체 -->
                                             <!-- [S] 실거래가 매매 -->
@@ -571,7 +751,7 @@
         <div class="layer_cont">
             <section class="allFilter">
                 <h3 class="allFilter-tit mgt10">거래유형</h3>
-                <div class="allFilter-list">
+                <div class="allFilter-list mgt10">
                     <label><input type="radio" name="radio001" hidden checked><span>전체</span></label>
                     <label><input type="radio" name="radio001" hidden><span>매매</span></label>
                     <label><input type="radio" name="radio001" hidden><span>전세</span></label>
@@ -587,79 +767,79 @@
                     <div class="tabs-content">
                         <!-- 매매가 -->
                         <div class="tabs-item priceTab-item on" data-tabCon="layTab001">
-                            <label><input type="radio" name="radio010" hidden><span>전채</span></label>
-                            <label><input type="radio" name="radio010" hidden><span>1억</span></label>
-                            <label><input type="radio" name="radio010" hidden><span>2억</span></label>
-                            <label><input type="radio" name="radio010" hidden><span>3억</span></label>
-                            <label><input type="radio" name="radio010" hidden><span>4억</span></label>
-                            <label><input type="radio" name="radio010" hidden><span>5억</span></label>
-                            <label><input type="radio" name="radio010" hidden><span>7억</span></label>
-                            <label><input type="radio" name="radio010" hidden><span>10억</span></label>
-                            <label><input type="radio" name="radio010" hidden><span>12억</span></label>
-                            <label><input type="radio" name="radio010" hidden><span>15억</span></label>
-                            <label><input type="radio" name="radio010" hidden><span>17억</span></label>
-                            <label><input type="radio" name="radio010" hidden><span>20억</span></label>
-                            <label><input type="radio" name="radio010" hidden><span>25억</span></label>
-                            <label><input type="radio" name="radio010" hidden><span>30억</span></label>
-                            <label><input type="radio" name="radio010" hidden><span>30억~</span></label>
+                            <label><input type="checkbox" hidden><span>전채</span></label>
+                            <label><input type="checkbox" hidden><span>1억</span></label>
+                            <label><input type="checkbox" hidden><span>2억</span></label>
+                            <label><input type="checkbox" hidden><span>3억</span></label>
+                            <label><input type="checkbox" hidden><span>4억</span></label>
+                            <label><input type="checkbox" hidden><span>5억</span></label>
+                            <label><input type="checkbox" hidden><span>7억</span></label>
+                            <label><input type="checkbox" hidden><span>10억</span></label>
+                            <label><input type="checkbox" hidden><span>12억</span></label>
+                            <label><input type="checkbox" hidden><span>15억</span></label>
+                            <label><input type="checkbox" hidden><span>17억</span></label>
+                            <label><input type="checkbox" hidden><span>20억</span></label>
+                            <label><input type="checkbox" hidden><span>25억</span></label>
+                            <label><input type="checkbox" hidden><span>30억</span></label>
+                            <label><input type="checkbox" hidden><span>30억~</span></label>
                         </div>
                         <!-- 보증금 -->
                         <div class="tabs-item priceTab-item arr4" data-tabCon="layTab002">
-                            <label><input type="radio" name="radio020" hidden><span>전채</span></label>
-                            <label><input type="radio" name="radio020" hidden><span>1천만원</span></label>
-                            <label><input type="radio" name="radio020" hidden><span>2천만원</span></label>
-                            <label><input type="radio" name="radio020" hidden><span>3천만원</span></label>
-                            <label><input type="radio" name="radio020" hidden><span>5천만원</span></label>
-                            <label><input type="radio" name="radio020" hidden><span>7천만원</span></label>
-                            <label><input type="radio" name="radio020" hidden><span>1억</span></label>
-                            <label><input type="radio" name="radio020" hidden><span>2억</span></label>
-                            <label><input type="radio" name="radio020" hidden><span>3억</span></label>
-                            <label><input type="radio" name="radio020" hidden><span>5억</span></label>
-                            <label><input type="radio" name="radio020" hidden><span>7억</span></label>
-                            <label><input type="radio" name="radio020" hidden><span>10억</span></label>
+                            <label><input type="checkbox"  hidden><span>전채</span></label>
+                            <label><input type="checkbox"  hidden><span>1천만원</span></label>
+                            <label><input type="checkbox"  hidden><span>2천만원</span></label>
+                            <label><input type="checkbox"  hidden><span>3천만원</span></label>
+                            <label><input type="checkbox"  hidden><span>5천만원</span></label>
+                            <label><input type="checkbox"  hidden><span>7천만원</span></label>
+                            <label><input type="checkbox"  hidden><span>1억</span></label>
+                            <label><input type="checkbox"  hidden><span>2억</span></label>
+                            <label><input type="checkbox"  hidden><span>3억</span></label>
+                            <label><input type="checkbox"  hidden><span>5억</span></label>
+                            <label><input type="checkbox"  hidden><span>7억</span></label>
+                            <label><input type="checkbox"  hidden><span>10억</span></label>
                         </div>
                         <!-- 월세 -->
                         <div class="tabs-item priceTab-item arr4" data-tabCon="layTab003">
-                            <label><input type="radio" name="radio030" hidden><span>전채</span></label>
-                            <label><input type="radio" name="radio030" hidden><span>30만원</span></label>
-                            <label><input type="radio" name="radio030" hidden><span>40만원</span></label>
-                            <label><input type="radio" name="radio030" hidden><span>50만원</span></label>
-                            <label><input type="radio" name="radio030" hidden><span>60만원</span></label>
-                            <label><input type="radio" name="radio030" hidden><span>70만원</span></label>
-                            <label><input type="radio" name="radio030" hidden><span>80만원</span></label>
-                            <label><input type="radio" name="radio030" hidden><span>90만원</span></label>
-                            <label><input type="radio" name="radio030" hidden><span>100만원</span></label>
-                            <label><input type="radio" name="radio030" hidden><span>120만원</span></label>
-                            <label><input type="radio" name="radio030" hidden><span>150만원</span></label>
-                            <label><input type="radio" name="radio030" hidden><span>200만원</span></label>
-                            <label><input type="radio" name="radio030" hidden><span>300만원</span></label>
-                            <label><input type="radio" name="radio030" hidden><span>500만원</span></label>
-                            <label><input type="radio" name="radio030" hidden><span>500만원~</span></label>
+                            <label><input type="checkbox" hidden><span>전채</span></label>
+                            <label><input type="checkbox" hidden><span>30만원</span></label>
+                            <label><input type="checkbox" hidden><span>40만원</span></label>
+                            <label><input type="checkbox" hidden><span>50만원</span></label>
+                            <label><input type="checkbox" hidden><span>60만원</span></label>
+                            <label><input type="checkbox" hidden><span>70만원</span></label>
+                            <label><input type="checkbox" hidden><span>80만원</span></label>
+                            <label><input type="checkbox" hidden><span>90만원</span></label>
+                            <label><input type="checkbox" hidden><span>100만원</span></label>
+                            <label><input type="checkbox" hidden><span>120만원</span></label>
+                            <label><input type="checkbox" hidden><span>150만원</span></label>
+                            <label><input type="checkbox" hidden><span>200만원</span></label>
+                            <label><input type="checkbox" hidden><span>300만원</span></label>
+                            <label><input type="checkbox" hidden><span>500만원</span></label>
+                            <label><input type="checkbox" hidden><span>500만원~</span></label>
                         </div>
                     </div>
                 </div>
 
                 <h3 class="allFilter-tit mgt30">면적</h3>
                 <div class="allFilter-list line-3">
-                    <label><input type="radio" name="radio-l001" hidden checked><span>전체</span></label>
-                    <label><input type="radio" name="radio-l001" hidden><span>~10평</span></label>
-                    <label><input type="radio" name="radio-l001" hidden><span>10평대</span></label>
-                    <label><input type="radio" name="radio-l001" hidden><span>20평대</span></label>
-                    <label><input type="radio" name="radio-l001" hidden><span>30평대</span></label>
-                    <label><input type="radio" name="radio-l001" hidden><span>40평대</span></label>
-                    <label><input type="radio" name="radio-l001" hidden><span>50평대</span></label>
-                    <label><input type="radio" name="radio-l001" hidden><span>60평~</span></label>
+                    <label><input type="checkbox" hidden checked><span>전체</span></label>
+                    <label><input type="checkbox" hidden><span>~10평</span></label>
+                    <label><input type="checkbox" hidden><span>10평대</span></label>
+                    <label><input type="checkbox" hidden><span>20평대</span></label>
+                    <label><input type="checkbox" hidden><span>30평대</span></label>
+                    <label><input type="checkbox" hidden><span>40평대</span></label>
+                    <label><input type="checkbox" hidden><span>50평대</span></label>
+                    <label><input type="checkbox" hidden><span>60평~</span></label>
                 </div>
                 <h3 class="allFilter-tit mgt30">준공연도</h3>
                 <div class="allFilter-list line-4">
-                    <label><input type="radio" name="radio-l002" hidden checked><span>전체</span></label>
-                    <label><input type="radio" name="radio-l002" hidden><span>~2년</span></label>
-                    <label><input type="radio" name="radio-l002" hidden><span>~5년</span></label>
-                    <label><input type="radio" name="radio-l002" hidden><span>~10년</span></label>
-                    <label><input type="radio" name="radio-l002" hidden><span>~15년</span></label>
-                    <label><input type="radio" name="radio-l002" hidden><span>~20년</span></label>
-                    <label><input type="radio" name="radio-l002" hidden><span>~30년</span></label>
-                    <label><input type="radio" name="radio-l002" hidden><span>30년~</span></label>
+                    <label><input type="checkbox" hidden checked><span>전체</span></label>
+                    <label><input type="checkbox" hidden><span>~2년</span></label>
+                    <label><input type="checkbox" hidden><span>~5년</span></label>
+                    <label><input type="checkbox" hidden><span>~10년</span></label>
+                    <label><input type="checkbox" hidden><span>~15년</span></label>
+                    <label><input type="checkbox" hidden><span>~20년</span></label>
+                    <label><input type="checkbox" hidden><span>~30년</span></label>
+                    <label><input type="checkbox" hidden><span>30년~</span></label>
                 </div>
 
                 <h3 class="allFilter-tit mgt30">방, 욕실수</h3>
@@ -681,20 +861,22 @@
                 </div>
                 <h3 class="allFilter-tit mgt30">세대 수</h3>
                 <div class="allFilter-list line-4">
-                    <label><input type="radio" name="radio-l005" hidden checked><span>전체</span></label>
-                    <label><input type="radio" name="radio-l005" hidden><span>~50세대</span></label>
-                    <label><input type="radio" name="radio-l005" hidden><span>50세대~</span></label>
-                    <label><input type="radio" name="radio-l005" hidden><span>100세대~</span></label>
-                    <label><input type="radio" name="radio-l005" hidden><span>300세대~</span></label>
-                    <label><input type="radio" name="radio-l005" hidden><span>500세대~</span></label>
-                    <label><input type="radio" name="radio-l005" hidden><span>1000세대~</span></label>
-                    <label><input type="radio" name="radio-l005" hidden><span>3000세대~</span></label>
+                    <label><input type="checkbox" hidden checked><span>전체</span></label>
+                    <label><input type="checkbox" hidden><span>~50세대</span></label>
+                    <label><input type="checkbox" hidden><span>50세대~</span></label>
+                    <label><input type="checkbox" hidden><span>100세대~</span></label>
+                    <label><input type="checkbox" hidden><span>300세대~</span></label>
+                    <label><input type="checkbox" hidden><span>500세대~</span></label>
+                    <label><input type="checkbox" hidden><span>1000세대~</span></label>
+                    <label><input type="checkbox" hidden><span>3000세대~</span></label>
                 </div>
             </section>
-            <div class="fix_bottom">
+            <div class="fix_bottom not_dock">
                 <div class="btn_wrap">
                     <div class="btnGroup type2">
                         <p><a href="#none" class="btnBl1 js_pop_close" role="button">적용</a></p>
+                        <p><a href="#none" role="button" class="btnBl1 btnRef2">초기화</a></p>
+
                     </div>
                 </div>
             </div>
@@ -703,7 +885,7 @@
 </div>
 <!-- [E] -->
 
-<!-- 면적 버텀 팝업 -->
+<!-- [S] 면적 버텀 팝업 -->
 <div id="pop002" class="layer_bottomsheet" role="dialog" tabindex="-1" aria-hidden="true">
     <div class="layer_inner">
         <div class="layer_tit">
@@ -729,7 +911,52 @@
         </div>
     </div>
 </div>
+<!-- [E] 면적 버텀 팝업 -->
 
+
+<script>
+    // 여러 개의 마커 좌표를 정의합니다.
+    // JavaScript 코드
+    var mapContainer = document.getElementById('map'); // 지도를 표시할 div 요소
+    var mapOptions = {
+        center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도 중심 좌표
+        level: 5 // 지도 확대 레벨
+    };
+    var map = new kakao.maps.Map(mapContainer, mapOptions); // 지도 생성
+
+    var customMarker = document.querySelector('.mapPin'); // 커스텀 마커 요소
+    var markerPosition = new kakao.maps.LatLng(37.566826, 126.9786567); // 마커 위치 좌표
+
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+
+    map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC); // 지도 유형 추가
+    marker.setMap(map);
+
+    // 커스텀 마커를 지도에 추가
+    var overlay = new kakao.maps.CustomOverlay({
+        content: customMarker,
+        map: map,
+        position: markerPosition,
+        yAnchor: 1.1
+    });
+
+    var center = map.getCenter();
+
+    // 주소 검색 객체를 생성합니다.
+    var geocoder = new kakao.maps.services.Geocoder();
+
+    // 중심 좌표로부터 주소를 검색합니다.
+    geocoder.coord2RegionCode(center.getLng(), center.getLat(), function(result, status) {
+        if (status === kakao.maps.services.Status.OK) {
+            if (result.length > 0) {
+                var address = result[0].address_name;
+                console.log("중심 좌표의 주소: " + address);
+            }
+        }
+    });
+</script>
 
 <script>
     $(document).ready(function () {
@@ -758,46 +985,40 @@
             $(this).addClass("on");
         })
 
-
         //터치위로 올릴때 이벤트
         var startY = 0;
         var touchChk = false;
 
-        //탭
-        $(document).on("click", ".tabs-nav", function () {
-            var $tar = $(this);
-            var idx = $tar.data('tab');
-            $tar.addClass("on").siblings().removeClass("on");
-            $('.tabs-item[data-tabCon="' + idx + '"]').addClass("on").siblings().removeClass("on");
-        });
+
 
         //아파트 정보창 키우기
         $(document).on("click", ".aptInfoPop-type", function () {
             $('.aptInfoPop').toggleClass("half open");
-            $(".fix_bottom").toggleClass("not_dock");
+            /*$(".fix_bottom").toggleClass("not_dock"); 1024 삭제 */
 
         });
 
-        //아파트 정보창 터치로 올리기
+
         $(document).on("touchstart", ".touchArea", function (event) {
             startY = event.originalEvent.touches[0].clientY; // 터치 시작 위치 기록
         });
-        //아파트 정보창 터치로 올리기
+
         $(document).on("touchmove", ".touchArea", function (event) {
             var currentY = event.originalEvent.touches[0].clientY;
             var deltaY = startY - currentY;
 
             if (deltaY > 50) { // 위로 스와이프
                 $('.aptInfoPop').removeClass("half").addClass("open");
-                $(".fix_bottom").addClass("not_dock");
+                /*$(".fix_bottom").addClass("not_dock"); 1024 삭제 */
             }else if (deltaY < -50) { // 아래로 스와이프
                 $('.aptInfoPop').removeClass("open").addClass("half");
-                $(".fix_bottom").removeClass("not_dock");
+                /*$(".fix_bottom").removeClass("not_dock"); 1024 삭제 */
             }
         });
 
 
         loadLineChart(); //라인차트
+
 
 
         //범위 값 체크 1024 추가
@@ -806,6 +1027,7 @@
             var $this = $(this)
             var $group = $this.closest(".priceTab-item,.allFilter-list");
             var chkCount = $group.find("input:checked").length;
+
 
             //전체값 체크하기
             if($group.find("label").first().find("input").is(":checked")){
@@ -817,6 +1039,7 @@
                 if(chkCount == 2){
                     $group.find("label").each(function(){
                         var $tar = $(this).find("input");
+
                         if($tar.is(":checked")){
                             chkAttr.push(parseInt($(this).index()));
                             chkAttr = $.unique(chkAttr); //중복된거 빼기
@@ -829,18 +1052,54 @@
                     $this.prop('checked', !$this.prop('checked'));
                 }
 
-                //사이값 뿌리기
+                //사이값 체크하기
                 for (var i=chkAttr[0];i<chkAttr[1];i++){
                     $group.find("label").eq(i).find("input").prop("checked",true);
                 }
             }
-
-
-
-
-
-
         })
+
+
+
+        // 조건문 클릭할때 조건문 달기 1025
+        $(document).on("click",".priceTab input",function(){
+            var $this = $(this);
+
+            //라디오 일때
+            if($this.is(":radio")){
+                var idx = $this.closest(".allFilter-list").index();
+                var navIdx = $this.closest(".priceTab").index();
+                var txt = $this.next("span").text(); //value 값이나 text 내용
+                var tarTxt = $(".mapFilter-inner label").eq(navIdx).find("span");
+                if(tarTxt.find("i").length > 0){
+                    tarTxt.find("i").eq(idx).text(txt);
+                }else{
+                    tarTxt.text(txt);
+                }
+                //그외
+            }else{
+                var navIdx = $this.closest(".priceTab").index();
+                var navTar = $(".mapFilter-inner label");
+                // 체크된 체크박스만 선택
+                var checkedInputs = $this.closest(".priceTab-item,.allFilter-list").find("input:checked");
+                var firstTxt = checkedInputs.first().next("span").text();
+                var lastTxt = checkedInputs.last().next("span").text();
+                if(firstTxt == lastTxt) {
+                    navTar.eq(navIdx).find("span").text(firstTxt);
+                }else{
+                    if (firstTxt.endsWith("~")) {
+                        firstTxt = firstTxt.slice(0, -1); // 끝의 "~" 문자를 삭제
+                    }
+                    if(lastTxt.startsWith("~")){
+                        lastTxt = lastTxt.slice(1); // 앞 "~" 문자를 삭제
+                    }
+                    navTar.eq(navIdx).find("span").text(`${firstTxt} ~ ${lastTxt}`);
+
+                }
+
+
+            }
+        });
 
 
         //아파트 찾기 필터 토글 1024
@@ -854,6 +1113,8 @@
                 $('.priceTab[data-tabCon="' + chkOn + '"]').removeClass("on");
             }
         })
+
+
 
     })
 
@@ -944,6 +1205,3 @@
 </script>
 </body>
 </html>
-
-
-

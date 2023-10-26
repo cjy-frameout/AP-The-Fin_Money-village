@@ -284,7 +284,6 @@ a {
 				background-repeat: no-repeat;
 			}
 		}
-
 		&.btnRef2 {
 			background: #F3F4F6;
 			background-image: none;
@@ -1182,14 +1181,15 @@ a.btnBl1.wide i.more {
 		.btnLogo {
 			width: auto;
 			height: 20px;
-			//background-image: url('../img/theme/apthefin/thefin_logo.png?0807');
+			background-image: url('../img/theme/apthefin/svg/ic_logo.svg');
 			background-repeat: no-repeat;
-			background-size: 66px auto;
-			//padding-left: 66px;
+			background-size: 20px 22px;
+			padding-left: 35px;
+			margin-left:5px;
 		}
 
 		.logoTit {
-			font-size: 15px;
+			font-size: 16px;
 			font-weight: 700;
 			color: #fff;
 			margin-left: 5px;
@@ -1214,10 +1214,9 @@ a.btnMenu {
 }
 
 .header.main a.btnMenu {
-	width: 20px;
-	height: 16px;
-	background-image: url('../img/theme/apthefin/total_menu_white.png?0807');
-	background-size: 20px auto;
+	width: 32px;
+	height: 32px;
+	background-image: url('../img/theme/apthefin/svg/total_menu_white.svg');
 }
 
 .btn_more_ask .ico_ask {
@@ -6117,10 +6116,9 @@ a.btnMenu {
 		}
 	}
 }
-
 .wrap_chart.type_line {
 	.highcharts-point {
-		display: none;
+		//display: none;
 
 		&:last-child {
 			display: block;
