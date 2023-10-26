@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title></title>
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="title" content="">-->
+    <meta name="description" content="">
+    <!--<meta name="keywords" content="">-->
+    <!-- The Open Graph protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=""><!-- [D]리얼경로로 변경하세요 -->
+    <!-- //The Open Graph protocol -->
+    <link rel="SHORTCUT ICON" href=""><!-- [D]리얼경로로 변경하세요 -->
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../../js/slide_slick.js"></script>
+    <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/interaction.js"></script>
+    <script type="text/javascript" src="../../js/cmd.js"></script>
+</head>
+
+<body>
+<div class="wrap">
+    <!-- header -->
+    <div class="header">
+        <div class="header_inn">
+            <div class="left">
+                <a href="#none" class="btnBack"><span class="blind">Back</span></a>
+            </div>
+            <div class="center">
+                <h2 class="tit_h2">자산연결관리</h2>
+            </div>
+
+        </div>
+    </div>
+    <!-- //header -->
+
+    <div class="container">
+        <div class="content">
+            <div class="desc-wrap mgt30 assetTop">
+                <h3 class="cont-title-big">
+                    현대카드에 요청할<br>
+                    개인신용정보 전송 내역을<br>
+                    설정해 주세요</h3>
+                <p class="cont-desc-big">
+                    <small>
+                        고객님은 최대 1년까지 전송을 요구할 수 있습니다.<br>
+                        또한 종료시점이 도래하기 이전에 전송요구 기간을 변경 하거나 연장할 수 있습니다.
+                    </small>
+                </p>
+            </div>
+
+            <div class="hr_div mgt0"></div>
+            <div class="filterItem">
+                <p class="filterTit">전송요구 종료시점</p>
+                <ul class="radioTab">
+                    <li>
+                        <input type="radio" id="radio4" name="radioTab1" class="blind">
+                        <label for="radio4">3개월</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="radio5" name="radioTab1" class="blind">
+                        <label for="radio5">6개월</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="radio6" name="radioTab1" class="blind">
+                        <label for="radio6">9개월</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="radio7" name="radioTab1" class="blind" checked="">
+                        <label for="radio7">1년</label>
+                    </li>
+                </ul>
+
+                <div class="selPeriod">
+                    <!-- datepicker data-title 추가 -->
+                    <!-- 21.08.31 수정 -->
+                    <div class="dateItem">
+                        <label for="startDate" class="blind">조회기간 시작일</label>
+                        <input type="tel" required="required"  class="datepicker" id="startDate" autocomplete="off" data-title="시작일" placeholder="YYYY.MM.DD">
+                        <!---  datepicker 화살표 비활성화시  ui-datepicker-prevY,ui-datepicker-nextY,ui-datepicker-prev,ui-datepicker-next 에 disabled 클래스 추가  -->
+                    </div>
+                    <span class="unit"></span>
+                    <div class="dateItem">
+                        <label for="endDate" class="blind">조회기간 종료일</label>
+                        <input type="tel" required="required" id="endDate" class="datepicker" autocomplete="off" data-title="완료일" placeholder="YYYY.MM.DD"> <!-- 22.11.11 종료일 -> 완료일 변경 -->
+                    </div>
+                </div>
+
+                <footer class="fix_bottom not_dock">
+                    <div class="btn_wrap">
+                        <div class="btnGroup sub_btnGroup">
+                            <p><a href="#" class="btnBl1" role="button" onclick="">저장</a></p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+<script>
+    $(document).ready(function(){
+        // [S] 캘린더 탭
+        $(".tabInter").tabs({
+            wrapClass:".tabInter",
+            clickClass:".js_tabclickDp1",
+            showClass:".tab_cntDp1",
+            animate:false,
+            contentWidthFull:false,//effect when animate:true
+            animateBorder:["false",".tabs_header"],//show border in class .
+            fade:false,
+            speed:500
+        });
+        // [E] 캘린더 탭
+    })
+</script>
+</html>

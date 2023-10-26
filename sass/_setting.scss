@@ -1,22 +1,45 @@
 @charset "UTF-8";
 
 .setting {
-  height:100%;
+  min-height:calc(100vh - 50px);
   background:#F1F2F5;
+  &.-noBg {
+    background:none;
+  }
   &-list {
     background:#fff;
     padding-top:30px;
     margin-left:-20px;
     margin-right:-20px;
+    border-bottom:10px solid #f1f2f5;
+    & + .setting-list {
+      padding-top:20px;
+    }
+    &Tit {
+      margin-left:20px;
+      font-size:14px;
+      color:#999;
+      font-weight:700;
+      line-height:22px;
+    }
   }
   &-item {
-    display:block;
+    display:flex;
     padding:20px 64px 20px 20px;
-    border-bottom:1px solid #f1f2f5;
+    border-bottom:1px solid #E5E5E5;
     font-size:16px;
     font-weight:500;
     line-height:24px;
     position: relative;
+    align-items: center;
+    justify-content: space-between;
+    &Caution {
+      color:#1c64f2;
+      font-size:14px;
+      line-height:22px;
+      font-weight:400;
+      margin-right:-14px;
+    }
   }
   &-switch {
     position: absolute;
@@ -240,5 +263,100 @@ input[type="password"]::placeholder {
   }
   input:checked+span:after {
     @include iconCheck(checked);
+  }
+}
+
+
+//자산
+
+.assetTop {
+  height:238px;
+}
+.assetContCard {
+  border-bottom:1px solid #f1f2f5;
+  position: relative;
+  padding:30px 0 23px;
+  &-type {
+    color:#333;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  &-info {
+    font-size: 14px;
+    font-style: normal;
+    line-height: 22px;
+    color:#666;
+    margin-top:5px;
+  }
+  &-data {
+    color:#999;
+    font-size:13px;
+    line-height:18px;
+    margin-top:13px;
+  }
+  .btn_switch {
+    position: absolute;
+    right:0;
+    top:50%;
+    transform: translateY(-50%);
+  }
+}
+
+.assetInfo {
+  &-tit {
+    font-size:14px;
+    color:#333;
+    line-height:22px;
+    font-weight: 700;
+
+  }
+  &-list {
+    li {
+      display:block;
+      padding-left:18px;
+      position: relative;
+      font-size:14px;
+      line-height:22px;
+      color:#666;
+      margin-top:10px;
+      &:before {
+        content:"";
+        display: block;
+        position: absolute;
+        top:8px;
+        left:6px;
+        width:4px;
+        height:4px;
+        background:#b3b3b3;
+        border-radius: 50%;
+      }
+    }
+  }
+  .cdChkItem {
+    display: flex;
+    label {
+      display:flex;
+      align-items: center;
+      input~i {
+        position: initial;
+        transform: translateY(0);
+        margin-right:6px;
+      }
+      span {color:#333;font-size:14px;}
+      input:checked~span {
+        color:#333 !important;
+      }
+    }
+  }
+  &-chk {
+    display:flex;
+    align-items: center;
+    gap: 40px;
+    padding:20px;
+    border-radius: 16px;
+    background:#f3f4f6;
+    justify-content: center;
+    margin-top:10px;
   }
 }

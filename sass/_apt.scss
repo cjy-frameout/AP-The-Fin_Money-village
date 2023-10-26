@@ -1,6 +1,14 @@
 @charset "UTF-8";
 
 .tabs {
+  &.-wide {
+    margin-left:-20px;
+    margin-right:-20px;
+    .tabs-content {
+      padding-left:20px;
+      padding-right:20px;
+    }
+  }
   &-header {
     border-bottom:1px solid #E5E5E5;
     display:flex;
@@ -18,7 +26,7 @@
     height:43px;
     position: relative;
     &.on {
-      color:#3e5fac;
+      color:#1c64f2;
       font-weight: 700;
       &:after {
         content: "";
@@ -26,7 +34,7 @@
         width:100%;
         left:0;
         bottom:-1px;
-        border-bottom:2px solid #3e5fac;
+        border-bottom:2px solid #1c64f2;
         position: absolute;
       }
     }

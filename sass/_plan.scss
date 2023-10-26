@@ -9,6 +9,7 @@ $black : #17181A;
     line-height:1.4;
     font-weight:500;
     color:$black;
+    position: relative;
     &.-bold {font-weight:600}
     &__bold {font-size:22px;}
     strong {
@@ -54,6 +55,12 @@ $black : #17181A;
           z-index:-1;
         }
       }
+    }
+    .btn_switch {
+      position: absolute;
+      right:0;
+      top:50%;
+      transform: translateY(-50%);
     }
   }
   &__hr {
@@ -1500,8 +1507,8 @@ $black : #17181A;
       &:after {
         content:"";
         display: block;
-        width:10px;
-        height:10px;
+        width:11px;
+        height:11px;
         background:#3e5fac;
         border-radius: 50%;
       }

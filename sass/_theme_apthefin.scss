@@ -335,9 +335,10 @@ a {
 	&.btnBl3 {
 		height: 50px;
 		border-radius: 10px;
-		background: #B3B3B3;
-		font-size: 16px;
-		color: #fff;
+		background: #f3f4f6;
+		font-size: 15px;
+		color: #6b7280;
+		font-weight:700;
 	}
 
 	&.btnBl4 {
@@ -7536,9 +7537,9 @@ a.btnMenu {
 }
 
 .cdChkItem.roundType label input[type=radio] {
-	+ i {
-		width: 20px;
-		height: 20px;
+	~ i {
+		width: 19px;
+		height: 19px;
 		border: 1px solid #E5E5E5;
 		background: #fff;
 		display: inline-flex;
@@ -7548,7 +7549,7 @@ a.btnMenu {
 	}
 
 	&:checked {
-		+ i {
+		~ i {
 			border-color: #1C64F2;
 
 			&:after {
