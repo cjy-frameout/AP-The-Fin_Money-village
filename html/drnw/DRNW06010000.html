@@ -257,12 +257,12 @@
         if($("#savego").hasClass("-year30")){
             setTimeout(function(){
                 lineH = 150 - $(".savegoGraph .-right .savegoGraph__bar").height();
-                $(".savegoGraph__line").css({"top":lineH}).addClass("-active");
+                $(".savegoGraph__line").css({"top":`${lineH/16}rem`}).addClass("-active"); //1027 rem단위변경
             },1500);
         }else{
             setTimeout(function(){
                 lineH = 150 - $(".savegoGraph .-center .savegoGraph__bar").height();
-                $(".savegoGraph__line").css({"top":lineH}).addClass("-active");
+                $(".savegoGraph__line").css({"top":`${lineH/16}rem`}).addClass("-active"); //1027 rem단위변경
             },1500);
         }
 
