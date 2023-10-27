@@ -1,49 +1,49 @@
 @charset "UTF-8";
 
 .setting {
-  min-height:calc(100vh - 50px);
+  min-height:calc(100vh - rem(50));
   background:#F1F2F5;
   &.-noBg {
     background:none;
   }
   &-list {
     background:#fff;
-    padding-top:30px;
-    margin-left:-20px;
-    margin-right:-20px;
-    border-bottom:10px solid #f1f2f5;
+    padding-top:rem(30);
+    margin-left:rem(-20);
+    margin-right:rem(-20);
+    border-bottom:rem(10) solid #f1f2f5;
     & + .setting-list {
-      padding-top:20px;
+      padding-top:rem(20);
     }
     &Tit {
-      margin-left:20px;
-      font-size:14px;
+      margin-left:rem(20);
+      font-size:rem(14);
       color:#999;
       font-weight:700;
-      line-height:22px;
+      line-height:rem(22);
     }
   }
   &-item {
     display:flex;
-    padding:20px 64px 20px 20px;
-    border-bottom:1px solid #E5E5E5;
-    font-size:16px;
+    padding:rem(20) rem(64) rem(20) rem(20);
+    border-bottom:rem(1) solid #E5E5E5;
+    font-size:rem(16);
     font-weight:500;
-    line-height:24px;
+    line-height:rem(24);
     position: relative;
     align-items: center;
     justify-content: space-between;
     &Caution {
       color:#1c64f2;
-      font-size:14px;
-      line-height:22px;
+      font-size:rem(14);
+      line-height:rem(22);
       font-weight:400;
-      margin-right:-14px;
+      margin-right:rem(-14);
     }
   }
   &-switch {
     position: absolute;
-    right:20px;
+    right:rem(20);
     top:50%;
     transform: translateY(-50%);
   }
@@ -51,64 +51,64 @@
     content:"";
     @include iconArrowDown;
     position: absolute;
-    right:20px;
+    right:rem(20);
     top:50%;
     transform: translateY(-50%) rotate(-90deg);
   }
 }
 
 .cdChkLst.settingType {
-  margin-top:30px;
+  margin-top:rem(30);
   .cdChkSubList {
-    margin-left:-20px;
-    margin-right:-20px;
+    margin-left:rem(-20);
+    margin-right:rem(-20);
   }
   .cdChkItem {
-    padding:20px 64px 20px 20px;
-    border-bottom:1px solid #E5E5E5;
+    padding:rem(20) rem(64) rem(20) rem(20);
+    border-bottom:rem(1) solid #E5E5E5;
     margin-top:0;
   }
 }
 
 
 .settingVer {
-  margin-top:25px;
+  margin-top:rem(25);
   color:#333;
   &-tit {
-    font-size:16px;
-    line-height:24px;
+    font-size:rem(16);
+    line-height:rem(24);
     font-weight:400;
   }
   &-num {
     position: relative;
     color:#333;
-    font-size:16px;
-    line-height:24px;
+    font-size:rem(16);
+    line-height:rem(24);
     font-weight:400;
-    margin-top:15px;
+    margin-top:rem(15);
   }
   &-btn {
     display: block;
     position: absolute;
     right:0;
     bottom:0;
-    padding:4px 12px;
-    border:1px solid #1C64F2;
-    border-radius: 20px;
-    font-size:14px;
+    padding:rem(4) rem(12);
+    border:rem(1) solid #1C64F2;
+    border-radius: rem(20);
+    font-size:rem(14);
     font-weight:500;
-    line-height:22px;
+    line-height:rem(22);
     text-align: center;
     color:#1C64F2;
   }
   &-licence {
-    margin-top:15px;
+    margin-top:rem(15);
     color:#999;
-    font-size:13px;
-    line-height:18px;
+    font-size:rem(13);
+    line-height:rem(18);
     font-weight:400;
-    padding-bottom:3px;
-    border-bottom:1px solid #999;
+    padding-bottom:rem(3);
+    border-bottom:rem(1) solid #999;
     display: inline-block;
     &:visited,&:link {color:#999}
   }
@@ -116,24 +116,24 @@
 
 
 .marketingChkResult {
-  border-radius: 10px;
+  border-radius: rem(10);
   background:#f1f2f5;
   display:flex;
-  padding:10px 20px;
+  padding:rem(10) rem(20);
   align-self:stretch;
-  font-size:14px;
+  font-size:rem(14);
   flex-wrap: wrap;
-  gap:4px 0;
-  margin-top:10px;
+  gap:rem(4) 0;
+  margin-top:rem(10);
   dd {
     flex-shrink: 0;
     color:#333;
     display: block;
     text-align:right;
-    width:calc(100% - 60px);
+    width:calc(100% - rem(60));
   }
   dt {
-    width:60px;
+    width:rem(60);
     color:#666;
     display: block;
   }
@@ -141,20 +141,20 @@
 
 .authList {
   display: block;
-  padding:20px;
-  border:1px solid #E5E5E5;
-  border-radius: 16px;
-  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.08);
-  margin-top:16px;
+  padding:rem(20);
+  border:rem(1) solid #E5E5E5;
+  border-radius: rem(16);
+  box-shadow: rem(0) rem(3) rem(5) rem(-1) rgba(0, 0, 0, 0.08);
+  margin-top:rem(16);
   &.on {
     border-color:#1C64F2;
   }
   &:not(:first-of-type) {
-    margin-top:20px;
+    margin-top:rem(20);
   }
   &-name {
-    font-size:16px;
-    line-height:24px;
+    font-size:rem(16);
+    line-height:rem(24);
     font-weight:500;
     color:#333;
     display: flex;
@@ -163,29 +163,29 @@
       content:"";
       @include iconShdLock();
       display: inline-block;
-      margin-right:6px;
+      margin-right:rem(6);
     }
   }
   &-info {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    font-size:14px;
+    font-size:rem(14);
     color:#999;
-    line-height:22px;
-    gap:4px 0;
-    margin-top:10px;
-    dt {width:100px}
+    line-height:rem(22);
+    gap:rem(4) 0;
+    margin-top:rem(10);
+    dt {width:rem(100)}
     dd {
       flex-shrink: 0;
-      width:calc(100% - 100px);
+      width:calc(100% - rem(100));
       text-align:right;
     }
   }
   &-guide {
-    font-size:14px;
+    font-size:rem(14);
     color:#999;
-    line-height:22px;
+    line-height:rem(22);
   }
   &.empty {
     .authList-name {
@@ -193,13 +193,13 @@
     }
   }
   .btnGroup {
-    margin-top:10px;
-    gap:0 20px;
+    margin-top:rem(10);
+    gap:0 rem(20);
     p {padding:0}
     .btnBl1 {
-      padding:10px;
-      height:40px;
-      font-size:14px;
+      padding:rem(10);
+      height:rem(40);
+      font-size:rem(14);
     }
   }
   &-over {
@@ -221,22 +221,22 @@ input[type="password"]::placeholder {
   li {
     counter-increment: listN;
     position: relative;
-    font-size:14px;
-    line-height:22px;
+    font-size:rem(14);
+    line-height:rem(22);
     font-weight:400;
     color:#666;
-    padding-left:20px;
+    padding-left:rem(20);
     &:not(:first-of-type) {
-      margin-top:10px;
+      margin-top:rem(10);
     }
     &:before {
       content:counter(listN)". ";
       display:block;
       position: absolute;
-      left:-5px;
+      left:rem(-5);
       top:0;
       text-align:right;
-      width:20px;
+      width:rem(20);
     }
   }
 }
@@ -245,15 +245,15 @@ input[type="password"]::placeholder {
 
 .marketingArg {
   display:block;
-  border-top:1px solid #E5E5E5;
-  padding-top:15px;
+  border-top:rem(1) solid #E5E5E5;
+  padding-top:rem(15);
   span {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    font-size:14px;
+    font-size:rem(14);
     font-weight:400;
-    line-height:22px;
+    line-height:rem(22);
     color:#666;
     &:after {
       content:"";
@@ -270,30 +270,30 @@ input[type="password"]::placeholder {
 //자산
 
 .assetTop {
-  height:238px;
+  height:rem(238);
 }
 .assetContCard {
-  border-bottom:1px solid #f1f2f5;
+  border-bottom:rem(1) solid #f1f2f5;
   position: relative;
-  padding:30px 0 23px;
+  padding:rem(30) 0 rem(23);
   &-type {
     color:#333;
-    font-size: 16px;
+    font-size: rem(16);
     font-weight: 700;
-    line-height: 24px;
+    line-height: rem(24);
   }
   &-info {
-    font-size: 14px;
+    font-size: rem(14);
     font-style: normal;
-    line-height: 22px;
+    line-height: rem(22);
     color:#666;
-    margin-top:5px;
+    margin-top:rem(5);
   }
   &-data {
     color:#999;
-    font-size:13px;
-    line-height:18px;
-    margin-top:13px;
+    font-size:rem(13);
+    line-height:rem(18);
+    margin-top:rem(13);
   }
   .btn_switch {
     position: absolute;
@@ -305,29 +305,29 @@ input[type="password"]::placeholder {
 
 .assetInfo {
   &-tit {
-    font-size:14px;
+    font-size:rem(14);
     color:#333;
-    line-height:22px;
+    line-height:rem(22);
     font-weight: 700;
 
   }
   &-list {
     li {
       display:block;
-      padding-left:18px;
+      padding-left:rem(18);
       position: relative;
-      font-size:14px;
-      line-height:22px;
+      font-size:rem(14);
+      line-height:rem(22);
       color:#666;
-      margin-top:10px;
+      margin-top:rem(10);
       &:before {
         content:"";
         display: block;
         position: absolute;
-        top:8px;
-        left:6px;
-        width:4px;
-        height:4px;
+        top:rem(8);
+        left:rem(6);
+        width:rem(4);
+        height:rem(4);
         background:#b3b3b3;
         border-radius: 50%;
       }
@@ -341,9 +341,9 @@ input[type="password"]::placeholder {
       input~i {
         position: initial;
         transform: translateY(0);
-        margin-right:6px;
+        margin-right:rem(6);
       }
-      span {color:#333;font-size:14px;}
+      span {color:#333;font-size:rem(14);}
       input:checked~span {
         color:#333 !important;
       }
@@ -352,11 +352,11 @@ input[type="password"]::placeholder {
   &-chk {
     display:flex;
     align-items: center;
-    gap: 40px;
-    padding:20px;
-    border-radius: 16px;
+    gap: rem(40);
+    padding:rem(20);
+    border-radius: rem(16);
     background:#f3f4f6;
     justify-content: center;
-    margin-top:10px;
+    margin-top:rem(10);
   }
 }

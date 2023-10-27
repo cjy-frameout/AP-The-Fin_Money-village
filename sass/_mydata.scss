@@ -3,11 +3,11 @@
 /* ================================================== S : FEED CSS ===================================================  */
 
 .wrap_search + .feed-list {
-    margin-top: 20px;
+    margin-top: rem(20);
 }
 @mixin afterBluer {
     overflow:hidden;
-    height:180px;
+    height:rem(180);
     position: relative;
     &:after {
         content:"";
@@ -15,7 +15,7 @@
         left:0;
         bottom:0;
         width:100%;
-        height:20px;
+        height:rem(20);
         display: block;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.20) 0%, #FFF 100%);
     }
@@ -23,7 +23,7 @@
 .feed-list {
     .feed-item {
         &:first-child {
-            margin-top: 40px;
+            margin-top: rem(40);
         }
         .list-desc {@include afterBluer;}
         .load-wrap {
@@ -36,20 +36,20 @@
     }
 }
 .feed-item {
-    border-bottom: 10px solid #F1F2F5;
-    padding: 0 20px 20px;
-    margin: 0 -20px;
+    border-bottom: rem(10) solid #F1F2F5;
+    padding: 0 rem(20) rem(20);
+    margin: 0 rem(-20);
 
     &.no-border-bottom {
         border-bottom: 0 !important;
     }
 
     + .feed-item {
-        margin-top: 40px;
+        margin-top: rem(40);
     }
     &.write-page {
         .load-wrap {
-            border-bottom: 1px solid #e5e5e5; 
+            border-bottom: rem(1) solid #e5e5e5;
         }
         .layer_memo_wrap { 
             border-top: 0;
@@ -58,22 +58,22 @@
 }
 
 .layer_cont .feed-item {
-    padding: 20px 0; 
-    border-bottom: 1px solid #f1f2f5;
+    padding: rem(20) 0;
+    border-bottom: rem(1) solid #f1f2f5;
     margin: 0;
 }
 .feed-item .compare_chart {
-    margin-top: 50px;
+    margin-top: rem(50);
 
     &.feed-bar-chart {
-        margin-top: 30px;
+        margin-top: rem(30);
     }
 }
 
 .list-name-box {
     color: #434655;
     display: flex;
-    font-size: 14px;
+    font-size: rem(14);
     font-weight: 400;
     align-items: center;
     justify-content: space-between;
@@ -84,11 +84,11 @@
 .list-name {
     color: #434655;
     display: flex;
-    font-size: 14px;
+    font-size: rem(14);
     font-weight: 400;
     align-items: center;
     >img {
-        margin-right: 5px;
+        margin-right: rem(5);
     }
 
     &.flexS {
@@ -97,38 +97,38 @@
     .list-name-box {
         justify-content: flex-start;
         img {
-            margin-right: 5px;
+            margin-right: rem(5);
         }
     }
     &.hasLine {
-        padding-bottom: 20px;
-        border-bottom: 1px solid #F1F2F5;
+        padding-bottom: rem(20);
+        border-bottom: rem(1) solid #F1F2F5;
     }
 }
 
 .feed-item .list-name-box .list-name > img {
     border-radius: 50%;
-    margin-right: 5px;
+    margin-right: rem(5);
 }
 
 .list-name.flexS > img {
-    margin-right: 5px;
+    margin-right: rem(5);
 }
 
 .feed-item {
     .list-title {
         color: #333;
-        font-size: 16px; 
+        font-size: rem(16);
         font-weight: 700;
         line-height: 1.5;
 
         &.underLine {
-            border-bottom: 1px solid #F1F2F5;
-            padding-bottom: 10px;
+            border-bottom: rem(1) solid #F1F2F5;
+            padding-bottom: rem(10);
         }
 
         + .load-wrap {
-            margin-top: 24px;
+            margin-top: rem(24);
             .accItem i {
                 background: #fff;
             }
@@ -143,7 +143,7 @@
 
     .list-desc {
         color: #666;
-        font-size: 16px;
+        font-size: rem(16);
         font-weight: 400;
         line-height: 1.5;
         word-break: keep-all;
@@ -167,23 +167,23 @@
             align-items: center;
 
             & + div {
-                margin-left: 18px;
+                margin-left: rem(18);
             }
         }
     }
 
     .likes-num, .comment-num, .list-date {
         color: #999;
-        font-size: 16px;
+        font-size: rem(16);
         font-weight: 400;
-        margin-left: 5px;
+        margin-left: rem(5);
     }
 
     .likes-num-btn {
         background: url(../img/theme/apthefin/icon_thumb.png) no-repeat 0 0;
         cursor: pointer;
-        height: 16px; 
-        width: 16px;
+        height: rem(16);
+        width: rem(16);
 
         &.on {
             background: url(../img/theme/apthefin/icon_thumb_on.png) no-repeat 0 0;
@@ -193,36 +193,36 @@
     .comment-num-btn {
         background: url(../img/theme/apthefin/icon_comment.png) no-repeat 0 0;
         cursor: pointer;
-        height: 16px;
-        width: 16px;
+        height: rem(16);
+        width: rem(16);
     }
 
     .list-name + {
         .list-title, .list-desc {
-            margin-top: 20px;
+            margin-top: rem(20);
         }
     }
 
     .list-title + .list-desc {
-        margin-top: 10px;
+        margin-top: rem(10);
     }
 
     .list-desc + .list-util {
-        margin-top: 12px;
+        margin-top: rem(12);
     }
 
     .feed-btn-more {
         background: url(../img/theme/apthefin/icon_more.png) no-repeat 0 0;
         cursor: pointer;
-        height: 24px;
-        width: 24px;
+        height: rem(24);
+        width: rem(24);
         @include txtHidden();
         display:block;
     }
 
     .load-wrap {
         &.padd20 {
-            padding: 20px 0;
+            padding: rem(20) 0;
             .accItem input[type="checkbox"] {
                 display: none;
             }
@@ -231,7 +231,7 @@
             }
         }
         + .list-util {
-            margin-top: 26px;
+            margin-top: rem(26);
         }
 
         .asGroup .asList .amount:after {
@@ -240,12 +240,12 @@
     }
 
     .asGroup + .asGroup {
-        margin-top: 10px;
+        margin-top: rem(10);
         padding-top: 0;
 
         > {
             .asList {
-                margin-top: 10px;
+                margin-top: rem(10);
             }
 
             .listTit {
@@ -272,35 +272,35 @@
 
     .compare_chart .wrapBarGraph .wrapBar_detail {
         border: 0;
-        border-top: 1px solid #E5E5E5;
+        border-top: rem(1) solid #E5E5E5;
         border-style: dashed;
-        margin-top: 30px;
-        padding-top: 10px;
+        margin-top: rem(30);
+        padding-top: rem(10);
     }
 
     .bar-data {
         color: #fff;
-        font-size: 13px;
+        font-size: rem(13);
         font-weight: 700;
     }
 
     .compare_chart .horizontal .wrapBar .gBarBox {
         .gBar {
-            border-radius: 0px 4px 4px 0px !important;
+            border-radius: rem(0) rem(4) rem(4) rem(0) !important;
             text-align: right;
-            height: 24px;
-            padding-right: 10px;
-            line-height: 24px;
+            height: rem(24);
+            padding-right: rem(10);
+            line-height: rem(24);
         }
 
         .myAsset {
-            height: 24px;
+            height: rem(24);
         }
     }
 }
 
 .compare_chart .horizontal .wrapBar .gBarBox .otherAsset {
-    height: 24px;
+    height: rem(24);
 }
 
 .feed-item .compare_chart .wrapBarGraph .wrapBar_detail .bar_rate {
@@ -322,7 +322,7 @@
         overflow: auto;
 
         &.hasFixBottom {
-            padding-bottom: 150px;
+            padding-bottom: rem(150);
         }
     }
 }
@@ -333,11 +333,11 @@
 
 input[type="password"] {
     font-family: caption, sans-serif;
-    font-size: 22px;
+    font-size: rem(22);
 }
 
 .input-wrap {
-    margin: 20px 0 0;
+    margin: rem(20) 0 0;
     width: 100%;
     position: relative;
 }
@@ -351,11 +351,11 @@ input[type="password"] {
 
     + {
         .input-wrap {
-            margin-top: 56px;
+            margin-top: rem(56);
         }
 
         .accSetting {
-            margin-top: 10px;
+            margin-top: rem(10);
         }
     }
 }
@@ -365,13 +365,13 @@ input[type="password"] {
         position: fixed;
         bottom: 0;
         left: 0;
-        padding-bottom: 15px;
+        padding-bottom: rem(15);
         background: #fff;
     }
 
     input[type="text"] {
-        height: 54px;
-        padding: 15px 45px 15px 20px; 
+        height: rem(54);
+        padding: rem(15) rem(45) rem(15) rem(20);
     }
 }
 
@@ -380,20 +380,20 @@ input[type="password"] {
 }
 
 .list-name + .input-box {
-    margin-top: 10px;
+    margin-top: rem(10);
 }
 .input-box.items2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    &.hasUnit input {padding-right:50px}
+    &.hasUnit input {padding-right:rem(50)}
 }
-.itemTit + .input-box.items2 { margin-top: 10px;}
+.itemTit + .input-box.items2 { margin-top: rem(10);}
 
 .ipt-pass-box {
     width: 100%;
     position: relative;
-    height: 42px;
+    height: rem(42);
 
     input[type="password"] {
         position: absolute;
@@ -403,15 +403,15 @@ input[type="password"] {
         opacity: 1;
 
         &:focus + .password-disc-wrap {
-            border-bottom: 1px solid #333;
+            border-bottom: rem(1) solid #333;
         }
     }
 }
 
 .password-disc-wrap {
     background-color: #fff;
-    border-bottom: 1px solid #ddd;
-    height: 42px;
+    border-bottom: rem(1) solid #ddd;
+    height: rem(42);
     width: 100%;
     position: absolute;
     left: 0;
@@ -425,26 +425,26 @@ input[type="password"] {
     background-color: #000;
     border-radius: 50%;
     display: inline-block;
-    height: 10px;
-    width: 10px;
+    height: rem(10);
+    width: rem(10);
 
     + .pass-disc {
-        margin-left: 5px;
+        margin-left: rem(5);
     }
 }
 
 .ipt-label {
-    font-size: 14px;
+    font-size: rem(14);
     font-weight: 700;
 }
 
 .ipt-typeA {
     /* feed 댓글달기에 들어가는 댓글 입력 input */
     border: 0;
-    border-top: 1px solid #E5E5E5;
+    border-top: rem(1) solid #E5E5E5;
     color: #333;
     font-weight: 400;
-    font-size: 16px;
+    font-size: rem(16);
     padding: 0;
     width: 100%;
 }
@@ -452,10 +452,10 @@ input[type="password"] {
 .ipt-typeB {
     /* feed 댓글달기에 들어가는 댓글 입력 input */
     border: 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: rem(1) solid #ddd;
     color: #333;
     font-weight: 400;
-    font-size: 16px;
+    font-size: rem(16);
     padding: 0;
     width: 100%;
 }
@@ -463,29 +463,29 @@ input[type="password"] {
 .ipt-time-limit {
     position: absolute;
     right: 0;
-    bottom: 10px;
-    font-size: 14px;
+    bottom: rem(10);
+    font-size: rem(14);
     font-weight: 400;
 }
 
 .input-err-desc {
     color: #C81E1E;
-    font-size: 13px;
-    margin-top: 10px;
+    font-size: rem(13);
+    margin-top: rem(10);
 }
 
 .ipt-search-desc {
     color: #666;
-    font-size: 14px;
+    font-size: rem(14);
     font-weight: 400;
 }
 
 .feed-write-wrap {
-    border-top: 1px solid #F1F2F5;
+    border-top: rem(1) solid #F1F2F5;
     color: #666;
-    font-size: 16px;
-    line-height: 22px;
-    margin-top: 24px;
+    font-size: rem(16);
+    line-height: rem(22);
+    margin-top: rem(24);
     white-space: pre-wrap;
     word-break: keep-all;
 }
@@ -494,42 +494,42 @@ input[type="password"] {
     input {
         color: #333;
         font-weight: 400;
-        font-size: 16px;
+        font-size: rem(16);
         padding: 0;
         border: 0;
-        height: 42px;
-        border-bottom: 1px solid #ddd;
+        height: rem(42);
+        border-bottom: rem(1) solid #ddd;
         width: 100%;
     }
 
     .layer_memo_wrap {
         border: 0;
-        border-top: 1px solid #E5E5E5;
+        border-top: rem(1) solid #E5E5E5;
         margin-top: 0;
-        padding: 20px 0;
+        padding: rem(20) 0;
         min-height: auto;
     }
 }
 
 .sel_form + .input-box {
-    margin-top: 10px;
+    margin-top: rem(10);
 }
 
 .input-box + .input-box {
-    margin-top: 6px;
+    margin-top: rem(6);
 }
 
 .list-name + .sel_form {
-    margin-top: 10px;
+    margin-top: rem(10);
 }
 
 .sel_form.no-border {
     border: 0;
-    border-bottom: 1px solid #DDE3E7;
+    border-bottom: rem(1) solid #DDE3E7;
     border-radius: 0;
 
     > .sel_box {
-        padding: 15px 0;
+        padding: rem(15) 0;
     }
 }
 
@@ -542,7 +542,7 @@ input[type="password"] {
         transition: all 0.5s;
         height: 0;
         overflow: hidden;
-        margin: 15px 0;
+        margin: rem(15) 0;
 
         &:nth-of-type(1) {
             order: 4;
@@ -562,7 +562,7 @@ input[type="password"] {
 
         &.open {
             transition: all 0.5s;
-            height: 66px;
+            height: rem(66);
             overflow: hidden;
         }
 
@@ -575,26 +575,26 @@ input[type="password"] {
 }
 
 .chkLabel-type-btn {
-    border: 1px solid #E5E5E5;
-    border-radius: 6px;
+    border: rem(1) solid #E5E5E5;
+    border-radius: rem(6);
     color: #666;
     display: block;
-    font-size: 14px;
+    font-size: rem(14);
     font-weight: 500;
     line-height: 1.5;
-    padding: 10px 0;
+    padding: rem(10) 0;
     text-align: center;
     width: 100%;
 }
 
 input[type="checkbox"]:checked + .chkLabel-type-btn {
     color: #3E5FAC;
-    border: 1px solid #3E5FAC;
+    border: rem(1) solid #3E5FAC;
     font-weight: 700;
 }
 
 .itemTit + .input-box {
-    //margin-top: 10px; 높이값이 변경된거 같습니다.
+    //margin-top: rem(10); 높이값이 변경된거 같습니다.
 }
 
 /* ========================================== E : input CSS ========================================================= */
@@ -610,11 +610,11 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 
 .alink-typeA {
     background: url(../img/theme/apthefin/ic_arw5.png) no-repeat right center;
-    background-size: 13px;
+    background-size: rem(13);
     color: #3E5FAC !important;
-    font-size: 15px; 
+    font-size: rem(15);
     font-weight: 700;
-    padding-right: 15px;
+    padding-right: rem(15);
 }
 
 .w100 {
@@ -623,13 +623,13 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 
 .fs-18 {
     color: #17181A;
-    font-size: 18px !important;
+    font-size: rem(18) !important;
     font-weight: 500;
 }
 
 .fs-14 {
     color: #6F7A81;
-    font-size: 14px !important;
+    font-size: rem(14) !important;
     font-weight: 400;
 }
 
@@ -643,14 +643,14 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 }
 
 .hasTopBorder {
-    border-top: 10px solid #F1F2F5;
+    border-top: rem(10) solid #F1F2F5;
 }
 
 .share {
     background: url(../img/theme/apthefin/icon_share.png) no-repeat 0 0;
     display: block;
-    height: 23px;
-    width: 23px;
+    height: rem(23);
+    width: rem(23);
     position: absolute;
     right: 0;
     top: 0;
@@ -659,7 +659,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 
 .unit-won {
     color: #333;
-    font-size: 16px;
+    font-size: rem(16);
     font-weight: 500;
     position: absolute;
     right: 0;
@@ -671,14 +671,14 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: rem(20) 0;
 
     &.fixed {
         position: fixed;
         bottom: 0;
-        left: 20px;
-        right: 20px;
-        border-top: 1px solid #E7E9EE;
+        left: rem(20);
+        right: rem(20);
+        border-top: rem(1) solid #E7E9EE;
         z-index: 99;
     }
 
@@ -697,11 +697,11 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 
 .btn-wrap {
     &.vertical a + a {
-        margin-top: 24px;
+        margin-top: rem(24);
     }
 
     &.hasFixBottom {
-        bottom: 60px;
+        bottom: rem(60);
         border-top: 0;
     }
 
@@ -710,13 +710,13 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     }
 
     &.two-items > a + a {
-        margin-left: 10px;
+        margin-left: rem(10);
     }
 }
 
 .btn-alink {
     color: #6F7A81;
-    font-size: 14px;
+    font-size: rem(14);
     font-weight: 500;
     line-height: 1.3;
     text-align: center;
@@ -724,21 +724,21 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 }
 .btn-change-profile {
     background: #EBF5FF;
-    border-radius: 6px;
+    border-radius: rem(6);
     color: #1C64F2;
-    padding: 8px 32px 8px 12px;
+    padding: rem(8) rem(32) rem(8) rem(12);
     position: relative;
-    font-size:13px;
+    font-size:rem(13);
     font-weight:500;
     &:visited {color:#1C64F2}
     &:after {
         content:'';
         background: url(../img/theme/apthefin/icon_change_profile.png) no-repeat 0 0;
         display: block;
-        height: 20px;
-        width: 20px;
+        height: rem(20);
+        width: rem(20);
         position: absolute;
-        right: 12px;
+        right: rem(12);
         top: 50%;
         transform: translateY(-50%);
         background-size:cover;
@@ -749,8 +749,8 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     background: url(../img/theme/apthefin/bt_search.png) no-repeat 0 0;
     background-size: 100%;
     display: inline-block;
-    height: 20px;
-    width: 20px;
+    height: rem(20);
+    width: rem(20);
     position: absolute;
     right: 0;
     top: 50%;
@@ -761,129 +761,129 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     background: url(../img/theme/apthefin/bt_del_value2.png) no-repeat 0 0;
     background-size: cover;
     display: block;
-    height: 16px;
-    width: 16px;
+    height: rem(16);
+    width: rem(16);
     position: absolute;
-    right: 30px;
+    right: rem(30);
     top: 50%;
     transform: translateY(-50%);
 }
 
 .btn-inside01 {
     background: #F7F9FF;
-    border-radius: 6px;
+    border-radius: rem(6);
     color: #3E5FAC !important;
     display: inline-block;
-    font-size: 13px;
-    padding: 8px 12px;
+    font-size: rem(13);
+    padding: rem(8) rem(12);
 }
 .btn-feed-comment {
     background: url(../img/theme/apthefin/icon_feed_comment.png) no-repeat 0 0;
-    height: 24px;
-    width: 24px;
+    height: rem(24);
+    width: rem(24);
     position:absolute;
-    right:20px;
-    top: calc(50% - 20px);
+    right:rem(20);
+    top: calc(50% - rem(20));
     
 }
 .main-title {
     color: #333;
-    font-size: 22px;
+    font-size: rem(22);
     font-weight: 600;
     line-height: 1.3;
-    margin-top: 32px;
+    margin-top: rem(32);
 }
 .cont-title-big {
     color: #000;
-    font-size: 22px;
+    font-size: rem(22);
     font-weight: 700;
 }
 .sub-title {
     color: #333;
-    font-size: 18px;
+    font-size: rem(18);
     font-weight: 500;
     line-height: 1.5;
 }
 .sub-extra-title {
     color: #333 !important;
-    font-size: 16px !important;
+    font-size: rem(16) !important;
     font-weight: 500;
     line-height:  1.5;
     &.underLine {
-        border-bottom: 1px solid #E5E5E5;
-        padding-bottom: 16px; 
-        margin-bottom: 16px;
+        border-bottom: rem(1) solid #E5E5E5;
+        padding-bottom: rem(16);
+        margin-bottom: rem(16);
     }
 }
 .sub-extra-small-title {
     color: #333 !important;
-    font-size: 14px !important;
+    font-size: rem(14) !important;
     font-weight: 400 !important;
     display: flex;
     align-items: center;
 }
 .main-title + .list-wrap {
-    margin-top: 24px;
+    margin-top: rem(24);
 }
-.sub-extra-title + .accDetailList { margin-top: 15px; }
-.flagArea + .main-title { margin-top: 10px; }
+.sub-extra-title + .accDetailList { margin-top: rem(15); }
+.flagArea + .main-title { margin-top: rem(10); }
 .sub-title + .list-wrap {
-    margin-top: 16px;
+    margin-top: rem(16);
 }
 .list-wrap.bank + .list-wrap.bank {
-    margin-top: 60px;
+    margin-top: rem(60);
 }
 // .cont-title-big + .asGroup {
-//     margin-top: 30px;
+//     margin-top: rem(30);
 // } 
 
 .layer_cont > .cont-title-big {
-    margin-top: 15px;
+    margin-top: rem(15);
 }
 
 .cont-desc-big {
     color: #6F7A81;
-    font-size: 18px;
+    font-size: rem(18);
     font-weight: 400;
     line-height: 1.3;
     small {
-        font-size:14px;
-        line-height:22px;
+        font-size:rem(14);
+        line-height:rem(22);
         font-weight:500;
     }
 }
 
 .cont-title-big + .cont-desc-big {
-    margin-top: 8px;
+    margin-top: rem(8);
 }
 
 .cont-desc {
     color: #6F7A81;
-    font-size: 16px;
+    font-size: rem(16);
     font-weight: 400;
     line-height: 1.3;
 }
 .cont-desc-small {
     color: #666;
-    font-size: 14px;
+    font-size: rem(14);
     font-weight: 400;
     line-height: 1.3;
 }
 .cont-desc-extraSmall {
     color: #999;
-    font-size: 13px;
+    font-size: rem(13);
     font-weight: 500;
     line-height: 1.3;
 }
 
 .cont-title-big + .cont-desc-small, .cont-title-big + .cont-desc-extraSmall, .input-box + .cont-desc-extraSmall {
-    margin-top: 8px;
+    margin-top: rem(8);
 }
-.main-title + .cont-desc-small { margin-top: 10px;}
+.main-title + .cont-desc-small { margin-top: rem(10);}
 
 .list-wrap.hasImg {
     background: url(../img/theme/apthefin/FINS04010000.png) no-repeat 50% 0;
-    padding-top: 260px;
+    padding-top: rem(260);
     &.mortgage {
         background: url(../img/theme/apthefin/FINS05020100.png) no-repeat 50% 0;
         background-size: 100%;
@@ -891,42 +891,42 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 }
 
 .list-typeA-li + .list-typeA-li {
-    margin-top: 24px;
+    margin-top: rem(24);
 }
 
 .list-typeA-title { 
     color: #333;
-    font-size: 16px;
+    font-size: rem(16);
     font-weight: 600;
 }
 
 .list-typeA-desc {
     color: #999;
-    font-size: 13px;
+    font-size: rem(13);
     font-weight: 400;
     line-height: 1.3;
-    margin-top: 5px;
+    margin-top: rem(5);
 }
 
 .list-typeA-li {
     position: relative;
-    padding-left: 30px;
+    padding-left: rem(30);
 
     &:before {
         content: '1';
         background-color: #EBF5FF;
         color: #1C64F2;
-        font-size: 14px;
+        font-size: rem(14);
         font-weight: 500;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 24px;
-        width: 24px;
+        height: rem(24);
+        width: rem(24);
         border-radius: 50%;
         position: absolute;
         left: 0;
-        top: -4px;
+        top: rem(-4);
     }
 
     &.num2:before {
@@ -941,19 +941,19 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     color: #666;
     line-height: 1.3;
     position: relative;
-    padding-left: 7px;
+    padding-left: rem(7);
     &.fs13 {
-        font-size: 13px;
+        font-size: rem(13);
     }
     &:not(:first-of-type) {
-        margin-top: 4px;
+        margin-top: rem(4);
     }
 
     &:before {
         content: '·';
         display: inline-block;
-        font-size: 18px;
-        line-height: 15px;
+        font-size: rem(18);
+        line-height: rem(15);
         position: absolute;
         left: 0;
         top: 0;
@@ -969,23 +969,23 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     li {
         display: flex;
         align-items: center;
-        font-size: 14px;
+        font-size: rem(14);
         color: #666;
-        height: 24px;
+        height: rem(24);
         line-height: 1.5;
         font-weight: 500;
         width: 50%;
-        padding-left: 34px;
+        padding-left: rem(34);
         position: relative;
         &:nth-child(n+3) {
-            margin-top: 16px;
+            margin-top: rem(16);
         }
         &.bank:before {
             content:'';
             
             display: block;
-            height: 24px;
-            width: 24px;
+            height: rem(24);
+            width: rem(24);
             position:absolute;
             top: 50%;
             left: 0;
@@ -1044,7 +1044,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 .agChkLst.typeB {
     border: 0;
     border-radius: 0;
-    padding: 0 5px 0 0;
+    padding: 0 rem(5) 0 0;
     .agChkItem {
         label {
             display:flex;
@@ -1052,26 +1052,26 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
         }
     }
     &:first-child {
-        margin-top: 16px;
+        margin-top: rem(16);
     }
 
     + .agChkLst.typeB {
-        margin-top: 19px;
+        margin-top: rem(19);
     }
 
     .agChkSubList {
         .agChkItem {
-            font-size: 14px;
-            padding-left: 30px;
-            padding-right:25px;
+            font-size: rem(14);
+            padding-left: rem(30);
+            padding-right:rem(25);
             + .agChkItem {
-                margin-top: 18px;
+                margin-top: rem(18);
             }
         }
 
         border-top: 0;
         margin-top: 0;
-        padding-top: 16px;
+        padding-top: rem(16);
     }
 }
 
@@ -1080,42 +1080,42 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 }
 
 .dash {
-    margin: 0 15px;
+    margin: 0 rem(15);
     @include txtHidden();
-    width:10px;
-    height:1px;
+    width:rem(10);
+    height:rem(1);
     background:#333;
     display: inline-block;
     flex-shrink: 0;
 }
 
 .no-result {
-    font-size: 14px;
+    font-size: rem(14);
     font-weight: 500;
     color: #999;
-    padding: 30px;
+    padding: rem(30);
     text-align: center;
 }
 
 .filterTit {
     position: relative;
     display: inline-block;
-    margin-bottom: 10px;
-    font-size: 14px;
+    margin-bottom: rem(10);
+    font-size: rem(14);
     font-weight: 700;
 }
 
 .desc-wrap + .filterItem {
-    margin-top: 50px;
+    margin-top: rem(50);
 }
 
 .filter-title-wrap {
     .filterTit {
-        margin-bottom: 2px;
+        margin-bottom: rem(2);
     }
 
     + .radioTab {
-        margin-top: 10px;
+        margin-top: rem(10);
     }
 }
 
@@ -1124,7 +1124,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 }
 
 .tabs_header.w100 {
-    margin: 0 -20px 15px;
+    margin: 0 rem(-20) rem(15);
 }
 
 .my-bar-rate-wrap {
@@ -1132,22 +1132,22 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     align-items: center;
 
     + .bar-rate.gray {
-        margin-left: 30px;
+        margin-left: rem(30);
     }
 }
 
 .bar-rate {
     display: inline-block;
     position: relative;
-    padding-left: 15px;
-    font-size: 14px;
+    padding-left: rem(15);
+    font-size: rem(14);
 
     &:before {
         content: '';
         border-radius: 50%;
         display: block;
-        height: 12px !important;
-        width: 12px !important;
+        height: rem(12) !important;
+        width: rem(12) !important;
         position: absolute;
         left: 0;
         top: 50%;
@@ -1172,17 +1172,17 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 }
 
 .updating {
-    border-radius: 12px;
-    height: 16px;
+    border-radius: rem(12);
+    height: rem(16);
     overflow: hidden;
-    width: 114px;
+    width: rem(114);
     position: relative;
 }
 
 .loadingBar {
-    height: 16px;
+    height: rem(16);
     overflow: hidden;
-    width: 114px;
+    width: rem(114);
     position: absolute;
     left: 0;
     top: 0;
@@ -1209,21 +1209,21 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     }
 
     100% {
-        background-position: 114px 0;
+        background-position: rem(114) 0;
     }
 }
 
 .updating + .tx {
-    margin-top: 20px !important;
+    margin-top: rem(20) !important;
 }
 .btn-share {
     background: url(../img/theme/apthefin/icon_share.png) no-repeat 50% 50%;
-    background-size: 16px auto;
-    height: 25px;
-    width: 25px;
+    background-size: rem(16) auto;
+    height: rem(25);
+    width: rem(25);
     position: absolute;
     right: 0;
-    top: 30px;
+    top: rem(30);
 }
 .tBalance {
     .btn-share {
@@ -1233,9 +1233,9 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 
 .btn-delete-feed {
     background: url(../img/theme/apthefin/ic_del2.png) no-repeat 50% 50%;
-    background-size: 16px;
-    height: 20px;
-    width: 20px;
+    background-size: rem(16);
+    height: rem(20);
+    width: rem(20);
 }
 .titPoint.green {
     color: #52AFB1 !important;
@@ -1250,26 +1250,26 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 .link-card:after {
     content:'';
     background-image: url(../img/theme/apthefin/card_bg.png);
-    background-size: 62px auto !important;
-    height: 60px !important;
-    top: 17px !important;
-    width: 62px !important;
+    background-size: rem(62) auto !important;
+    height: rem(60) !important;
+    top: rem(17) !important;
+    width: rem(62) !important;
 }
 .link-deposit:after {
     content:'';
     background-image: url(../img/theme/apthefin/bg_deposit.png);
-    background-size: 60px auto !important;
-    height: 60px !important;
-    top: 17px !important;
-    width: 62px !important;
+    background-size: rem(60) auto !important;
+    height: rem(60) !important;
+    top: rem(17) !important;
+    width: rem(62) !important;
 }
 /* ========================================================= E : common  =====================================================*/
 /* S : component */
 .detail-box{
-    border-bottom: 1px solid #E5E5E5;
-    padding-bottom: 15px;
+    border-bottom: rem(1) solid #E5E5E5;
+    padding-bottom: rem(15);
     & + .detail-box {
-        margin-top: 15px;
+        margin-top: rem(15);
     }
     &:last-child {
         border-bottom: 0;
@@ -1277,21 +1277,21 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 }
 .asGroup {
     .accBox:not(:first-of-type) {
-        margin-top: 20px;
+        margin-top: rem(20);
     }
 }
 .card-img-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: rem(30);
 }
 .preparing {
-    padding: 20px;
-    margin-top: 30px;
+    padding: rem(20);
+    margin-top: rem(30);
     .txt {
         color: #999;
-        font-size: 16px;
+        font-size: rem(16);
         font-weight: 500;
         text-align: center;
         &:before {
@@ -1301,28 +1301,28 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
             background-repeat: no-repeat;
             background-size: cover;
             display: block;
-            height: 72px;
-            margin: 0 auto 20px;
-            width: 68px;
+            height: rem(72);
+            margin: 0 auto rem(20);
+            width: rem(68);
         }
     }
 }
 .feed-quick-menu {
     position: fixed;
-    bottom: 100px;
-    right: 20px;
+    bottom: rem(100);
+    right: rem(20);
     a {
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 48px;
-        width: 48px;
-        box-shadow: 0 7px 7px rgba($color: #000000, $alpha: 0.3);
+        height: rem(48);
+        width: rem(48);
+        box-shadow: 0 rem(7) rem(7) rgba($color: #000000, $alpha: 0.3);
         /*transition: all .3s;
-        transform:translateX(calc(100% + 20px));*/
+        transform:translateX(calc(100% + rem(20)));*/
         & + a {
-            margin-top: 10px;
+            margin-top: rem(10);
         }
         &.-active {
             transform:translateX(0);
@@ -1332,7 +1332,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 }
 .feed-quick-regi {
     background: url(../img/theme/apthefin/icon_write_feed.png) no-repeat 0 0;
-    background-size: 48px;
+    background-size: rem(48);
     background-color: #747687;
     &.-active {transition-delay: .4s}
 }
@@ -1340,21 +1340,21 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     background-color: #1C64F2;
     color: #fff !important;
     font-weight: bold;
-    font-size: 12px;
+    font-size: rem(12);
     &.-active {transition-delay: .3s}
 }
 .feed-quick-goTop{
     background: url(../img/theme/apthefin/icon_goTop.png) no-repeat 0 0;
-    background-size: 48px;
+    background-size: rem(48);
     background-color: #fff;
     &.-active {transition-delay: .2s}
 }
-.tab_cntDp1 > .btn-wrap { padding: 0 0 20px;}
-.asLink_box + .banner.inLink{ margin-top: 20px; }
-.cont-box + .info-wrap.bank { margin-top: 60px;}
-.credit-score + .cont-box { margin-top: 60px;}
+.tab_cntDp1 > .btn-wrap { padding: 0 0 rem(20);}
+.asLink_box + .banner.inLink{ margin-top: rem(20); }
+.cont-box + .info-wrap.bank { margin-top: rem(60);}
+.credit-score + .cont-box { margin-top: rem(60);}
 .org_wrap {
-    padding: 0 20px;
+    padding: 0 rem(20);
 }
 .tabs_wrap .org_wrap {
     padding: 0;
@@ -1362,12 +1362,12 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 
 .plan-my-house {
     background: #FCF3F0;
-    border-radius: 10px;
-    height: 120px;
-    padding: 20px;
+    border-radius: rem(10);
+    height: rem(120);
+    padding: rem(20);
     width: 100%;
     & + .gaolGraph {
-        margin-top: 30px;
+        margin-top: rem(30);
     }
 }
 .plan-my-house-alink {
@@ -1377,49 +1377,49 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     width: 100%;
     & .title {
         font: {
-            size: 18px;
+            size: rem(18);
             weight: bold;
         };
         color: #FC603B;
     }
     & .desc {
         font: {
-            size: 14px;
+            size: rem(14);
             weight: 400;
         };
         color: #333;
     }
     & .alink {
         font: {
-            size: 13px;
+            size: rem(13);
             weight: 500;
         };
         color: #FC603B;
-        margin-top: 6px;
+        margin-top: rem(6);
     }
 }
 
 .hr_div.thin {
-    height: 1px !important;
+    height: rem(1) !important;
 }
 .own-house, .jeonse, .monthly-rent {
-    margin-top: 30px;
+    margin-top: rem(30);
     & + .filterItem {
-        margin-top: 30px;
+        margin-top: rem(30);
     }
 }
 
 .car-insure-box {
-    border: 1px solid #E5E5E5;
-    border-radius: 16px;
-    padding: 20px;
+    border: rem(1) solid #E5E5E5;
+    border-radius: rem(16);
+    padding: rem(20);
 
     .fDetail_list {
         padding: 0;
         margin: 0;
 
         .state_tit span {
-            font-size: 18px !important;
+            font-size: rem(18) !important;
         }
     }
 }
@@ -1439,36 +1439,36 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 }
 
 .credit-score {
-    background: url(../img/theme/apthefin/credit_score.png) no-repeat 50% 116px;
-    border-top: 1px solid #DDE3E7;
-    margin-top: 32px;
-    padding-top: 40px;
-    padding-bottom: 195px;
+    background: url(../img/theme/apthefin/credit_score.png) no-repeat 50% rem(116);
+    border-top: rem(1) solid #DDE3E7;
+    margin-top: rem(32);
+    padding-top: rem(40);
+    padding-bottom: rem(195);
     &.type2 {
-        background: url(../img/theme/apthefin/credit_score2.png) no-repeat 50% 136px;
+        background: url(../img/theme/apthefin/credit_score2.png) no-repeat 50% rem(136);
     }
 }
 
 .info-wrap {
     background: #F5F7F9;
-    margin: 0 -20px;
-    padding: 24px;
+    margin: 0 rem(-20);
+    padding: rem(24);
     &.info-box {
         background: #F7F9FF;
-        margin: 10px 0 0;
-        padding: 12px 20px;
+        margin: rem(10) 0 0;
+        padding: rem(12) rem(20);
     }
 }
 .info-icon{
     position: relative;
-    padding-left: 25px;
+    padding-left: rem(25);
     &:before {
         content:'';
         display: block;
         background: url(../img/theme/apthefin/ic_exc.png) no-repeat 0 0;
         background-size: cover;
-        height: 20px;
-        width: 16px;
+        height: rem(20);
+        width: rem(16);
         position: absolute;
         left: 0;
         top: 50%;
@@ -1478,33 +1478,33 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 
 
 .sub_detailList + .info-wrap, .asGroup + .info-wrap {
-    margin-top: 40px;
+    margin-top: rem(40);
 }
 
 .info-wrap > h3 {
-    margin-bottom: 15px;
-    font-size: 14px;
+    margin-bottom: rem(15);
+    font-size: rem(14);
     font-weight: 500;
 }
 
 .search-result-wrap {
-    margin: 30px -20px 0;
-    padding: 0 20px;
+    margin: rem(30) rem(-20) 0;
+    padding: 0 rem(20);
 }
 
 .noBorder-list .search-result-li {
     border-bottom: 0;
     label {
-        padding: 10px 0;
+        padding: rem(10) 0;
     }
 }
 
 .search-result-li {
-    border-bottom: 1px solid #E5E5E5;
+    border-bottom: rem(1) solid #E5E5E5;
 
     label {
         display: block;
-        padding: 20px 0;
+        padding: rem(20) 0;
     }
 
     input[type="radio"] {
@@ -1514,37 +1514,37 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 
     label h4 {
         color: #333;
-        font-size: 14px;
+        font-size: rem(14);
         line-height: 1.3;
-        margin-bottom: 10px;
+        margin-bottom: rem(10);
     }
 }
 
 .business-num span, .business-address span {
     color: #666;
-    font-size: 12px;
+    font-size: rem(12);
     line-height: 1.3;
 }
 
 .business-num + .business-address {
-    margin-top: 4px;
+    margin-top: rem(4);
 }
 
 .editName + .editName {
-    margin-top: 30px;
+    margin-top: rem(30);
 }
 
 .searching-loan {
     position: relative;
     width: 100%;
-    min-height: 316px;
-    margin-top: 80px;
+    min-height: rem(316);
+    margin-top: rem(80);
 }
 
 .circle-big {
     border-radius: 50%;
-    height: 316px;
-    width: 316px;
+    height: rem(316);
+    width: rem(316);
     background: #F8EAEE;
     position: absolute;
     left: 50%;
@@ -1552,14 +1552,14 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     transform: translate(-50%, -50%);
     animation: circleMove 1s alternate infinite both;
     transform-origin: 0 0;
-    border: 1px solid #EECAD3;
+    border: rem(1) solid #EECAD3;
 }
 
 .circle-mid {
     border-radius: 50%;
-    border: 1px solid #EECAD3;
-    height: 206px;
-    width: 206px;
+    border: rem(1) solid #EECAD3;
+    height: rem(206);
+    width: rem(206);
     background: #F4DBE1;
     position: absolute;
     left: 50%;
@@ -1571,9 +1571,9 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 
 .circle-small {
     border-radius: 50%;
-    border: 1px solid #EECAD3;
-    height: 80px;
-    width: 80px;
+    border: rem(1) solid #EECAD3;
+    height: rem(80);
+    width: rem(80);
     background-image: url(../img/theme/apthefin/icon_house2.png);
     background-repeat: no-repeat;
     background-position: center center;
@@ -1621,13 +1621,13 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 }
 
 .loan-list-li {
-    border-bottom: 1px solid #F1F2F5;
+    border-bottom: rem(1) solid #F1F2F5;
 }
 
 .loan-list-alink {
     display: flex;
     justify-content: flex-start;
-    padding: 20px 0;
+    padding: rem(20) 0;
 }
 
 .loan-list-bank {
@@ -1641,45 +1641,45 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 
 .loan-list-bank {
     > img {
-        width: 32px;
+        width: rem(32);
     }
 
     + .loan-list-cont {
-        margin-left: 12px;
+        margin-left: rem(12);
     }
 }
 
 .loan-list-title {
     color: #333;
-    font-size: 16px;
+    font-size: rem(16);
     font-weight: 800;
     line-height: 1.3;
 
     &.detail {
-        font-size: 22px;
+        font-size: rem(22);
         font-weight: 500;
     }
 }
 
 .lowest-rate-flag {
     background: #FFEDE8;
-    border-radius: 8px;
+    border-radius: rem(8);
     color: #B44011;
-    font-size: 11px;
+    font-size: rem(11);
     font-weight: 700;
-    padding: 2px 6px;
-    margin-left: 8px;
+    padding: rem(2) rem(6);
+    margin-left: rem(8);
 }
 
 .loan-list-desc {
     color: #999;
     display: block;
-    font-size: 13px;
+    font-size: rem(13);
     font-weight: 500;
     line-height: 1.3;
 
     &.detail {
-        font-size: 20px;
+        font-size: rem(20);
         color: #666;
     }
 }
@@ -1687,7 +1687,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 .loan-list-info-rate, .loan-list-info-money {
     color: #333;
     display: inline-block;
-    font-size: 20px;
+    font-size: rem(20);
     font-weight: 700;
     line-height: 1.3;
 }
@@ -1695,66 +1695,66 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 .detail {
     .loan-list-info-rate span, .loan-list-info-money span {
         color: #666;
-        font-size: 14px;
+        font-size: rem(14);
         font-weight: 500;
     }
 }
 
 .loan-list-info-rate + .loan-list-info-money {
-    margin-left: 60px;
+    margin-left: rem(60);
 }
 
 .loan-list-title + .loan-list-desc {
-    margin-top: 7px;
+    margin-top: rem(7);
 }
 
 .loan-list-desc + .loan-list-info {
-    margin-top: 12px;
+    margin-top: rem(12);
 }
 
 .vertical .loan-list-bank + .loan-list-cont {
-    margin-top: 10px;
+    margin-top: rem(10);
 }
 
 .unapproved .loan-list-li {
-    border: 1px solid #E5E5E5;
-    border-radius: 16px;
-    padding: 0 20px;
+    border: rem(1) solid #E5E5E5;
+    border-radius: rem(16);
+    padding: 0 rem(20);
 
     + .loan-list-li {
-        margin-top: 10px;
+        margin-top: rem(10);
     }
 }
 
 .layer_cont.hasFixBtn {
-    padding-bottom: 90px !important;
+    padding-bottom: rem(90) !important;
 }
 
 .storeInfo {
     background: url(../img/theme/apthefin/bg_store_info.png) no-repeat 100% 100%;
-    background-size: 115px 80px;
-    margin-top: 30px;
+    background-size: rem(115) rem(80);
+    margin-top: rem(30);
 }
-.smallTit + .banner { margin-top: -5px;}
+.smallTit + .banner { margin-top: rem(-5);}
 
 .card-list-alink {
     display: block;
     position: relative;
-    border-bottom: 1px solid #F1F2F5;
-    padding: 20px 0 20px 42px; 
+    border-bottom: rem(1) solid #F1F2F5;
+    padding: rem(20) 0 rem(20) rem(42);
     .card-list-title {
         color: #333;
-        font-size: 16px;
+        font-size: rem(16);
         font-weight: bold;
         display: block;
-        line-height: 24px;
+        line-height: rem(24);
     }
     .card-list-desc {
         color: #999;
-        font-size: 13px;
+        font-size: rem(13);
         font-weight: 400;
-        line-height: 18px;
-        margin-top: 4px;
+        line-height: rem(18);
+        margin-top: rem(4);
         display: block;
     }
     .card-list-img {
@@ -1774,13 +1774,13 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     left: 0;
     top: 0;
     width: 100%;
-    height: 50px;
+    height: rem(50);
     z-index: 9;
-    border-bottom: 1px solid #DDE3E7;
+    border-bottom: rem(1) solid #DDE3E7;
     background: #fff;
 
     ~ .container {
-        padding-top: 50px !important;
+        padding-top: rem(50) !important;
     }
 }
 

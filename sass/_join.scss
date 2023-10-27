@@ -1,34 +1,33 @@
 .introLogo {
     display: block;
-    margin: 0 auto;
+    margin: rem(30) auto 0;
     overflow: hidden;
-    text-indent: -999px;
-    background: url("../img/theme/apthefin/icon/ico_intro_tit.png") no-repeat 0 0;
+    text-indent: rem(-999);
+    background: url("../img/theme/apthefin/svg/ic_logo_txt.svg") no-repeat 0 0;
     background-size: cover;
-    width: 102px;
-    height: 25px;
+    width: rem(140);
+    height: rem(40);
     padding: 0;
-    margin-top:40px;
 }
 
 .introSub {
-    font-size: 20px;
+    font-size: rem(20);
     font-weight: 500;
-    line-height: 26px;
-    letter-spacing: -0.4px;
+    line-height: rem(26);
+    letter-spacing: rem(-0.4);
     color: #333;
-    margin-top: 30px;
+    margin-top: rem(30);
 }
 
 .introRequest {
-    margin-top: 20px;
+    margin-top: rem(20);
 
     li {
-        padding-left: 64px;
+        padding-left: rem(64);
         position: relative;
 
         &:not(:first-of-type) {
-            margin-top: 20px;
+            margin-top: rem(20);
         }
 
         &:before {
@@ -37,10 +36,10 @@
             background-position: 0 0;
             background-repeat: no-repeat;
             display: block;
-            width: 24px;
-            height: 24px;
+            width: rem(24);
+            height: rem(24);
             position: absolute;
-            left: 10px;
+            left: rem(10);
             top: 50%;
             transform: translateY(-50%);
         }
@@ -70,19 +69,19 @@
 .introRequest__tit {
     flex-shrink: 0;
     display: block;
-    font-size: 16px;
+    font-size: rem(16);
     font-weight: 700;
-    line-height: 24px;
+    line-height: rem(24);
     color: #333;
 }
 
 .introRequest__txt {
-    font-size: 13px;
+    font-size: rem(13);
     font-weight: 400;
-    line-height: 18px;
+    line-height: rem(18);
     color: #999;
     display: block;
-    margin-top: 2px;
+    margin-top: rem(2);
 }
 .input-box {
     .password-last-one input {
@@ -93,37 +92,37 @@
     justify-content: space-between;
     background: transparent;
     border: none;
-    padding-left:30px;
+    padding-left:rem(30);
     pointer-events: none;
 }
 
 .accSetting .editName .password-last-one input {
-    padding-left: 15px;
+    padding-left: rem(15);
 }
 
 .sampleMassage {
     display: block;
     vertical-align: top;
     width: 100%;
-    margin: 20px auto 0;
-    max-width: 320px;
+    margin: rem(20) auto 0;
+    max-width: rem(320);
 }
 
 .list li {
-    font-size: 13px;
+    font-size: rem(13);
     font-weight: 400;
-    line-height: 18px;
+    line-height: rem(18);
     color: #666;
 
     &:not(:first-of-type) {
-        margin-top: 8px;
+        margin-top: rem(8);
     }
 }
 
 .txt-font15 {
-    font-size: 15px;
+    font-size: rem(15);
     font-weight: 500;
-    line-height: 22px;
+    line-height: rem(22);
     color: #333;
 }
 
@@ -132,7 +131,7 @@
 .agChkLst.no-border {
     padding: 0;
     border: none;
-    margin: 10px 0 0 0;
+    margin: rem(10) 0 0 0;
 
     .agChkSubList {
         border-top: none;
@@ -141,47 +140,47 @@
 }
 
 .no-border .agChkItem.all label {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 19px;
+    border-bottom: rem(1) solid #eee;
+    padding-bottom: rem(19);
 }
 
 .agChkItem.underLine {
-    padding-bottom: 19px;
-    border-bottom: 1px solid #eee;
-    margin-bottom: 15px;
+    padding-bottom: rem(19);
+    border-bottom: rem(1) solid #eee;
+    margin-bottom: rem(15);
 }
 
 .btn-wrap.vertical a.btnBl6 + a {
-    margin-top: 10px;
+    margin-top: rem(10);
 }
 
 .joinComplete-tit {
-    font-size: 30px;
+    font-size: rem(30);
     font-weight: 700;
-    line-height: 36px;
-    letter-spacing: -0.6px;
+    line-height: rem(36);
+    letter-spacing: rem(-0.6);
     color: #333;
     text-align: center;
     display: block;
-    margin: 40px auto 0;
+    margin: rem(40) auto 0;
 
 }
 
 .joinComplete-dec {
-    font-size: 14px;
+    font-size: rem(14);
     font-weight: 400;
-    line-height: 22px;
+    line-height: rem(22);
     color: #666;
     text-align: center;
-    margin-top: 8px;
+    margin-top: rem(8);
 }
 
 .joinComplete-img {
     background: url("../img/theme/apthefin/img_join_welcome.png") no-repeat 0 0;
     background-size: cover;
-    width: 280px;
-    height: 280px;
-    margin: 20px auto 0;
+    width: rem(280);
+    height: rem(280);
+    margin: rem(20) auto 0;
 }
 
 .asGroup.editList2.sortListBox {
@@ -192,11 +191,11 @@
     .password-disc-wrap {pointer-events: none}
 }
 .input-box input.ipt-typeB {
-    padding:13px 45px 13px 0;
-    height:50px;
+    padding:rem(13) rem(45) rem(13) 0;
+    height:rem(50);
 }
 .input-box input.ipt-typeB+.ipt-time-limit {
-    bottom:13px;
-    font-size:14px;
-    line-height:24px;
+    bottom:rem(13);
+    font-size:rem(14);
+    line-height:rem(24);
 }

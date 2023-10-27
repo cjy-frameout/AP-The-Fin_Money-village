@@ -3,24 +3,24 @@
 .bbsList {
   .accBox {
     &:not(:first-of-type) {
-      margin-top:20px;
+      margin-top:rem(20);
     }
     &-date {
       display:block;
-      font-size:13px;
+      font-size:rem(13);
       font-weight:400;
-      line-height:18px;
+      line-height:rem(18);
       color:#999;
-      margin-bottom:4px;
+      margin-bottom:rem(4);
     }
     &-tit {
-      font-size:16px;
+      font-size:rem(16);
     }
     &-inner {
-      font-size:13px;
-      line-height:18px;
+      font-size:rem(13);
+      line-height:rem(18);
       color:#666;
-      img {max-width:100%;margin:20px 0;}
+      img {max-width:100%;margin:rem(20) 0;}
     }
   }
 }

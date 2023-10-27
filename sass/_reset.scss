@@ -29,7 +29,7 @@ body {
     -webkit-overflow-scrolling: touch;
     -webkit-text-size-adjust: 100%;
     width: 100%;
-    font-size: 12px;
+    font-size: rem(12);
     color: #000;
     -webkit-overflow-scrolling: touch;
     -webkit-text-size-adjust: 100%;
@@ -57,10 +57,10 @@ fieldset {
 
 legend, caption {
     overflow: hidden;
-    width: 1px;
-    height: 1px;
+    width: rem(1);
+    height: rem(1);
     padding: 0;
-    margin: -1px;
+    margin: rem(-1);
     border: 0;
     clip: rect(0, 0, 0, 0);
 }
@@ -137,11 +137,11 @@ h1, h2, h3, h4, h5 {
         content: '';
         display: inline-flex;
         position: relative;
-        width: 1px;
-        height: 8px;
-        margin-top: 0px;
-        margin-right: 2px;
-        margin-left: 3px;
+        width: rem(1);
+        height: rem(8);
+        margin-top: rem(0);
+        margin-right: rem(2);
+        margin-left: rem(3);
         background-color: #aaa;
     }
 }
@@ -176,7 +176,7 @@ a {
 
 /* etc */
 /* 포커스라인 테스트 */
-/* *:focus{outline:2px dashed green !important;padding:1px;z-index:100000;} */
+/* *:focus{outline:rem(2) dashed green !important;padding:rem(1);z-index:100000;} */
 
 *:focus {
     outline: none;
@@ -198,9 +198,9 @@ a, button {
 .blind {
     position: absolute;
     overflow: hidden;
-    width: 1px !important;
-    height: 1px !important;
-    margin: -1px !important;
+    width: rem(1) !important;
+    height: rem(1) !important;
+    margin: rem(-1) !important;
     padding: 0 !important;
     border: 0 !important;
     clip: rect(0, 0, 0, 0);
@@ -220,8 +220,8 @@ a, button {
 
 .skip {
     position: absolute;
-    top: -100000px;
-    left: -100000px;
+    top: rem(-100000);
+    left: rem(-100000);
     visibility: hidden;
     overflow: hidden;
 }
@@ -240,8 +240,8 @@ a, button {
 }
 
 .box_white {
-    border: 1px solid #ddd;
-    border-radius: 6px;
+    border: rem(1) solid #ddd;
+    border-radius: rem(6);
 }
 
 .wRatio_3_7 > * {
@@ -269,31 +269,31 @@ a, button {
 }
 
 .fsz_16 {
-    font-size: 16px;
+    font-size: rem(16);
 }
 
 .fsz_17 {
-    font-size: 17px;
+    font-size: rem(17);
 }
 
 .tx {
     &.xg {
-        font-size: 21px;
+        font-size: rem(21);
         color: #000;
     }
 
     &.lg {
-        font-size: 17px;
+        font-size: rem(17);
         color: #000;
     }
 
     &.md {
-        font-size: 15px;
+        font-size: rem(15);
         color: #000;
     }
 
     &.sm {
-        font-size: 13px;
+        font-size: rem(13);
         color: #666;
     }
 }
@@ -319,80 +319,80 @@ a, button {
 /* margin */
 
 .mgt0 {
-    margin-top: 0px !important;
+    margin-top: rem(0) !important;
 }
 .mgt5 {
-    margin-top: 5px !important;
+    margin-top: rem(5) !important;
 }
 .mgt10 {
-    margin-top: 10px !important;
+    margin-top: rem(10) !important;
 }
 
 .mgt15 {
-    margin-top: 15px !important;
+    margin-top: rem(15) !important;
 }
 
 .mgt20 {
-    margin-top: 20px !important;
+    margin-top: rem(20) !important;
 }
 
 .mgt24 {
-    margin-top: 24px !important;
+    margin-top: rem(24) !important;
 }
 
 .mgt25 {
-    margin-top: 25px !important;
+    margin-top: rem(25) !important;
 }
 
 .mgt30 {
-    margin-top: 30px !important;
+    margin-top: rem(30) !important;
 }
 .mgt40 {
-    margin-top: 40px !important;
+    margin-top: rem(40) !important;
 }
 
 .mgt50 {
-    margin-top: 50px !important;
+    margin-top: rem(50) !important;
 }
 
 .mgt60 {
-    margin-top: 60px !important;
+    margin-top: rem(60) !important;
 }
 
 .mgb0 {
-    margin-bottom: 0px !important;
+    margin-bottom: rem(0) !important;
 }
 
 .mgb5 {
-    margin-bottom: 5px !important;
+    margin-bottom: rem(5) !important;
 }
 
 .mgb10 {
-    margin-bottom: 10px !important;
+    margin-bottom: rem(10) !important;
 }
 
 .mgb20 {
-    margin-bottom: 20px !important;
+    margin-bottom: rem(20) !important;
 }
 
 .mgb30 {
-    margin-bottom: 30px !important;
+    margin-bottom: rem(30) !important;
 }
 
 .mgl2 {
-    margin-left: 2px !important;
+    margin-left: rem(2) !important;
 }
 
 .mgl4 {
-    margin-left: 4px !important;
+    margin-left: rem(4) !important;
 }
 
 .mgl5 {
-    margin-left: 5px !important;
+    margin-left: rem(5) !important;
 }
 
 .mgl10 {
-    margin-left: 10px !important;
+    margin-left: rem(10) !important;
 }
 
 /* padding */
@@ -402,11 +402,11 @@ a, button {
 }
 
 .pdb30 {
-    padding-bottom: 30px !important;
+    padding-bottom: rem(30) !important;
 }
 
 .pdb200 {
-    padding-bottom: 200px !important;
+    padding-bottom: rem(200) !important;
 }
 
 /* IE10 input type auto x delete */
@@ -423,8 +423,8 @@ input {
 
 input {
     &[type="text"] {
-        padding-right: 10px;
-        padding-left: 10px;
+        padding-right: rem(10);
+        padding-left: rem(10);
     }
 
     &:focus {
@@ -467,8 +467,8 @@ input {
 
 .nav .menu .menu_inn {
     display: flex;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    border-top: rem(1) solid #ddd;
+    border-bottom: rem(1) solid #ddd;
     background-color: #fafafa;
 
     .item {
@@ -479,23 +479,23 @@ input {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 45px;
+            height: rem(45);
 
             .tx {
                 display: block;
                 position: relative;
-                padding-left: 26px;
+                padding-left: rem(26);
 
                 &:before {
                     content: '';
                     position: absolute;
                     left: 0;
                     top: 50%;
-                    margin-top: -9px;
-                    width: 18px;
-                    height: 18px;
+                    margin-top: rem(-9);
+                    width: rem(18);
+                    height: rem(18);
                     background-repeat: no-repeat;
-                    background-size: 18px 18px;
+                    background-size: rem(18) rem(18);
                 }
             }
         }
@@ -513,7 +513,7 @@ input {
         }
 
         .link .tx {
-            font-size: 9px;
+            font-size: rem(9);
         }
 
         &.on {
@@ -521,9 +521,9 @@ input {
                 content: '';
                 position: absolute;
                 left: 0;
-                bottom: -1px;
+                bottom: rem(-1);
                 width: 100%;
-                height: 2px;
+                height: rem(2);
                 background-color: #666;
             }
 
@@ -531,9 +531,9 @@ input {
                 content: '선택됨';
                 overflow: hidden;
                 position: absolute;
-                width: 1px;
-                height: 1px;
-                margin: -1px 0 0 -1px;
+                width: rem(1);
+                height: rem(1);
+                margin: rem(-1) 0 0 rem(-1);
                 padding: 0;
                 border: 0;
                 clip: rect(0, 0, 0, 0);
@@ -553,7 +553,7 @@ input {
         align-items: center;
         position: relative;
         width: 100%;
-        height: 55px;
+        height: rem(55);
     }
 
     &.main .header_inn {
@@ -562,24 +562,24 @@ input {
 
     .logo h1 {
         padding: 0;
-        font-size: 19px;
+        font-size: rem(19);
         color: #000;
-        line-height: 30px;
+        line-height: rem(30);
 
         > strong {
             padding: 0;
-            font-size: 20px;
+            font-size: rem(20);
             color: #000;
-            line-height: 30px;
+            line-height: rem(30);
         }
     }
 
     .left {
         position: absolute;
-        top: 0px;
+        top: rem(0);
         left: 0;
-        height: 55px;
-        padding: 0 0 0 20px;
+        height: rem(55);
+        padding: 0 0 0 rem(20);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -588,20 +588,20 @@ input {
 
     .right {
         position: absolute;
-        top: 0px;
-        right: 0px;
-        height: 55px;
-        padding: 0 20px 0 0;
+        top: rem(0);
+        right: rem(0);
+        height: rem(55);
+        padding: 0 rem(20) 0 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 14px;
+        font-size: rem(14);
         z-index: 2;
     }
 
     .center {
         position: relative;
-        width: calc(100% - 106px);
+        width: calc(100% - rem(106));
         z-index: 1;
 
         .tit_h2 {
@@ -609,7 +609,7 @@ input {
             position: relative;
             margin: 0;
             padding: 0;
-            font-size: 17px;
+            font-size: rem(17);
             color: #000;
             text-align: center;
             max-width: 100%;
@@ -623,19 +623,19 @@ input {
         position: absolute;
         right: 0;
         top: 0;
-        width: 60px;
-        height: 55px;
+        width: rem(60);
+        height: rem(55);
 
         &:before {
             content: '';
             position: absolute;
             left: 50%;
             top: 50%;
-            width: 17px;
-            height: 17px;
-            margin: -8px 0 0 -8px;
+            width: rem(17);
+            height: rem(17);
+            margin: rem(-8) 0 0 rem(-8);
             background: url('../img/bt/bt_close_lg.png') 0 0 no-repeat;
-            background-size: 17px auto;
+            background-size: rem(17) auto;
         }
     }
 
@@ -646,9 +646,9 @@ input {
 }
 
 .tit_h3 {
-    font-size:16px;
+    font-size:rem(16);
     font-weight:700;
-    line-height:24px;
+    line-height:rem(24);
     color:#333;
 }
 
@@ -656,9 +656,9 @@ input {
 /* .container{z-index:1000;background-color:#fff;} */
 
 .content {
-    padding: 0px 20px 20px;
+    padding:rem(0) rem(20) rem(20);
     &.noHeader {
-        padding-top: 60px;
+        padding-top: rem(60);
     }
 }
 
@@ -682,10 +682,10 @@ input {
     }
 }
 
-/* bottom:-57px */
+/* bottom:rem(-57) */
 
 .content .btn_wrap {
-    padding: 30px 0;
+    padding: rem(30) 0;
     background-color: #fff;
 
     &:after {
@@ -697,19 +697,19 @@ input {
 
 .fix_bottom {
     .btn_wrap {
-        padding: 20px;
+        padding: rem(20);
 
         &.fixBtnWrapPd {
-            padding: 20px 0;
+            padding: rem(20) 0;
         }
     }
 
     .btn_agree_cancel {
-        height: 55px;
-        padding: 0 0 35px;
+        height: rem(55);
+        padding: 0 0 rem(35);
 
         .btnUnder {
-            margin: 0px;
+            margin: rem(0);
         }
 
         + .btn_step {
@@ -722,7 +722,7 @@ input {
     background: transparent;
     bottom: 0;
     color: var(--text-color);
-    height: 72px;
+    height: rem(72);
     left: 0;
     position: fixed;
     width: 100%;
@@ -734,28 +734,28 @@ input {
     &:before {
         content: '';
         background: #fff;
-        border: 1px solid #eee;
+        border: rem(1) solid #eee;
         border-bottom: none;
-        border-top-right-radius: 16px;
+        border-top-right-radius: rem(16);
         display: block;
-        height: 72px;
+        height: rem(72);
         width: 50%;
         position: absolute;
-        left: -20px;
+        left: rem(-20);
         top: 0;
     }
 
     &:after {
         content: '';
         background: #fff;
-        border: 1px solid #eee;
+        border: rem(1) solid #eee;
         border-bottom: none;
-        border-top-left-radius: 16px;
+        border-top-left-radius: rem(16);
         display: block;
-        height: 72px;
+        height: rem(72);
         width: 50%;
         position: absolute;
-        right: -20px;
+        right: rem(-20);
         top: 0;
         z-index: -1;
     }
@@ -765,16 +765,16 @@ input {
         border: none;
         background: none;
         cursor: pointer;
-        padding-top: 26px;
+        padding-top: rem(26);
         position: relative;
-        min-width: 24px;
+        min-width: rem(24);
 
         &:before {
             content: '';
             background-size: 100%;
             display: block;
-            height: 24px;
-            width: 24px;
+            height: rem(24);
+            width: rem(24);
             position: absolute;
             top: 0;
             left: 50%;
@@ -792,10 +792,10 @@ input {
 }
 
 .f-3:before {
-    background: url(../img/theme/apthefin/icon_feed.png) no-repeat 2px 0;
-    height: 68px !important;
-    width: 70px !important;
-    top: -25px !important;
+    background: url(../img/theme/apthefin/icon_feed.png) no-repeat rem(2) 0;
+    height: rem(68) !important;
+    width: rem(70) !important;
+    top: rem(-25) !important;
     z-index: 999;
 }
 
@@ -813,38 +813,38 @@ input {
     left: 50%;
     transform: translateX(-50%);
     bottom: 0;
-    height: 45px;
-    width: 50px;
+    height: rem(45);
+    width: rem(50);
 }
 
 /* 추가 [이은숙#2022.04.26] */
 
 .fix_bottom .btn_wrap.type1 {
-    padding: 46px 20px 20px 20px;
+    padding: rem(46) rem(20) rem(20) rem(20);
 }
 
 .asGroup + .btn_wrap {
     padding-top: 0;
-    padding-bottom: 30px;
+    padding-bottom: rem(30);
 }
 
 .content > .btn_wrap:last-of-type {
-    padding-bottom: 20px;
+    padding-bottom: rem(20);
 }
 
 /* dock bar */
 
 .dock_bar {
     width: 100%;
-    height: 57px;
+    height: rem(57);
     background-color: #fff;
     z-index: 1;
-    border-top: 1px solid #ddd;
+    border-top: rem(1) solid #ddd;
 
     ul {
         display: flex;
         width: 100%;
-        height: 57px;
+        height: rem(57);
 
         li {
             position: relative;
@@ -860,19 +860,19 @@ input {
     .btn {
         display: block;
         width: 100%;
-        height: 57px;
+        height: rem(57);
         position: relative;
-        background-position: center 10px;
+        background-position: center rem(10);
         background-repeat: no-repeat;
-        background-size: 22px 22px;
+        background-size: rem(22) rem(22);
 
         &.dock_brand img {
             position: absolute;
             left: 50%;
-            top: 10px;
-            width: 22px;
-            height: 22px;
-            margin-left: -11px;
+            top: rem(10);
+            width: rem(22);
+            height: rem(22);
+            margin-left: rem(-11);
         }
 
         &.dock_home {
@@ -893,20 +893,20 @@ input {
 
         .tx {
             display: inline-block;
-            padding-top: 36px;
-            font-size: 10px;
+            padding-top: rem(36);
+            font-size: rem(10);
             color: #000;
         }
     }
     &.mainFeed {
         border:none;
-        .btn {height:50px}
+        .btn {height:rem(50)}
         ul {
             background:#fff;
             position: relative;
-            background-size:100% 50px;
-            height:40px;
-            top:5px;
+            background-size:100% rem(50);
+            height:rem(40);
+            top:rem(5);
             z-index:10;
         }
         &:before {
@@ -914,12 +914,12 @@ input {
             display:block;
             position: absolute;
             left:0;
-            top:-5px;
-            width:calc(50% - 24px);
-            border-radius: 0 20px 0 0;
-            height:26px;
+            top:rem(-5);
+            width:calc(50% - rem(24));
+            border-radius: 0 rem(20) 0 0;
+            height:rem(26);
             pointer-events: none;
-            box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.20);
+            box-shadow: rem(3) rem(3) rem(20) rgba(0, 0, 0, 0.20);
             background-color:#fff;
         }
         &:after {
@@ -927,30 +927,30 @@ input {
             display:block;
             position: absolute;
             right:0;
-            top:-5px;
-            width:calc(50% - 24px);
-            border-radius: 20px 0 0 0;
-            height:26px;
+            top:rem(-5);
+            width:calc(50% - rem(24));
+            border-radius: rem(20) 0 0 0;
+            height:rem(26);
             pointer-events: none;
-            box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.20);
+            box-shadow: rem(3) rem(3) rem(20) rgba(0, 0, 0, 0.20);
             background-color:#fff;
         }
         .dock_main {
-            bottom:9px;
+            bottom:rem(9);
             a {
-                width:60px;
-                height:56px;
-                border-radius: 26px;
+                width:rem(60);
+                height:rem(56);
+                border-radius: rem(26);
                 justify-content: center;
                 align-items: center;
-                background:#747687 url('../img/theme/apthefin/ic_dock_main_feed.png') no-repeat center 10px;
-                background-size:24px 24px;
+                background:#747687 url('../img/theme/apthefin/ic_dock_main_feed.png') no-repeat center rem(10);
+                background-size:rem(24) rem(24);
                 &.on {
                     background-color:#1C64F2;
-                    box-shadow:2px 8px 10px 0px rgba(105, 105, 105, 0.30);
+                    box-shadow:rem(2) rem(8) rem(10) rem(0) rgba(105, 105, 105, 0.30);
                 }
             }
-            .tx {color:#fff;padding-top:34px}
+            .tx {color:#fff;padding-top:rem(34)}
 
         }
     }
@@ -975,7 +975,7 @@ i {font-style: normal}
 /* button */
 
 .btnGroup {
-    margin: 0 -5px;
+    margin: 0 rem(-5);
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -988,7 +988,7 @@ i {font-style: normal}
     > {
         p, div {
             position: relative;
-            padding: 0 5px 0px;
+            padding: 0 rem(5) rem(0);
             flex: 1;
         }
 
@@ -1001,45 +1001,45 @@ i {font-style: normal}
             width: 100%;
 
             ~ p {
-                margin-top: 10px;
+                margin-top: rem(10);
             }
         }
     }
 
     + .btnGroup {
-        margin-top: 20px;
+        margin-top: rem(20);
     }
 
     .tooltip {
         display: none;
         position: absolute;
-        left: 5px;
-        bottom: 55px;
+        left: rem(5);
+        bottom: rem(55);
         z-index: 10;
-        min-width: 124px;
-        padding: 11px 15px;
+        min-width: rem(124);
+        padding: rem(11) rem(15);
         color: #666;
-        font-size: 12px;
-        line-height: 18px;
+        font-size: rem(12);
+        line-height: rem(18);
         background-color: #F7F7F7;
-        border: 1px solid #ddd;
-        border-radius: 8px;
+        border: rem(1) solid #ddd;
+        border-radius: rem(8);
 
         &.top:after {
             content: '';
             display: inline-block;
             position: absolute;
-            left: 10px;
-            bottom: -8px;
-            width: 10px;
-            height: 10px;
+            left: rem(10);
+            bottom: rem(-8);
+            width: rem(10);
+            height: rem(10);
             background: url('../img/ic/ic_tooltip.png') no-repeat;
-            background-size: 10px auto;
+            background-size: rem(10) auto;
         }
 
         p {
-            font-size: 12px;
-            line-height: 18px;
+            font-size: rem(12);
+            line-height: rem(18);
         }
     }
     &.type2 {
@@ -1053,32 +1053,32 @@ i {font-style: normal}
 .btnBack {
     position: relative;
     display: inline-block;
-    width: 26px;
-    height: 26px;
-    margin: 0px 0 0;
+    width: rem(26);
+    height: rem(26);
+    margin: rem(0) 0 0;
     background-image: url('../img/bt/bt_back.png');
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-size: 26px auto;
+    background-size: rem(26) auto;
 }
 
 .btnSet {
     position: relative;
     display: inline-block;
-    width: 30px;
-    height: 26px;
+    width: rem(30);
+    height: rem(26);
     background-image: url('../img/bt/bt_set.png');
     background-repeat: no-repeat;
     background-position: 100% 0;
-    background-size: 26px 26px;
+    background-size: rem(26) rem(26);
 
     .icNew {
         position: absolute;
         top: 0;
         left: 0;
         display: inline-block;
-        width: 5px;
-        height: 5px;
+        width: rem(5);
+        height: rem(5);
         border-radius: 50%;
         background-color: #fd6341;
     }
@@ -1090,24 +1090,24 @@ a {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 45px;
+        height: rem(45);
         padding: 0;
-        font-size: 15px;
-        border-radius: 6px;
+        font-size: rem(15);
+        border-radius: rem(6);
 
         &.disable {
             color: #777;
             background-color: #f2f2f2;
-            border: 1px solid #ddd;
+            border: rem(1) solid #ddd;
         }
 
         i.more {
             display: inline-block;
-            width: 16px;
-            height: 16px;
-            margin-right: 7px;
+            width: rem(16);
+            height: rem(16);
+            margin-right: rem(7);
             background: url('../img/theme/apthefin/icon/ic_scroll_more.png') no-repeat 0 0;
-            background-size: 16px;
+            background-size: rem(16);
         }
     }
 
@@ -1116,11 +1116,11 @@ a {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 45px;
+        height: rem(45);
         padding: 0;
-        font-size: 15px;
+        font-size: rem(15);
         background-color: transparent;
-        border-radius: 6px;
+        border-radius: rem(6);
 
         &:after {
             content: '';
@@ -1131,15 +1131,15 @@ a {
             height: 100%;
             background-size: cover;
             opacity: .08;
-            border-radius: 6px;
+            border-radius: rem(6);
         }
 
         &.sm {
             width: inherit;
-            height: 30px;
-            padding: 0 10px;
-            line-height: 30px;
-            font-size: 14px;
+            height: rem(30);
+            padding: 0 rem(10);
+            line-height: rem(30);
+            font-size: rem(14);
         }
     }
 
@@ -1148,20 +1148,20 @@ a {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 45px;
+        height: rem(45);
         padding: 0;
-        font-size: 15px;
-        border-radius: 6px;
+        font-size: rem(15);
+        border-radius: rem(6);
         background: #666;
         color: #fff;
 
         &.sm {
             display: inline-block;
             width: inherit;
-            height: 30px;
-            padding: 0 10px;
-            line-height: 31px;
-            font-size: 14px;
+            height: rem(30);
+            padding: 0 rem(10);
+            line-height: rem(31);
+            font-size: rem(14);
         }
     }
 
@@ -1170,10 +1170,10 @@ a {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 45px;
+        height: rem(45);
         padding: 0;
-        font-size: 15px;
-        border-radius: 6px;
+        font-size: rem(15);
+        border-radius: rem(6);
         background: #f2f2f2;
         color: #000;
     }
@@ -1183,40 +1183,40 @@ a {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 45px;
+        height: rem(45);
         padding: 0;
-        font-size: 15px;
-        border-radius: 6px;
+        font-size: rem(15);
+        border-radius: rem(6);
         background: #fff;
         color: #000;
-        border: 1px solid #ddd;
+        border: rem(1) solid #ddd;
 
         i {
             &.naver {
                 display: inline-block;
-                width: 24px;
-                height: 24px;
-                margin-right: 12px;
+                width: rem(24);
+                height: rem(24);
+                margin-right: rem(12);
                 background: url('../img/bt/logo_naver.png') no-repeat 50% 50%;
-                background-size: 24px;
+                background-size: rem(24);
             }
 
             &.finance {
                 display: inline-block;
-                width: 24px;
-                height: 24px;
-                margin-right: 12px;
+                width: rem(24);
+                height: rem(24);
+                margin-right: rem(12);
                 background: url('../img/bt/logo_finance.png') no-repeat 50% 50%;
-                background-size: 24px;
+                background-size: rem(24);
             }
 
             &.certificate {
                 display: inline-block;
-                width: 24px;
-                height: 24px;
-                margin-right: 12px;
+                width: rem(24);
+                height: rem(24);
+                margin-right: rem(12);
                 background: url('../img/bt/ic_certificate.png') no-repeat 50% 50%;
-                background-size: 24px;
+                background-size: rem(24);
             }
         }
     }
@@ -1225,10 +1225,10 @@ a {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 45px;
+        height: rem(45);
         padding: 0;
-        font-size: 15px;
-        border-radius: 6px;
+        font-size: rem(15);
+        border-radius: rem(6);
         background: #f2f2f2;
         color: #000;
     }
@@ -1237,19 +1237,19 @@ a {
 /* 확장형 버튼 */
 
 .btnGroup a.wide {
-    height: 55px;
-    margin: -20px;
+    height: rem(55);
+    margin: rem(-20);
     border-radius: 0;
 }
 
 .btnRef {
     display: inline-block;
-    width: 26px;
-    height: 26px;
+    width: rem(26);
+    height: rem(26);
     background-image: url('../img/bt/bt_refresh2.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: 26px 26px;
+    background-size: rem(26) rem(26);
     overflow: hidden;
 
     &.ing {
@@ -1274,16 +1274,16 @@ a {
 
 .btn_more_ask {
     position: relative;
-    margin-left: 8px;
+    margin-left: rem(8);
 
     .ico_ask {
         vertical-align: middle;
         display: inline-block;
-        width: 16px;
-        height: 16px;
-        margin-top: -4px;
+        width: rem(16);
+        height: rem(16);
+        margin-top: rem(-4);
         background-image: url('../img/ic/ic_ask.png');
-        background-size: 16px 16px;
+        background-size: rem(16) rem(16);
 
         &.type_gray {
             background-image: url('../img/ic/ic_ask_gray.png');
@@ -1295,23 +1295,23 @@ a {
     position: absolute;
     right: 0;
     top: 50%;
-    width: 16px;
-    height: 16px;
-    margin-top: -6px;
+    width: rem(16);
+    height: rem(16);
+    margin-top: rem(-6);
     margin-left: 0;
 }
 
 .btnUnder {
     display: inline-block;
-    margin-top: 8px;
-    font-size: 12px;
-    line-height: 14px;
-    height: 18px;
+    margin-top: rem(8);
+    font-size: rem(12);
+    line-height: rem(14);
+    height: rem(18);
     color: #000 !important;
-    border-bottom: 1px solid #aaa;
+    border-bottom: rem(1) solid #aaa;
 
     + .btnUnder {
-        margin-left: 18px;
+        margin-left: rem(18);
     }
 }
 
@@ -1320,14 +1320,14 @@ a {
 .btn_switch {
     position: relative;
     display: inline-block;
-    width: 50px;
-    height: 25px;
+    width: rem(50);
+    height: rem(25);
 
     input {
         position: absolute;
-        width: 50px;
-        height: 25px;
-        margin: 0px;
+        width: rem(50);
+        height: rem(25);
+        margin: rem(0);
         padding: 0;
         border: 0;
         -webkit-appearance: none;
@@ -1344,15 +1344,15 @@ a {
         background-color: #808080;
         -webkit-transition: .3s;
         transition: .3s;
-        border-radius: 12px;
+        border-radius: rem(12);
 
         &:before {
             position: absolute;
             content: "";
-            width: 21px;
-            height: 21px;
-            left: 3px;
-            bottom: 2px;
+            width: rem(21);
+            height: rem(21);
+            left: rem(3);
+            bottom: rem(2);
             background-color: white;
             -webkit-transition: .3s;
             transition: .3s;
@@ -1361,9 +1361,9 @@ a {
     }
 
     input:checked + .round:before {
-        -webkit-transform: translateX(24px);
-        -ms-transform: translateX(24px);
-        transform: translateX(24px);
+        -webkit-transform: translateX(rem(24));
+        -ms-transform: translateX(rem(24));
+        transform: translateX(rem(24));
     }
 
     .round:before {
@@ -1385,24 +1385,24 @@ a {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 82px;
-    padding-top: 40px;
-    font-size: 12px;
+    height: rem(82);
+    padding-top: rem(40);
+    font-size: rem(12);
     color: #666;
     background-color: #e8e8e8;
-    border-radius: 6px;
+    border-radius: rem(6);
 
     &:before {
         content: '';
         position: absolute;
         left: 50%;
         top: 0;
-        width: 32px;
-        height: 32px;
-        margin: 15px 0 0 -16px;
+        width: rem(32);
+        height: rem(32);
+        margin: rem(15) 0 0 rem(-16);
         background-position: 0 0;
         background-repeat: no-repeat;
-        background-size: 32px auto;
+        background-size: rem(32) auto;
     }
 
     &.asset:before {
@@ -1436,8 +1436,8 @@ a {
         position: absolute;
         top: 0;
         left: 0;
-        width: 18px;
-        height: 18px;
+        width: rem(18);
+        height: rem(18);
         border: none;
         box-shadow: none;
         -webkit-appearance: none;
@@ -1448,9 +1448,9 @@ a {
 
         + i {
             position: relative;
-            width: 18px;
-            height: 18px;
-            border: 1px solid #666;
+            width: rem(18);
+            height: rem(18);
+            border: rem(1) solid #666;
             border-radius: 50%;
         }
 
@@ -1462,9 +1462,9 @@ a {
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                width: 10px;
-                height: 10px;
-                margin: -5px 0 0 -5px;
+                width: rem(10);
+                height: rem(10);
+                margin: rem(-5) 0 0 rem(-5);
                 background-color: #000;
                 border-radius: 50%;
             }
@@ -1472,9 +1472,9 @@ a {
     }
 
     .label_rdo_cir .tx {
-        margin-left: 10px;
-        font-size: 14px;
-        line-height: 15px;
+        margin-left: rem(10);
+        font-size: rem(14);
+        line-height: rem(15);
     }
 }
 
@@ -1482,20 +1482,20 @@ a {
 
 .tit2_wrap {
     position: relative;
-    min-height: 54px;
-    margin: 20px 0 0px;
+    min-height: rem(54);
+    margin: rem(20) 0 rem(0);
 
     .tit_h2 {
         margin: 0;
         padding: 0;
-        font-size: 21px;
-        line-height: 28px;
+        font-size: rem(21);
+        line-height: rem(28);
     }
 
     .tx {
-        margin-top: 10px;
-        font-size: 14px;
-        line-height: 20px;
+        margin-top: rem(10);
+        font-size: rem(14);
+        line-height: rem(20);
         color: #666;
 
         &.err {
@@ -1504,40 +1504,40 @@ a {
 
         &:before {
             content: '';
-            width: 12px;
-            height: 12px;
+            width: rem(12);
+            height: rem(12);
         }
 
         &.err:before {
             display: inline-block;
-            margin-right: 4px;
+            margin-right: rem(4);
             background: url('../img/ic/ic_err.png') no-repeat 50% 50%;
-            background-size: 12px auto;
+            background-size: rem(12) auto;
         }
 
         &.expire:before {
             display: inline-block;
-            margin-right: 4px;
+            margin-right: rem(4);
             background: url('../img/ic/ic_expire.png') no-repeat 50% 50%;
-            background-size: 12px auto;
+            background-size: rem(12) auto;
         }
 
         &.inspection:before {
             display: inline-block;
-            width: 14px;
-            height: 14px;
-            margin: -2px 4px 0 0;
+            width: rem(14);
+            height: rem(14);
+            margin: rem(-2) rem(4) 0 0;
             background: url('../img/ic/ic_inspection.png') no-repeat 50% 50%;
-            background-size: 14px auto;
+            background-size: rem(14) auto;
             vertical-align: middle;
         }
 
         &.link {
-            margin-bottom: -31px;
+            margin-bottom: rem(-31);
 
             a {
                 display: inline-block;
-                border-bottom: 1px solid #666;
+                border-bottom: rem(1) solid #666;
                 color: #666;
             }
         }
@@ -1551,53 +1551,53 @@ a {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    margin: 70px 0;
-    font-size: 15px;
+    margin: rem(70) 0;
+    font-size: rem(15);
     font-weight: 400;
     color: #666;
 }
 
 .prd_list_certi .msgResult {
     margin: 0;
-    padding: 28px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: rem(28) 0;
+    border: rem(1) solid #ddd;
+    border-radius: rem(5);
 }
 
 .wrap_assets .msgResult {
-    margin: 20px 0;
+    margin: rem(20) 0;
 }
 
 .cal_info .msgResult {
     margin: 0;
-    padding: 45px 0 40px;
+    padding: rem(45) 0 rem(40);
 }
 
 .chart_info .bd_box .msgResult {
-    margin: 50px 0;
+    margin: rem(50) 0;
 }
 
 .tit2_wrap {
     .tit_h2 .ck_num {
         line-height: 1;
         display: inline-block;
-        font-size: 22px;
+        font-size: rem(22);
     }
 
     .btnRef {
         position: absolute;
-        right: 0px;
+        right: rem(0);
         top: 0;
     }
 
     .sub_tit {
-        font-size: 17px;
-        line-height: 24px;
-        margin-top: 30px;
+        font-size: rem(17);
+        line-height: rem(24);
+        margin-top: rem(30);
     }
 
     .tit_h2 + .sub_tit {
-        margin-top: 15px;
+        margin-top: rem(15);
     }
 }
 
@@ -1610,22 +1610,22 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 19px;
-        line-height: 21px;
-        padding: 0 8px;
-        font-size: 10px;
+        height: rem(19);
+        line-height: rem(21);
+        padding: 0 rem(8);
+        font-size: rem(10);
         color: #333;
-        border: 1px solid;
-        border-radius: 20px;
+        border: rem(1) solid;
+        border-radius: rem(20);
         word-break: keep-all;
     }
 
     &.square .txt {
-        min-width: 44px;
-        height: 21px;
-        line-height: 23px;
-        font-size: 10px;
-        border-radius: 6px;
+        min-width: rem(44);
+        height: rem(21);
+        line-height: rem(23);
+        font-size: rem(10);
+        border-radius: rem(6);
         border-color: #aaa;
     }
 
@@ -1640,12 +1640,12 @@ a {
     }
 
     &.sm {
-        height: 16px;
+        height: rem(16);
 
         .txt {
-            height: 16px;
-            padding: 0 6px;
-            font-size: 9px;
+            height: rem(16);
+            padding: 0 rem(6);
+            font-size: rem(9);
         }
     }
 }
@@ -1663,11 +1663,11 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 20px;
-        padding: 0 10px;
+        height: rem(20);
+        padding: 0 rem(10);
         color: #fff;
-        font-size: 10px;
-        border-radius: 12px;
+        font-size: rem(10);
+        border-radius: rem(12);
     }
 
     &.ok .tx {
@@ -1689,7 +1689,7 @@ a {
 
 .asGroup .listTit h3 .label_state {
     vertical-align: text-top;
-    margin-right: 5px;
+    margin-right: rem(5);
 }
 
 /* tabs_header */
@@ -1700,7 +1700,7 @@ a {
 
 .tabs_header {
     position: relative;
-    margin: 0 0 15px;
+    margin: 0 0 rem(15);
     padding: 0;
 
     ul {
@@ -1717,9 +1717,9 @@ a {
             }
 
             label {
-                /*height:63px;*/
+                /*height:rem(63);*/
 
-                padding: 0 30px 0 0;
+                padding: 0 rem(30) 0 0;
                 display: -webkit-box;
                 display: -moz-box;
                 display: -ms-flexbox;
@@ -1732,9 +1732,9 @@ a {
                     -webkit-appearance: none;
                     border-radius: 50%;
                     outline: none;
-                    border: 2px solid #767676;
-                    width: 20px;
-                    height: 20px;
+                    border: rem(2) solid #767676;
+                    width: rem(20);
+                    height: rem(20);
                     margin: 0;
                     display: inline-block;
                     margin: 0;
@@ -1743,9 +1743,9 @@ a {
                     &:before {
                         content: '';
                         display: block;
-                        width: 10px;
-                        height: 10px;
-                        margin: 3px auto 0;
+                        width: rem(10);
+                        height: rem(10);
+                        margin: rem(3) auto 0;
                         border-radius: 50%;
                     }
 
@@ -1761,12 +1761,12 @@ a {
                 span {
                     position: relative;
                     display: inline-block;
-                    margin: 0 0 0 14px;
+                    margin: 0 0 0 rem(14);
                     padding: 0;
                     font-weight: 400;
-                    font-size: 18px;
+                    font-size: rem(18);
                     color: #808080;
-                    line-height: 20px;
+                    line-height: rem(20);
                 }
             }
 
@@ -1788,7 +1788,7 @@ a {
             overflow: hidden;
             display: flex;
             width: 100%;
-            border-radius: 25px;
+            border-radius: rem(25);
             background-color: #f2f2f2;
 
             li {
@@ -1799,11 +1799,11 @@ a {
                     justify-content: center;
                     align-items: center;
                     width: 100%;
-                    height: 45px;
-                    font-size: 17px;
+                    height: rem(45);
+                    font-size: rem(17);
                     font-weight: 700;
                     color: #666;
-                    border-radius: 25px;
+                    border-radius: rem(25);
                 }
             }
         }
@@ -1812,7 +1812,7 @@ a {
     &.type2 ul {
         display: flex;
         justify-content: space-between;
-        border-bottom: 1px solid #ddd;
+        border-bottom: rem(1) solid #ddd;
 
         li {
             width: 100%;
@@ -1822,8 +1822,8 @@ a {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                height: 65px;
-                font-size: 17px;
+                height: rem(65);
+                font-size: rem(17);
                 color: #666;
                 text-align: center;
             }
@@ -1834,12 +1834,12 @@ a {
                 &:after {
                     content: '';
                     position: absolute;
-                    bottom: -1px;
+                    bottom: rem(-1);
                     left: 0;
                     right: 0;
-                    height: 3px;
-                    margin-left: 10px;
-                    margin-right: 10px;
+                    height: rem(3);
+                    margin-left: rem(10);
+                    margin-right: rem(10);
                 }
             }
         }
@@ -1851,14 +1851,14 @@ a {
 /* tabs_header(type2) */
 
 .tabs_body_wrap {
-    margin: 0 -20px;
+    margin: 0 rem(-20);
 }
 
 .tabs_body {
-    padding: 15px 20px 0px;
+    padding: rem(15) rem(20) rem(0);
 
     &.type1 {
-        padding: 20px 20px 0;
+        padding: rem(20) rem(20) 0;
     }
 }
 
@@ -1967,7 +1967,7 @@ a {
         .slick-vertical .slick-slide {
             display: block;
             height: auto;
-            border: 1px solid transparent;
+            border: rem(1) solid transparent;
         }
 
         .slick-arrow.slick-hidden {
@@ -1997,15 +1997,15 @@ a {
             width: 100%;
             text-align: center;
             overflow: hidden;
-            margin-top: 15px;
+            margin-top: rem(15);
 
             li {
                 display: inline-block;
-                margin: 0 2.5px;
+                margin: 0 rem(2.5);
 
                 button {
-                    width: 12px;
-                    height: 2px;
+                    width: rem(12);
+                    height: rem(2);
                     margin: 0;
                     padding: 0;
                     color: transparent;
@@ -2026,12 +2026,12 @@ a {
 .slider_control {
     position: absolute;
     left: 0;
-    bottom: 0px;
+    bottom: rem(0);
     z-index: 3;
 
     .btn_control {
-        width: 20px;
-        height: 20px;
+        width: rem(20);
+        height: rem(20);
         background-position: 0 0;
         background-repeat: no-repeat;
         background-size: cover;
@@ -2051,35 +2051,35 @@ a {
 
 .wrap_slider.type_banner {
     position: relative;
-    padding: 22px 0 0 0;
+    padding: rem(22) 0 0 0;
 
     .slider_container {
-        padding: 0 0 0px;
+        padding: 0 0 rem(0);
 
         .slick-dots li {
-            height: 14px;
+            height: rem(14);
             vertical-align: top;
 
             button {
-                width: 20px;
+                width: rem(20);
             }
         }
     }
 
     .asset_noti {
         margin-top: 0;
-        min-height: 120px;
-        padding-right: 100px;
+        min-height: rem(120);
+        padding-right: rem(100);
         z-index: 2;
     }
 
     + .wrap_assets .asGroup .listTit {
-        padding-top: 0px;
+        padding-top: rem(0);
     }
 }
 
 .wrap_assets_update + .wrap_assets .asGroup .listTit {
-    padding-top: 5px;
+    padding-top: rem(5);
 }
 
 /* 슬라이드 목록 */
@@ -2088,7 +2088,7 @@ a {
     position: relative;
 
     .slider_container {
-        min-height: 40px;
+        min-height: rem(40);
 
         .slider .sliderTx {
             position: relative;
@@ -2097,10 +2097,10 @@ a {
         .slick-dots {
             position: relative;
             top: 0;
-            margin-top: 11px;
+            margin-top: rem(11);
 
             li {
-                height: 18px;
+                height: rem(18);
 
                 button {
                     vertical-align: top;
@@ -2132,13 +2132,13 @@ a {
         bottom: 0;
         left: 0;
         right: 0;
-        padding: 20px 0 0;
+        padding: rem(20) 0 0;
         z-index: 10;
         width: 100%;
         max-height: 100%;
         box-sizing: border-box;
         background-color: #fff;
-        border-radius: 15px 15px 0 0;
+        border-radius: rem(15) rem(15) 0 0;
         transform: translate(0, 100%);
         transition: all .2s ease-in-out;
 
@@ -2148,44 +2148,44 @@ a {
 
         .layer_tit {
             display: block;
-            min-height: 28px;
+            min-height: rem(28);
             position: relative;
             text-align: center;
-            padding: 0 20px 0;
+            padding: 0 rem(20) 0;
 
             .tit {
-                font-size: 15px;
-                line-height: 19px;
+                font-size: rem(15);
+                line-height: rem(19);
             }
         }
 
         .btn_close {
             position: absolute;
-            right: 20px;
-            top: 0px;
-            width: 17px;
-            height: 17px;
-            font-size: 14px;
+            right: rem(20);
+            top: rem(0);
+            width: rem(17);
+            height: rem(17);
+            font-size: rem(14);
 
             &:before {
                 content: '';
                 position: absolute;
                 left: 0;
                 top: 0;
-                width: 17px;
-                height: 17px;
+                width: rem(17);
+                height: rem(17);
                 background: url('../img/bt/bt_close_lg.png') 0 0 no-repeat;
-                background-size: 17px auto;
+                background-size: rem(17) auto;
             }
         }
 
         .layer_cont {
             overflow-y: auto;
             overflow-x: hidden;
-            padding: 0px 20px 30px;
+            padding: rem(0) rem(20) rem(30);
 
             .type_page {
-                margin: 0 -20px;
+                margin: 0 rem(-20);
             }
         }
 
@@ -2197,8 +2197,8 @@ a {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 45px;
-                font-size: 15px;
+                height: rem(45);
+                font-size: rem(15);
                 color: #fff;
             }
 
@@ -2212,38 +2212,38 @@ a {
             .bank_list {
                 display: flex;
                 flex-wrap: wrap;
-                margin: -10px -5px 0;
+                margin: rem(-10) rem(-5) 0;
             }
 
             .bank_box {
                 position: relative;
                 display: inline-block;
-                height: 30px;
-                margin: 10px 5px 0px;
-                padding: 0 12px 0 12px;
-                border: 1px solid #ddd;
-                border-radius: 6px;
+                height: rem(30);
+                margin: rem(10) rem(5) rem(0);
+                padding: 0 rem(12) 0 rem(12);
+                border: rem(1) solid #ddd;
+                border-radius: rem(6);
 
                 &.has_delete {
-                    padding-right: 28px;
+                    padding-right: rem(28);
                 }
 
                 .name {
                     display: flex;
-                    height: 29px;
+                    height: rem(29);
                     align-items: center;
-                    font-size: 14px;
+                    font-size: rem(14);
                     color: #666;
                 }
 
                 .btn_del {
                     position: absolute;
                     right: 0;
-                    top: -1px;
-                    width: 30px;
-                    height: 30px;
+                    top: rem(-1);
+                    width: rem(30);
+                    height: rem(30);
                     background: url('../img/bt/bt_del.png') center center no-repeat;
-                    background-size: 11px auto;
+                    background-size: rem(11) auto;
                 }
             }
         }
@@ -2253,17 +2253,17 @@ a {
 /* 바텀시트 선택된기관 */
 
 .type_page .wrap_bank_list {
-    padding: 0 20px;
+    padding: 0 rem(20);
 }
 
 .wrap_bank_list ~ .wrap_bank_list {
-    margin-top: 30px;
+    margin-top: rem(30);
 }
 
 .bank_list_tit {
     display: block;
-    padding-bottom: 13px;
-    font-size: 15px;
+    padding-bottom: rem(13);
+    font-size: rem(15);
     line-height: 1;
 }
 
@@ -2289,13 +2289,13 @@ a {
         align-items: center;
         width: 100%;
         height: 100%;
-        padding: 20px 25px;
+        padding: rem(20) rem(25);
     }
 
     .layer_inner {
         position: relative;
         overflow: hidden;
-        padding: 25px 20px;
+        padding: rem(25) rem(20);
         z-index: 10;
         width: 100%;
         box-sizing: border-box;
@@ -2303,68 +2303,68 @@ a {
     }
 
     &.type2 .layer_inner {
-        border-radius: 6px;
-        padding: 16px 20px 71px;
+        border-radius: rem(6);
+        padding: rem(16) rem(20) rem(71);
 
         .layer_cont .msg_box {
-            margin-top: 20px;
+            margin-top: rem(20);
         }
     }
 
     &.short .layer_position {
-        padding: 20px 60px;
+        padding: rem(20) rem(60);
     }
 
     &.type3 {
         .layer_position {
-            padding-right: 45px;
-            padding-left: 45px;
+            padding-right: rem(45);
+            padding-left: rem(45);
         }
 
         .layer_inner {
-            border-radius: 6px;
-            padding: 35px 20px 70px;
+            border-radius: rem(6);
+            padding: rem(35) rem(20) rem(70);
         }
     }
 
     &.type4 .layer_inner {
-        border-radius: 6px;
-        padding: 32px 16px 80px;
+        border-radius: rem(6);
+        padding: rem(32) rem(16) rem(80);
     }
 
     .layer_inner .layer_tit {
-        padding-bottom: 20px;
+        padding-bottom: rem(20);
     }
 
     &.short .layer_inner .layer_tit {
-        padding-bottom: 10px;
+        padding-bottom: rem(10);
     }
 
     .layer_inner .tit {
-        font-size: 19px;
+        font-size: rem(19);
     }
 
     &.short .layer_inner .tit {
-        font-size: 17px;
+        font-size: rem(17);
     }
 
     .layer_inner .btn_close {
         position: absolute;
-        right: 10px;
-        top: 10px;
-        width: 17px;
-        height: 17px;
-        font-size: 14px;
+        right: rem(10);
+        top: rem(10);
+        width: rem(17);
+        height: rem(17);
+        font-size: rem(14);
 
         &:before {
             content: '';
             position: absolute;
             left: 0;
             top: 0;
-            width: 17px;
-            height: 17px;
+            width: rem(17);
+            height: rem(17);
             background: url('../img/bt/bt_close_lg.png') 0 0 no-repeat;
-            background-size: 17px auto;
+            background-size: rem(17) auto;
         }
     }
 
@@ -2373,29 +2373,29 @@ a {
     }
 
     .layer_inner .layer_cont {
-        max-height: 300px;
+        max-height: rem(300);
         overflow-y: auto;
 
         .msg_box {
-            font-size: 14px;
+            font-size: rem(14);
             color: #666;
 
             .msg_alert {
                 display: block;
                 text-align: center;
-                font-size: 17px;
+                font-size: rem(17);
                 color: #000;
                 word-break: keep-all;
-                line-height: 25px;
+                line-height: rem(25);
 
                 .code {
-                    font-size: 18px;
+                    font-size: rem(18);
                 }
             }
 
             .msg_tit {
-                margin-bottom: 6px;
-                font-size: 17px;
+                margin-bottom: rem(6);
+                font-size: rem(17);
                 color: #666;
                 text-align: center;
             }
@@ -2403,24 +2403,24 @@ a {
             .msg_txt {
                 ~ {
                     .msg_alert {
-                        margin-top: 6px;
+                        margin-top: rem(6);
                     }
 
                     .msg_customer {
-                        margin-top: 12px;
+                        margin-top: rem(12);
                     }
                 }
 
                 display: block;
                 text-align: center;
-                font-size: 17px;
+                font-size: rem(17);
                 color: #666;
             }
 
             .msg_customer {
                 display: block;
                 text-align: center;
-                font-size: 15px;
+                font-size: rem(15);
                 color: #666;
             }
         }
@@ -2439,8 +2439,8 @@ a {
                 justify-content: center;
                 align-items: center;
                 width: 100%;
-                height: 40px;
-                font-size: 15px;
+                height: rem(40);
+                font-size: rem(15);
                 color: #fff;
             }
 
@@ -2453,47 +2453,47 @@ a {
         .msg_box2 {
             .msg_tit {
                 text-align: center;
-                font-size: 19px;
+                font-size: rem(19);
                 color: #000;
             }
 
             .msg_cont {
-                margin-top: 30px;
-                font-size: 14px;
+                margin-top: rem(30);
+                font-size: rem(14);
                 color: #666;
             }
 
             .sel_agency {
                 display: flex;
-                margin-top: 20px;
-                padding: 20px 0px;
+                margin-top: rem(20);
+                padding: rem(20) rem(0);
 
                 .ci {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     flex-direction: column;
-                    width: 115px;
+                    width: rem(115);
 
                     .ico {
-                        width: 24px;
-                        height: 24px;
+                        width: rem(24);
+                        height: rem(24);
 
                         img {
-                            width: 24px;
-                            height: 24px;
+                            width: rem(24);
+                            height: rem(24);
                         }
                     }
 
                     .name {
-                        margin-top: 5px;
-                        font-size: 14px;
+                        margin-top: rem(5);
+                        font-size: rem(14);
                         color: #000;
                     }
                 }
 
                 .cate + .cate {
-                    margin-top: 15px;
+                    margin-top: rem(15);
                 }
             }
         }
@@ -2505,11 +2505,11 @@ a {
         }
 
         .btnGroup {
-            margin: 25px 0 0;
+            margin: rem(25) 0 0;
 
             > p {
                 padding: 0;
-                min-height: 20px;
+                min-height: rem(20);
             }
         }
     }
@@ -2528,26 +2528,26 @@ a {
         .event_box {
             position: relative;
             width: 100%;
-            height: 403px;
-            border-radius: 10px 10px 0 0;
+            height: rem(403);
+            border-radius: rem(10) rem(10) 0 0;
             overflow: hidden;
 
             .btn_close_w {
                 position: absolute;
-                right: 10px;
-                top: 10px;
-                width: 38px;
-                height: 38px;
+                right: rem(10);
+                top: rem(10);
+                width: rem(38);
+                height: rem(38);
 
                 &:before {
                     content: '';
                     position: absolute;
-                    left: 10px;
-                    top: 10px;
-                    width: 18px;
-                    height: 18px;
+                    left: rem(10);
+                    top: rem(10);
+                    width: rem(18);
+                    height: rem(18);
                     background: url('../img/bt/bt_close_lg_w.png') 0 0 no-repeat;
-                    background-size: 18px auto;
+                    background-size: rem(18) auto;
                 }
             }
 
@@ -2561,31 +2561,31 @@ a {
                 align-items: center;
                 position: absolute;
                 left: 0;
-                bottom: 20px;
-                width: calc(100% - 40px);
-                height: 45px;
-                margin-left: 20px;
+                bottom: rem(20);
+                width: calc(100% - rem(40));
+                height: rem(45);
+                margin-left: rem(20);
                 color: #fff;
-                font-size: 15px;
+                font-size: rem(15);
                 background-color: #211c76;
-                border-radius: 6px;
+                border-radius: rem(6);
             }
 
             &.type_pocket {
                 .cont_0101 {
-                    margin: 50px 0 0 10px;
+                    margin: rem(50) 0 0 rem(10);
 
                     img {
-                        width: 65px;
+                        width: rem(65);
                         height: auto;
                     }
                 }
 
                 .cont_0102 {
-                    margin: 0px 0 0 10px;
+                    margin: rem(0) 0 0 rem(10);
 
                     img {
-                        width: 280px;
+                        width: rem(280);
                         height: auto;
                     }
                 }
@@ -2596,31 +2596,31 @@ a {
                     bottom: 0;
 
                     img {
-                        width: 360px;
+                        width: rem(360);
                         height: auto;
                     }
                 }
             }
 
             &.type_x1200 {
-                height: 425px;
+                height: rem(425);
                 background-color: #fff;
 
                 &:before {
                     content: '';
                     position: absolute;
                     left: 50%;
-                    bottom: 65px;
-                    width: 320px;
-                    height: 206px;
-                    margin: 0 0 0 -160px;
+                    bottom: rem(65);
+                    width: rem(320);
+                    height: rem(206);
+                    margin: 0 0 0 rem(-160);
                     background: url('../img/event/event_x1200_cont01.png') 0 0 no-repeat;
-                    background-size: 320px auto;
+                    background-size: rem(320) auto;
                 }
 
                 .btn_close_w:before {
                     background: url('../img/bt/bt_close_lg.png') 0 0 no-repeat;
-                    background-size: 18px auto;
+                    background-size: rem(18) auto;
                 }
 
                 .btn_ev_join {
@@ -2628,24 +2628,24 @@ a {
                 }
 
                 .tx_wrap {
-                    margin-top: 50px;
+                    margin-top: rem(50);
 
                     .tx_01 {
                         color: #000;
                         font-weight: bold;
-                        font-size: 13px;
+                        font-size: rem(13);
                     }
 
                     .tx_02 {
-                        margin-top: 4px;
+                        margin-top: rem(4);
                         color: #000;
-                        font-size: 17px;
+                        font-size: rem(17);
                     }
 
                     .tx_03 {
-                        margin-top: 7px;
+                        margin-top: rem(7);
                         color: #031b89;
-                        font-size: 12px;
+                        font-size: rem(12);
                     }
                 }
             }
@@ -2671,8 +2671,8 @@ a {
 
 .upLoading {
     position: relative;
-    padding: 5px 0 0;
-    margin: 0 -20px;
+    padding: rem(5) 0 0;
+    margin: 0 rem(-20);
 
     &::before {
         content: '';
@@ -2681,13 +2681,13 @@ a {
         right: 0;
         left: 0;
         display: block;
-        height: 2px;
+        height: rem(2);
         background-color: #808080;
     }
 
     p {
-        padding: 4px 0;
-        font-size: 15px;
+        padding: rem(4) 0;
+        font-size: rem(15);
         color: #666;
         text-align: center;
     }
@@ -2709,38 +2709,38 @@ a {
         }
 
         p {
-            margin-left: 10px;
+            margin-left: rem(10);
         }
 
         &.type4 {
             flex-flow: column nowrap;
             align-items: center;
             justify-content: center;
-            margin-top: 50px;
+            margin-top: rem(50);
 
             p {
                 margin: 0;
-                padding: 1px 0 2px;
-                font-size: 17px;
+                padding: rem(1) 0 rem(2);
+                font-size: rem(17);
                 font-weight: 500;
                 color: #000;
             }
 
             .num {
                 display: block;
-                margin: 0 0 15px;
-                padding: 6px 0 1px;
-                font-size: 24px;
+                margin: 0 0 rem(15);
+                padding: rem(6) 0 rem(1);
+                font-size: rem(24);
                 font-weight: 400;
                 color: #d81921;
-                line-height: 24px;
+                line-height: rem(24);
             }
 
             .loader {
-                width: 46px;
-                height: 46px;
+                width: rem(46);
+                height: rem(46);
                 background-repeat: no-repeat;
-                background-size: 46px 46px;
+                background-size: rem(46) rem(46);
                 animation: spin .7s linear 0s infinite;
             }
         }
@@ -2748,10 +2748,10 @@ a {
 }
 
 .loader {
-    width: 24px;
-    height: 24px;
+    width: rem(24);
+    height: rem(24);
     background-repeat: no-repeat;
-    background-size: 24px 24px;
+    background-size: rem(24) rem(24);
     animation: spin .5s linear 0s infinite;
 }
 
@@ -2771,24 +2771,24 @@ a {
 /* 리스트 star */
 
 .unorder_list {
-    margin-top: 20px;
+    margin-top: rem(20);
 
     .list {
         + .list {
-            margin-top: 10px;
+            margin-top: rem(10);
         }
 
         position: relative;
-        padding-left: 10px;
+        padding-left: rem(10);
 
         &:before {
             content: '*';
             position: absolute;
             left: 0;
-            top: 1px;
+            top: rem(1);
             margin: 0;
             color: #666;
-            line-height: 18px;
+            line-height: rem(18);
         }
     }
 
@@ -2800,137 +2800,137 @@ a {
 /* 리스트 custom (좌우 영역) */
 
 .custom_list {
-    margin-top: 20px;
+    margin-top: rem(20);
 
     .list {
         + .list {
-            margin-top: 10px;
+            margin-top: rem(10);
         }
 
         .fl_box {
             display: flex;
 
             .bullet {
-                margin-top: -1px;
+                margin-top: rem(-1);
                 text-align: left;
-                font-size: 15px;
+                font-size: rem(15);
                 color: #666;
-                line-height: 22px;
-                letter-spacing: -.2px;
+                line-height: rem(22);
+                letter-spacing: rem(-0.2);
                 word-break: keep-all;
             }
 
             .cont {
-                margin-left: 6px;
-                font-size: 15px;
+                margin-left: rem(6);
+                font-size: rem(15);
                 color: #666;
-                line-height: 22px;
+                line-height: rem(22);
             }
 
             ~ .bg_box {
-                margin-top: 10px;
+                margin-top: rem(10);
             }
         }
 
         .bg_box {
-            padding: 12px;
+            padding: rem(12);
             background-color: #f7f7f7;
-            border-radius: 6px;
+            border-radius: rem(6);
 
             .item {
-                font-size: 14px;
+                font-size: rem(14);
                 color: #666;
-                line-height: 21px;
+                line-height: rem(21);
                 vertical-align: middle;
 
                 ~ .item {
-                    margin-top: 4px;
+                    margin-top: rem(4);
                 }
             }
         }
     }
 
     .tit1 {
-        font-size: 15px;
-        line-height: 20px;
+        font-size: rem(15);
+        line-height: rem(20);
         color: #000;
     }
 
     .tit2 {
-        font-size: 16px;
-        line-height: 24px;
+        font-size: rem(16);
+        line-height: rem(24);
         color: #000;
     }
 
     .tx1 {
-        margin-top: 12px;
-        font-size: 15px;
-        line-height: 21px;
+        margin-top: rem(12);
+        font-size: rem(15);
+        line-height: rem(21);
         color: #666;
     }
 }
 
 .custom_tbl {
     &.type1 {
-        border: 1px solid #ddd;
+        border: rem(1) solid #ddd;
         border-collapse: collapse;
-        border-radius: 6px;
+        border-radius: rem(6);
         border-style: hidden;
-        box-shadow: 0 0 0 1px #ddd;
+        box-shadow: 0 0 0 rem(1) #ddd;
 
         th {
-            padding: 12px 0 10px;
-            font-size: 13px;
-            line-height: 19px;
+            padding: rem(12) 0 rem(10);
+            font-size: rem(13);
+            line-height: rem(19);
             color: #666;
-            border-top: 1px solid #ddd;
-            border-right: 1px solid #ddd;
-            border-left: 1px solid #ddd;
+            border-top: rem(1) solid #ddd;
+            border-right: rem(1) solid #ddd;
+            border-left: rem(1) solid #ddd;
         }
 
         tr:last-child th {
-            border-bottom: 1px solid #ddd;
+            border-bottom: rem(1) solid #ddd;
         }
 
         td {
-            padding: 12px 10px 10px;
-            font-size: 13px;
-            line-height: 19px;
+            padding: rem(12) rem(10) rem(10);
+            font-size: rem(13);
+            line-height: rem(19);
             color: #666;
-            border-top: 1px solid #ddd;
-            border-right: 1px solid #ddd;
+            border-top: rem(1) solid #ddd;
+            border-right: rem(1) solid #ddd;
         }
 
         tr:last-child td {
-            border-bottom: 1px solid #ddd;
+            border-bottom: rem(1) solid #ddd;
         }
     }
 
     .t_tx1.not_kor {
-        font-size: 14px;
+        font-size: rem(14);
     }
 }
 
 a.blockLink {
     display: block;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: rem(14);
+    line-height: rem(22);
     color: #666;
 }
 
 /* 에러 */
 
 .topErrPop {
-    padding: 15px 20px;
+    padding: rem(15) rem(20);
     background: #f2f2f2;
-    width: calc(100% + 40px);
-    margin-left: -20px;
+    width: calc(100% + rem(40));
+    margin-left: rem(-20);
 
     .tx {
         position: relative;
-        padding-left: 30px;
-        font-size: 14px;
-        line-height: 20px;
+        padding-left: rem(30);
+        font-size: rem(14);
+        line-height: rem(20);
         color: rgb(141, 140, 140);
 
         &:before {
@@ -2939,22 +2939,22 @@ a.blockLink {
             position: absolute;
             left: 0;
             top: 50%;
-            margin-top: -8px;
-            width: 17px;
-            height: 17px;
+            margin-top: rem(-8);
+            width: rem(17);
+            height: rem(17);
             background: url('../img/ic/ic_err2.png') no-repeat 50% 50%;
-            background-size: 17px auto;
+            background-size: rem(17) auto;
         }
     }
 }
 
 .errMsg {
-    padding: 25px 0;
+    padding: rem(25) 0;
     text-align: center;
 
     .tx {
-        font-size: 15px;
-        line-height: 20px;
+        font-size: rem(15);
+        line-height: rem(20);
         color: #666;
     }
 }
@@ -2982,3 +2982,8 @@ a.blockLink {
 }
 
 /* [E] etc ============================================================================== */
+
+
+@media all and (max-width: 320px) {
+    //html {font-size:13px}
+}

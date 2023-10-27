@@ -11,7 +11,7 @@
     .agChkLst.no-border {
         padding: 0;
         border: none;
-        margin: 10px 0 0 0;
+        margin: rem(10) 0 0 0;
 
         .agChkSubList {
             border-top: none;
@@ -20,38 +20,38 @@
     }
 
     .no-border .agChkItem.all label {
-        border-bottom: 1px solid #eee;
-        padding-bottom: 19px;
+        border-bottom: rem(1) solid #eee;
+        padding-bottom: rem(19);
     }
 
     .accSetting .editName.flex {
         display: flex;
-        gap: 0 9px;
+        gap: 0 rem(9);
 
         .sel_form {
             flex-shrink: 0;
-            min-width: 105px;
+            min-width: rem(105);
         }
 
         input {
-            height: 52px;
+            height: rem(52);
         }
 
         .sel_box {
-            gap: 0 6px;
+            gap: 0 rem(6);
         }
 
         .btnBl1 {
             flex-shrink: 0;
-            min-width: 105px;
+            min-width: rem(105);
         }
     }
 }
 
 .inp_caution {
     position: relative;
-    padding-left: 20px;
-    font-size: 13px;
+    padding-left: rem(20);
+    font-size: rem(13);
     color: #666;
 
     &:before {
@@ -59,19 +59,19 @@
         display: block;
         position: absolute;
         left: 0;
-        width: 16px;
-        height: 16px;
+        width: rem(16);
+        height: rem(16);
         background: url("../img/theme/apthefin/ico_caution.png") no-repeat 0 0;
         background-size: cover;
     }
 }
 
 .mgt40 {
-    margin-top: 40px !important;
+    margin-top: rem(40) !important;
 }
 
 .insp .agTx h3 {
-    font-size: 20px;
+    font-size: rem(20);
 }
 
 .insp__06-img {
@@ -83,23 +83,23 @@
 
 .insp__06-banner {
     display: block;
-    width: calc(100vw - 48px);
-    margin: 15px auto;
+    width: calc(100vw - rem(48));
+    margin: rem(15) auto;
     background: #fff4f2;
-    border-radius: 11px;
+    border-radius: rem(11);
 }
 
 .insp .link_txt {
-    margin-top: 15px;
+    margin-top: rem(15);
     color: #333;
-    font-size: 14px;
+    font-size: rem(14);
     display: block;
 
     &:after {
         content: "";
         display: inline-block;
-        width: 14px;
-        height: 15px;
+        width: rem(14);
+        height: rem(15);
         background: url("../img/theme/apthefin/ic_link_arrow.png") no-repeat 0 0;
         background-size: cover;
         vertical-align: text-top;
@@ -114,19 +114,19 @@
 
 .insp {
     .fix_bottom.bottom {
-        bottom: -80px;
+        bottom: rem(-80);
     }
 
     .btnGroup.type_col p ~ p {
-        margin-top: 20px;
-        padding: 20px 0 0 0;
+        margin-top: rem(20);
+        padding: rem(20) 0 0 0;
     }
 }
 
 .insp__tit {
-    font-size: 16px;
-    margin-bottom: 10px;
-    line-height: 24px;
+    font-size: rem(16);
+    margin-bottom: rem(10);
+    line-height: rem(24);
     font-weight: 700;
 }
 
@@ -134,58 +134,58 @@
     .org_name_wrap .org_name .name {
         line-height: 1;
         width: 100%;
-        padding: 0 15px 0 12px;
+        padding: 0 rem(15) 0 rem(12);
 
         span {
             display: block;
-            line-height: 22px;
-            font-size: 14px;
+            line-height: rem(22);
+            font-size: rem(14);
         }
 
         strong {
             display: block;
             text-align: right;
-            line-height: 24px;
-            font-size: 16px;
+            line-height: rem(24);
+            font-size: rem(16);
         }
     }
 
     + .org_list_certi {
-        margin-top: 10px;
+        margin-top: rem(10);
     }
 }
 
 .cautionBox {
     background-color: #f1f2f5;
-    padding: 25px 20px;
-    margin-left: -20px;
-    margin-right: -20px;
+    padding: rem(25) rem(20);
+    margin-left: rem(-20);
+    margin-right: rem(-20);
 }
 
 .cautionBox__tit {
-    font-size: 15px;
+    font-size: rem(15);
     font-weight: 500;
-    line-height: 22px;
+    line-height: rem(22);
     color: #333;
 }
 
 .cautionBox__list {
-    margin-top: 15px;
-    font-size: 13px;
+    margin-top: rem(15);
+    font-size: rem(13);
 
     li {
-        line-height: 18px;
-        padding-left: 18px;
+        line-height: rem(18);
+        padding-left: rem(18);
         position: relative;
 
         &:before {
             content: "";
             display: block;
             position: absolute;
-            left: 6px;
-            top: 8px;
-            width: 4px;
-            height: 4px;
+            left: rem(6);
+            top: rem(8);
+            width: rem(4);
+            height: rem(4);
             border-radius: 50%;
             background-color: #b3b3b3;
         }
@@ -194,40 +194,40 @@
 
 .iconHome {
     background: url("../img/ic/ic_home.png") no-repeat 0 0;
-    width: 24px;
-    height: 24px;
+    width: rem(24);
+    height: rem(24);
     background-size: cover;
 
     &.active {
         background: url("../img/ic/ic_home_chk.png") no-repeat 0 0;
-        width: 24px;
-        height: 24px;
+        width: rem(24);
+        height: rem(24);
         background-size: cover;
     }
 }
 
 .iconCal {
     background: url("../img/ic/ic_cal.png") no-repeat 0 0;
-    width: 24px;
-    height: 24px;
+    width: rem(24);
+    height: rem(24);
     background-size: cover;
 }
 
 .iconMyPage {
-    background: url("../img/ic/ic_my.png") no-repeat center 10px;
-    background-size: 24px 24px;
+    background: url("../img/ic/ic_my.png") no-repeat center rem(10);
+    background-size: rem(24) rem(24);
 
     &.active {
-        background: url("../img/ic/ic_my_chk.png") no-repeat center 10px;
-        background-size: 24px 24px;
+        background: url("../img/ic/ic_my_chk.png") no-repeat center rem(10);
+        background-size: rem(24) rem(24);
     }
 }
 
 .iconArrowUp {
     background: url("../img/ic/ic_arw_ag.png") no-repeat 0 0;
     background-size: cover;
-    width: 6px;
-    height: 11px;
+    width: rem(6);
+    height: rem(11);
     transform: rotate(-90deg);
     display: inline-block;
 }
@@ -251,19 +251,19 @@
 
 .insp .asGroup .asList .amount:after {
     position: absolute;
-    right: 29px;
+    right: rem(29);
 }
 
 .accHistory .topCtrl .btnFilter, .btnFilter.iconFilter {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: rem(20);
+    height: rem(20);
     background: url("../img/ic/ic_filter.png") no-repeat 0 0;
     background-size: cover;
 }
 
 .insp .insLinkList li {
-    border-bottom: 1px solid #f7f7f7;
+    border-bottom: rem(1) solid #f7f7f7;
 
     + li {
         border-top: none;
@@ -271,9 +271,9 @@
 }
 
 .myPageEmailBox {
-    border: 1px solid #eee;
-    border-radius: 10px;
-    padding: 20px 56px 20px 20px;
+    border: rem(1) solid #eee;
+    border-radius: rem(10);
+    padding: rem(20) rem(56) rem(20) rem(20);
     display: block;
     position: relative;
 
@@ -281,26 +281,26 @@
         content: "";
         display: block;
         position: absolute;
-        width: 6px;
-        height: 11px;
+        width: rem(6);
+        height: rem(11);
         background: url("../img/ic/ic_arw_ag.png");
         background-size: cover;
-        right: 20px;
-        top: calc(50% - 5px);
+        right: rem(20);
+        top: calc(50% - rem(5));
     }
 }
 
 .myPageEmailBox__name {
-    font-size: 16px;
+    font-size: rem(16);
     font-weight: 400;
-    line-height: 24px;
+    line-height: rem(24);
 }
 
 .myPageEmailBox__email {
     font-family: Lato;
-    font-size: 16px;
+    font-size: rem(16);
     font-weight: 700;
-    line-height: 24px;
+    line-height: rem(24);
 }
 
 .insp__cert {
