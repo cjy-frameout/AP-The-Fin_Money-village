@@ -1254,7 +1254,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 .link-card:after {
     content:'';
     background-image: url(../img/theme/apthefin/card_bg.png);
-    background-size: rem(62) auto !important;
+    background-size: rem(60) rem(60) !important;
     height: rem(60) !important;
     top: rem(17) !important;
     width: rem(62) !important;
@@ -1262,7 +1262,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 .link-deposit:after {
     content:'';
     background-image: url(../img/theme/apthefin/bg_deposit.png);
-    background-size: rem(60) auto !important;
+    background-size: rem(60) rem(60) !important;
     height: rem(60) !important;
     top: rem(17) !important;
     width: rem(62) !important;
