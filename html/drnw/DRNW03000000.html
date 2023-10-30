@@ -246,7 +246,7 @@
             <section class="planSec mgt20">  <!--  -noLink 클래스추가시 링크연결메세지 -->
                 <h3 class="planSec__tit">
                     <span class="planSec__titLeft">부족한 금액</span>
-                    <a href="" class="planSec__titRight">99억 9,999만<span>원</span></a>
+                    <span class="planSec__titRight -noLink">99억 9,999만<span>원</span></span> <!-- 1030 span 태그변경 링크예외시 -noLink 클래스 추가 -->
                 </h3>
                 <div class="borrowgoProgress mgt10">
                     <progress class="borrowgoProgress__bar" value="82" max="100"></progress>
@@ -360,16 +360,17 @@
         exp.css("height",expH);
         expH <= 20 && exp.addClass("-low");
 
-        //아끼고 평균 기준선 잡기
+        //아끼고 평균 기준선 잡기 1030 기준선 높이값 제정의
         var lineH;
+        var lineConH = $(".savegoGraph").height()- $(".savegoGraph__topTxt").height();
         if($("#savego").hasClass("-year30")){
             setTimeout(function(){
-                lineH = 150 - $(".savegoGraph .-right .savegoGraph__bar").height();
+                lineH =  lineConH - $(".savegoGraph .-right .savegoGraph__bar").height();
                 $(".savegoGraph__line").css({"top":lineH}).addClass("-active");
             },500);
         }else{
             setTimeout(function(){
-                lineH = 150 - $(".savegoGraph .-center .savegoGraph__bar").height();
+                lineH = lineConH - $(".savegoGraph .-center .savegoGraph__bar").height();
                 $(".savegoGraph__line").css({"top":lineH}).addClass("-active");
             },500);
         }

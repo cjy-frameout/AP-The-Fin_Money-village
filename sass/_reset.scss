@@ -460,6 +460,7 @@ input {
 
 .wrap {
     position: relative;
+    height:100%;
     min-height: 100%;
 }
 
@@ -2985,5 +2986,5 @@ a.blockLink {
 
 
 @media all and (max-width: 320px) {
-    //html {font-size:13px}
+    html {font-size:13px}
 }

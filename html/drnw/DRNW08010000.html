@@ -48,12 +48,12 @@
     <!-- container -->
     <div class="container">
         <div class="content">
-            <h2 class="planTit mgt20">내 집 마련까지<br>
+            <!-- 1030 삭제 <h2 class="planTit mgt20">내 집 마련까지<br>
                 <strong class="planTit__bold"><span>82</span>% 도달했어요</strong>
                 <button type="button" class="plan__btnTooltip">도움말</button>
-            </h2>
+            </h2>-->
 
-            <div class="planRate -cerScore">
+            <div class="planRate -cerScore mgt40"> <!-- 1030 mgt40 추가 -->
                 <div class="planProgress">
                     <div class="planProgress__bg"></div>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 136" class="planProgress__bar" fill="transparent">
@@ -241,7 +241,7 @@
             }
             if($tar.hasClass("-hi")){
                 $inner.css("height",tarH+"px");
-                lineH = 150 - tarH
+                lineH = ($(".savegoGraph").height()- $(".savegoGraph__topTxt").height()) - tarH //1030 수정
             }else{
                 $line.hide();
             }

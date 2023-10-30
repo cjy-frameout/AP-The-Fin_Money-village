@@ -369,6 +369,9 @@ $black : #17181A;
         display:block;
         @include iconArrow18x18();
       }
+      &.-noLink {
+        &:after {display:none}
+      }
     }
   }
   &__subTit {

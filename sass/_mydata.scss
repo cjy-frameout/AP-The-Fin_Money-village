@@ -182,19 +182,22 @@
     .likes-num-btn {
         background: url(../img/theme/apthefin/icon_thumb.png) no-repeat 0 0;
         cursor: pointer;
-        height: rem(16);
-        width: rem(16);
-
+        height: rem(20);
+        width: rem(20);
+        background-size:cover;
         &.on {
             background: url(../img/theme/apthefin/icon_thumb_on.png) no-repeat 0 0;
+            background-size:cover;
+            &+.likes-num {color:#1c64f2}
         }
     }
 
     .comment-num-btn {
         background: url(../img/theme/apthefin/icon_comment.png) no-repeat 0 0;
         cursor: pointer;
-        height: rem(16);
-        width: rem(16);
+        height: rem(20);
+        width: rem(20);
+        background-size:cover;
     }
 
     .list-name + {
@@ -784,6 +787,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     position:absolute;
     right:rem(20);
     top: calc(50% - rem(20));
+    background-size:cover;
     
 }
 .main-title {
@@ -1296,14 +1300,15 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
         text-align: center;
         &:before {
             content: "";
-            background-image: url(../img/theme/apthefin/bg_preparing.png);
+            background-image: url(../img/theme/apthefin/svg/bg_preparing.svg);
             background-position: 0 0;
             background-repeat: no-repeat;
             background-size: cover;
             display: block;
-            height: rem(72);
+            height: rem(69);
+            width: rem(73);
             margin: 0 auto rem(20);
-            width: rem(68);
+
         }
     }
 }

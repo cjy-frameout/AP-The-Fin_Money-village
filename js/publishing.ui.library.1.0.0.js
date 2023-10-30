@@ -416,7 +416,7 @@ function contentsBottomPadding(){
     $('.content .btn-wrap.fixed').length && $('.content').css('padding-bottom',btnFixedHeight + 52);
 
     if($('footer.fix_bottom').length){
-		var fixBottomHeight = $('footer.fix_bottom').height();
+		var fixBottomHeight = $('footer.fix_bottom').height() + 20; // 1030 +20추가
         $('.content').css('padding-bottom',fixBottomHeight);
         if($('.headerType2').length){
             $('.content').css('padding-bottom',fixBottomHeight + 52);

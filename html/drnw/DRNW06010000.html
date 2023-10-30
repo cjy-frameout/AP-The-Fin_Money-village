@@ -252,18 +252,19 @@
             $(this).css("height",resultH+"%");
         })
 
-        //아끼고 평균 기준선 잡기
+        //아끼고 평균 기준선 잡기 1030 기준선 높이값 제정의
         var lineH;
+        var lineConH = $(".savegoGraph").height()- $(".savegoGraph__topTxt").height();
         if($("#savego").hasClass("-year30")){
             setTimeout(function(){
-                lineH = 150 - $(".savegoGraph .-right .savegoGraph__bar").height();
-                $(".savegoGraph__line").css({"top":`${lineH/16}rem`}).addClass("-active"); //1027 rem단위변경
-            },1500);
+                lineH =  lineConH - $(".savegoGraph .-right .savegoGraph__bar").height();
+                $(".savegoGraph__line").css({"top":lineH}).addClass("-active");
+            },500);
         }else{
             setTimeout(function(){
-                lineH = 150 - $(".savegoGraph .-center .savegoGraph__bar").height();
-                $(".savegoGraph__line").css({"top":`${lineH/16}rem`}).addClass("-active"); //1027 rem단위변경
-            },1500);
+                lineH = lineConH - $(".savegoGraph .-center .savegoGraph__bar").height();
+                $(".savegoGraph__line").css({"top":lineH}).addClass("-active");
+            },500);
         }
 
     }
