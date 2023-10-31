@@ -532,15 +532,15 @@
 
         //아끼고 평균 기준선 잡기 1030 기준선 높이값 제정의
         var lineH;
-        var lineConH = $(".savegoGraph").height()- $(".savegoGraph__topTxt").height();
+        var lineConH = $(".savegoGraph").height()- $(".savegoGraph__topTxt").height(); //1031 추가
         if($("#savego").hasClass("-year30")){
             setTimeout(function(){
-                lineH =  lineConH - $(".savegoGraph .-right .savegoGraph__bar").height();
+                lineH =  lineConH - $(".savegoGraph .-right .savegoGraph__bar").height(); //1031 변경
                 $(".savegoGraph__line").css({"top":lineH}).addClass("-active");
             },500);
         }else{
             setTimeout(function(){
-                lineH = lineConH - $(".savegoGraph .-center .savegoGraph__bar").height();
+                lineH = lineConH - $(".savegoGraph .-center .savegoGraph__bar").height();  //1031 변경
                 $(".savegoGraph__line").css({"top":lineH}).addClass("-active");
             },500);
         }
