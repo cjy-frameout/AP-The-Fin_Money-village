@@ -59,8 +59,8 @@
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 136" class="planProgress__bar" fill="transparent">
                         <defs>
                             <linearGradient id="gra01" x1="229.743" y1="61.2" x2="37.4" y2="61.2" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#FF3E3E"/>
-                                <stop offset="1" stop-color="#FF8080"/>
+                                <stop stop-color="#1C64F2"/>
+                                <stop offset="1" stop-color="#A4CAFE"/>
                             </linearGradient>
                         </defs>
                         <clipPath id="myClip">
@@ -269,13 +269,14 @@
         data.push({
             y: Math.random() * 100, // 임의의 데이터 생성 실제데이터 영역
             name: name,
-            color: i === 0 ? "#FF3E3E" : "#D4DADF" // 오늘의 막대만 색상 변경
+            color: i === 0 ? "#1C64F2" : "#D4DADF" // 오늘의 막대만 색상 변경 1031 색상변경
         });
     }
 
     // "오늘"을 마지막 데이터 포인트에 추가
     var lastDataPoint = data[data.length - 1];
     lastDataPoint.name = "오늘";
+
 
     // Highcharts 세로 바 그래프 생성
     Highcharts.chart('chart-container', {

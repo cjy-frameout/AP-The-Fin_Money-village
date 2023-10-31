@@ -8118,14 +8118,13 @@ a.btnMenu {
 
 		.layer_cont {
 			padding: rem(20) rem(20) rem(150);
-
 			.accSetting {
 				padding: 0;
 			}
-
 			&.content {
 				padding: 0 rem(20) rem(20);
 			}
+			&.fullColumFlex {min-height:0}
 		}
 
 		.upLoading.circleBar {

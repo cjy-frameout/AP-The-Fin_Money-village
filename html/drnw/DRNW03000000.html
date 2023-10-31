@@ -25,6 +25,7 @@
     <script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
     <script type="text/javascript" src="../../js/slide_slick.js"></script>
     <script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+    <script type="text/javascript" src="../../js/interaction.js"></script>
     <script type="text/javascript" src="../../js/cmd.js"></script>
 </head>
 
@@ -47,21 +48,22 @@
 
     <!-- container -->
     <div class="container">
-        <div class="content">
-            <h2 class="planTit mgt20">내 집 마련까지<br>
-                <strong class="planTit__bold"><span>82</span>% 도달했어요</strong>
-                <button type="button" class="plan__btnTooltip">도움말</button>
-            </h2>
+        <div class="content "> <!-- 1031 모든링크문구 노출을 원할경우 -allNoLink 클래스 추가 -->
 
-            <div class="planRate"> <!-- 0925 구조변경 및 링크연결문구 노출시 -noLink 추가 -->
+            <div class="planRate mgt20"> <!-- 1031 구조변경(타이틀이 planRate로 들어감) 및 링크연결문구 노출시 -noLink 추가 -->
+                <h2 class="planTit">내 집 마련까지<br>
+                    <strong class="planTit__bold"><span>82%</span> 도달했어요</strong> <!-- 1031 % 까지 span에 포함 -->
+                    <button type="button" class="plan__btnTooltip" onclick="layer_bottomsheet('#pop001')">도움말</button>
+                </h2>
                 <div class="planRate__inner">
                     <div class="planProgress">
                         <div class="planProgress__bg"></div>
+                        <!-- [S] SVG 1031 색상 변경 -->
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 136" class="planProgress__bar" fill="transparent">
                             <defs>
                                 <linearGradient id="gra01" x1="229.743" y1="61.2" x2="37.4" y2="61.2" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#FF3E3E"/>
-                                    <stop offset="1" stop-color="#FF8080"/>
+                                    <stop stop-color="#1C64F2"/>
+                                    <stop offset="1" stop-color="#A4CAFE"/>
                                 </linearGradient>
                             </defs>
                             <clipPath id="myClip">
@@ -70,6 +72,7 @@
                             <path id="planProgress__bar" d="M267.815 136C270.127 136 272.007 134.126 271.936 131.816C271.43 115.383 267.948 99.1656 261.648 83.955C254.813 67.4547 244.795 52.4622 232.167 39.8335C219.538 27.2047 204.545 17.187 188.045 10.3524C171.545 3.51773 153.86 -1.42315e-05 136 -1.18895e-05C118.14 -9.54747e-06 100.455 3.51774 83.955 10.3524C67.4548 17.187 52.4622 27.2047 39.8335 39.8335C27.2047 52.4623 17.187 67.4548 10.3524 83.9551C4.05192 99.1657 0.570143 115.383 0.0643615 131.816C-0.00673699 134.126 1.8735 136 4.1846 136L24.3754 136C26.6865 136 28.5515 134.126 28.6415 131.816C29.1356 119.135 31.8733 106.63 36.7384 94.8845C42.1377 81.8493 50.0517 70.0052 60.0284 60.0284C70.0052 50.0517 81.8493 42.1377 94.8845 36.7384C107.92 31.339 121.891 28.56 136 28.56C150.109 28.56 164.08 31.339 177.116 36.7384C190.151 42.1377 201.995 50.0517 211.972 60.0284C221.948 70.0052 229.862 81.8492 235.262 94.8845C240.127 106.63 242.864 119.135 243.359 131.816C243.449 134.126 245.314 136 247.625 136L267.815 136Z"/>
                             <use clip-path="url(#myClip)" href="#planProgress__bar" fill="url(#gra01)" />
                         </svg>
+                        <!-- [E] SVG 1031 색상 변경 -->
                     </div>
                     <p class="planRate__txt -start">0억0,000만원</p>
                     <p class="planRate__txt -end">0억0,000만원</p>
@@ -91,10 +94,17 @@
                 </div>
                 <!-- [E] 1012 a태그에서 div로 변경 -->
 
+
                 <div class="disconnectLink"> <!-- 0925 내용추가 -->
                     <p class="disconnectLink__txt">내용</p>
                     <a href="" class="disconnectLink__btn">선택하기</a>
                 </div>
+
+                <div class="disconnectLink -allNoLinkTxt"> <!-- 1031 모든링크 없을때 표시되는 문구 -->
+                    <p class="disconnectLink__txt">모든링크가 없을때 문구입력</p>
+                    <a href="" class="disconnectLink__btn">선택하기</a>
+                </div>
+
                 <!-- 1012 toastMsg 추가 -->
                 <div class="toastMsg"> <!-- active 클래스로 활성화 -->
                     <p class="tx">내 집 설정이 완료 되었습니다.</p>
@@ -104,7 +114,7 @@
             <hr class="plan__hr">
 
             <!-- [S] 아끼고 -->
-            <h3 class="planTit" id="scrollTar01"><strong>아끼고</strong> <button type="button" class="plan__btnTooltip">도움말</button></h3>
+            <h3 class="planTit" id="scrollTar01"><strong>아끼고</strong> <button type="button" class="plan__btnTooltip" onclick="layer_bottomsheet('#pop002')">도움말</button></h3>
             <p class="planDec">신용카드 이용내역을 점검하여 내 지출을 관리해요</p>
 
             <section id="savego" class="planSec mgt20 -year30 -good"> <!-- 30대기준 -year30, 내평균 -my, 적절할때 -good, 지출과다 -bed, 클래스 추가, 연결없을시 -noLink 추가 -->
@@ -145,7 +155,7 @@
             <hr class="plan__hr">
 
             <!-- [S] 모으고 -->
-            <h3 class="planTit" id="scrollTar02"><strong>모으고</strong> <button type="button" class="plan__btnTooltip">도움말</button></h3>
+            <h3 class="planTit" id="scrollTar02"><strong>모으고</strong> <button type="button" class="plan__btnTooltip" onclick="layer_bottomsheet('#pop003')">도움말</button></h3>
             <p class="planDec">내 집 마련을 위해 모으는 금액이에요</p>
             <section class="planSec mgt20"> <!--  -noLink 클래스추가시 링크연결메세지 -->
                 <h3 class="planSec__tit">
@@ -193,7 +203,7 @@
             <hr class="plan__hr">
 
             <!-- [S] 더하고 -->
-            <h3 class="planTit" id="scrollTar03"><strong>더하고</strong> <button type="button" class="plan__btnTooltip">도움말</button></h3>
+            <h3 class="planTit" id="scrollTar03"><strong>더하고</strong> <button type="button" class="plan__btnTooltip" onclick="layer_bottomsheet('#pop004')">도움말</button></h3>
             <p class="planDec">내 집 마련에 더할 부동산 자산이에요</p>
             <section class="planSec mgt20">  <!--  -noLink 클래스추가시 링크연결메세지 -->
                 <h3 class="planSec__tit">
@@ -241,7 +251,7 @@
             <hr class="plan__hr">
 
             <!-- [S] 빌리고 -->
-            <h3 class="planTit"><strong>빌리고</strong> <button type="button" class="plan__btnTooltip">도움말</button></h3>
+            <h3 class="planTit"><strong>빌리고</strong> <button type="button" class="plan__btnTooltip" onclick="layer_bottomsheet('#pop005')">도움말</button></h3>
             <p class="planDec">내 집 마련을 위해 가능한 대출 상품을 확인해요</p>
             <section class="planSec mgt20">  <!--  -noLink 클래스추가시 링크연결메세지 -->
                 <h3 class="planSec__tit">
@@ -305,6 +315,166 @@
 </div>
 <!-- //wrap -->
 
+
+<!-- 1031 바텀팝업 내용 추가 -->
+<!-- 도달률 계산 -->
+<div id="pop001" class="layer_bottomsheet">
+    <div class="layer_inner">
+        <div class="layer_tit type2">
+            <strong class="tit"><span>도달률 계산</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont" style="max-height: 879px;">
+            <div class="msg_box">
+                <p class="msg_notice">
+                    [모으고(금융) + 더하고(부동산)] ÷ 아파트 시세
+                </p>
+                <ul class="notice_list">
+                    <li class="list">
+                        <span class="tx">
+                            100%를 초과하면 무조건 100%로 표현됩니다.
+                        </span>
+                    </li>
+                    <li class="list">
+                        <span class="tx">
+                            아파트 시세는 KB부동산 평균 시세로 실제 매매 가격과는 차이가 있습니다.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--아끼고 -->
+<div id="pop002" class="layer_bottomsheet">
+    <div class="layer_inner">
+        <div class="layer_tit type2">
+            <strong class="tit"><span>도달률 계산</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont" style="max-height: 879px;">
+            <div class="msg_box">
+                <ul class="notice_list">
+                    <li class="list">
+                        <span class="tx">
+                            신용카드 이용내역으로 내 지출을 점검하는
+                        </span>
+                    </li>
+                    <li class="list">
+                        <span class="tx">
+                            상세설명은 추후에 추가할 예정입니다.
+                        </span>
+                    </li>
+                    <li class="list">
+                        <span class="tx">
+                            상세설명은 추후에 추가할 예정입니다.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--모으고 -->
+<div id="pop003" class="layer_bottomsheet">
+    <div class="layer_inner">
+        <div class="layer_tit type2">
+            <strong class="tit"><span>도달률 계산</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont" style="max-height: 879px;">
+            <div class="msg_box">
+                <ul class="notice_list">
+                    <li class="list">
+                        <span class="tx">
+                            내 집 마련을 위해 모으고 있는 계좌 자산이에요.
+                        </span>
+                    </li>
+                    <li class="list">
+                        <span class="tx">
+                            상세설명은 추후에 추가할 예정입니다.
+                        </span>
+                    </li>
+                    <li class="list">
+                        <span class="tx">
+                            상세설명은 추후에 추가할 예정입니다.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--더하고 -->
+<div id="pop004" class="layer_bottomsheet">
+    <div class="layer_inner">
+        <div class="layer_tit type2">
+            <strong class="tit"><span>도달률 계산</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont" style="max-height: 879px;">
+            <div class="msg_box">
+                <ul class="notice_list">
+                    <li class="list">
+                        <span class="tx">
+                            내 집 마련을 위해 합하는 내 부동산 자산이에요.
+                        </span>
+                    </li>
+                    <li class="list">
+                        <span class="tx">
+                            상세설명은 추후에 추가할 예정입니다.
+                        </span>
+                    </li>
+                    <li class="list">
+                        <span class="tx">
+                            상세설명은 추후에 추가할 예정입니다.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--빌리고 -->
+<div id="pop005" class="layer_bottomsheet">
+    <div class="layer_inner">
+        <div class="layer_tit type2">
+            <strong class="tit"><span>도달률 계산</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont" style="max-height: 879px;">
+            <div class="msg_box">
+                <ul class="notice_list">
+                    <li class="list">
+                        <span class="tx">
+                            내 집 마련에 부족한 금액을 확인해요.
+                        </span>
+                    </li>
+                    <li class="list">
+                        <span class="tx">
+                            상세설명은 추후에 추가할 예정입니다.
+                        </span>
+                    </li>
+                    <li class="list">
+                        <span class="tx">
+                            상세설명은 추후에 추가할 예정입니다.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
 </body>
 <script>
     $(document).ready(function(){
@@ -313,7 +483,7 @@
         var $result = $("#planProgress__bar"); //그래프 바
         var val = ((perCent / 100) * 180) - 180; // 0에서 1000을 -180에서 0으로 변환
         $result.css("transform",`rotate(${val}deg)`); //css 적용
-        $(".planTit__bold span").text(perCent);
+        $(".planTit__bold span").text(perCent+"%"); //1031 %추가
         $(".planRate__per span").text(100 - perCent+"% 남음");
         perCent == 100 && $(".planRate__per span").text("목표달성!");
         //내집 그림 형태잡아주기
