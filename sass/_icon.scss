@@ -77,6 +77,18 @@
   @include icon();
   background-image:url('../img/theme/apthefin/icon/ic_btnMore.png');
 }
+@mixin iconArrow($size:20,$color:default){
+  width:rem($size);
+  height:rem($size);
+  @include icon();
+  mask-image: url('../img/theme/apthefin/svg/ic_arrow_black.svg');
+  @if($color==default){
+    background-color:#17181A;
+  }@else {
+    background-color:$color;
+  }
+}
+
 @mixin iconArrow16x16($type:normal) {
   width:rem(16);
   height:rem(16);
@@ -145,3 +157,15 @@
     background-image:url('../img/theme/apthefin/ic_circle_chk_on.png');
   }
 }
+
+@mixin iconTriangle($size:16,$color:default){
+  width:rem($size);
+  height:rem($size);
+  mask-image:url('../img/theme/apthefin/svg/ic_triangle.svg');
+  @if($color==default){
+    background-color:#17181A;
+  }@else {
+    background-color:$color;
+  }
+}
+

@@ -257,7 +257,7 @@
     var data = [];
 
 
-    for (var i = 30; i >= 0; i--) {
+    for (var i = 23; i >= 0; i--) {
         var date = new Date(today);
         date.setDate(today.getDate() - i);
 
@@ -273,6 +273,7 @@
         });
     }
 
+
     // "오늘"을 마지막 데이터 포인트에 추가
     var lastDataPoint = data[data.length - 1];
     lastDataPoint.name = "오늘";
@@ -283,6 +284,16 @@
         chart: {
             type: 'column', // 세로 바 그래프 설정,
             marginTop:0,
+            events: {
+                render: function() {
+                    var xAxis = this.xAxis[0];
+                    xAxis.labelGroup.element.childNodes.forEach(function(label) {
+                        if (label.textContent === '오늘') {
+                            label.style.fill = '#1C64F2';
+                        }
+                    });
+                }
+            },
         },
         title: {
             text: null // 타이틀 삭제
@@ -296,11 +307,22 @@
             visible: true, // x축 텍스트 표시
             labels: {
                 rotation: 0, // 레이블 텍스트 회전 값 설정
-                step: 6 // 각 6번째 레이블만 표시
+                step:1,
+                style:{
+                  fontSize:"10px"
+                },
+                formatter: function() { // 레이블 포맷터 설정
+                    var index = this.pos;
+                    var isToday = (index === data.length - 1);
+                    var isFiveDaysInterval = (index % 5 === 0);
+
+                    // "오늘" 또는 5일 간격이면 레이블 표시, 그렇지 않으면 빈 문자열 반환
+                    return isToday || isFiveDaysInterval ? this.value : '';
+                }
             },
             categories: data.map(function(item, index) {
                 return item.name; // 일자 표시
-            })
+            }),
         },
         yAxis: {
             visible: false, // y축 텍스트 숨기기
@@ -327,7 +349,7 @@
             enabled: false // 범례 비활성화
         },
         series: [{
-            data: data, // 30일 동안의 데이터
+            data: data, // 24일 동안의 데이터
         }]
     });
 

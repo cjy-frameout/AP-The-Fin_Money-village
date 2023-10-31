@@ -332,3 +332,92 @@
     }
 }
 
+
+.certStep {
+    &-item {
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        padding:rem(20) rem(20) rem(20) rem(80);
+        border:rem(1) solid #E5E5E5;
+        border-radius: rem(16);
+        position: relative;
+        &:before {
+            content:"";
+            display:block;
+            position: absolute;
+            left:20px;
+            top:50%;
+            transform: translateY(-50%);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size:cover;
+            width:rem(48);height:rem(64);
+        }
+        &:not(:last-of-type){
+            margin-bottom:40px;
+            &:after {
+                content:"";
+                display: block;
+                @include iconArrow();
+                position: absolute;
+                left:50%;
+                bottom:-30px;
+                transform: translateX(-50%) rotate(90deg);
+            }
+        }
+    }
+    &-tit {
+        font-size:rem(16);
+        font-weight:700;
+        line-height:rem(24);
+        color:#333;
+    }
+    &-dec {
+        font-size:rem(13);
+        font-weight: 400;
+        line-height: rem(18);
+        margin-top:rem(4);
+        color:#999;
+    }
+    &-link {
+        display:inline-flex;
+        color:#1c64f2;
+        font-size:rem(13);
+        line-height:rem(18);
+        margin-top:rem(4);
+        align-items: center;
+        &:visited {
+            color:#1c64f2;
+        }
+        &:after {
+            content:"";
+            display: block;
+            background:url("../img/theme/apthefin/ic_invest_down.svg") no-repeat 0 0;
+            @include iconTriangle($color:#1C64F2);
+            margin-left:2px;
+        }
+    }
+    &.-naver {
+        .-step01:before {
+            background-image: url("../img/theme/apthefin/bg_certStep_naver_step01.png");
+        }
+        .-step02:before {
+            background-image: url("../img/theme/apthefin/bg_certStep_naver_step02.png");
+        }
+        .-step03:before {
+            background-image: url("../img/theme/apthefin/bg_certStep_naver_step03.png");
+        }
+    }
+    &.-kakao {
+        .-step01:before {
+            background-image: url("../img/theme/apthefin/bg_certStep_kakao_step01.png");
+        }
+        .-step02:before {
+            background-image: url("../img/theme/apthefin/bg_certStep_kakao_step02.png");
+        }
+        .-step03:before {
+            background-image: url("../img/theme/apthefin/bg_certStep_kakao_step03.png");
+        }
+    }
+}

@@ -97,10 +97,12 @@
 function layer_fullsheet(el) {
     var $el = $(el);
     var isDim;
+    $("html").addClass("scroll_lock"); //2021-10-28 html 스크롤 잠금 수정
     $el.append('<div class="dim"></div>');
+    $el.removeClass("scroll_lock");
     isDim
-        ? $(".layer_fullsheet").show()
-        : $el.show().attr({ tabindex: "0", "aria-hidden": "false" }).focus();
+        ? $(".layer_fullsheet").show().addClass("scroll_lock")
+        : $el.show().attr({ tabindex: "0", "aria-hidden": "false" }).focus().removeClass("scroll_lock");
     setTimeout(function () {
         $el.find(".layer_inner").addClass("on");
     }, 50);
@@ -118,8 +120,8 @@ function layer_fullsheet(el) {
     $el.find(".js_pop_close").click(function () {
         $el.find(".layer_inner").removeClass("on");
         setTimeout(function () {
-            isDim ? $(".layer_fullsheet").hide() : $el.hide();
-            $("html").removeClass("scroll_lock"); //2021-10-28 html 스크롤 잠금 수정
+            isDim ? $(".layer_fullsheet").hide().removeClass("scroll_lock") : $el.hide();
+            $(document).find(".layer_inner.on").length === 0 && $("html").removeClass("scroll_lock");
             $el.attr({ tabindex: "-1", "aria-hidden": "true" })
                 .find(".dim")
                 .remove();

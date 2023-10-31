@@ -612,8 +612,42 @@
 </div>
 <!-- [E] PP1_2_6_1_3FP 내 자동차 등록 -->
 
+<div id="layer001" class="layer_fullsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+            <strong class="tit">내 자동차 등록</strong>
+            <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont fullColumFlex">
+            <div class="tit2_wrap">
+                <div class="left">
+                    <h2 class="tit_h2">
+                        자동차 정보 등록을<br>
+                        실패하였습니다.
+                    </h2>
+                </div>
+            </div>
+            <div class="wrap_complete">
+                <p class="ico_complete fail"></p>
+            </div>
+
+            <!-- [S] 하단 고정 영역 -->
+            <div class="fix_bottom">
+                <!-- btn_wrap -->
+                <div class="btn_wrap">
+                    <div class="btnGroup">
+                        <p><a href="#none" class="btnBl1" role="button">확인</a></p><!-- 비활성시 'disable' 추가 -->
+                    </div>
+                </div>
+            </div>
+            <!-- [E] 하단 고정 영역 -->
+        </div>
+    </div>
+</div>
+
 <script>
 $(document).ready(function(){
+
 
     $(".btnFolding").on("click",function(){
         $(this).hasClass("show") ? $(this).find("i").text("닫기") : $(this).find("i").text("펼치기")
@@ -681,7 +715,7 @@ $(document).ready(function(){
             $fixBottom.find('.dock_bar').fadeIn();
         });
     }
-    $('#PP1_2_6_1_3FP .layer_cont').css('height','calc(100% - 280px)');
+    /*$('#PP1_2_6_1_3FP .layer_cont').css('height','calc(100% - 280px)'); 1031 삭제 */
 
 });
 // [S] 바텀시트
@@ -690,7 +724,7 @@ $(document).on("click", ".btn_open_bottom_sheet", function(e){
 
     var $href = $(this).attr('href');
     layer_bottomsheet($href);
-    $('html').addClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+    // $('html').addClass('scroll_lock'); 1031 삭제
 
     // [S] multi layer 2021-08-02 추가
     var dimIdx = $('.dim').index();
@@ -705,7 +739,7 @@ $(document).on("click", ".btn_open_full_sheet", function(e){
 	var $fullPop = $(this).attr('href');
     layer_fullsheet($fullPop);
 
-    $('html').addClass('scroll_lock');
+    //$('html').addClass('scroll_lock'); 1031 삭제
 	$focusReturn = $(this);
 });
 

@@ -1208,6 +1208,32 @@ $black : #17181A;
   input:checked + span {
     background-image: url('../img/theme/apthefin/ic_circle_chk_on.png');
   }
+  &.-noRound {
+    display: inline-flex !important;
+  }
+}
+
+.agChkItem {
+  .chkBox {
+    display:inline-flex !important;
+    span {
+      width:rem(20);
+      height:rem(20);
+      background-image:url('../img/theme/apthefin/ic_chk_arw.png');
+      margin-right:rem(10);
+    }
+    i {
+      display:block;
+      flex-shrink: 0;
+    }
+    input:checked+span {
+      background-image:url('../img/theme/apthefin/ic_chk_arw_on.png');
+    }
+  }
+  .btnAgMore {
+    top:50% !important;
+    transform: translateY(-50%);
+  }
 }
 
 .asGroup.houseGroup .chkBox {display:none}
