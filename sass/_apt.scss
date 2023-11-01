@@ -729,11 +729,21 @@
   .btn-aptDel {
     @include txtHidden();
     position: absolute;
-    @include iconTrash();
-    right:0;
-    top:0;
+    right:rem(-5);
+    top:rem(-5);
     display:none;
     z-index:1;
+    width:rem(30);
+    height:rem(30);
+    &:before {
+      content:"";
+      @include iconTrash();
+      display:block;
+      position: absolute;
+      left:50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+    }
   }
   &.editOn {
     .expectInfo {position: relative}
