@@ -726,20 +726,22 @@
 }
 
 .aptFavList {
-  .linking {
-    pointer-events: none;
-    .assNum {display:none}
+  .btn-aptDel {
+    @include txtHidden();
+    position: absolute;
+    @include iconTrash();
+    right:0;
+    top:0;
+    display:none;
+    z-index:1;
   }
   &.editOn {
-    .astBox .expectPay .expectInfo span.assNum:after {
-      @include iconTrash();
-    }
+    .expectInfo {position: relative}
     .linking {
-      pointer-events: auto;
-      .assNum {
-        display: block;
-      }
+      pointer-events: none;
+      .assNum {display:none}
     }
+    .btn-aptDel {display:block}
   }
 }
 
