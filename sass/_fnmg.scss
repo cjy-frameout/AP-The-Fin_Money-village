@@ -362,7 +362,7 @@
                 @include iconArrow();
                 position: absolute;
                 left:50%;
-                bottom:rem(30);
+                bottom:rem(-30);
                 transform: translateX(-50%) rotate(90deg);
             }
         }
