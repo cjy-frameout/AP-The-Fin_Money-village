@@ -763,15 +763,26 @@ input[type="file"], .input-box input[type="file"] {
 .historyNone {
 	font-size: rem(16);
 	padding:rem(20) 0;
-
+	&:before {
+		content:"";
+		@include iconTriCaution;
+		display:block;
+		margin:0 auto rem(20);
+	}
 	.txt {
 		font-size: rem(16);
-
-		&:before {
-			content:"";
-			@include iconTriCaution;
-			display:block;
-			margin:0 auto rem(20);
+	}
+	.tAccTit {
+		display:flex;
+		align-items: center;
+		justify-content: center;
+		.im {
+			margin-right:rem(5);
+			img {width:rem(24);height:rem(24)}
+		}
+		~ .txt {
+			margin-top:rem(10);
+			&:before {display:none}
 		}
 	}
 }

@@ -10554,7 +10554,7 @@
   color: #aaa;
   font-weight: 400;
 
-  &:before {
+  /*&:before {
     content: '';
     display: block;
     width: rem(100);
@@ -10562,7 +10562,7 @@
     background: url('../img/ic/ic_complete_fail_0816.svg') no-repeat center center;
     background-size: 100% auto;
     margin: 0 auto rem(6);
-  }
+  }*/
 }
 
 .listNone, .insLink .listNone, .accHistory .historyList .listNone, .asGroup .asList .listNone {
