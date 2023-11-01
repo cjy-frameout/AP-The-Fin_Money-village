@@ -346,7 +346,7 @@
             content:"";
             display:block;
             position: absolute;
-            left:20px;
+            left:rem(20);
             top:50%;
             transform: translateY(-50%);
             background-repeat: no-repeat;
@@ -355,14 +355,14 @@
             width:rem(48);height:rem(64);
         }
         &:not(:last-of-type){
-            margin-bottom:40px;
+            margin-bottom:rem(40);
             &:after {
                 content:"";
                 display: block;
                 @include iconArrow();
                 position: absolute;
                 left:50%;
-                bottom:-30px;
+                bottom:rem(30);
                 transform: translateX(-50%) rotate(90deg);
             }
         }
@@ -395,7 +395,7 @@
             display: block;
             background:url("../img/theme/apthefin/ic_invest_down.svg") no-repeat 0 0;
             @include iconTriangle($color:#1C64F2);
-            margin-left:2px;
+            margin-left:rem(2);
         }
     }
     &.-naver {
