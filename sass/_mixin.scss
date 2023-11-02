@@ -2,21 +2,19 @@
 
 $root-value:16 !default;
 
-
+//램 계산 (실제px사이즈 / 비율 ) / html px사이즈)+rem
 @function rem($size, $ratio:1,$rootFontsize:$root-value) {
     @return math.div(math.div($size,$ratio) , $rootFontsize) + rem;
 }
 
-@mixin inline-block(){
-    display:inline-block;zoom:1;*display:inline;
-}
-
+//텍스트만 숨기기
 @mixin txtHidden(){
     overflow:hidden;
     display:inline-block;*display:inline; zoom:1;
     text-indent:rem(-9999); white-space:nowrap; line-height:0;
 }
 
+//대상 자체를 숨기기
 @mixin txtHide(){
     position:absolute !important;
     width:0 !important;
@@ -41,6 +39,8 @@ $root-value:16 !default;
         -webkit-line-clamp: $line;
     }
 }
+
+//inline / block 요소 대상 가운데 정렬
 @mixin before-middle() {
     vertical-align: middle;
     text-align:center;
@@ -55,6 +55,7 @@ $root-value:16 !default;
     }
 }
 
+//대상이후에 요소 가운데 정렬
 @mixin after-middle(){
   vertical-align: middle;
   &:after {
@@ -79,17 +80,7 @@ $root-value:16 !default;
     display: table-cell;
     vertical-align: middle;
 }
-legend {
-    overflow: hidden;
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    text-indent: rem(-9999);
-    white-space: nowrap;
-    line-height: 0;
-    width:0;height:0;
-    font-size:0;
-}
+
 
 
 // mediaquery

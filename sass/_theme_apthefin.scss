@@ -12299,10 +12299,16 @@ a.btnMenu {
 
 		&.ic_finstore {
 			background-image: url('../img/theme/apthefin/ic_dock_finstore.png?0426');
+			&.on {
+				background-image: url('../img/theme/apthefin/ic_dock_finstore_on.png');
+			}
 		}
 
 		&.ic_dreamN {
 			background-image: url('../img/theme/apthefin/ic_dock_dreamN.png?0426');
+			&.on {
+				background-image: url('../img/theme/apthefin/ic_dock_dreamN_on.png');
+			}
 		}
 
 		&.ic_finProfile {
