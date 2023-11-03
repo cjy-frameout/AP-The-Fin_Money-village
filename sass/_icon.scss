@@ -77,11 +77,15 @@
   @include icon();
   background-image:url('../img/theme/apthefin/icon/ic_btnMore.png');
 }
-@mixin iconArrow($size:20,$color:default){
+@mixin iconArrow($size:20,$color:default,$type:defalut){
   width:rem($size);
   height:rem($size);
   @include icon();
-  mask-image: url('../img/theme/apthefin/svg/ic_arrow_black.svg');
+  @if($type==default){
+    mask-image: url('../img/theme/apthefin/svg/ic_arrow_black.svg');
+  }@else if($type==bold){
+    mask-image: url('../img/theme/apthefin/svg/ic_arrow_bold.svg');
+  }
   @if($color==default){
     background-color:#17181A;
   }@else {
