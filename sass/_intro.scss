@@ -3,17 +3,19 @@
 .intro {
   position: fixed;
   left:50%;
-  top:50%;
-  transform: translate(-50%,-50%);
+  //top:50%;
+  transform: translateX(-50%);
   width:100%;
   text-align:center;
-  padding-bottom:rem(110);
+  //padding-bottom:rem(110);
+  height: 100%;
   &-tit {
     font-size:rem(30);
     font-weight:700;
     line-height:rem(36);
     letter-spacing: rem(-0.6);
     color:#333;
+    padding-top: rem(80);
   }
   &-dec {
     font-size:rem(14);
@@ -24,11 +26,14 @@
   }
   &-img {
     display:block;
-    width:rem(280);
-    height:rem(344);
-    background:#ccc;
-    margin:rem(20) auto 0;
-  }
+    width:100%;
+    height:auto;
+    //background:#ccc;
+    margin:rem(40) auto 0; 
+    img {
+      max-width: 100%;
+    }
+ }
   .slider_container {
     .slick-dots li button {
       width:rem(6);
@@ -38,6 +43,13 @@
     .slick-dots li.slick-active button {
       background-color:#434655;
     }
+  }
+
+  .slick-dots {
+    position: absolute !important;
+    top: rem(200);
+    left: 0;
+    margin-top: 0 !important;
   }
 }
 .introBtnLast {
