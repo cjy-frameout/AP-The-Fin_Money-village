@@ -637,10 +637,9 @@
   }
   tbody {
     tr {
-      &:first-of-type td:nth-child(4) {text-align:right}
-      &:not(:first-of-type) {
-        td:nth-child(3) {text-align:right}
-      }
+      td[rowspan] ~ td:nth-child(4) {text-align:right}
+      td:not([rowspan]) ~ td:nth-child(3) {text-align:right}
+      td[rowspan] ~ td:nth-child(3) {text-align:center}
     }
   }
 }
