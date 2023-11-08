@@ -20592,12 +20592,10 @@ html.-activeGnb {
 .gnbMenu-profile {
 	border: rem(1) solid #E5E5E5;
 	border-radius: rem(10);
-	padding: rem(20) rem(20) rem(10) rem(20);
+	padding: rem(20);
 	margin-top: rem(30);
 
 	._top {
-		border-bottom: rem(1) solid #E5E5E5;
-		padding-bottom: rem(10);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -20626,31 +20624,24 @@ html.-activeGnb {
 	}
 
 	._name {
-		margin: 0 rem(4) 0 rem(6);
+		margin: 0 rem(4) 0 rem(30);
 		font-size: rem(16);
-		font-weight: 700;
+		font-weight: 400;
 		line-height: rem(24);
 		color: #333;
 	}
 
 	._linkProfile {
-		border-radius: rem(6);
-		padding: rem(8) rem(12);
+		font-size:rem(14);
+		line-height:rem(22);
+		color:#999;
 		display: flex;
 		align-items: center;
-		background: #EBF5FF;
-		color: #1C64F2;
-		font-size: rem(13);
-		font-weight: 500;
-		line-height: rem(18);
-
-		&:after {
-			content: "";
-			display: block;
-			width: rem(20);
-			height: rem(20);
-			background: url("../img/theme/apthefin/icon/ic_profile_setting.png") no-repeat 0 0;
-			background-size: cover;
+		&:before {
+			content:"";
+			display:block;
+			@include iconEdit();
+			margin-right:rem(2);
 		}
 	}
 

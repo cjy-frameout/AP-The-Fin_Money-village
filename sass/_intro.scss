@@ -25,13 +25,15 @@
     height:rem(66);
   }
   &-img {
-    display:block;
+    display:flex;
     width:100%;
     height:auto;
     //background:#ccc;
-    margin:rem(40) auto 0; 
+    margin:rem(40) auto 0;
+    justify-content: center;
     img {
-      max-width: 100%;
+      width:rem(306);
+      margin-left:rem(26);
     }
  }
   .slider_container {
