@@ -64,12 +64,40 @@
                         </section>
                         <section class="gnbMenu-profile">
                             <div class="_top">
-                                <p class="_info">
-                                    <span class="_thum" style="background-image:url('../../img/theme/apthefin/@thum.jpg')"></span>
-                                    <span class="_name">홍길동</span>
-                                    <!--11/08 삭제 <a href="#layer_name" class="btn_open_bottom_sheet btn_more_ask" role="button"><span class="ico_ask type_white2"><em class="blind">더보기</em></span></a>-->
-                                </p>
-                                <a href="" class="_linkProfile">관리</a> <!-- 11/08 텍스트변경 -->
+                                <!-- <div style="width: 100%; display: flex; justify-content: space-between;">
+                                    <p class="_info" >
+                                        <span class="_thum" style="background-image:url('../../img/theme/apthefin/@thum.jpg')"></span>
+                                        <span class="_name">홍길동</span>
+                                
+                                    </p>
+                                    <a href="#none" class="_linkProfile" role="button">수정</a>
+                                </div> -->
+
+                                <div class="userProfile-box -edit" >
+                                    <div class="userProfile-thum" style="background-image: url('../../img/theme/apthefin/icon/ic_profile_thum.png')">
+                                    </div>
+                                    <div class="userProfile-infoBox">
+                                        <label class="userProfile-info">
+                                            <input type="text" disabled class="userProfile-inp" placeholder="프로필 네임" value="홍길동">
+                                        </label>
+                                    </div>
+                                    <a href="#none" class="_linkProfile _edit-profile" role="button" style="width:80px;">수정</a> <!-- 11/08 텍스트변경 -->
+                                </div>
+                                
+                                <div class="userProfile-box -edit" style="display: none;">
+                                    <div class="userProfile-thum" style="background-image: url('../../img/theme/apthefin/icon/ic_profile_thum.png')">
+                                        <!-- <button type="button" class="userProfile-editThum">프로필 이미지 변경</button> -->
+                                        <input type="file" id="file" >
+                                        <label for="file" class="userProfile-editThum">프로필 이미지 변경</label>
+                                    </div>
+                                    <div class="userProfile-infoBox">
+                                        <label class="userProfile-info">
+                                            <input type="text" class="userProfile-inp" placeholder="프로필 네임" value="홍길동">
+                                        </label>
+                                    </div>
+                                    <a href="#changeProfile" role="button" class="btn-open-layerPop btn-complete">완료</a>
+                                </div>
+                                
                             </div>
                             <!-- 11/08 삭제
 
@@ -186,6 +214,27 @@
         </div>
     </div>
     <!-- //header -->
+</div>
+
+
+<div id="changeProfile" class="layer_popup type2" role="dialog" tabindex="-1" aria-hidden="true" style="display: none;"> 
+    <div class="layer_position">
+        <div class="layer_inner">
+            <div class="layer_cont">
+                <div class="msg_box">
+                    <p class="msg_alert fs-14"> 
+                        
+                        변경된 내용을<br>
+                        저장하시겠습니까?
+                    </p>
+                </div>
+                <div class="btn_layer_wrap">
+                    <button type="button" class="js_pop_close btn_cancel btn-cancel-profileChange"><span>취소</span></button>
+                    <button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 

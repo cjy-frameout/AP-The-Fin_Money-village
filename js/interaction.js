@@ -90,6 +90,24 @@
                     );
                 });
             });
+        }),
+        ($.fn.profileEdit = function () {
+            return this.each(function () {
+                var $this = $(this);
+                var $cancelProfile = $(".btn-cancel-profileChange");
+                $this.each(function () {
+                    var tt = $(this);
+                    var $btn = tt.find("._edit-profile");
+                    $btn.on("click", function () {
+                        tt.hide();
+                        tt.siblings().show();
+                    });
+                    $cancelProfile.on("click", function () {
+                        tt.hide();
+                        tt.siblings().show();
+                    });
+                });
+            });
         });
 })(jQuery);
 
@@ -102,7 +120,11 @@ function layer_fullsheet(el) {
     $el.removeClass("scroll_lock");
     isDim
         ? $(".layer_fullsheet").show().addClass("scroll_lock")
-        : $el.show().attr({ tabindex: "0", "aria-hidden": "false" }).focus().removeClass("scroll_lock");
+        : $el
+              .show()
+              .attr({ tabindex: "0", "aria-hidden": "false" })
+              .focus()
+              .removeClass("scroll_lock");
     setTimeout(function () {
         $el.find(".layer_inner").addClass("on");
     }, 50);
@@ -120,8 +142,11 @@ function layer_fullsheet(el) {
     $el.find(".js_pop_close").click(function () {
         $el.find(".layer_inner").removeClass("on");
         setTimeout(function () {
-            isDim ? $(".layer_fullsheet").hide().removeClass("scroll_lock") : $el.hide();
-            $(document).find(".layer_inner.on").length === 0 && $("html").removeClass("scroll_lock");
+            isDim
+                ? $(".layer_fullsheet").hide().removeClass("scroll_lock")
+                : $el.hide();
+            $(document).find(".layer_inner.on").length === 0 &&
+                $("html").removeClass("scroll_lock");
             $el.attr({ tabindex: "-1", "aria-hidden": "true" })
                 .find(".dim")
                 .remove();
@@ -184,4 +209,5 @@ document.addEventListener("DOMContentLoaded", function (e) {
     $(".search-box").searchDel();
     $(".resi-type").resiType();
     $(".feed-quick-goTop").goTop();
+    $(".userProfile-box").profileEdit();
 });

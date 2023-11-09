@@ -748,6 +748,21 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
     }
 }
 
+.btn-complete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EBF5FF;
+    border-radius: rem(6);
+    color: #1C64F2 !important;
+    position: relative;
+    font-size:rem(13);
+    font-weight:500;
+    height: rem(34);
+    width: rem(70);
+    padding: 0 rem(12);
+}
+
 .btn-search {
     background: url(../img/theme/apthefin/bt_search.png) no-repeat 0 0;
     background-size: 100%;
