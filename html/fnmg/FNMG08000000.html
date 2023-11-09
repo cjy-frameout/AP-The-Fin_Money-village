@@ -64,7 +64,7 @@
                     <!-- [E] 인증 동의 프로세스 -->
                     <h3>자산 조회를<br> 시작해주세요.</h3>
                     <p>
-                        <span>고객님이 선택하신 개인신용정보를<br> 조회하기 위해 동의가 필요합니다.</span>
+                        <span>상세정보 전송요구 및 <br>개인(신용)정보 수집・이용동의가 필요합니다</span>
                     </p>
                 </div>
                 <div class="terms_wrap">
@@ -258,8 +258,8 @@
                         <p class="btn_agree_cancel tac"><a href="#none" class="btnUnder">동의하지 않음 (돌아가기)</a></p><!-- 2022-08-17 동의하기 버튼 위로 이동 -->
                         <p class="btn_step -continue">
                             <a href="#none" class="btnBl1 wide btMore n_1" role="button"><i class="more"></i>계속보기</a>
-                            <a href="#none" class="btnBl1 wide btAgr01 -active" role="button">전송요구 동의하기</a>
-                            <a href="#none" class="btnBl1 wide btAgr02" role="button">수집ㆍ이용 동의하기</a>
+                            <a href="#none" class="btnBl1 wide btAgr01 -active" role="button">계속보기</a>
+                            <a href="#none" class="btnBl1 wide btAgr02" role="button">계속보기</a>
                             <a href="#none" class="btnBl1 wide btAgr03" role="button">동의하기</a>
                         </p>
                     </div>
@@ -292,6 +292,7 @@
                 scrollChk();
             });
         });
+        scrollChk();
     });
 
     $(window).scroll(function(){
@@ -305,7 +306,7 @@
         var windowHeight = $(window).height() + $windowTop + 10; // 창 높이
 
         if (contentHeight > windowHeight) {
-            //스크롤 끝이 아닐때
+
         } else {
             //스크롤 끝
             $(".btMore").hide();
