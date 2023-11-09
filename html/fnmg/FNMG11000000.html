@@ -64,7 +64,7 @@
                     <!-- [E] 인증 동의 프로세스 -->
                     <h3>상세 자산 내역을<br> 확인해주세요.</h3>
                     <p>
-                        <span>고객님이 관리할 개인신용정보의<br>범위를 확인해주세요.</span>
+                        <span>상세정보 전송요구 및 <br>개인(신용)정보 수집・이용동의가 필요합니다</span>
                     </p>
                 </div>
                 <div class="terms_wrap">
@@ -135,64 +135,9 @@
                                 </tbody>
                             </table>
                         </div>
-                        <!-- 2021-10-29  테이블 추가  -->
-                        <div class="servTerm_tbl">
-                            <p class="tbl_tit">&lt;별도 고지 항목&gt;</p>
-                            <table>
-                                <caption>상품구매 카테고리 정보(선택) 정보 안내 표</caption>
-                                <colgroup>
-                                    <col style="width:35%;">
-                                    <col>
-                                </colgroup>
-                                <tbody>
-                                <tr>
-                                    <th>상품구매 카테고리 정보(선택 항목)</th>
-                                    <td>
-                                        가전 및 전자/도서 및 문구/패션 및 의류/스포츠/화장품/아동 및 유아/식품/생활 및 가구/여행 및 교통/문화 및 레저/음식/E쿠폰 및 기타서비스 카테고리 정보
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <p class="tx">[선불전자지급수단의 상품구매정보 항목] 에는 실제 구매한 상품이 아닌 해당 상품의 카테고리(13항목으로 구분)가 포함되어 있습니다.</p><!-- 2021-11-12 <p class="tx"> 영역추가 -->
-                            <table>
-                                <caption>가맹점명 및 사업자등록번호 정보 안내 표</caption>
-                                <colgroup>
-                                    <col style="width:35%;">
-                                    <col>
-                                </colgroup>
-                                <tbody>
-                                <tr>
-                                    <th>가맹점명 및 사업자등록번호 정보 (선택 항목)</th>
-                                    <td>
-                                        가맹점명 및 사업자등록번호
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <p class="tx">[카드청구 및 결제정보의 가맹점명 및 사업자등록번호 항목]에는 소비한 가맹점에 대한 상세한 정보가 포함되어 있습니다.</p><!-- 2021-11-12 <p class="tx"> 영역추가 -->
-                            <table>
-                                <caption>적요 또는 거래메모 정보 안내 표</caption>
-                                <colgroup>
-                                    <col style="width:35%;">
-                                    <col>
-                                </colgroup>
-                                <tbody>
-                                <tr>
-                                    <th>적요 또는 거래메모 정보 (선택 항목)</th>
-                                    <td>
-                                        적요 또는 거래메모 정보
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <p class="tx">[계좌정보의 적요 항목]에는 송금인/수취인명 정보 등 상세한 거래 정보가 포함되어 있습니다</p><!-- 2021-11-12 <p class="tx"> 영역추가 -->
-                        </div>
-                        <!-- //2021-10-29  테이블 추가  -->
 
-                        <div class="wrap_rdo_tab">
-                            <div class="agree_chk_tit">
-                                <span class="tx">개인(신용)정보 수집·이용 동의</span>
-                            </div>
+                        <!-- 1109 추가 -->
+                        <div class="wrap_rdo_tab mgt30">
                             <div class="agree_item optional">
                                 <p class="agree_tit">위 개인(신용)정보 수집 이용·동의에 동의하십니까?</p>
                                 <ul class="radio_list">
@@ -214,139 +159,212 @@
                             </div>
                         </div>
 
+
+
                         <div class="wrap_rdo_tab">
                             <div class="agree_chk_tit">
-                                <span class="tx">전송 요구 동의</span>
-                            </div>
-                            <div class="agree_item optional">
-                                <p class="agree_tit">위 상품구매정보 전송 요구에 동의하십니까?</p>
-                                <ul class="radio_list">
-                                    <li>
-                                        <label for="agr1">
-                                            <input type="radio" name="agrItem1" id="agr1">
-                                            <i></i>
-                                            <span>미동의</span>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label for="agr2">
-                                            <input type="radio" name="agrItem1" id="agr2">
-                                            <i></i>
-                                            <span>동의</span>
-                                        </label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="agree_item optional">
-                                <p class="agree_tit">위 가맹점명 및 사업자등록번호 전송 요구에 동의하십니까?</p>
-                                <ul class="radio_list">
-                                    <li>
-                                        <label for="agr3">
-                                            <input type="radio" name="agrItem2" id="agr3">
-                                            <i></i>
-                                            <span>미동의</span>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label for="agr4">
-                                            <input type="radio" name="agrItem2" id="agr4">
-                                            <i></i>
-                                            <span>동의</span>
-                                        </label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="agree_item optional">
-                                <p class="agree_tit">위 적요 또는 거래메모정보 전송 요구에 동의하십니까?</p>
-                                <ul class="radio_list">
-                                    <li>
-                                        <label for="agr5">
-                                            <input type="radio" name="agrItem3" id="agr5">
-                                            <i></i>
-                                            <span>미동의</span>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label for="agr6">
-                                            <input type="radio" name="agrItem3" id="agr6">
-                                            <i></i>
-                                            <span>동의</span>
-                                        </label>
-                                    </li>
-                                </ul>
+                                <span class="tx">별도 고지 항목</span>
                             </div>
                         </div>
+
+                        <!-- 2021-10-29  테이블 추가  -->
+                        <div class="servTerm_tbl">
+                            <table>
+                                <caption>상품구매 카테고리 정보(선택) 정보 안내 표</caption>
+                                <colgroup>
+                                    <col style="width:35%;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <th>상품구매 카테고리 정보(선택 항목)</th>
+                                    <td>
+                                        가전 및 전자/도서 및 문구/패션 및 의류/스포츠/화장품/아동 및 유아/식품/생활 및 가구/여행 및 교통/문화 및 레저/음식/E쿠폰 및 기타서비스 카테고리 정보
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p class="tx mgt10">[선불전자지급수단의 상품구매정보 항목] 에는 실제 구매한 상품이 아닌 해당 상품의 카테고리(13항목으로 구분)가 포함되어 있습니다.</p><!-- 2021-11-12 <p class="tx"> 영역추가 -->
+
+                            <!-- 1109 추가 -->
+                            <div class="wrap_rdo_tab mgt30">
+                                <div class="agree_item optional">
+                                    <p class="agree_tit">위 상품구매정보 전송 요구에 동의하십니까?</p>
+                                    <ul class="radio_list">
+                                        <li>
+                                            <label for="agr_pr_3">
+                                                <input type="radio" name="agrItem_pr_1" id="agr_pr_3">
+                                                <i></i>
+                                                <span>미동의</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label for="agr_pr_4">
+                                                <input type="radio" name="agrItem_pr_1" id="agr_pr_4">
+                                                <i></i>
+                                                <span>동의</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <table class="mgt20">
+                                <caption>가맹점명 및 사업자등록번호 정보 안내 표</caption>
+                                <colgroup>
+                                    <col style="width:35%;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <th>가맹점명 및 사업자등록번호 정보 (선택 항목)</th>
+                                    <td>
+                                        가맹점명 및 사업자등록번호
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p class="tx mgt10">[카드청구 및 결제정보의 가맹점명 및 사업자등록번호 항목]에는 소비한 가맹점에 대한 상세한 정보가 포함되어 있습니다.</p><!-- 2021-11-12 <p class="tx"> 영역추가 -->
+
+                            <!-- 1109 추가 -->
+                            <div class="wrap_rdo_tab mgt30">
+                                <div class="agree_item optional">
+                                    <p class="agree_tit">위 가맹점명 및 사업자등록번호 전송 요구에 동의하십니까?</p>
+                                    <ul class="radio_list">
+                                        <li>
+                                            <label for="agr_pr_5">
+                                                <input type="radio" name="agrItem_pr_1" id="agr_pr_5">
+                                                <i></i>
+                                                <span>미동의</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label for="agr_pr_6">
+                                                <input type="radio" name="agrItem_pr_1" id="agr_pr_6">
+                                                <i></i>
+                                                <span>동의</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <table class="mgt20">
+                                <caption>적요 또는 거래메모 정보 안내 표</caption>
+                                <colgroup>
+                                    <col style="width:35%;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <th>적요 또는 거래메모 정보 (선택 항목)</th>
+                                    <td>
+                                        적요 또는 거래메모 정보
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p class="tx mgt10">[계좌정보의 적요 항목]에는 송금인/수취인명 정보 등 상세한 거래 정보가 포함되어 있습니다</p><!-- 2021-11-12 <p class="tx"> 영역추가 -->
+
+                            <!-- 1109 추가 -->
+                            <div class="wrap_rdo_tab mgt30">
+                                <div class="agree_item optional">
+                                    <p class="agree_tit">위 가맹점명 및 사업자등록번호 전송 요구에 동의하십니까?</p>
+                                    <ul class="radio_list">
+                                        <li>
+                                            <label for="agr_pr_7">
+                                                <input type="radio" name="agrItem_pr_1" id="agr_pr_7">
+                                                <i></i>
+                                                <span>미동의</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label for="agr_pr_8">
+                                                <input type="radio" name="agrItem_pr_1" id="agr_pr_8">
+                                                <i></i>
+                                                <span>동의</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //2021-10-29  테이블 추가  -->
+
+
 
                         <div class="wrap_rdo_tab">
                             <div class="agree_chk_tit">
                                 <span class="tx">정기적 전송 여부 및 종료시점</span>
                             </div>
-                            <div class="agree_chk">
-                                <div class="agree_item">
-                                    <p class="agree_tit">정기적 전송</p>
-                                    <ul class="radio_list">
-                                        <li>
-                                            <label for="radio1">
-                                                <input type="radio" name="radio" id="radio1">
-                                                <i></i>
-                                                <span>전송안함</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label for="radio2">
-                                                <input type="radio" name="radio" id="radio2" checked>
-                                                <i></i>
-                                                <span>주1회</span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="agree_item">
-                                    <p class="agree_tit">전송요구의 종료시점 (전송요구서의 유효기간)</p>
-                                    <ul class="radio_list">
-                                        <li>
-                                            <label for="radio3">
-                                                <input type="radio" name="radio2" id="radio3" checked>
-                                                <i></i>
-                                                <span>1년</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label for="setPeriod">
-                                                <input type="radio" name="radio2" id="setPeriod">
-                                                <i></i>
-                                                <span id="selEndDay">
+                            <div class="agree_item optional">
+                                <p class="agree_tit">정기적 전송</p>
+                                <ul class="radio_list">
+                                    <li>
+                                        <label for="agr_pr_11">
+                                            <input type="radio" name="agrItem_pr_6" id="agr_pr_11">
+                                            <i></i>
+                                            <span>전송안함</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="agr_pr_12">
+                                            <input type="radio" name="agrItem_pr_6" id="agr_pr_12">
+                                            <i></i>
+                                            <span>주 1회</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="agree_item optional">
+                                <p class="agree_tit">전송요구의 종료시점 (전송요구서의 유효기간)</p>
+                                <ul class="radio_list">
+                                    <li>
+                                        <label for="radio3000">
+                                            <input type="radio" name="radio2000" id="radio3000" checked>
+                                            <i></i>
+                                            <span>1년</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="setPeriod">
+                                            <input type="radio" name="radio2000" id="setPeriod">
+                                            <i></i>
+                                            <span id="selEndDay">
 													직접선택 <!-- 2022-02-09 기간 설정 후, 하단 JS 예시  -->
 												</span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                    <!-- 2022-02-09 기간 설정 영역 수정 -->
-                                    <div class="period_area" style="display:none">
-                                        <div class="filterItem">
-                                            <ul class="radioTab">
-                                                <li>
-                                                    <input type="radio" id="setPeriod1" name="radioTab1" class="blind">
-                                                    <label for="setPeriod1">1개월</label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" id="setPeriod2" name="radioTab1" class="blind">
-                                                    <label for="setPeriod2">3개월</label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" id="setPeriod3" name="radioTab1" class="blind">
-                                                    <label for="setPeriod3">6개월</label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" id="setPeriod4" name="radioTab1" class="blind">
-                                                    <label for="setPeriod4">9개월</label>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        </label>
+                                    </li>
+                                </ul>
+                                <!-- 2022-02-09 기간 설정 영역 수정 -->
+                                <div class="period_area" style="display:none">
+                                    <div class="filterItem">
+                                        <ul class="radioTab">
+                                            <li>
+                                                <input type="radio" id="setPeriod1" name="radioTab1" class="blind">
+                                                <label for="setPeriod1">1개월</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="setPeriod2" name="radioTab1" class="blind">
+                                                <label for="setPeriod2">3개월</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="setPeriod3" name="radioTab1" class="blind">
+                                                <label for="setPeriod3">6개월</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="setPeriod4" name="radioTab1" class="blind">
+                                                <label for="setPeriod4">9개월</label>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+
+
+
                     </div>
                 </div>
             </div>
