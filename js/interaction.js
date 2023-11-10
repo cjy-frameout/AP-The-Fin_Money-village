@@ -101,11 +101,11 @@
                     var $btn = tt.find("._edit-profile");
                     $btn.on("click", function () {
                         $this.addClass("-edit");
-                        $inp.attr("disabled",false).focus();
+                        $inp.attr("disabled", false).focus();
                     });
                     $cancelProfile.on("click", function () {
                         $this.removeClass("-edit");
-                        $inp.attr("disabled",true);
+                        $inp.attr("disabled", true);
                     });
                 });
             });
@@ -113,7 +113,7 @@
 })(jQuery);
 
 //전체 레이어 팝업
-function layer_fullsheet(el) {
+function layer_fullsheet(el, callback) {
     var $el = $(el);
     var isDim;
     $("html").addClass("scroll_lock"); //2021-10-28 html 스크롤 잠금 수정
@@ -128,6 +128,9 @@ function layer_fullsheet(el) {
               .removeClass("scroll_lock");
     setTimeout(function () {
         $el.find(".layer_inner").addClass("on");
+        if (typeof callback == "function") {
+            callback();
+        }
     }, 50);
     var dimIdx = $(".dim").index();
     var thisDim = $el.find(".dim");
@@ -151,6 +154,11 @@ function layer_fullsheet(el) {
             $el.attr({ tabindex: "-1", "aria-hidden": "true" })
                 .find(".dim")
                 .remove();
+            if ($(".dim").length == "2") {
+                $(".dim:eq(1)").css("opacity", ".7");
+            } else if ($(".dim").length == "1") {
+                $(".dim").css("opacity", ".7");
+            }
         }, 200);
         $focusReturn != undefined && $focusReturn.focus(); //230920 예외추가
         return false;
