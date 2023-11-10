@@ -124,6 +124,7 @@
     justify-content: space-between;
     gap: 0 rem(20);
     align-items: center;
+    .btn-complete {display: none}
 }
 
 .userProfile-infoBox {
@@ -135,6 +136,10 @@
     height: rem(50);
     justify-content: space-between;
     align-items: center;
+}
+.userProfile-inp {
+    border-bottom:0;
+    background: transparent;
 }
 
 .userProfile-thum {
@@ -184,7 +189,6 @@
 }
 
 .userProfile-inp {
-    display: none;
     height: rem(50);
     width: 100%;
     border: none;
@@ -215,6 +219,9 @@
 }
 
 .userProfile-box.-edit {
+    .btn-complete {display:flex}
+    ._edit-profile {display:none}
+    .userProfile-inp {border-bottom:1px solid #e5e5e5}
     .userProfile-editThum, .userProfile-inp {
         display: block;
     }
@@ -226,6 +233,22 @@
     .userProfile-infoFeed {
         margin-top: rem(10);
     }
+}
+
+.btn-complete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EBF5FF;
+    border-radius: rem(6);
+    color: #1C64F2 !important;
+    position: relative;
+    font-size:rem(13);
+    font-weight:500;
+    height: rem(34);
+    width: rem(70);
+    padding: 0 rem(12);
+    flex-shrink: 0;
 }
 
 .multiProfile-empty {

@@ -65,32 +65,22 @@
                         <section class="gnbMenu-profile">
                             <div class="_top">
                                 
-                                <!-- S : 11/09 수정 -->
-                                <div class="userProfile-box -edit" >
+                                <!-- S : 11/10 수정 -->
+                                <div class="userProfile-box" > <!-- 수정시 -edit 클래스가 붙습니다. 수정완료후에는 -edit를 빼주시면 됩니다. -->
                                     <div class="userProfile-thum" style="background-image: url('../../img/theme/apthefin/icon/ic_profile_thum.png')">
+                                        <input type="file" id="file" accept="image/*">
+                                        <label for="file" class="userProfile-editThum">프로필 이미지 변경</label>
                                     </div>
                                     <div class="userProfile-infoBox">
                                         <label class="userProfile-info">
                                             <input type="text" disabled class="userProfile-inp" placeholder="프로필 네임" value="홍길동">
                                         </label>
                                     </div>
-                                    <a href="#none" class="_linkProfile _edit-profile" role="button" style="width:80px;">수정</a> <!-- 11/08 텍스트변경 -->
-                                </div>
-                                
-                                <div class="userProfile-box -edit" style="display: none;">
-                                    <div class="userProfile-thum" style="background-image: url('../../img/theme/apthefin/icon/ic_profile_thum.png')">
-                                        <!-- <button type="button" class="userProfile-editThum">프로필 이미지 변경</button> -->
-                                        <input type="file" id="file" >
-                                        <label for="file" class="userProfile-editThum">프로필 이미지 변경</label>
-                                    </div>
-                                    <div class="userProfile-infoBox">
-                                        <label class="userProfile-info">
-                                            <input type="text" class="userProfile-inp" placeholder="프로필 네임" value="홍길동">
-                                        </label>
-                                    </div>
+                                    <a href="#none" class="_linkProfile _edit-profile" role="button">수정</a> <!-- 11/08 텍스트변경 -->
                                     <a href="#changeProfile" role="button" class="btn-open-layerPop btn-complete">완료</a>
                                 </div>
-                                <!-- E : 11/09 수정 -->
+
+                                <!-- E : 11/10 수정 -->
                             </div>
                             <!-- 11/08 삭제
 
@@ -222,8 +212,8 @@
                     </p>
                 </div>
                 <div class="btn_layer_wrap">
-                    <button type="button" class="js_pop_close btn_cancel btn-cancel-profileChange"><span>취소</span></button>
-                    <button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
+                    <button type="button" class="js_pop_close btn_cancel btn-profileChange"><span>취소</span></button> <!-- 11/10 btn-profileChange -edit 붙는 테스트용 클래스 -->
+                    <button type="button" class="js_pop_close btn_confirm btn-profileChange"><span>확인</span></button> <!-- 11/10 btn-profileChange -edit 붙는  테스트용 클래스 -->
                 </div>
             </div>
         </div>

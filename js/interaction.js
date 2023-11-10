@@ -94,17 +94,18 @@
         ($.fn.profileEdit = function () {
             return this.each(function () {
                 var $this = $(this);
-                var $cancelProfile = $(".btn-cancel-profileChange");
+                var $cancelProfile = $(".btn-profileChange");
+                var $inp = $this.find(".userProfile-inp");
                 $this.each(function () {
                     var tt = $(this);
                     var $btn = tt.find("._edit-profile");
                     $btn.on("click", function () {
-                        tt.hide();
-                        tt.siblings().show();
+                        $this.addClass("-edit");
+                        $inp.attr("disabled",false).focus();
                     });
                     $cancelProfile.on("click", function () {
-                        tt.hide();
-                        tt.siblings().show();
+                        $this.removeClass("-edit");
+                        $inp.attr("disabled",true);
                     });
                 });
             });

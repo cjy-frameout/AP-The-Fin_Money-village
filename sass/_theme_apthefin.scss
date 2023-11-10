@@ -20637,6 +20637,7 @@ html.-activeGnb {
 		color:#999;
 		display: flex;
 		align-items: center;
+		flex-shrink: 0;
 		&:before {
 			content:"";
 			display:block;
