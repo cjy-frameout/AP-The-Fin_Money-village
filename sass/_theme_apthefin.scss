@@ -20795,4 +20795,27 @@ html.-activeGnb {
 	}
 }
 
+.set_detail {
+	display:flex;
+	align-items: center;
+	border-bottom:1px solid #e5e5e5;
+	gap:0 rem(10);
+}
 
+.inp_price {
+	flex-grow: 1;
+	.btn_val_reset:after {
+		position: initial !important;
+		display:block;
+		margin-left:rem(10);
+	}
+	input.set_inp {
+		border-bottom:none !important;
+		width:auto !important;
+		padding-right:0 !important;
+		flex-grow: 1;
+	}
+	~ .inp_txt {
+		position: initial !important;
+	}
+}
