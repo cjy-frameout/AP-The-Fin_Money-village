@@ -17228,8 +17228,18 @@ a.filterFolding {
 	+ .cdChkItem {
 		margin-top: rem(20);
 	}
-
+	
 	label {
+		&.disabled {
+			.chkName, .cdChkTxt{
+				color:#ccc;
+			}
+			.cdChkTxt{
+				em {
+					color: #ccc;
+				}
+			}
+		}
 		padding-left: rem(40);
 
 		span.chkName {
@@ -17268,7 +17278,10 @@ a.filterFolding {
 			left: 0;
 			margin-top: rem(-16);
 		}
+		
 	}
+	
+
 }
 
 /* 최근검색 팝업 */
