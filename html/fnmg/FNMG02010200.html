@@ -31,34 +31,7 @@
 
 <body>
 
-<!-- wrap -->
-<div class="wrap">
-    <!-- header -->
-    <div class="header">
-        <div class="header_inn">
-            <div class="left">
-                <a href="#none" class="btnBack"><span class="blind">Back</span></a>
-            </div>
-            <div class="center">
-                <h2 class="tit_h2">자산관리서비스</h2>
-            </div>
-        </div>
-    </div>
-    <!-- //header -->
 
-    <!-- container -->
-    <div class="container">
-        <div class="content">
-
-
-
-        </div>
-    </div>
-    <!-- //container -->
-
-
-</div>
-<!-- //wrap -->
 
 
 <!-- [S] FNMG02010200 연결하기 팝업 -->
@@ -66,55 +39,12 @@
     <div class="layer_inner">
 
         <div class="layer_tit">
-
+            <strong class="tit">약관동의</strong>
             <button type="button" class="js_pop_close btn_close btn_full_close"><span class="blind">닫기</span></button>
         </div>
 
         <div class="layer_cont">
-            <div class="terms_wrap">
-                <div class="terms-nav">
-                    <div class="nav-item">[필수] 자산관리서비스 이용약관</div>
-                    <div class="nav-item">[필수] 개인(신용)정보 수집·이용 동의</div>
-                </div>
-                <div class="terms-slider">
-                    <!-- [S] [필수] 자산관리서비스 이용약관 -->
-                    <div class="servTerm">
-                        <div class="servTerm_tbl">
-                            <p class="tx">기본 내용 text</p>
-                            <h4 class="txStrong">강조내용 text</h4>
-                            <table>
-                                <caption> 테이블 타이틀</caption>
-                                <colgroup>
-                                    <col style="width:35%;">
-                                    <col>
-                                </colgroup>
-                                <tbody>
-                                <tr>
-                                    <th>샘플</th>
-                                    <td>
-                                        샘플내용
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>일이삼사오육칠팔구십</th>
-                                    <td>
-                                        <ul>
-                                            <li>• 샘플내용</li>
-                                            <li>• 일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                    </div>
-                    <!-- [E] [필수] 자산관리서비스 이용약관 -->
-                    <!-- [S] 탭2 -->
-                    <div class="servTerm">2</div>
-                    <!-- [S] 탭2 -->
-                </div>
-            </div>
+            <p style="height:2200px">약관내용</p>
         </div>
 
         <!-- [S] 하단 고정 영역 -->
@@ -122,7 +52,6 @@
             <div class="btn_wrap">
                 <div class="btnGroup type_col">
                     <p class="btn_step">
-                        <a href="#none" class="btnBl1 btMore" role="button"><i class="more"></i>계속보기</a>
                         <a href="#none" class="btnBl1 btAgr01 " role="button">동의</a><!-- disable 형태 클래스 'disable' 추가 -->
                     </p>
                 </div>
@@ -141,61 +70,11 @@
 </body>
 <script>
     $(document).ready(function(){
-        //0913 삭제
-        /*$('.terms-nav').slick({
-            slidesToShow: 1, /!* 21.07.14 옵션 변경*!/
-            slidesToScroll: 1,
-            asNavFor: '.terms-slider',
-            dots: false,
-            focusOnSelect: true,
-            infinite: false,
-            variableWidth: true
-        });*/
-        $('.terms-slider').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            /*asNavFor: '.terms-nav', 0913 삭제 */
-            infinite: false,
-            adaptiveHeight: true
-        });
-        certiStepScroll(); // 호출, 인증 동의 스크롤 모션
-
         layer_fullsheet("#FNMG02010200");
         $('html').addClass('scroll_lock');
     })
 
-    function certiStepScroll(){
-        var $btAgr01 = $('.btAgr01');
-        var $windowHeight = $(window).height();
-        var $windowTop = $(window).scrollTop();
-        var $windowBottom = document.body.offsetHeight - window.innerHeight - 90;
-        if($('.btMore').length){
-            if($windowTop >= $windowBottom){
-                $btAgr01.css('display','flex');
-                $('.btMore').hide();
-            }
-        }
-        $(window).scroll(function(){
-            $windowTop = $(window).scrollTop();
-            $windowBottom = document.body.offsetHeight - window.innerHeight - 90;
 
-
-            if($('.btMore').length){
-                if($windowTop >= $windowBottom){
-                    $btAgr01.css('display','flex');
-                    $('.btMore').hide();
-                }
-            }
-        });
-
-        // [1] 1번째 계속보기 버튼
-        $(document).on("click", ".btMore", function(){
-            var $windowTop = $(window).scrollTop() - 55;
-            $('html, body').animate({scrollTop: $windowTop + $windowHeight}, 700);
-        });
-        /* [E] 인증 동의 스크롤 모션 */
-    }
 
 
 
