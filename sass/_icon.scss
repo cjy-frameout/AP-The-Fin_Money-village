@@ -81,10 +81,10 @@
   width:rem($size);
   height:rem($size);
   @include icon();
-  @if($type==default){
-    mask-image: url('../img/theme/apthefin/svg/ic_arrow_black.svg');
-  }@else if($type==bold){
+  @if($type==bold){
     mask-image: url('../img/theme/apthefin/svg/ic_arrow_bold.svg');
+  }@else {
+    mask-image: url('../img/theme/apthefin/svg/ic_arrow_black.svg');
   }
   @if($color==default){
     background-color:#17181A;
