@@ -799,9 +799,9 @@
   }
   .sel_form {
     flex-grow: 1;
-    margin-left:rem(20);
+    margin-left:rem(10);
     &.type_border .sel_box {
-      padding:rem(9) rem(20);
+      padding:rem(9) rem(10);
     }
   }
 }
