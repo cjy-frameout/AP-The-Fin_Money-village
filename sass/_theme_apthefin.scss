@@ -14329,7 +14329,7 @@ a.btnMenu {
 			a {
 				display: block;
 				padding: rem(20);
-				background: none;
+				//background: none;
 			}
 
 			.logo {
@@ -14722,12 +14722,10 @@ a.btnMenu {
 		background-image: url('../img/theme/apthefin/im_banner_tax.png?0519');
 	}
 
-	.link_type4:after {
-		top: rem(17);
-		width: rem(62);
-		height: rem(60);
-		background-size: rem(62) auto;
-		background-image: url('../img/theme/apthefin/tax_bg.png?0608');
+	.link_type4 {
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
 	}
 
 	.link_type3 .banner_tit, .link_type4 .banner_tit {
