@@ -7894,7 +7894,7 @@ a.btnMenu {
 
 	&.disable {
 		background-color: #F5F6F7;
-
+		pointer-events: auto;
 		&::before {
 			content: none;
 		}
