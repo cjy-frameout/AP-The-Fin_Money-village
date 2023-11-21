@@ -98,12 +98,13 @@
         justify-content: flex-start;
         img {
             margin-right: rem(5);
+            display: block;
             height: rem(30);
             width: rem(30);
         }
     }
     &.hasLine {
-        padding-bottom: rem(20);
+        padding-bottom: rem(20); 
         border-bottom: rem(1) solid #F1F2F5;
     }
 }
@@ -111,6 +112,7 @@
 .feed-item .list-name-box .list-name > img {
     border-radius: 50%;
     margin-right: rem(5);
+    display: block;
     height: rem(30);
     width: rem(30);
 }
