@@ -21,7 +21,11 @@
 
 .introRequest {
     margin-top: rem(20);
-
+    &__txt {
+        font-size:rem(14);
+        color:#666;
+        line-height:rem(22);
+    }
     li {
         padding-left: rem(64);
         position: relative;
@@ -62,6 +66,9 @@
 
         &.-camera:before {
             background-image: url("../img/theme/apthefin/icon/ic_cam.png");
+        }
+        &.-alert:before {
+            background-image: url("../img/theme/apthefin/icon/ic_alert.png");
         }
     }
 }
