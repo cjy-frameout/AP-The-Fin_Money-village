@@ -489,12 +489,20 @@ input[type="password"] {
     font-weight: 400;
 }
 
+.asGroup + .feed-write-wrap{
+        border-top: rem(1) solid #F1F2F5;
+        margin-top: rem(24);
+}
+
+.load-wrap {
+    .feed-write-wrap:first-child {
+        margin-top: rem(-24);
+    }
+}
 .feed-write-wrap {
-    border-top: rem(1) solid #F1F2F5;
     color: #666;
     font-size: rem(16);
     line-height: rem(22);
-    margin-top: rem(24);
     white-space: pre-wrap;
     word-break: keep-all;
 }
