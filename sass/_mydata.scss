@@ -98,6 +98,8 @@
         justify-content: flex-start;
         img {
             margin-right: rem(5);
+            height: rem(30);
+            width: rem(30);
         }
     }
     &.hasLine {
@@ -109,6 +111,8 @@
 .feed-item .list-name-box .list-name > img {
     border-radius: 50%;
     margin-right: rem(5);
+    height: rem(30);
+    width: rem(30);
 }
 
 .list-name.flexS > img {
@@ -626,7 +630,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 
 .fs-18 {
     color: #17181A;
-    font-size: rem(18) !important;
+    font-size: rem(18) !important; 
     font-weight: 500;
 }
 
