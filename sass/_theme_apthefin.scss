@@ -14598,7 +14598,9 @@ a.btnMenu {
 
 .banner.inLink {
 	width: 100%;
-	height: rem(120);
+	//height: rem(120);
+	aspect-ratio: 2.353 / 1;
+	height:auto;
 	border-radius: rem(10);
 	overflow: hidden;
 
@@ -14730,6 +14732,9 @@ a.btnMenu {
 		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;
+		&:after {
+			display:none;
+		}
 	}
 
 	.link_type3 .banner_tit, .link_type4 .banner_tit {
