@@ -25,3 +25,47 @@
   }
 }
 
+.licenses {
+  &__tit {
+    margin-top:rem(30);
+    font-size:rem(22);
+    line-height:rem(28);
+    color:#333;
+    font-weight: 700;
+  }
+  &__dec {
+    margin-top:rem(8);
+    color:#666;
+    font-size:rem(14);
+
+  }
+  &__list {
+    margin-top:rem(30);
+    display: flex;
+    flex-direction: column;
+    gap:20px 0;
+  }
+  &__item {
+    font-size:rem(14);
+    line-height: rem(22);
+    color:#666;
+  }
+  &__name {
+    font-weight: 700;
+    display: block;
+  }
+  &__count {
+    display: block;
+  }
+  &__subTit {
+    margin-top:rem(30);
+    padding-bottom:rem(30);
+    border-bottom:1px solid #E7E9EE;
+    margin-bottom:rem(30);
+  }
+  &__info {
+    font-size:rem(14);
+    line-height: rem(22);
+    color:#666;
+  }
+}
