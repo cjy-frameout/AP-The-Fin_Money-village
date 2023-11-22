@@ -974,7 +974,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
         content: '·' !important;
         display: inline-block;
         font-size: rem(18);
-        line-height: rem(15);
+        line-height: rem(23);
         position: absolute;
         left: 0;
         top: 0;
@@ -1825,6 +1825,9 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 
 .container.type_terms.load_term {
     padding-top: 0 !important;
+    img {
+        max-width: 100%;
+    }
 }
 
 /* E : Layout  */
