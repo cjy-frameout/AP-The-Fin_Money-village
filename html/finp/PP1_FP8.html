@@ -70,33 +70,43 @@ body{background-color:#444;}
                 </p>
             </div>
 
-            <div class="confirm_info car_register">
-				<div class="confirm_num">
-					<p class="inp_line">
-                        <label class="confirm_name confirm_dot">차량번호(필수)</label>
-						<input type="text" required="required" class="confirm_num_inp" maxlength="8" placeholder="예) 12가1234" title="차량번호를 입력해주세요">
-					</p>
-					<p class="inp_err_msg">차량번호 형식이 맞지 않습니다.</p>
-				</div>
-
+            <div class="confirm_info car_register houseGroup"> <!-- 1123 houseGroup 추가 -->
+                <!-- 1123 기존 자동차 등록과 같은 코드로 수정되었습니다. -->
                 <div class="confirm_num">
-					<p class="inp_line inp_price">
-                        <label class="confirm_name">구매가격(선택)</label>
-						<input type="text" required="required" class="confirm_num_inp js_tx_val" maxlength="8" placeholder="0" title="차량 구매가격을 입력해주세요">
-                        <button type="button" class="btn_val_reset js_bt_val_reset"><span class="blind">삭제</span></button>
-					</p>
-                    <p class="inp_txt"><span class="price">원</span></p>
-				</div>
+                    <p class="inp_line">
+                        <label class="confirm_name confirm_dot mgb10">차량번호(필수)</label>
+                        <input type="text" required="required" class="confirm_num_inp" maxlength="8" placeholder="예) 12가1234" title="차량번호를 입력해주세요">
+                    </p>
+                    <p class="inp_err_msg">차량번호 형식이 맞지 않습니다.</p>
+                </div>
 
-                <div class="confirm_num">
-					<p class="inp_line inp_price type_km"> <!--주행거리일경우  inp_price type_km -->
-                        <label class="confirm_name">주행거리(선택)</label>
-						<input type="text" required="required" class="confirm_num_inp js_tx_val" maxlength="8" placeholder="0" title="차량 구매가격을 입력해주세요">
-                        <button type="button" class="btn_val_reset js_bt_val_reset"><span class="blind">삭제</span></button>
-					</p>
-                    <p class="inp_txt"><span class="price">km</span></p>
-				</div>
-			</div>
+
+
+                <div class="filterItem mgt30">
+                    <p class="filterTit"><label for="txt2">구매가격(선택)</label></p>
+                    <div class="set_detail">
+                        <p class="inp_box inp_price">
+                            <input type="text" required="required" class="set_inp js_tx_val" placeholder="0" title="차량 구매가격을 입력해주세요">
+                            <button type="button" class="btn_val_reset js_bt_val_reset" style="display: none;"><span class="blind">삭제</span></button>
+                        </p>
+                        <p class="inp_txt"><span class="price">만원</span></p>
+                    </div>
+                    <p class="inp_err_msg">에러 문구</p>
+                </div>
+
+
+                <div class="filterItem mgt30">
+                    <p class="filterTit"><label for="txt2">주행거리(선택)</label></p>
+                    <div class="set_detail">
+                        <p class="inp_box inp_price">
+                            <input type="text" required="required" class="set_inp js_tx_val" placeholder="0" title="차량 구매가격을 입력해주세요">
+                            <button type="button" class="btn_val_reset js_bt_val_reset" style="display: none;"><span class="blind">삭제</span></button>
+                        </p>
+                        <p class="inp_txt"><span class="price">Km</span></p>
+                    </div>
+                    <p class="inp_err_msg">에러 문구</p>
+                </div>
+            </div>
 
             <div class="fix_bottom">
 				<!-- btn_wrap -->
@@ -136,24 +146,33 @@ body{background-color:#444;}
                 </p>
             </div>
 
-            <div class="confirm_info car_register">
-                <div class="confirm_num">
-					<p class="inp_line inp_price">
-                        <label class="confirm_name">구매가격</label> <!--구매가격일경우  inp_price -->
-						<input type="number" required="required" class="confirm_num_inp js_tx_val" maxlength="8" placeholder="0" title="차량 구매가격을 입력해주세요">
-                        <button type="button" class="btn_val_reset js_bt_val_reset"><span class="blind">삭제</span></button>
-					</p>
-                    <p class="inp_txt"><span class="price">원</span></p>
-				</div>
+            <div class="confirm_info car_register houseGroup"> <!-- 1123 houseGroup 추가 -->
 
-				<div class="confirm_num">
-					<p class="inp_line inp_price type_km"> <!--주행거리일경우  inp_price type_km -->
-                        <label class="confirm_name">주행거리</label>
-						<input type="number" required="required" class="confirm_num_inp js_tx_val" maxlength="8" placeholder="0" title="차량 구매가격을 입력해주세요">
-                        <button type="button" class="btn_val_reset js_bt_val_reset"><span class="blind">삭제</span></button>
-					</p>
-                    <p class="inp_txt"><span class="price">km</span></p>
-				</div>
+                <!-- 1123 [S] 기존 자동차 등록과 같은 코드로 수정되었습니다. -->
+                <div class="filterItem mgt30">
+                    <p class="filterTit"><label for="txt2">구매가격</label></p>
+                    <div class="set_detail">
+                        <p class="inp_box inp_price">
+                            <input type="text" required="required" class="set_inp js_tx_val" placeholder="0" title="차량 구매가격을 입력해주세요">
+                            <button type="button" class="btn_val_reset js_bt_val_reset" style="display: none;"><span class="blind">삭제</span></button>
+                        </p>
+                        <p class="inp_txt"><span class="price">만원</span></p>
+                    </div>
+                    <p class="inp_err_msg">에러 문구</p>
+                </div>
+
+                <div class="filterItem mgt30">
+                    <p class="filterTit"><label for="txt2">주행거리</label></p>
+                    <div class="set_detail">
+                        <p class="inp_box inp_price">
+                            <input type="text" required="required" class="set_inp js_tx_val" placeholder="0" title="차량 구매가격을 입력해주세요">
+                            <button type="button" class="btn_val_reset js_bt_val_reset" style="display: none;"><span class="blind">삭제</span></button>
+                        </p>
+                        <p class="inp_txt"><span class="price">Km</span></p>
+                    </div>
+                    <p class="inp_err_msg">에러 문구</p>
+                </div>
+                <!-- 1123 [E] 기존 자동차 등록과 같은 코드로 수정되었습니다. -->
 			</div>
             <div class="fix_bottom">
 				<!-- btn_wrap -->
