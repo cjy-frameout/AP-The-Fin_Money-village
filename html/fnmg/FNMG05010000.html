@@ -714,12 +714,15 @@
         });
         $(".fix_bottom").removeClass("not_dock"); // 버튼 은행선택전 초기값 설정
 
-        //탭 버튼 누르면 스크롤 하기
-        $(".btn_sel_org ").on("click",function(){
+        //1123 삭제 탭 버튼 누르면 스크롤 하기
+        /*$(".btn_sel_org ").on("click",function(){
             var idx = $(this).index();
             var scrollNow = $(".org_wrap").eq(idx).offset().top - $(".header").height() - $(".cboth").height() - 16;
             $("html,body").stop().animate({scrollTop:scrollNow},300);
-        })
+        })*/
+
+        //1123 추가
+        setupScrolling(".btn_sel_org", ".org_wrap", ".cboth");
     });
 
     // [S] 바텀시트

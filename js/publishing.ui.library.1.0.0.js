@@ -166,7 +166,7 @@ $(document).ready(function(){
     jsTxValReset();             // text val reset
     kepadOpenInpTxt();          // 앱 키패드 올라올때
     acHideOnlyOne();            // 메인 아코디언 1개일때 숨기기
-    orgSelScroll();             // 2022-05 알고하는 동의 기관선택 스크롤
+    //orgSelScroll();             // 2022-05 알고하는 동의 기관선택 스크롤
     layerFPageBottomPadding();  // XX1300 wrap_full_page 하단 여백조정
 });
 
@@ -628,6 +628,58 @@ document.addEventListener('DOMContentLoaded', function(e){
     });
     // [E] Gnb
 });
+
+//스크롤 텝
+function setupScrolling(btnSelector, orgWrapSelector, containerSelector) {
+    var btnSize = [];
+    var conSize = [];
+    var $container = $(containerSelector);
+    var $btns = $container.find(btnSelector);
+    var $orgWraps = $(orgWrapSelector);
+
+    // Collect button position information
+    $btns.each(function(){
+        btnSize.push($(this).position().left - 20);
+    });
+
+    // Collect org_wrap position information
+    $orgWraps.each(function(){
+        conSize.push($(this).offset().top - 128);
+    });
+
+    // Button click scroll event
+    $btns.on("click",function(){
+        var $this = $(this);
+        var idx = $this.index();
+        $this.addClass("on").siblings().removeClass("on");
+        $container.scrollLeft(btnSize[idx]);
+        $("html,body").stop().animate({scrollTop:conSize[idx]},500)
+    });
+
+    // Window scroll event
+    $(window).on('scroll', function() {
+        updateScroll();
+    });
+
+    // Scroll update function
+    function updateScroll() {
+        var currentScroll = $(this).scrollTop();
+
+        $orgWraps.each(function(index) {
+            var orgTop = conSize[index];
+            if (Math.abs(currentScroll - orgTop) < 50) {
+                $btns.removeClass("on");
+                $btns.eq(index).addClass("on");
+                $container.scrollLeft(btnSize[index]);
+            }
+        });
+    }
+}
+
+
+// 호출
+
+
 
 
 
