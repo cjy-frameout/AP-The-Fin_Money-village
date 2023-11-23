@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+//고지사항
+.protection {
+  strong {font-weight:700 !important;}
+  p {
+    margin:rem(10) 0 !important;
+    font-size:rem(14) !important;;
+    line-height:rem(22) !important;
+  }
+  ul,ol {
+    display: block;
+    list-style-type: none;
+    padding-left: rem(24);
+    margin: rem(6) 0 rem(10);
+    color: #222;
+    li {
+      line-height:1.6;
+      position: relative;
+      &:before {
+        content: "";
+        margin-top: rem(6);
+        margin-left: rem(-17);
+        width: rem(5);
+        height: rem(5);
+        border-radius: 50%;
+        background-color: #ccc;
+        position: absolute;
+        display: block;
+      }
+      > ul,ol {
+        margin-top:0;
+        margin-bottom:0;
+      }
+    }
+  }
+  a {
+    color:#1c64f2 !important;
+    text-decoration: underline !important;
+  }
+  ol {
+    counter-reset:li;
+    > li {
+      counter-increment: li;
+      &:before {
+        content: "." counter(li);
+        width: rem(24);
+        text-align: right;
+        direction: rtl;
+        color: #aaa;
+        margin:0 0 0 rem(-28);
+        background:none;
+
+      }
+    }
+  }
+}
