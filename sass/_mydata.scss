@@ -711,6 +711,18 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 
 .vertical {
     flex-direction: column;
+    background:#fff;
+    padding-top:0;
+    &:before {
+        width: 100%;
+        height: rem(20);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, #FFFFFF 100%);
+        position: absolute;
+        top: rem(-19);
+        right: 0;
+        left: 0;
+        content: '';
+    }
 }
 
 .btn-wrap {
@@ -980,7 +992,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
         line-height: rem(23);
         position: absolute;
         left: 0;
-        top: 0;
+        top: rem(-5);
     }
 }
 
