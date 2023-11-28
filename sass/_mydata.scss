@@ -205,6 +205,9 @@
         height: rem(20);
         width: rem(20);
         background-size:cover;
+        &.on {
+            background-image: url("../img/theme/apthefin/icon_comment_on.png");
+        }
     }
 
     .list-name + {

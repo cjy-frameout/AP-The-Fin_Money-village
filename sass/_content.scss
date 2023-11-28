@@ -1568,6 +1568,7 @@
   }
 }
 
+
 .txtarea_cnt {
   width: 100%;
   margin: rem(5) auto 0;
@@ -11044,10 +11045,11 @@
   }
 
   .visual_cont {
-    position: relative;
+    position:absolute;
     width: rem(546);
     margin: rem(95) auto 0;
-
+    top:calc(50vh - rem(300));
+    left:calc(50vw - rem(223));
     .type_phone {
       margin: 0 auto;
       opacity: 0;
@@ -11518,7 +11520,6 @@
     opacity: 1;
   }
 }
-
 /* ico 04  */
 
 @keyframes visual_trans_set2_ico_04 {
@@ -11855,3 +11856,20 @@
     margin-top:rem(78);
   }
 }
+
+.layer_cont.hasFixBottom {
+  padding-bottom:0 !important;
+  padding-left:0 !important;
+  padding-right:0 !important;
+  .feed-item {
+    padding-left:rem(20);
+    padding-right:rem(20);
+  }
+  .input-wrap.fixed {
+    position: sticky !important;
+    input:focus {
+      border-bottom:none !important;
+    }
+  }
+}
+
