@@ -17,7 +17,7 @@
   @include icon();
   background-image:url("../img/theme/apthefin/icon/ic_down.png");
   @if ($type == blue) {
-    stroke: #3e5fac;
+    stroke: #1c64f2;
   }
 }
 
@@ -101,7 +101,7 @@
   @if($type==normal){
     background-color:#17181A;
   }@else if($type == blue){
-    background-color:#3E5FAC;
+    background-color:#1c64f2;
   }
   @if($type == bold) {
     mask-image: url('../img/theme/apthefin/svg/ic_arrow_bold.svg');

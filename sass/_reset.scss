@@ -2986,6 +2986,9 @@ a.blockLink {
 
 /* [E] etc ============================================================================== */
 
+@media all and (max-width: 340px) {
+    html {font-size:15px}
+}
 
 @media all and (max-width: 320px) {
     html {font-size:13px}

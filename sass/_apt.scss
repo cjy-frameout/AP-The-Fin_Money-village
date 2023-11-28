@@ -113,7 +113,7 @@
   i {
     display:inline-block;
     margin-left:rem(4);
-    font-size:rem(18);color:#3e5fac;line-height:rem(26);
+    font-size:rem(18);color:#1c64f2;line-height:rem(26);
     font-style: normal;
   }
 }
@@ -138,7 +138,7 @@
   background-size:rem(60) rem(60);
   &.my-assets {
     background-color:#F7F9FF;
-    color:#3e5fac;
+    color:#1c64f2;
     background-image: url('../img/theme/apthefin/bg_my_assets.png');
   }
   &.my-plan {
@@ -181,7 +181,7 @@
   }
   i {
     font-style: normal;
-    color:#3e5fac;
+    color:#1c64f2;
   }
   &-more {
     width:68.125%;
@@ -217,7 +217,7 @@
       @include ellipsis();
       i {
         font-style: normal;
-        color:#3e5fac;
+        color:#1c64f2;
       }
     }
   }
@@ -310,8 +310,8 @@
     }
   }
   input:checked+span {
-    border-color:#3e5fac;
-    color:#3e5fac;
+    border-color:#1c64f2;
+    color:#1c64f2;
     font-weight:700;
   }
   &-all {
@@ -366,7 +366,7 @@
       height:rem(43);
       position: relative;
       &.on {
-        color:#3e5fac;
+        color:#1c64f2;
         font-weight: 700;
         &:after {
           content: "";
@@ -374,7 +374,7 @@
           width:100%;
           left:0;
           bottom:rem(-1);
-          border-bottom:rem(2) solid #3e5fac;
+          border-bottom:rem(2) solid #1c64f2;
           position: absolute;
         }
       }
@@ -408,8 +408,8 @@
       }
     }
     input:checked+span {
-      border-color:#3e5fac;
-      color:#3e5fac;
+      border-color:#1c64f2;
+      color:#1c64f2;
       font-weight:700;
     }
   }
@@ -680,8 +680,8 @@
     }
     p {border:none}
     input:checked+span {
-      border-color:#3e5fac;
-      color:#3e5fac;
+      border-color:#1c64f2;
+      color:#1c64f2;
       font-weight:700;
     }
     &.line-3 {
@@ -792,8 +792,8 @@
       margin-left:rem(6);
     }
     input:checked+span {
-      border-color:#3e5fac;
-      color:#3e5fac;
+      border-color:#1c64f2;
+      color:#1c64f2;
       font-weight:700;
     }
   }
@@ -819,5 +819,5 @@
 
 
 .mykeyword li a i {
-  color:#3e5fac;
+  color:#1c64f2;
 }

@@ -1268,7 +1268,7 @@ $black : #17181A;
   font-size: rem(16);
   font-weight: 600;
   line-height:1.6;
-  color:#3e5fac;
+  color:#1c64f2;
   padding:rem(20);
   &:before {
     content:"";
@@ -1467,12 +1467,12 @@ $black : #17181A;
   &__btn {
     display: flex;
     margin-top:rem(20);
-    color:#3e5fac;
+    color:#1c64f2;
     font-weight:700;
     font-size:rem(15);
     line-height:rem(22);
     align-items: center;
-    &:visited {color:#3e5fac;}
+    &:visited {color:#1c64f2;}
     &:after {
       content:"";
       display:inline-block;
@@ -1536,13 +1536,13 @@ $black : #17181A;
       border:rem(1) solid #E5E5E5;
     }
     input:checked+span {
-      border-color:#3e5fac;
+      border-color:#1c64f2;
       &:after {
         content:"";
         display: block;
         width:rem(11);
         height:rem(11);
-        background:#3e5fac;
+        background:#1c64f2;
         border-radius: 50%;
       }
     }
