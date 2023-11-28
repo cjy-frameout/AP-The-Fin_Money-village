@@ -1000,7 +1000,11 @@ a.btnBl1.wide i.more {
 /* [E] notch */
 
 /* [S] Flag, tag */
-
+.ui-sortable {
+	.flag {
+		width: rem(35); 
+	}
+}
 .flag {
 	display: inline-block;
 	margin: rem(-3) 0 0 rem(5);
@@ -2238,7 +2242,7 @@ a.btnMenu {
 }
 
 .editList2.asGroup .ctrl a + a {
-	margin-left: rem(15);
+	margin-left: rem(10);
 }
 
 .asGroup .sortCtrl .on a {
