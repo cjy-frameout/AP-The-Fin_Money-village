@@ -198,7 +198,7 @@
     $(document).ready(function(){
         // 신용점수 테스트용
         var perCent = 800; // 0에서 1000 사이의 값
-        var $result = $("#planProgress__bar"); // 그래프 바
+        var $result = $("#myClip"); // 그래프 바 1128 대상수정
         var val = ((perCent / 1000) * 180) - 180; // 0에서 1000을 -180에서 0으로 변환
         $result.css("transform", `rotate(${val}deg)`); // CSS 적용
         $(".cerScore__num span").text(perCent); //테스트 확인용
