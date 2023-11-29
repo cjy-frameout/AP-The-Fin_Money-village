@@ -284,6 +284,7 @@
 $(document).ready(function(){
 	var winH = $(".wrap").height();
 	var conH = $(".content").height() + $(".btn-wrap.two-items.fixed").height() + $(".header").height();
+	console.log(winH-conH);
 	$(".js_textarea1").height(winH - conH);
 });
 
