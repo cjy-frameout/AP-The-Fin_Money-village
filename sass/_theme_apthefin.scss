@@ -7558,6 +7558,20 @@ a.btnMenu {
 	}
 }
 
+.load-wrap .cdChkItem label i {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: rem(20);
+	width: rem(20);
+	height: rem(20);
+	border: none;
+	background-image: url('../img/theme/apthefin/ic_circle_chk.png?0426');
+	background-size: rem(20) auto;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 .cdChkSubList .cdChkItem + .cdChkItem {
 	margin-top: rem(25);
 }
