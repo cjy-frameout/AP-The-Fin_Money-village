@@ -701,6 +701,8 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
         right: rem(20);
         border-top: rem(1) solid #E7E9EE;
         z-index: 99;
+        background:#fff;
+
     }
 
     &.noBorder {

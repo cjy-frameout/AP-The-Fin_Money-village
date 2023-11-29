@@ -64,9 +64,9 @@
 				
 				<div class="load-wrap padd20" >
 					<div class="asGroup">
-                    
+
 						<div class="asList">
-	
+
 							<!-- 투자 영역 -->
 							<div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
 								<label for="share1" class="flex ">
@@ -82,8 +82,8 @@
 									<i></i>
 								</label>
 							</div>
-							
-	
+
+
 							<!-- 대출 영역 -->
 							<div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
 								<label for="share3" class="flex ">
@@ -99,7 +99,7 @@
 									<i></i>
 								</label>
 							</div>
-	
+
 							<!-- 입출금, 예적금 영역 -->
 							<div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
 								<label for="share4" class="flex ">
@@ -114,7 +114,7 @@
 									<i></i>
 								</label>
 							</div>
-	
+
 							<!-- 보험 영역 -->
 							<div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
 								<label class="flex ">
@@ -126,14 +126,14 @@
 											<span class="flag lblue">정상</span>
 											<span class="ellipsis">보장기간<em>2028.01.20</em></span>
 										</p>
-										<p class="amount ellipsis overdue">(무)꿈나무재테크보험 (무)꿈나무재테크보험<span class="flag gray">만료</span>  </p> <!-- 텍스트 길경우 ellipsis 클래스 추가, 만료일경우 overdue 클래스 추가 --> 
+										<p class="amount ellipsis overdue">(무)꿈나무재테크보험 (무)꿈나무재테크보험<span class="flag gray">만료</span>  </p> <!-- 텍스트 길경우 ellipsis 클래스 추가, 만료일경우 overdue 클래스 추가 -->
 										<p class="deposit"><em class="num">1,000,000</em>원</p>
 									</div>
 									<input type="checkbox" id="share4">
 									<i></i>
 								</label>
 							</div>
-							
+
 						</div>
 					</div>
 
@@ -279,6 +279,15 @@
 
 
 <script>
+
+//1129 textarea 높이 조절 화면 랜더링 완료후 실행
+$(document).ready(function(){
+	var winH = $(".wrap").height();
+	var conH = $(".content").height() + $(".btn-wrap.two-items.fixed").height() + $(".header").height();
+	$(".js_textarea1").height(winH - conH);
+});
+
+
 // [S] 풀페이지 팝업
 $(document).on("click", ".btn_open_full_sheet", function(e){
     e.preventDefault();

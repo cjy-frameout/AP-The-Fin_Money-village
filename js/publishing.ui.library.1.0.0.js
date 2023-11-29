@@ -104,17 +104,7 @@
 
 // 2021-06-30
 $(document).ready(function(){
-    //텍스트 에어리어
-    $(".layer_memo_wrap .tx_area").on("input",function(){
-        this.style.height = 'auto'; // 초기 높이로 설정
-        this.style.height = (this.scrollHeight) + 'px'; // 스크롤 높이에 맞게 조절
-        // textarea에 스크롤바가 있는지 확인
-        var hasScrollbar = this.scrollHeight > this.clientHeight;
 
-        if (!hasScrollbar) {
-            $('html, body').stop().animate({ scrollTop: $(document).height() }, 'fast');
-        }
-    })
 
 
     //아코디언 메뉴

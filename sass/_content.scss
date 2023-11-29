@@ -1552,8 +1552,8 @@
     width: 100%;
     text-align: center;
     overflow-x: hidden;
-    overflow-y: auto;
-    max-height: calc(100vh - rem(330));
+    overflow-y: hidden;
+
     line-height: 1.5;
     font-size: rem(17);
     color: #666;
