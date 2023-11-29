@@ -7,7 +7,7 @@
 }
 @mixin afterBluer {
     overflow:hidden;
-    height:rem(180);
+    height:rem(235);
     position: relative;
     &:after {
         content:"";
@@ -15,7 +15,7 @@
         left:0;
         bottom:0;
         width:100%;
-        height:rem(20);
+        height:rem(30);
         display: block;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.20) 0%, #FFF 100%);
     }
