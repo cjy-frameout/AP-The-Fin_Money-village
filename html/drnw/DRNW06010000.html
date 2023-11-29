@@ -271,19 +271,41 @@
 
     // 소득 구간 데이터와 인구 수 데이터
     var incomeCategories = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]; // 눈금을 1부터 15까지로 변경
-    var populationData = [750, 500, 300, 1600, 2100, 2400, 300, 3000, 3300, 3600, 4000, 4200, 4500, 5000, 800]; // 15개의 데이터 포인트로 변경
+    var populationData = [750, 500, 300, 1600, 2100, 2400, 300, 3000, 3300, 3600, 4000, 4200, 4500, 9000, 5000]; // 15개의 데이터 포인트로 변경
 
     var targetIndex1 = 3; // 첫 번째 특정값 (소득 중간값)의 인덱스
-    var targetIndex2 = 10; // 두 번째 특정값 (상위값)의 인덱스
+    var targetIndex2 = 12; // 두 번째 특정값 (상위값)의 인덱스
     var targetValue1 = populationData[targetIndex1]; // 첫 번째 특정값 (소득 중간값)의 값
     var targetValue2 = populationData[targetIndex2]; // 두 번째 특정값 (상위값)의 값
     var targetColor1 = '#EEF2F5'; // 회색
     var targetColor2 = '#1C64F2'; // 빨간색 1031 색상변경
+    /*  S : 1129 스크립트 추가 */
+    if(targetIndex2 > 11) {
+        var maxNum = Math.max(...populationData);
+        var maxIndex = populationData.indexOf(maxNum) +1;
+        var perH = populationData[targetIndex2] / maxNum;
+        
+        setTimeout(function(){
+            var target = $('.highcharts-series' ).find('.highcharts-point:nth-child('+ maxIndex +')');
+            var maxH = target.height();
+            var currentH = maxH * perH;
+            console.log(maxH, currentH);
+            if(maxH == currentH) {
+                $('.highcharts-label').css('transform', 'translate(240px, 0px)');    
+            }else {
+                $('.highcharts-label').css('transform', 'translate(240px, '+ currentH +'px)');
+            }
+            
+        }),100;
+    /*  E : 1129 스크립트 추가 */
+        
+    }
+
 
     // 데이터 포인트의 색상을 지정하고 상위값에만 특정 텍스트를 추가
     var seriesData = populationData.map(function (value, index) {
         var color = index === targetIndex1 ? targetColor1 : (index === targetIndex2 ? targetColor2 : '#EEF2F5');
-        var perCentVal = 0;
+        var perCentVal = 100;
         var customHTML = index === targetIndex2 ? `<div class="savegoChart__toolTip">상위${perCentVal}%</div>` : ''; // 상위값에만 특정 텍스트 추가
         return {
             y: value,
