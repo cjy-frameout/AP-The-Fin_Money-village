@@ -207,6 +207,7 @@
         background-size:cover;
         &.on {
             background-image: url("../img/theme/apthefin/icon_comment_on.png");
+            ~ .comment-num {color:#1c64f2}
         }
     }
 
@@ -704,7 +705,6 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
         background:#fff;
 
     }
-
     &.noBorder {
         border-top: 0;
     }
