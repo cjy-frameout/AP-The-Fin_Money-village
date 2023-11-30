@@ -51,7 +51,7 @@
 
 
             <!-- [S] 아끼고 -->
-            <section id="savego" class="planSec mgt20 -noBorder -my -good"> <!-- 30대기준 -year30, 내평균 -my, 적절할때 -good, 지출과다 -bed, 클래스 추가 -->
+            <section id="savego" class="planSec mgt20 -noBorder -year -good "> <!-- 30대기준 -year// 내평균 -my, 적절할때 -good, 지출과다 -bed, 클래스 추가 -->
                 <h3 class="planSec__tit">
                     <span class="planSec__titLeft">
                         이달의<br>
@@ -255,7 +255,7 @@
         //아끼고 평균 기준선 잡기 1030 기준선 높이값 제정의
         var lineH;
         var lineConH = $(".savegoGraph").height()- $(".savegoGraph__topTxt").height(); //1031 추가
-        if($("#savego").hasClass("-year30")){
+        if($("#savego").hasClass("-year")){
             setTimeout(function(){
                 lineH =  lineConH - $(".savegoGraph .-right .savegoGraph__bar").height(); //1031 변경
                 $(".savegoGraph__line").css({"top":lineH}).addClass("-active");
