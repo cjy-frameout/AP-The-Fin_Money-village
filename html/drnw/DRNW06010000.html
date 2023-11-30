@@ -51,7 +51,7 @@
 
 
             <!-- [S] 아끼고 -->
-            <section id="savego" class="planSec mgt20 -noBorder -year30 -good"> <!-- 30대기준 -year30, 내평균 -my, 적절할때 -good, 지출과다 -bed, 클래스 추가 -->
+            <section id="savego" class="planSec mgt20 -noBorder -my -good"> <!-- 30대기준 -year30, 내평균 -my, 적절할때 -good, 지출과다 -bed, 클래스 추가 -->
                 <h3 class="planSec__tit">
                     <span class="planSec__titLeft">
                         이달의<br>
@@ -64,19 +64,19 @@
                 <div class="savegoGraph">
                     <div class="savegoGraph__item -left">
                         <div class="savegoGraph__topTxt">100%</div>
-                        <div class="savegoGraph__bar" data-height="80">
+                        <div class="savegoGraph__bar" data-height="61">
                             <div class="savegoGraph__inner" style="height:50%"><span>50%</span></div>
                         </div>
                         <div class="savegoGraph__txt">9월 지출</div>
                     </div>
                     <div class="savegoGraph__item -center">
                         <div class="savegoGraph__topTxt">125만원</div>
-                        <div class="savegoGraph__bar" data-height="100"></div>
+                        <div class="savegoGraph__bar" data-height="61"></div>
                         <div class="savegoGraph__txt">내 평균</div>
                     </div>
                     <div class="savegoGraph__item -right">
                         <div class="savegoGraph__topTxt">102만원</div>
-                        <div class="savegoGraph__bar" data-height="80"></div>
+                        <div class="savegoGraph__bar" data-height="50"></div>
                         <div class="savegoGraph__txt">30대 평균</div>
                     </div>
                     <div class="savegoGraph__line"></div>
@@ -274,7 +274,7 @@
     var populationData = [750, 500, 300, 1600, 2100, 2400, 300, 3000, 3300, 3600, 4000, 4200, 4500, 9000, 5000]; // 15개의 데이터 포인트로 변경
 
     var targetIndex1 = 3; // 첫 번째 특정값 (소득 중간값)의 인덱스
-    var targetIndex2 = 12; // 두 번째 특정값 (상위값)의 인덱스
+    var targetIndex2 = 13; // 두 번째 특정값 (상위값)의 인덱스
     var targetValue1 = populationData[targetIndex1]; // 첫 번째 특정값 (소득 중간값)의 값
     var targetValue2 = populationData[targetIndex2]; // 두 번째 특정값 (상위값)의 값
     var targetColor1 = '#EEF2F5'; // 회색
@@ -289,11 +289,14 @@
             var target = $('.highcharts-series' ).find('.highcharts-point:nth-child('+ maxIndex +')');
             var maxH = target.height();
             var currentH = maxH * perH;
-            console.log(maxH, currentH);
+
             if(maxH == currentH) {
-                $('.highcharts-label').css('transform', 'translate(240px, 0px)');    
+                // 1130 translate(calc(100vw - 160px) 변경
+                $('.highcharts-label').css('transform', 'translate(calc(100vw - 160px), 0px)');
             }else {
-                $('.highcharts-label').css('transform', 'translate(240px, '+ currentH +'px)');
+                // 1130 translate(calc(100vw - 160px) 변경
+                $('.highcharts-label').css('transform', 'translate(calc(100vw - 160px), '+ currentH +'px)');
+
             }
             
         }),100;
