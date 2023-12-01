@@ -65,7 +65,9 @@
                     <div class="savegoGraph__item -left">
                         <div class="savegoGraph__topTxt">100%</div>
                         <div class="savegoGraph__bar" data-height="61">
-                            <div class="savegoGraph__inner" style="height:50%"><span>50%</span></div>
+                            <!-- 1130 수정 -->
+                            <div class="savegoGraph__inner"  data-height="0"><span>0%</span></div>
+                            <!-- // 1130 수정 -->
                         </div>
                         <div class="savegoGraph__txt">9월 지출</div>
                     </div>
@@ -250,7 +252,14 @@
             var barH = $(this).data("height");
             var resultH =(barH / 100) * 75
             $(this).css("height",resultH+"%");
-        })
+        });
+        // 1130추가
+        //비교대상 게이지 바
+        var exp = $(".savegoGraph__item.-left .savegoGraph__inner");
+        var expH = exp.data("height");
+        exp.css("height",expH+"%"); // 1106 %수정
+        expH <= 20 && exp.addClass("-low"); 
+        // 1130추가
 
         //아끼고 평균 기준선 잡기 1030 기준선 높이값 제정의
         var lineH;

@@ -202,19 +202,16 @@
         var val = ((perCent / 1000) * 180) - 180; // 0에서 1000을 -180에서 0으로 변환
         $result.css("transform", `rotate(${val}deg)`); // CSS 적용
         $(".cerScore__num span").text(perCent); //테스트 확인용
-
+        /* // 1130수정 */
+        saveGo("#scrollTar01");
 
         $(window).scroll(function(){
-            var chk01 = $("#scrollTar01").offset().top - 300;
+            var chk01 = $("#scrollTar01").offset().top - 200;
             var chk02 = $("#scrollTar02").offset().top - 350;
             var scrollH = $(window).scrollTop();
-
-            scrollH >= chk01 && saveGo("#scrollTar01");
             scrollH >= chk02 && saveGo("#scrollTar02");
         })
-
-
-
+        /* // 1130수정 */
     })
 
 

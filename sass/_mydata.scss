@@ -508,8 +508,9 @@ input[type="password"] {
     color: #666;
     font-size: rem(16);
     line-height: rem(22);
-    white-space: pre-wrap;
-    word-break: keep-all;
+    white-space: pre-wrap; 
+    word-break: break-all;
+    word-wrap: break-word;
 }
 
 .input-box {
