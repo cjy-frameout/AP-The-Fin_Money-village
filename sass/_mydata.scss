@@ -7,7 +7,7 @@
 }
 @mixin afterBluer {
     overflow:hidden;
-    height:rem(235);
+    height:rem(350);
     position: relative;
     &:after {
         content:"";
@@ -30,7 +30,7 @@
             @include afterBluer;
             .list-desc {
                 height:auto;
-                &:after {display:none}
+                &:after {display:none} 
             }
         }
     }
