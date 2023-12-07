@@ -48,28 +48,31 @@
 
     <div class="container">
         <div class="content">
-            <h3 class="cont-title-big mgt30">OOO님,<br>자산관리서비스 해지 하시기 전에<br>확인해 주세요.</h3>
+            <h3 class="cont-title-big mgt30">OOO님,<br>머니빌리지 탈퇴 하시기 전에<br>확인해 주세요.</h3>
 
             <ul class="list-typeB mgt30">
-                <li class="list-typeB-li">자산관리서비스 해지하시는 경우 연결한 자산내역이 모두 삭제되며 서비스를 이용하실 수 없습니다.</li>
+                <li class="list-typeB-li">머니빌리지 탈퇴하시는 경우 등록된 계정(자산)정보 및 개인정보가 모두 삭제되어 다신 볼 수 없어요.</li>
                 <li class="list-typeB-li">자세한 사항은 개인정보처리방침을 확인해 주세요.</li>
             </ul>
 
-            <div class="asGroup">
-                    
-                <div class="asList">
-                    
-                    <div class="accItem cdChkItem"> 
-                        <label for="share1" class="flex ">
-                            <div class="tx">
-                                <p class="prdName"><span class="ellipsis">자산관리서비스 해지</span></p>
-                            </div>
-                            <input type="checkbox" id="share1">
-                            <i></i>
-                        </label>
-                    </div>
+            <div class="filterItem mgt30">
+                <p class="filterTit">마이데이터 탈퇴 사유</p>
+                <div class="sel_form type_border"> <!-- 선택시 on 클래스 추가 -->
+                    <a href="#layer_001" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span class="sel_txt">탈퇴 사유를 알려주세요.</span></a>
                 </div>
             </div>
+
+            <div class="accSetting inpWriteArea" style="display: none">
+                <div class="editName mgt0">
+                    <input type="text" id="name" title="해지이유 직접입력" required="required" placeholder="직접입력">
+                </div>
+            </div>
+
+            <ul class="list-typeB mgt10">
+                <li class="list-typeB-li">머니빌지지 회원을 탈퇴하시는 경우 모든 데이터는 삭제되며 복구가 불가능합니다.</li>
+            </ul>
+
+            
 
 
             <footer class="fix_bottom">
@@ -86,6 +89,57 @@
 </div>
 
 
+<!-- [S]해지 사유 -->
+<div id="layer_001" class="layer_bottomsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+            <strong class="tit"><span>해지 사유</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont">
+            <div class="cdChkLst">
+                <ul class="cdChkSubList">
+                    <li class="cdChkItem">
+                        <label>
+                            <input type="radio" name="radio02" id="radio1">
+                            <i></i><span>보안 불안</span>
+                        </label>
+                    </li>
+                    <li class="cdChkItem">
+                        <label>
+                            <input type="radio" name="radio02" id="radio2">
+                            <i></i><span>마케팅 알림 과다</span>
+                        </label>
+                    </li>
+                    <li class="cdChkItem">
+                        <label>
+                            <input type="radio" name="radio02" id="radio3">
+                            <i></i><span>앱 미사용</span>
+                        </label>
+                    </li>
+                    <li class="cdChkItem">
+                        <label>
+                            <input type="radio" name="radio02" id="radio4">
+                            <i></i><span>대출 한도 부족</span>
+                        </label>
+                    </li>
+                    <li class="cdChkItem">
+                        <label>
+                            <input type="radio" name="radio02" id="radio5">
+                            <i></i><span>기타(직접입력)</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="layer_footer">
+            <button type="button" class="js_pop_close"><span>확인</span></button>
+        </div>
+    </div>
+</div>
+<!-- [E]해지 사유 -->
+
+
 <!-- [S] 알림 -->
 <div id="layer-wait" class="layer_popup type2">
     <div class="layer_position">
@@ -99,9 +153,12 @@
                             머니빌리지 서비스와 계속 함께해 주시겠어요?
                         </p>
                     </div>
+                    <ul class="list-typeB mgt10 last-prevent"> 
+                        <li class="list-typeB-li">머니빌지지 회원을 탈퇴하시는 경우 모든 데이터는<br>삭제되며 복구가 불가능합니다.</li>
+                    </ul>
                 </div>
                 <div class="btn_layer_wrap">
-                    <button type="button" class="js_pop_close btn_cancel "><span>해지할께요</span></button>
+                    <button type="button" class="  js_pop_close btn_cancel "><span>탈퇴할께요</span></button>
                     <button type="button" class="js_pop_close btn_confirm"><span>계속 이용할께요</span></button>
                 </div>
             </div>
@@ -121,17 +178,7 @@
         $("#radio5").is(":checked") ? $(".inpWriteArea").show() : $(".inpWriteArea").hide();
     });
 
-    // $(".btn-prevent").on("click", function(){
-    //     var $this = $(this);
-    //     $(".last-prevent").show();
-    //     $this.hide();
-    //     $this.next().show();
-    //     $this.next().on('click', function(){
-    //         $(".last-prevent").hide();
-    //         $this.show();
-    //         $this.next().hide();
-    //     })
-    // } );
+   
 
 
     // [S] 바텀시트

@@ -1222,6 +1222,13 @@ a.btnBl1.wide i.more {
 		left: 45%;
 		background: url('../img/theme/apthefin/bt_close.svg?0426') 0 0 no-repeat;
 	}
+
+	.btn_menu_close {
+		width: rem(32);
+		height: rem(32);
+		background: url(../img/theme/apthefin/bt_close.svg) 0 0 no-repeat;
+		background-size: rem(32) auto;
+	}
 }
 
 a.btnMenu {
@@ -7190,7 +7197,7 @@ a.btnMenu {
 .sel_form.type_border {
 	position: relative;
 	background-color: #fff;
-	border: rem(1) solid #ddd;
+	border: rem(1) solid #e5e5e5;
 	border-radius: rem(10);
 
 	.sel_box {
@@ -12022,6 +12029,9 @@ a.btnMenu {
 
 		&.btnClose {
 			display: block;
+		}
+		&.btn_menu_close {
+			display: flex;
 		}
 	}
 }

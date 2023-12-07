@@ -68,7 +68,8 @@
                         </label>
                     </div>
                 </div>
-                <a href="" class="setting-item">이용 해지</a>
+                <!--  //1207 수정 -->
+                <a href="#layer_001" class="setting-item btn_open_bottom_sheet">서비스 해지 및 탈퇴</a>
             </nav>
             <section class="settingVer">
                 <h3 class="settingVer-tit">앱버전</h3>
@@ -83,6 +84,38 @@
     </div>
 </div>
 
+<!--  //1207 추가 -->
+<div id="layer_001" class="layer_bottomsheet">
+    <div class="layer_inner">
+        <div class="layer_tit">
+            <strong class="tit"><span>서비스 해지 및 탈퇴</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont">
+            <div class="cdChkLst">
+                <ul class="cdChkSubList">
+                    <li class="cdChkItem">
+                        <label>
+                            <input type="radio" name="radio02" id="radio1">
+                            <i></i><span>자산관리서비스 해지</span>
+                        </label>
+                    </li>
+                    <li class="cdChkItem">
+                        <label>
+                            <input type="radio" name="radio02" id="radio2">
+                            <i></i><span>머니빌리지 탈퇴</span>
+                        </label>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+        <div class="layer_footer">
+            <button type="button" class="js_pop_close"><span>확인</span></button>
+        </div>
+    </div>
+</div>
+<!--  // //1207 추가 -->
 
 <!-- [S]  알림 -->
 <div id="pop001" class="layer_popup type2">
@@ -115,5 +148,16 @@
             $(this).is(":checked") && layer_popup("#pop001");
         })
     })
+
+    // [S] 바텀시트
+    $(document).on("click", ".btn_open_bottom_sheet", function(e){
+        e.preventDefault();
+        var $href = $(this).attr('href');
+        layer_bottomsheet($href);
+        $('html').addClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
+        $focusReturn = $(this);
+    });
+
+    // [E] 바텀시트
 </script>
 </html>
