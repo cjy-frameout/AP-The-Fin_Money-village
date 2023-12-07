@@ -7336,7 +7336,10 @@
         width: 100%;
 
         > div {
-          width: 50%;
+          width: 40%;
+          &.right.minus, &.right.plus {
+            width: 60%;
+          }
         }
       }
     }
