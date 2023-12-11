@@ -973,7 +973,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
 
     &.num2:before {
         content: '2';
-    }
+    } 
 
     &.num3:before {
         content: '3';
@@ -989,7 +989,7 @@ input[type="checkbox"]:checked + .chkLabel-type-btn {
         font-size: rem(13);
     }
     &:not(:first-of-type) {
-        margin-top: rem(4);
+        margin-top: rem(4); 
     }
 
     &:before {
