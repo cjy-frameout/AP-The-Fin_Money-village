@@ -60,6 +60,9 @@
                     </div>
                     <p class="tBalDetail">삼성화재 5248665425285</p>
                 </div>
+                <div class="sel_form type_border on mgt20"> <!-- 선택시 on 클래스 추가 -->
+                    <a href="#pop002" class="btn_open_bottom_sheet sel_box " role="button" title="선택"><span>12가 1234</span></a>
+                </div>
 				<a href="#" class="btnRef"><span class="blind">새로고침</span></a>
 			</div>
 			<div class="accHistory">
@@ -90,6 +93,8 @@
                                             <p class="itemData">12가3456</p>
                                         </li>
                                     </ul>
+
+                                    
 
                                     <div class="history_tBox"> 
                                         <span class="history_tit ">주계약 상세</span>
@@ -299,6 +304,32 @@
 </div>
 <!-- [S] PP1_2_5_3_2_1FP 저축성/보장성 더보기 팝업 -->
 
+<!-- 1211 추가 -->
+<div id="pop002" class="layer_bottomsheet" role="dialog" tabindex="-1" aria-hidden="true">
+    <div class="layer_inner ">
+        <div class="layer_tit">
+            <strong class="tit"><span>차량번호 선택</span></strong>
+            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+        </div>
+        <div class="layer_cont" style="max-height: 736px;">
+            <!-- 페이지 스타일 -->
+            <div class="type_page">
+                <ul class="layer_sel_opt type_date">
+                    <li><button type="button" class="btn_sel_opt on"><span>12가 1234</span></button></li><!-- 선택시 클래스 'on' 및 title="선택됨" 추가 -->
+                    <li><button type="button" class="btn_sel_opt"><span>123나 1122</span></button></li>
+                </ul>
+            </div>
+            <!-- //페이지 스타일 -->
+        </div>
+        <div class="layer_footer">
+            <button type="button" class="js_pop_close btn_confirm"><span>확인</span></button>
+        </div>
+    </div>
+</div>
+<!-- // 1211 추가 -->
+
+
+<!--  1211 스크립트 수정 -->
 <script>
 $(document).ready(function(){
     //운용상품, 거래내역 선택 탭
@@ -312,66 +343,11 @@ $(document).ready(function(){
         fade:false,
         speed:500
     });
+
+    $(document).on("click",".sel_box",function(){
+        layer_bottomsheet("#pop002")
+    })
 });
-    
-// [S] 바텀시트
-$(document).on("click", ".btn_open_bottom_sheet", function(e){
-    e.preventDefault();
-
-    var $href = $(this).attr('href');
-    layer_bottomsheet($href);
-    $('html').addClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
-
-    // [S] multi layer 2021-08-02 추가
-    var dimIdx = $('.dim').index();
-    eval('$focusReturn' + [dimIdx] + '= $(this)');
-    //$focusReturn = $(this); // multi layer 2021-08-02 삭제
-    // [E] multi layer 2021-08-02 추가
-
-});
-function layer_bottomsheet(el){
-    var $el = $(el);
-    $el.append("<div class=\"dim\"></div>");
-    isDim ? $('.layer_bottomsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
-    setTimeout(function() {
-        $el.find('.layer_inner').addClass('on');
-    }, 50);
-
-    // [S] multi layer 2021-08-02 추가
-    //var isDim = $el.siblings().hasClass('dim');
-    var isDim;
-    var dimIdx = $('.dim').index();
-    var thisDim = $el.find('.dim');
-    var thisLyZindex = dimIdx + 4000;
-    $('.dim').css('opacity','0');
-    thisDim.css('opacity','.7');
-    thisDim.closest('.layer_bottomsheet, .layer_popup').css('z-index', thisLyZindex);
-    // [E] multi layer 2021-08-02 추가
-
-    $el.find('.js_pop_close').click(function(){
-
-        $el.find('.layer_inner').removeClass('on');
-        setTimeout(function() {
-            isDim ? $('.layer_bottomsheet').hide() : $el.hide();
-            $('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
-            $el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
-            // [S] multi layer 2021-08-02 추가
-            if($('.dim').length == '2'){
-                $('.dim:eq(1)').css('opacity','.7');
-            }else if($('.dim').length == '1'){
-                $('.dim').css('opacity','.7');
-            }
-            // [E] multi layer 2021-08-02 추가
-        }, 200);
-
-        // [S] multi layer 2021-08-02 추가
-        eval('$focusReturn'+ [dimIdx]).focus();
-        //$focusReturn.focus(); // multi layer 2021-08-02 삭제
-        // [E] multi layer 2021-08-02 추가
-
-        return false;
-    });
-}
 
 // [S] 풀페이지 팝업
 $(document).on("click", ".btn_open_full_sheet", function(e){
@@ -382,28 +358,9 @@ $(document).on("click", ".btn_open_full_sheet", function(e){
     $('html').addClass('scroll_lock');
 	$focusReturn = $(this);
 });
-function layer_fullsheet(el){
-	var $el = $(el);
-	$el.append("<div class=\"dim\"></div>");
-	isDim ? $('.layer_fullsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
-	setTimeout(function() {
-		$el.find('.layer_inner').addClass('on');
-	}, 50);
-
-	var isDim = $el.siblings().hasClass('dim');
-
-	$el.find('.js_pop_close').click(function(){
-		$el.find('.layer_inner').removeClass('on');
-		setTimeout(function() {
-			isDim ? $('.layer_fullsheet').hide() : $el.hide();
-			$('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
-			$el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
-		}, 200);
-		$focusReturn.focus();
-		return false;
-	});
-}
 // [E] 풀페이지 팝업
+
 </script>
+<!--  // 1211 스크립트 수정 -->
 </body>
 </html>

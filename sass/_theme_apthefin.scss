@@ -6704,7 +6704,7 @@ a.btnMenu {
 }
 
 .sub_detailList ~ .history_tBox {
-	border-top: rem(1) solid #eee;
+	border-top: rem(1) solid #e5e5e5;
 	margin-top: rem(20);
 	padding-top: rem(20);
 }
@@ -7193,6 +7193,14 @@ a.btnMenu {
 
 /* [S]  X,Y,J 수정 */
 /* [S] check, radio, switch, select */
+.tBalance {
+	.sel_form.type_border{
+		.sel_box {
+			padding:rem(9) rem(10);
+		}
+		
+	}
+}
 
 .sel_form.type_border {
 	position: relative;
