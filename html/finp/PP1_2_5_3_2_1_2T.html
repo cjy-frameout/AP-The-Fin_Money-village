@@ -345,7 +345,18 @@ $(document).ready(function(){
     });
 
     $(document).on("click",".sel_box",function(){
-        layer_bottomsheet("#pop002")
+        layer_bottomsheet("#pop002");
+    })
+
+    $(document).on("click",".btn_sel_opt",function(){
+        $(".btn_sel_opt").removeClass("on");
+        $(this).addClass("on");
+        var selectedV = $(this).find('span').text();
+        var closeB = $('.layer_footer > .js_pop_close');
+        var target = $('.sel_box');
+        closeB.on('click',function(){
+            target.find('span').text(selectedV);
+        });
     })
 });
 
