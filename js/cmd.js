@@ -129,6 +129,7 @@ function dragSort() {
 
 function calendar() {
     // 2022-06-28 달력 toggle인경우 추가
+    var $focusReturn2;
     if ($(".datepicker").parents().hasClass("jsToggleDatepicker")) {
         $(".datepicker").datepicker({
             showOn: "button",

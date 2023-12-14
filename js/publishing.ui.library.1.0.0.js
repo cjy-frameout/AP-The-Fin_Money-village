@@ -1,5 +1,4 @@
 ﻿(function ($) {
-    //tabs have 3 style normorl fade and animate
     $.fn.tabs = function (options) {
         try {
             var defaults = {
@@ -17,7 +16,7 @@
             var classWrap = options.wrapClass;
             var clickClass = options.clickClass;
             var showClass = options.showClass;
-            //alert(options.animateBorder[0]);
+
             if (options.animateBorder[0] === "true") {
                 var attrDiv =
                     "<span class=" +
@@ -71,9 +70,7 @@
                                     transition: "width 0.7s",
                                 });
                         }
-                    } catch (err) {
-                        //console.log(err);
-                    }
+                    } catch (err) {}
                 });
             }
             if (options.animate) {
@@ -131,22 +128,6 @@
                         clickClass
                 );
 
-                //              //연동기관, 연동완료탭의 하위 탭들중 은행만 남기고 선택이 안되게 처리 20210413 mswoo
-                //              var isClick = false;
-                //              if(options.clickEnableIndex && classWrap == ".tabInter2"){
-                //                  var indexArray = options.clickEnableIndex.split(",");
-                //                  for(var i = 0; i < indexArray.length; i++){
-                //                      if(thisIndex+"" == indexArray[i]){
-                //                          isClick = true;
-                //                          break;
-                //                      }
-                //                  }
-                //              } else {
-                //                  isClick = true;
-                //              }
-                //              if(!isClick){
-                //                  return false;
-                //              }
                 $(
                     classWrap +
                         ":eq(" +
@@ -228,11 +209,8 @@
                         .css("display", "block");
                 }
             });
-        } catch (err) {
-            //console.log(err);
-        }
+        } catch (err) {}
     };
-    //tabs
 })(jQuery);
 
 // 2021-06-30
@@ -266,7 +244,6 @@ $(document).ready(function () {
                 .show()
                 .attr({ tabindex: "0", "aria-hidden": "false" })
                 .focus();
-            //$('html').addClass('scroll_lock');
         }, 0);
     }
     /* 컨텐츠 여백 */
@@ -342,7 +319,7 @@ function kepadOpenInpTxt() {
             .addClass("fixBtnWrapPd")
             .closest(".content")
             .addClass("pdb0"); //하단고정버튼 페이지 위치로 2022-08-25
-        // $('html, body').animate({scrollTop: 200}, 300);
+
         $fixBottom.find(".dock_bar").hide();
     });
     $("input[type=text]").focusout(function () {
@@ -553,7 +530,6 @@ function layer_popup(el) {
         ? $(".layer_popup").fadeIn()
         : $el.fadeIn().attr({ tabindex: "0", "aria-hidden": "false" }).focus();
 
-    //var isDim = $el.siblings().hasClass('dim');
     var isDim;
     var dimIdx = $(".dim").index();
     var thisDim = $el.find(".dim");
@@ -589,7 +565,7 @@ function bsPageTypeHeight() {
             var footerBtnHeight = $(this)
                 .find(".layer_footer .js_pop_close")
                 .height();
-            //console.log(footerBtnHeight);
+
             if ($(this).find(".layer_footer").length) {
                 $(this)
                     .find(".layer_cont")
@@ -606,13 +582,12 @@ function bsPageTypeHeight() {
             var footerBtnHeight = $(this)
                 .find(".layer_footer .js_pop_close")
                 .height();
-            //console.log(footerBtnHeight);
+
             if ($(this).find(".layer_inner .layer_tit").length) {
-                //console.log('tit 있음');
                 var titHeight = parseInt(
                     $(this).find(".layer_tit").css("min-height")
                 );
-                //console.log(titHeight);
+
                 if ($(this).find(".layer_footer").length) {
                     $(this)
                         .find(".layer_cont")
@@ -626,7 +601,6 @@ function bsPageTypeHeight() {
                         .css("max-height", windowInnerHeight - titHeight - 30);
                 }
             } else {
-                //console.log('tit 없음');
                 if ($(this).find(".layer_footer").length) {
                     $(this)
                         .find(".layer_cont")
@@ -661,7 +635,7 @@ function contentsBottomPadding() {
         if (!$("footer.fix_bottom .btn_wrap").length) {
             $(".content").css("padding-bottom", fixBottomHeight + 32);
         }
-        //YY1200
+
         if ($(".btnGroup.btnSeWrap .tooltip").length) {
             $(".content").css(
                 "padding-bottom",
@@ -717,7 +691,6 @@ function bottomFixActionBar() {
         $(fixBox).addClass("show");
         //스크롤 이벤트
         window.onscroll = function (e) {
-            //console.log($(window).scrollTop());
             if ($(window).scrollTop() > 100) {
                 didScroll = true;
             }
@@ -741,9 +714,6 @@ function bottomFixActionBar() {
                 //Scroll end
                 fixBox.classList.add("show");
             } else if (nowScrollTop > lastScrollTop) {
-                // && nowScrollTop > fixBoxHeight
-                //Scroll down
-                //fixBox.classList.remove('show'); // 하단 퀵메뉴 바 보여지는 부분 스크립트 주석처리.
             } else {
                 if (
                     nowScrollTop + window.innerHeight <
@@ -754,7 +724,6 @@ function bottomFixActionBar() {
                 }
             }
             lastScrollTop = nowScrollTop;
-            //console.log('nowScrollTop: '+nowScrollTop, ' window.innerHeight: '+window.innerHeight, ' document.body.offsetHeight: '+document.body.offsetHeight, ' document.body.offsetHeight: '+document.body.offsetHeight);
         }
     }
 }
@@ -768,8 +737,6 @@ function orgSelScroll() {
             $(".tit2_wrap").outerHeight(true) +
             parseInt($(".tab_certi").css("margin-top"));
 
-        //console.log('$topScSpace: '+$topScSpace, ', .header / height: '+$('.header').outerHeight(true) ,', .tit2_wrap / height: '+ $('.tit2_wrap').outerHeight(true) ,', .tab_certi / margin-top: '+ parseInt($('.tab_certi').css('margin-top')));
-
         $(".tabs_wrap.type_scroll .ins1Link_wrap .org_wrap").each(function (
             index,
             item
@@ -780,34 +747,13 @@ function orgSelScroll() {
             $(document).on(
                 "click",
                 ".tabs_wrap .btn_sel_org:nth-child(" + $orgNth + ") a",
-                function () {
-                    /*if($orgNth == 1){
-                    $('html, body').animate({scrollTop: $topScSpace}, 300);
-                }else if($orgNth == 2){
-                    $('html, body').animate({scrollTop: $topScSpace + $('.org_nth_1').outerHeight(true)}, 300);
-                }else if($orgNth == 3){
-                    $('html, body').animate({scrollTop: $topScSpace + $('.org_nth_1').outerHeight(true) + $('.org_nth_2').outerHeight(true)}, 300);
-                }else if($orgNth == 4){
-                    $('html, body').animate({scrollTop: $topScSpace + $('.org_nth_1').outerHeight(true) + $('.org_nth_2').outerHeight(true) + $('.org_nth_3').outerHeight(true)}, 300);
-                }else if($orgNth == 5){
-                    $('html, body').animate({scrollTop: $topScSpace + $('.org_nth_1').outerHeight(true) + $('.org_nth_2').outerHeight(true) + $('.org_nth_3').outerHeight(true) + $('.org_nth_4').outerHeight(true)}, 300);
-                }else if($orgNth == 6){
-                    $('html, body').animate({scrollTop: $topScSpace + $('.org_nth_1').outerHeight(true) + $('.org_nth_2').outerHeight(true) + $('.org_nth_3').outerHeight(true) + $('.org_nth_4').outerHeight(true) + $('.org_nth_5').outerHeight(true)}, 300);
-                }else if($orgNth == 7){
-                    $('html, body').animate({scrollTop: $topScSpace + $('.org_nth_1').outerHeight(true) + $('.org_nth_2').outerHeight(true) + $('.org_nth_3').outerHeight(true) + $('.org_nth_4').outerHeight(true) + $('.org_nth_5').outerHeight(true) + $('.org_nth_6').outerHeight(true)}, 300);
-                }else if($orgNth == 8){
-                    $('html, body').animate({scrollTop: $topScSpace + $('.org_nth_1').outerHeight(true) + $('.org_nth_2').outerHeight(true) + $('.org_nth_3').outerHeight(true) + $('.org_nth_4').outerHeight(true) + $('.org_nth_5').outerHeight(true) + $('.org_nth_6').outerHeight(true) + $('.org_nth_7').outerHeight(true)}, 300);
-                }*/
-                }
+                function () {}
             );
         });
 
         $(window).scroll(function () {
             var $windowTop = $(window).scrollTop();
             var $activePosArea = $topScSpace - 60;
-            //var $activePosArea = - parseInt($(window).height()/2.5) + $topScSpace;
-            //console.log('$activePosArea:'+$activePosArea, '$windowTop:'+$windowTop, '$(window).height()/2.5 :'+parseInt($(window).height()/2.5), '$topScSpace:' +$topScSpace);
-            //console.log($topScSpace - 60);
 
             var $orgEq0 = $(".ins1Link_wrap .org_wrap:eq(0)").outerHeight(true);
             var $orgEq1 = $(".ins1Link_wrap .org_wrap:eq(1)").outerHeight(true);
@@ -927,9 +873,6 @@ function orgSelScroll() {
                     $(".tabs_header").outerHeight(true) -
                     60
             );
-
-            //console.log('.org_last_height >= window_height', $('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').outerHeight(true), $(window).height(), $(window).height() - $('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').outerHeight(true) - $('.fix_bottom').outerHeight(true) - $('.tabs_header').outerHeight(true)+'(디바이스높이, 컨텐츠높이 비교)');
-            //console.log($('.tabs_wrap.type_scroll .ins1Link_wrap .org_wrap:last-child').outerHeight(true), $('.fix_bottom').outerHeight(true), $('.fix_bottom').offsetHeight, $('.tabs_header').outerHeight(true));
         }
     }
 }
@@ -943,7 +886,6 @@ function layerFPageBottomPadding() {
             "padding-bottom",
             layerFixBottomHeight
         );
-        //console.log(layerFixBottomHeight);
     }
 }
 /* [E] XX1300 wrap_full_page 하단 여백조정 */
