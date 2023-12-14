@@ -1,6 +1,6 @@
 (function ($) {
     //얼랫같은 센터 팝업
-    ($.fn.layerPopOpen = function () {
+    $.fn.layerPopOpen = function () {
         return this.each(function () {
             var $this = $(this);
             $this.on("click", function () {
@@ -15,101 +15,106 @@
                 });
             });
         });
-    }),
-        ($.fn.passChange = function () {
-            return this.each(function () {
-                var $this = $(this);
-                var count = 0;
-                var disc = $this.parent().find(".password-disc-wrap");
+    };
 
-                $this.keydown(function (e) {
-                    if (e.key === "Backspace" || e.key == "Delete") {
-                        count--;
-                        disc.find("span").last().remove();
-                    } else {
-                        count++;
-                        disc.append("<span class='pass-disc'></span>");
+    $.fn.passChange = function () {
+        return this.each(function () {
+            var $this = $(this);
+            var count = 0;
+            var disc = $this.parent().find(".password-disc-wrap");
+
+            $this.keydown(function (e) {
+                if (e.key === "Backspace" || e.key == "Delete") {
+                    count--;
+                    disc.find("span").last().remove();
+                } else {
+                    count++;
+                    disc.append("<span class='pass-disc'></span>");
+                }
+                if (count <= 0) $this.css("opacity", 1);
+                else $this.css("opacity", 0);
+            });
+        });
+    };
+
+    $.fn.searchDel = function () {
+        return this.each(function () {
+            let $this = $(this);
+            let sBox = $this.find('input[type="text"]');
+            let search = `<a href="#none" id="btn-del" role="button" class="btn-del"></a>`;
+            let count = 0;
+
+            sBox.keydown(function (e) {
+                if (e.key === "Backspace" || e.key == "Delete") count--;
+                else count++;
+
+                if (count >= 1) {
+                    $this.append(search);
+                    var delL = $this.find(".btn-del");
+                    console.log(delL.length);
+                    if (delL.length > 1) {
+                        delL.last().remove();
                     }
-                    if (count <= 0) $this.css("opacity", 1);
-                    else $this.css("opacity", 0);
-                });
+                } else $this.find(".btn-del").remove();
             });
-        }),
-        ($.fn.searchDel = function () {
-            return this.each(function () {
-                let $this = $(this);
-                let sBox = $this.find('input[type="text"]');
-                let search = `<a href="#none" id="btn-del" role="button" class="btn-del"></a>`;
-                let count = 0;
+        });
+    };
 
-                sBox.keydown(function (e) {
-                    if (e.key === "Backspace" || e.key == "Delete") count--;
-                    else count++;
-
-                    if (count >= 1) {
-                        $this.append(search);
-                        var delL = $this.find(".btn-del");
-                        console.log(delL.length);
-                        if (delL.length > 1) {
-                            delL.last().remove();
+    $.fn.resiType = function () {
+        return this.each(function () {
+            var $this = $(this);
+            var radio = $this.find('input[type="radio"]');
+            radio.each(function () {
+                var target = $(this);
+                target.on("click", function () {
+                    var targetId = $(this).attr("id");
+                    var dataResi = $("div[data-resi]");
+                    dataResi.each(function () {
+                        var dataTarget = $(this).attr("data-resi");
+                        if (targetId == dataTarget) {
+                            $("div[data-resi]").hide();
+                            $('div[data-resi="' + dataTarget + '"]').show();
                         }
-                    } else $this.find(".btn-del").remove();
-                });
-            });
-        }),
-        ($.fn.resiType = function () {
-            return this.each(function () {
-                var $this = $(this);
-                var radio = $this.find('input[type="radio"]');
-                radio.each(function () {
-                    var target = $(this);
-                    target.on("click", function () {
-                        var targetId = $(this).attr("id");
-                        var dataResi = $("div[data-resi]");
-                        dataResi.each(function () {
-                            var dataTarget = $(this).attr("data-resi");
-                            if (targetId == dataTarget) {
-                                $("div[data-resi]").hide();
-                                $('div[data-resi="' + dataTarget + '"]').show();
-                            }
-                        });
-                    });
-                });
-            });
-        }),
-        ($.fn.goTop = function () {
-            return this.each(function () {
-                var $this = $(this);
-                $this.on("click", function () {
-                    $("html, body").animate(
-                        {
-                            scrollTop: 0,
-                        },
-                        500,
-                        "swing"
-                    );
-                });
-            });
-        }),
-        ($.fn.profileEdit = function () {
-            return this.each(function () {
-                var $this = $(this);
-                var $cancelProfile = $(".btn-profileChange");
-                var $inp = $this.find(".userProfile-inp");
-                $this.each(function () {
-                    var tt = $(this);
-                    var $btn = tt.find("._edit-profile");
-                    $btn.on("click", function () {
-                        $this.addClass("-edit");
-                        $inp.attr("disabled", false).focus();
-                    });
-                    $cancelProfile.on("click", function () {
-                        $this.removeClass("-edit");
-                        $inp.attr("disabled", true);
                     });
                 });
             });
         });
+    };
+
+    $.fn.goTop = function () {
+        return this.each(function () {
+            var $this = $(this);
+            $this.on("click", function () {
+                $("html, body").animate(
+                    {
+                        scrollTop: 0,
+                    },
+                    500,
+                    "swing"
+                );
+            });
+        });
+    };
+
+    $.fn.profileEdit = function () {
+        return this.each(function () {
+            var $this = $(this);
+            var $cancelProfile = $(".btn-profileChange");
+            var $inp = $this.find(".userProfile-inp");
+            $this.each(function () {
+                var tt = $(this);
+                var $btn = tt.find("._edit-profile");
+                $btn.on("click", function () {
+                    $this.addClass("-edit");
+                    $inp.attr("disabled", false).focus();
+                });
+                $cancelProfile.on("click", function () {
+                    $this.removeClass("-edit");
+                    $inp.attr("disabled", true);
+                });
+            });
+        });
+    };
 })(jQuery);
 
 //전체 레이어 팝업
@@ -141,7 +146,7 @@ function layer_fullsheet(el, callback) {
         .closest(".layer_fullsheet, .layer_popup")
         .css("z-index", thisLyZindex);
 
-    var isDim = $el.siblings().hasClass("dim");
+    isDim = $el.siblings().hasClass("dim");
 
     $el.find(".js_pop_close").click(function () {
         $el.find(".layer_inner").removeClass("on");
