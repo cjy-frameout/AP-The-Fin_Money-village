@@ -17,6 +17,16 @@
     top:0;
     z-index: 99;
     background: #fff;
+    &:before {
+      content:'';
+      background: #fff;
+      height: 1px;
+      width: 100%;
+      display: block;
+      position: absolute;
+      top: -1px;
+      left: 0;
+    }
   }
   &-nav {
     flex:1;
