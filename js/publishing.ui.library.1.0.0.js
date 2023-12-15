@@ -1,4 +1,55 @@
-﻿(function ($) {
+﻿var classWrap, clickClass, showClass, animateBorder, attrDiv;
+
+function aniB(i){
+    try {
+        if (
+            $(classWrap)
+                .eq(i)
+                .find(animateBorder.substring(1))
+                .find(classWrap + "_border_animate").length == 0
+        ) {
+            $(classWrap)
+                .eq(i)
+                .find(animateBorder)
+                .append(attrDiv);
+            var borderWith = $(classWrap)
+                .eq(i)
+                .find(clickClass)
+                .eq(0)
+                .children()
+                .outerWidth();
+            var parentOffset = $(classWrap)
+                .eq(i)
+                .find(clickClass)
+                .eq(0)
+                .parent()
+                .offset();
+            var firstOffet = $(classWrap)
+                .eq(i)
+                .find(clickClass)
+                .eq(0)
+                .children()
+                .offset();
+            var totalOffet =
+                firstOffet.left - parentOffset.left;
+            $(classWrap)
+                .eq(i)
+                .find(classWrap + "_border_animate")
+                .css({
+                    position: "absolute",
+                    bottom: 0,
+                    height: 5,
+                    "background-color": "green",
+                    "z-index": "99999",
+                    width: borderWith,
+                    "margin-left": totalOffet,
+                    transition: "width 0.7s",
+                });
+        }
+    } catch (err) {}
+}
+
+(function ($) {
     $.fn.tabs = function (options) {
         try {
             var defaults = {
@@ -13,68 +64,24 @@
                 speed: 300,
             };
             options = $.extend(defaults, options);
-            var classWrap = options.wrapClass;
-            var clickClass = options.clickClass;
-            var showClass = options.showClass;
+            classWrap = options.wrapClass;
+            clickClass = options.clickClass;
+            showClass = options.showClass;
+            animateBorder = options.animateBorder[1];
 
             if (options.animateBorder[0] === "true") {
-                var attrDiv =
+                attrDiv =
                     "<span class=" +
                     classWrap.substring(1) +
                     "_border_animate" +
                     ">" +
                     "</span>";
                 $(classWrap).each(function (i) {
-                    try {
-                        if (
-                            $(classWrap)
-                                .eq(i)
-                                .find(options.animateBorder[1].substring(1))
-                                .find(classWrap + "_border_animate").length == 0
-                        ) {
-                            $(classWrap)
-                                .eq(i)
-                                .find(options.animateBorder[1])
-                                .append(attrDiv);
-                            var borderWith = $(classWrap)
-                                .eq(i)
-                                .find(clickClass)
-                                .eq(0)
-                                .children()
-                                .outerWidth();
-                            var parentOffset = $(classWrap)
-                                .eq(i)
-                                .find(clickClass)
-                                .eq(0)
-                                .parent()
-                                .offset();
-                            var firstOffet = $(classWrap)
-                                .eq(i)
-                                .find(clickClass)
-                                .eq(0)
-                                .children()
-                                .offset();
-                            var totalOffet =
-                                firstOffet.left - parentOffset.left;
-                            $(classWrap)
-                                .eq(i)
-                                .find(classWrap + "_border_animate")
-                                .css({
-                                    position: "absolute",
-                                    bottom: 0,
-                                    height: 5,
-                                    "background-color": "green",
-                                    "z-index": "99999",
-                                    width: borderWith,
-                                    "margin-left": totalOffet,
-                                    transition: "width 0.7s",
-                                });
-                        }
-                    } catch (err) {}
+                    aniB(i);
                 });
             }
             if (options.animate) {
-                var attrDiv =
+                 attrDiv =
                     "<div class=" +
                     classWrap.substring(1) +
                     "_contents" +
@@ -297,7 +304,6 @@ $(document).ready(function () {
     jsTxValReset(); // text val reset
     kepadOpenInpTxt(); // 앱 키패드 올라올때
     acHideOnlyOne(); // 메인 아코디언 1개일때 숨기기
-    //orgSelScroll();             // 2022-05 알고하는 동의 기관선택 스크롤
     layerFPageBottomPadding(); // XX1300 wrap_full_page 하단 여백조정
 });
 
@@ -737,10 +743,7 @@ function orgSelScroll() {
             $(".tit2_wrap").outerHeight(true) +
             parseInt($(".tab_certi").css("margin-top"));
 
-        $(".tabs_wrap.type_scroll .ins1Link_wrap .org_wrap").each(function (
-            index,
-            item
-        ) {
+        $(".tabs_wrap.type_scroll .ins1Link_wrap .org_wrap").each(function (index, item ) {
             $(item).addClass("org_nth_" + (index + 1));
             var $orgNth = index + 1;
 
