@@ -46,14 +46,8 @@ function btnFolding() {
     });
 }
 
-function dragSort() {
-    function dragSortList() {
-        $(".asList").sortable({
-            axis: "y",
-            handle: ".btnHandle",
-            scroll: false,
-        });
-    }
+
+function dragInner(){
     if ($(".sortCtrl").length) {
         $(".sortCtrl")
             .children()
@@ -116,6 +110,16 @@ function dragSort() {
                 return false;
             });
     }
+}
+function dragSort() {
+    function dragSortList() {
+        $(".asList").sortable({
+            axis: "y",
+            handle: ".btnHandle",
+            scroll: false,
+        });
+    }
+    
     $(".accItem").each(function () {
         if ($(this).hasClass("blockLink")) {
             $(this)

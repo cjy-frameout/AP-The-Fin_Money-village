@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
     <title></title>
     <meta http-equiv="Cache-Control" content="No-Cache">
     <meta http-equiv="Pragma" content="No-Cache">
@@ -31,139 +33,146 @@
 </head>
 
 <body>
-<div class="wrap">
-    <!-- header -->
-    <div class="header">
-        <div class="header_inn">
-            <div class="left">
-                <a href="#none" class="btnBack"><span class="blind">Back</span></a>
-            </div>
-            <div class="center">
-                <h2 class="tit_h2">이용 해지</h2>
-            </div>
-
-        </div>
-    </div>
-    <!-- //header -->
-
-    <div class="container">
-        <div class="content">
-            <h3 class="cont-title-big mgt30">OOO님,<br>머니빌리지 탈퇴 하기 전에<br>확인해 주세요.</h3>
-
-            <ul class="list-typeB mgt30">
-                <li class="list-typeB-li">머니빌리지를 탈퇴하는 경우 모든 개인정보가 삭제되며 복구할 수 없습니다.</li>
-                <li class="list-typeB-li">자산관리서비스를 이용하시는 경우 함께 해지되며, 마이데이터로 연결한 자산 내역이 모두 삭제되고 유효한 전송 요구도 함께 중단됩니다.</li>
-                <li class="list-typeB-li">자산관리서비스 재이용을 위해서는 다시 전송 동의가 필요합니다. 단, 수집한 정보는 복원할 수 없는 방법으로 삭제하므로, 다시 전송 동의를 하더라도 복구할 수 없습니다.</li>
-                <li class="list-typeB-li">자세한 사항은 개인정보처리방침을 확인해 주세요.</li>
-            </ul>
-
-            <div class="filterItem mgt30">
-                <p class="filterTit">마이데이터 탈퇴 사유</p>
-                <div class="sel_form type_border"> <!-- 선택시 on 클래스 추가 -->
-                    <a href="#layer_001" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span class="sel_txt">탈퇴 사유를 알려주세요.</span></a>
+    <div class="wrap">
+        <!-- header -->
+        <div class="header">
+            <div class="header_inn">
+                <div class="left">
+                    <a href="#none" class="btnBack"><span class="blind">Back</span></a>
                 </div>
-            </div>
-
-            <div class="accSetting inpWriteArea" style="display: none">
-                <div class="editName mgt0">
-                    <input type="text" id="name" title="해지이유 직접입력" required="required" placeholder="직접입력">
+                <div class="center">
+                    <h2 class="tit_h2">이용 해지</h2>
                 </div>
+
             </div>
-
-            
-
-            
-
-
-            <footer class="fix_bottom">
-                <div class="btn_wrap">
-                    <div class="btnGroup sub_btnGroup">
-                        <p><a href="#" class="btnBl3" role="button" onclick="">취소</a></p>
-                        <p><a href="#layer-wait" class="btnBl1 btn_open_layer_pop " role="button" onclick="">확인</a></p>
-                    </div>
-                </div>
-            </footer>
-
         </div>
-    </div>
-</div>
+        <!-- //header -->
 
+        <div class="container">
+            <div class="content">
+                <h3 class="cont-title-big mgt30">OOO님,<br>머니빌리지 탈퇴 하기 전에<br>확인해 주세요.</h3>
 
-<!-- [S]해지 사유 -->
-<div id="layer_001" class="layer_bottomsheet">
-    <div class="layer_inner">
-        <div class="layer_tit">
-            <strong class="tit"><span>해지 사유</span></strong>
-            <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
-        </div>
-        <div class="layer_cont">
-            <div class="cdChkLst">
-                <ul class="cdChkSubList">
-                    <li class="cdChkItem">
-                        <label>
-                            <input type="radio" name="radio02" id="radio1">
-                            <i></i><span>보안 불안</span>
-                        </label>
+                <ul class="list-typeB mgt30">
+                    <li class="list-typeB-li">머니빌리지를 탈퇴하는 경우 모든 개인정보가 삭제되며 복구할 수 없습니다.</li>
+                    <li class="list-typeB-li">자산관리서비스를 이용하시는 경우 함께 해지되며, 마이데이터로 연결한 자산 내역이 모두 삭제되고 유효한 전송 요구도 함께 중단됩니다.
                     </li>
-                    <li class="cdChkItem">
-                        <label>
-                            <input type="radio" name="radio02" id="radio2">
-                            <i></i><span>마케팅 알림 과다</span>
-                        </label>
-                    </li>
-                    <li class="cdChkItem">
-                        <label>
-                            <input type="radio" name="radio02" id="radio3">
-                            <i></i><span>앱 미사용</span>
-                        </label>
-                    </li>
-                    <li class="cdChkItem">
-                        <label>
-                            <input type="radio" name="radio02" id="radio4">
-                            <i></i><span>대출 한도 부족</span>
-                        </label>
-                    </li>
-                    <li class="cdChkItem">
-                        <label>
-                            <input type="radio" name="radio02" id="radio5">
-                            <i></i><span>기타(직접입력)</span>
-                        </label>
-                    </li>
+                    <li class="list-typeB-li">자산관리서비스 재이용을 위해서는 다시 전송 동의가 필요합니다. 단, 수집한 정보는 복원할 수 없는 방법으로 삭제하므로, 다시 전송
+                        동의를 하더라도 복구할 수 없습니다.</li>
+                    <li class="list-typeB-li">자세한 사항은 개인정보처리방침을 확인해 주세요.</li>
                 </ul>
-            </div>
-        </div>
-        <div class="layer_footer">
-            <button type="button" class="js_pop_close"><span>확인</span></button>
-        </div>
-    </div>
-</div>
-<!-- [E]해지 사유 -->
 
+                <div class="asGroup">
 
-<!-- [S] 알림 -->
-<div id="layer-wait" class="layer_popup type2">
-    <div class="layer_position">
-        <div class="layer_inner">
-            <div class="layer_cont">
-                <div class="msg_box">
-                    <div class="msg_box">
-                        <p class="msg_alert"><span class="accNum">잠시만요!</span></p>
-                        <p class="msg_customer mgt10">
-                            머니빌리지는 OOO님과 헤어지기 아쉬워요.<br>
-                            머니빌리지 서비스와 계속 함께해 주시겠어요?
-                        </p>
+                    <div class="asList">
+
+                        <div class="accItem cdChkItem">
+                            <label for="share1" class="flex ">
+                                <div class="tx">
+                                    <p class="prdName"><span class="ellipsis">머니빌리지 회원 탈퇴</span></p>
+                                </div>
+                                <input type="checkbox" id="share1">
+                                <i></i>
+                            </label>
+                        </div>
                     </div>
-                    
                 </div>
-                <div class="btn_layer_wrap">
-                    <button type="button" class="  js_pop_close btn_cancel "><span>탈퇴할께요</span></button>
-                    <button type="button" class="js_pop_close btn_confirm"><span>계속 이용할께요</span></button>
+
+                <div class="accSetting inpWriteArea" style="display: none">
+                    <div class="editName mgt0">
+                        <input type="text" id="name" title="해지이유 직접입력" required="required" placeholder="직접입력">
+                    </div>
+                </div>
+
+                <footer class="fix_bottom">
+                    <div class="btn_wrap">
+                        <div class="btnGroup sub_btnGroup">
+                            <p><a href="#" class="btnBl3" role="button" onclick="">취소</a></p>
+                            <p><a href="#layer-wait" class="btnBl1 btn_open_layer_pop " role="button" onclick="">확인</a>
+                            </p>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- [S]해지 사유 -->
+    <div id="layer_001" class="layer_bottomsheet">
+        <div class="layer_inner">
+            <div class="layer_tit">
+                <strong class="tit"><span>해지 사유</span></strong>
+                <button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+            </div>
+            <div class="layer_cont">
+                <div class="cdChkLst">
+                    <ul class="cdChkSubList">
+                        <li class="cdChkItem">
+                            <label>
+                                <input type="radio" name="radio02" id="radio1">
+                                <i></i><span>보안 불안</span>
+                            </label>
+                        </li>
+                        <li class="cdChkItem">
+                            <label>
+                                <input type="radio" name="radio02" id="radio2">
+                                <i></i><span>마케팅 알림 과다</span>
+                            </label>
+                        </li>
+                        <li class="cdChkItem">
+                            <label>
+                                <input type="radio" name="radio02" id="radio3">
+                                <i></i><span>앱 미사용</span>
+                            </label>
+                        </li>
+                        <li class="cdChkItem">
+                            <label>
+                                <input type="radio" name="radio02" id="radio4">
+                                <i></i><span>대출 한도 부족</span>
+                            </label>
+                        </li>
+                        <li class="cdChkItem">
+                            <label>
+                                <input type="radio" name="radio02" id="radio5">
+                                <i></i><span>기타(직접입력)</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="layer_footer">
+                <button type="button" class="js_pop_close"><span>확인</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- [E]해지 사유 -->
+
+
+    <!-- [S] 알림 -->
+    <div id="layer-wait" class="layer_popup type2">
+        <div class="layer_position">
+            <div class="layer_inner">
+                <div class="layer_cont">
+                    <div class="msg_box">
+                        <div class="msg_box">
+                            <p class="msg_alert"><span class="accNum">잠시만요!</span></p>
+                            <p class="msg_customer mgt10">
+                                머니빌리지는 OOO님과 헤어지기 아쉬워요.<br>
+                                머니빌리지 서비스와 계속 함께해 주시겠어요?
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="btn_layer_wrap">
+                        <button type="button" class="  js_pop_close btn_cancel "><span>탈퇴할께요</span></button>
+                        <button type="button" class="js_pop_close btn_confirm"><span>계속 이용할께요</span></button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- [E] 알림 -->
+    <!-- [E] 알림 -->
 
 
 
@@ -172,15 +181,15 @@
 
 <script>
     //직접입력 테스트용
-    $(".js_pop_close").on("click",function(){
+    $(".js_pop_close").on("click", function () {
         $("#radio5").is(":checked") ? $(".inpWriteArea").show() : $(".inpWriteArea").hide();
     });
 
-   
+
 
 
     // [S] 바텀시트
-    $(document).on("click", ".btn_open_bottom_sheet", function(e){
+    $(document).on("click", ".btn_open_bottom_sheet", function (e) {
         e.preventDefault();
         var $href = $(this).attr('href');
         layer_bottomsheet($href);
@@ -190,4 +199,5 @@
 
     // [E] 바텀시트
 </script>
+
 </html>
