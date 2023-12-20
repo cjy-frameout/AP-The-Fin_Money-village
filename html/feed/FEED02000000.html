@@ -1,463 +1,431 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<title></title>
-<meta http-equiv="Cache-Control" content="No-Cache">
-<meta http-equiv="Pragma" content="No-Cache">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="">
-<meta property="og:type" content="website">
-<meta property="og:title" content="">
-<meta property="og:description" content="">
-<meta property="og:url" content="">
-<meta property="og:image" content="">
-<link rel="SHORTCUT ICON" href="">
-<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
-<link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
-<script type="text/javascript" src="../../js/slide_slick.js"></script>
-<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
-<script type="text/javascript" src="../../js/cmd.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title></title>
+	<meta http-equiv="Cache-Control" content="No-Cache">
+	<meta http-equiv="Pragma" content="No-Cache">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+	<link rel="SHORTCUT ICON" href="">
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript" src="../../js/slide_slick.js"></script>
+	<script type="text/javascript" src="../../js/publishing.ui.library.1.0.0.js"></script>
+	<script type="text/javascript" src="../../js/cmd.js"></script>
+	<script type="text/javascript" src="../../js/interaction.js"></script>
 </head>
 
 <body>
 
-<!-- wrap -->
-<div class="wrap">
+	<!-- wrap -->
+	<div class="wrap">
 
-	<!-- header -->
-	<div class="header">
-		<div class="header_inn">
-			<div class="left">
-				<a href="#none" class="btnBack"><span class="blind">Back</span></a>
-			</div>
-			<div class="center">
-				<h2 class="tit_h2">피드 작성</h2>
-			</div>
-			<div class="right">
-				<a href="#none" class="btnMenu"><span class="blind">menu</span></a>
+		<!-- header -->
+		<div class="header">
+			<div class="header_inn">
+				<div class="left">
+					<a href="#none" class="btnBack"><span class="blind">Back</span></a>
+				</div>
+				<div class="center">
+					<h2 class="tit_h2">피드 작성</h2>
+				</div>
+				<div class="right">
+					<a href="#none" class="btnMenu"><span class="blind">menu</span></a>
+				</div>
 			</div>
 		</div>
-	</div>
-	<!-- //header -->
+		<!-- //header -->
 
-	<!-- container -->
-	<div class="container">
-		<div class="content">
-			<div class="feed-item no-border-bottom write-page"> <!-- 1013 write-page 클래스 추가 -->
-				<div class="list-name mgt30">
-					<div class="list-name-box jcs">
-						<h2 class="list-name"><img src="../../img/theme/apthefin/feed_name_img.png" alt=""> 프로필 네임</h2>
-						<a href="#changeProfile" class="btn_open_bottom_sheet alink-typeA" role="button">프로필 변경</a>
-					</div>
-				</div>
-				<!-- <div class="sel_form type_border"> 
-					<a href="#layer_SHE1119" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>카테고리를 선택해 주세요</span></a>
-				</div> -->
-				<div class="input-box">
-					<input type="text" required="required" id="" class="schTxt tx_bold" placeholder="제목을 입력해 주세요" >
-				</div>
-				
-				<div class="load-wrap padd20" >
-					<div class="asGroup">
-
-						<div class="asList">
-
-							<!-- 투자 영역 -->
-							<div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
-								<label for="share1" class="flex ">
-									<div class="im">
-										<img src="../../img/bank/bank_logo_021.png" alt="bnk">
-									</div>
-									<div class="tx">
-										<p class="prdName"><span class="ellipsis">머니빌리지 펀드1</span></p>
-										<p class="amount"><em>12,000,000</em>원</p>
-										<p class="profit plus"><em class="num">+230,000</em>원 (<em class="num invest_up">3.21%</em>)</p>
-									</div>
-									<input type="checkbox" id="share1">
-									<i></i>
-								</label>
-							</div>
-
-
-							<!-- 대출 영역 -->
-							<div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
-								<label for="share3" class="flex ">
-									<div class="im">
-										<img src="../../img/bank/bank_logo_021.png" alt="bnk">
-									</div>
-									<div class="tx">
-										<p class="prdName"><span class="ellipsis">버팀목 전세자금 대출</span></p>
-										<p class="amount"><em>12,000,000</em>원</p>
-										<p class="deposit">금리 <em class="num">9.88%</em></p>
-									</div>
-									<input type="checkbox" id="share3">
-									<i></i>
-								</label>
-							</div>
-
-							<!-- 입출금, 예적금 영역 -->
-							<div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
-								<label for="share4" class="flex ">
-									<div class="im">
-										<img src="../../img/bank/bank_logo_021.png" alt="bnk">
-									</div>
-									<div class="tx">
-										<p class="prdName"><span class="ellipsis">머니빌리지 주거래통장</span></p>
-										<p class="amount"><em>12,000,000</em>원</p>
-									</div>
-									<input type="checkbox" id="share4">
-									<i></i>
-								</label>
-							</div>
-
-							<!-- 보험 영역 -->
-							<div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
-								<label class="flex ">
-									<div class="im">
-										<img src="../../img/theme/apthefin/logo/logo_02.png" alt="suhyup">
-									</div>
-									<div class="tx tx_type2">
-										<p class="prdName">
-											<span class="flag lblue">정상</span>
-											<span class="ellipsis">보장기간<em>2028.01.20</em></span>
-										</p>
-										<p class="amount ellipsis overdue">(무)꿈나무재테크보험 (무)꿈나무재테크보험<span class="flag gray">만료</span>  </p> <!-- 텍스트 길경우 ellipsis 클래스 추가, 만료일경우 overdue 클래스 추가 -->
-										<p class="deposit"><em class="num">1,000,000</em>원</p>
-									</div>
-									<input type="checkbox" id="share4">
-									<i></i>
-								</label>
-							</div>
-							<div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
-								<label class="flex ">
-									<div class="im">
-										<img src="../../img/theme/apthefin/logo/logo_02.png" alt="suhyup">
-									</div>
-									<div class="tx tx_type2">
-										<p class="prdName">
-											<span class="flag lblue">정상</span>
-											<span class="ellipsis">보장기간<em>2028.01.20</em></span>
-										</p>
-										<p class="amount ellipsis overdue">(무)꿈나무재테크보험 (무)꿈나무재테크보험<span class="flag gray">만료</span>  </p> <!-- 텍스트 길경우 ellipsis 클래스 추가, 만료일경우 overdue 클래스 추가 -->
-										<p class="deposit"><em class="num">1,000,000</em>원</p>
-									</div>
-									<input type="checkbox" id="share4">
-									<i></i>
-								</label>
-							</div>
-							<div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
-								<label class="flex ">
-									<div class="im">
-										<img src="../../img/theme/apthefin/logo/logo_02.png" alt="suhyup">
-									</div>
-									<div class="tx tx_type2">
-										<p class="prdName">
-											<span class="flag lblue">정상</span>
-											<span class="ellipsis">보장기간<em>2028.01.20</em></span>
-										</p>
-										<p class="amount ellipsis overdue">(무)꿈나무재테크보험 (무)꿈나무재테크보험<span class="flag gray">만료</span>  </p> <!-- 텍스트 길경우 ellipsis 클래스 추가, 만료일경우 overdue 클래스 추가 -->
-										<p class="deposit"><em class="num">1,000,000</em>원</p>
-									</div>
-									<input type="checkbox" id="share4">
-									<i></i>
-								</label>
-							</div>
-							<div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
-								<label class="flex ">
-									<div class="im">
-										<img src="../../img/theme/apthefin/logo/logo_02.png" alt="suhyup">
-									</div>
-									<div class="tx tx_type2">
-										<p class="prdName">
-											<span class="flag lblue">정상</span>
-											<span class="ellipsis">보장기간<em>2028.01.20</em></span>
-										</p>
-										<p class="amount ellipsis overdue">(무)꿈나무재테크보험 (무)꿈나무재테크보험<span class="flag gray">만료</span>  </p> <!-- 텍스트 길경우 ellipsis 클래스 추가, 만료일경우 overdue 클래스 추가 -->
-										<p class="deposit"><em class="num">1,000,000</em>원</p>
-									</div>
-									<input type="checkbox" id="share4">
-									<i></i>
-								</label>
-							</div>
-							<div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
-								<label class="flex ">
-									<div class="im">
-										<img src="../../img/theme/apthefin/logo/logo_02.png" alt="suhyup">
-									</div>
-									<div class="tx tx_type2">
-										<p class="prdName">
-											<span class="flag lblue">정상</span>
-											<span class="ellipsis">보장기간<em>2028.01.20</em></span>
-										</p>
-										<p class="amount ellipsis overdue">(무)꿈나무재테크보험 (무)꿈나무재테크보험<span class="flag gray">만료</span>  </p> <!-- 텍스트 길경우 ellipsis 클래스 추가, 만료일경우 overdue 클래스 추가 -->
-										<p class="deposit"><em class="num">1,000,000</em>원</p>
-									</div>
-									<input type="checkbox" id="share4">
-									<i></i>
-								</label>
-							</div>
-
+		<!-- container -->
+		<div class="container">
+			<div class="content">
+				<div class="feed-item no-border-bottom write-page"> <!-- 1013 write-page 클래스 추가 -->
+					<div class="list-name mgt30">
+						<div class="list-name-box jcs">
+							<h2 class="list-name"><img src="../../img/theme/apthefin/feed_name_img.png" alt=""> 프로필 네임
+							</h2>
+							<a href="#changeProfile" class="btn_open_bottom_sheet alink-typeA" role="button">프로필 변경</a>
 						</div>
 					</div>
+					<!-- <div class="sel_form type_border"> 
+					<a href="#layer_SHE1119" class="btn_open_bottom_sheet sel_box" role="button" title="선택"><span>카테고리를 선택해 주세요</span></a>
+				</div> -->
+					<div class="input-box">
+						<input type="text" required="required" id="" class="schTxt tx_bold" placeholder="제목을 입력해 주세요">
+					</div>
+
+					<div class="load-wrap padd20">
+						<div class="asGroup">
+
+							<div class="asList">
+
+								<!-- 투자 영역 -->
+								<div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
+									<label for="share1" class="flex ">
+										<div class="im">
+											<img src="../../img/bank/bank_logo_021.png" alt="bnk">
+										</div>
+										<div class="tx">
+											<p class="prdName"><span class="ellipsis">머니빌리지 펀드1</span></p>
+											<p class="amount"><em>12,000,000</em>원</p>
+											<p class="profit plus"><em class="num">+230,000</em>원 (<em
+													class="num invest_up">3.21%</em>)</p>
+										</div>
+										<input type="checkbox" id="share1">
+										<i></i>
+									</label>
+								</div>
 
 
-				</div>
+								<!-- 대출 영역 -->
+								<div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
+									<label for="share3" class="flex ">
+										<div class="im">
+											<img src="../../img/bank/bank_logo_021.png" alt="bnk">
+										</div>
+										<div class="tx">
+											<p class="prdName"><span class="ellipsis">버팀목 전세자금 대출</span></p>
+											<p class="amount"><em>12,000,000</em>원</p>
+											<p class="deposit">금리 <em class="num">9.88%</em></p>
+										</div>
+										<input type="checkbox" id="share3">
+										<i></i>
+									</label>
+								</div>
 
-				<div class="input-box">
-					<div class="layer_memo_wrap">
-						<!-- cols="45" rows="3" maxlength="60" 삭제 -->
-						<textarea class="tx_area js_textarea1" name="textfield1"  placeholder="내용을 입력해 주세요." title="내용을 입력해주세요, 최대 60자 까지 가능합니다"></textarea>
+								<!-- 입출금, 예적금 영역 -->
+								<div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
+									<label for="share4" class="flex ">
+										<div class="im">
+											<img src="../../img/bank/bank_logo_021.png" alt="bnk">
+										</div>
+										<div class="tx">
+											<p class="prdName"><span class="ellipsis">머니빌리지 주거래통장</span></p>
+											<p class="amount"><em>12,000,000</em>원</p>
+										</div>
+										<input type="checkbox" id="share4">
+										<i></i>
+									</label>
+								</div>
+
+								<!-- 보험 영역 -->
+								<div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
+									<label class="flex ">
+										<div class="im">
+											<img src="../../img/theme/apthefin/logo/logo_02.png" alt="suhyup">
+										</div>
+										<div class="tx tx_type2">
+											<p class="prdName">
+												<span class="flag lblue">정상</span>
+												<span class="ellipsis">보장기간<em>2028.01.20</em></span>
+											</p>
+											<p class="amount ellipsis overdue">(무)꿈나무재테크보험 (무)꿈나무재테크보험<span
+													class="flag gray">만료</span> </p>
+											<!-- 텍스트 길경우 ellipsis 클래스 추가, 만료일경우 overdue 클래스 추가 -->
+											<p class="deposit"><em class="num">1,000,000</em>원</p>
+										</div>
+										<input type="checkbox" id="share4">
+										<i></i>
+									</label>
+								</div>
+								<div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
+									<label class="flex ">
+										<div class="im">
+											<img src="../../img/theme/apthefin/logo/logo_02.png" alt="suhyup">
+										</div>
+										<div class="tx tx_type2">
+											<p class="prdName">
+												<span class="flag lblue">정상</span>
+												<span class="ellipsis">보장기간<em>2028.01.20</em></span>
+											</p>
+											<p class="amount ellipsis overdue">(무)꿈나무재테크보험 (무)꿈나무재테크보험<span
+													class="flag gray">만료</span> </p>
+											<!-- 텍스트 길경우 ellipsis 클래스 추가, 만료일경우 overdue 클래스 추가 -->
+											<p class="deposit"><em class="num">1,000,000</em>원</p>
+										</div>
+										<input type="checkbox" id="share4">
+										<i></i>
+									</label>
+								</div>
+								<div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
+									<label class="flex ">
+										<div class="im">
+											<img src="../../img/theme/apthefin/logo/logo_02.png" alt="suhyup">
+										</div>
+										<div class="tx tx_type2">
+											<p class="prdName">
+												<span class="flag lblue">정상</span>
+												<span class="ellipsis">보장기간<em>2028.01.20</em></span>
+											</p>
+											<p class="amount ellipsis overdue">(무)꿈나무재테크보험 (무)꿈나무재테크보험<span
+													class="flag gray">만료</span> </p>
+											<!-- 텍스트 길경우 ellipsis 클래스 추가, 만료일경우 overdue 클래스 추가 -->
+											<p class="deposit"><em class="num">1,000,000</em>원</p>
+										</div>
+										<input type="checkbox" id="share4">
+										<i></i>
+									</label>
+								</div>
+								<div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
+									<label class="flex ">
+										<div class="im">
+											<img src="../../img/theme/apthefin/logo/logo_02.png" alt="suhyup">
+										</div>
+										<div class="tx tx_type2">
+											<p class="prdName">
+												<span class="flag lblue">정상</span>
+												<span class="ellipsis">보장기간<em>2028.01.20</em></span>
+											</p>
+											<p class="amount ellipsis overdue">(무)꿈나무재테크보험 (무)꿈나무재테크보험<span
+													class="flag gray">만료</span> </p>
+											<!-- 텍스트 길경우 ellipsis 클래스 추가, 만료일경우 overdue 클래스 추가 -->
+											<p class="deposit"><em class="num">1,000,000</em>원</p>
+										</div>
+										<input type="checkbox" id="share4">
+										<i></i>
+									</label>
+								</div>
+								<div class="accItem cdChkItem"> <!-- 이체버튼이 있을경우 ableTrf 클래스 추가 -->
+									<label class="flex ">
+										<div class="im">
+											<img src="../../img/theme/apthefin/logo/logo_02.png" alt="suhyup">
+										</div>
+										<div class="tx tx_type2">
+											<p class="prdName">
+												<span class="flag lblue">정상</span>
+												<span class="ellipsis">보장기간<em>2028.01.20</em></span>
+											</p>
+											<p class="amount ellipsis overdue">(무)꿈나무재테크보험 (무)꿈나무재테크보험<span
+													class="flag gray">만료</span> </p>
+											<!-- 텍스트 길경우 ellipsis 클래스 추가, 만료일경우 overdue 클래스 추가 -->
+											<p class="deposit"><em class="num">1,000,000</em>원</p>
+										</div>
+										<input type="checkbox" id="share4">
+										<i></i>
+									</label>
+								</div>
+
+							</div>
+						</div>
+
+
+					</div>
+
+					<div class="input-box">
+						<div class="layer_memo_wrap">
+							<!-- cols="45" rows="3" maxlength="60" 삭제 -->
+							<textarea class="tx_area js_textarea1" name="textfield1" placeholder="내용을 입력해 주세요."
+								title="내용을 입력해주세요, 최대 60자 까지 가능합니다"></textarea>
+						</div>
 					</div>
 				</div>
-			</div>
-			
-			<div class="btn-wrap two-items fixed">
-				<!-- <div class="input-box w100">
+
+				<div class="btn-wrap two-items fixed">
+					<!-- <div class="input-box w100">
 					<input type="file" id="fileS" >
 					<label for="fileS" class="btn-imgUpload" title="파일선택"></label>
 				</div> -->
-				
-				<a href="#none" class="btnBl1" role="button">등록</a>
-			</div>
 
-			<!-- 피드 수정일 경우 버튼 
+					<a href="#none" class="btnBl1" role="button">등록</a>
+				</div>
+
+				<!-- 피드 수정일 경우 버튼 
 			<div class="btn-wrap two-items fixed">
 				<a href="#none" class="btnBl3" role="button">취소</a>
 				<a href="#none" class="btnBl1" role="button">확인</a>
 			</div> 
 			-->
 
-			
+
+			</div>
 		</div>
+		<!-- //container -->
+
 	</div>
-	<!-- //container -->
-
-</div>
-<!-- //wrap -->
+	<!-- //wrap -->
 
 
-<!-- bottomsheet SHE1119(카테고리설정) 삭제 -->
+	<!-- bottomsheet SHE1119(카테고리설정) 삭제 -->
 
 
-<div id="layer_SHE1119" class="layer_bottomsheet">
-	<div class="layer_inner">
-		<div class="layer_tit type2">
-			<strong class="tit"><span>카테고리 선택</span></strong>
-			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
-		</div>
-		<div class="layer_cont" style="max-height: 678px;">
-			<div class="cdChkLst">
-				<!-- <div class="cdChkItem all">
+	<div id="layer_SHE1119" class="layer_bottomsheet">
+		<div class="layer_inner">
+			<div class="layer_tit type2">
+				<strong class="tit"><span>카테고리 선택</span></strong>
+				<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+			</div>
+			<div class="layer_cont" style="max-height: 678px;">
+				<div class="cdChkLst">
+					<!-- <div class="cdChkItem all">
 					<label for="radio1">
 						<input type="radio" name="jobinfo" id="radio1">
 						<i></i><span id="">직장인</span>
 					</label>
 				</div> -->
-				<ul class="cdChkSubList">
-					<li class="cdChkItem"> 
-						<label for="radio2">
-							<input type="radio" name="jobinfo" id="radio2">
-							<i></i><span id="">직장인</span>
-						</label>
-					</li>
-					<li class="cdChkItem"> 
-						<label for="radio3">
-							<input type="radio" name="jobinfo" id="radio3">
-							<i></i><span id="">공무원</span>
-							
-						</label> 
-					</li>
-					<li class="cdChkItem"> 
-						<label for="radio4">
-							<input type="radio" name="jobinfo" id="radio4">
-							<i></i><span id="">전문직</span>
-							
-						</label>
-					</li>
-					<li class="cdChkItem"> 
-						<label for="radio4">
-							<input type="radio" name="jobinfo" id="radio4">
-							<i></i><span id="">개인사업자</span>
-						</label>
-					</li>
-					<li class="cdChkItem"> 
-						<label for="radio4">
-							<input type="radio" name="jobinfo" id="radio4">
-							<i></i><span id="">프리랜서</span>
-						</label>
-					</li>
-					<li class="cdChkItem"> 
-						<label for="radio4">
-							<input type="radio" name="jobinfo" id="radio4">
-							<i></i><span id="">주부</span>
-						</label>
-					</li>
-				</ul>
+					<ul class="cdChkSubList">
+						<li class="cdChkItem">
+							<label for="radio2">
+								<input type="radio" name="jobinfo" id="radio2">
+								<i></i><span id="">직장인</span>
+							</label>
+						</li>
+						<li class="cdChkItem">
+							<label for="radio3">
+								<input type="radio" name="jobinfo" id="radio3">
+								<i></i><span id="">공무원</span>
+
+							</label>
+						</li>
+						<li class="cdChkItem">
+							<label for="radio4">
+								<input type="radio" name="jobinfo" id="radio4">
+								<i></i><span id="">전문직</span>
+
+							</label>
+						</li>
+						<li class="cdChkItem">
+							<label for="radio4">
+								<input type="radio" name="jobinfo" id="radio4">
+								<i></i><span id="">개인사업자</span>
+							</label>
+						</li>
+						<li class="cdChkItem">
+							<label for="radio4">
+								<input type="radio" name="jobinfo" id="radio4">
+								<i></i><span id="">프리랜서</span>
+							</label>
+						</li>
+						<li class="cdChkItem">
+							<label for="radio4">
+								<input type="radio" name="jobinfo" id="radio4">
+								<i></i><span id="">주부</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="layer_footer">
+				<button type="button" class="js_pop_close btn_confirm"><span>저장</span></button>
 			</div>
 		</div>
-		<div class="layer_footer">
-			<button type="button" class="js_pop_close btn_confirm"><span>저장</span></button>
-		</div>
 	</div>
-</div>
-<!-- // bottomsheet SHE1119(카테고리설정) -->
+	<!-- // bottomsheet SHE1119(카테고리설정) -->
 
-<!-- [S] bottomsheet -->
-<div id="changeProfile" class="layer_bottomsheet">
-	<div class="layer_inner">
-		<div class="layer_tit type2">
-			<strong class="tit"><span>프로필 변경</span></strong>
-			<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
-		</div>
-		<div class="layer_cont" style="max-height: 678px;">
-			<div class="cdChkLst">
-				<!-- <div class="cdChkItem all">
+	<!-- [S] bottomsheet -->
+	<div id="changeProfile" class="layer_bottomsheet">
+		<div class="layer_inner">
+			<div class="layer_tit type2">
+				<strong class="tit"><span>프로필 변경</span></strong>
+				<button type="button" class="js_pop_close btn_close"><span class="blind">닫기</span></button>
+			</div>
+			<div class="layer_cont" style="max-height: 678px;">
+				<div class="cdChkLst">
+					<!-- <div class="cdChkItem all">
 					<label for="radio1">
 						<input type="radio" name="jobinfo" id="radio1">
 						<i></i><span id="">직장인</span>
 					</label>
 				</div> -->
-				<ul class="cdChkSubList">
-					<li class="cdChkItem"> 
-						<label for="radio2">
-							<input type="radio" name="jobinfo" id="radio2">
-							<i></i><span class="list-name flexS"><img src="../../img/theme/apthefin/feed_name_img.png" alt=""> 프로필 네임</span>
-						</label>
-					</li>
-					<li class="cdChkItem"> 
-						<label for="radio3">
-							<input type="radio" name="jobinfo" id="radio3">
-							<i></i><span class="list-name flexS"><img src="../../img/theme/apthefin/feed_name_img.png" alt=""> 프로필 네임</span>
-						</label> 
-					</li>
-					
-				</ul>
+					<ul class="cdChkSubList">
+						<li class="cdChkItem">
+							<label for="radio2">
+								<input type="radio" name="jobinfo" id="radio2">
+								<i></i><span class="list-name flexS"><img
+										src="../../img/theme/apthefin/feed_name_img.png" alt=""> 프로필 네임</span>
+							</label>
+						</li>
+						<li class="cdChkItem">
+							<label for="radio3">
+								<input type="radio" name="jobinfo" id="radio3">
+								<i></i><span class="list-name flexS"><img
+										src="../../img/theme/apthefin/feed_name_img.png" alt=""> 프로필 네임</span>
+							</label>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="layer_footer">
+				<button type="button" class="js_pop_close btn_confirm"><span>저장</span></button>
 			</div>
 		</div>
-		<div class="layer_footer">
-			<button type="button" class="js_pop_close btn_confirm"><span>저장</span></button>
-		</div>
 	</div>
-</div>
 
 
-<script>
+	<script>
 
-//1129 textarea 높이 조절 화면 랜더링 완료후 실행
-$(document).ready(function(){
-	var winH = $(".wrap").height();
-	var conH = $(".content").height() + $(".btn-wrap.two-items.fixed").height() + $(".header").height();
-	console.log(winH-conH);
-	$(".js_textarea1").height(winH - conH);
-});
+		//1129 textarea 높이 조절 화면 랜더링 완료후 실행
+		$(document).ready(function () {
+			var winH = $(".wrap").height();
+			var conH = $(".content").height() + $(".btn-wrap.two-items.fixed").height() + $(".header").height();
+			console.log(winH - conH);
+			$(".js_textarea1").height(winH - conH);
+		});
 
 
-// [S] 풀페이지 팝업
-$(document).on("click", ".btn_open_full_sheet", function(e){
-    e.preventDefault();
-	var $fullPop = $(this).attr('href');
-    layer_fullsheet($fullPop);
+		// [S] 풀페이지 팝업
+		$(document).on("click", ".btn_open_bottom_sheet", function (e) {
+			e.preventDefault();
+			var $fullPop = $(this).attr('href');
+			layer_bottomsheet($fullPop);
 
-    $('html').addClass('scroll_lock');
-	$focusReturn = $(this);
-});
-function layer_fullsheet(el){
-	var $el = $(el);
-	$el.append("<div class=\"dim\"></div>");
-	isDim ? $('.layer_fullsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
-	setTimeout(function() {
-		$el.find('.layer_inner').addClass('on');
-	}, 50);
+			$('html').addClass('scroll_lock');
+			$focusReturn = $(this);
+		});
 
-	var isDim = $el.siblings().hasClass('dim');
+		// [E] 풀페이지 팝업
 
-	$el.find('.js_pop_close').click(function(){
-		$el.find('.layer_inner').removeClass('on');
-		setTimeout(function() {
-			isDim ? $('.layer_fullsheet').hide() : $el.hide();
-			$('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
-			$el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
-		}, 200);
-		$focusReturn.focus();
-		return false;
-	});
-}
-// [E] 풀페이지 팝업
+		// [S] 바텀시트
 
-// [S] 바텀시트
-$(document).on("click", ".btn_open_bottom_sheet", function(e){
-	e.preventDefault();
-	var $href = $(this).attr('href');
-	layer_bottomsheet($href);
-	$('html').addClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
-	$focusReturn = $(this);
-	if($href == '#layer_SHE1211'){
-		$(".filterFolding").trigger("click");
-	}
-});
-function layer_bottomsheet(el){
-	var $el = $(el);
-	$el.append("<div class=\"dim\"></div>");
-	isDim ? $('.layer_bottomsheet').show() : $el.show().attr({'tabindex':'0','aria-hidden':'false'}).focus();
-	setTimeout(function() {
-		$el.find('.layer_inner').addClass('on');
-	}, 50);
 
-	var isDim = $el.siblings().hasClass('dim');
+		// [S] 항목 더보기,접기
+		var chartList = $('.filterArea'),
+			animateTime = 500,
+			btnFold = $('.filterFolding');
 
-	$el.find('.js_pop_close').click(function(){
-		$el.find('.layer_inner').removeClass('on');
-		setTimeout(function() {
-			isDim ? $('.layer_bottomsheet').hide() : $el.hide();
-			$('html').removeClass('scroll_lock');//2021-10-28 html 스크롤 잠금 수정
-			$el.attr({'tabindex':'-1','aria-hidden':'true'}).find(".dim").remove();
-		}, 200);
-		$focusReturn.focus();
-		return false;
-	});
-}
-// [E] 바텀시트
-
-// [S] 항목 더보기,접기
-var chartList = $('.filterArea'),
-	animateTime = 500,
-	btnFold = $('.filterFolding');
-
-	btnFold.click(function(){
-		var $self = $(this);
-		if(chartList.height() === 174){
-			listHeightAct(chartList, animateTime);
-			$self.text('접기');
-			$self.addClass('fold');
-			$self.removeClass('show');
-			chartList.addClass('on');
-		} else {
-			chartList.stop().animate({ height: '174' }, animateTime);
-			$self.text('더보기');
-			$self.addClass('show');
-			$self.removeClass('fold');
-			chartList.removeClass('on');
+		btnFold.click(function () {
+			var $self = $(this);
+			if (chartList.height() === 174) {
+				listHeightAct(chartList, animateTime);
+				$self.text('접기');
+				$self.addClass('fold');
+				$self.removeClass('show');
+				chartList.addClass('on');
+			} else {
+				chartList.stop().animate({ height: '174' }, animateTime);
+				$self.text('더보기');
+				$self.addClass('show');
+				$self.removeClass('fold');
+				chartList.removeClass('on');
+			}
+		});
+		function listHeightAct(element, time) {
+			var curHeight = element.height(), // Get Default Height
+				autoHeight = element.css('height', 'auto').height(); // Get Auto Height
+			element.height(curHeight); // Reset to Default Height
+			element.stop().animate({ height: autoHeight }, time); // Animate to Auto Height
 		}
-	});
-	function listHeightAct(element, time){
-		var curHeight = element.height(), // Get Default Height
-		autoHeight = element.css('height', 'auto').height(); // Get Auto Height
-		element.height(curHeight); // Reset to Default Height
-		element.stop().animate({ height: autoHeight }, time); // Animate to Auto Height
-	}
-// [E] 항목 더보기,접기 
+		// [E] 항목 더보기,접기 
 
-$('.scrollCheck').on('touchend', function(e) {   
-	if($('.filterArea').hasClass('on')){
-		$(".filterFolding").trigger("click");
-	}
-});    
+		$('.scrollCheck').on('touchend', function (e) {
+			if ($('.filterArea').hasClass('on')) {
+				$(".filterFolding").trigger("click");
+			}
+		});
 
-</script>
+	</script>
 </body>
+
 </html>

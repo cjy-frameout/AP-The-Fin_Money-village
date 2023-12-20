@@ -211,7 +211,9 @@ function layer_bottomsheet(el) {
         }, 200);
 
         // [S] multi layer 2021-08-02 추가
-        $focusReturn != undefined && eval("$focusReturn" + [dimIdx]).focus();
+        $focusReturn != undefined && $focusReturn.focus();
+        
+        
 
         return false;
     });

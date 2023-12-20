@@ -1,6 +1,4 @@
-﻿
-
-// tabs  function 시작
+﻿// tabs  function 시작
 var classWrap, clickClass, showClass, animateBorder, attrDiv, options;
 
 function aniB(i){
