@@ -265,17 +265,7 @@ $(document).ready(function () {
         .closest(".wrap_assets")
         .next(".btn_wrap")
         .css("padding-top", "25px");
-    /* 이메일 전송받기 체크 박스라인 */
-    $(".box_inp_ck input").each(function () {
-        var $self = $(this);
-        $self.on("change", function () {
-            if ($self.is(":checked") == true) {
-                $self.closest(".box_inp_ck").addClass("on");
-            } else {
-                $self.closest(".box_inp_ck").removeClass("on");
-            }
-        });
-    });
+    
     /* 차트 구분 */
     if ($(".asGroup.type_chart").length) {
         $(".asGroup.type_chart")
@@ -403,48 +393,7 @@ function jsTabMenu() {
 }
 // [E] js tab Menu (faq)
 
-// [S] 상품 추천 배너
-function prdRecommendBanner() {
-    $(".expanded_switch .inp_switch").each(function () {
-        var $self = $(this);
-        var bdBox = $self.closest(".expanded_switch").next(".bd_box");
-        if ($self.is(":checked") == true) {
-            $self.attr("aria-expanded", "true");
-            $self.closest(".expanded_switch").addClass("expanded");
-            $self
-                .closest(".expanded_switch")
-                .find(".tx_switch")
-                .addClass("pointColor");
-        } else {
-            $self.attr("aria-expanded", "false");
-            $self.closest(".expanded_switch").removeClass("expanded");
-            $self
-                .closest(".expanded_switch")
-                .find(".tx_switch")
-                .removeClass("pointColor");
-        }
-        $self.on("change", function () {
-            if ($self.is(":checked") == true) {
-                $(bdBox).slideDown(200);
-                $self.attr("aria-expanded", "true");
-                $self.closest(".expanded_switch").addClass("expanded");
-                $self
-                    .closest(".expanded_switch")
-                    .find(".tx_switch")
-                    .addClass("pointColor");
-            } else {
-                $self.attr("aria-expanded", "false");
-                $(bdBox).slideUp(200);
-                $self.closest(".expanded_switch").removeClass("expanded");
-                $self
-                    .closest(".expanded_switch")
-                    .find(".tx_switch")
-                    .removeClass("pointColor");
-            }
-        });
-    });
-}
-// [E] 상품 추천 배너
+
 
 // [S] 기관선택 탭 좌우 스크롤 화살표
 function scrollTabShowArr() {

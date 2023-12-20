@@ -17318,7 +17318,7 @@ a.filterFolding {
 			.inp_box {
 				position: relative;
 				display: flex;
-				flex-wrap: wrap;
+				flex-wrap: nowrap;
 
 				.set_inp {
 					width: 100%;
