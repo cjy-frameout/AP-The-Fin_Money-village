@@ -1,0 +1,368 @@
+@charset "UTF-8";
+
+$txtColor01 : #fff;
+$txtColor02 : #17181A;
+$fontSizeDefault: 16px;
+$fontSizeMain : 20px;
+$fontSizeSub : 14px;
+$fontSizeMid : 13px;
+$fontSizeSmall : 12px;
+$paddingSize1: 20px;
+$marginSize1: 16px;
+$marginSize2: 20px;
+$borderRadius: 16px;
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: $fontSizeDefault;
+    line-height: 1.3;
+}
+
+html *,
+body * {
+    font-family: 'Pretendard', sans-serif;
+}
+
+a,
+button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.05);
+}
+
+.button-wrapper {
+    width: 100%;
+}
+
+.btn-loan-add {
+    display: block;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    width: 100%;
+    font-size: $fontSizeSub;
+    color: #6B7280;
+    padding: 12px 24px;
+    position: relative;
+    font-weight: 700;
+
+    &:before {
+        content: '';
+        display: block;
+        height: 16px;
+        width: 16px;
+        background: url(../../img/theme/apthefin/mv_home_icon05.png) no-repeat 0 0;
+        background-size: cover;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-70px, -50%);
+    }
+}
+
+.mv-home {
+    background: #F3F4F6;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 0 12px 0 20px;
+        background: #F3F4F6;
+        z-index: 99;
+
+        .logo {
+            width: 87px;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .container {
+        height: 100vh;
+        width: 100%;
+        padding: 50px 24px 100px;
+        overflow: auto;
+    }
+
+    .mv-home-cont-box {
+        box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.2);
+        border-radius: $borderRadius;
+        padding: 20px;
+        background: #fff;
+
+        &:first-of-type {
+            margin-top: $marginSize1;
+        }
+
+        &.loan-con {
+            padding: 0;
+
+            .loan-con-txt {
+                color: $txtColor01;
+                font-size: $fontSizeMain;
+                font-weight: 600;
+                height: 106px;
+                background: url(../../img/theme/apthefin/mv_home_loan_back.png) no-repeat 90% bottom,
+                    linear-gradient(274deg, #1C64F2 0%, #3F83F8 62.13%, #76A9FA 101.95%);
+                border-radius: $borderRadius;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                display: flex;
+                align-items: center;
+                padding: $paddingSize1;
+            }
+
+            .loan-con-kind {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                height: 64px;
+                font-weight: 600;
+                background: url(../../img/theme/apthefin/mv_home_verLine.png) no-repeat 50% 50%;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
+                    padding-left: 30px;
+
+                    &.credit:before {
+                        content: '';
+                        display: block;
+                        background: url(../../img/theme/apthefin/mv_home_icon01.png) no-repeat 0 0;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-30px, -50%);
+                        width: 24px;
+                        height: 24px;
+                        background-size: 100%;
+                    }
+
+                    &.mortgage:before {
+                        content: '';
+                        display: block;
+                        background: url(../../img/theme/apthefin/mv_home_icon02.png) no-repeat 0 0;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-45px, -50%);
+                        width: 24px;
+                        height: 24px;
+                        background-size: 100%;
+                    }
+                }
+            }
+        }
+
+        &.score {
+            span {
+                font-size: $fontSizeSub;
+                color: $txtColor02;
+                font-weight: 600;
+            }
+
+            .my-score,
+            .my-balance,
+            .nice {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .my-score {
+                padding-bottom: 16px;
+                border-bottom: 1px solid #E5E7EB;
+
+                span:first-child {
+                    position: relative;
+                    padding-left: 26px;
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        height: 24px;
+                        width: 24px;
+                        background: url(../../img/theme/apthefin/mv_home_icon03.png) no-repeat 0 0;
+                        background-size: cover;
+                        position: absolute;
+                        left: 0;
+                        top: -2px;
+                    }
+
+                }
+            }
+
+            .my-balance {
+                padding-top: 16px;
+
+                span:first-child {
+                    position: relative;
+                    padding-left: 26px;
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        height: 20px;
+                        width: 20px;
+                        background: url(../../img/theme/apthefin/mv_home_icon04.png) no-repeat 0 0;
+                        background-size: cover;
+                        position: absolute;
+                        left: 0;
+                        top: 0px;
+                    }
+
+                }
+            }
+
+            .nice {
+                margin-top: $marginSize2;
+
+                span {
+                    color: #6B7280;
+                    font-size: $fontSizeSmall;
+                }
+
+            }
+        }
+
+        &.my-loan {
+            .my-loan-tit {
+                a {
+                    color: $txtColor02;
+                    font-weight: 700;
+                    display: block;
+                    background: url(../../img/theme/apthefin/ic_arw_gray.png)no-repeat right 50%;
+                    background-size: 20px;
+
+                    span {
+                        color: #1C64F2;
+                    }
+
+                }
+            }
+
+            .my-loan-listWrap {
+                margin-top: $marginSize2;
+
+                &+.button-wrapper {
+                    margin-top: 20px;
+                }
+            }
+
+            .my-loan-list {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &+.my-loan-list {
+                    margin-top: 24px;
+                }
+
+                .my-loan-list-con {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    .ico-bank {
+                        display: inline-block;
+                        margin-right: 10px;
+
+                        img {
+                            width: 32px;
+                        }
+                    }
+
+                    .my-loan-subject {
+                        font-size: $fontSizeMid;
+                        font-weight: 700;
+                    }
+
+                    .my-loan-money {
+                        font-weight: 700;
+                    }
+                }
+
+                .my-loan-list-interest {
+                    width: 70px;
+                    text-align: right;
+                    margin-left: 5px;
+                    color: #1C64F2;
+                }
+            }
+        }
+
+        &.my-card {
+            a {
+                background-image: url(../../img/theme/apthefin/ic_arw_gray.png), url(../../img/theme/apthefin/mv_home_icon06.png);
+                background-repeat: no-repeat, no-repeat;
+                background-position: right 50%, left 50%;
+                background-size: 20px, 48px;
+                display: block;
+                padding-left: 48px;
+            }
+
+            .my-card-tit {
+                color: $txtColor02;
+                font-weight: 600;
+                letter-spacing: -1px;
+            }
+
+            .my-card-desc {
+                color: #6B7280;
+                font-size: $fontSizeSub;
+                font-weight: 500;
+                letter-spacing: -1px;
+                line-height: 24px;
+            }
+        }
+
+        &.event {
+            padding: 0;
+            background: none;
+            box-shadow: none;
+
+            .slider {
+                background: #E1EFFE !important;
+
+                .banner.inLink {
+                    height: 136px;
+
+                    a {
+                        background-color: #E1EFFE !important;
+
+                        .banner_tit {
+                            padding-top: 13px;
+                            letter-spacing: -1px;
+                            color: #666;
+
+                            .titPoint {
+                                letter-spacing: -2px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &+.mv-home-cont-box {
+            margin-top: $marginSize1;
+        }
+
+    }
+}

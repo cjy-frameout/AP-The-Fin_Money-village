@@ -295,7 +295,6 @@ $(document).ready(function () {
     bsPageTypeHeight(); // 바텀시트 페이지타입 높이
     bottomFixActionBar(); // 하단 고정 바
     contentsBottomPadding(); // 컨텐츠영역 하단 패딩 = 하단 고정높이값
-    prdRecommendBanner(); // 상품 추천 배너
     scrollTabShowArrWrap(); // 기관선택:XC1100(데이터연동:W1000) 탭 좌우 스크롤 화살표
     jsTabMenu(); // faq tab
     jsTxValReset(); // text val reset
@@ -400,7 +399,7 @@ function scrollTabShowArr() {
     var $scrollTabHeader = $(
         ".tab_certi .tabs_header, .tabSetting .tabs_header"
     );
-    $tabsInnerWidth = "";
+    var $tabsInnerWidth = "";
     $(this).each(function () {
         var liItems = $(this);
         var Sum = 0;
@@ -521,8 +520,9 @@ function layer_popup(el) {
 
 // [S] 바텀시트 페이지타입 높이
 function bsPageTypeHeight() {
+    var windowInnerHeight;
     if ($(".layerBtmNew").length) {
-        var windowInnerHeight = $(window).innerHeight() - 120;
+        windowInnerHeight = $(window).innerHeight() - 120;
         $(".layer_bottomsheet").each(function () {
             var footerBtnHeight = $(this)
                 .find(".layer_footer .js_pop_close")
@@ -539,7 +539,7 @@ function bsPageTypeHeight() {
             }
         });
     } else {
-        var windowInnerHeight = $(window).innerHeight();
+        windowInnerHeight = $(window).innerHeight();
         $(".layer_bottomsheet").each(function () {
             var footerBtnHeight = $(this)
                 .find(".layer_footer .js_pop_close")
@@ -675,8 +675,7 @@ function bottomFixActionBar() {
             ) {
                 //Scroll end
                 fixBox.classList.add("show");
-            } else if (nowScrollTop > lastScrollTop) {
-            } else {
+            }else {
                 if (
                     nowScrollTop + window.innerHeight <
                     document.body.offsetHeight + 10
@@ -706,11 +705,8 @@ function layerFPageBottomPadding() {
 /* [E] XX1300 wrap_full_page 하단 여백조정 */
 
 document.addEventListener("DOMContentLoaded", function (e) {
-    // [S] Gnb
-    var gnb = $(".gnb");
-    var gnbMenu = $(".gnbMenu");
-    var gnbHeight = gnb.outerHeight();
-
+    // [S] Gnb. 1221 gnbMenu, gnbHeight, gnb 삭제
+    
     function gnbOpen() {
         $("html").addClass("-activeGnb");
     }
