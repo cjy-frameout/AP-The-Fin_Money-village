@@ -1155,7 +1155,7 @@ a.btnBl1.wide i.more {
 }
 
 .sq_flag {
-	display: inline-block;
+	display: inline-block !important;
 	margin: 0 rem(-2) rem(8) 0;
 	padding: rem(3) rem(8);
 	font-size: rem(10);
@@ -16902,12 +16902,12 @@ a.filterFolding {
 	white-space: nowrap;
 
 	.sq_flag {
-		padding: rem(4) rem(6) rem(2);
+		padding: rem(4) rem(6) rem(2) !important;
 		border-radius: rem(20);
-		font-weight: 700;
-		font-size: rem(10);
+		font-weight: 700 !important;
+		font-size: rem(10) !important;
 		margin: 0;
-		line-height: 1;
+		line-height: 1 !important;
 		vertical-align: top;
 
 		+.sq_flag {
