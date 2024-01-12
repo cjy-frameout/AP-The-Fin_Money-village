@@ -33,7 +33,8 @@ const gulpsass = require('gulp-dart-sass'),
 	sourcemaps = require('gulp-sourcemaps'),
 	postcss = require('gulp-postcss'),
 	cssnano = require('cssnano'),
-	autoprefixer = require("autoprefixer"); //벤더프리픽스 설정
+	autoprefixer = require("autoprefixer"), //벤더프리픽스 설정
+	rename = require("gulp-rename");
 function sass(){
 	var plugins = [
 		autoprefixer(),
@@ -44,6 +45,21 @@ function sass(){
 		.pipe(gulpsass.sync().on('error', gulpsass.logError))
 		.pipe(gulpsass({ errLogToConsole: true, }).on("error", gulpsass.logError)) //nested compact expanded compressed
 		.pipe(postcss(plugins))
+		.pipe(rename(function (path) {
+			if (path.basename === 'home'){
+				return {
+					dirname: path.dirname,
+					basename: '_home',
+					extname: path.extname
+				};
+			} else {
+				return {
+					dirname: path.dirname,
+					basename: path.basename,
+					extname: path.extname
+				};
+			}
+		}))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest(path.styles.output))
 		.pipe(browserSync.stream({ match: "**/*.css" }))

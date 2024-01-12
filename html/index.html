@@ -36,14 +36,44 @@
             </div>
         </section>
         <section class="mv-home-cont-box score">
+            <!-- 2024.01.15 : mod : 데이터 없을 때 케이스 추가 및 html 구조 변경 -->
+            <!-- Case : 신용점수 조회 되었을 때 -->
             <div class="my-score">
-                <span>내 신용점수</span>
-                <a href="#none"><strong>861</strong>점</a>
+                <span class="my-score-title">내 신용점수</span>
+                <a href="" class="mv-home-point-link">
+                    <strong class="mv-home-point-link-sum">861</strong><span class="mv-home-point-link-unit">점</span>
+                </a>
             </div>
+            <!-- //Case : 신용점수 조회 되었을 때 -->
+
+            <!-- Case : 신용점수 조회 되지 않았을 때 -->
+            <div class="my-score">
+                <span class="my-score-title">내 신용점수</span>
+                <a href="" class="mv-home-point-link">
+                    <span class="mv-home-point-link-text">신용정보 연결</span>
+                </a>
+            </div>
+            <!-- //Case : 신용점수 조회 되지 않았을 때 -->
+
+            <!-- Case : 내 대출 잔액 조회 되었을 때 -->
             <div class="my-balance">
-                <span>내 대출 잔액</span>
-                <span><strong>63,125</strong>만원</span>
+                <span class="my-balance-title">내 대출 잔액</span>
+                <span class="mv-home-loan-balance">
+                    <strong class="mv-home-loan-balance-sum">999,999,999</strong><span class="mv-home-loan-balance-unit">만원</span>
+                </span>
             </div>
+            <!-- //Case : 내 대출 잔액 조회 되었을 때 -->
+
+            <!-- Case : 내 대출 잔액 조회 되지 않았을 때 -->
+            <div class="my-balance">
+                <span class="my-balance-title">내 대출 잔액</span>
+                <span class="mv-home-loan-balance">
+                    <span class="mv-home-loan-balance-text">??? 만원</span>
+                </span>
+            </div>
+            <!-- //Case : 내 대출 잔액 조회 되지 않았을 때 -->
+            <!-- //2024.01.15 : mod : 데이터 없을 때 케이스 추가 및 html 구조 변경 -->
+
             <div class="nice">
                 <span> NICE 지키미 제공</span>
                 <span>23.12.07</span>
@@ -90,6 +120,19 @@
             </div>
 
         </section>
+
+        <!-- 2024.01.15 : add : 내 대출 연결 안 했을 떄 케이스 추가 -->
+        <!-- Case : 내 대출 연결 안 했을 떄 -->
+        <section class="mv-home-cont-box my-loan">
+            <h2 class="my-loan-tit">내 대출</h2>
+            <p class="my-loan-empty">내 대출계좌를 연결해보세요</p>
+            <div class="button-wrapper">
+                <button class="btn-loan-add">대출 연결 </button>
+            </div>
+        </section>
+        <!-- //Case : 내 대출 연결 안 했을 떄 -->
+        <!-- //2024.01.15 : add : 내 대출 연결 안 했을 떄 케이스 추가 -->
+
         <section class="mv-home-cont-box my-card">
             <a href="#none">
                 <h2 class="my-card-tit">내게 딱 맞는 신용카드 찾기</h2>
