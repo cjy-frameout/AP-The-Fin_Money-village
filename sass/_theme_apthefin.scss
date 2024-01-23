@@ -12465,8 +12465,8 @@ a.btnMenu {
 			background-image: url('../img/theme/apthefin/ic_dock_tar.png?0426');
 		}
 
-		&.ic_home {
-			background-image: url('../img/theme/apthefin/ic_dock_home.png?0426');
+		&.ic_home.ic_home {
+			background-image: url('../img/theme/apthefin/ic_dock_main_home.png?0426');
 		}
 
 		&.ic_feed {
@@ -12547,7 +12547,7 @@ a.btnMenu {
 		}
 
 		&.ic_home {
-			background-image: url('../img/theme/apthefin/ic_dock_home.png');
+			background-image: url('../img/theme/apthefin/ic_dock_main_home.png');
 
 			&.on {
 				background-image: url('../img/theme/apthefin/ic_dock_main_home.png');
@@ -12574,7 +12574,7 @@ a.btnMenu {
 			background-image: url('../img/theme/apthefin/ic_dock_feed.png?0426');
 
 			&.on {
-				background-image: url('../img/theme/apthefin/icon_feed_comment_on.png');
+				background-image: url('../img/theme/apthefin/ic_dock_feed_on.png');
 			}
 		}
 	}
